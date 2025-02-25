@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="effective_date_notice" model="ir.actions.report">
+        <field name="name">Effective Date Notice</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.print_effective_date_notice</field>
+        <field name="report_file">kb_hr_forms.print_effective_date_notice</field>
+        <field name="print_report_name">'Effective Date Notice - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="print_effective_date_notice">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <style>
+                    .btn {
+                        border: 1px solid black;
+                        background-color: white;
+                        color: black;
+                    }
+                </style>
+                <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <div style="text-align: right; direction: rtl;">
+                        إدارة الموارد البشرية والشؤون الإدارية
+                    </div>
+                    <div style="text-align: center; direction: rtl;">
+                        <b>إشعار مباشرة العمل
+                            <br />
+                            Effective Date Notice </b>
+                    </div>
+                    <t t-foreach="docs" t-as="o">
+                        <table>
+                            <tr>
+                                <th style="border: #000000 1px solid; text-align: right;  padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                    بيانات الموظف
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: left; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="8" >
+                                    Employee Data 
+                                </th>
+                            </tr>
+                          <tr>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                الاسم
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Name
+                            </th>
+                           
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;"  colspan="3">
+                                الوظيفة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                <t t-esc="o.job_title" />
+                            </th>
+                             <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                Job Title
+                            </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    الجـنــــســـــيـة
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.country_id.name" />
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    Nationality
+                                </th>
+
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                    القسم
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                    <t t-esc="o.department_id.name" />
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                    Department
+                                </th>
+                            </tr>
+                                <tr>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    تاريخ المباشرة
+
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.first_contract_date" />
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    Start work at
+                                </th>
+
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                  توقيع الموظف
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                </th>
+                                <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="3">
+                                    Employee Signature
+                                </th>
+                            </tr>
+                        </table>
+                    </t>
+                    <br />
+                    <table
+                        style="border: 1px solid black;border-collapse: collapse; width: 100%; margin-left: auto; margin-right: auto; ">
+                        <tr>
+                            <th style="border: #000000 1px solid;  padding: 8px; background-color: lightgrey; width:40%;"
+                                colspan="6">
+                                إدارة الموظف
+                            </th>
+                            <th style="border: #000000 1px solid;  padding: 8px; background-color: lightgrey; width:40%; "
+                                colspan="6">
+                                Employee Department 
+                            </th>
+                        
+                        </tr>
+                        <tr>
+                            <th colspan="6" style="direction: rtl;   border-left: 1px solid black text-align: center; padding: 8px;">
+                                إلى : شؤون الموظفين 
+                            </th>
+                            <th colspan="3" style="  border-left: 1px solid black;text-align: center; padding: 8px;">
+                                To : Personnel Department
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="6" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                نـأمل اعتـــماد مبـاشرة العمل للموظف 
+                            </th>
+                            <th colspan="3" style="  border-left: 1px solid black; text-align: center; padding: 8px;">
+                                Please be advised that, the EMLOYEE
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="6" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                □ التحق بالعــمل لأول مرة 
+                            </th>
+                            <th colspan="3" style="  border-left: 1px solid black; text-align: center; padding: 8px;">
+                                Started the work for the first time □
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="6" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                □ التحق بالعمل بعد الإجازة 
+                            </th>
+                            <th colspan="3" style="  border-left: 1px solid black; text-align: center; padding: 8px;">
+                                 Joined the work after vacation □
+                            </th>
+
+                        
+                        </tr>
+                        <tr>
+                            <th colspan="20" style="direction: rtl;border-left: 1px solid black; text-align: center; padding: 8px;">
+                                مدير الإدارة <br />
+                                Dept. Manager
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="20" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                الاســم : ________________________ Name
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="20" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                التــوقيـــــع : ________________________ Signature
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="20" style="direction: rtl; border-left: 1px solid black; text-align: center; padding: 8px;">
+                                التاريخ : __/__/_______ Date
+
+                            </th>
+                        </tr>
+                    </table>
+                    
+                    <br />
+                    <t t-foreach="docs" t-as="o">
+                        <table class="btn">
+                            <tr>
+                                <th style="border: #000000 1px solid;  padding: 8px; background-color: lightgrey; width:40%;"
+                                    colspan="2">
+                                    لاستخدام شؤون الموظفين فقط
+                                </th>
+                                <th style="border: #000000 1px solid;  padding: 8px; background-color: lightgrey; width:40%; "
+                                    colspan="2">
+                                    Personnel use only
+                                </th>
+                                
+                            </tr>
+                            <tr>
+                                <th colspan="6" style="direction: rtl; border: none; text-align: right; padding: 8px;">
+                                    المذكور باشر في التاريخ المحدد ويدرج اسمه بكشوفات الرواتب اعتبارا من : __/__/_______
+                                </th>
+
+                            </tr>
+                            <tr>
+                                <th colspan="6" style="direction: rtl; border: none; text-align: right; padding: 8px;">
+                                    المذكور باشر العمل متأخراً ___________ يوم ويدرج اسمه بكشوفات الرواتب اعتبارا من :
+
+                                    __/__/_______ </th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    المدير العام
+                                </th>
+
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    شؤون الموظفين
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    التوقيع : _________________
+                                </th>
+
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    التوقيع : _________________
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    التاريخ : __/__/_______
+                                </th>
+
+                                <th colspan="3" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                    التاريخ : __/__/_______
+                                </th>
+                            </tr>
+                        </table>
+                    </t>
+                    <p style="text-align: right;">
+                        محاسب الرواتب الاسم : _________________ التوقيع : _________________ التاريخ :
+                        <br />
+                        * الأصل لملف الموظف * صورة لإدارة * صورة لمحاسب الرواتب
+                    </p>
+                </div>
+                <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                    <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

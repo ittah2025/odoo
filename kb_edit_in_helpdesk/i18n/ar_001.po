@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_edit_in_helpdesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-14 11:44+0000\n"
+"PO-Revision-Date: 2024-01-14 14:47+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: kb_edit_in_helpdesk
+#: model:mail.template,body_html:kb_edit_in_helpdesk.kb_email_template
+msgid ""
+"<p>\n"
+"                Dear\n"
+"                <t t-out=\"object.kb_userID.name\"/>\n"
+"                <br/>\n"
+"                I Think your Problem <span t-field=\"object.description\"/> is Solved.\n"
+"                Your Ticket\n"
+"                <t t-out=\"object.name\"/>\n"
+"                <br/>\n"
+"                <br/>\n"
+"                Thanks.\n"
+"            </p>\n"
+"        "
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model_terms:ir.ui.view,arch_db:kb_edit_in_helpdesk.edit_in_helpdesk_form
+msgid "<strong> This Ticket Has Been Solved.</strong>"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model.fields,field_description:kb_edit_in_helpdesk.field_help_ticket__kb_userEmail
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#. module: kb_edit_in_helpdesk
+#: model:res.groups,name:kb_edit_in_helpdesk.group_helpDesk_administration
+msgid "Helpdesk Administrator"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:res.groups,name:kb_edit_in_helpdesk.group_helpDesk_employee
+msgid "Helpdesk Employee"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model,name:kb_edit_in_helpdesk.model_help_ticket
+msgid "Helpdesk Ticket"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model.fields,field_description:kb_edit_in_helpdesk.field_help_ticket__kb_jobPosition
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model.fields,field_description:kb_edit_in_helpdesk.field_help_ticket__kb_isSolved
+msgid "Kb Issolved"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model.fields,field_description:kb_edit_in_helpdesk.field_help_ticket__kb_userPhone
+msgid "Phone"
+msgstr "رقم الجوال"
+
+#. module: kb_edit_in_helpdesk
+#: model_terms:ir.ui.view,arch_db:kb_edit_in_helpdesk.edit_in_helpdesk_form
+msgid "Send Email"
+msgstr "ارسال عبر البريد الالكتروني"
+
+#. module: kb_edit_in_helpdesk
+#: model:mail.template,name:kb_edit_in_helpdesk.kb_email_template
+#: model:mail.template,subject:kb_edit_in_helpdesk.kb_email_template
+msgid "Solved Ticket"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model,name:kb_edit_in_helpdesk.model_ticket_stage
+msgid "Ticket Stage"
+msgstr ""
+
+#. module: kb_edit_in_helpdesk
+#: model:ir.model.fields,field_description:kb_edit_in_helpdesk.field_help_ticket__kb_userID
+msgid "User Name"
+msgstr "اسم المستخدم "
+
+#. module: kb_edit_in_helpdesk
+#: model:res.groups,name:kb_edit_in_helpdesk.group_helpDesk_sub_administration
+msgid "access_right"
+msgstr ""

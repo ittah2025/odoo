@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+    <!--    purchase form view inherit-->
+    <record id = "id_purchase_order_form_view_pr_inherits" model = "ir.ui.view" >
+        <field name = "name" >purchase.order.form_view_inherit</field >
+        <field name = "model" >purchase.order</field >
+        <field name = "inherit_id" ref = "purchase.purchase_order_form" />
+        <field name = "arch" type = "xml" >
+            <xpath expr = "//header" position = "replace" >
+                <header >
+                    <field name = "kb_amount_check" invisible = "1" force_save = "1" />
+
+                    <button string = "Send To Approval" name = "action_scm_approval" type = "object"
+                            states = "draft"
+                            class = "oe_highlight" />
+
+                    <button string = "Approve" name = "action_dir_m_approval" type = "object" states = "scm"
+                            class = "oe_highlight"
+                            groups = "kb_pr_po_levels.group_pr_po_of_scm" />
+
+                    <button string = "To CEO" name = "action_ceo_approval" type = "object"
+                            class = "oe_highlight"
+                            attrs = "{'invisible': ['|', ('kb_amount_check', '=', False), ('state', 'not in', ['dir_m']) ]}"
+                            groups = "kb_pr_po_levels.group_pr_po_of_scm" />
+
+
+                    <button name = "button_confirm" type = "object"
+                            string = "Confirm Order" id = "draft_confirm"
+                            attrs = "{'invisible': ['|',('kb_amount_check', '=', True), ('state', 'not in', ['dir_m'])]}"
+                            groups = "kb_pr_po_levels.group_pr_po_of_scm" />
+
+
+                    <button name = "button_confirm" type = "object" states = "ceo"
+                            context = "{'validate_analytic': True}"
+                            string = "Confirm Order" id = "draft_confirm_2"
+                            groups = "kb_pr_po_levels.group_pr_po_of_direct_manager" />
+
+
+
+                    <button name = "action_rfq_send" states = "draft" string = "Send by Email" type = "object"
+                            context = "{'send_rfq':True}" class = "oe_highlight" data-hotkey = "g"
+                    />
+                    <button name = "action_rfq_send" states = "action_scm_approval" string = "Send by Email"
+                            type = "object"
+                            context = "{'send_rfq':True}" class = "oe_highlight" data-hotkey = "g"
+                    />
+                    <button name = "print_quotation" string = "Print RFQ" type = "object" states = "draft"
+                            class = "oe_highlight"
+                            data-hotkey = "k" />
+                    <button name = "print_quotation" string = "Print RFQ" type = "object" states = "action_scm_approval"
+                            class = "oe_highlight"
+                            data-hotkey = "k" />
+                    <button name = "button_confirm" type = "object" states = "sent" string = "Confirm Order"
+                            context = "{'validate_analytic': True}" class = "oe_highlight" id = "bid_confirm"
+                            data-hotkey = "v" />
+                    <button name = "button_approve" type = "object" states = 'to approve' string = "Approve Order"
+                            class = "oe_highlight"
+                            data-hotkey = "z" />
+                    <button name = "action_create_invoice" string = "Create Bill" type = "object" class = "oe_highlight"
+                            context = "{'create_bill':True}"
+                            attrs = "{'invisible': ['|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}"
+                            data-hotkey = "w" />
+                    <button name = "action_rfq_send" states = "sent" string = "Re-Send by Email" type = "object"
+                            context = "{'send_rfq':True}" data-hotkey = "g" />
+                    <button name = "print_quotation" string = "Print RFQ" type = "object" states = "sent"
+                            groups = "base.group_user"
+                            data-hotkey = "k" />
+                    <button name = "action_rfq_send" states = "purchase" string = "Send PO by Email" type = "object"
+                            context = "{'send_rfq':False}" data-hotkey = "g" />
+                    <button name = "confirm_reminder_mail" string = "Confirm Receipt Date" type = "object"
+                            attrs = "{'invisible': ['|','|', ('state', 'not in', ('purchase', 'done')), ('mail_reminder_confirmed', '=', True), ('date_planned', '=', False)]}"
+                            groups = "base.group_no_one" data-hotkey = "o" />
+                    <button name = "action_create_invoice" string = "Create Bill" type = "object"
+                            context = "{'create_bill':True}"
+                            attrs = "{'invisible': ['|', '|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}"
+                            data-hotkey = "w" />
+                    <button name = "button_draft" states = "cancel" string = "Set to Draft" type = "object"
+                            data-hotkey = "o" />
+                    <button name = "button_cancel" states = "draft,to approve,sent,purchase" string = "Cancel"
+                            type = "object"
+                            data-hotkey = "x" />
+                    <button name = "button_done" type = "object" string = "Lock" states = "purchase"
+                            data-hotkey = "l" groups = "kb_pr_po_levels.group_pr_po_of_scm" />
+                    <button name = "button_unlock" type = "object" string = "Unlock" states = "done"
+                            groups = "kb_pr_po_levels.group_pr_po_of_scm" data-hotkey = "l" />
+
+
+                    <field name = "state" widget = "statusbar"
+                           statusbar_visible = "draft,scm,dir_m,ceo,purchase" readonly = "1" />
+                </header >
+            </xpath >
+
+             <xpath expr="//field[@name='partner_id']" position="after">
+
+                    <field name="kb_requests_id" invisible="0" readonly="1" />
+                </xpath>
+
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button type="object"
+                    name="action_view_payments"
+                    class="oe_stat_button"
+                    icon="fa-money" attrs="{'invisible':[('payment_count','=', 0)]}" groups="">
+                    <field name="payment_count" widget="statinfo" string="Payment Requests" help="Payment Requests"/>
+                </button>
+            </xpath>
+        </field >
+    </record >
+
+</odoo >

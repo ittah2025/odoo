@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--created by Mujtaba-->
+    <record id="res_partner_form_vendor" model="ir.ui.view">
+        <field name="name">res.partner.inherited.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <group>
+                <field name="kb_vendor_id" />
+                <field name="kb_vendor_id2" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_form_search" model="ir.ui.view">
+        <field name="name">res.partner.inherited.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="kb_vendor_id" />
+            </xpath>
+        </field>
+    </record>
+
+
+    <record model = "ir.ui.view" id = "kb_form_vrndor_tree" >
+            <field name = "name" >vendor tree</field >
+            <field name = "model" >res.partner</field >
+            <field name = "inherit_id" ref = "base.view_partner_tree" />
+            <field name = "arch" type = "xml" >
+
+                 <xpath expr = "/tree/field[@name='display_name']" position = "before" >
+                        <field name = "kb_vendor_id" invisible = "0" />
+                </xpath >
+
+            </field >
+    </record >
+
+
+</odoo>
+

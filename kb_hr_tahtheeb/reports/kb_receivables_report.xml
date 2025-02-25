@@ -1,0 +1,199 @@
+<odoo>
+    <record id="action_receivables_report" model="ir.actions.report">
+        <field name="name">إبراء ذمة</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.receivables_report</field>
+        <field name="report_file">kb_hr_tahtheeb.receivables_report</field>
+        <field name="print_report_name">'إبراء ذمة'</field>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="receivables_report">
+        <t t-call="web.html_container">
+            <!--            <t t-call="web.external_layout">-->
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+
+                <style>
+                    <!--                    @font-face {-->
+                    <!--                    font-family: 'Calibri';-->
+                    <!--                    src: url('/path/to/your/fonts/Calibri.woff') format('woff'),-->
+                    <!--                    url('/path/to/your/fonts/Calibri.ttf') format('truetype');-->
+                    <!--                    font-weight: normal;-->
+                    <!--                    font-style: normal;-->
+                    <!--                    }-->
+                    body { font-family: calibri !important; }
+
+                    .page {
+                    <!--                    font-family: 'Calibri', 'Almarai', sans-serif;-->
+                    text-align: right;
+                    line-height: 2;
+                    padding-top: 0 !important;
+                    margin-top: 0 Important;
+                    direction: rtl;
+                    }
+
+                    h3 {
+                    text-align: center;
+                    font-weight: bold;
+                    }
+
+                    <!--                    .signature-section {-->
+                    <!--                    width: 100%;-->
+                    <!--                    margin-top: 30px;-->
+                    <!--                    display: flex;-->
+                    <!--                    justify-content: space-between;-->
+                    <!--                    border-top: 2px solid #000;-->
+                    <!--                    }-->
+
+                    .signature-box {
+                    <!--                    width: 45%;-->
+                    <!--                    text-align: center;-->
+                    padding: 20px;
+                    <!--                    border: 1px solid #000;-->
+                    direction: rtl;
+                    margin-top: 40px;
+                    }
+                    p.h5 {
+                    text-decoration: underline;
+                    font-weight: bold;
+                    <!--                    font-size: 18px-->
+                    }
+
+                    .footer {
+                    font-size: 10px;
+                    text-align: center;
+                    margin-top: 50px;
+                    }
+                    .cust-p {
+                    <!--                    margin-right: -150px;-->
+                    }
+                </style>
+
+                <!--                <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet"/>-->
+                <div class="page" style="font-family:Calibri !important; font-size: 16pt;">
+                    <div>
+
+                        <div class="page">
+                            <!-- Header -->
+                            <div style="font-size: 14px; font-weight: bold;">
+                                <p style=" text-align:right;">التاريخ : &#160;&#160;<span
+                                        t-esc="hijri_date_now"/> ه
+                                </p>
+                                <p style=" text-align:right;">الموافق : &#160;&#160;<span
+                                        t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م
+                                </p>
+
+                            </div>
+                            <div></div>
+
+                            <!-- Title -->
+                            <h3 style="margin-bottom: 25px">(إبراء ذمة)</h3>
+
+                            <!-- Body Text -->
+                            <p class="text-right">
+                                <span>
+                                    <t t-foreach="employee_list" t-as="employee">
+                                           
+                                       
+                                        <t t-if="employee['gender'] !='female'">
+                                           أقر أنا الموقع أدناه/ 
+                                            
+                                        </t>
+                                        <t t-if="employee['gender'] =='female'">
+                                            أقر أنا الموقعة أدناه/  
+                                        </t>
+                                         <t t-esc="employee['employee_name']"/>
+                                     </t>,
+                                </span>
+
+                                <span class="text-center">
+                                    الجنسية:
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <t t-esc="employee['nationality_name']"/>
+                                    </t>
+                                </span>
+                                <span>
+                                    بموجب هوية
+                                    وطنية (
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <t t-esc="employee['identification_id']"/>
+                                    </t>
+                                </span>
+                                )، بأنني استلمت
+                                كافة مستحقاتي النظامية من الأجور والأجور الإضافية وبدلات
+                                الإجازة ونهاية
+                                الخدمة حسب نظام العمل والعمال السعودي من شركة التهذيب للخدمات
+                                التعليمية
+                                وعنوانها: شارع الخليج . حي غرناطة . سيهات . المنطقة الشرقية . المملكة العربية السعودية ,
+                                عن
+                                الفترة منذ بداية عملي لديهم بوظيفة
+                                (
+                                <t t-foreach="employee_list" t-as="employee">
+                                    <t t-esc="employee['job_id']"/>
+                                
+                                ) من تاريخ
+                                <span t-esc="employee['from_date_h']"/>
+                                ه  الموافق 
+                                <span t-esc="employee['from_date']"/> م
+                                إلى تاريخ
+                                <span t-esc="employee['to_date_h']"/>
+                                ه الموافق 
+                                <span t-esc="employee['to_date']"/> م</t>
+                                وأنني بعد توقيعي على هذا الإقرار أخلي طرف
+                                شركة
+                                التهذيب للخدمات التعليمية، من أية مستحقات تتعلق بي، كما أسقط أية دعاوى أو قضايا أو
+                                منازعات
+                                لدى أية جهة كانت حالياً أو سابقاً، تتعلق بعملي لدى شركة التهذيب للخدمات التعليمية، كما
+                                أتعهد
+                                بعدم المنازعة أمام أية جهة كانت مستقبلاً، فيما يتعلق بانتهاء عملي لدى الشركة أو فيما
+                                يتعلق
+                                بالحصول على رواتبي ومستحقاتي النظامية كما أقر بأنني وقعت على هذا الإقرار بمحض إرادتي
+                                واختياري الكاملين دون ضغط أو إكراه من أحد .
+                            </p>
+
+                            <p class="text-center">وهذا إقرار وتعهد مني بما ورد أعلاه ,,,</p>
+
+                            <!-- Signature Section -->
+                            <div class="signature-section row text-right">
+                                <!--                        <div class="col-2"></div>-->
+                                
+
+                                <div class="signature-box col-6">
+                                    <p class="h5 text-center">المقر بما فيه</p>
+                                    <div class="float-end" style="margin-right: 55px; margin-top: 15px">
+                                        <p class="cust-p">الاسم:</p>
+                                        <p>التوقيع:...........................</p>
+                                        <p class="cust-p">التاريخ :&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;هـ .</p>
+                                        <p class="cust-p">الموافق : &#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160; م.</p>
+                                    </div>
+                                </div>
+                                <div class="signature-box col-6">
+                                    <p class="h5 text-center">الشهود</p>
+                                    <div class="float-end" style="margin-right: 55px; margin-top: 15px">
+                                        <p class="cust-p">شاهد أول:</p>
+                                        <p>التوقيع:...........................</p>
+                                        <p class="cust-p">شاهد ثاني:</p>
+                                        <p>التوقيع:...........................</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cust-foot">
+                        <div class=" footer">
+                            <div class="my-footer">
+                                <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </t>
+        </t>
+    </template>
+</odoo>

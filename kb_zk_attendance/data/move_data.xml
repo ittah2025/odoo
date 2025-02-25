@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+	<record forcecreate="True" id="cron_move_data" model="ir.cron">
+		<field name="name">HR Attendance: Move data from Log to Attendance</field>
+		<field eval="True" name="active"/>
+		<field name="user_id" ref="base.user_admin"/>
+		<field name="interval_number">1</field>
+		<field name="interval_type">days</field>
+		<field name="numbercall">-1</field>
+		<field name="model_id" ref="kb_zk_attendance.model_kb_zk_attendance"/>
+		<field name="state">code</field>
+		<field name="code">model.cron_moveData()</field>
+	</record>
+</odoo>

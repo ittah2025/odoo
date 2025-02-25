@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kb_payroll_statement_wizard" model="ir.ui.view">
+        <field name="name">view.kb.payroll.wizard</field>
+        <field name="model">payroll.statement.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Employee Payroll Statement">
+                <group>
+                    <group>
+                        <field name="statement_by"/>
+                    </group>
+                    <group>
+                        <field name="date_from" attrs="{'invisible': [('statement_by', '=', 'batch')], 'required': [('statement_by', '=', 'date')]}"/>
+                        <field name="date_to" attrs="{'invisible': [('statement_by', '=', 'batch')], 'required': [('statement_by', '=', 'date')]}"/>
+                        <field name="batch_payslip_id" attrs="{'invisible': [('statement_by', '=', 'date')], 'required': [('statement_by', '=', 'batch')]}"/>
+
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="company_id"/>
+                    </group>
+                    <group>
+                        <field name="group_by"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="employee_ids" attrs="{'invisible': [('statement_by', '=', 'batch')]}"/>
+                </group>
+                <footer>
+                    <button string="Print PDF" name="print_pdf" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Print Excel Report" name="print_excel" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_kb_payroll_statement" model="ir.actions.act_window">
+        <field name="name">Employee Payroll Statement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">payroll.statement.wizard</field>
+        <field name="view_id" ref="view_kb_payroll_statement_wizard"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_employee_payroll_reporting" name="Reporting"
+              parent="hr_payroll_community.menu_hr_payroll_community_root" groups="hr_payroll_community.group_hr_payroll_community_manager" sequence="90"/>
+    <menuitem id="menu_hr_payroll_statement" parent="menu_employee_payroll_reporting"
+              action="action_kb_payroll_statement" sequence="1"/>
+</odoo>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_Fixation_salary_Alahly_reportID" model="ir.actions.report">
+        <field name="name">تثبيت الراتب بنك الأهلي</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.kb_Fixation_salary_Alahly_report</field>
+        <field name="report_file">kb_hr_tahtheeb.kb_Fixation_salary_Alahly_report</field>
+        <field name="print_report_name">'تثبيت الراتب بنك الأهلي' </field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="kb_Fixation_salary_Alahly_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="assignmentID" t-as="line">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                            <style>
+                                .th1{
+                                 border:1px solid black ;
+                                 height:30px;
+                                 font-size:15;
+                                 }
+                            </style>
+                    <p style="text-align:right;">التاريخ <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م</p>
+                        <p style="display:inline-block; width:200px;"> </p>
+                        <p style="text-align:right; font-weight: bold; font-size: 15px;display:inline-block; width:250px;">شهادة تحويل راتب  </p>
+                        <p style="font-size: 15px; display:inline-block; width:250px;">Salary Transfer commitment certificate </p>
+
+                    <table style="text-align:center; border: 1px solid; width: 100%;">
+                            <td style="text-align:right; border: 1px solid; " colspan="2" >
+                                إدارة الموارد البشرية - قسم الرواتب
+                                <br/><br/>
+                                التاريخ:
+                                <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                <br/>
+                                السادة:البنك الأهلي السعودي
+                                <br/>
+                                الموضوع:شهادة تحويل راتب
+                                <br/><br/>
+                                تشهد بأن المذكور ادناة يعمل لديها بنظام التفرغ الكامل <br/>وبناء على تفويض  منه فسوف يتم تحويل صافي راتبه<br/> مع كامل البدلات و العمولات الشهرية(إن<br/> وجدت)وجميع مستحقاته النهائية (شاملة مكافأة نهاية<br/> الخدمة وأي بدلات بعد الإستقالة) في حال الإستقالة او<br/> الفصل أو التقاعد (ﻷي سبب كانت<br/> الاستقالة أو الفصل التقاعد)
+                                <br/>
+                                إلى حسابه المصرفي لدى:
+                                 <br/> <br/>
+                                البنك الأهلي السعودي
+                                 <br/>
+                                الفرع: سيهات
+                                 <br/>
+                                رقم الحساب:
+                                <span t-esc="line['kb_iban']"/>
+                                <br/>
+                                اعتبارا من :
+                                <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                <br/>
+                                رقم الحساب البنكي الدولي:
+                                <br/>
+                                كما تلتزم الشركة بعدم السماح للموظف بإلغاء أو<br/> تعديل  التفويض إلا بموافقة البنك الخطية, هذا<br/>  بالإضافة انه في حال استقالة الموظف أو فصله أو<br/> تقاعده فإن الشركة تلتزم بإخطار البنك الأهلي السعودي <br/>(إدارة التحصيل بحي الخالدية بمدينة جدة)
+                                <br/> <br/>
+                                P.O box 19396 Jeddah 21435
+                                <br/> <br/>
+                                أو بواسطة البريد الإلكتروني
+                                <br/> <br/>
+                                CollecctionsSkipTracing@alahli.com
+                                <br/>
+                                بتاريخ إيداع مستحقه النهائية.
+                                <br/>
+                                كما أن الشركة لا تتحمل أي التزام قانوني أو مالي بخلاف ما  ذكر أعلاه:
+                                <br/> <br/>
+                                اسم الموظف:
+                                <span t-esc="line['kb_employee_name']"/>
+                                <br/>
+                                رقم الهوية:
+                                <span t-esc="line['kb_employeeID']"/>
+                                <br/>
+                                تاريخ التعيين:
+                                <span t-esc="line['kb_date']"/>
+                                <br/>
+                                المسمى الوظيفي:
+                                <span t-esc="line['kb_job_title']"/>
+                                <br/>
+                                موقع الوظيفة:
+                                <span t-esc="line['kb_location_job']"/>
+                                <br/>
+                                الراتب الأساسي
+                                <span t-esc="line['kb_basic_salary']"/>
+                                <br/>
+                                صافي الراتب الشهري:
+                                <span t-esc="line['kb_salary']"/>
+                                <br/>
+                                تاريخ ايداعه 28 من كل شهر
+                            </td>
+                            <td style="text-align:left; border: 1px solid; " colspan="2">
+                                Date: <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                <br/>
+                                M/S:
+                                <br/>
+                                Subject:Salary Transfer certificate
+                                <br/><br/>
+                                This is to certify that the below mentioned is our full time <br/>
+                                employee and based on authorization from him we will <br/>
+                                transfer his net monthly salary along with all other allowances<br/>
+                                and commissions (if any), regularly on a monthly basis and<br/>
+                                shall also deposit his final settiement including End of Service<br/>
+                                Benefits and any other allowances, in case of his resignation,<br/>
+                                retirement or termination due to any reason in to his bank<br/>
+                                account at
+                                <br/><br/>
+                                Bank
+                                <br/>
+                                Branch
+                                <br/>
+                                A/C No
+                                <br/>
+                                IBAN No : <span t-esc="line['kb_iban']"/>
+                                <br/>
+                                Also the company certifies that it will not cancel this<br/>
+                                undertaking unless a written clearance from the bank is<br/>
+                                received, moreover, in case of resignation / retirement/<br/>
+                                termination, the company will immediately inform SNB's <br/>
+                                (collections Department at Al- Khaldiya, Jeddah) P.O box<br/>
+                                19396 Jeddah 21435 or by e-mail
+                                <br/>
+                                CollectionsSkipTracing@alahli.com about the date of deposit<br/>
+                                of final settlement of this employee
+                                <br/><br/>
+
+                                in this reGard the company is not responsible for any legal<br/>
+                                or financial commitment except what is mentioned above<br/>
+                                Employee Name:
+                                <span t-esc="line['kb_employee_name']"/>
+                                <br/>
+                                ID No:
+                                 <span t-esc="line['kb_employeeID']"/>
+                                <br/>
+                                Hine Date:
+                                <span t-esc="line['kb_date']"/>
+                                <br/>
+                                Joo Location:
+                                <span t-esc="line['kb_location_job']"/>
+                                <br/>
+                                Net monthly Salary:<span t-esc="line['kb_salary']"/>
+                                <br/>
+                                basic salary + fixed monthly allowance-fixed montal deductions
+                                <br/>
+                                Salary Deposit Date
+
+                            </td>
+                        </table>
+                            <p style="display:inline-block; width:200px;"> </p>
+                            <p style="text-align:right; font-weight: bold; font-size: 15px;display:inline-block; width:150px;">التوقيع </p>
+                            <p style=" font-size: 15px; display:inline-block; width:150px;" >علي احمد ال خميس </p>
+                            <p style=" font-size: 15px; display:inline-block; width:150px;" >اسم المسوؤل  </p>
+                        <br></br>
+                            <p style="display:inline-block; width:200px;"> </p>
+                            <p style="text-align:right; font-weight: bold; font-size: 15px;display:inline-block; width:150px;">الختم الرسمي  </p>
+                            <p style=" font-size: 15px; display:inline-block; width:150px;" >الموارد البشرية  </p>
+                            <p style=" font-size: 15px; display:inline-block; width:150px;" >الوظيفة   </p>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

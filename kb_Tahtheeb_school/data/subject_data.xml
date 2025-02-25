@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="1" model="subject">
+            <field name="name">test1</field>
+        </record>
+
+        <record id="2" model="subject">
+            <field name="name">test2</field>
+        </record>
+
+        <record id="3" model="subject">
+            <field name="name">test3</field>
+        </record>
+   
+
+</odoo>

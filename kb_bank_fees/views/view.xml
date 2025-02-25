@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_payment_bank_fee_view" model="ir.ui.view">
+        <field name="name">view.account.payment.bank.fee</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <field name="destination_journal_id" position="after">
+                <field name="bank_fee" invisible="1"/>
+            </field>
+        </field>
+    </record>
+    <record id="account_journal_view_bank_fee" model="ir.ui.view">
+        <field name="name">view.account.journal.bank.fee</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="default_bank_fee_account_id" attrs="{'invisible': [('type', '!=', 'bank')]}"
+                       groups="account.group_account_user"/>
+                <field name="is_percentage_fee" attrs="{'invisible': [('type', '!=', 'bank')]}"
+                       groups="account.group_account_user"/>
+                <field name="bank_fee_percentage"
+                       attrs="{'invisible': ['|',('type', '!=', 'bank'),('is_percentage_fee', '=',False)]}"
+                       groups="account.group_account_user"/>
+                <field name="bank_fee"
+                       attrs="{'invisible': ['|',('type', '!=', 'bank'),('is_percentage_fee', '=',True)]}"
+                       groups="account.group_account_user"/>
+            </field>
+        </field>
+    </record>
+</odoo>

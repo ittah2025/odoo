@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_experience_certificate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-29 08:52+0000\n"
+"PO-Revision-Date: 2023-08-29 08:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid ""
+"<br/>\n"
+"\n"
+"                            قد عمل لدينا ضمن موظفين الشركة بوظيفة"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model,name:kb_experience_certificate.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__employee_id
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: kb_experience_certificate
+#: model:ir.actions.act_window,name:kb_experience_certificate.experience_certificate_report_action
+#: model:ir.ui.menu,name:kb_experience_certificate.menu_experience_certificate_report
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.kb_hr_experience_certificate_reports_form
+msgid "Experience Certificate"
+msgstr "شهادة خبرة"
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model.fields,field_description:kb_experience_certificate.field_kb_hr_experience_certificate_reports__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.kb_hr_experience_certificate_reports_form
+msgid "PDF"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.model,name:kb_experience_certificate.model_kb_hr_experience_certificate_reports
+msgid "kb_hr_experience_certificate_reports"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid "تشهد شركة ثلاجة سعيد مهدي آل سليس للأسماك والربيان ذ.م.م  بأن السيد/"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid ""
+"توقيع مدير الشركة\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid ""
+"ختم الشركة\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid "خلال الفترة من"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model:ir.actions.report,name:kb_experience_certificate.kb_hr_experience_certificate_ids
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid "شهادة خبرة"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid "وحتى"
+msgstr ""
+
+#. module: kb_experience_certificate
+#: model_terms:ir.ui.view,arch_db:kb_experience_certificate.experience_certificate_reportss
+msgid ""
+"وقد تمكن خلال فترة عمله لدينا إثبات جدارته، وتفوقه والإتقان والخبرة، ونحن نشهد له بحسن الخلق والأداء الاحترافي المتميز.\n"
+"                            <br/>\n"
+"\n"
+"                            وقد تم تحرير هذه الشهادة بناءً على رغبة الموظف في اليوم الموافق"
+msgstr ""

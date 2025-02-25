@@ -1,0 +1,537 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_school_withdrawal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-11 14:18+0000\n"
+"PO-Revision-Date: 2024-03-11 17:36+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : "
+"n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid ""
+"<select name=\"Reason\" class=\"form-control link-style\">\n"
+"                                                            <option value=\"\">Reason for "
+"withdrawal...</option>\n"
+"                                                            <option "
+"value=\"change_of_place\">Change of place of residence\n"
+"                                                            </option>\n"
+"                                                            <option value=\"fees_high\">Fees are "
+"high</option>\n"
+"                                                            <option value=\"school_building\">The "
+"school building is not\n"
+"                                                                set\n"
+"                                                            </option>\n"
+"                                                            <option "
+"value=\"educational_path\">Change educational path\n"
+"                                                            </option>\n"
+"                                                            <option "
+"value=\"educational_staff\">Educational Staff</option>\n"
+"                                                        </select>"
+msgstr ""
+"<select name=\"Reason\" class=\"form-control link-style\">\n"
+"                                                            <option value=\"\">سبب الانسحاب</"
+"option>\n"
+"                                                            <option value=\"change_of_place\">تغيير "
+"مكان السكن\n"
+"                                                            </option>\n"
+"                                                            <option value=\"fees_high\">الرسوم "
+"مرتفعة</option>\n"
+"                                                            <option value=\"school_building\">مبنى "
+"المدرسة غير امن\n"
+"                                                            </option>\n"
+"                                                            <option "
+"value=\"educational_path\">تغيير المسار التعليمي\n"
+"                                                            </option>\n"
+"                                                            <option "
+"value=\"educational_staff\">الطاقم التعليمي</option>\n"
+"                                                        </select>"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "<span class=\"s_website_form_label_content\">Date</span>"
+msgstr "<span class=\"s_website_form_label_content\">التاريخ</span>"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "<span class=\"s_website_form_label_content\">Description</span>"
+msgstr "<span class=\"s_website_form_label_content\">الوصف</span>"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+msgid ""
+"<span class=\"s_website_form_label_content\">Parent ID / Iqama number</span>\n"
+"                                                        <span class=\"s_website_form_mark\">*</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">رقم الهوية / رقم الاقامة</span>\n"
+"                                                        <span class=\"s_website_form_mark\">*</span>"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid ""
+"<span class=\"s_website_form_label_content\">Reason for\n"
+"                                                            withdrawal\n"
+"                                                        </span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">سبب الانسحاب\n"
+"                                                        </span>"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.school_withdrawal_custom_form_view
+msgid "Approved"
+msgstr "موافقة"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__approved_collection_employee
+msgid "Approved by collection employee"
+msgstr "موافق عليها من قبل موظف التحصيل"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__approved_education_admin_employee
+msgid "Approved by education admin employee"
+msgstr "موافق عليها من قبل موظف إدارة التعليم"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__withdrawal_administrator
+msgid "Approved by withdrawal administrator"
+msgstr "موافق عليها من قبل إدارة القبول والتسجيل"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__withdrawal_reason__educational_path
+msgid "Change educational path"
+msgstr "تغيير المسار التعليمي"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__withdrawal_reason__change_of_place
+msgid "Change of place of residence"
+msgstr "تغير مكان السكن"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__withdrawal_reason
+msgid "Choose the reason for withdrawal"
+msgstr "اختار سبب الانسحاب"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__state
+msgid "Choose the state"
+msgstr "اختار الحالة"
+
+#. module: kb_school_withdrawal
+#: model:res.groups,name:kb_school_withdrawal.group_collection_employee
+msgid "Collection employee"
+msgstr "موظف التحصيل"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.actions.act_window,help:kb_school_withdrawal.action_window_school_withdrawal
+msgid "Create a new order"
+msgstr "انشاء طلب جديد"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__kb_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__kb_note
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__note
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__school_agent_done
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.school_withdrawal_custom_form_view
+msgid "Done"
+msgstr "منتهي"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kb_school_withdrawal
+#: model:res.groups,name:kb_school_withdrawal.group_education_admin_employee
+msgid "Education admin employee"
+msgstr "موظف إدارة التعليم"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__withdrawal_reason__educational_staff
+msgid "Educational Staff"
+msgstr "الطاقم التعليمي"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__withdrawal_reason__fees_high
+msgid "Fees are high"
+msgstr "الرسوم مرتفعة"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.successful_web_form
+msgid "Home page"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+msgid "Honorable Parents, please enter your ID number or residence number"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__id
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__withdrawalID
+msgid "ID"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__message_has_error
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__lang
+msgid "Language"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__lang
+msgid ""
+"Optional translation language (ISO code) to select when sending out an email. If not set, the "
+"english version will be used. This should usually be a placeholder expression that provides the "
+"appropriate language, e.g. {{ object.partner_id.lang }}."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.successful_web_form
+msgid "Our team will check your information and contact you"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+msgid "Parent ID / Residence number"
+msgstr "رقم الهوية / رقم الاقامة"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "Parent Withdrawal"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:website.menu,name:kb_school_withdrawal.menu_parent_withdrawal0
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "Parent withdrawal"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+msgid "Please Enter ID / Iqama number"
+msgstr "فضلا ادخل رقم الهوية / رقم الاقامة"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.school_withdrawal_custom_form_view
+msgid "Rejected"
+msgstr "مرفوضة"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__rejected_collection_employee
+msgid "Rejected by collection employee"
+msgstr "مرفوضة من قبل موظف التحصيل"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__state__rejected_education_admin_employee
+msgid "Rejected by education admin employee"
+msgstr "مرفوضة من قبل موظف إدارة التعليم"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__render_model
+msgid "Rendering Model"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:res.groups,name:kb_school_withdrawal.group_school_agent
+msgid "School agent"
+msgstr "وكيل المدرسة"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form
+msgid "Search"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "Send"
+msgstr "ارسال"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__student_id
+msgid "Student"
+msgstr "الطالب"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.parent_withdrawal_web_form_result
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.successful_web_form
+msgid "Thank you"
+msgstr "شكرا لك"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields.selection,name:kb_school_withdrawal.selection__school_withdrawal__withdrawal_reason__school_building
+msgid "The school building is not set"
+msgstr "مبنى المدرسة غير امن"
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,help:kb_school_withdrawal.field_school_withdrawal__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.successful_web_form
+msgid "Well Done!"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.actions.act_window,name:kb_school_withdrawal.action_window_school_withdrawal
+#: model:ir.ui.menu,name:kb_school_withdrawal.kb_school_withdrawal_project_menu
+msgid "Withdrawal"
+msgstr "الانسحاب"
+
+#. module: kb_school_withdrawal
+#: model:res.groups,name:kb_school_withdrawal.group_withdrawal_school_administration
+msgid "Withdrawal Administrator"
+msgstr "إدارة القبول والتسجيل"
+
+#. module: kb_school_withdrawal
+#: model:ir.ui.menu,name:kb_school_withdrawal.menu_kb_school_withdrawal
+msgid "Withdrawal School"
+msgstr "إدارة انسحاب الطلاب"
+
+#. module: kb_school_withdrawal
+#: model:ir.module.category,name:kb_school_withdrawal.withdrawal_school_management
+msgid "Withdrawal School Management"
+msgstr "إدارة الانسحاب من المدرسة"
+
+#. module: kb_school_withdrawal
+#: model_terms:ir.ui.view,arch_db:kb_school_withdrawal.successful_web_form
+msgid "check-circle"
+msgstr ""
+
+#. module: kb_school_withdrawal
+#: model:ir.model.fields,field_description:kb_school_withdrawal.field_school_withdrawal__withdrawal_reason
+msgid "reason for withdrawal"
+msgstr "سبب الانسحاب"
+
+#. module: kb_school_withdrawal
+#: model:ir.model,name:kb_school_withdrawal.model_school_withdrawal
+msgid "school_withdrawal"
+msgstr ""

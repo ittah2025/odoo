@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Form view inside the document -->
+    <record model='ir.ui.view' id='maintenances_form_view'>
+        <field name="name">Maintenance.form</field>
+        <field name="model">maintenance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                <label for="property_unit"/>
+                        <field name="property_unit"/>
+                         <label for="maintenance_id"/>
+                        <field name="maintenance_id" />
+                    <notebook>
+                            <page string="Maintenance"> 
+                                <field name="maintenance_line">
+                                
+                                <tree editable="bottom">
+                                <field name="description_general"/>
+                                <field name="amount"/>
+                                <field name="total_cost"/>
+                                <field name="totalGeneral"/>
+                                <field name="doc_attachment_id3" widget="many2many_binary" class="oe_inline" />
+                                </tree>
+                                </field>
+                            </page>
+                    </notebook>
+
+                     
+                    <label for="final_total" />
+                    <field name="final_total" readonly="1" />
+                            
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree inside the document-->
+    <record model='ir.ui.view' id='maintenances_tree_view'>
+        <field name="name">maintenance.tree</field>
+        <field name="model">maintenance</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="property_unit"/>
+                <field name="maintenance_id" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

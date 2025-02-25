@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="extension_form" model="ir.actions.report">
+        <field name="name">Extension of Exit and Return visa</field>
+        <field name="model">extensionof.exit</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_timeoff.extensionof_form</field>
+        <field name="report_file">kb_timeoff.extensionof_form</field>
+        <field name="print_report_name">'Extension of Exit and Return visa' </field>
+        <field name="binding_model_id" ref="model_extensionof_exit" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="extensionof_form">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+               
+             <style>
+                table, 
+                th,
+                td
+                {
+                    border: 1px solid black;
+                    width: 100%;
+                    table-layout: fixed;
+                    vertical-align: text-top;
+                    border-collapse: collapse;
+                }
+                body.double {border-style: double;}
+            </style>
+            <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+            <h3 style="text-align: right; text-decoration: underline;">اضافة التاريخ</h3>
+            <h1 style="text-align: center; text-decoration: underline;">طلب تمديد تأشيرة الخروج و العودة</h1>
+            <h4 style="text-align: right; font-size: 20px;">السادة / شؤون الموظفين &#160;&#160;&#160;&#160;&#160;&#160;&#160; المحترمين</h4>
+            <h4 style="text-align: right; font-size: 20px;">السلام عليكم</h4>
+            <h4 style="text-align: right; font-size: 20px; text-indent: 15px;"> <span t-field="o.workin" />نأمل منكم تمديد تأشيرة الخروج والعودة لمدة <t t-esc="o.Date" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  يعمل لدى </h4>
+            <table style="border: none;">
+                <tr>
+                    <th style="font-size:large; text-align: right; border: none;"><span t-field="o.nationality" /></th>
+                    <th style="font-size:large; text-align: right; border: none;">: الجنسية</th>
+                    <th style="font-size:large; text-align: right; border: none;"><span t-field="o.name" /></th>
+                    <th style="font-size:large; text-align: right; border: none;">/للسيد</th>
+                </tr>
+                <tr>
+                    <th style="font-size:large; text-align: right; border: none;"><t t-esc="o.exp" /></th>
+                    <th style="font-size:large; text-align: right; border: none;">: تاريخ إنتهاء الإقامة</th>
+                    <th style="font-size:large; text-align: right; border: none;"><t t-esc="o.number" /></th>
+                    <th style="font-size:large; text-align: right; border: none;">/إقامة رقم</th>
+                </tr>
+            </table>
+            <br/>
+            <h4 style="text-align: right; font-size: 20px;">وذلك للاسباب الاتية: لحاجة العمل له</h4>
+            <table style="border: none;">
+                <tr>
+                    <th style="font-size:large; text-align: right; border: none;">اعداد شؤون الموظفين</th>
+                </tr>
+                <tr>
+                    <th style="font-size:large; text-align: right; border: none;"></th>
+                </tr>
+            </table>
+            <br/><br/>
+            <h3 style="text-align: center; text-decoration: underline;">شاكرين ومقدرين حسن تعاونك معنا</h3>
+            <br/><br/><br/><br/><br/><br/>
+            <table style="border: none;">
+                <tr>
+                    <th style="font-size:large; text-align: left; border: none;">المدير الإداري</th>
+                    <th style="font-size:large; text-align: right; border: none;">المدير المباشر</th>
+                </tr>
+                <tr>
+                    <td style="font-size:large; text-align: left; border: none;"></td>
+                    <td style="font-size:large; text-align: right; border: none;"></td>
+                </tr>
+            </table>
+            <br/><br/>
+            <table style="border: none">
+                <tr style="border-top: 3px solid black;">
+                    <th style="border: none; text-align: left;"><h3>مدير المالية وشؤون الموظفين</h3></th>
+                    <th style="border: none; text-align: right;"><h3>رئيس الحسابات</h3></th>
+                </tr>
+                <tr>
+                    <td style="text-align:  left; border: none;"></td>
+                    <td style="text-align: right; border: none;"></td>
+                </tr>
+            </table>
+            <br/><br/>
+            <table style="border: none">
+                <tr>
+                    <th style="border: none; text-align: center;"><h3>الرئيس التنفيذي</h3></th>
+                </tr>
+                <tr>
+                    <th style="border: none; text-align: center;"></th>
+                </tr>
+            </table>
+            <br/><br/>
+            <table style="border: none;">
+                <tr>
+                    <th style="font-size:large; text-align: left; border: none;">مسؤول الدوائر الحكومية</th>
+                    <th style="font-size:large; text-align: right; border: none;">/الاجرائات</th>
+                </tr>
+                <tr>
+                    <td style="font-size:large; text-align: left; border: none;"></td>
+                        <td style="font-size:large; text-align: right; border: none;"></td>
+                </tr>
+            </table>
+            </t>
+            </t>
+        </t>
+    </template> 
+
+</odoo>

@@ -1,0 +1,72 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "Employee_view_form2" >
+            <field name = "name" >Employee Contract Info</field >
+            <field name = "model" >hr.employee</field >
+            <field name = "inherit_id" ref = "hr.view_employee_form" />
+            <field name = "arch" type = "xml" >
+
+            
+
+                <xpath expr = "//notebook" position = "inside" >
+                    <page name = "new_contract_fields" string = "End of Services Calculator" groups="kb_end_of_service.group_end_of_administration">
+                        <group >
+                            <group >
+                                <field name = "contract_end_date" />
+                                <field name = "total_salary" />
+                                <field name = "total_days" />
+                                <field name = "total_month" />
+                                <field name = "total_years" />
+                                <field name = "Reward" />
+                                <field name = "time_off_remaining_id" />
+                                <field name = "remaining_days" />
+                                <field name = "time_off_salary_id" />
+                                <field name = "total_remaining_salary" />
+                                <field name ="total_loan" />
+                                <field name = "total_reward_remaining"/>
+                            </group >
+
+
+
+                            <group >
+                                <field name = "type_contract" />
+                                <field name = "notspecific"
+                                       attrs = "{'invisible': [('type_contract', '==', 'specific')]}" />
+                                <field name = "specific"
+                                       attrs = "{'invisible': [('type_contract', '==', 'notspecific')]}" />
+                                <field name = "covenant" />
+                                <field name = "button_set_evacuation" />
+                                <field name = "button_set_covenant" />
+                                <field name = "RewardNotSpecific"
+                                       attrs = "{'invisible': [('type_contract', '==', 'specific')]}" />
+                                <field name = "RewardSpecific"
+
+                                       attrs = "{'invisible': [('type_contract', '==', 'notspecific')]}" />
+                                <field name="clicked" invisible="1" />
+
+
+
+
+                                <field name="kb_journal_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+
+                                <field name="kb_timeoff_debit_account" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="kb_salary_debit" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="kb_salary_credit" options="{'no_quick_create':True,'no_create_edit':True}"/>
+
+                                 <button id="send_button" name="send_journal_entries" string="Send" class="btn-primary"  type="object" attrs="{'invisible': [('clicked', '=', True)]}" />
+                           <!-- attrs="{'invisible': [('clicked', '=', True)]}" -->
+
+                            </group >
+
+                        </group >
+
+
+
+
+
+                    </page >
+                </xpath >
+            </field >
+        </record >
+    </data >
+</odoo >

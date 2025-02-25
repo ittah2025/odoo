@@ -1,0 +1,66 @@
+<odoo>
+    <record id="viewIN_inherit" model="ir.ui.view">
+        <field name="name">hremployee_inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/> 
+        <field  name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <h1> <label for="name" string="English Name"/> </h1>
+            </xpath>
+            <xpath expr="//field[@name='job_title']" position="before">
+                <label for="nameEnglish" string="Arabic Name"/>
+                <field name="nameEnglish"/>
+            </xpath>
+            <xpath expr="//field[@name='passport_id']" position="after">
+                <field name="Exp"/>
+                <field name="haspassport"/>
+                <field name="releaseDate" attrs="{'invisible': [('haspassport', '=', False)]}"/>
+                <field name="Explicense" attrs="{'invisible': [('haspassport', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='bank_account_id']" position="after">
+                 <field name="Expbank"/>
+            </xpath>
+            <xpath expr="//field[@name='work_location_id']" position="after">
+                <label for="bus" string="bus or Coaster driver:"/>
+                <field name="bus" />
+                <field name="coaster" />
+                
+            </xpath>
+            <xpath expr="//group[@name='managers']" position="before">
+<group>
+                    <field name="driver_number" />
+                    <field name="driver_release_date" />
+                    <field name="driver_expiry_date" />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']/group[1]" position="after">
+                <group name="clothes" string="Clothes" >
+                <field name="Sizebantallon" />
+                <field name="Sizeblouse" />
+                <field name="Sizeshoes" />
+                </group>
+            </xpath>
+            <xpath expr="//page[3]" position="after">
+
+                <page string="History Project">
+                    <field name="note" />
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='has_work_permit']" position="after">
+                <field name="file1" filename="file1_name"/>
+                <field name="file1_name" invisible="1"/>
+                <field name="Exp_medical"/>
+            </xpath>
+            <xpath expr="//field[@name='address_home_id']" position="replace">
+                <field name="address_home_id" attrs="{'invisible': [('address_home_id', '=', False)]}"/>
+                <field name="streett"/>
+                <field name="street22"/>
+                <field name="cityy"/>
+                <field name="state_idd" />
+                <field name="zipp"/>
+                <field name="country_idd"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

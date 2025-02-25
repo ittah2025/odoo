@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kb_view_move_line_tree" model="ir.ui.view">
+        <field name="name">kb.account.move.anl.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='line_ids']//field[@name='account_id']" position="after">
+                <field name="is_anl_required" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//field[@name='account_id']" position="before">
+                <field name="is_partner_required" invisible="1"/>
+            </xpath>
+            <!-- <xpath expr="//field[@name='line_ids']//field[@name='partner_id']" position="before">
+                <field name="is_anl_tag_required" invisible="1"/>
+            </xpath> -->
+            <xpath expr="//field[@name='line_ids']//field[@name='analytic_distribution']" position="attributes">
+                <attribute name="attrs">{'required': [('is_anl_required', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']//field[@name='partner_id']" position="attributes">
+                <attribute name="attrs">{'required': [('is_partner_required', '=', True)]}</attribute>
+            </xpath>
+            <!-- <xpath expr="//field[@name='line_ids']//field[@name='analytic_tag_ids']" position="attributes">
+                <attribute name="attrs">{'required': [('is_anl_tag_required', '=', True)]}</attribute>
+            </xpath> -->
+        </field>
+    </record>
+</odoo>

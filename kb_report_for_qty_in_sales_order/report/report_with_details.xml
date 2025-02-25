@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record model="report.paperformat" id="report_action_paperformat_report">
+      <field name="name">European A4</field>
+      <field name="default" eval="True"/>
+      <field name="format">custom</field>
+      <field name="page_height">300</field>
+      <field name="page_width">250</field>
+      <field name="orientation">Portrait</field>
+      <field name="margin_top">0</field>
+      <field name="margin_bottom">20</field>
+      <field name="margin_left">3</field>
+      <field name="margin_right">3</field>
+      <field name="header_line" eval="False"/>
+      <field name="header_spacing">45</field>
+      <field name="dpi">90</field>
+    </record>
+
+    <record id="make_report_wizard_action" model="ir.actions.report">
+      <field name="name">Sale products Report</field>
+      <field name="model">sale.wizard</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">kb_report_for_qty_in_sales_order.sale_wizard_report_with_details</field>
+      <field name="report_file">kb_report_for_qty_in_sales_order.sale_wizard_report_with_details</field>
+      <field name="binding_model_id" ref="model_sale_wizard"/>
+      <field name="binding_type">report</field>
+      <field name="paperformat_id" ref="report_action_paperformat_report"/>
+    </record>
+
+    <template id="sale_wizard_report_with_details">
+      <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+          <div class="page">
+            <div style="border-top:0px;margin:0px 0px 0px 0px;">
+              <div class="row">
+                <!--header-->
+                <div class="col-md-10">
+                  <img src="kb_report_for_qty_in_sales_order/static/description/img/hed.png"
+                       style="top:0px;width:100%;height:50px;" alt="Logo"/>
+                </div>
+              </div>
+
+            </div>
+
+            <style>
+              @font-face {
+              font-family: 'Tajawal-Regular';
+              src: local('Tajawal-Regular'), local('Tajawal-Regular'),
+              url(/kb_report_for_qty_in_sales_order/static/src/fonts/cairo/Cairo-SemiBold.ttf)
+              format('opentype');
+              }
+              .font_tajawal{
+              font-family: Tajawal-Regular;
+              }
+              tr:nth-child(even) {
+              background-color: #eee;
+              }
+              tr:nth-child(odd) {
+              background-color: #fff;
+              }
+            </style>
+            <head>
+              <style>
+                table, th, td {
+                border: 1px solid black;
+                }
+              </style>
+            </head>
+            <div class="list-inline-item">
+              Printing date
+              <br/>
+              <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+              <!--                          <span t-esc="time.strftime('%Y-%m-%d')"/>-->
+            </div>
+            <t t-set="seq" t-value="1"/>
+            <br/>
+            <!--            <table width="40%"-->
+            <!--                   style="border-top:0px;color:black;font-size:20px;text-align:center;margin:0px 0px 0px 330px;">-->
+            <!--              <tr>-->
+            <!--                <th></th>-->
+            <!--              </tr>-->
+            <!--            </table>-->
+            <br/>
+            <table width="100%" class='styled-table mt-2 font_tajawal' style="direction: rtl;">
+
+              <tr style="text-align:center">
+              <td class="text-center"
+                    style="background-color:#4472c4; color:#ffffff;width: 10%; font-weight: bold;">From
+                </td>
+                 <td style="max-width: 10px;" class="text-center">
+                  <span t-esc="from"/>
+
+                </td>
+                <td class="text-center"
+                    style="background-color:#4472c4; color:#ffffff;width: 10%; font-weight: bold;">
+                  To
+                </td>
+
+                <td style="max-width: 10px;" class="text-center">
+                  <span t-esc="to"/>
+                </td>
+
+                
+                <!--                <t t-foreach="move_lines" t-as="line">-->
+               
+                <!--                </t>-->
+                
+              </tr>
+              <!--        </t>-->
+            </table>
+            <!--            <br/>-->
+            <br/>
+            <table class='styled-table mt-2 font_tajawal'
+                   style="border-collapse: collapse;border: 2px solid #ddd;font-size:20px; width:100%;padding-top:0;margin-top:0;">
+              <thead>
+                <tr class="thead-light" style="padding:0px; margin:0px;border-top: 2px solid #ddd;height: 40px">
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 2%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    #
+                  </th>
+
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    Product Name
+                  </th>
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    Total QTY
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="sale_tbody">
+                <t t-set="subtotal_total_fees" t-value="0"/>
+                <!--                <t t-set="subtotal_total_receipts" t-value="0"/>-->
+                <!--                <t t-set="subtotal_total_fees_and_receipts_quant" t-value="0"/>-->
+                <t t-set="i" t-value="1"/>
+                <t t-foreach="total_lines" t-as="docc" style="height: 40px">
+                  <tr>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="i"/>
+                      <t t-set="i" t-value="i+1"/>
+                    </td>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="docc['name']"/>
+                    </td>
+                    <td style="background-color:#b4c7e7;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="docc['total_qty']"/>
+                    </td>
+                  </tr>
+                </t>
+              </tbody>
+            </table>
+            <br/>
+            <table width="40%" class="font_tajawal"
+                   style="border-top:0px;color:#d0474a;background-color: #D3D3D3;font-size:28px;text-align:center;margin:0px 0px 0px 310px;">
+              <tr>
+                <th>Details</th>
+              </tr>
+            </table>
+            <br/>
+            <table class='styled-table mt-2 font_tajawal'
+                   style="border-collapse: collapse;border: 2px solid #ddd;font-size:20px; width:100%;padding-top:0;margin-top:0;">
+              <thead>
+                <tr class="thead-light" style="padding:0px; margin:0px;border-top: 2px solid #ddd;height: 40px">
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 2%; font-weight: bold;">
+                    #
+                  </th>
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    Product Name
+                  </th>
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    Sales ref
+                  </th>
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    QTY
+                  </th>
+                  <th class="text-center"
+                      style="background-color:#4472c4; color:#ffffff;width: 11%; font-weight: bold;">
+                    <!--                    <br/>-->
+                    Date Order
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="sale_tbody">
+                <t t-set="subtotal_total_fees" t-value="0"/>
+                <t t-set="i" t-value="1"/>
+                <t t-foreach="move_lines" t-as="doc3" style="height: 40px">
+                  <tr>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="i"/>
+                      <t t-set="i" t-value="i+1"/>
+                    </td>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="doc3['product']"/>
+                    </td>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="doc3['sale_name']"/>
+                    </td>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="doc3['product_uom_qty']"/>
+                    </td>
+                    <td style="background-color:#FFFFFF;text-align:center;border: 2px solid #ddd;">
+                      <span t-esc="doc3['date_order']"/>
+                    </td>
+                  </tr>
+                </t>
+              </tbody>
+            </table>
+          </div>
+        </t>
+      </t>
+
+    </template>
+
+  </data>
+</odoo>

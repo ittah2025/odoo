@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+
+        <record id="school_management" model="ir.module.category">
+            <field name="name">School Management</field>
+            <field name="sequence">22</field>
+        </record>
+
+        <record id="group_school_administration" model="res.groups">
+            <field name="name">School Administrator</field>
+            <field name="category_id" ref="kb_Tahtheeb_school.school_management" />
+<!--        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />-->
+        </record>
+<record id="group_school_acadimc_teacher" model="res.groups">
+            <field name="name">School Academic Teacher</field>
+            <field name="category_id" ref="school_management" />
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+        <record id="group_school_mager" model="res.groups">
+            <field name="name">School Manager</field>
+            <field name="category_id" ref="school_management" />
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+        <record id="group_school_teacher" model="res.groups">
+            <field name="name">School Teacher</field>
+            <field name="category_id" ref="school_management" />
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+         <record id="group_school_alumni" model="res.groups">
+            <field name="name">School Alumni</field>
+            <field name="category_id" ref="school_management" />
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_school_student" model="res.groups">
+            <field name="name">School Student</field>
+            <field name="category_id" ref="school_management" />
+        </record>
+
+        <record id="group_school_parent" model="res.groups">
+            <field name="name">Student Parent</field>
+            <field name="category_id" ref="school_management" />
+        </record>
+
+
+
+        <record id="group_is_admission" model="res.groups">
+            <field name="name">In Admission</field>
+            <field name="category_id" ref="school_management" />
+        </record>
+
+        <!--   student    Rule -->
+        <record model="ir.rule" id="student_profile_rule">
+        <field name="name">Student see Only His Profile</field>
+        <field name="model_id" ref="model_student"/>
+        <field name="domain_force">[('name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_student'))]" />
+        </record>
+
+        <record model="ir.rule" id="student_parents_rule">
+        <field name="name">Student see Only His parent</field>
+        <field name="model_id" ref="model_parent"/>
+        <field name="domain_force">[('studentID.name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_student'))]" />
+        </record>
+
+
+        <record model="ir.rule" id="student_fees_rule">
+        <field name="name">Student see Only His Fees</field>
+        <field name="model_id" ref="model_fees"/>
+        <field name="domain_force">[('student_id.name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_student'))]" />
+        </record>
+
+
+          <!--   parent     -->
+
+        <record model="ir.rule" id="parent_profile_rule">
+            <field name="name">Parent see Only His Profile</field>
+            <field name="model_id" ref="model_parent"/>
+            <field name="domain_force">[('name','=',user.name)]</field>
+            <field name="groups" eval="[(4, ref('group_school_parent'))]" />
+        </record>
+
+        <record model="ir.rule" id="parents_student_rule">
+            <field name="name">parent see Only His chill</field>
+            <field name="model_id" ref="model_student"/>
+            <field name="domain_force">[('Parent_ids.name','=',user.name)]</field>
+            <field name="groups" eval="[(4, ref('group_school_parent'))]" />
+        </record>
+
+        <record model="ir.rule" id="parents_student_fees_rule">
+            <field name="name">parent see Only His Fees</field>
+            <field name="model_id" ref="model_fees"/>
+            <field name="domain_force">[('student_id.Parent_ids.name','=',user.name)]</field>
+            <field name="groups" eval="[(4, ref('group_school_parent'))]" />
+        </record>
+
+
+
+            <!--   Teacher Rule     -->
+
+        <record model="ir.rule" id="teacher_profile_rule">
+        <field name="name">Teacher see Only His Profile</field>
+        <field name="model_id" ref="model_teacher"/>
+        <field name="domain_force">[('name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_teacher'))]" />
+        </record>
+
+
+        <record model="ir.rule" id="teacher_studentassessment_rule">
+            <field name="name">Teacher see Only His Assessment</field>
+            <field name="model_id" ref="model_studentassessment"/>
+            <field name="domain_force">[('teacher_id.name','=',user.name)]</field>
+            <field name="groups" eval="[(4, ref('group_school_teacher'))]" />
+        </record>
+
+
+        <!--   student    Rule -->
+        <record model="ir.rule" id="alumni_profile_rule">
+        <field name="name">alumni see Only His Profile</field>
+        <field name="model_id" ref="model_student"/>
+        <field name="domain_force">[('name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_alumni'))]" />
+        </record>
+
+        <record model="ir.rule" id="alumni_parents_rule">
+        <field name="name">alumni see Only His parent</field>
+        <field name="model_id" ref="model_parent"/>
+        <field name="domain_force">[('studentID.name','=',user.name)]</field>
+        <field name="groups" eval="[(4, ref('group_school_alumni'))]" />
+        </record>
+
+
+
+    </data>
+</odoo>

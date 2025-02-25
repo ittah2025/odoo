@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="attendens_sheet_report_action" model="ir.actions.report">
+        <field name="name">Attendens Sheet Report</field>
+        <field name="model">kb_transport_report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_Tahtheeb_school.template_attendens_sheet_report</field>
+        <field name="report_file">kb_Tahtheeb_school.template_attendens_sheet_report</field>
+        <field name="binding_model_id" ref="model_kb_transport_report"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="kb_Tahtheeb_school.paperformat_Certfecate" />
+    </record>
+
+    <record id="paperformat_Certfecate" model="report.paperformat">
+    <field name="name">Certfecate</field>
+    <field name="format">custom</field>
+    <field name="page_height">0</field>
+    <field name="page_width">0</field>
+    <field name="orientation">Landscape</field>
+    <field name="margin_top">5</field>
+    <field name="margin_bottom">5</field>
+    <field name="margin_left">5</field>
+    <field name="margin_right">5</field>
+    <field name="header_spacing">35</field>
+    <field name="dpi">90</field>
+</record>
+
+
+    <template id="template_attendens_sheet_report">
+       <t t-call="web.html_container">
+             <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                 <div style="font-family: 'Tajawal', sans-serif;">
+                     <div style="text-align: center;">
+                        <br/>
+
+                     </div>
+                     <br/>
+                     <body>
+                         <style>
+                             .th1{
+                             border:1px solid black;
+                             text-align:center;
+                             background-color: #c4c4c4;
+                             height:35px;
+                             }
+                             .td1{
+                             border:1px solid black;
+                             text-align:center;100%;
+                             height:30px;
+                             font-size:17px;
+                             }
+
+                         </style>
+                          <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+
+                     <table style="border:1px solid black; text-align:center; width: 100%;">
+                         <tr>
+                             <br/>
+                             <th style="padding:2.5px; width: 10%;" rowspan="2" class="th1"> م </th>
+                             <th style="padding:2.5px; width: 10%;" rowspan="2" class="th1"> أسم الطالب  </th>
+                             <th style="padding:2.5px; width: 10%;" rowspan="2" class="th1"> الصف </th>
+                             <th style="padding:2.5px; width: 10%;" rowspan="2" class="th1"> المسار  </th>
+                             <th style="padding:2.5px; width: 10%;" rowspan="2" class="th1"> الحي  </th>
+                             <th style="padding:2.5px;" colspan="2"  class="th1"> الاحد </th>
+                             <th style="padding:2.5px;" colspan="2"  class="th1"> الاثنين </th>
+                             <th style="padding:2.5px;" colspan="2"  class="th1"> الثلاثاء </th>
+                             <th style="padding:2.5px;" colspan="2"  class="th1"> الاربعاء  </th>
+                             <th style="padding:2.5px;" colspan="2"  class="th1"> الخميس </th>
+                         </tr>
+                         <t t-foreach="kb_transportRoot" t-as="lines">
+                         <tr>
+                             <th class="td1">الصعود</th>
+                             <th class="td1">عوده </th>
+                             <th class="td1">الصعود</th>
+                             <th class="td1">عوده </th>
+                             <th class="td1">الصعود</th>
+                             <th class="td1">عوده </th>
+                             <th class="td1">الصعود</th>
+                             <th class="td1">عوده </th>
+                             <th class="td1">الصعود</th>
+                             <th class="td1">عوده </th>
+                         </tr>
+                         <tr>
+                            <td class="td1"><span t-esc="lines['kb_studentID']"/></td>
+                            <td class="td1"><span t-esc="lines['kb_check_in']"/></td>
+                            <td class="td1"><span t-esc="lines['kb_check_out']"/></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                            <td class="td1"></td>
+                         </tr>
+                         </t>
+                     </table>
+                          </div>
+                     </body>
+                 </div>
+             </t>
+        </t>
+    </template>
+</odoo>
+

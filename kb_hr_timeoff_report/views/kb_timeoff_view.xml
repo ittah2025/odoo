@@ -1,0 +1,38 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "kb_hr_leave_view_form" >
+            <field name = "name" >hr leave type Form View</field >
+            <field name = "model" >hr.leave.type</field >
+            <field name = "inherit_id" ref = "hr_holidays.edit_holiday_status_form" />
+
+            <field name = "arch" type = "xml" >
+
+                 <xpath expr = "//field[@name='employee_requests']/.." position = "after" >
+                     <group>
+                        <field name = "kb_time_of_type" invisible = "0" />
+                     </group>
+                </xpath >
+
+            </field >
+        </record >
+
+
+
+        <record model = "ir.ui.view" id = "kb_hr_leave_tree_tree" >
+            <field name = "name" >hr leave type tree</field >
+            <field name = "model" >hr.leave.type</field >
+<!--            <field name="type">tree</field>-->
+            <field name = "inherit_id" ref = "hr_holidays.view_holiday_status_normal_tree" />
+
+            <field name = "arch" type = "xml" >
+
+                 <xpath expr = "/tree/field[@name='allocation_validation_type']" position = "after" >
+                        <field name = "kb_time_of_type" invisible = "0" />
+                </xpath >
+
+            </field >
+        </record >
+
+
+    </data >
+</odoo >

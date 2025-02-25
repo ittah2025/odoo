@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kb_employees_id_card" model="ir.actions.report">
+        <field name="name">ID Card</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_id_card_form.id_card_employees</field>
+        <field name="report_file">kb_id_card_form.id_card_employees</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="id_card_employees">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <!-- <t t-set="o" t-value="o.with_context(lang='en_US')"/> -->
+                <t t-foreach="docs" t-as="o">
+                    <style>
+                        .top {
+                            border-width: 1px;
+                            height: 5%;
+                            width: 5%;
+                            background-color: #2e2c7d;
+                            position: sticky;
+                            top: 1px;
+                            bottom: 1px;
+                        }
+                    </style>
+                    <div class="backgroundimage"
+                        style="position:absolute;opacity:0.25;font-size:3em;width:100%;height:100%;z-index:1000;">
+                        <img src="/kb_id_card_form/static/description/se_card2.png" style="width:100%; "/>
+                        <!-- Or an image from the db. For example: -->
+                        <table style="border:none; width:100%; top:100%; left:0%; right:0%; position: absolute; transform: translate(-50%, -50%); color:black;">
+                            <tr>
+                                <td style="border:none; width:20%;">
+                                  
+                                </td>
+                                <td style="border:none; width:20%;">
+                                <br/><br/><br/>
+                                    <img style="position: absolute; left: 61.5%; transform: translate(-50%, -50%); " t-if="o.image_1920" t-att-src="image_data_uri(o.image_1920)" width="754" height="905" alt="Logo"/>
+                                    
+                                </td>
+                                <td style="border:none; width:20%;">
+                                   
+                                </td>
+                                <td style="border:none; width:20%;">
+                                    
+                                </td>
+                                <td style="border:none; width:20%;">
+                                   
+                                </td>
+
+                            </tr>
+                        </table>
+
+                        <table style="border:none; width:100%; top:100%; left:0%; right:0%; position: absolute; transform: translate(-50%, -50%); color:black; margin-top: 1250px;">
+                            <tr>
+                                <td style="border:none; width:20%;">
+                                  
+                                </td>
+                                <td style="border:none; width:20%;">
+                                <br/><br/><br/>
+                                   
+                                    
+                                </td>
+                                <td style="border:none; width:15%;">
+                                   
+                                </td>
+                                <td style="border:none; width:50%;">
+                                  <strong style="font-family:Tajawal; color:#FFFFFF; font-size:100px;">
+                                <t t-esc="o.name"/>
+                                    </strong>
+                                    
+                                    <br/>
+                                    <strong style="font-family:Tajawal; color:#FFFFFF; font-size:70px;">
+                                <t t-esc="o.job_title"/>
+                                    </strong>
+                                    
+                                </td>
+                                <td style="border:none; width:20%;">
+                                   
+                                </td>
+
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <!-- <table align="center" width="368px" height="400px"
+                        style="direction:ltr; border: 2px solid #2e2c7d; border-top-left-radius: 80px; border-top-right-radius: 80px;">
+                        <tr style="background-color: #2e2c7d; height:30%;">
+                            <td style="background-color: #2e2c7d;" colspan="2">
+                                <br />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" style="border-radius: 1px;" colspan="2">
+                                <img align="center" width="140" height="180"
+                                    src="/kb_id_card_form/static/description/als.png" />
+                                <br />
+                                <img t-if="o.image_1920" t-att-src="image_data_uri(o.image_1920)" width="150"
+                                    height="180" alt="Logo" />
+                                <br />
+                            </td>
+
+                        </tr>
+
+
+                        <br />
+                        <br />
+                        <td align="center" width="20px" style="font-family:Tajawal; color:#299ad6; border: none;"
+                            colspan="2">
+                            <strong style="font-family:Tajawal; color:#299ad6; font-size:24px;">
+                                <t t-esc="o.name" />
+                            </strong>
+                            <br />
+                            <strong style="font-family:Tajawal; color:#2e2c7d; font-size:18px;">
+                                <t t-esc="o.job_title" />
+                            </strong>
+                            <br />
+                            <br />
+                            <strong style="direction:ltr; font-family:Tajawal; color:#299ad6; font-size:18px;">Blood
+                                Type:&#160;
+                                <t t-esc="o.bloodGroup" />
+                            </strong>
+
+                            <br />
+                            <strong style="font-family:Tajawal; color:#299ad6; font-size:18px;">
+                                <t t-esc="o.barcode" />
+                            </strong>
+
+                        </td> -->
+
+                        <!-- <tr>
+                        <td align="center" style="font-family:Tajawal; color:#2e2c7d;font-size:15px;">
+                            <img align="center" width="25" height="25" src="/kb_id_card_form/static/description/snapchat.png" />
+                            <br />
+                            alsalem_co73
+                        </td>
+
+                        <td align="center" style="font-family:Tajawal; color:#2e2c7d; font-size:15px;">
+                            <img align="center" width="25" height="25" src="/kb_id_card_form/static/description/facebook.png" />
+                            <br />
+                            السالم للنقل والسياحة
+                        </td>
+                    </tr> -->
+
+                    <!-- </table> -->
+
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

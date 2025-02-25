@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--created by Mujtaba-->
+    <record id="account_move_form_vendor" model="ir.ui.view">
+        <field name="name">account.move.inherited.form.vendor</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="kb_vendor_ids" invisible="1" />
+                    <field name="kb_vendor_id" domain="[('kb_customer_id', '=', kb_vendor_ids), ('kb_product_ids', '=', product_id)]" options='{"no_open": True, "no_create": True}'/>
+<!--                domain="[('kb_customer_id', '=', partner_id)]"-->
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

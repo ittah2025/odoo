@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="vacation_settlement_report_view" model="ir.actions.report">
+        <field name="name">vacation settlement report</field>
+        <field name="model">vacation_settlement_report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_vacation_settlement.print_vacation_settlement_report</field>
+        <field name="report_file">kb_vacation_settlement.print_vacation_settlement_report</field>
+        <field name="print_report_name">'Vacation settlement report' </field>
+        <field name="binding_model_id" ref="model_vacation_settlement_report" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <template id="print_vacation_settlement_report">
+        <t t-call="web.html_container">
+             <t t-foreach="docs" t-as="o">
+             <t t-call="web.external_layout">
+                 <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                 <div>
+                     <boday>
+                         <style>
+                    * {
+                      box-sizing: border-box;
+                    }
+
+                    .row {
+                      margin-left:-5px;
+                      margin-right:-5px;
+                    }
+
+                    .column {
+                      float: left;
+                      width: 50%;
+                      padding: 5px;
+                    }
+
+                    /* Clearfix (clear floats) */
+                    .row::after {
+                      content: "";
+                      clear: both;
+                      display: table;
+                    }
+
+                   table {
+                      style="border: 1px solid black;
+                            border-collapse: collapse;
+                            width: 100%;"
+                 }
+
+                  th, td {
+                    border:1px solid black;
+                          text-align: center;
+                          padding: 8px;
+                 }
+
+                    tr:nth-child(even) {
+                      background-color: #f2f2f2;
+                    }
+                    </style>
+                        <h3 style="text-align: center;" ><b>Vacation Settlement</b></h3>
+                        <table  >
+                            <tr>
+                                <th>Name in English</th>
+                                <th>Name in Arabic</th>
+                            </tr>
+                            <tr>
+                                <td>  <span t-field ='o.employee_id'/> </td>
+                                <td> <span t-esc ='o.employee_ar'/> </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table border="1" width="100%" >
+                            <tr>
+                                <th>Code</th>
+                                <th>Branch</th>
+                                <th>Start Working</th>
+                                <th>Vacation Days Balance</th>
+                                <th>Current Loan</th>
+                            </tr>
+                            <tr>
+                                <td>  <span t-field ='o.employee_code'/>  </td>
+                                <td>  <span t-field ='o.branch'/>   </td>
+                                <td>  <span t-field ='o.start_working'/>  </td>
+                                <td> <span t-field ='o.vacation_days_balance'/>   </td>
+                                <td>  <span t-field ='o.current_loan'/>  </td>
+                            </tr>
+                        </table>
+
+                        <br/>
+                        <table border="1" width="100%" >
+                            <tr>
+                                <th>Salary</th>
+                                <th>Last Vacation End</th>
+                                <th>Vacation Start Date</th>
+                                <th>Vacation End Date</th>
+                            </tr>
+                            <tr>
+                                <td> <span t-field ='o.Salary_emp'/>  </td>
+                                <td> <span t-field ='o.Last_vacation_end'/>  </td>
+                                <td> <span t-field ='o.vacation_start_date'/> </td>
+                                <td> <span t-field ='o.vacation_end_date'/>  </td>
+                            </tr>
+                        </table>
+                         <br/>
+                         <table border="1" width="100%" >
+                        <tr>
+                            <th>Vacation Duration</th>
+                            <th>Period_of_Calc</th>
+                            <th>Paid Vacation Days</th>
+                            <th>Unpaid Vacation Days</th>
+                            <th>Vacation Days Salary</th>
+                        </tr>
+                        <tr>
+                            <td> <span t-field ='o.vacation_duration'/> </td>
+                            <td> <span t-field ='o.period_of_Calc'/> </td>
+                            <td> <span t-field ='o.paid_vacation_days'/> </td>
+                            <td> <span t-field ='o.unpaid_vacation_days'/> </td>
+                            <td> <span t-field ='o.vacation_days_salary'/> </td>
+                        </tr>
+                    </table>
+                    <br/>
+
+<!--&lt;!&ndash;                    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="column">&ndash;&gt;-->
+                     <div>
+                            <table border="1" width="100%" >
+                                <tr>
+                                    <th>Current Month Days</th>
+                                    <th>Current Month Salary:</th>
+                                    <th>Other Earnings:</th>
+                                </tr>
+                                <tr>
+                                    <td> <span t-field ='o.current_month_days'/> </td>
+                                    <td> <span t-field ='o.current_month_salary'/> </td>
+                                    <td> <span t-field ='o.other_earnings'/> </td>
+                                </tr>
+                            </table>
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--                    <div class="column">-->
+                        <table border="1" width="100%" >
+                            <tr>
+                                <th>Ticket_Cost:</th>
+                                <th>Ticket_Give:</th>
+                                <th>Ticket_Deduc:</th>
+                            </tr>
+                            <tr>
+                                <td> <span t-field ='o.Ticket_Cost' /> </td>
+                                <td> <span t-field ='o.Ticket_Give' /> </td>
+                                <td> <span t-field ='o.Ticket_Deduc' /> </td>
+                            </tr>
+                        </table>
+                    </div>
+<!--                    <div class="column">-->
+<!--                        <table border="1" width="40%" >-->
+<!--                            <tr>-->
+<!--                                <th> </th>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                    </div>-->
+
+<!--                    <br/><br/>-->
+
+                    <table border="1" width="100%" >
+                        <tr>
+                            <th>Iqama_Deduc:</th>
+                            <th>Visa_Duration:</th>
+                            <th>Visa_Deduc:</th>
+                            <th>Work_Permit_Deduc:</th>
+                            <th>Health_Ins_Deduc:</th>
+                            <th>GOSI_Deduc:</th>
+                            <th>Health_certificate:</th>
+                        </tr>
+                        <tr>
+                            <td> <span t-field ='o.Iqama_Deduc' /> </td>
+                            <td> <span t-field ='o.Visa_Duration' /> </td>
+                            <td> <span t-field ='o.Visa_Deduc' /> </td>
+                            <td> <span t-field ='o.Work_Permit_Deduc' /> </td>
+                            <td> <span t-field ='o.Health_Ins_Deduc' /> </td>
+                            <td> <span t-field ='o.GOSI_Deduc' /> </td>
+                            <td> <span t-field ='o.Health_certificate' /> </td>
+                        </tr>
+                    </table>
+                    <br/>
+<!--                     <div class="column">-->
+                    <table border="1" width="100%" >
+                        <tr>
+                            <th>Other_Deduc:</th>
+                            <th>Loan_Instalment:</th>
+                        </tr>
+                        <tr>
+                            <td> <span t-field ='o.Other_Deduc' /> </td>
+                            <td> <span t-field ='o.Loan_Instalment' /> </td>
+                        </tr>
+                    </table>
+<!--                     </div>-->
+<!--                     <div class="column">-->
+<!--                        <table border="1" width="100%" height="20%" >-->
+<!--                            <tr>-->
+<!--                                <th>  </th>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                    </div>-->
+                         <br/>
+                    <table border="1" width="100%" >
+                        <tr>
+                            <th>Earnings Total</th>
+                            <th>Deduction Total</th>
+                            <th>Net</th>
+                        </tr>
+                        <tr>
+                            <td> <span t-field ='o.earnings_total' /> </td>
+                            <td>  <span t-field ='o.deduction_total' /> </td>
+                            <td> <span t-field ='o.Net' /> </td>
+                        </tr>
+                    </table>
+
+                <br/>
+                <table border="1" width="100%" >
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Employee Signature</th>
+                    </tr>
+                    <tr>
+                        <td>  <span t-field ='o.employee_id'/>  </td>
+                        <td>  <img t-att-src="'data:image/png;base64,%s' % to_text(o.employe_sign)" style="width: 40%; height: 40%;"/> </td>
+                    </tr>
+                </table>
+                     </boday>
+                </div>
+             </t>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

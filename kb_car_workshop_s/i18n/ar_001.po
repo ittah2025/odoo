@@ -1,0 +1,2720 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_car_workshop_s
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 14:25+0000\n"
+"PO-Revision-Date: 2022-12-22 17:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_wizard
+msgid " Wizard"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelLevel__1_2
+msgid "1/2"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelLevel__1_4
+msgid "1/4"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "10"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "11"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "12"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.report,print_report_name:kb_car_workshop_s.report
+msgid "123123"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "13"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "14"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "15"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.report,print_report_name:kb_car_workshop_s.report3
+msgid "1514281"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "16"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "17"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "18"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.report,print_report_name:kb_car_workshop_s.report1
+msgid "186164"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "19"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "20"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "21"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "22"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "23"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "24"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "25"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "26"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "27"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "28"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "29"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelLevel__3_4
+msgid "3/4"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "30"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "31"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "32"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "33"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "34"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "35"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "36"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "37"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "38"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "39"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "40"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "41"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "42"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "43"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelType__9_1
+msgid "91"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelType__9_5
+msgid "95"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Address:</b>"
+msgstr "العنوان"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "<b>Branch:</b>"
+msgstr "الفرع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "<b>Date:</b>"
+msgstr "التاريخ"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"<b>Driver\n"
+"                                    name:</b>"
+msgstr "السائق"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Email:</b>"
+msgstr "الإميل"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"<b>Inspected\n"
+"                                    By:</b>"
+msgstr "مفحوصة بواسطة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "<b>Odometer:</b>"
+msgstr "الكيلومترات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Phone:</b>"
+msgstr "الهاتف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"<b>Reason for\n"
+"                                    hold</b>"
+msgstr "السبب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Recipient:</b>"
+msgstr "المستلم"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Site:</b>"
+msgstr "الموقع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"<b>Time\n"
+"                                    In:</b>"
+msgstr "الوقت"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"<b>Time\n"
+"                                    Out:</b>"
+msgstr "الوقت"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "<b>Transfer To:</b>"
+msgstr "التحويل إلى"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "A/C Belt"
+msgstr "سير التكييف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "A/C Belts"
+msgstr "سير التكييف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "A/C Filter"
+msgstr "فلتر التكييف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "A/C Filter Clean"
+msgstr "حالة فلتر التكييف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__ebelt
+msgid "AC Belts"
+msgstr "سير المكيف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__acfilter
+msgid "AC Filter"
+msgstr "فلتر المكيف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__acFilters_feet
+msgid "AC Filter (Km)"
+msgstr "فلتر التكييف (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__accidentsDescription_acc
+msgid "Accidents Description"
+msgstr "وصف الحادث"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_needaction
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_state
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_type_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__Addrs
+msgid "Address"
+msgstr "العنوان"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Air Conditioner"
+msgstr "التكييف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Air Filter"
+msgstr "فلتر الهواء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__engineFilter_feet
+msgid "Air Filter (Km)"
+msgstr "فلتر الهواء (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__APG
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Air Pressure Gauge"
+msgstr "مقياس ضغط الهواء"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"All Engine Belts\n"
+"                                        Condition"
+msgstr "حالة سيور المكينة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "All Engine Belts Condition"
+msgstr "حالة سيور المكينة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batteryAmps
+msgid "Amps"
+msgstr "امبير"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Are you sure that you will cancel ?"
+msgstr "هل أنت متأكد أنك ستلغي؟"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Are you sure that you will confirm ?"
+msgstr "هل أنت متأكد من أنك ستؤكد؟"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_attachment_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__attachment_id_damage
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__accidentsAttachment_acc
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__attachment_ids
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__damage_tree__choseSide__bside
+msgid "Back"
+msgstr "الخلف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Back Side Body"
+msgstr "الجزء الخلفي من المركبة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Back Signal Lights"
+msgstr "لاشاراة الخلفية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batteryItem
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__battery
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Battery"
+msgstr "البطارية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__batterylife_feet
+msgid "Battery (Km)"
+msgstr "البطارية "
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__battery_table__batteryItem__battery1
+msgid "Battery 1"
+msgstr "بطارية  1"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__battery_table__batteryItem__battery2
+msgid "Battery 2"
+msgstr "بطارية  2"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Battery Condition"
+msgstr "حالة البطارية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batterySerialNumber
+msgid "Battery Serial Number"
+msgstr "الرقم التسلسلي للبطارية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__battery_table_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__battery_table_ids
+msgid "Battery Table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batteryvolts
+msgid "Battery Voltage"
+msgstr "فولت"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batteryWarranty
+msgid "Battery Warranty"
+msgstr "ضمان"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__bodyw
+msgid "Body Work"
+msgstr "حدادة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Brake Lights"
+msgstr "اضواء البريك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__brakes
+msgid "Brakes"
+msgstr "بريكات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__brakes_feet
+msgid "Brakes (Km)"
+msgstr "بريكات (كم)"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Brakes Front/Back"
+msgstr "بريك امامي و خلفي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Brakes Pads Thickness Front/Rear"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__branch_1
+msgid "Branch"
+msgstr "فرع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Bus Baggage Handle"
+msgstr "مقبض الامتعة للباص"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__busNameAR_order
+msgid "Bus Name Arabic"
+msgstr "اسم الباص (عربي)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__busNameEN_order
+msgid "Bus Name English"
+msgstr "اسم الباص (انجليزي)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__cancel
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__cancelReason
+msgid "Canclation Reason"
+msgstr "سبب الالغاء"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.damage_views_form
+msgid "Car"
+msgstr "سيارة"
+
+#. module: kb_car_workshop_s
+#: model:ir.ui.menu,name:kb_car_workshop_s.car_workshop
+msgid "Car workshop"
+msgstr "ورشة السيارات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Cashier Signature"
+msgstr "توقيع الكاشير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__tireCondition__tirechange
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Change"
+msgstr "تغيير"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Change Date"
+msgstr "تاريخ التغيير"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Check List"
+msgstr "قائمة الفحص"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__chBox
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Chock Box"
+msgstr "مانع حركة الإطارات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__state
+msgid "Choose the state"
+msgstr "اختار الحالة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.goods_views_form
+msgid "Comment"
+msgstr "ملاحظات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid ""
+"Comment:\n"
+"                            Kindly immediately return used or scrap "
+"items.\n"
+"                            appreciate your promp response.\n"
+"                            (don't throw anthing send all items)\n"
+"                            After received send hard or soft copy by email"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__company_name
+msgid "Company Name"
+msgstr "الشركة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__complete
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Complete"
+msgstr "مكتمل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__finishDate
+msgid "Completed Date"
+msgstr "تاريخ الاكتمال"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.create_appointment_form
+msgid "Create Appointment"
+msgstr "انشء موعد"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.actions.act_window,help:kb_car_workshop_s.damage_report
+#: model_terms:ir.actions.act_window,help:kb_car_workshop_s.goods_report
+msgid "Create a new Report"
+msgstr "انشاء تقرير جديد"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.actions.act_window,help:kb_car_workshop_s.orders_views
+msgid "Create a new order"
+msgstr "انشاء طلب صيانة"
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.act_window,name:kb_car_workshop_s.create_appointment_wizard
+msgid "Create print"
+msgstr "طباعة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__create_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__create_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Customer Complaints:"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.report,name:kb_car_workshop_s.report
+msgid "Customer Order"
+msgstr "طلب الزبون"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.damage_views_form
+msgid "DAMAGE"
+msgstr "ضرر"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.damage_views_form
+msgid "Damage"
+msgstr "ضرر"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_damage_tree
+msgid "Damage line Information"
+msgstr "معلومات التلف"
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.act_window,name:kb_car_workshop_s.damage_report
+#: model:ir.actions.report,name:kb_car_workshop_s.report3
+#: model:ir.ui.menu,name:kb_car_workshop_s.damage_views
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Damages Report"
+msgstr "تقرير الأضرار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__date_2
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__date_1
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__accidentsDate_acc
+msgid "Date of Accidents"
+msgstr "تاريخ الحادث"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__reportdiscr
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__reportdiscr_2
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__maintDescrription
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Descrition"
+msgstr "الوصف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__fuelType__deisel
+msgid "Diesel"
+msgstr "اسم العرض"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Differential"
+msgstr "الدفرنش"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__diffoilCapacity_fleet
+msgid "Differential Oil Capacity"
+msgstr "كمية زيت الدفرنش"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__diffOil_fleet
+msgid "Differential Oil Type"
+msgstr "نوع زيت الدفرنش"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__diffoil_serv_km_fleet
+msgid "Differential Oil change Every (Km)"
+msgstr "تغيير زيت الدفرنش كل (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__display_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__customerComm
+msgid "Driver Complaints"
+msgstr "شكاوى السائق"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__driver_name_acc
+msgid "Driver Name"
+msgstr "اسم السائق"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Driver Side Glass"
+msgstr "زجاج جهة السائق"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Driver Signature"
+msgstr "توقيع السائق"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__driver_name
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__driverName
+msgid "Driver name"
+msgstr "اسم السائق"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__ece
+msgid "Electrical"
+msgstr "كهرباء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ownerElectronicumber_order
+msgid "Electronic Owner Number"
+msgstr "هوية المالك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__mail_E
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__techName
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__techSecondry
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Employee (Helper)"
+msgstr "موظف مساعد"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__techPer
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Employee (Primary)"
+msgstr "موظف اساسي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Engine"
+msgstr " المحرك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__engineBelts_feet
+msgid "Engine Belts (Km)"
+msgstr "سيور المحرك (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__efilter
+msgid "Engine Filter"
+msgstr "فلتر المكينة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__eoil
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Engine Oil"
+msgstr "زيت المحرك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__oilCapacitywith_feet
+msgid "Engine Oil Capacity With Filter"
+msgstr "كمية زيت المحرك مع الفلتر"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__oilCapacity_feet
+msgid "Engine Oil Capacity Without Filter"
+msgstr "كمية زيت المحرك بدون الفلتر"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__engineOil_feet
+msgid "Engine Oil Type"
+msgstr "نوع زيت المحرك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__oil_serv_km_fleet
+msgid "Engine Oil change Every (Km)"
+msgstr "تغيير زيت المحرك كل (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ExfinishDate
+msgid "Expected Finish Date"
+msgstr "التاريخ المتوقع للانتهاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batterychangeDate
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__changeDate
+msgid "Expiration Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__fl
+msgid "FL"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__fr
+msgid "FR"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__fireExt
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Fire Extinguisher"
+msgstr "طفاية حريق"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__FKB
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "First Aid Kit"
+msgstr "حقيبة إسعافات أولية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Fist Aid Kit"
+msgstr "حقيبة السلامة الاولية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_follower_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_partner_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__activity_type_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__damage_tree__choseSide__frside
+msgid "Front"
+msgstr "أمامي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Front Bumper"
+msgstr "الصدام الامامي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Front Head Lights"
+msgstr "الانوار الامامية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Front Side Indicators R/L"
+msgstr "الاشرات الامامية R/L"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fw_item
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Front Windshield"
+msgstr "الزجاج الأمامي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Fuel Filter"
+msgstr "فلتر الوقود"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fuelLevel
+msgid "Fuel Level"
+msgstr "مستوى الوقود"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fuelType
+msgid "Fuel Type"
+msgstr "نوع الوقود"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACF_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AC_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AF_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BBH_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BFB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__DSG_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__EABC_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FF_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FHL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__GearOil_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Gear_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__HandB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Horn_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IDRL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IVL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__LSB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__OilF_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Oil_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PCSB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PC_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PDW_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PS_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RA_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RG_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RLM_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RSB_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Refr_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SGR_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SM_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__TC_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WBWW_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WL_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fireExt_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__firstAid_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fw_itemGood
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__overallClean_itemGood
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__tireCondition__tiregood
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Good"
+msgstr "جيد"
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.act_window,name:kb_car_workshop_s.goods_report
+#: model:ir.actions.report,name:kb_car_workshop_s.report1
+#: model:ir.model,name:kb_car_workshop_s.model_goods_transfer_tree
+#: model:ir.ui.menu,name:kb_car_workshop_s.goods1_views
+msgid "Goods Transfer"
+msgstr "نقل البضائع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Goods Transfer Receipit"
+msgstr "فاتورة نقل البضائع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.goods_views_form
+msgid "Goods Transfer Receipt"
+msgstr "فاتورة نقل البضائع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Hand Break"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__has_message
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__has_message
+msgid "Has Message"
+msgstr "رسالة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Head Lights"
+msgstr "الانوار الامامية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Hold"
+msgstr "متوقف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Horn"
+msgstr "هرن"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__activity_exception_icon
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء."
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__message_needaction
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__message_has_sms_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__message_has_error
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__uploadImage
+msgid "Image"
+msgstr "صورة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__attachment_ids
+msgid "Images of the vehicle"
+msgstr "صورة للسيارة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__in_progress
+msgid "In Progress"
+msgstr "تحت التنفيذ"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Indicators R/L"
+msgstr "الاشارات يمين/يسار"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"Inside Vehicle\n"
+"                                        Lights"
+msgstr "الانوار الداخلية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__inpBy_1
+msgid "Inspected By"
+msgstr "تم الفحص بواسطة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batteryinstallDate
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__installDate
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tireInstallDate
+msgid "Install Date"
+msgstr "تاريخ التركيب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tireKm
+msgid "Install Km"
+msgstr "تركيب (كم)"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Installation Date"
+msgstr "تاريخ التركيب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__insuranceEndDate_order
+msgid "Insurance End Date"
+msgstr "تاريخ انتهاء التأمين"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__insuranceName_order
+msgid "Insurance Name"
+msgstr "اسم التأمين"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__insurancePrice_order
+msgid "Insurance Price"
+msgstr "سعر التأمين"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__insuranceStartDate_order
+msgid "Insurance Start Date"
+msgstr "تاريخ بدء التأمين"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Interior Lights"
+msgstr "الانوار الداخلية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Inventory Supervisor"
+msgstr "مسؤول المخزن"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_is_follower
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_is_follower
+msgid "Is Follower"
+msgstr "تابع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Item"
+msgstr "العنصر"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Item To Be Checked"
+msgstr "العنصر  المراد فحصه"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Items"
+msgstr "عنصر"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__JLR
+msgid "Jack & Lever Rod"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Jack+Lever Rod"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.goods_views_form
+msgid ""
+"Kindly immediately return used or scrap items.\n"
+"                           appreciate your promp response.\n"
+"                           (don't throw anthing send all items)\n"
+"                           After received send hard or soft copy by email"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__ll
+msgid "LR"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table____last_update
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__write_uid
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__write_date
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__damage_tree__choseSide__lside
+msgid "Left"
+msgstr "اليسار"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Left Side Body"
+msgstr "الجزء الايسر من المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__carMake
+msgid "MAke"
+msgstr "الصنع"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Maintenance"
+msgstr "صيانة استهلاكية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Maintenance Item"
+msgstr "صيانة استهلاكية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__maintenance_items_id
+msgid "Maintenance Items"
+msgstr "عناصر الصيانة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__maintenanceItem
+msgid "Maintenanceitem"
+msgstr "عناصر الصيانة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__maintenanceTable_id
+msgid "Maintenancetable"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Manager Signature"
+msgstr "توقيع المدير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__mech
+msgid "Mechanical"
+msgstr "ميكانيكي"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_has_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__carModel
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Model"
+msgstr "نوع المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__modelYear_order
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Model Year"
+msgstr "سنة الصنع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Model:"
+msgstr "الموديل"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Move Signature"
+msgstr "توقيع مسؤول الحركة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kb_car_workshop_s
+#. odoo-python
+#: code:addons/kb_car_workshop_s/models/orders.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_summary
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_summary
+msgid "Next Activity Summary"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_type_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_type_id
+msgid "Next Activity Type"
+msgstr "النشاط التالي حدث التقويم"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__next_service
+msgid "Next Service (Km)"
+msgstr "الصيانة القادمة (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__no
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__no
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__spareTire__no
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "No"
+msgstr "لا"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "No #"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "No."
+msgstr "رقم"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__note
+msgid "Note"
+msgstr "ملحوظة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__no
+msgid "Number"
+msgstr "رقم"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__message_needaction_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__message_has_error_counter
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Odometer"
+msgstr "الكيلومترات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__CarMilage
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Odometer (Km)"
+msgstr "الكيلومترات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__odometerIN
+msgid "Odometer In (Km)"
+msgstr "الكيلومترات عند الدخول"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__odometerOut
+msgid "Odometer Out (Km)"
+msgstr "الكيلومترات عند الخروج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__oilfter
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Oil Filter"
+msgstr "فلتر الزيت"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__engineOilfilter_feet
+msgid "Oil Filter Type"
+msgstr "نوع قلتر المحرك"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__oil_w
+msgid "Oils"
+msgstr "الزيوت"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__on_hold
+msgid "On Hold"
+msgstr "في الانتظار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__electronicNumer_order
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__vehicleOperatingCodeNumber
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Operating Code Number"
+msgstr "رقم كود التشغيل"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Order"
+msgstr "الطلب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__order_id_line
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__order_ID
+msgid "Order ID"
+msgstr "رقم طلب الصيانة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__state__order_parts
+msgid "Order Parts"
+msgstr "طلب قطع غيار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__state
+msgid "Order Status"
+msgstr "حالة الصيانة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Order Summary"
+msgstr "ملخص الطلب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Order Summary Information"
+msgstr "معلومات ملخص الطلب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__order_summary_ids
+msgid "Order Summary ids"
+msgstr "معرفات ملخص الطلب"
+
+#. module: kb_car_workshop_s
+#: model:ir.actions.act_window,name:kb_car_workshop_s.orders_views
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__order_id
+#: model:ir.ui.menu,name:kb_car_workshop_s.ordersaa_views
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Orders"
+msgstr "الطلب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__order_line_ids
+msgid "Orders ID"
+msgstr "معرف الطلبات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__order_summary_id
+msgid "Orders Summary"
+msgstr "ملخص الطلبات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_order_summary
+msgid "Orders Summary Information"
+msgstr "معلومات ملخص الطلبات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_order_line
+msgid "Orders line Information"
+msgstr "معلومات خط الطلبات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__RgCard
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Original Registration Card"
+msgstr "بطاقة التسجيل الأصلية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Other"
+msgstr "اخرى"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__otherMaint
+msgid "Other Maintenance"
+msgstr "صيانة اخرى"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Overall Cleanliness"
+msgstr "مستوى النظافة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ownerName_order
+msgid "Owner Name"
+msgstr "اسم المالك"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__paintw
+msgid "Paint"
+msgstr "صبغ"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__passengerCapacity_order
+msgid "Passenger Capacity"
+msgstr "عدد الركاب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"Passenger Chair\n"
+"                                        Seat Belts"
+msgstr "احزمة مقاعد الركاب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Passenger Chair Seat Belts"
+msgstr "احزمة مقاعد الركاب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PC_item
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Passenger Chairs"
+msgstr "كراسي الركاب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PCSB_item
+msgid "Passenger Chairs Seat Belt"
+msgstr "كراسي الركاب حزام الأمان"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PDW_item
+msgid "Passengers Doors Working"
+msgstr "أعمال أبواب الركاب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Passsenger Door"
+msgstr "ابواب الركاب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"Passsenger Door\n"
+"                                        Working"
+msgstr "حالة ابواب الركاب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__plateNumberAR_order
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Plate Number (Arabic)"
+msgstr "اسم اللوحة (عربي)"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Power Steering"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__price_1
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Price"
+msgstr "سعر"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__product_barcode
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Product Barcode"
+msgstr "باركود المنتج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__product_price
+msgid "Product Price"
+msgstr "سعر المنتج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__product_qty
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Product Qty"
+msgstr "المنتج الكمية"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__qty_1
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__rl0
+msgid "RL0"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__rl1
+msgid "RL1"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__rr0
+msgid "RR0"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__tires_table__tireItem__rr1
+msgid "RR1"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Rear Bumper"
+msgstr "الصدام الخلفي"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RG_item
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Rear Glass"
+msgstr "زجاج خلفي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Rear Side Indicators R/L"
+msgstr "الاشارات الخلفية R/L"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_wizard__cancelReason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__canelReasonfield
+msgid "Reason for Cancellation"
+msgstr "سبب الالغاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__onHold
+msgid "Reason for Hold"
+msgstr "سبب التأخير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__recip
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Recipient"
+msgstr "المستلم"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Refrigerator"
+msgstr "ثلاجة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__registrationEndDate_order
+msgid "Registration Expiration Date"
+msgstr "تاريخ انتهاء التسجيل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__orederRem
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACF_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AC_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AF_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BBH_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BFB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__DSG_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__EABC_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FF_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FHL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__GearOil_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Gear_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__HandB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Horn_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IDRL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IVL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__LSB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__OilF_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Oil_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PCSB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PC_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PDW_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PS_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RA_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RG_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RLM_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RSB_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Refr_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SGR_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SM_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__TC_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WBWW_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WL_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fireExt_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__firstAid_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fw_remark
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__overallClean_remark
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACF_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AC_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AF_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BBH_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BFB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__DSG_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__EABC_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FF_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FHL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__GearOil_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Gear_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__HandB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Horn_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IDRL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IVL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__LSB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__OilF_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Oil_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PCSB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PC_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PDW_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PS_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RA_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RG_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RLM_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RSB_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Refr_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SGR_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SM_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__TC_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WBWW_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WL_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fireExt_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__firstAid_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fw_itemrepair
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__overallClean_itemrepair
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__tireCondition__tirerepair
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Repair"
+msgstr "اصلاح"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__ACF_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AC_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__AF_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BBH_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BFB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__BSL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__DSG_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__EABC_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FF_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__FHL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__GearOil_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Gear_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__HandB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Horn_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IDRL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__IVL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__LSB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__OilF_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Oil_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PCSB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PC_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PDW_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__PS_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RA_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RG_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RLM_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RSB_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__Refr_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SGR_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SM_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__TC_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WBWW_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__WL_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fireExt_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__firstAid_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__fw_change
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__overallClean_change
+msgid "Replace"
+msgstr "استبدال"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.damage_report_treee
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.damage_report_treee1
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__activity_user_id
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__activity_user_id
+msgid "Responsible User"
+msgstr "مستخدم مسؤول"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Reverse Alarm"
+msgstr "انذار الرجوع للخلف"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Reverse Lights"
+msgstr "اضواء الرجوع للخلف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__damage_tree__choseSide__rside
+msgid "Right"
+msgstr "يمين"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Right Side Body"
+msgstr "الجسم اليمين للمركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__searialNumbers_order
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: kb_car_workshop_s
+#: model:ir.ui.menu,name:kb_car_workshop_s.config
+msgid "Service"
+msgstr "طلب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__ServiceType
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Service Type"
+msgstr "نوع الخدمة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Shop Foreman Signature"
+msgstr "توقيع مسؤول الورشة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__choseSide
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tireItem
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Side"
+msgstr "جانب"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Side Glass R/L"
+msgstr "زجاج جانبي R / L"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__SGR_item
+msgid "Side Glass R/L "
+msgstr "زجاج جانبي R / L"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__RLM_item
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Side Mirror R/L"
+msgstr "زجاج جانبي R / L"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Sides"
+msgstr "الجانب"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__phon_1
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__psite_1
+msgid "Site"
+msgstr "الهاتف"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__spareT
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__spareTire
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Spare Tire"
+msgstr "الأطار الأحتياطي"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "SpeedoMeter"
+msgstr "عداد السرعة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__statOr
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__activity_state
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة المتأخرة: تاريخ الاستحقاق فات بالفعل اليوم: تاريخ "
+"النشاط اليوم مخطط له: الأنشطة المستقبلية."
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report1
+msgid "Store Keeper"
+msgstr "مسؤول المخزن"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.create_appointment_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Supervisor Signature"
+msgstr "توقيع المدير"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Tail Lights"
+msgstr "الاضواء الخلفية"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__tandM
+msgid "Tape & Mic"
+msgstr "مايكروفون"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Tape+Mic"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__timeOut
+msgid "Time Out"
+msgstr "وقت الخروج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__timeIn
+msgid "Time in"
+msgstr "وقت الدخول"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__tireCondition
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Tire Condition"
+msgstr "حالة الاطارات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Tire Inspection"
+msgstr "فحص الاطارات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tireSerialNumber
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Tire Serial Number"
+msgstr "الرقم التسلسلي للاطار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__tire_table_ids
+msgid "Tire Table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tireMeasure
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Tire Tread Depth"
+msgstr "قياس الاطار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__tires
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__tireserv
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Tires"
+msgstr "الاطارات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__tirelife_feet
+msgid "Tires (Km)"
+msgstr "الاطارات (كم)"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Tires Condition"
+msgstr "حالة الاطارات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_tires_table__tires_table_id
+msgid "Tires Table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "To order parts"
+msgstr "طلب قطع الغيار"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Tools Kit"
+msgstr "ادوات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__TK
+msgid "Tools kit"
+msgstr "ادوات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_battery_table__batterytotal_days_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_maintenance_table__total_days_count
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__total_days
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Total Time"
+msgstr "اجمالي الوقت"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__transferTo
+msgid "Transfer To"
+msgstr "التحويل الى"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Transmission"
+msgstr "القير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__maintenance_table__maintenanceItem__toil
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Transmission Oil"
+msgstr "زيت القير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__transcapacity_feet
+msgid "Transmission Oil Capacity"
+msgstr "كمية زيت القير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__transOil_feet
+msgid "Transmission Oil Type"
+msgstr "نوع زيت القير"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__tr_oil_typ_feet
+msgid "Transmission Oil change Every (Km)"
+msgstr "تغيير زيت القير كل (كم)"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__tri
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "Triangle"
+msgstr "مثلث"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__activity_exception_decoration
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__order_summary__ServiceType__upholstery
+msgid "Upholstery"
+msgstr "تنجيد"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Vehicle Accidents"
+msgstr "حوادث المركبات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Vehicle Checklist"
+msgstr "قائمة فحص المركبة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Vehicle Info"
+msgstr "معلومات المركبة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__carModel
+msgid "Vehicle Model"
+msgstr "مديل المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__model_id_order
+msgid "Vehicle Name"
+msgstr "اسم المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__CarMilage
+msgid "Vehicle Odometer (Km)"
+msgstr "كيلومترات المركبة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__status_field_order
+msgid "Vehicle Status"
+msgstr "الحالة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.view_orders_tree
+msgid "Vehicles"
+msgstr "المركبات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Water Level"
+msgstr "مستوى الماء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_cars__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__website_message_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,help:kb_car_workshop_s.field_cars__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damage_tree__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_damages_report__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_goods_transfer_tree__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_line__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_order_summary__website_message_ids
+#: model:ir.model.fields,help:kb_car_workshop_s.field_orders__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصال الموقع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "Wiper Blades"
+msgstr "مساحات"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid ""
+"Wiper Blades +\n"
+"                                        Wipre Water"
+msgstr "مساحات+الماء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__techTimeout
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Work End Time"
+msgstr "وقت انتهاء العمل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_orders__workStartDate
+msgid "Work Start Date"
+msgstr "تاريخ بد العمل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_summary__techTimein
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "Work Start Time"
+msgstr "وقت بد العمل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields.selection,name:kb_car_workshop_s.selection__orders__spareTire__yes
+msgid "Yes"
+msgstr "نعم"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_battery_table
+msgid "battery_table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "cancel"
+msgstr "الغاء"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_cars
+msgid "cars"
+msgstr "سيارات"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_damages_report
+msgid "damages_report"
+msgstr "تقرير الأضرار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damage_tree__damgggg_id
+msgid "damege"
+msgstr "الأضرار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__damage_ids
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer__goodtr_ids
+msgid "damegs"
+msgstr "الأضرار"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_goods_transfer_tree__GoodsTransfer_id
+msgid "good"
+msgstr "جيد"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_goods_transfer
+msgid "goods_transfer"
+msgstr "نقل البضائع"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.orders_views_form
+msgid "in Progress"
+msgstr "قيد التنفيذ"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__CarMilage
+msgid "km"
+msgstr "كم"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_maintenance_table
+msgid "maintenance_table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__carModel
+msgid "model"
+msgstr "الموديل"
+
+#. module: kb_car_workshop_s
+#. odoo-python
+#: code:addons/kb_car_workshop_s/models/orders.py:0
+#: model:ir.model,name:kb_car_workshop_s.model_orders
+#, python-format
+msgid "orders"
+msgstr "رقم المنتج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__carPlate
+msgid "plate"
+msgstr "اللوحة"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_order_line__product_id
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "product Id"
+msgstr "رقم المنتج"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_contract_report
+msgid "product_price"
+msgstr "سعر المنتج"
+
+#. module: kb_car_workshop_s
+#: model:ir.model,name:kb_car_workshop_s.model_tires_table
+msgid "tires_table"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__carVin
+msgid "vin"
+msgstr "رقم الهيكل"
+
+#. module: kb_car_workshop_s
+#: model:ir.model.fields,field_description:kb_car_workshop_s.field_damages_report__carYear
+msgid "year"
+msgstr "السنة"
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "اتعهد انا السائق"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "باني استلمت الحافلة المذكورة والتي لوحة رقم"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid "كلومتر"
+msgstr ""
+
+#. module: kb_car_workshop_s
+#: model_terms:ir.ui.view,arch_db:kb_car_workshop_s.print_goods_report3
+msgid ""
+"وانه لا يوجد بها سوى الاضرار المذكورة عل التقرير وعند حدوث اي زيادة اضرار "
+"بعد تسلمي الحافلة و خلافه غير المذكور بالتقرير احتحمل مسئولية قيمة اصلاحها "
+"منمالي الخاص خصما من راتبي دون الرجوع الي"
+msgstr ""

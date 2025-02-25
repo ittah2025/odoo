@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_hr_employee_altanour
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-26 05:49+0000\n"
+"PO-Revision-Date: 2023-02-26 05:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_hr_employee_altanour
+#: model:ir.actions.server,name:kb_hr_employee_altanour.ir_Exp_health_certificate_session_ir_actions_server
+#: model:ir.cron,cron_name:kb_hr_employee_altanour.ir_Exp_health_certificate_session
+#: model:ir.cron,name:kb_hr_employee_altanour.ir_Exp_health_certificate_session
+msgid "Exp health certificate"
+msgstr "تاريخ نهاية الشهادة الصحية "
+
+#. module: kb_hr_employee_altanour
+#: model:ir.actions.server,name:kb_hr_employee_altanour.ir_kb_Exp_programme_session_ir_actions_server
+#: model:ir.cron,cron_name:kb_hr_employee_altanour.ir_kb_Exp_programme_session
+#: model:ir.cron,name:kb_hr_employee_altanour.ir_kb_Exp_programme_session
+msgid "Exp programme"
+msgstr "تاريخ انتهاء البرنامج التثقيفي"
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model.fields,field_description:kb_hr_employee_altanour.field_hr_employee__kb_Exp_health_certificate
+msgid "Expiration Date"
+msgstr "تاريخ انتهاء"
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model.fields,field_description:kb_hr_employee_altanour.field_hr_employee__kb_Exp_programme
+msgid "Expiration date of educational programme "
+msgstr "برنامج "
+
+#. module: kb_hr_employee_altanour
+#: model_terms:ir.ui.view,arch_db:kb_hr_employee_altanour.view_hremployee_inherit
+msgid "Health Certificate"
+msgstr "الشهادة الصحية "
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model.fields,field_description:kb_hr_employee_altanour.field_hr_employee__kb_number_Certificate
+msgid "Health certificate number  "
+msgstr "رقم الشهادة الصحية "
+
+#. module: kb_hr_employee_altanour
+#: code:addons/kb_hr_employee_altanour/models/hr_employee.py:0
+#: code:addons/kb_hr_employee_altanour/models/hr_employee.py:0
+#, python-format
+msgid "ID-%s Expired On %s"
+msgstr ""
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model.fields,field_description:kb_hr_employee_altanour.field_hr_employee__kb_releaseDate
+msgid "Release Date"
+msgstr "تاريخ إصدار الشهادة الصحية "
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model.fields,field_description:kb_hr_employee_altanour.field_hr_employee__kb_health_programme
+msgid "Type of educational programme "
+msgstr "نوع البرنامج التثقيفي "
+
+#. module: kb_hr_employee_altanour
+#: model:ir.model,name:kb_hr_employee_altanour.model_hr_employee
+msgid "hr"
+msgstr ""

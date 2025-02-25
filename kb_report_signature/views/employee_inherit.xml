@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id = "view_employee_inherit" model = "ir.ui.view">
+        <field name = "name"> employee.inherit.form </field>
+        <field name = "model">hr.employee</field>
+        <field name = "inherit_id" ref = "hr.view_employee_form"/>
+        <field name="arch" type="xml">
+<!-- 
+                <xpath expr="//button[@name='144']/.." position="before">
+                    <button name="print_pdf" type="object" String="invoice" />
+                </xpath> -->
+              <xpath expr="//field[@name='coach_id']/.." position="after">
+                    <h6>Signature : <br/><br/><field name="Signature" widget="signature" style=" width:40%"/></h6>
+
+                </xpath>
+            </field>
+    </record>
+
+
+</odoo>

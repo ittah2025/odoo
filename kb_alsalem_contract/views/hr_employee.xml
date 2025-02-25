@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="employee_form_view">
+        <field name="name">employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='passport_id']/.." position="after">
+                <xpath expr="//field[@name='route_ids']/.." position="after">
+                    <group string="Passport Details">
+                        <label for="placeOfIssue"/>  
+                        <h4>  
+                            <field name="placeOfIssue"/>
+                        </h4>  
+                        <label for="dateOf"/>  
+                        <h4>
+                            <field name="dateOf"/>
+                        </h4>
+                        <label for="postalCode"/> 
+                        <h4>
+                            <field name="postalCode"/>
+                        </h4>
+                    </group>
+                </xpath>
+            </xpath>
+        </field>
+    </record>
+</odoo>

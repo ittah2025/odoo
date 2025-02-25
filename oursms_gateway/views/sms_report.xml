@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sms_report_inherited_in_oursms_form_view" model="ir.ui.view">
+            <field name="name">wk.sms.repor.form.inherited.oursms</field>
+            <field name="model">sms.report</field>
+            <field name="inherit_id" ref="sms_notification.sms_report_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sms_info']" position="inside">
+                    <group string="OurSms Related Information" attrs="{'invisible':[('sms_gateway','!=','oursms')]}">
+                        <field name="id" invisible="1"/>
+                        <field name="sms_gateway" invisible="1"/>
+                        <field name="message" readonly="1"/>
+                        <field name="oursms_sms_id" readonly="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="payment_link_wizard_view_form_sms" model="ir.ui.view">
+            <field name="name">payment.link.wizard.form</field>
+            <field name="model">payment.link.wizard</field>
+            <field name="inherit_id" ref="payment.payment_link_wizard_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button" position="after">
+                    <button string="Send the Link by SMS" class="btn-primary" name="send_the_link_by_sms" type="object"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

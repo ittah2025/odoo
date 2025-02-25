@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_hr_timeoff_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230129\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-20 10:26+0000\n"
+"PO-Revision-Date: 2023-09-20 13:27+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: kb_hr_timeoff_report
+#: model:res.groups,name:kb_hr_timeoff_report.group_end_of_administration_timeoff
+msgid "Administrator"
+msgstr "مدير"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields.selection,name:kb_hr_timeoff_report.selection__employee_timeoff__leave_type__all
+msgid "All"
+msgstr "الكل"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.view_employee_timeoff
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__date_to
+msgid "Date To"
+msgstr "التاريخ الى "
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__display_name
+msgid "Display Name"
+msgstr "اسم العرض "
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Employee ID"
+msgstr "الرقم الوظيفي"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.actions.report,name:kb_hr_timeoff_report.employee_time_off_print
+msgid "Employee Time Off"
+msgstr " ايام الاجازات"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_employee_timeoff__leave_type
+msgid "Leave Type"
+msgstr "نوع الاجازة"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields.selection,name:kb_hr_timeoff_report.selection__employee_timeoff__leave_type__notpaid
+msgid "Not Paid"
+msgstr "غير مدفوع"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields.selection,name:kb_hr_timeoff_report.selection__employee_timeoff__leave_type__paid
+msgid "Paid"
+msgstr " مدفوعة"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model.fields,field_description:kb_hr_timeoff_report.field_hr_leave_type__kb_time_of_type
+msgid "Paid Time Off"
+msgstr "أجازة مدفوعة"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Paid Time Off Report"
+msgstr "تقرير  الاجازات"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.view_employee_timeoff
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.view_employee_timeoff
+msgid "Print Time Off Report"
+msgstr "تقرير  الاجازات"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Remaining"
+msgstr "الأيام المتبقية"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "TOTAL"
+msgstr "المجموع"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Time Off"
+msgstr "ايام الاجازات"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.actions.act_window,name:kb_hr_timeoff_report.action_timeoff_report_
+#: model:ir.ui.menu,name:kb_hr_timeoff_report.employee_timme_off
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Time Off Report"
+msgstr "تقرير  الاجازات"
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Time Off Taken"
+msgstr "الايام المأخوذ"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model,name:kb_hr_timeoff_report.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "نوع الإجازة "
+
+#. module: kb_hr_timeoff_report
+#: model_terms:ir.ui.view,arch_db:kb_hr_timeoff_report.employee_timeoff_ids
+msgid "Unpaid Time Off Report"
+msgstr "الاجازات غير مدفوعة"
+
+#. module: kb_hr_timeoff_report
+#: model:ir.model,name:kb_hr_timeoff_report.model_employee_timeoff
+msgid "employee_timeoff"
+msgstr ""
+
+#. module: kb_hr_timeoff_report
+#: model:ir.module.category,description:kb_hr_timeoff_report.module_category_timeoff
+#: model:ir.module.category,name:kb_hr_timeoff_report.module_category_timeoff
+msgid "time off report"
+msgstr "تقرير  الاجازات"

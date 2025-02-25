@@ -1,0 +1,590 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_shareholder_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20231101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-20 11:14+0000\n"
+"PO-Revision-Date: 2024-06-20 14:22+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "(ختم الشركة)"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid ""
+"<span style=\"display:inline-block;text-decoration: underline; text-align:right; font-weight: bold;\"> نشاط الشركة : </span>\n"
+"                              إدارة وتملك وصيانةالمراكز التدريبية والتعليمية والكليات والمعاهد والجامعات وإقامة وإدارة وتشغيل وصيانة المنشآت وتطوير العقارات وتملك وإدارة المدارس الخاصة والأطفال والمعاهد التعليمية الخاصة ومراكز التدريب وشراء الأراضي وإقامة المباني عليها واستثمارها بالبيع أو الايجار لصالح الشركة."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_res_company__kb_allStock
+msgid "All Stock Number"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model,name:kb_shareholder_management.model_ir_attachment model:ir.model.fields,field_description:kb_shareholder_management.field_ir_attachment__doc_attach_rel00 model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__doc_attachment_id00
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_attachment_count
+msgid "Attachment Count"
+msgstr "المرفقات"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_res_partner__kb_buildingNumber model:ir.model.fields,field_description:kb_shareholder_management.field_res_users__kb_buildingNumber
+msgid "Building Number"
+msgstr "رقم المبنى"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "City"
+msgstr "المنطقة"
+
+#. module: kb_shareholder_management
+#: model:ir.model,name:kb_shareholder_management.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model,name:kb_shareholder_management.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Contact Info"
+msgstr "معلومات التواصل"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Country"
+msgstr "الدولة"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__create_uid model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__create_date model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__display_name model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_shareholder_management
+#. odoo-python
+#: code:addons/kb_shareholder_management/models/kb_shareholder_management_fields.py:0
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__id model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_idNumberIDs model:ir.model.fields,field_description:kb_shareholder_management.field_res_partner__kb_idNumber
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_res_users__kb_idNumber
+msgid "ID Number"
+msgstr "رقم الهوية"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_res_partner__kb_issueDate model:ir.model.fields,field_description:kb_shareholder_management.field_res_users__kb_issueDate
+msgid "Issue Date"
+msgstr "تاريخ الاصدار"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_joiningDate
+msgid "Joining Date"
+msgstr "تاريخ الانضمام"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management____last_update model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__write_uid model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__write_date model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_nationalityID model:ir.model.fields,field_description:kb_shareholder_management.field_res_partner__kb_nationality
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_res_users__kb_nationality
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: kb_shareholder_management
+#. odoo-python
+#: code:addons/kb_shareholder_management/models/kb_shareholder_management_fields.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_type_id
+msgid "Next Activity Type"
+msgstr "Selling Price"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__number_of_shares
+msgid "Number of Shares Sold"
+msgstr "عدد الأسهم المباعة"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_percentage
+msgid "Percentage"
+msgstr "النسبة المئوية"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__purchaser
+msgid "Purchaser"
+msgstr "المشتري"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.view_sale_management_tree
+msgid "Sale Management"
+msgstr "إدارة المبيعات"
+
+#. module: kb_shareholder_management
+#: model:ir.actions.act_window,name:kb_shareholder_management.action_sale_management model:ir.model,name:kb_shareholder_management.model_kb_sale_management model:ir.ui.menu,name:kb_shareholder_management.menu_sale_management model_terms:ir.ui.view,arch_db:kb_shareholder_management.view_sale_management_form
+msgid "Sale and Purchase Request"
+msgstr "طلب البيع والشراء"
+
+#. module: kb_shareholder_management
+#: model:res.groups,name:kb_shareholder_management.group_sale_management_manager
+msgid "Sale and Purchase Request Administrator"
+msgstr "مسئول طلبات البيع والشراء"
+
+#. module: kb_shareholder_management
+#: model:res.groups,name:kb_shareholder_management.group_sale_management_user
+msgid "Sale and Purchase Request User"
+msgstr "مستخدم طلب البيع والشراء"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__seller
+msgid "Seller"
+msgstr "البائع"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__price
+msgid "Selling Price"
+msgstr "سعر البيع"
+
+#. module: kb_shareholder_management
+#: model:res.groups,name:kb_shareholder_management.group_shareholder_administration
+msgid "Shareholder Administrator"
+msgstr "إدارة المساهمين"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_shareholderID
+msgid "Shareholder ID"
+msgstr "رقم المساهمة"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Shareholder Info"
+msgstr "معلومات المساهمة"
+
+#. module: kb_shareholder_management
+#: model:ir.actions.act_window,name:kb_shareholder_management.action_shareholder_management model:ir.actions.report,name:kb_shareholder_management.shareholder_management_reportID model:ir.model,name:kb_shareholder_management.model_kb_shareholder_management_fields
+#: model:ir.module.category,name:kb_shareholder_management.shareholder_management model:ir.ui.menu,name:kb_shareholder_management.menu_shareholder_management model:ir.ui.menu,name:kb_shareholder_management.submenu_shareholder_management model:ir.ui.menu,name:kb_shareholder_management.system_roots
+msgid "Shareholder Management"
+msgstr "إدارة المساهمين"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_shareholderName
+msgid "Shareholder Name"
+msgstr "الاسم"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_sourceIDs model:ir.model.fields,field_description:kb_shareholder_management.field_res_partner__kb_source model:ir.model.fields,field_description:kb_shareholder_management.field_res_users__kb_source
+msgid "Source"
+msgstr "المصدر"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Stock Info"
+msgstr "معلومات الاسهم"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_stockNumber
+msgid "Stock Number"
+msgstr "عدد الاسهم"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Street"
+msgstr "الشارع"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Street 2"
+msgstr "الشارع 2"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Street 2..."
+msgstr "الشارع 2"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "Street..."
+msgstr "الشارع"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_sale_management__transaction_date
+msgid "Transaction Date"
+msgstr "تاريخ المعاملة"
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.view_sale_management_form
+msgid "Transaction Details"
+msgstr "تفاصيل المعاملة"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:res.groups,name:kb_shareholder_management.group_user_profile
+msgid "User See Only His Profile"
+msgstr "رؤية الملفات الخاصة به"
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,help:kb_shareholder_management.field_kb_shareholder_management_fields__doc_attachment_id00
+msgid "You can attach the copy of your document"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "ZIP"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_city
+msgid "city"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_countryID
+msgid "country"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_email
+msgid "email"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_mobile
+msgid "mobile"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_phone
+msgid "phone"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_street model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_form
+msgid "street"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_street2
+msgid "street2"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model:ir.model.fields,field_description:kb_shareholder_management.field_kb_shareholder_management_fields__kb_zip
+msgid "zip"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "اسم الحي :"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "اسم الشارع :"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "العنوان /"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "تاريخه :"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid ""
+"تحولت وفقاً لاحكام نظام الشركات السعودية الصادر بالمرسوم الملكي رقم (م/6) وتاريخ 22/03/1385ه\n"
+"                           وتعدلاتع من شركة ذات مسوؤلية محدودة إلى شركة مساهمة سعودية."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "تشهد بأن/"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "رئيس مجلس الإدارة"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "رقم السجل المدني /"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "رقم الشهادة"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "رقم المبنى :"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "رقم المساهمة"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "سهم فقط لاغير"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "صدرت هذه الشهادة في مدينة سيهات بتاريخ"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "م.جاسم بن علي بن محمد الناصر"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "م.عبدالله بن صالح بن محمد زين الدين"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid ""
+"مدة الشركة 99 عاماً هجرياً تبدأ من تاريخ صدور قرار وزارة الصناعة رقم (128/ق) وتاريخ 16/3/1432ه بإعلان تحويلها,رأس المال المصرح به 35,000,000 (خمسة وثلاثون مليون ريال سعودي) مقسمة إلى 3,500,000 \"ثلاثة مليون وخمسمائة ألف \" سهم متساوية القيمة تبلغ القيمة القسمة لكل منها (10) (عشرة ريالات سعودية ) كلها أسهم عادية "
+"عينية."
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "مكان الاصدار :"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "نائب رئيس مجلس الإدارة"
+msgstr ""
+
+#. module: kb_shareholder_management
+#: model_terms:ir.ui.view,arch_db:kb_shareholder_management.shareholder_management_report
+msgid "يملك"
+msgstr ""

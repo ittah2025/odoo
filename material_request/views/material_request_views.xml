@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record model="ir.ui.view" id="view_material_request_tree">
+    <field name="name">material.request.tree</field>
+    <field name="model">material.request</field>
+    <field name="priority" eval="16"/>
+    <field name="arch" type="xml">
+        <tree>
+        	<field name="name"/>
+        	<field name="date"/>
+            <field name="project_id"/>
+        	<field name="user_id"/>
+        	<field name="company_id" optional="hide"/>
+            <field name="state" optional="show" widget="badge" decoration-success="state == 'approved' "
+                        decoration-info="state == 'draft'"/>
+        </tree>
+    </field>
+</record>
+<record id="view_material_request_form" model="ir.ui.view">
+    <field name="name">material.request.form</field>
+        <field name="model">material.request</field>
+        <field name="arch" type="xml">
+            <form string="Form" class="">
+            <header>
+                    <button name="action_waiting_approve" string="Request Approval" type="object" class="oe_highlight" data-hotkey="w" states="draft"/>
+
+                    <button name="action_approve" string="Approve" type="object" class="oe_highlight" data-hotkey="w" states="waiting" groups="material_request.group_material_hod"/>
+                    <button name="action_reject" string="Reject" type="object" data-hotkey="w" states="waiting" groups="material_request.group_material_hod"/>
+                    <button name="action_draft" string="Rest To Draft" type="object" data-hotkey="w" states="reject" groups="material_request.group_material_user"/>
+
+                    <button name="action_process_req" string="Issue the Materials" type="object" class="oe_highlight" data-hotkey="w" states="approved" groups="material_request.group_material_manager"/>
+                     <button name="action_cancel" string="Cancel" type="object" data-hotkey="w" states="approved" groups="material_request.group_material_manager"/>
+                     <button name="action_done" string="Done" type="object" class="oe_highlight" data-hotkey="w" states="to_stock" groups="material_request.group_material_manager"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting,approved,to_stock,Done" readonly="1"/>
+            </header>
+            
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                        <button type="object"  name="action_view_delivery"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o" attrs="{'invisible':[('delivery_count','=',0)]}">
+                            <field name="delivery_count" widget="statinfo" string="Issues"/>
+                            <field name='picking_ids' invisible="1"/>
+                        </button>
+                </div>
+
+              
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group name="form_header">
+                    <group name="details_tow">
+                        <field name="project_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="picking_type_id" options="{'no_create': True}" groups="material_request.group_material_manager"/> 
+                    </group>
+
+                    <group name="details_one">
+        				<field name="date"/>
+                        <field name="user_id" readonly="1"/>
+                        <field name="manager_id" readonly="1" string="Manager"/>
+                        <field name="company_id" invisible="1"/>
+                    </group>
+                    
+                </group>
+                <notebook>
+                   <page string="Material Request Lines">
+                    <field name="material_line" mode="tree,form">
+                        <tree editable="bottom" string="Material Line" default_order="sequence, id">
+                                <control>
+                                    <create name="add_line_control" string="Add a line"/>
+                                            
+                                </control>
+
+                                 <!-- Displayed fields -->
+                                 <field name="name" required="1"/>
+                                <field name="product_id" groups="material_request.group_material_manager" attrs="{'required':[('parent.state','=','approved')]}"/>
+                                <field name="requested_qty" />
+                                <field name="product_uom"/>
+                                <field name="note"/>
+                                <field name="location" attrs="{'required':[('parent.state','=','approved')]}" groups="material_request.group_material_manager"/>
+                                <field name="available_qty" groups="material_request.group_material_manager"/>
+                        </tree>
+                    </field>
+                   </page>
+                    <page string="Notes " name="notes">
+                        <group>
+                            <field name="notes" placeholder="Internal notes..." nolabel="1" colspan="2"/>
+                        </group>
+                    </page>
+                    
+                  
+                </notebook>
+            </sheet>
+ 
+            </form>
+        </field>
+    </record>
+<record id="view_material_request_filter" model="ir.ui.view">
+            <field name="name">material.request.search</field>
+            <field name="model">material.request</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="project_id"/>
+                    <field name="part"/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]" help="Draft MR"/>
+                    <filter string="Approved" name="approve" domain="[('state', '=', 'approved')]" help="Approved MR"/>
+                    <filter string="My Requests" name="my_request" domain="[('user_id', '=', uid)]"/>
+                    <filter string="Team Requests" name="team_request" domain="[('manager_id', '=', uid)]"/>
+                    <group expand="0" string="Group By">
+                        
+                        <filter string="Date" name="group_by_date" domain="[]" context="{'group_by': 'date'}"/>
+                        <filter string="Project" name="group_by_project_id" domain="[]" context="{'group_by': 'project_id'}"/>
+                       <filter string="Status" name="group_by_state" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                   
+                </search>
+            </field>
+        </record>
+
+
+<record model="ir.actions.act_window" id="action_material_request">
+    <field name="name">Issue Requets</field>
+    <field name="res_model">material.request</field>
+    <field name="context">{'search_default_my_request':1}</field>
+    <field name="view_mode">tree,form</field>
+</record>
+<!-- menu Item -->
+    <menuitem name="Issue Request"
+        id="menu_main_material_request"
+        web_icon="gov_form,static/description/icon.png"
+        sequence="25">
+        <menuitem id="menu_main_menu" name="Requests " sequence="1">
+            <menuitem id="menu_material_request" action="action_material_request" sequence="1"/>
+        </menuitem>
+        
+    </menuitem>
+
+<!-- Sale order template inherit -->
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <t t-call="web.external_layout" position="replace">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="doc.with_context(lang=doc.partner_id.lang)" />
+                <t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/> <!-- So that it appears in the footer of the report instead of the company VAT if it's set -->
+
+                    <div class="page">
+                        
+                        <h2 class="mt-4">
+                        <span t-if="env.context.get('proforma', False) or is_pro_forma">Pro-Forma Invoice # </span>
+                        <span t-elif="doc.state in ['draft','sent']">Sale Quotation </span>
+                        <span t-else="">Sale Order </span>
+                        <span t-field="doc.name"/>
+                    </h2>
+                        <div class="row ">
+                            
+                            <div class="col-6">
+                                <strong>Date:</strong>
+                                <span t-field="o.date_order" />
+                            </div>
+                           <t t-if="o.state not in ['draft','sent']">
+                                <div class="col-6">
+                                    <strong>SQ No:</strong>
+                                    <span t-field="o.qo_num" />
+                                </div>
+                            </t>
+                        </div>
+                        <div class="row ">
+                            
+                            <div class="col-6">
+                                <strong>Customer Name:</strong>
+                                <span t-field="o.partner_id.name" />
+                            </div>
+                          
+                            <div class="col-6">
+                                <strong>Customer Code:</strong>
+                                <span t-field="o.partner_id.ref" />
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-6">
+                                <strong>Customer Address:</strong>
+                                <div t-field="o.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                            </div>
+                             <div class="col-6">
+                                <strong>Customer TRN:</strong>
+                                <!-- <span t-field="o.partner_id.name" /> -->
+                            </div>
+                            
+                        </div>
+                     
+                        <table class="table table-sm o_main_table table-borderless mt-4">
+                <thead style="display: table-row-group">
+                    <tr>
+                        <th>
+                            <strong>No</strong>
+                        </th>
+                        <th name="th_description"><strong>Items</strong></th>
+                        <th name="th_uom"><strong>UOM</strong></th>
+                        <th name="th_date_req" class="text-center"><strong>Specification</strong></th>
+                        <th name="th_quantity" class="text-end"><strong>Qty</strong></th>
+                        <th name="th_price_unit" class="text-end"><strong>Unit Price</strong></th>
+                        <th name="th_taxes"><strong>VAT</strong></th>
+                        <th name="th_amount" class="text-end"><strong>Toral Amount</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="sequence" t-value="0"/>
+                    <t t-set="current_subtotal" t-value="0"/>
+                    <t t-foreach="doc.order_line" t-as="line">
+                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"/>
+                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_total"/>
+
+                        <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                            <t t-if="not line.display_type">
+                                <t t-set="sequence" t-value="sequence + 1"/>
+                                <td id="seq" class="text-center">
+                                    <span t-esc="sequence"/>
+                                </td>
+                                <td id="product">
+                                    <span t-field="line.product_id"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-field="line.product_uom.name" groups="uom.group_uom"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-field="line.product_uom_qty"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-field="line.price_unit"/>
+                                </td>
+
+                                <t t-set="taxes" t-value="', '.join([(tax.description or tax.name) for tax in line.tax_id])"/>
+                                <td name="td_taxes" t-attf-class="text-end {{ 'text-nowrap' if len(taxes) &lt; 10 else '' }}">
+                                    <span t-out="taxes">Tax 15%</span>
+                                </td>   
+                                <td class="text-end">
+                                    <span t-field="line.price_subtotal"
+                                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                </td>
+                            </t>
+                            <t t-if="line.display_type == 'line_section'">
+                                <td colspan="99" id="section">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <t t-set="current_section" t-value="line"/>
+                                <t t-set="current_subtotal" t-value="0"/>
+                            </t>
+                            <t t-if="line.display_type == 'line_note'">
+                                <td colspan="99" id="note">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </t>
+                        </tr>
+                        <t t-if="current_section and (line_last or o.order_line[line_index+1].display_type == 'line_section')">
+                            <tr class="is-subtotal text-end">
+                                <td colspan="99" id="subtotal">
+                                    <strong class="mr16">Subtotal</strong>
+                                    <span
+                                        t-esc="current_subtotal"
+                                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                    />
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+
+            <div id="total" class="row justify-content-end">
+                <div class="col-4">
+                    <table class="table table-sm table-borderless">
+                        <t t-set="tax_totals" t-value="o.tax_totals"/>
+                        <t t-call="account.document_tax_totals"/>
+                    </table>
+                </div>
+            </div>
+
+                        
+                        <div class="row">
+                            
+                            <div class="col-6">
+                                <strong>Sales Representative:</strong>
+                                <span t-field="o.user_id.name" />
+                            </div>
+                            <div class="col-6">
+                                <strong>Signature:</strong>
+                                <span t-field="o.user_id.signature" />
+                            </div>
+                            
+                        </div>
+                    
+
+
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </odoo>

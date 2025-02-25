@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_kb_girls_tuition_fees" model="ir.actions.act_window">
+        <field name="name">Tuition Fees For Girls </field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.tuition.fees.for.girls</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <record id="kb_girls_tuition_fees_form" model="ir.ui.view">
+        <field name="name">kb.girls.tuition.fees.form.view</field>
+        <field name="model">kb.tuition.fees.for.girls</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                         <group string="">
+                            <field name="kb_yearID"/>
+                        </group>
+                        <group string="International">
+                            <field name="kb_internationalFees_g"/>
+                        </group>
+                         <group string="Primary">
+                            <field name="kb_primaryFirstGrade_g"/>
+                            <field name="kb_primarySecondGrade_g"/>
+                            <field name="kb_primaryOtherGrade_g"/>
+                        </group>
+                        <group string="Intermediate">
+                            <field name="kb_intermediateFees_g"/>
+                        </group>
+                        <group string="Secondary">
+                            <field name="kb_secondaryFirstGrade_g"/>
+                            <field name="kb_secondaryOtherGrade_g"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <record id="girls_tuition_fees_tree" model="ir.ui.view">
+        <field name="name">kb.tuition.fees.for.girls.tree</field>
+        <field name="model">kb.tuition.fees.for.girls</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_yearID"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="system_root" name="School System" sequence="1" />
+
+    <menuitem id="menu_tuition_fees_for_students"
+              name="Tuition fees for students"
+              parent="kb_Tahtheeb_school.fees_menu"
+              sequence="30"/>
+
+    <menuitem name="Tuition fees for girls"
+        id="submenu_tuition_management"
+        parent="menu_tuition_fees_for_students"
+        sequence="12"
+        action="action_kb_girls_tuition_fees"/>
+</odoo>

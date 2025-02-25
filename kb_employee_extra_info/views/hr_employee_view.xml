@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_employee_inherit_form_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='passport_id']" position="after">
+                    <group name="license_id" string="Driver License Id">
+                        <field name="license_id" />
+                        <field name="license_release_date" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('license_id', 'in', [None,False])]}" />
+                        <field name="license_expiry_date" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('license_id', 'in', [None,False])]}" />
+                        <field name="license_attachment_id" groups="hr.group_hr_user" widget="many2many_binary"
+                            class="oe_inline" attrs="{'invisible': [('license_id', 'in', [None,False])]}" />
+                    </group>
+                    <group name="bank_id" string="Bank Information">
+                        <field name="bank_name" />
+                        <field name="bank_soft_code" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('bank_name', 'in', [None,False])]}" />
+                        <field name="bank_account_number" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('bank_name', 'in', [None,False])]}" />
+                        <field name="bank_iban_number" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('bank_name', 'in', [None,False])]}" />
+                    </group>
+                    <group name="border_id" string="Border Information">
+                        <field name="border_number" />
+                        <field name="date_of_entry" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('border_number', 'in', [None,False])]}" />
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='coach_id']" position="after">
+                    <field name="country_id" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" />
+                    <field name="birthday" />
+                    <field name="identification_id" />
+                    <field name="id_expiry_date" groups="hr.group_hr_user"
+                        attrs="{'invisible': [('identification_id', 'in', [None,False])]}" />
+                    <field name="visa_no" />
+                    <field name="visa_expire" />
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="employee_barcode_search_view" model="ir.ui.view">
+            <field name="name">employee.barcode.search.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="barcode" string="barcode" filter_domain="[('barcode', 'ilike', self)]" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="employee_barcode_tree_view" model="ir.ui.view">
+            <field name="name">employee.barcode.tree.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="barcode"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

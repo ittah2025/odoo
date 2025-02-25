@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="leave_application_form" model="ir.actions.report">
+        <field name="name">Leave Application Request</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.laf</field>
+        <field name="report_file">kb_hr_forms.laf</field>
+        <field name="print_report_name">'Leave Application Form' </field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+<template id="laf">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+       <div class="page" style="font-family: 'Tajawal', sans-serif;">
+        <style>
+            table, 
+            th,
+            td
+            {
+                border: 2px solid black;
+                width: 100%;
+                 height:40px; 
+                table-layout: fixed;
+                vertical-align: text-top;
+                border-collapse: collapse;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            body.double {border-style: double;}
+        </style>
+      
+        <h1 style="text-align: center;">نموذج طلب إجازة / خروج نهائي / نقل كفالة</h1>
+        <table>
+            <form action="">
+            <tr>
+                <th >إجازة مرضية (يرفق العذر)<input type="radio" id="sickleave" name="vacation" value="sickleave"/></th>
+                <th >إجازة تخصم من الراتب<input type="radio" id="deducted_salary" name="vacation" value="deducted_salary"/></th>
+                <th >إجازة تخصم من رصيد الإجازات<input type="radio" id="deducted_vacation" name="vacation" value="deducted_vacation"/></th>
+                <th>إجازة سنوية<input type="radio" id="annual" name="vacation" value="annual"/></th>
+            </tr>
+            <tr>
+                <th>إجازة أخرى<input type="radio" id="other" name="vacation" value="other"/></th>
+                <th>إجازة وفاة<input type="radio" id="death" name="vacation" value="death"/></th>
+                <th >إجازة حج<input type="radio" id="hajj" name="vacation" value="hajj"/></th>
+                <th >إجازة زواج<input type="radio" id="wedding" name="vacation" value="wedding"/></th>
+            </tr>
+        </form>
+        </table>
+        <br/>
+        <table>
+            <form action="">    
+            <tr>
+             <th >رقم الموظف</th>
+              <th>إسم الموظف</th>
+                <th >الجنسية</th>
+                <th>رقم الهوية وتاريخ الإنتهاء</th>
+               
+               
+            </tr>
+            <tr>
+                <td ></td>
+                <td >الرقم <br/> التاريخ</td>
+                <td ></td>
+                <td ></td>
+            </tr>
+            <tr>
+            <th>تاريخ بداية الإجازة</th>
+                <th >تاريخ نهاية الإجازة</th>
+                
+                <th >مدة الإجازة المطلوبة</th>
+                <th >رصيد أيام الإجازات</th>
+            </tr>
+            <tr>
+                <td >/ /</td>
+                <td >/ /</td>
+                <td ></td>
+                <td ></td>
+            </tr>
+            <tr>
+                <th >وفاة الموظف<input type="radio" id="emp_death" name="v_type" value="emp_death"/></th>
+                <th >نقل كفالة<input type="radio" id="transfer" name="v_type" value="transfer"/></th>
+                <th >تصفية إجازات<input type="radio" id="leaves_filter" name="v_type" value="leaves_filter"/></th>
+                <th >خروج نهائي<input type="radio" id="f_exit" name="v_type" value="f_exit"/></th>
+            </tr>
+            <tr>
+                <th >تصفية حقوق وإجازات</th>
+                <th >حجز تذكرة السفر على حساب</th>
+                <th >تاريخ الإلتحاق بالعمل</th>
+                <th >نهاية عمل الموظف</th>
+            </tr>
+            <tr>
+                <td > بسفر<input type="radio" id="with_travel" name="wt_or_wot" value="with_travel"/> بدون سفر<input type="radio" id="without_travel" name="wt_or_wot" value="without_travel"/></td>
+                <td > الشركة<input type="radio" id="company" name="travel_ticket" value="company"/> الموظف<input type="radio" id="employee" name="travel_ticket" value="employee"/></td>
+                <td >/ /</td>
+                <td>/ /</td>
+            </tr>
+            <tr>
+                <th >إعتماد المدير الإداري</th>
+                <th>موافقة المسؤول المباشر</th>
+                <th >توقيع الموظف والتاريخ</th>
+                <th >مقر عمل الموظف</th>
+            </tr>
+            <tr>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td >space</td>
+            </tr>
+            <tr>
+            <th >الملاحظات</th>
+                <td colspan="3"  style="text-align: right;" >-1 <br/> -2 <br/> -3 <br/> -4 <br/></td>
+                
+            </tr>
+            <tr>
+                <th >إعتماد الرئيس التنفيذي<br/> (للخروج النهائي ونقل الكفالة)</th>
+                <th >موافقة مدير المالية وشؤون الموظفين</th>
+                <th >مراجعة رئيس الحسابات</th>
+                <th >إعداد</th>
+            </tr>
+            <tr>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td >space</td>
+            </tr>
+            <tr>
+                <th >توقيع مدخل المعلومات</th>
+                <th >تاريخ إدخال المعلومات</th>
+                <th colspan="2" >إسم مدخل المعلومات في النظام</th>
+            </tr>
+            <tr>
+                <td ></td>
+                <td ></td>
+                <td colspan="2">space</td>
+            </tr>
+            </form>
+        </table> 
+        </div>
+
+    </t>
+    </t>
+</template>
+</odoo>

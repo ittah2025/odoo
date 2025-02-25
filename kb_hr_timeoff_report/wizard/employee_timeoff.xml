@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_employee_timeoff" model="ir.ui.view">
+        <field name="name">timeoff.wizard.form</field>
+        <field name="model">employee_timeoff</field>
+        <field name="arch" type="xml">
+            <form string="Print Time Off Report">
+                <group>
+                    <field name="leave_type" />
+
+                </group>
+
+                <group >
+                    <field name="date_from" />
+                    <field name="date_to" />
+
+                </group >
+
+                <footer>
+                    <button name="action_print_document" string="Print" type="object" class="btn-primary" />
+                    <button string="Cancel" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_timeoff_report_" model="ir.actions.act_window">
+        <field name="name">Time Off Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee_timeoff</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_employee_timeoff" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="employee_timme_off"
+              name="Time Off Report"
+              parent="hr_holidays.menu_hr_holidays_report"
+              action="action_timeoff_report_" sequence="30" 
+                groups = "kb_hr_timeoff_report.group_end_of_administration_timeoff"/>
+
+</odoo>

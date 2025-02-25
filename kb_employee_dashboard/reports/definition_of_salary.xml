@@ -1,0 +1,88 @@
+<odoo>
+    <record id = "defintion_of_salary_ids" model = "ir.actions.report" >
+        <field name = "name" >شهادة تعريف بإجمالـي الراتب</field >
+        <field name = "model" >hr.employee</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_employee_dashboard.defintion_of_salary_reports</field >
+        <field name = "report_name" >kb_employee_dashboard.defintion_of_salary_reports</field >
+        <field name = "binding_model_id" ref = "model_hr_employee" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+    <template id = "defintion_of_salary_reports" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <t t-foreach = "docs" t-as = "doc" >
+                    <link href = "https://fonts.googleapis.com/css2?family=Tajawal" rel = "stylesheet" />
+                    <div class = "page" style = "font-family: 'Tajawal', sans-serif;page-break-after: always;" >
+                        <h3 style = "text-align:center; font-weight: bold;" >شهادة تعريف بإجمالـي الراتب </h3 >
+                        <br />
+                        <br />
+
+                        <table style = "width:100%;" >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    الاسـم
+                                </th >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                   رقم الهوية / الاقامـة
+                                </th>
+                            </tr >
+                            <tr >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.name" />
+                                </td>
+
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.identification_id" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    المسمى الوظيفي
+                                </th>
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    الجهة الموجه إليها
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.job_title" />
+                                </td >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                <br/>
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+
+                        <table style = "width:100%;">
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    إجمالـي الراتب
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.total_salary" t-options='{"widget": "float", "precision": 2}'/>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/><br/>
+                        <p align="right">
+                            تشهد
+                              <span t-field = "doc.company_id" />
+                            بأن الموظف الموضح اسمه وبياناته أعلاه, أحد منسوبينها ولا يزال على رأس العمل حتى تاريخه.
+                            <br/>
+                            وبناء على طلبه أعطي هذه الشهادة لتقديمها إلى من يهمه الامر.
+                        </p>
+                        <br/><br/><br/><br/>
+                        <p align="left">
+                            المدير العام
+                            <br/>
+                            ____________
+                        </p>
+                    </div >
+                </t >
+            </t >
+        </t >
+    </template >
+</odoo >

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_employee_definition_report" model="ir.actions.report">
+        <field name="name">تعريفة موظف </field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.employee_definition_report</field>
+        <field name="report_file">kb_hr_tahtheeb.employee_definition_report</field>
+        <field name="print_report_name">'تعريفة موظف' </field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="employee_definition_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="employeeTransferID" t-as="line">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                    <div>
+                        <p style=" text-align:right;">التاريخ <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م</p>
+                    </div>
+                    <br/>
+                    <div>
+                        <p style="text-align:center; font-weight: bold; font-size: 20px;">إلى من يهمه الأمر  </p>
+                    </div>
+                    <br/>
+                    <div>
+                        <p style=" text-align:right; font-size: 18px;" > السلام عليكم ورحمة وبركاته وبعد,,, </p>
+                        <p style=" text-align:right; font-size: 18px;">
+                            تشهد شركة التذيب للخدمات التعليمية بأن السيد/ة:<span t-esc="line['kb_employee_name']"/>
+                            <span t-esc="line['kb_nationality']"/> الجنسية
+                            تحمل هوية وطنية رقم ( <span t-esc="line['kb_employeeID']"/>)
+                            ,
+                             تعمل لدينا بوظيفة (<span t-esc="line['kb_job_title']"/>), قد باشرت العمل بتاريخ
+                            <span t-esc="line['kb_date']"/> م.
+                            وتتقاضى اجمالي راتب
+                            وقدره(<span t-esc="line['kb_salary']"/>)
+                            ريال ,
+                            مفصل كالتالي(<span t-esc="line['kb_basic_salary']"/>)
+                            ريال راتب اساسي,
+                            (<span t-esc="line['kb_allowance']"/>)
+                             ريال بدلات أخرى, ومازالت على رأس العمل حتى تاريخه, وأعطي لها هذا التعريف بناء على طلبها بدون أدنى مسؤولية مالية او قانونية على الشركة.
+
+                        </p>
+                    </div>
+                    <br/><br/>
+                    <div>
+                        <p style=" text-align:center; font-size: 15px;" >وتقبلو خالص تحياتنا,,</p>
+                    </div>
+                    <div>
+
+                        <p style=" text-align:left; font-size: 15px;">شركة التهذيب التعليمية</p>
+
+                    </div>
+                    </div>
+                    </div>
+                    <br/><br/>
+                     <p style="page-break-after:always;">   </p>
+                    <br/><br/> <br/><br/>
+                    <div>
+                        <p style=" text-align:left;">Date <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></p>
+                    </div>
+                    <br/>
+                    <div>
+                        <p style="text-align:center; font-weight: bold; font-size: 20px;">To whom it may concern  </p>
+                    </div>
+                    <br/>
+                    <div>
+                        <p style=" text-align:left; font-size: 18px;" >
+                            We (Al-Tahtheeb Educational Services Company) certifics that Miss/<span t-esc="line['kb_employee_name']"/> (<span t-esc="line['kb_nationality']"/>Nationality) bearer of ID no. (<span t-esc="line['kb_employeeID']"/>)
+                            is one of our teamwork staff in position <span t-esc="line['kb_job_title']"/> since <span t-esc="line['kb_date']"/> and until the date of this letter
+                            and we are provided her this certificate upon his request without any responsibility of our company.
+                        </p>
+                    </div>
+                    <div>
+                        <p style=" text-align:center; font-size: 15px;" >Greetings,,,</p>
+                    </div>
+                    <br/><br/>
+                    <div>
+                        <p style=" text-align:left; font-size: 15px;">Al-Tahtheeb Educational Services Company</p>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

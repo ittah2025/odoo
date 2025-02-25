@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="employee_dashboard">
+        <field name="name">Employee Dashboard</field>
+        <field name="sequence">21</field>
+    </record>
+
+    <record id="group_employee_readonly" model="res.groups">
+        <field name="name">Employee readonly</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="employee_dashboard"/>
+    </record>
+
+    <record id="group_dashboard_admin" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="implied_ids" eval="[(4, ref('kb_employee_dashboard.group_employee_readonly'))]"/>
+        <field name="category_id" ref="employee_dashboard"/>
+    </record>
+
+    <record id="access_employee_payslip" model="ir.model.access">
+        <field name="name">Access Employee Payslip</field>
+        <field name="model_id" ref="model_hr_payslip"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_payslip_admin" model="ir.model.access">
+        <field name="name">Access Employee Payslip Admin</field>
+        <field name="model_id" ref="model_hr_payslip"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_employee_contract" model="ir.model.access">
+        <field name="name">Access Employee contract</field>
+        <field name="model_id" ref="model_hr_contract"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_contract_admin" model="ir.model.access">
+        <field name="name">Access Employee contract Admin</field>
+        <field name="model_id" ref="model_hr_contract"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_employee_payslip_worked_days" model="ir.model.access">
+        <field name="name">Access Employee Payslip Worked Days</field>
+        <field name="model_id" ref="model_hr_payslip_worked_days"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_payslip_worker_days_admin" model="ir.model.access">
+        <field name="name">Access Employee Payslip Worked Days Admin</field>
+        <field name="model_id" ref="model_hr_payslip_worked_days"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+
+    <record id="access_employee_hr_payslip_input" model="ir.model.access">
+        <field name="name">Access Employee HR Payslip Input</field>
+        <field name="model_id" ref="model_hr_payslip_input"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_hr_payslip_input_admin" model="ir.model.access">
+        <field name="name">Access Employee HR Payslip Input Admin</field>
+        <field name="model_id" ref="model_hr_payslip_input"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_employee_hr_payslip_line" model="ir.model.access">
+        <field name="name">Access Employee HR Payslip Line</field>
+        <field name="model_id" ref="model_hr_payslip_line"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_hr_payslip_line_admin" model="ir.model.access">
+        <field name="name">Access Employee HR Payslip Line Admin</field>
+        <field name="model_id" ref="model_hr_payslip_line"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_employee" model="ir.model.access">
+        <field name="name">Access Employee</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_admin" model="ir.model.access">
+        <field name="name">Access Employee Admin</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+        <record id="access_employee_hr_job" model="ir.model.access">
+        <field name="name">Access Employee HR Job</field>
+        <field name="model_id" ref="model_hr_job"/>
+        <field name="group_id" ref="group_employee_readonly"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_employee_hr_job_admin" model="ir.model.access">
+        <field name="name">Access Employee HR Job Admin</field>
+        <field name="model_id" ref="model_hr_job"/>
+        <field name="group_id" ref="group_dashboard_admin"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+</odoo>

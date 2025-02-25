@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_bus_frontend_assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/sh_bus_frontend/static/src/js/jquery.seat-charts.js"></script>
+            <link rel="stylesheet" type="text/css" href="/sh_bus_frontend/static/src/css/jquery.seat-charts.css" />
+            <link rel="stylesheet" type="text/scss" href="/sh_bus_frontend/static/src/scss/busbooking.scss" />
+            <link rel="stylesheet" type="text/scss" href="/sh_bus_frontend/static/src/scss/owl.carousel.css" />
+            <link rel="stylesheet" type="text/scss" href="/sh_bus_frontend/static/src/scss/owl.theme.default.min.css" />
+            <script type="text/javascript" src="/sh_bus_frontend/static/src/js/seat_booking.js"></script>
+            <script type="text/javascript" src="/sh_bus_frontend/static/src/js/custom.js"></script>
+            <script type="text/javascript" src="/sh_bus_frontend/static/src/js/owl.carousel.js"></script>
+<!--             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+            <script>
+                $(function () {
+                    $("#datepicker").datepicker();
+                });
+            </script>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_document_student" model="ir.actions.act_window">
+        <field name="name">Document</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">document</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add new required files
+            </p>
+        </field>
+    </record>
+
+    <record id="view_document_student_form" model="ir.ui.view">
+        <field name="name">document.form</field>
+        <field name="model">document</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Sequence">
+                            <field name="sequence" />
+                        </group>
+                        <group string="File type">
+                            <field name="Document_Type" required="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_document_tree" model="ir.ui.view">
+        <field name="name">document.tree</field>
+        <field name="model">document</field>
+        <field name="arch" type="xml">
+            <tree string="Files">
+                <field name="sequence" />
+                <field name="Document_Type" />
+            </tree>
+        </field>
+    </record>
+    <menuitem id="document_submenu" name="Document" parent="configuration_menu" action="action_document_student" sequence="17" />
+
+
+</odoo>

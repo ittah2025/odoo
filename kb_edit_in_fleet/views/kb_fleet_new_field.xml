@@ -1,0 +1,101 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "kb_add_fleet_view_form" >
+            <field name = "name" >Fleet Vehicle Extend Form View</field >
+            <field name = "model" >fleet.vehicle</field >
+            <field name = "inherit_id" ref = "fleet.fleet_vehicle_view_form" />
+            <field name = "arch" type = "xml" >
+
+
+                <!-- <label for = "model_id" position = "attributes" >
+                    <attribute name = "string" >Vehicle Name (En)</attribute >
+                </label > -->
+
+                <xpath expr = "//field[@name='model_id']/.." position = "after" >
+                    <label for = "kb_vehicle_ar" />
+                    <h2 >
+                        <field name = "kb_vehicle_ar" />
+                    </h2 >
+                 <label for = "kb_vehicle_en" />
+                    <h2 >
+                        <field name = "kb_vehicle_en" />
+                    </h2 >
+                </xpath >
+
+
+                <label for = "license_plate" position = "attributes" >
+                    <attribute name = "string" >Plate Name (En)</attribute >
+                </label >
+
+
+                <xpath expr = "//field[@name='license_plate']/.." position = "after" >
+                        <label for = "kb_plate_number_ar" />
+                        <h2 >
+                            <field name = "kb_plate_number_ar" class = "oe_inline" placeholder="ت ك ط 326"/>
+                        </h2 >
+                </xpath >
+
+                <xpath expr = "//field[@name='tag_ids']/.." position = "after" >
+                        <label for = "kb_registration_type" />
+                        <h2 >
+                            <field name = "kb_registration_type" class = "oe_inline" />
+                        </h2 >
+                </xpath >
+                
+                <!-- smart button -->
+                <xpath expr = "//field[@name='contract_count']/.." position = "replace" >
+                    <field name = "contract_count" invisible = "1" />
+                </xpath >
+                <xpath expr = "//field[@name='first_contract_date']/.." position = "replace" >
+                    <field name = "first_contract_date" invisible = "1" />
+                </xpath >
+<!--                <xpath expr = "//field[@name='plan_to_change_bike']/.." position = "replace" >-->
+<!--                    <field name = "plan_to_change_bike" invisible = "1" />-->
+<!--                </xpath >-->
+                <xpath expr = "//button[@name='open_assignation_logs']" position = "after" >
+                    <button name="kb_documment_create" class="oe_stat_button" string="Documents" type="object" icon="fa-paste">
+                        <field string="Documents" name="doc_count" widget="statinfo"/>
+                    </button>
+                </xpath >
+
+                <xpath expr = "//field[@name='location']/.." position = "after" >
+                    <group string = "Vehicle details" >
+                        <group>
+                            <field name = "kb_side_number" />
+                            <field name = "kb_customs_card" />
+                            <field name = "kb_color" />
+                            <field name = "kb_tire_number" />
+                            <field name = "kb_tire_size" />
+                        </group>
+                    </group >
+                    <group string = " " >
+                        <br/>
+                        <br/>
+                        <group>
+                                <field name = "kb_expected_life" />
+                                <field name = "kb_num_cylinders" />
+                                <field name = "kb_fuel_type" />
+                                <field name = "kb_vehicle_type" />
+                                <field name = "kb_num_passengers" />
+                     </group>
+                    </group>
+
+                </xpath >
+                <xpath expr = "//field[@name='next_assignation_date']" position = "after" >
+                   <field name = "end_assignation_date" />
+                </xpath >
+
+
+                 <xpath expr = "//field[@name='category_id']/." position = "before" >
+                    <field name = "kb_serial_number" />
+                    <field name = "kb_manufacturer" />
+                    <field name="kb_vehicle_weight" />
+                    <field name="kb_owner_name" />
+                    <field name="kb_owner_id" />
+                </xpath >
+
+
+            </field >
+        </record >
+    </data >
+</odoo >

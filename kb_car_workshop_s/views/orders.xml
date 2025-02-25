@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="orders_views" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">orders</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new order
+            </p>
+        </field>
+    </record>
+
+            <data>
+               <record id="seq_order" model="ir.sequence">
+                   <field name="name">order Sequence</field>
+                   <field name="code">orders</field>
+                   <field name="prefix">A</field>
+                   <field name="padding">5</field>
+
+               </record>
+            </data>
+
+    <!--Yourt-->
+    <record id="orders_views_form" model="ir.ui.view">
+        <field name="name">orders.form</field>
+        <field name="model">orders</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <header>
+
+
+                    <button id="button_conf" name="action_order_parts" string="To order parts" class="btn-primary"
+                            states="draft"
+                            type="object"/>
+
+                    <button id="button_conf" name="action_in_progress" string="in Progress " class="btn-primary"
+                            states="order_parts"
+                            type="object"/>
+
+                    <button id="button_conf" name="action_on_hold" string="Hold" class="btn-primary"
+                            states="in_progress"
+                            type="object"/>
+
+                    <button id="button_conf" name="action_complete" string="Complete" states="on_hold"
+                            confirm="Are you sure that you will confirm ?" type="object"/>
+
+
+                    <button name="action_cancel" string="cancel" data-hotkey='z'
+                            confirm="Are you sure that you will cancel ?"
+                            states="draft,order_parts,in_progress,on_hold,"
+                            type="object"/>
+
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,order_parts,in_progress,on_hold,complete,cancel"
+                           options="{'clickable': 0}"/>
+
+                    <!-- <button name="create_appointment_form" string="open_form" type="object"/>  -->
+
+                </header>
+                <sheet>
+                     <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" type="object" name="orders_smart_button"  icon="fa-gears">
+                            <field name="order_count" widget="statinfo"/>
+                            </button>
+                    </div>
+                    <group>
+                        <group string="Orders">
+                            <field name="user_id" readonly="1"/>
+                            <field name="order_ID" readonly="1"/>
+
+                            <field name="date_1" style="border:1px solid black;"/>
+                            <field name="techName" style="border:1px solid black;" domain="[('carshop_employee', '=', 'True')]" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                            <field name="customerComm" style="border:1px solid black;"/>
+                            <field name="timeIn" style="border:1px solid black; width:50%;"/>
+                            <field name="timeOut" style="width:50%; border:1px solid black;" />
+                            <field name="fuelLevel" style="width:25%; border:1px solid black;"/>
+                            <field name="fuelType" style="width:25%; border:1px solid black;"/>
+                            <field name="odometerIN" style="width:50%; border:1px solid black;"/>
+                            <field name="odometerOut" style="width:50%; border:1px solid black;"/>
+                            <!--upload photo to order-->
+                            <field name="attachment_ids" widget="many2many_binary" class="oe_inline"/>
+                            <field name="onHold" attrs="{'invisible':[('state', '!=', 'on_hold')]}"/>
+                            <!-- <field name="canelReasonfield" attrs="{'invisible':[('state', '!=', 'cancel')]}" /> -->
+                            <!-- <field name="customerAppr" style="width:30%" /> -->
+                            <field name="workStartDate" style="border:1px solid black"/>
+                            <field name="ExfinishDate" style="border:1px solid black"/>
+                            <field name="finishDate" style="border:1px solid black" />
+                        </group>
+
+                        <!--Vehicle info-->
+                        <group string=" Vehicle Information" >
+                            <field name="vehicleOperatingCodeNumber" style="border:1px solid black" force_save="1" />
+                            <field name="carModel" readonly="1" force_save="1"/>
+                            <field name="model_id_order" readonly="1" force_save="1"/>
+
+                            <field name="searialNumbers_order" readonly="1" force_save="1" />
+<!--                            <field name="order_count_order" readonly="1" force_save="1"/>-->
+
+        <field name="employeeComplete" style="border:1px solid black" attrs="{'invisible':[('state', '!=', 'complete')]}" readonly="1" force_save="1"/>
+
+                            <field name="cancelReason" style="border:1px solid black" attrs="{'invisible':[('state', '!=', 'cancel')]}" readonly="1" force_save="1"/>
+                        </group>
+                    </group>
+                    <!--Display products in table -->
+                    <notebook>
+                        <page string="Product" name="product">
+                            <field name="order_line_ids">
+                                <tree editable="bottom">
+
+                                    <field name="product_barcode"/>
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="product_price"/>
+                                    <field name="transfer_check" />
+                                    <field name="source_location" />
+                                    <field name="destenation_location" />
+                                    
+                                    <button name="move_to_transfer" string="Order" type="object" class="oe_highlight"/>
+                                </tree>
+                                <form>
+                                    <group>
+
+                                        <field name="product_barcode"/>
+                                        <field name="product_id"/>
+                                        <field name="product_qty"/>
+                                        <field name="product_price"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+
+
+                        <page string="Battery " name="TireInspection">
+
+                        <field name="battery_table_ids">
+                                <tree editable="bottom">
+                                    <field name="batteryItem"/>
+                                    <field name="company_name"/>
+                                    <field name="batterySerialNumber"/>
+                                    <field name="batteryAmps"/>
+                                    <field name="batteryvolts"/>
+                                    <field name="batteryinstallDate"/>
+                                    <field name="batterychangeDate"/>
+                                    <field name="batterytotal_days_count"/>
+                                    <field name="batteryWarranty"/>
+                                </tree>
+                            </field>
+                        </page>
+
+
+
+                        <!--Tire inspection tab-->
+                        <page string="Tires " name="TireInspection">
+                            <group>
+                                    <field name="tireCondition" widget="radio" options="{'horizontal': true}"/>
+                                    <field name="spareTire" style="width:15%; border:1px solid black" />
+                            </group>
+                        <field name="tire_table_ids">
+                                <tree editable="bottom">
+                                    <field name="tireItem"/>
+                                    <field name="tireMeasure"/>
+                                    <field name="tireSerialNumber"/>
+                                    <field name="tireInstallDate"/>
+                                    <field name="tireKm"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Check List" name="Check List">
+                            <group>
+
+                                <group>
+                                    <group>
+                                        <field name="branch_1"/>
+                                        <field name="inpBy_1" />
+                                        <field name="driverName"/>
+                                    </group>
+
+
+                                    <table style="width:100%; border:1px solid black;">
+                                        <tr>
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    No.
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Item To Be Checked
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Good
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Repair
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Change
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Remarks
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    1
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Front Windshield
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fw_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fw_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fw_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fw_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    2
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Side Glass R/L
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SGR_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SGR_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SGR_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SGR_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    3
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Side Mirror R/L
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RLM_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RLM_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RLM_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RLM_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    4
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Rear Glass
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RG_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RG_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RG_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RG_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    5
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Passenger Chairs
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PC_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PC_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PC_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PC_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    6
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Passenger Chair Seat Belts
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PCSB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PCSB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PCSB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PCSB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    7
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Passsenger Door
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    8
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Driver Side Glass
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PDW_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    9
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Bus Baggage Handle
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BBH_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BBH_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BBH_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BBH_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    10
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Front Bumper
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    11
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Rear Bumper
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    12
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Right Side Body
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RSB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RSB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RSB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RSB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    13
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Left Side Body
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="LSB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="LSB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="LSB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="LSB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    14
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Back Side Body
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    15
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Head Lights
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FHL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FHL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FHL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FHL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    16
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Front Side Indicators R/L
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IDRL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IDRL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IDRL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IDRL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    17
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Tail Lights
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    18
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Rear Side Indicators R/L
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BSL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    19
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Horn
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Horn_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Horn_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Horn_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Horn_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    20
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Reverse Alarm
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RA_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RA_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RA_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RA_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    21
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Reverse Lights
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="RL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    22
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    SpeedoMeter
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SM_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SM_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SM_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="SM_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    23
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Air Conditioner
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AC_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AC_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AC_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AC_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    24
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    A/C Filter
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACF_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACF_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACF_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACF_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    25
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Interior Lights
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IVL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IVL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IVL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="IVL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    26
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Wiper Blades
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WBWW_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WBWW_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WBWW_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WBWW_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    27
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    A/C Belts
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="ACB_remark"/>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    28
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    All Engine Belts Condition
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="EABC_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="EABC_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="EABC_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="EABC_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    29
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Refrigerator
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Refr_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Refr_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Refr_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Refr_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    30
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Brakes Pads Thickness Front/Rear
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BFB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BFB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BFB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="BFB_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    31
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Hand Break
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="HandB_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="HandB_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="HandB_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="HandB_remark"/>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    32
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Engine Oil
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Oil_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Oil_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Oil_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Oil_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    33
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Oil Filter
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="OilF_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="OilF_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="OilF_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="OilF_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    34
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Water Level
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WL_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WL_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WL_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="WL_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    35
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Power Steering
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PS_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PS_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PS_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="PS_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    36
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Transmission
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Gear_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Gear_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Gear_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="Gear_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    37
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Transmission Oil
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="GearOil_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="GearOil_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="GearOil_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="GearOil_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    38
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Fuel Filter
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FF_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FF_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FF_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="FF_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    39
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Air Filter
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AF_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AF_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AF_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="AF_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    40
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Battery Condition
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="TC_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="TC_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="TC_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="TC_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    41
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Fire Extinguisher
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fireExt_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fireExt_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fireExt_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="fireExt_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    42
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Fist Aid Kit
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="firstAid_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="firstAid_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="firstAid_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="firstAid_remark"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    43
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    Overall Cleanliness
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="overallClean_itemGood"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="overallClean_itemrepair"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="overallClean_change"/>
+                                                </td>
+                                                <td
+                                                        style="border:1px solid black; text-align:center; vertical-align: middle;">
+                                                    <field name="overallClean_remark"/>
+                                                </td>
+                                            </tr>
+
+
+                                        </tr>
+
+
+                                    </table>
+                                </group>
+                            </group>
+
+                        </page>
+                        <!--Order Summary-->
+                        <page string="Order Summary" name="Summary">
+                            <field name="order_summary_id">
+                                <tree editable="bottom">
+                                    <field name="ServiceType"/>
+                                    <field name="orederRem"/>
+                                    <field name="techPer" widget="many2many_tags" domain="[('carshop_employee', '=', 'True')]" options="{'no_create_edit': True}"/>
+                                    <field name="techTimein"/>
+                                    <field name="techTimeout"/>
+                                    <field name="total_days" readonly="1" force_save="1"/>
+                                    <field name="statOr"/>
+
+
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="ServiceType"/>
+                                        <field name="orederRem"/>
+                                        <field name="techTimein"/>
+                                        <field name="techTimeout"/>
+                                        <field name="total_days" readonly="1" force_save="1"/>
+                                        <field name="statOr"/>
+
+
+                                    </group>
+                                </form>
+                            </field>
+
+                        </page>
+
+                        <page string="Vehicle Info " name="Vehicle_Info">
+
+                            <group>
+
+                                <group String="Vehicle Information">
+                                    <field name="vehicleOperatingCodeNumber" readonly="1" force_save="1"/>
+                                    <field name="searialNumbers_order" readonly="1" force_save="1"/>
+                                    <field name="carModel"  readonly="1" force_save="1"/>
+                                    <field name="modelYear_order" readonly="1" force_save="1"/>
+                                    <field name="busNameAR_order"  readonly="1" force_save="1"/>
+                                    <field name="busNameEN_order"  readonly="1" force_save="1"/>
+                                    <field name="searialNumbers_order"  readonly="1" force_save="1"/>
+                                    <field name="ownerElectronicumber_order" readonly="1" force_save="1"/>
+                                </group>
+
+                                <group String="Vehicle Information">
+                                    <field name="insuranceName_order" readonly="1" force_save="1"/>
+                                    <field name="insuranceStartDate_order" readonly="1" force_save="1"/>
+                                    <field name="insuranceEndDate_order" readonly="1" force_save="1"/>
+                                    <field name="status_field_order" readonly="1" force_save="1"/>
+                                    <field name="registrationEndDate_order" readonly="1" force_save="1"/>
+                                    <field name="ownerName_order" readonly="1" force_save="1"/>
+                                </group>
+
+                            </group>
+                        </page>
+
+                        <page string="Vehicle Accidents " name="Vehicle_accidents">
+                            <group>
+                                <group>
+                                    <field name="vehicleOperatingCodeNumber" readonly="1" force_save="1"/>
+                                    <field name="accidentsDate_acc"  readonly="1" force_save="1"/>
+
+                                    <field name="accidentsDescription_acc"  readonly="1" force_save="1"/>
+                                    <field name="accidentsAttachment_acc" widget = "many2many_binary"  readonly="1" force_save="1"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Maintenance" name="maintenancetable">
+                            <group>
+                                          <group string = "Engine" >
+                                         <field name="engineOil_feet"  readonly="1" force_save="1"/>
+                                         <field name="engineOilfilter_feet"  readonly="1" force_save="1"/>
+                                          <field name="oilCapacity_feet" readonly="1" force_save="1"/>
+                                         <field name="oilCapacitywith_feet" readonly="1" force_save="1" />
+                                         <field name="oil_filter_serv_km_feet" readonly="1" force_save="1" />
+                                              <field name="oil_serv_km_fleet" readonly="1" force_save="1" />
+
+                                              <field name="engineFilter_feet" readonly="1" force_save="1" />
+                                          </group>
+                                    <group string = "Transmission" >
+                                         <field name="transOil_feet"  readonly="1" force_save="1"/>
+                                         <field name="transcapacity_feet" readonly="1" force_save="1" />
+                                            <field name="tr_oil_typ_feet" readonly="1" force_save="1"/>
+                                    </group>
+
+
+                                    <group string = "Differential" >
+                                         <field name="diffOil_fleet"  readonly="1" force_save="1"/>
+                                         <field name="diffoilCapacity_fleet" readonly="1" force_save="1" />
+                                            <field name="diffoil_serv_km_fleet" readonly="1" force_save="1"/>
+                                    </group>
+                                        <group string="Other">
+
+                                         <field name="engineBelts_feet" readonly="1" force_save="1" />
+                                         <field name="tirelife_feet" readonly="1" force_save="1"/>
+                                         <field name="batterylife_feet" readonly="1" force_save="1"/>
+                                         <field name="brakes_feet" readonly="1" force_save="1"/>
+                                         <field name="acFilters_feet" readonly="1" force_save="1"/>
+                                            <field name="otherMaint" style="border:1px solid black" />
+                                    </group>
+
+                     </group>
+
+                            <field name="maintenance_items_id">
+                                <tree editable="bottom">
+                                    <field name="maintenanceItem"/>
+                                    <field name="installDate"/>
+                                    <field name="changeDate"/>
+                                    <field name="total_days_count" readonly="1" force_save="1" style="width:40%"/>
+                                    <field name="next_service" readonly="1"/>
+
+                                    <field name="maintDescrription"/>
+
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="maintenanceItem"/>
+                                        <field name="installDate"/>
+                                        <field name="changeDate"/>
+                                        <field name="total_days_count" readonly="1" force_save="1" style="width:40%"/>
+                                        <field name="maintDescrription"/>
+
+                                    </group>
+                                </form>
+                            </field>
+
+                        </page>
+
+
+                    </notebook>
+                </sheet>
+
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_orders_tree" model="ir.ui.view">
+        <field name="name">orders.tree</field>
+        <field name="model">orders</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+<!--                <field name="vehicleSerialNumber"/>-->
+                <field name="order_ID"/>
+                <field name="vehicleOperatingCodeNumber"/>
+                <field name="date_1"/>
+                <field name="state"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="car_workshop" name="Car workshop"  groups="kb_car_workshop_s.group_end_of_administration"/>
+
+    <menuitem id="config" name="Service" parent="car_workshop"  groups="kb_car_workshop_s.group_end_of_administration"/>
+
+    <menuitem id="menu_products_car_workshop"
+                action="account.product_product_action_sellable"
+                groups="kb_car_workshop_s.group_end_of_administration"
+                parent="car_workshop"
+                sequence="20"/>
+
+    <menuitem
+                id="menu_hr_employee_work"
+                name="Employees"
+                action="hr.open_view_employee_list_my"
+                groups="kb_car_workshop_s.group_end_of_administration"
+                parent="car_workshop"
+
+                sequence="20"/>
+
+    <menuitem id="ordersaa_views"
+              name="Orders"
+               groups="kb_car_workshop_s.group_end_of_administration"
+              parent="config"
+              action="orders_views"
+              sequence="3"/>
+
+   <menuitem id="dashboard_views"
+             name="Dashboard"
+              parent="car_workshop"
+              action="action_dashboard_companies"
+              sequence="25"/>
+
+
+
+
+</odoo>
+
+    

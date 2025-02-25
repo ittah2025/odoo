@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_partner_balance_check_wizard_view_form" model="ir.ui.view">
+        <field name="name">account.partner.balance.check.wizard.form</field>
+        <field name="model">account.partner.balance.check.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Partner balance report">
+                <group>
+                    <field name="date_to" />
+                    <field name="account_ids" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="partner_ids" options="{'no_create': True, 'no_create_edit':True}"/>
+                </group>
+                <footer>
+                    <button name="print_pdf" type="object" string="PDF" class="oe_highlight"/>
+                    <!-- <button name="print_excel" type="object" string="Excel" class="oe_highlight"/> -->
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_partner_report_action" model="ir.actions.act_window">
+        <field name="name">Partner Balance Check</field>
+        <field name="res_model">account.partner.balance.check.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="account_partner_balance_check_wizard_view_form"/>
+    </record>
+
+    <menuitem id="menu_account_partner_report"
+              name="Partner Balance Check"
+              sequence="101"
+              action="account_partner_report_action"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_manager,account.group_account_user"/>
+
+</odoo>

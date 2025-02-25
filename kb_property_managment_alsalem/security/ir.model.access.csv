@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_property,access.property,model_property,,1,1,1,1
+access_contract,access.contract,model_contract,,1,1,1,1
+access_apartments,access.apartments,model_apartments,,1,1,1,1
+access_rooms,access.rooms,model_rooms,,1,1,1,1
+access_transportation,access.transportation,model_transportation,,1,1,1,1
+access_maintenance,access.maintenance,model_maintenance,,1,1,1,1
+access_property_lines_ids,access.property_lines_ids,model_property_lines_ids,,1,1,1,1
+access_maintenance_fields,access.maintenance.fields,model_maintenance_fields,,1,1,1,1
+access_summary_report_wizard,access.summary.report.wizard,model_summary_report_wizard,,1,1,1,1
+
+
+

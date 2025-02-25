@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_account_report_balance_template" model="ir.actions.report">
+            <field name="name">Account Report</field>
+            <field name="model">account.report.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kb_account_reports_partner_balance.account_report2</field>
+            <field name="report_file">kb_account_reports_partner_balance.account_report2</field>
+        </record>
+
+
+
+    </data>
+</odoo>

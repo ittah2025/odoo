@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- add reasons in the contract (salary information) -->
+<odoo>
+    <record id="deduct_increase" model="ir.ui.view">
+        <field name="name">deduct_increase</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='salary']" position="after">
+                <group string="Salary Change Values">
+                     <field name='wage_discount_value'/>
+                    <field name='wage_inclease_value'/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

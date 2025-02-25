@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_transport_report_form" model="ir.ui.view">
+        <field name="name">Transport Reports wizard </field>
+        <field name="model">kb_transport_report</field>
+        <field name="arch" type="xml">
+            <form string="Print Transport Document">
+                <group>
+                    <group>
+
+                        <field name="print_report" />
+                        <field name="academic_id"/>
+                        <field name="kb_TransportRoot" attrs="{'invisible': [('print_report','!=','reason1')]}"/>
+                        <field name="kb_date_from" attrs="{'invisible': [('print_report','!=','reason1')]}"/>
+                        <field name="kb_date_to" attrs="{'invisible': [('print_report','!=','reason1')]}"/>
+
+                    </group>
+                </group>
+                <footer>
+                    <button name="print_transport_report_details" string="Print" type="object" class="btn-primary" />
+                    <button string="Cancel" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_transport_report_report" model="ir.actions.act_window">
+        <field name="name">Transport Reports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb_transport_report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_transport_report_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="transport_report_submenu" name="Transport Reports" parent="transport_menu" action="action_transport_report_report" sequence="20" />
+</odoo>

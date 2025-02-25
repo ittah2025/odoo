@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="setu_address_layout">
+        <t t-set="colclass" t-value="('col-md-5' if report_type == 'html' else 'col-5') + ' ml-auto'"/>
+        <t t-if="address">
+            <div class="address row">
+                <t t-if="information_block">
+                    <t t-set="colclass" t-value="'col-5 offset-1'"/>
+                    <div name="information_block" class="col-6">
+                        <t t-raw="information_block"/>
+                    </div>
+                </t>
+                <div name="address" t-att-class="colclass">
+                    <t t-raw="address"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="custom_external_layout2">
+        <div t-attf-class="header o_company_#{company}_layout" t-att-style="report_header_style">
+            <div class="o_boxed_header">
+            <div class="row mb8">
+                <div class="col-6">
+                    <img t-attf-src="data:image/*;base64,{{company_logo}}" t-att-alt="Logo"/>
+                </div>
+                <div class="col-6 text-right mb4">
+                    <div name="company_address" class="float-right mb4">
+                        <span t-esc="company_name"/><br/>
+                        <span t-esc="company_street"/><br/>
+                        <span t-esc="company_city"/>,<span t-esc="company_zip"/><br/>
+                        <span t-esc="company_country"/>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div t-attf-class="article o_report_layout_boxed o_company_#{company}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="pt-5">
+                <!-- This div ensures that the address is not cropped by the header. -->
+                <t t-call="kb_daily_sales_report.setu_address_layout"/>
+
+            </div>
+            <t t-raw="0"/>
+        </div>
+
+        <div t-attf-class="footer o_boxed_footer o_company_#{company}_layout">
+            <div class="text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item"> <span t-esc="company_phone"/></li>
+                    <li class="list-inline-item"> <span t-esc="company_email"/></li>
+                    <li class="list-inline-item"> <span t-esc="company_websites"/></li>
+                    <li class="list-inline-item">Tax id: <span t-esc="company_vat"/></li>
+                </ul>
+                <div t-if="report_type == 'pdf'">
+                    Page: <span class="page"/> / <span class="topage"/>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+    <template id="report_daily_invoice">
+        <t t-call="web.html_container">
+            <t t-call="kb_daily_sales_report.custom_external_layout2">
+                <div class="page" style="font-size: 11px !important;">
+                    <h2>Daily Sales Report</h2>
+                    <br/>
+                    <!-- <h6> Branch </h6>
+                   <h6> <p t-esc="wizard.get('branch_ids')" /> </h6> -->
+                    <div class="row mt32 mb32">
+                        <div class="col-2">
+                            <strong>Date From:</strong>
+                            <p t-esc="wizard.get('date_from')" t-options='{"widget": "date"}'/>
+                        </div>
+                        <div class="col-2">
+                            <strong>Date To:</strong>
+                            <p t-esc="wizard.get('date_to')" t-options='{"widget": "date"}'/>
+                        </div>
+                    </div>
+
+
+                    <br></br>
+                    <div class="row">
+                        <span class="ont-weight-bold" style="font-size: 15px !important;">Invoice Details</span>
+                    </div>
+                    <br/>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Total</th>
+                                <th>Salesman</th>
+                                <th>Sales Order</th>
+                                <th>Journal Code</th>
+                                <th>Invoice Date</th>
+                                <th t-if="type == 'customer'">Customer</th>
+                                <th t-if="type == 'supplier'">Vendor</th>
+                                <th>Reference</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="total_amount" t-value="0.0"/>
+                            <t t-set="total_invoice" t-value="0.0"/>
+                            <t t-set="total_notes" t-value="0.0"/>
+                            <tr t-foreach="moves" t-as="line" t-if="move_type not in ('out_receipt','in_receipt')">
+                                <td class="text-left">
+                                    <span t-esc="line.get('total')"
+                                          t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.get('salesman')"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.get('sale_order')"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.get('journal_code')"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.get('date')"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.get('name')"/>
+                                </td>
+
+                                <td>
+                                    <span t-esc="line.get('reference')"/>
+                                </td>
+                                <!--                                    <td class="text-right">-->
+                                <!--                               report_header_style         <span t-esc="line.get('total_due')" t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>-->
+                                <!--                                    </td>-->
+                                <t t-set="total_amount" t-value="total_amount + line.get('total')"/>
+                                <t t-if="line.get('move_type') in ('out_invoice', 'in_invoice')">
+                                    <t t-set="total_invoice" t-value="total_invoice + line.get('total')"/>
+                                </t>
+                                <t t-if="line.get('move_type') in ('out_refund', 'in_refund')">
+                                    <t t-set="total_notes" t-value="total_notes + line.get('total')"/>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <br/>
+                    <br/>
+
+                    <div class="row">
+                        <span class="ont-weight-bold" style="font-size: 15px !important;">Payment Details</span>
+                    </div>
+                    <br/>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Total</th>
+                                <th>Salesman</th>
+                                <th>Invoice Number</th>
+                                <th>Journal Code</th>
+                                <th>Payment Date</th>
+                                <th t-if="type == 'customer'">Customer</th>
+                                <th t-if="type == 'supplier'">Vendor</th>
+                                <th>Reference</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="payment_vals" t-as="payment">
+                                <tr>
+                                    <td class="text-left">
+                                        <span t-esc="payment.get('amount')"
+                                              t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="payment.get('user_id')"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="payment.get('name')"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="payment.get('journal_code')"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="payment.get('date')"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="payment.get('partner_id')"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="payment.get('move_id')"/>
+                                    </td>
+
+                                </tr>
+                            </t>
+
+
+                        </tbody>
+                    </table>
+
+
+                    <div class="row justify-content-end">
+                        <div class="col-4">
+                            <table class="table table-sm">
+                                <tr class="border-black">
+
+                                    <td>
+                                        <strong>Invoice Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="total_invoice"
+                                              t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Notes Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="total_notes"
+                                              t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                    </td>
+                                </tr>
+
+                                <tr t-foreach="payment_journals" t-as="payment_code">
+
+                                    <td>
+                                        <strong>
+                                            <t t-esc="payment_code"/>
+                                        </strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="payment_journals.get(payment_code)"
+                                              t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-black">
+                                    <td>
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="total_amount"
+                                              t-options='{"widget": "monetary", "display_currency": res_company.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_daily_invoice" model="ir.actions.report">
+        <field name="name">Daily Sales Report</field>
+        <field name="model">sales.report.wiz</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_daily_sales_report.report_daily_invoice</field>
+        <field name="report_file">kb_daily_sales_report.report_daily_invoice</field>
+        <field name="print_report_name">'Invoices - %s - %s' % (object.date_from, object.date_to)</field>
+    </record>
+
+</odoo>

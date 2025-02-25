@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Define the view for the Finance Loan form -->
+    <record id="view_finance_loan_form" model="ir.ui.view">
+        <field name="name">finance.loan.form</field>
+        <field name="model">finance.loan</field>
+        <field name="arch" type="xml">
+            <form string="Finance Loan">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kb_name"/>
+                            <field name="kb_loan_number" required="True"/>
+                            <field name="kb_financing_amount"/>
+                            <field name="kb_payment_amount"/>
+                        </group>
+                        <group>
+                            <field name="kb_date" required="True"/>
+                            <field name="num_of_installments"/>
+                            <field name="kb_note"/>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Loan Lines">
+                            <field name="kb_finance_loan_line_ids">
+                                <tree editable="bottom">
+                                    <field name="kb_amount"/>
+                                    <field name="kb_interest"/>
+                                    <field name="kb_month"/>
+                                    <field name="kb_year"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                    <group>
+                        <field name="kb_total_amount"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define the action for opening the Finance Loan form -->
+    <record id="action_finance_loan" model="ir.actions.act_window">
+        <field name="name">Finance Loans</field>
+        <field name="res_model">finance.loan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Define the menu item under Accounting -->
+    <menuitem id="menu_finance_loan" name="Financing" parent="account.menu_finance"
+              action="action_finance_loan" sequence="10"/>
+    <!--    <menuitem id="menu_finance_loan_list" name="Loan List" parent="menu_finance_loan" action="action_finance_loan"/>-->
+</odoo>

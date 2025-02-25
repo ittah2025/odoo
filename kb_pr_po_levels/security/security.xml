@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+        <record id="module_po_pr_request_access" model="ir.module.category">
+            <field name="name">Purchase Request </field>
+            <field name="description">Purchase</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_pr_po_of_supervisors" model="res.groups">
+            <field name="name">Supervisor</field>
+            <field name="category_id" ref="kb_pr_po_levels.module_po_pr_request_access"/>
+        </record>
+
+        <record id="group_pr_po_of_scm" model="res.groups">
+            <field name="name">Supply Chain Manager</field>
+            <field name="category_id" ref="kb_pr_po_levels.module_po_pr_request_access"/>
+            <field name="implied_ids" eval="[(4, ref('kb_pr_po_levels.group_pr_po_of_supervisors'))]"/>
+        </record>
+
+
+        <record id="group_pr_po_of_direct_manager" model="res.groups">
+            <field name="name">Direct Manager</field>
+            <field name="category_id" ref="kb_pr_po_levels.module_po_pr_request_access"/>
+            <field name="implied_ids" eval="[(4, ref('kb_pr_po_levels.group_pr_po_of_scm'))]"/>
+        </record>
+
+        <record id="group_pr_po_of_administration" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="kb_pr_po_levels.module_po_pr_request_access"/>
+            <field name="implied_ids" eval="[(4, ref('kb_pr_po_levels.group_pr_po_of_direct_manager'))]"/>
+        </record>
+        <!-- Advance PR -->
+
+
+        <record id="group_advance_payment" model="res.groups">
+            <field name="name">Advance Payment Request</field>
+        </record>
+
+    </data >
+</odoo >

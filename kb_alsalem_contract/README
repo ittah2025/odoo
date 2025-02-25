@@ -1,0 +1,21 @@
+============
+Leave Requests Management
+============
+This module for knowledge bonds for submitting leave requests
+============
+How module work:
+============
+This module was written to add Employee Details,Vacation Details,General Manager Details,Human Resource Details
+and Subsitute Employee Details
+============
+Is the module tested or not?
+============
+Yes 
+============
+Odoo version
+============
+Odoo 15
+============
+Can upgrade to Odoo 15 or 16?
+============
+Yes

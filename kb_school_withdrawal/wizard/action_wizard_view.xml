@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_action_wizard_new" model="ir.ui.view">
+        <field name="name">button.wizard.form</field>
+        <field name="model">action_button</field>
+        <field name="arch" type="xml">
+            <style>
+                .containerz {
+                  position: relative;
+                  width: 100%;
+                  max-width: 400px;
+                }
+
+                .containerz img {
+                  width: 100%;
+                  height: auto;
+                }
+
+                .containerz .span {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                  background-color: #555;
+                  color: white;
+                  font-size: 16px;
+                  padding: 12px 24px;
+                  border: none;
+                  cursor: pointer;
+                  border-radius: 5px;
+                  text-align: center;
+                }
+
+                .containerz .span:hover {
+                  background-color: black;
+                }
+                </style>
+            <form string="Press Button">
+                <group>
+                    <span>TEST.COM</span>
+                    <div style="position: relative; width: 100%; max-width: 400px;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%);  text-align: center;">
+                            iogfapuoivbauiovbaSDUIVbsduivbsdubivsdibadubvuizvbaDdv
+                        </span>
+                        <field name="name" help="TEST" style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%);  text-align: center;"/>
+                        <button name="press_button" string="Press" type="object" class="btn-primary"
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%);  text-align: center;"/>
+                    <img src='/kb_men_tailor/static/image/thobe.jpg' style="height: 750px; width: 450px;">
+
+                    </img>
+                    </div>
+
+                </group>
+                <footer>
+                    <button name="press_button" string="Press" type="object" class="btn-primary"/>
+
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_button_new" model="ir.actions.act_window">
+        <field name="name">Press</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">action_button</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_action_wizard_new" />
+        <field name="target">new</field>
+    </record>
+
+
+
+</odoo>

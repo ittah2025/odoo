@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_hremployee_inherit" model="ir.ui.view">
+        <field name="name">hremployee_inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field  name="arch" type="xml">
+            <xpath expr="//page[@name='personal_information']" position="after">
+                <page string=" Health Certificate">
+                    <group>
+                        <field name="kb_number_Certificate" />
+                        <field name="kb_releaseDate" />
+                        <field name="kb_Exp_health_certificate" />
+                    </group>
+                    <group>
+                          <field name="kb_health_programme" />
+                         <field name="kb_Exp_programme" />
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

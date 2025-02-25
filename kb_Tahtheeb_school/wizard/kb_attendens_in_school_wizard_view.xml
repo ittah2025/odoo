@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_attendens_in_school_wizard_form" model="ir.ui.view">
+        <field name="name">Attendance Wizard </field>
+        <field name="model">attendens_in_school_wizard</field>
+        <field name="arch" type="xml">
+            <form string="attendens">
+                <group>
+                    <group>
+                        <field name="kb_TransportRoot"/>
+                        <field name="kb_bus_responsible"/>
+                        <field name="studentID" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="attendance_sheet_fun" string="Login" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendens_attendens_in_school_wizard" model="ir.actions.act_window">
+        <field name="name">Attendance in school</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendens_in_school_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_attendens_wizard_form" />
+        <field name="target">new</field>
+    </record>
+    <menuitem id="in_school_menu" name="Attendance in school" parent="system_root" sequence="4" />
+    <menuitem id="attendens_in_school_wizard_submenu" name="Attendance in school" parent="in_school_menu" action="action_attendens_attendens_in_school_wizard" sequence="22" />
+</odoo>

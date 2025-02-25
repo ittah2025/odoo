@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="alsalem_job_offer" model="ir.actions.report">
+        <field name="name">Job Offer</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.job_offer</field>
+        <field name="report_file">kb_hr_forms.job_offer</field>
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="job_offer">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                    <style>
+                        table, 
+                        th,
+                        td
+                        {
+                            border: 2px solid black;
+                            width: 100%;
+                            height:40px; 
+                            table-layout: fixed;
+                            vertical-align: text-top;
+                            border-collapse: collapse;
+                            text-align: center;
+                            padding-top: 3px;
+                            padding-bottom: 3px;
+                            background-color: #FFFFFF;
+                            font-size: 14px; 
+                        }
+                        body.double {border-style: double;}
+                        .header {
+                            background-color: #DCDCDC;
+                            text-align: right;
+                            padding: 1px;
+                            font-size: 14px;
+                        }
+                    </style>
+                    <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <t t-foreach="docs" t-as="o">
+                        <h1 style="text-align: center;">عرض عمل Job Offer</h1>
+                        <br/>
+                        <p align="right">تم الاتفاق بين الأطراف التالية: </p>
+
+                        <h4 class="header"> الطرف الأول</h4>
+                        <p align="right"> <t t-esc="o.company_id.name" />
+                            <br/>
+                                        
+                        </p>
+                        <h4 class="header"> الطرف الثاني</h4>
+                        <table align="right">
+                            <tr align="right">
+                                <th style="border: none;">اسم الموظف</th>
+                                <td style="border: none;"><t t-esc="o.name" /></td>
+                            </tr>
+                            <tr>    
+                                <th style="border: none;">الجنسيـة</th>
+                                <td style="border: none;"><t t-esc="o.country_id.name" /></td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">رقم الهوية</th>
+                                <td style="border: none;"><t t-esc="o.identification_id" /></td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">تاريخ الالتحاق</th>
+                                <td style="border: none;"><t t-esc="o.first_contract_date" /></td>
+                            </tr>
+                        </table>
+
+                        <h4 class="header">معلومات الوظيفـة</h4>
+                        <table align="right">
+                            <tr align="right">
+                                <th style="border: none;">المسمى الوظيفـي</th>
+                                <td style="border: none;"><t t-esc="o.job_title" /></td>
+                            </tr>
+                            <tr>    
+                                <th style="border: none;">عدد أيام الأجازة السنوية</th>
+                                <td style="border: none;">.........................</td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">عدد ساعات العمل الأسبوعية </th>
+                                <td style="border: none;">.........................</td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">مدة العقد</th>
+                                <td style="border: none;">.........................</td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">الحالة الاجتماعية</th>
+                                <td style="border: none;"><t t-esc="o.marital" /></td>
+                            </tr>
+                        </table>
+
+                        <h4 class="header">	الراتب الشهري يحتوي على التالي</h4>
+                        <table align="right">
+                            <tr align="right">
+                                <th style="border: none;">الراتب الأساسي الشهري </th>
+                                <td style="border: none;"><t t-esc="o.contract_id.wage" /></td>
+                            </tr>
+                            <tr>    
+                                <th style="border: none;">بدل السكن الشهري</th>
+                                <td style="border: none;">.........................</td>
+                            </tr>
+                            <tr> 
+                                <th style="border: none;">الراتب الشهري الاجمالي</th>
+                                <td style="border: none;">.........................</td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <h4 align="right" style="font-size: 14px;"> الطرف الأول:</h4>
+                        <h4 align="right" style="font-size: 14px;">الطرف الثاني:</h4>
+                        <h4 align="right" style="font-size: 14px;"> التوقيع:</h4> 
+                         
+                </t> 
+                </div>    
+           </t>
+        </t>
+    </template>
+</odoo>

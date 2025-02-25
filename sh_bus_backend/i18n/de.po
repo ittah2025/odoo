@@ -1,0 +1,1102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_bus_backend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 04:23+0000\n"
+"PO-Revision-Date: 2020-10-26 04:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__1-1
+msgid "1-1"
+msgstr "1-1"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__1-2
+msgid "1-2"
+msgstr "1-2"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__2-1
+msgid "2-1"
+msgstr "2-1"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__2-2
+msgid "2-2"
+msgstr "2-2"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__2-3
+msgid "2-3"
+msgstr "2-3"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sh_bus_type__layout__3-2
+msgid "3-2"
+msgstr "3-2"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Age</b>"
+msgstr "<b>Alter</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Boarding Point :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+msgstr "<b>Abfahrtsort :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Dropping Point :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+msgstr "<b>Abwurfpunkt :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Gender</b>"
+msgstr "<b>Geschlecht</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Name</b>"
+msgstr "<b>Name</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Seat No.</b>"
+msgstr "<b>Sitz Nr.</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<b>Total Fair :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+msgstr "<b>Total Messe :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid ""
+"<br/>\n"
+"\t\t\t            <span><b>Traveller Details</b></span><br/><br/>"
+msgstr ""
+"<br/>\n"
+"\t\t\t            <span><b>Reisedetails</b></span><br/><br/>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.fleet_vehicle_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t                   \n"
+"\t\t                         Owner :"
+msgstr ""
+"<br/>\n"
+"\t\t                   \n"
+"\t\t                         Inhaberin :"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid ""
+"<br/>\n"
+"\t                   \t<span><b>Fair Payment Details</b></span><br/><br/>"
+msgstr ""
+"<br/>\n"
+"\t                   \t<span><b>Faire Zahlungsdetails</b></span><br/><br/>"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.fleet_vehicle_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t                    \n"
+"\t\t                         Brand :"
+msgstr ""
+"<br/>\n"
+"\t                    \n"
+"\t\t                         Marke :"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.fleet_vehicle_kanban_view_inherit
+msgid "<br/> Engine No. :"
+msgstr "<br/> Motor Nr. :"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "<span><b>Other Details</b></span><br/><br/>"
+msgstr "<span><b>Andere Details</b></span><br/><br/>"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "AGE"
+msgstr "ALTER"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_res_partner__type
+#: model:ir.model.fields,field_description:sh_bus_backend.field_res_users__type
+msgid "Address Type"
+msgstr "Adresstyp"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__p_age
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__p_age
+msgid "Age"
+msgstr "Alter"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__amenities_ids
+msgid "Amenities"
+msgstr "Ausstattung"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_bus_seat_arrangement
+msgid "Arrangement of Seat"
+msgstr "Sitzordnung"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "Arrival"
+msgstr "Ankunft"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__arrival_time
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__arrival_time
+msgid "Arrival Time"
+msgstr "Ankunftszeit"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_available_seat_selection
+msgid "Available Seat"
+msgstr "Verfügbarer Sitzplatz"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Boarding Point"
+msgstr "Abfahrtsort"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__boarding_point
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__boarding_point
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__baording_id
+msgid "Boarding Point"
+msgstr "Abfahrtsort"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_search_result_tree_view
+msgid "Book"
+msgstr "Buch"
+
+#. module: sh_bus_backend
+#: model:ir.ui.menu,name:sh_bus_backend.bus_booking_wizard_menu
+msgid "Book Bus Ticket"
+msgstr "Busticket buchen"
+
+#. module: sh_bus_backend
+#: model:ir.actions.client,name:sh_bus_backend.bus_book_seat_action
+msgid "Book Seat"
+msgstr "Sitzplatz buchen"
+
+#. module: sh_bus_backend
+#: code:addons/sh_bus_backend/models/sh_bus_backend.py:0
+#: model:ir.model,name:sh_bus_backend.model_bus_booked_seat
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__booked_seat
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_form_view
+#, python-format
+msgid "Booked Seat"
+msgstr "Sitzplatz gebucht"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__booked_seat_ids
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__booked_seat_ids
+msgid "Booked Seat List"
+msgstr "Sitzplatzliste gebucht"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__seat_no
+msgid "Booked Seat No"
+msgstr "Gebuchte Sitzplatz-Nr"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_search_result_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_form_view
+msgid "Booked Seats"
+msgstr "Gebuchte Sitze"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__booking_status
+msgid "Booking Status"
+msgstr "Buchungsstatus"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_brand_tree_view
+msgid "Brand Name"
+msgstr "Markenname"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__brand
+msgid "Brands"
+msgstr "Marken"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__name
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_brand_search_view
+msgid "Brands Name"
+msgstr "Markenname"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__bus_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__bus_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__fleet_id
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Bus"
+msgstr "Bus"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_amenities_view_actions
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_amenities
+#: model:ir.ui.menu,name:sh_bus_backend.bus_amenities_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_tree_view
+msgid "Bus Amenities"
+msgstr "Busausstattung"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_booking_wizard_action
+#: model:res.groups,name:sh_bus_backend.sh_bus_user_group
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_booking_wizard_form
+msgid "Bus Booking"
+msgstr "Busbuchung"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_booking_wizard
+msgid "Bus Booking wizard"
+msgstr "Busbuchungsassistent"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_brand_view_actions
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_brand
+#: model:ir.ui.menu,name:sh_bus_backend.bus_brand_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_brand_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_brand_tree_view
+msgid "Bus Brand"
+msgstr "Busmarke"
+
+#. module: sh_bus_backend
+#: model:ir.ui.menu,name:sh_bus_backend.bus_bookings_menu
+msgid "Bus Management"
+msgstr "Busverwaltung"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_point
+#: model:ir.ui.menu,name:sh_bus_backend.bus_point_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_point_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_point_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_point_tree_view
+msgid "Bus Point"
+msgstr "Bushaltestelle"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__name
+msgid "Bus Point Name"
+msgstr "Buspunktname"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_search_result_actions
+msgid "Bus Search Result"
+msgstr "Ergebnis der Bussuche"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__seat_arrangement_ids
+msgid "Bus Seat Arrangement"
+msgstr "Bus Sitzordnung"
+
+#. module: sh_bus_backend
+#: model:ir.actions.client,name:sh_bus_backend.bus_seat_booking_action
+msgid "Bus Seat Layout"
+msgstr "Bus Sitzanordnung"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_trip_view_actions
+#: model:ir.ui.menu,name:sh_bus_backend.bus_trip_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_search_result_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_search_result_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_tree_view
+msgid "Bus Trip"
+msgstr "Busfahrt"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_type
+msgid "Bus Type"
+msgstr "Bustyp"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_point_view_actions
+msgid "Bus point"
+msgstr "Bushaltestelle"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_trip
+msgid "Bus trip"
+msgstr "Busfahrt"
+
+#. module: sh_bus_backend
+#: model:ir.ui.menu,name:sh_bus_backend.call_fleets_menu
+msgid "Buses"
+msgstr "Busse"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sale_order_line__booking_status__cancel
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_booking_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_so_line_tree_view_inherit
+msgid "Cancel"
+msgstr "Stornieren"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Change Seat"
+msgstr "Sitzplatz wechseln"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_form_view
+msgid "Check Layout"
+msgstr "Überprüfen Sie das Layout"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sale_order_line__booking_status__check_in
+msgid "Check in"
+msgstr "Check-In"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_so_line_tree_view_inherit
+msgid "Check-in"
+msgstr "Check-In"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Checkout"
+msgstr "Auschecken"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__col_count
+msgid "Column"
+msgstr "Säule"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__seat_selection_ids
+msgid "Column Selection"
+msgstr "Spaltenauswahl"
+
+#. module: sh_bus_backend
+#: model:ir.ui.menu,name:sh_bus_backend.configuration_menu
+msgid "Configuration"
+msgstr "Aufbau"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sale_order_line__booking_status__confirm
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__create_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__create_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "Departure"
+msgstr "Abfahrt"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__departure_time
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__departure_time
+msgid "Departure Time"
+msgstr "Abfahrtszeit"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__description
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_tree_view
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_payment__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__display_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__fleet_vehicle__status__downgraded
+msgid "Downgraded"
+msgstr "Herabgestuft"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__dropping_point
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__dropping_point
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__dropping_id
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Dropping Point"
+msgstr "Abwurfpunkt"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__p_email
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__p_email
+msgid "Email"
+msgstr "Email"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__end_times
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__end_time
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "End Time"
+msgstr "Endzeit"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__engine_no
+msgid "Engine No"
+msgstr "Motor Nr"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_search_view
+msgid "Fleet Name"
+msgstr "Flottenname"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_bus_type_view_actions
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__fleet_type
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__fleet_type
+#: model:ir.ui.menu,name:sh_bus_backend.fleet_types_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_tree_view
+msgid "Fleet Type"
+msgstr "Flottentyp"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__bording_from
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__bording_from
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__from_location
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__bording_from
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__bording_from
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__bording_from
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__bording_from
+msgid "From"
+msgstr "Von"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "GENDER"
+msgstr "GESCHLECHT"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "GO"
+msgstr "GEHEN"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__p_gender
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__p_gender
+msgid "Gender"
+msgstr "Geschlecht"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_brand_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_point_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Group by..."
+msgstr "Gruppiere nach..."
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_payment__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,help:sh_bus_backend.field_res_partner__type
+#: model:ir.model.fields,help:sh_bus_backend.field_res_users__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+"Rechnungs- und Lieferadressen werden in Kundenaufträgen verwendet. Private Adressen sind"
+"Nur für autorisierte Benutzer sichtbar."
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_account_move
+msgid "Journal Entry"
+msgstr "Tagebucheintrag"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_account_move_line
+msgid "Journal Item"
+msgstr "Journal Item"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__date_travel
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__date
+msgid "Journey Date"
+msgstr "Reisedatum"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_payment____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management____last_update
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__write_uid
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_brand__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__write_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__layout
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_tree_view
+msgid "Layout"
+msgstr "Layout"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_location_point
+msgid "Location Point"
+msgstr "Standortpunkt"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_form_view
+msgid "Max Seat Number in Single row"
+msgstr "Maximale Sitzplatzanzahl in einer Reihe"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "NAME"
+msgstr "NAME"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_amenities__name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__name
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_amenities_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_point_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_tree_view
+msgid "Name"
+msgstr "Name"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__sale_order_line__booking_status__draft
+msgid "Not Confirmed"
+msgstr "Nicht bestätigt"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Operations"
+msgstr "Operationen"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.fleets_vehicles_form_view_inherit
+msgid "Other Info"
+msgstr "Andere Information"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__owner
+msgid "Owner"
+msgstr "Inhaberin"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_sale_order_form_view_inherit
+msgid "Paid"
+msgstr "Bezahlt"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__paid_amount
+msgid "Paid Amount"
+msgstr "Bezahlte Menge"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__res_partner__type__passenger
+msgid "Passenger"
+msgstr "Passagier"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Passenger Information"
+msgstr "Passagierinformationen"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__p_name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__p_name
+msgid "Passenger Name"
+msgstr "Passagier-Name"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__journal_id
+msgid "Payment Method"
+msgstr "Passagier-Name"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_account_payment
+msgid "Payments"
+msgstr "Zahlungen"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_location_point__name
+msgid "Point Name"
+msgstr "Punktname"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_point__point_ids
+msgid "Points(Dropping/Boarding)"
+msgstr "Punkte (Ablegen / Einsteigen)"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__price
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__price
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__price
+msgid "Price"
+msgstr "Preis"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields.selection,name:sh_bus_backend.selection__fleet_vehicle__status__registered
+msgid "Registered"
+msgstr "Eingetragen"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__reg_no
+msgid "Registration No."
+msgstr "Registrierungsnummer"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__remaining_seats
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__remaining_seats
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+msgid "Remaining Seats"
+msgstr "Verbleibende Sitze"
+
+#. module: sh_bus_backend
+#: model:ir.actions.server,name:sh_bus_backend.remove_old_search_result_ir_actions_server
+#: model:ir.cron,cron_name:sh_bus_backend.remove_old_search_result
+#: model:ir.cron,name:sh_bus_backend.remove_old_search_result
+msgid "Remove Old Search Result"
+msgstr "Altes Suchergebnis entfernen"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__route
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__route
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__route_id
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_search_result_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Route"
+msgstr "Route"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_route_line
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__route_line
+msgid "Route Line"
+msgstr "Routenlinie"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__route_line_ids
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_form_view
+msgid "Route Lines"
+msgstr "Routenlinien"
+
+#. module: sh_bus_backend
+#: model:ir.actions.act_window,name:sh_bus_backend.sh_route_management_view_actions
+#: model:ir.model,name:sh_bus_backend.model_sh_route_management
+#: model:ir.ui.menu,name:sh_bus_backend.route_management_menu
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_tree_view
+msgid "Route Management"
+msgstr "Routenverwaltung"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+msgid "Route Name"
+msgstr "Routenname"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__name
+msgid "Route Number"
+msgstr "Routennummer"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__row_count
+msgid "Row"
+msgstr "Reihe"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__row
+msgid "Row No"
+msgstr "Zeile Nr"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__sale_paid
+msgid "Sale Paid"
+msgstr "Verkauf bezahlt"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sale_order
+msgid "Sales Order"
+msgstr "Kundenauftrag"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Kundenauftragsposition"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_booking_wizard_form
+msgid "Search Buses"
+msgstr "Busse suchen"
+
+#. module: sh_bus_backend
+#: code:addons/sh_bus_backend/models/bus_booking.py:0
+#: model:ir.model,name:sh_bus_backend.model_sh_bus_search_result
+#, python-format
+msgid "Search Result"
+msgstr "Suchergebnis"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__search_id
+msgid "Search Result Id"
+msgstr "Suchergebnis-ID"
+
+#. module: sh_bus_backend
+#: model:ir.model.constraint,message:sh_bus_backend.constraint_available_seat_selection_name_uniq
+msgid "Seat Already exist !"
+msgstr "Sitz schon vorhanden!"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__seat_booked
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__seat_booked
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+msgid "Seat Booked"
+msgstr "Sitzplatz gebucht"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_available_seat_selection__name
+msgid "Seat Column"
+msgstr "Sitzsäule"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__seat_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__seat_id
+msgid "Seat ID"
+msgstr "Sitzplatz-ID"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move_line__seat
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__seat
+msgid "Seat Number"
+msgstr "Sitznummer"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Seat Selection Information"
+msgstr "Informationen zur Sitzauswahl"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Selected Seats ("
+msgstr "Ausgewählte Sitze ("
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__sequence
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_type__sequence
+msgid "Sequence"
+msgstr "Reihenfolge"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_sh_special_price
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__special_price_ids
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_form_view
+msgid "Special Price"
+msgstr "Sonderangebot"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__trip_start_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__trip_start_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__trip_start_time
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__start_times
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_management__str_time
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_search_view
+msgid "Start Time"
+msgstr "Startzeit"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_fleet_vehicle__status
+msgid "Status"
+msgstr "Status"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__trip_end_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__trip_end_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__trip_end_time
+msgid "Stop Time"
+msgstr "Stoppzeit"
+
+#. module: sh_bus_backend
+#: model:res.groups,comment:sh_bus_backend.sh_bus_user_group
+msgid "This user will be able to configure bus management"
+msgstr "Dieser Benutzer kann die Busverwaltung konfigurieren"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.report_ticket_template
+msgid "Ticket No. :&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+msgstr "Ticket Nr. :&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_sale_order_form_view_inherit
+msgid "Ticket Paid"
+msgstr "Ticket bezahlt"
+
+#. module: sh_bus_backend
+#: model:ir.actions.report,name:sh_bus_backend.ticket_report
+msgid "Ticket Report"
+msgstr "Ticketbericht"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_seat_arrangement__bus_type_id
+msgid "Ticket Type"
+msgstr "Art des Tickets"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__to
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__to
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_booking_wizard__to_location
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__to
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__to
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_route_line__to
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_special_price__to
+msgid "To"
+msgstr "Zu"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_type_form_view
+msgid "Total Row"
+msgstr "Gesamte Zeile"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__total_seat
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__total_seat
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+msgid "Total Seats"
+msgstr "Gesamtzahl der Sitzplätze"
+
+#. module: sh_bus_backend
+#. openerp-web
+#: code:addons/sh_bus_backend/static/src/xml/busboard.xml:0
+#, python-format
+msgid "Total:"
+msgstr "Gesamt:"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_bank_statement_line__trip_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_move__trip_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_account_payment__trip_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__bus_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order__trip_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sale_order_line__trip_id
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__trip_id
+msgid "Trip"
+msgstr "Ausflug"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__trip_date
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__trip_date
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_search_view
+msgid "Trip Date"
+msgstr "Reisedatum"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_search_result__name
+#: model:ir.model.fields,field_description:sh_bus_backend.field_sh_bus_trip__name
+msgid "Trip Number"
+msgstr "Reisenummer"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_form_view
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_bus_trip_tree_view
+msgid "Trip Reference"
+msgstr "Reisereferenz"
+
+#. module: sh_bus_backend
+#: model:ir.model,name:sh_bus_backend.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Fahrzeug"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__seat_id
+msgid "seat_id"
+msgstr "seat_id"
+
+#. module: sh_bus_backend
+#: model_terms:ir.ui.view,arch_db:sh_bus_backend.sh_route_management_form_view
+msgid "total"
+msgstr "gesamt"
+
+#. module: sh_bus_backend
+#: model:ir.model.fields,field_description:sh_bus_backend.field_bus_booked_seat__search_id
+msgid "trip"
+msgstr "Ausflug"

@@ -1,0 +1,222 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_holiday_approvals_updation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221128\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-07 09:35+0000\n"
+"PO-Revision-Date: 2023-06-07 09:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_holiday_approvals_updation
+#: model:res.groups,name:kb_holiday_approvals_updation.group_additional_holiday_administrator
+msgid "Administrator"
+msgstr "مدير"
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__validate
+msgid "Approved"
+msgstr "تمت الموافقة "
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model,name:kb_holiday_approvals_updation.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف العادي "
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields,field_description:kb_holiday_approvals_updation.field_hr_employee__current_leave_state
+#: model:ir.model.fields,field_description:kb_holiday_approvals_updation.field_hr_employee_base__current_leave_state
+#: model:ir.model.fields,field_description:kb_holiday_approvals_updation.field_hr_employee_public__current_leave_state
+msgid "Current Time Off Status"
+msgstr "حالة الإجازة الحالية "
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.module.category,description:kb_holiday_approvals_updation.group_category_additional_holiday_child
+msgid "Helps you handle Second approval if the employee non-saudi hr_holiday"
+msgstr ""
+"يساعدك في الحصول على الموافقة الثانية إذا كان الموظف غير سعودي hr_holiday"
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Mark as Draft"
+msgstr "التعيين كمسودة"
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "Only a Time Off Manager can approve/refuse its own requests."
+msgstr "وحده مدير الإجازات بإمكانه الموافقة على / رفض طلباته الخاصة. "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "Only a Time Off Manager can reset a refused leave."
+msgstr "وحده مدير الإجازات بإمكانه إعادة تعيين طلب إجازة مرفوض. "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "Only a Time Off Manager can reset a started leave."
+msgstr "وحده مدير الإجازات بإمكانه إعادة تعيين إجازة قد بدأت بالفعل. "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "Only a Time Off Manager can reset other people leaves."
+msgstr "وحده مدير الإجازات بإمكانه إعادة تعيين إجازات الآخرين. "
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__refuse
+msgid "Refused"
+msgstr "تم الرفض "
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_employee__current_leave_state__additional_validate
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_employee_base__current_leave_state__additional_validate
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_employee_public__current_leave_state__additional_validate
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__additional_validate
+#: model:ir.module.category,name:kb_holiday_approvals_updation.group_category_additional_holiday_child
+msgid "Second Approval"
+msgstr "الموافقة الثانية"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields,field_description:kb_holiday_approvals_updation.field_hr_leave__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields,help:kb_holiday_approvals_updation.field_hr_leave__state
+msgid ""
+"The status is set to 'To Submit', when a time off request is created.\n"
+"The status is 'To Approve', when time off request is confirmed by user.\n"
+"The status is 'Refused', when time off request is refused by manager.\n"
+"The status is 'Approved', when time off request is approved by manager."
+msgstr ""
+"يتم تعين الحالة إلى 'للإرسال'، عندما يتم إنشاء طلب إجازة.\n"
+"تكون الحالة 'للموافقة'، عندما تتم الموافقة على طلب الإجازة من قِبَل المستخدم.\n"
+"تكون الحالة 'تم الرفض'، عندما يتم رفض طلب الإجازة من قِبَل المدير.\n"
+"تكون الحالة 'تمت الموافقة'، عندما تتم الموافقة على طبي الإجازة من قِبَل المدير."
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__validate1
+msgid "Third Approval"
+msgstr "الموافقة الثالثة"
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model,name:kb_holiday_approvals_updation.model_hr_leave
+msgid "Time Off"
+msgstr "الإجازات "
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.module.category,name:kb_holiday_approvals_updation.group_category_additional_holiday_parent
+msgid "Time Off Approvals"
+msgstr "الموافقات على الإجازات"
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid ""
+"Time off request must be confirmed (\"To Approve\") in order to approve it."
+msgstr "يجب تأكيد طلب الإجازة للموافقة عليه."
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__confirm
+msgid "To Approve"
+msgstr "للموافقة "
+
+#. module: kb_holiday_approvals_updation
+#: model:ir.model.fields.selection,name:kb_holiday_approvals_updation.selection__hr_leave__state__draft
+msgid "To Submit"
+msgstr "للإرسال"
+
+#. module: kb_holiday_approvals_updation
+#: model_terms:ir.ui.view,arch_db:kb_holiday_approvals_updation.inherit_hr_leave_additional_approvals
+msgid "Validate"
+msgstr "تحقق"
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid ""
+"You cannot first approve a time off for %s, because you are not his time off"
+" manager"
+msgstr "لا يمكنك الموافقة على إجازة لـ %s، لأنك لست مدير الإجازات "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "You don't have access rights to this action."
+msgstr "ليس لديك حقوق الوصول إلى هذا الإجراء."
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid ""
+"You don't have the rights to apply second approval on a time off request"
+msgstr "لا تملك صلاحيات تطبيق الموافقة الثانية على طلب الإجازة "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "You must be %s's Manager to approve this leave"
+msgstr "يجب أن تكون مدير %s للموافقة على هذه الإجازة"
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid ""
+"You must be either %s's manager or Time off Manager to approve this leave"
+msgstr "يجب أن تكون إما مدير %s أو مدير الإجازات للموافقة على هذه الإجازة "
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid ""
+"You must either be a Time off Officer or Time off Manager to approve this "
+"leave"
+msgstr "يجب أن تكون إما موظف إجازة أو مدير إجازة للموافقة على هذه الإجازة"
+
+#. module: kb_holiday_approvals_updation
+#. odoo-python
+#: code:addons/kb_holiday_approvals_updation/model/hr_leave.py:0
+#, python-format
+msgid "Your %(leave_type)s planned on %(date)s has been accepted"
+msgstr "لقد تمت الموافقة على %(leave_type)s المخطط لها في %(date)s "

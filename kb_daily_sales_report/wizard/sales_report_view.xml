@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sales_report_wiz" model="ir.ui.view">
+            <field name="name">sales.report.wiz.form</field>
+            <field name="model">sales.report.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Report">
+                    <group>
+                         <group>
+                           <!-- <field name="branch_ids"/>      -->
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="type"/>
+                                            
+                         </group>
+                    </group>
+                    <footer>
+                        <button string='Print Pdf' name="generate_report" type="object" class="btn-primary"/>
+                        <button string='Print Excel' name="generate_report_ex" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_view_sales_report_wiz" model="ir.actions.act_window">
+            <field name="name">Invoice Report</field>
+            <field name="res_model">sales.report.wiz</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_sales_report_wiz"/>
+            <field name="target">new</field>
+        </record>
+        
+
+        <menuitem id="account_reports_daily_sales" sequence="100"
+                      name="Sales Report" parent="account.menu_finance_reports"/>
+
+        <menuitem id="account_reports_daily_sales_menu" sequence="10"
+                  action="action_view_sales_report_wiz"
+                      name="Daily Sales Report" parent="account_reports_daily_sales"/>
+
+    </data>
+</odoo>

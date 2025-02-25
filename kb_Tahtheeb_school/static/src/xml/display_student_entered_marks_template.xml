@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="StudentAssessment">
+        <div style="background: white;height: 100%;overflow: auto;">
+            <div>
+                <h3>
+                   <center>STUDENT ASSESSMENT</center>
+                   <!-- <center><t t-esc="report_lines[1][0]['name']"/> </center> -->
+                </h3>
+            </div>
+            <p id="demo"></p>
+            <div class="mt-5">
+                <div class="filter_view_tb"></div>
+            </div>
+            <br></br>
+            <div>
+                <div class="table_view">
+                </div>
+            </div>
+            <button class="btn btn-primary float-right mr-2 back-page">Back</button>
+            <button class="btn btn-primary float-right mr-1 save-all">Save All</button>
+        </div>
+    </t>
+    <t t-name="SaleTable">
+        <div>
+            <div class="table_main_view">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Assessment Name : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['name']"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>No. of Assignments : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['no_of_assignments']"/></div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Teacher : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['teacher_id'][1]"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Semester : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['semester']"/></div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Subject Name : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['subject_id'][1]"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Trimester : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['trimester']"/></div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Grade and Section : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['class_id'][1]"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6"> 
+                                <div class="row">
+                                    <div class="col-6"><b>Year : </b></div>
+                                    <div class="col-6"><t t-esc="report_lines[1][0]['year_id'][1]"/></div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                </div>
+                <table class="table table-bordered mt-5" cellspacing="0" width="100%">
+                    <thead>
+                        
+                        <tr>
+                            <th style="font-size: 13px;">STUDENT NAME</th>
+                            <th style="font-size: 13px;">CP</th>
+                            <t t-set="header_col_count" t-value="0"/>
+                            <t t-set="line_count_hw" t-value="0"/>
+                            <t t-foreach="report_lines[0][0]['hw']" t-as="hw">
+                                <t t-set="line_count_hw" t-value="line_count_hw + 1"/>
+                                <span class="center">
+                                    <th style="font-size: 13px; center">HW <t t-esc="line_count_hw"/>
+                                    </th>
+                                </span>
+                            </t>
+                            <th style="font-size: 13px;">Avg. HW</th>
+                            <t t-set="line_count_cw" t-value="0"/>
+                            <t t-foreach="report_lines[0][0]['cw']" t-as="cw">
+                                <t t-set="line_count_cw" t-value="line_count_cw + 1"/>
+                                <span>
+                                    <th style="font-size: 13px;">CW <t t-esc="line_count_cw"/>
+                                    </th>
+                                </span>
+                            </t>
+                            <th style="font-size: 13px;">Avg. CW</th>
+                            <th style="font-size: 13px;">TOTAL MARKS</th>
+                            <t t-if="report_lines[0][0]['semester'] == 'mid-semester'">
+                                <th style="font-size: 13px;">MID SEMESTER</th>
+                            </t>
+                            <t t-else="report_lines[0][0]['semester'] == 'final-semester'">
+                                <th style="font-size: 13px;">FINAL SEMESTER</th>
+                            </t>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <t t-set="state" t-value="report_lines[0].get('state',False)"/>
+                        <t t-if="state in ['done',locked']">
+                            <t t-set="readonly" t-value="True"/>
+                        </t>
+                        <t t-else="">
+                            <t t-set="readonly" t-value="False"/>
+                        </t> -->
+                        <t t-foreach="report_lines[0]" t-as="data">
+                            <tr class="toptr" style="border: 1px solid black;">
+                                <td>
+                                    <span class="student-id" t-att-title="data['student_id'][1]" t-att-data-id="data['id']" id="student_id" t-att-data-value="data['student_id'][1]">
+                                        <b>
+                                            <t t-esc="data['student_id'][1]"/>
+                                        </b>
+                                    </span>
+
+                                </td>
+                                <td style="text-align:center;width: 70px;">
+                                    <span class="cp-number" t-att-data-id="data['id']">
+                                        <select id="js_select2" class="cp-number-select" t-att-data-id="data['id']" autofocus="autofocus">
+                                            <option t-att-value="N/A" selected="selected" disabled="disabled">N/A</option>
+                                            <t t-foreach="[1,2,3,4,5]" t-as="op_value">
+                                                <t t-if="data['cp'] == op_value">
+                                                    <option t-att-value="op_value" selected="selected">
+                                                        <t t-esc="op_value" />
+                                                    </option>
+                                                </t>
+                                                <t t-else="">
+                                                    <option t-att-value="op_value">
+                                                        <t t-esc="op_value" />
+                                                    </option>
+                                                </t>
+                                            </t>
+                                        </select>
+                                    </span>
+                                </td>
+                                <t t-set="hw_count" t-value="0"/>
+                                <t t-foreach="data['hw']" t-as="hw">
+                                    <td style="text-align:center;width: 70px;">
+                                        <span class="hw-number" t-att-data-id="data['student_assessment_line_marks_ids'][hw_count]">
+                                            <select autofocus="autofocus">
+                                            <option t-att-value="N/A" selected="selected" disabled="disabled">N/A</option>
+                                                <t t-foreach="[0,4,5]" t-as="op_value">
+                                                <t t-if="hw == op_value">
+                                                    <option t-att-value="op_value" selected="selected"><t t-esc="op_value"/></option>
+                                                </t>
+                                                <t t-else="">
+                                                    <option t-att-value="op_value"><t t-esc="op_value" /></option>
+                                                </t>
+                                            </t>
+                                            </select>
+                                        </span>
+                                        <t t-set="hw_count" t-value="hw_count + 1"/>
+                                    </td>
+                                </t>
+                                <td style="text-align:center">
+                                    <b>
+                                        <span class="hw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_hw']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <t t-set="cw_count" t-value="0"/>
+                                <t t-foreach="data['cw']" t-as="cw">
+                                    <td style="text-align:center;">
+                                        <span class="cw-number" t-att-data-id="data['student_assessment_line_marks_ids'][cw_count]">
+                                            <input class="input_cw" type="text" t-att-value="cw" min="0" max="10" step="0.25"/>
+                                        </span>
+                                    </td>
+                                    <t t-set="cw_count" t-value="cw_count + 1"/>
+                                </t>
+                                <td style="text-align:center">
+
+                                    <b>
+                                        <span class="cw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_cw']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <td style="text-align:center">
+                                    <b>
+                                        <span class="total-marks" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_marks']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <td style="text-align:center">
+                                    <b>
+                                        <span class="semester" t-att-data-id="data['id']">
+                                            <t t-if="data['semester'] == 'mid-semester'">
+                                            <input class="mid-semester" type="number" t-att-value="data['mid_sem']" min="0" max="20" step="0.25"/>
+                                            </t>
+                                            <t t-else="data['semester'] == 'final-semester'">
+                                            <input class="final-semester js_select2" type="number" t-att-value="data['final_sem']" min="0" max="40" step="0.25"/>
+                                            </t>
+                                        </span>
+                                    </b>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+</templates>

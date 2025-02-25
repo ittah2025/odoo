@@ -1,0 +1,3 @@
+module,type,name,res_id,src,value,comments
+kb_purchase_order_confirm_access,model,"ir.model,name",kb_purchase_order_confirm_access.model_purchase_order,Purchase Order,أمر شراء,
+kb_purchase_order_confirm_access,model,"res.groups,name",kb_purchase_order_confirm_access.purchase_access_confirm_group,Purchase Confirm Access ,,

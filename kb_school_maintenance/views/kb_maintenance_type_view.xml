@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="maintenance_type_form" model="ir.ui.view">
+        <field name="name">kb.maintenance.type.form.view</field>
+        <field name="model">kb.maintenance.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="kb_maintenanceTypeName"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_type_tree" model="ir.ui.view">
+        <field name="name">kb.maintenance.type.tree</field>
+        <field name="model">kb.maintenance.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_maintenanceTypeName"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

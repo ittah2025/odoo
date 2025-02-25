@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="template_report_print2" model="ir.actions.report">
+        <field name="name">leave</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_reports.leave</field>
+        <field name="report_file">kb_hr_reports.leave</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+      <template id="leave">
+       <t t-call="web.html_container">
+             <t t-call="web.external_layout">
+                 <t t-foreach="docs" t-as="o">
+                <link href="https://fonts.google.com/specimen/Playfair+Display" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                     <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                    <div>
+                 <style>
+
+                        img {
+                        width: 200px;
+                        height: 60px;
+                        }
+                        .center {
+                         display: block;
+                         margin-left: auto;
+                         margin-right: auto;
+                         width: 50%;
+                        }
+                        p
+                     {
+                     font-size:18px;
+                     }
+                     }
+                 </style>
+                <h3  style="text-align:center; " > نموذج إخلاء طرف موظف قطاع خاص  </h3>
+                 <br></br>
+                <p   style="text-align:right;"> تحرير بيوم <span t-esc="datetime.datetime.now().strftime('%Y/%m/%d')"/> </p>
+                <p  style="text-align:right;">  تدرك المؤسسة /<span t-field="o.company_id"/>  أن يمثلها السيد /<span t-field="o.company_id.kb_userName"/>  </p>
+             <p style="text-align:right;">  السيد /<span t-field="o.name"/> ويحمل الجنسية <span t-field="o.country_id"/>   / ورقم الهوية / <span t-field="o.identification_id"/>   </p>
+               <br></br>
+                 <br></br>
+                 <br></br>
+                 <br></br>
+                 <p  style="text-align:right;">التحق بالشركة لمدة  سنوات ابتداء من <span t-field="o.first_contract_date"/>  وعمله انتهى بيوم<span t-esc="datetime.datetime.now().strftime('%Y/%m/%d')"/>  </p>
+                 <p  style="text-align:right;"> وقام الموظف بتسليم كامل عهدته للمؤسسة, وذلك قرار مؤسسة .</p>
+                 <br></br>
+                <br></br>
+                  <p  style="text-align:right;"> التوقيع </p>
+                  <p  style="text-align:right;"> ختم الشركة </p>
+
+
+                    </div>
+                        </div>
+                    </div>
+             </t>
+            </t> </t>
+        </template>
+</odoo>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="defintion_of_salary_ids_wizard" model="ir.actions.report">
+        <field name="name">شهادة تعريف بإجمالـي الراتب</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">kb_hr_tahtheeb.defintion_of_salary_reports_2</field>
+        <field name="report_name">kb_hr_tahtheeb.defintion_of_salary_reports_2</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="defintion_of_salary_reports_2">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_custom_header">
+
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    text-align: right;
+                    }
+                    .report-header {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    }
+                    .underline-header {
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    <!--                    text-decoration: underline;-->
+                    <!--                    text-underline-offset: 25px;-->
+                    <!--                    letter-spacing: 10px;-->
+                    margin-bottom: 15px;
+                    }
+
+                    .report-footer {
+                    text-align: center;
+                    margin-top: 50px;
+                    }
+                    .signature-section {
+                    margin-top: 50px;
+                    text-align: center;
+                    }
+                    .date-section {
+                    text-align: left;
+                    margin-bottom: 20px;
+                    }
+                    .date-header {
+                    font-size: 14px;
+                    margin-bottom: 50px;
+                    }
+                    .custom-p {
+                    line-height: 2.3;
+                    }
+                </style>
+
+                <div class="page" style="font-family: 'Droid Naskh'">
+                    <div style="direction: rtl;">
+                        <div style="font-size: 14px; font-weight: bold;">
+                                <p style=" text-align:right;"><span
+                                        t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م
+                                </p>
+
+                            </div>
+                        <div class="underline-header">
+                            <p>إلى من يهمه الأمر</p>
+                        </div>
+
+                        <p style="margin-top: 30px; margin-bottom: 15px">السلام عليكم ورحمة وبركاته وبعد،،،</p>
+
+                        <p class="custom-p">
+                            تشهد شركة التهذيب للخدمات التعليمية بأن السيد/ة 
+                            <span>
+
+                                <span>
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <t t-esc="employee['kb_employeeID']"/>
+                                    </t>
+                                </span>(<t t-foreach="assignmentID" t-as="employee">
+                                        <t t-esc="employee['nationality_name']"/>
+                                    </t>/ة الجنسية)  
+                            </span>
+                            بهوية وطنية رقم <span>(
+                            <t t-foreach="assignmentID" t-as="employee">
+                                            <t t-esc="employee['identification_id']"/>
+                                        </t>
+
+                            )</span>، يعمل/تعمل لدينا بوظيفة  <span>
+                            (
+                            <t t-foreach="assignmentID" t-as="employee">
+                                            <t t-esc="employee['kb_job_title']"/>
+                                        </t>
+                            )
+
+                        </span>، وقد باشر /ت العمل بتاريخ <span>
+                             <t t-foreach="salary_list_loop" t-as="s">
+                                            <t t-esc="s['date_start']"/>
+                                        </t>
+                        </span>م
+                            &#160;
+                            و يـ/تـ تقاضى اجمالي راتب وقدره <span>(
+                            <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+
+                            )</span> ريال، مفصل كالتالي: <span>(
+
+                            <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+
+                            )</span> ريال
+                            راتب
+                            أساسي، <span>(0000)</span> ريال بدلات أخرى ومازال/ت على رأس العمل حتى تاريخه، وأعطي هذا
+                            التعريف
+                            بناءً على طلبه/ا دون أدنى مسؤولية مالية أو قانونية على الشركة
+                        </p>
+
+                        <div class="signature-section">
+                            <p style="font-weight: bold">وتقبلوا خالص تحياتنا،،،</p>
+                        </div>
+
+                        <div class="report-footer">
+                            <div style="margin-right: 500px; font-weight: bold; font-size: 18px">
+                                <p>شركة التهذيب للخدمات التعليمية</p>
+                                <p>الموارد البشرية</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cust-foot">
+                        <div class=" footer">
+                            <div class="my-footer">
+                                <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg" style="width: 1400px"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--                    <table class="size" style="width:100%;">-->
+                    <!--                        <t t-foreach="salary_list_loop" t-as="w">-->
+                    <!--                            <tr>-->
+                    <!--                                <th class="size"-->
+                    <!--                                    style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                    <!--                                    الاسـم-->
+                    <!--                                </th>-->
+                    <!--                                <th class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#D3D3D3;text-align:center">-->
+                    <!--                                    رقم الهوية / الاقامـة-->
+                    <!--                                </th>-->
+                    <!--                            </tr>-->
+
+                    <!--                            <tr>-->
+                    <!--                                <td class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                    <!--                                    <span t-esc="w['name']"/>-->
+                    <!--                                </td>-->
+
+                    <!--                                <td class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                    <!--                                    <span t-esc="w['identification_id']"/>-->
+                    <!--                                </td>-->
+                    <!--                            </tr>-->
+                    <!--                            <tr>-->
+                    <!--                                <th class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#D3D3D3;text-align:center">-->
+                    <!--                                    المسمى الوظيفي-->
+                    <!--                                </th>-->
+                    <!--                                <th class="size"-->
+                    <!--                                    style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                    <!--                                    الجهة الموجه إليها-->
+                    <!--                                </th>-->
+                    <!--                            </tr>-->
+                    <!--                            <tr>-->
+                    <!--                                <td class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                    <!--                                    <span t-esc="w['job_id']"/>-->
+                    <!--                                </td>-->
+                    <!--                                <td class="size"-->
+                    <!--                                    style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                    <!--                                    <span t-esc="form_data['kb_sender']"/>-->
+                    <!--                                </td>-->
+                    <!--                                <br/>-->
+                    <!--                            </tr>-->
+                    <!--                        </t>-->
+                    <!--                    </table>-->
+                    <!--                    <table class="size" style="width:100%;">-->
+                    <!--                        <tr>-->
+                    <!--                            <th class="size"-->
+                    <!--                                style="border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;">-->
+                    <!--                                إجمالـي الراتب-->
+                    <!--                            </th>-->
+                    <!--                            <td class="size"-->
+                    <!--                                style="border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;">-->
+                    <!--                                <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>-->
+                    <!--                            </td>-->
+                    <!--                        </tr>-->
+                    <!--                    </table>-->
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

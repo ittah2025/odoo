@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="view_branch_inherit" model="ir.ui.view">
+     <field name="name">branch_inherit</field>
+     <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr.view_employee_form"/>
+       <field  name="arch" type="xml">
+        <xpath expr="//field[@name='work_location_id']" position="replace">
+        <field name="kb_branch"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="actin_vacation_settlement_view" model="ir.actions.act_window">
+        <field name="name">vacation settlement report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vacation_settlement_report</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Vacation settlement report
+            </p>
+        </field>
+    </record>
+
+
+    <record id="vacation_settlement_report_form" model="ir.ui.view">
+        <field name="name">vacation settlement form</field>
+        <field name="model">vacation_settlement_report</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="employee_code"/>
+                            <field name="start_working"/>
+                            <field name="current_loan"/>
+                            <field name="Last_vacation_end"/>
+                            <field name="vacation_end_date"/>
+                        </group>
+                        <group>
+                            <field name="employee_ar"/>
+                            <field name="branch"/>
+                            <field name="vacation_days_balance"/>
+                            <field name="Salary_emp"/>
+                            <field name="vacation_start_date"/>
+                            <field name="vacation_duration"/>
+                        </group>
+                         <group>
+                            <field name="period_of_Calc"/>
+                            <field name="unpaid_vacation_days"/>
+                            <field name="current_month_days"/>
+                            <field name="other_earnings"/>
+                            <field name="Ticket_Give"/>
+                        </group>
+                        <group>
+                            <field name="paid_vacation_days"/>
+                            <field name="vacation_days_salary"/>
+                            <field name="current_month_salary"/>
+                            <field name="Ticket_Cost"/>
+                            <field name="Ticket_Deduc"/>
+                        </group>
+                        <group>
+                            <field name="Iqama_Deduc"/>
+                            <field name="Visa_Deduc"/>
+                            <field name="Health_Ins_Deduc"/>
+                            <field name="Health_certificate"/>
+                        </group>
+
+                        <group>
+                            <field name="Visa_Duration"/>
+                            <field name="Work_Permit_Deduc"/>
+                            <field name="GOSI_Deduc"/>
+                            <field name="Other_Deduc"/>
+                             <field name="Loan_Instalment"/>
+                        </group>
+
+                         <group>
+                             <br/>
+                            <field name="earnings_total"/>
+                            <field name="deduction_total"/>
+                            <field name="Net"/>
+                        </group>
+
+                        <group>
+                            <br/>
+                               <h4> <field name="employe_sign" widget="signature"  style="width: 70%; height: 40%;"/> </h4>
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+    </field>
+    </record>
+
+    <menuitem id="vacation_settlement_report" name="Vacation Settlement Report"
+              parent="hr.menu_hr_employee_payroll" action="actin_vacation_settlement_view" sequence="16" />
+
+</odoo>

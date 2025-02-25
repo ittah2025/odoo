@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="contract_info_action" model="ir.actions.act_window">
+        <field name="name">Contract</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">contract.info</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create New Contract
+            </p>
+        </field>
+    </record>
+
+<!-- Contract form -->
+    <record id="contract_info_form" model="ir.ui.view">
+        <field name="name">contract.info.form</field>
+        <field name="model">contract.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="contractId" readonly="1"/>
+                    <group>
+                        <group string="Date">
+                            <field name="dateH" />
+                            <field name="humanResourceName" />
+                            <field name="employeeName" />
+                        </group> 
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Contract tree -->
+    <record id="contract_info_tree" model="ir.ui.view">
+        <field name="name">contract.info.tree</field>
+        <field name="model">contract.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="humanResourceName" />
+                <field name="employeeName" />
+            </tree>
+        </field>
+    </record>
+    
+    <!--Menu-->
+
+    <menuitem id="system_root" 
+        name="Contract" 
+        sequence="1" />
+
+    <menuitem id="contract_sub_menu"
+        name="Contract" 
+        action="contract_info_action" 
+        parent="system_root"
+        sequence="2" />
+</odoo>

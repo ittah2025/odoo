@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+   <!-- Payment Reports -->
+
+  <record id="view_payment_report_form" model="ir.ui.view">
+    <field name="name">Payment.report.wizard.form.second</field>
+    <field name="model">summary_report_wizard</field>
+    <field name="arch" type="xml">
+      <form string="summary">
+    <group>
+
+      <group string="Property Name">                               
+        <field name="apartment_ids" /> 
+      </group>
+
+    </group>
+
+          <footer>
+            <button name="late_pay_" string="Late Payments" type="object" class="btn-primary" />
+            <button name="all_pay_" string="All Payments" type="object" class="btn-primary" /> 
+            <button string="Cancel" class="btn-secondary" special="cancel" />
+          </footer>
+       
+      </form>
+    </field>
+
+  </record>
+  
+  <record id="action_payment_late" model="ir.actions.act_window">
+    <field name="name">Payment Report</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">summary_report_wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="view_payment_report_form" />
+    <field name="target">new</field>
+
+  </record>
+ <menuitem id="print_root" name="Reports" parent="system_root" sequence="18" />
+    <!-- <menuitem id="print_property" name="Contract Reports" parent="print_root" action="action_summary_report_" sequence="10"/> -->
+  <menuitem id="print_payment" name="Payment Reports" parent="print_root" action="action_payment_late" sequence="20" /> 
+</odoo>

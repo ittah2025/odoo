@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="request_for_resignation" model="ir.actions.report">
+        <field name="name">Request for Resignation</field>
+        <field name="model">hr.leave</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.rfr</field>
+        <field name="report_file">kb_hr_forms.rfr</field>
+        <field name="print_report_name">'Request for Resignation' </field>
+        <field name="binding_model_id" ref="model_hr_leave" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="rfr">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+         <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+           <div class="page" style="font-family: 'Tajawal', sans-serif;">
+            <style>
+                table, 
+                th,
+                td
+                {
+                    border: 1px solid black;
+                    width: 100%;
+                    table-layout: fixed;
+                    <!-- vertical-align: text-top; -->
+                    border-collapse: collapse;
+                   text-align: center;
+                   padding-top: 5px;
+                        padding-bottom: 5px;
+                }
+                <!-- body.double {border-style: double;} -->
+            </style>
+           
+            <h3 style="text-align: right;"> التاريخ</h3>
+            <h4 style="text-align: right; font-size: 20px;"> مدير الإدارة &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; المحترم</h4>
+            <p style="text-align: center; font-size: 16px;">السلام عليكم ورحمة الله وبركاته</p>
+            <p style="text-align: center; font-size: 16px;">أتقدم إلى سيادتكم بطلبي هذا راجيا قبول استقالتي من العمل وتصفية مستحقاتي وإنهاء إشتراكي بالتامينات الاجتماعية</p>
+            <t t-foreach="docs" t-as="o">
+                  <p style="text-align: right ;"> مقدم الطلب </p>
+            <table style="height:120px;">
+         
+                <tr>
+                   <th style="text-align: center;">الاسم</th>
+                     <th style="text-align: center;"><t t-esc="o.name" /></th>
+                    <th style="text-align: center;">الجنسية</th>
+                       <th style="text-align: center;"><t t-esc="o.country_id.name" /></th>
+                   
+                  
+                </tr>
+                <tr>
+                    <th style="text-align: center;">رقم الاقامة</th>
+                      <th style="text-align: center;"></th>
+                    <th style="text-align: center;">تاريخ الاستقالة</th>
+                       <th style="text-align: center;"></th>
+                  
+                 
+                </tr>
+                <tr>
+                  
+                    <th style="text-align: center;">مكان العمل</th>
+                         <th style="text-align: center;"><t t-esc="o.address_id.name" /></th>
+                    <th style="text-align: center;">تاريخ الالتحاق</th>
+                      <th style="text-align: center;"><t t-esc="o.first_contract_date" /></th>
+               
+                </tr>
+                <tr>
+                   
+                    <th style="text-align: center;">أسباب الاستقالة</th>
+                     <th colspan="3" style="text-align: center;"></th>
+                </tr>
+            </table>
+            <br/>
+            </t>
+               <p style="text-align: right ;"> المدير المباشر </p>
+             <table >
+                <tr>       
+                <td style="text-align:  center; "><h3>الاسم</h3></td>       
+                <td style="text-align:  center; "><h3>التوقيع</h3></td>
+                <td style="text-align:  center; "><h3>البصمة</h3></td>
+                
+                </tr>
+                <tr>
+                <td style="text-align:  center;  height:30px; "><h3></h3></td>
+                <td style="text-align:  center;  height:30px;  "><h3></h3></td>
+                <td style="text-align:  center;  height:30px;  "><h3></h3></td>
+                </tr>
+
+            </table>
+            <br/>
+                <p style="text-align: center ;">  إدارة المالية وشؤون الموظفين</p>
+                <p style="text-align: right ;">مدير المالية وشؤون الموظفين </p>
+             <table >
+                <tr> 
+                <td style="text-align:  center; "><h3>الاسم</h3></td>    
+                <td style="text-align:  center; "><h3>التاريخ</h3></td>
+                <td style="text-align:  center; "><h3>البصمة</h3></td>
+              
+                </tr>
+                <tr>
+                <td style="text-align:  center;  height:30px; "><h3></h3></td>
+                <td style="text-align:  center; height:30px;  "><h3></h3></td>
+                <td style="text-align:  center; height:30px;"><h3></h3></td>
+                </tr>
+
+            </table>
+                    <br/>    
+                    <p style="text-align: right ;">رئيس الحسابات</p>  
+             <table >
+                <tr> 
+                     
+              <td style="text-align:  center; "><h3>الاسم</h3></td>    
+                <td style="text-align:  center; "><h3>التاريخ</h3></td>
+                <td style="text-align:  center; "><h3>البصمة</h3></td>
+                </tr>
+                <tr>
+                <td style="text-align:  center;  height:30px; "><h3></h3></td>
+                <td style="text-align:  center;  height:30px; "><h3></h3></td>
+                <td style="text-align:  center; height:30px; "><h3></h3></td>
+                </tr>
+
+            </table>
+         <br/><br/>
+            <table>
+               <tr > 
+               <td style="text-align: center;"> توقيع الرئيس التنفيذي </td>
+               <td style="text-align: center;">  توقيع المدير الاداري</td>
+               </tr>
+               
+                <tr>
+                    <td style="text-align: center; height:40px;"></td>
+                    <td style="text-align: center; height:40px; "></td>
+                </tr>
+            </table>
+
+            
+            </div>
+        </t>
+        </t>
+    </template>
+</odoo>

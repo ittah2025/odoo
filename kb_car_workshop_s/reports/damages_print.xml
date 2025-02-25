@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="report3" model="ir.actions.report">
+     
+        <field name="name">Damages Report</field>
+        <field name="model">damages_report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_car_workshop_s.print_goods_report3</field>
+        <field name="report_file">kb_car_workshop_s.contract_report</field>
+        <field name="print_report_name">1514281</field>
+        <field name="binding_model_id" ref="model_damages_report" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+
+
+    <template id="print_goods_report3">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Tajawal', sans-serif;">
+
+                   
+                        <h3 style="text-align: center;">
+                            Damages Report </h3>
+                            <h7 style="text-align:left;"><b>Date:</b><span t-field="doc.date_2" /></h7>
+
+                                <br/>
+                                <br/>
+                           
+                            <table style="width:30%; float:right;">
+                                <tbody>
+
+
+                                <!-- <tr>
+                                    
+                                    <th style="border:1px solid black; padding:1px;">Make</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px"><span t-field="doc.carMake" />
+                                    </td>   
+                                </tr> -->
+
+                                
+                                <tr>
+                                    
+                                    <th style="border:1px solid black; padding:1px;">Model:</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px;"><span t-field="doc.carModel" />
+                                    </td>   
+                                </tr>
+
+                                
+                                <!-- <tr>
+                                    
+                                    <th style="border:1px solid black; padding:1px;">Plate</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px;"><span t-field="doc.carPlate" />
+                                    </td>   
+                                </tr> -->
+                                
+                               <!-- <tr>
+                                    
+                                    <th style="border:1px solid black; padding:1px;">Year</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px;"><span t-field="doc.carYear" />
+                                    </td>   
+                                </tr> -->
+
+                               
+                                <!-- <tr>
+                                    
+                                    <th style="border:1px solid black;padding:1px;">Vin</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px;"><span t-field="doc.carVin" />
+                                    </td>   
+                                </tr> -->
+
+                                
+                                <tr>
+                                    
+                                    <th style="border:1px solid black; padding:1px;">Odometer</th>
+                                    <td style="text-align:left; border:1px solid black; padding:1px;"><span t-field="doc.CarMilage" />
+                                    </td>   
+                                </tr>
+                                
+
+
+                            </tbody>
+                         </table>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                            <table style="width:30%;">
+                                <thead>
+                                <tr>
+                                    <th style="border:1px solid black; ;">
+                                        No
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Item 
+                                    </th>    
+
+                                </tr>
+                            </thead>
+                                <tbody>
+
+                            <!--1-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">1</th>
+                                    <th style="border:1px solid black; width:10%;">Jack+Lever Rod</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.JLR">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+                                <!--2-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">2</th>
+                                    <th style="border:1px solid black; width:10%;">Tools Kit</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.TK">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+
+                                <!--3-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">3</th>
+                                    <th style="border:1px solid black; width:10%;">Triangle</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.tri">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+                                <!--4-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">4</th>
+                                    <th style="border:1px solid black; width:10%;">Fire Extinguisher</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.fireExt">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+
+                                <!--5-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">5</th>
+                                    <th style="border:1px solid black; width:10%;">First Aid Kit</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.FKB">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+
+                                <!--6-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">6</th>
+                                    <th style="border:1px solid black; width:10%;">Tape+Mic</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.tandM">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+                                <!--7-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">7</th>
+                                    <th style="border:1px solid black; width:10%;">Spare Tire</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.spareT">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+
+                                <!--8-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">8</th>
+                                    <th style="border:1px solid black; width:10%;">Chock Box</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.chBox">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+                                <!--9-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">9</th>
+                                    <th style="border:1px solid black; width:10%;">Air Pressure Gauge</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.APG">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+                                <!--10-->
+                                <tr>
+                                    <th style="border:1px solid black; width:5%; text-align:center;">10</th>
+                                    <th style="border:1px solid black; width:10%;">Original Registration Card</th>
+                                    <td style="border:1px solid black;text-align:center; width:5%;">
+                                        <t t-if="doc.RgCard">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+                                        </t>
+                                    </td>   
+                                </tr>
+
+
+
+
+                            </tbody>
+                         </table>
+
+                       <!-- <div style="text-align: right; direction: rtl;">
+                            
+                            <h5 style="text-align:left;"><b>Customer:</b><span t-field="doc.partner_id" /></h5>
+                            <h5 style="text-align:left;"><b>Jack+Lever Rod:</b><span t-field="doc.JLR" /></h5>
+                            <h5 style="text-align:left;"><b>Triangle:</b><span t-field="doc.tri" /></h5>
+                            <h5 style="text-align:left;"><b>Fire Extinguisher:</b><span t-field="doc.fireExt" /></h5>
+                            <h5 style="text-align:left;"><b>First Aid Kit:</b><span t-field="doc.FKB" /></h5>
+                            <h5 style="text-align:left;"><b>Tape+Mic:</b><span t-field="doc.tandM" /></h5>
+                            <h5 style="text-align:left;"><b>Spare Tire:</b><span t-field="doc.spareT" /></h5>
+                            <h5 style="text-align:left;"><b>Chock Box:</b><span t-field="doc.chBox" /></h5>
+                            <h5 style="text-align:left;"><b>Air Pressure Gauge:</b><span t-field="doc.APG" /></h5>
+                            <h5 style="text-align:left;"><b>Original Registration Card:</b><span t-field="doc.RgCard" /></h5>
+
+
+                        </div>--> 
+
+                        <div style="text-align: right; direction: rtl;">
+                            <h3 style="text-align:center;">Sides</h3>
+                        </div>
+
+
+
+                        <table style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th style="border:1px solid black;">
+                                        No
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Side
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Descrition
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <t t-foreach="doc.damage_ids" t-as="line">
+                                    <tr>
+                                       <td style="border:1px solid black;">
+                                            <span t-field="line.no" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.choseSide" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.reportdiscr" />
+                                        </td>
+                                        
+                                    </tr>
+                                </t>
+                            </tbody> 
+                        </table>
+                        
+                        <br/>
+                       
+<!--table-->
+                <br/>
+
+                        
+                        
+                         
+                        <h8 style="text-align:left;"><h8>اتعهد انا السائق</h8>    <span t-field="doc.driver_name" />   <h8>باني استلمت الحافلة المذكورة والتي لوحة رقم <!-- </h8><span t-field="doc.carPlate" /> 
+                        
+                        <h8>-->وانه لا يوجد بها سوى الاضرار المذكورة عل التقرير وعند حدوث اي زيادة اضرار بعد تسلمي الحافلة و خلافه غير المذكور بالتقرير احتحمل مسئولية قيمة اصلاحها منمالي الخاص خصما من راتبي دون الرجوع الي</h8><span t-field="doc.CarMilage" /><h8>كلومتر</h8> </h8>
+                        
+
+                        
+                                            <br/>
+                                            <br/>
+
+                                        <table style="width:100%; border: none;">
+                                            
+                                               
+                                                    <th >
+                                                        Driver Signature
+                                                    </th>
+                                                    <th >
+                                                        Move Signature
+                                                    </th>
+                                                    <th >
+                                                        Shop Foreman Signature
+                                                    </th>
+                                                    <th >
+                                                        Cashier Signature
+                                                    </th>
+                                                    <th >
+                                                        Manager Signature
+                                                    </th>
+
+                                        </table>
+                    
+                    
+
+
+                    </div>
+
+
+                    <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                        <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                            Page: <span class="page" /> / <span class="topage" />
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+
+
+</odoo>

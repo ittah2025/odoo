@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Define the view for the Petty Cash form -->
+    <record id="view_petty_cash_form" model="ir.ui.view">
+        <field name="name">petty.cash.form</field>
+        <field name="model">petty.cash</field>
+        <field name="arch" type="xml">
+            <form string="Petty Cash">
+                <header>
+                    <button name="action_create_entry" string="Create Entry"
+                            type="object" class="oe_highlight" attrs="{'invisible': [('kb_move_id', '!=', False)]}" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kb_name"/>
+                            <field name="kb_journal_id" required="1" domain="[('type', 'in', ('bank', 'cash'))]"/>
+                        </group>
+                        <group>
+                            <field name="kb_date" required="True"/>
+                            <field name="kb_note"/>
+                            <field name="kb_move_id" readonly="1"/>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Petty Cash Lines">
+                            <field name="kb_petty_cash_line_ids">
+                                <tree editable="bottom">
+                                    <field name="kb_product_id"/>
+                                    <field name="kb_amount"/>
+                                    <field name="kb_tax_ids" widget="many2many_tags"/>
+                                    <field name="kb_date"/>
+                                    <field name="kb_note"/>
+                                    <field name="kb_amount_taxed"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                    <group>
+                        <field name="kb_total_amount"/>
+                    </group>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define the action for opening the Petty Cash form -->
+    <record id="action_petty_cash" model="ir.actions.act_window">
+        <field name="name">Petty Cash</field>
+        <field name="res_model">petty.cash</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="kb_petty_cash_rule" model="ir.rule">
+        <field name="name">Internal</field>
+        <field name="model_id" ref="kb_petty_cash.model_petty_cash"/>
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+
+
+    <!-- Define the menu item under Accounting -->
+    <menuitem id="menu_petty_cash" name="Petty Cash" parent="account.menu_finance"
+              action="action_petty_cash" sequence="20"/>
+</odoo>

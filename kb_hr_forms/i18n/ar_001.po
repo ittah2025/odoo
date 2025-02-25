@@ -1,0 +1,3251 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_hr_forms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20231101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-22 09:32+0000\n"
+"PO-Revision-Date: 2023-11-22 12:34+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n"
+"%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.receipt_car
+msgid ""
+"'Acknowledgment of receipt of a car - %s' % (object.name).replace('/', '')\n"
+"        "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.cancellation_of_final_exit_visa
+msgid "'Cancellation of Final Exit Visa' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.clearance_form
+msgid "'Clearance Form - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.disclaimer_argeement
+msgid "'DISCLAIMER AGREEMENT - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.effective_date_notice
+msgid "'Effective Date Notice - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.emplyment_contract
+msgid "'Emplyment Contract - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.extension_of_exit_and_return_visa
+msgid "'Extension of Exit and Return visa' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.final_exit_visa
+msgid "'Final Exit Visa' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.final_settlement
+msgid "'Final Settlement - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.flight_ticket_reservation_request
+msgid "'Flight Ticket Reservation Request' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.leave_application_form
+msgid "'Leave Application Form' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.medical_insurance_request
+msgid "'Medical Insurance Request - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.non-renewal_of_residence
+msgid "'Non-Renewal Residence' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.resignation_form
+msgid "'RESIGNATION / END OF CONTRACT - %s' % (object.name).replace('/', '')"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.receive_advance_deduct_salary
+msgid "'Receive Advance and Deduct From Salary' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.renewal_of_residence
+msgid "'Renewal of Residence' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.request_for_resignation
+msgid "'Request for Resignation' "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,print_report_name:kb_hr_forms.residence_delivery
+msgid "'Residence Delivery Form'"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "* الأصل + صورة لشؤون الموظفين * صورة لملف المذكور * صورة لإدارة * صورة لمحاسب الرواتب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* الأصل + صورة لشؤون الموظفين * صورة لملف المذكور * صورة للحسابات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "* الأصل للموظف * صورة لإدارته * صورة لملف الموظف * لمحاسب الرواتب ."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* الحــاسـب الآلــي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* الشؤون الإدارية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* المستودعات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* المـــــــــــــــــاليــة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "* شؤون الموظفـين ."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "-1 <br/> -2 <br/> -3 <br/> -4 <br/>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"1. This contract is concluded between the above mentioned Employee (hereinafter\n"
+"                                    referred to as Employee)\n"
+"                                    and the company. (hereinafter referred as Employer), to specify the\n"
+"                                    Employment Conditions and\n"
+"                                    benefits agreed upon by both Parties."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"1. أبرم هذا العقد بين الموظف المذكور أعلاه، ويشار إليه فيما بعد بكلمة ( الموظف)، و\n"
+"                                    الشركة ، ويشار إليها بكلمة (الشركة) لتحديد شروط التوظيف والمزايا التي تم\n"
+"                                    الاتفاق عليها بين الطرفين."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"10. Employer shall provide Employee with full medical care as stipulated in the\n"
+"                                    Labor Law."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"10. تقوم الشركة بتأمين العناية الطبية الكاملة للموظف حسبما هو منصوص عليه في نظام\n"
+"                                    العمل والعمال."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"11. Employee shall be entitled to nine (9) working days paid holidays per year.\n"
+"                                    Holiday scheduling is to\n"
+"                                    be determined by Employer."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"11. يحصل الموظف على إجازة أعياد مدفوعة الأجر تبلغ (9) تسعة أيام عمل في السنة وتقوم\n"
+"                                    الشركة بتحديد موعد\n"
+"                                    هذه الإجازات."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"12. أ .يحصل الموظف على إجازة سنوية مدتها (21) واحد و عشرون يومًا بعد إتمام سنة كاملة\n"
+"                                    من الخدمة."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"12.A: Employee shall be eligible for twenty one (21) calendar days leave after\n"
+"                                    completing each full year\n"
+"                                    of service."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"13. The employee will receive after completing the contract period his end of\n"
+"                                    service compensation as\n"
+"                                    stipulated in Labor Law."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"13. عند إكمال الموظف مدة العقد يحصل على مكافأة نهاية الخدمة كما هو منصوص عليها في\n"
+"                                    نظام العمل والعمال."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"14. Should either party desire to terminate this contract or not to renew it, there\n"
+"                                    shall be a written\n"
+"                                    notification to the other party before thirty (30) days from the date he "
+"wishes to\n"
+"                                    terminate the\n"
+"                                    contract or expiry of the contract."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"14. في حالة رغبة أي من الطرفين إنهاء هذا العقد، أو عدم تجديده، فعليه أن يقدم للطرف\n"
+"                                    الآخر إشعارًا خطيًا\n"
+"                                    بذلك قبل (30) ثلاثين يومًا من تاريخ رغبته في الإنهاء أو من تاريخ إنتهاء العقد."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"15. The Labor Law will be referred to resolve any difference concerning the terms\n"
+"                                    contained in this\n"
+"                                    contract and other not specified in it."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"15. يرجع إلى نظام العمل والعمال في حالة نشوء أي خلاف بشأن أي من الشروط الواردة في\n"
+"                                    هذا العقد أو غيرها مما\n"
+"                                    لم يرد ذكره للفصل فيه."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"16. The Employee agreed to abide in all cases with the security arrangements of the\n"
+"                                    Government of Saudi\n"
+"                                    Arabia relevant to this field of work and is obliged to keep this secrecy of "
+"all\n"
+"                                    confidential material."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"16. يوافق الموظف على أن يلتزم في جميع الأحوال بالترتيبات الأمنية لحكومة المملكة\n"
+"                                    العربية السعودية أو\n"
+"                                    الجهات التي ترتبط في مجاله عمله، ويلتزم بالمحافظة على سرية جميع المواد السرية."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"17. A: The Employee undertakes not to divulge any military or civilian information\n"
+"                                    related to\n"
+"                                    his work for any person outside the work. The Employee will be held "
+"responsible for\n"
+"                                    any consequences of\n"
+"                                    his action."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"17. أ . يتعهد الموظف بعدم الإدلاء بأي معلومات\n"
+"                                    عسكرية أو مدنية تتعلق بعمل لأي شخص خارج عمله. وأنه سيكون مسئولا عن أي إشكال "
+"ناتج عن\n"
+"                                    تصرفاته."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"18. This contract has been made in one original retained by Employer and one copy\n"
+"                                    given to Employee."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "18. تم إعداد هذا لعقد من أصل واحد واحتفظ به لدى الشركة وصورة واحدة أعطيت للموظف."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "19. In witness there of, Employee and Employer have executed this contract."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"19. وإشهادًا على ذلك تم توقيع العقد من قِبل الطرفين بقبول ما جاء في بنوده نصُا\n"
+"                                    وروحًا."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"2. Employee acknowledges and certifies that: He is fully qualified and physically\n"
+"                                    fit to Perform the\n"
+"                                    duties of the job to which he is Assigned in a loyal and honest manner, and "
+"in\n"
+"                                    accordance with his\n"
+"                                    position description and the provisions of the Saudi Labor and workmen’s Law\n"
+"                                    (hereinafter referred to as\n"
+"                                    the Labor Law), and the work rules and regulations of the Employer."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"2. يقر الموظف ويتعهد بأنه مؤهل علميًا ولائق بدنيًا لإنجاز المهام ومتطلبات العمل\n"
+"                                    الموكلة إليه على أكمل\n"
+"                                    وجه وبكل أمانة وإخلاص وفقًا لمواصفات وظيفته، وطبقًا لأحكام نظام العمل والعمال\n"
+"                                    السعودي، والمشار إليه فيما\n"
+"                                    بعد بـ ( نظام العمل) مع الالتزام بلوائح تنظيم العمل."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"3. Employee shall train others, as assigned. Employee shall not engage in any other\n"
+"                                    employment,\n"
+"                                    occupation or service, whatsoever, or divulge confidential employer "
+"information to\n"
+"                                    unauthorized person\n"
+"                                    and he shall not breah any of valid Saudi customs and regulations."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"3. على الموظف القيام بتدريب الآخرين حسب ما يكلف به، ويتعهد بأن لا يمارس أي عمل أو\n"
+"                                    حرفة أو أية خدمات من\n"
+"                                    أي نوع كان خلاف عمله مع (الشركة) خلال فترة هذا العقد، وأن لا يفشي المعلومات "
+"السرية\n"
+"                                    الخاصة بالشركة لأشخاص\n"
+"                                    غير مصرح لهم بمعرفتها، وألا يخل بأي من الأنظمة واللوائح والتقاليد المعمول "
+"بها\n"
+"                                    بالمملكة."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"4. In accordance with the Labor Law and Ministerial Decision No. 16 of 18-01-1397H\n"
+"                                    (08 January 1977) of\n"
+"                                    the Ministry of Labor and Social Affairs, the normal work week for which "
+"Employee\n"
+"                                    will be paid consists\n"
+"                                    of six (6) days per week eight (8) hours per day, and one (1) paid day of "
+"rest as\n"
+"                                    scheduled by Employer.\n"
+"                                    For the purpose of determining over time compensation, the hourly rate of "
+"the\n"
+"                                    Employee compensation will\n"
+"                                    be determined by dividing the monthly base salary rate by 240 and such hourly "
+"rate\n"
+"                                    will be multiplied by\n"
+"                                    1.5."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"4. استنادًا إلى نظام العمل والقرار الوزاري رقم (16) بتاريخ 18/1/1397هـ الموافق\n"
+"                                    8/1/1977م الصادر عن وزارة\n"
+"                                    العمل والشئون الاجتماعية فإن أيام العمل الأسبوعية العادية مدفوعة الأجر للموظف "
+"تتكون\n"
+"                                    من (6) ستة ايام\n"
+"                                    مدفوعة الأجر لمدة (8) ثمان ساعات يوميًا. ويوم واحد للراحة مدفوع الأجر حسب ما "
+"تقر\n"
+"                                    الشركة وستكون ساعات\n"
+"                                    العمل الفعلية محددة، ولغرض تحديد أجر الساعات الاضافية ، فإن أجر الساعة "
+"الاضافية يتم\n"
+"                                    احتسابه بتقسيم\n"
+"                                    الراتب على (240) ثم بضرب الناتج في (1.5)."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "5. All dates referred to herein be as per the Gregorian calendar."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "5. كافة التواريخ المشار إليها هنا هي بالتقويم الميلادي."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"6. During the Holy month of Ramadan, the workweek for non-Moslem employee will be\n"
+"                                    Forty-eight (48) hours\n"
+"                                    per week. However, Moslem employee normal workweek during Ramadan will be "
+"Thirty-six\n"
+"                                    (36) hour per week\n"
+"                                    as stipulated in the workmen’s and Labor Law."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"6. خلال شهر رمضان المبارك يكون أسبوع العمل لغير المسلمين (48) ثمان وأربعون ساعة في\n"
+"                                    الأسبوع، هذا وبالنسبة\n"
+"                                    للعمال المسلمين يكون أسبوع العمل (36) ست وثلاثون ساعة في الأسبوع حسب نظام "
+"العمل\n"
+"                                    والعمال."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"7. Employee acknowledges and accepts that he may be under the direct supervision of\n"
+"                                    personal designated\n"
+"                                    by the Employer."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"7. يقر الموظف ويوافق على أنه ربما يعمل تحت إشراف مباشر لموظفين قد تعينهم الشركة\n"
+"                                    وحسبما تقتضيه المصلحة."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"8. Employee shall be deemed subject to Ninety (90) days probationary period\n"
+"                                    effective from the Contract\n"
+"                                    start date mentioned above. Then Employer may decide the fitness of the "
+"employee for\n"
+"                                    the work. And\n"
+"                                    extend extra to ninety days (90) as rules in labor office."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"8. يخضع الموظف لفترة تجريبية مدتها (90) تسعون يومًا اعتبارًا من تاريخ العقد المذكور\n"
+"                                    أعلاه بعدها تقرر\n"
+"                                    الشركة مدى صلاحيته للعمل من عدمه. وتمدد الى تسعين (90) يوم آخرى حسب نظام العمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"9. Employer shall provide Employee with free transportation from home of record to\n"
+"                                    job location at the\n"
+"                                    commencement of the Contract and return him to home of record upon "
+"satisfactory\n"
+"                                    completion of this\n"
+"                                    contract if the employee is not residing in KSA."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"9. تلتزم الشركة بتأمين نقل الموظف من مكان التعاقد إلى موقع عمله عند بداية العقد.\n"
+"                                    وتأمين عودته إن لم يكون\n"
+"                                    مقيمًا بالمملكة العربية السعودية إلى مكان التعاقد مجانًا عند إكمال الموظف مدة "
+"هذا\n"
+"                                    العقد بصورة مرضية."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "<b> *الأصل – إدارة الموارد البشرية والشؤون الإدارية *صورة للملف </b>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "<b>إخـــلاء طــــرف Clearance Form </b>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid ""
+"<b>إشعار مباشرة العمل\n"
+"                            <br/>\n"
+"                            Effective Date Notice </b>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid ""
+"<b>طلب تأمين صحي <br/>\n"
+"                            Medical Insurance Request\n"
+"                        </b>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid ""
+"<b>نموذج مخالصة نهائية\n"
+"                            <br/>\n"
+"                            FINAL SETTLEMENT </b>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"<br/>\n"
+"\n"
+"                                        Nationality"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"<br/>\n"
+"\n"
+"                                        الجنسية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"<br/>\n"
+"\n"
+"                                        بطاقة\n"
+"                                        أحوال رقم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"<br/>\n"
+"                                         And who was working as"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"<br/>\n"
+"                                        National ID No."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.id_card
+msgid ""
+"<br/>\n"
+"                                    alsalem_co73"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.id_card
+msgid ""
+"<br/>\n"
+"                                    السالم للنقل والسياحة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "<mark>المطلوب إسقاط الموظف من الحاسب الألي</mark>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields.selection,name:kb_hr_forms.selection__hr_employee__bloodGroup__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields.selection,name:kb_hr_forms.selection__hr_employee__bloodGroup__ab-
+msgid "AB-"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "According the system : Medical Insurance Class is"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.receipt_car
+msgid "Acknowledgment of receipt of a car "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Addition"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Administration"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Approval"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"B: After Employee completes Twenty-four (24) full months of service, Employer shall\n"
+"                                    provide Employee\n"
+"                                    with one (1) round trip ticket between job location and nearest airport to "
+"the home\n"
+"                                    of Record."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"B:The Employee acknowledges that he has read and understood the text of the whole\n"
+"                                    contract and this\n"
+"                                    contract constitutes the only agreement and understanding between him and "
+"the\n"
+"                                    Employer concerning his\n"
+"                                    employment.\n"
+"                                    It supersedes and replaces all pervious undertakings, promises’ and "
+"agreements,\n"
+"                                    whether verbal or in\n"
+"                                    writing, between them concerning this employment."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Basic Salary (SAR):"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Bathaka/Iqama Number:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Birth"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields,field_description:kb_hr_forms.field_hr_employee__bloodGroup
+msgid "Blood Group"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.id_card
+msgid "Blood Type:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"C: Employer shall not provide such ticket at the end of the Contract period unless a\n"
+"                                    contract renewal is\n"
+"                                    agreed upon and executed between Employer and Employee. In case a contract "
+"renewal\n"
+"                                    is not desired by\n"
+"                                    either party, the provision of Paragraph (9) above shall be applied."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.cancellation_of_final_exit_visa
+msgid "Cancellation of Final Exit Visa"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields,field_description:kb_hr_forms.field_hr_employee__certificate
+msgid "Certificate Level"
+msgstr "مستوى الشهادة"
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Class"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.clearance_form
+msgid "Clearance Form"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Color:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Comments"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Company : --------------------------------"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Cont Exp"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Cont Period"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Contract Period :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Contract Start Date:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.disclaimer_argeement
+msgid "DISCLAIMER AGREEMENT"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "Date Of termination of services"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Date of Birth"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "Date of termination of Services"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Department"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Department Manager"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Direct Manager"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "EMPLOYMENT CONDITIONS:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "EMPLOYMENT CONTRACT"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.effective_date_notice
+msgid "Effective Date Notice"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Emp . Data"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model,name:kb_hr_forms.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "Employee Affirmance"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Employee Badge Number:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model,name:kb_hr_forms.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Employee Data"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Employee Department"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Employee Details"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Employee Name:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "Employee Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "Employee's signature:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Employee: ----------------------"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.emplyment_contract
+msgid "Emplyment Contract"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.extension_of_exit_and_return_visa
+msgid "Extension of Exit and Return visa"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.final_exit_visa
+msgid "Final Exit Visa"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.final_settlement
+msgid "Final Settlement"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Financial"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.flight_ticket_reservation_request
+msgid "Flight Ticket Reservation Request"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"From\n"
+"                                        the period"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields.selection,name:kb_hr_forms.selection__hr_employee__certificate__high_school
+msgid "High School"
+msgstr "ثانوية عامة"
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Housing Allowance:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "I admit:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"I also agree, based on Article 83 of the Labor and Workers Law, that I will not\n"
+"                                        disclose any of the\n"
+"                                        company's confidential information for a period of two years from the "
+"date of\n"
+"                                        signing this\n"
+"                                        agreement. He also confirmed that all the company's tangible and "
+"intangible\n"
+"                                        property\n"
+"                                        had been\n"
+"                                        returned."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"I declare that I have received all my financial rights from the facility and I\n"
+"                                        am\n"
+"                                        not entitled to\n"
+"                                        claim any amount or other rights and my services have ended completely "
+"and after\n"
+"                                        my\n"
+"                                        signature below\n"
+"                                        I forfeit my right to claim any monetary, in-kind or personal rights to "
+"the\n"
+"                                        company,\n"
+"                                        thus completely\n"
+"                                        releasing the company from No rights whatsoever."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "I received a car brand:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid ""
+"I, the undersigned hereby declare that I have received the amounts below at termination\n"
+"                                of my contract\n"
+"                                with the Com:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "I,The undersigned employee, submit this notice"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.alsalem_id_card
+msgid "ID Card"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "ID NO"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "IT Department"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"In the event of any problems, I inform the management immediately as I acknowledge\n"
+"                                    my\n"
+"                                    responsibility\n"
+"                                    for any damages that occur to the car as a result of misuse or lack of care. "
+"And not\n"
+"                                    to\n"
+"                                    hand over\n"
+"                                    the car to any other person or allow him to use the car and to hand over the "
+"car to\n"
+"                                    the\n"
+"                                    condition in\n"
+"                                    which it was received as soon as the management so requests, and to take "
+"into\n"
+"                                    account in\n"
+"                                    its use the\n"
+"                                    laws and work regulations in force in the Kingdom of Saudi Arabia. <br/>\n"
+"                                    I acknowledge that I have read all of what is stated in the car use policy of "
+"the\n"
+"                                    company\n"
+"                                    ______________________ and acknowledge my full commitment to it and what is "
+"stated\n"
+"                                    in\n"
+"                                    it."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Interviewd by"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"Issued by: ______________________ Expiry\n"
+"                                    ID: ___/____/_________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Job Location :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.alsalem_job_offer
+msgid "Job Offer"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Job Title"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Job Title:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "Joined the work after vacation □"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "Joining Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Last Performance Appraisal"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.leave_application_form
+msgid "Leave Application Request"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields.selection,name:kb_hr_forms.selection__hr_employee__certificate__license
+msgid "License"
+msgstr "ليسانس"
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Location"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Marital status"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.medical_insurance_request
+msgid "Medical Insurance Request"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Model:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "My reasons for this action are"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "NO"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Name"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Name:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "National ID No.:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Nationality"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Nationality:"
+msgstr ""
+
+#. module: kb_hr_forms
+#. odoo-python
+#: code:addons/kb_hr_forms/models/hr_employee.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "No"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.non-renewal_of_residence
+msgid "Non-Renewal Residence"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields,field_description:kb_hr_forms.field_hr_employee__note
+msgid "Note"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid ""
+"Note: please attach the Proven\n"
+"                                    documents for\n"
+"                                    sponsoring"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Note:-"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Other Allowance:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Outstanding Very Good Good Satisfactory poor"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Passport Number:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Permanent Address:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Personnel Department"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Personnel use only"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"Plate\n"
+"                                    number:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "Please be advised that, the EMLOYEE"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Point of Hire:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Present Job Title"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Present Salary"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.resignation_form
+msgid "RESIGNATION / END OF CONTRACT"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Reason"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.receive_advance_deduct_salary
+msgid "Receive Advance and Deduct From Salary"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Related Managements"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "Remark"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Remarks &amp; Recommendation"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.renewal_of_residence
+msgid "Renewal of Residence"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.request_for_resignation
+msgid "Request for Resignation"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.actions.report,name:kb_hr_forms.residence_delivery
+msgid "Residence Delivery Form"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Section"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Signature:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Stamp"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Start work at"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Started Work on"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "Started the work for the first time □"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Stores"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "Tel"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "The Company releases Mr."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid ""
+"The amount comprises all accrued entitlements due to me at termination of my contract\n"
+"                                pursuant to co.\n"
+"                                regulations and the labor and workmen law. Hence, this is deemed the final "
+"settlement\n"
+"                                absolving the co.\n"
+"                                of all responsibility and presenting a clearance of the contract because of the\n"
+"                                termination thereof: and\n"
+"                                I shall not have the right to make claims against the company thereafter. My "
+"relation\n"
+"                                with the co. is\n"
+"                                hereby irrevocably ended"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "This will terminate my employment with the"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "Title"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "To : Personnel Department"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "Total ( _______________________ Only S.R )"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "Transport Allowance:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model,name:kb_hr_forms.model_fleet_vehicle_log_contract
+msgid "Vehicle Contract"
+msgstr "عقد المركبة "
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "Vehicle received date:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "WAGES for the Period from ____________________________ until termination of services."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "Yes, I am the employee/"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "___/___/____"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "______ /__/ __ effective from"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______/___/___ Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "_________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________ End of services award S.R"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________ Less amount received S.R"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________ Name"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________ Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________ comp. For notice period S.R"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "____________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "______________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "_______________________________________ Accrued leave pay S.R"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "________________________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "___________________________________________ Other payments S.R"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "________________________________________________________________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data1"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data2"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data3"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data4"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data5"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "data6"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model:ir.model.fields,field_description:kb_hr_forms.field_hr_employee__employeeId
+msgid "employee No "
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"from any future claims\n"
+"                                        whatsoever."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"from the company to use it for work\n"
+"                                    purposes\n"
+"                                    and I pledge to maintain it and its accessories in good condition and use it "
+"during\n"
+"                                    daily work and\n"
+"                                    for work purposes."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "space"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "to"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "valu"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "value"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "،،تحية طيبة وبعد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "آخر تقييم للأداء"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid ""
+"أتقدم إلى سيادتكم بطلبي هذا راجيا قبول استقالتي من العمل وتصفية مستحقاتي وإنهاء إشتراكي بالتامينات الاجتماعية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid ""
+"أجــــور عن الفـــــترة من  ___/___/____\n"
+"                                وحتى نهاية انتهاء الخدمة في  ___/___/____"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "أخرى □ Other"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "أسباب الاستقالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "أقر أنا :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"أقر بأنني قد إستلمت كافة حقوقي المالية من المنشأة ولا يحق لي المطالبة بأي مبلغ\n"
+"                                        أو\n"
+"                                        حقوق آخرى وتكون\n"
+"                                        خدماتي قد\n"
+"                                        انتهت تماماً وبعد توقيعي آدناه إسقاطاً لحقي في مطالبة الشركة بأي حقوق\n"
+"                                        نقدية أو عينية\n"
+"                                        أو شخصية و بذلك أبراء ذمة الشركة إبراءً تاماً من أي حقوق كانت."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "أنا الموظف الموقع أدناه أتقدم بهذا الإشعار"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"إتفاقية إخلاء طرف\n"
+"                            <br/>\n"
+"                            DISCLAIMER AGREEMENT"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة أخرى"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة تخصم من الراتب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة تخصم من رصيد الإجازات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة حج"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة زواج"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة سنوية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة مرضية (يرفق العذر)"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إجازة وفاة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "إدارة المالية وشؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "إدارة الموارد البشرية والشؤون الإدارية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "إدارة الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إسم الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إسم مدخل المعلومات في النظام"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "إعتباراً من تاريخ  __ /__/ ______ م"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إعتماد الرئيس التنفيذي<br/> (للخروج النهائي ونقل الكفالة)"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إعتماد المدير الإداري"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "إعداد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "إقامة رقم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"إقرار استلام سيارة\n"
+"                            <br/>\n"
+"                            Acknowledgment of receipt of a car"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "إقـــــرار الـمـوظـــــف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev
+msgid "إلغاء تأشيرة خروج نهائي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "إلى"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "إلى : شؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "استلمت انا"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "اسم الموظف :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "اسم الموظف _______________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "اعداد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "اعداد : شؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الإدارة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الإسكان□housing"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "الإسم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "الإسم Name"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "الإقلاع من"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الاتصالات □ telecom"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "الاجرائات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "الاســــــم:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الاســـم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "الاســم : ________________________ Name"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "الاسم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "الاسم  ___________________________________________ Name"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "الاعتماد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "البصمة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "البطاقةالوظيفية□Emp. Card"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "التاريخ"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "التاريخ  ___/___/_________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"التاريخ :\n"
+"                        <br/>\n"
+"                        الموافق :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "التاريخ : / / 20 ."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "التاريخ : __/__/_______"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "التاريخ : __/__/_______ Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "التاريخ:_______/________/________ Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "التعليق"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "التعويض عن فترة الإنذار _______________________ ريال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "التــــاريـــــخ"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "التــــاريـــــخ ___/___/______"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "التــوقيـــــع : ________________________ Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "التوقــــيع __________________________________ Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "التوقيع"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "التوقيع  ___________________________________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "التوقيع ........................................................Signaure"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "التوقيع : _________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "التوقيع:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "التوقيــــــع:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "الجـنــــســـــيـة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "الجنسية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "الجنسية :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الجنسيـة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الجهات ذات العلاقة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "الحالة الاجتماعية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الحركة □ transportation"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الختم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "الدين السابق"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الراتب الأساسي الشهري"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "الراتب الأساسي/ ريال سعودي:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "الراتب الحالي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الراتب الشهري الاجمالي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الراتب الشهري يحتوي على التالي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الرقم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "الرقم <br/> التاريخ"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "الرقم الوظيفي:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+msgid "السادة /               شؤوون الموظفين المحترمين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+msgid "السادة شؤون الموظفين المحترمين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "السلام عليكم ورحمة الله وبركاته"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "السلف□Loans"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.fev
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "السيد /               المحترم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "الشركة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "الشركة تبري ذمة السيد/"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الطرف الأول"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الطرف الأول:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الطرف الثاني"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "الطرف الثاني:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "العنوان الدائم :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "الــقــســـــــم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "القرابة Relation"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "القسم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "اللون:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "المجموع (_______________________) ريال فقط <br/>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "المدير الإداري"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "المدير التنفيذي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "المدير العام"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "المدير المباشر"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid ""
+"المذكور باشر العمل متأخراً ___________ يوم ويدرج اسمه بكشوفات الرواتب اعتبارا من :\n"
+"\n"
+"                                    __/__/_______"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "المذكور باشر في التاريخ المحدد ويدرج اسمه بكشوفات الرواتب اعتبارا من : __/__/_______"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "المرفقات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "المسمى الوظيفـي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "المضافون إلى التأمين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "الملاحظات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "الملاحظات والمقترحات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "الميلاد Birth"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "الوصول إلى"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "الوظيفة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "الى قسم الطيران"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"ب. بعد إتمام الموظف (24) أربعة و عشرون شهرًا من الخدمة تؤمن الشركة للموظف تذكرة\n"
+"                                    إركاب واحدة مرجعة من\n"
+"                                    موقع العمل حتى أقرب مطار لمكان التعاقد."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"ب. يقر الموظف بأنه قد قرأ وفهم نص هذا العقد بكامله بشكلٍ نافٍ للجهالة، وأنه يشكل\n"
+"                                    الاتفاق والمفهوم الوحيد\n"
+"                                    المبرم بينه وبين الشركة بشأن توظيفه، كما أنه يلغي ويحل محل كل التعهدات "
+"والوعود\n"
+"                                    والاتفاقيات السابقة سواء\n"
+"                                    كانت خطية أو شفوية بينهما بخصوص هذا التوظيف."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "بأنني استلمت سيارة ماركة:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "بداية العمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "بدل السكن الشهري"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "بدل السكن:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "بدل النقل:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "بدل فاقد □ Issue For Lost"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "بدلات اخرى:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "بدون سفر"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "بسفر"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "بطاقةالتأمين□Medical Card"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "بهذا أقر أنا الموقع أدناه بأنني قد تسلمت المبالغ الآتية نسبة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "بيانات الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "ت /No"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "تاريخ"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تاريخ إدخال المعلومات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "تاريخ إنتهاء الإقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "تاريخ إنهاء الخدمة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "تاريخ استلام السيارة:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تاريخ الإلتحاق بالعمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "تاريخ الاستقالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "تاريخ الالتحاق"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "تاريخ التعيين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "تاريخ الطلب : ____/_______/______ Request Date"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "تاريخ المباشرة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "تاريخ الميلاد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "تاريخ الميلاد:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تاريخ بداية الإجازة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "تاريخ بداية التعاقد:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "تاريخ بداية العمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "تاريخ رحلة الذهاب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "تاريخ رحلة العودة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تاريخ نهاية الإجازة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "تجديد إقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "تجديد لمدة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "تحية طيبة وبعد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تصفية إجازات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "تصفية حقوق وإجازات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "تعويض عن مدة الإجازة المتبقية  _______________________ ريال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "تم الاتفاق بين الأطراف التالية:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "تم المراجعة بواسطة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+msgid "تمديد لمدة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "توقـــيـــعــــه  _______________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "توقيع __________________________________________ Signature"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "توقيع الرئيس التنفيذي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "توقيع المدير الاداري"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "توقيع الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "توقيع الموظف والتاريخ"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "توقيع الموظف:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "توقيع مدخل المعلومات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"ج. لن تؤمن الشركة للموظف هذه التذكرة عند انتهاء مدة العقد مالم يتم الاتفاق على تجديد\n"
+"                                    عقد عمل الموظف بين\n"
+"                                    الشركة والموظف، وفي حالة عدم رغبة أي من الطرفين تجديد العقد يتم تطبيق نص "
+"الفقرة (9)\n"
+"                                    تسعة أعلاه."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "جهة العمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "حجز تذكرة السفر على حساب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "حدد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "حسب النظام : يتم منح المذكور تأمين صحي من الفئة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "حـــــدد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "حـــــــدد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "خروج نهائي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "خــــــاص بشـــــؤون الاعتماد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "خــــــاص شؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "ذهاب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "ذهاب و عودة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "رئيس الحسابات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "راتب الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "رصيد أيام الإجازات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"رقم\n"
+"                                    اللوحات:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "رقم الاقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "رقم الجواز :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "رقم الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "رقم الهوية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "رقم الهوية /الاقامة :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "رقم الهوية وتاريخ الإنتهاء"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "رقم الهوية/ الأقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "رقم بطاقة الأحوال / الإقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "شؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "شروط التوظيف :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "صادرة من:______________________ وتنتهي في تاريخ: ___/____/_________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "صورة من التأشيرة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "صورة من جواز السفر"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "طريقة السداد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev
+msgid "طلب اصدار تأشيرة نهائي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+msgid "طلب تمديد تأشيرة الخروج والعودة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "طلب جديد □ New Request"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "طلب حجز تذكرة طيران"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "عدد أيام الأجازة السنوية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "عدد ساعات العمل الأسبوعية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+msgid "عدم تجديد إقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "عرض عمل Job Offer"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "عـــقـــــد عـــــمــــــــل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "عودة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "فئة التأمين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"كما أوافق وبناءً على المادة 83 من نظام العمل و العمال على أن لا أقوم بأفشاء أي\n"
+"                                        من\n"
+"                                        معلومات الشركة\n"
+"                                        السرية لمدة\n"
+"                                        سنتين من تاريخ توقيع هذة الإتفاقية. كما أوكد أن كافة ممتلكات الشركة "
+"المادية و\n"
+"                                        المعنوية قد تمت\n"
+"                                        إعادتها."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "لإنهاء العقد المبرم بيني وبين ______________________"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "لا يخلى طرف المذكور □ Not Clear"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "لا يخلى طرفه□Not Clear"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "لاستخدام شؤون الموظفين فقط"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "للسيد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid ""
+"مؤسسة روابط المعرفة \n"
+"                            <br/>\n"
+"                                        القطيف – شارع القدس"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "مبلغ السلفية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "مبلغ وقيمته() من المكتب الرئيسي على ان يخصم من راتبي."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid ""
+"محاسب الرواتب الاسم : _________________ التوقيع : _________________ التاريخ :\n"
+"                        <br/>\n"
+"                        * الأصل لملف الموظف * صورة لإدارة * صورة لمحاسب الرواتب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "مدة الإجازة المطلوبة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "مدة التعاقد :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "مدة العقد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "مدفوعات متفرقة _______________________ ريال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid ""
+"مدير إدارة\n"
+"                                الموارد البشرية والشؤون الإدارية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "مدير الإدارة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid ""
+"مدير الإدارة <br/>\n"
+"                                Dept. Manager"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "مدير الإدارة           المحترم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "مدير المالية وشؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "مدير تطوير الأعمال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid ""
+"مدير شؤون الموظفين <br/>\n"
+"                                    Personell Manager"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "مراجعة رئيس الحسابات"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "مرسل لكم إقامة الموظف المذكور ادناه"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "مسؤول الدوائر الحكومية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "مسمى الوظيفة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "مسمى الوظيفة :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "مسمى الوظيفة الحالية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "معلومات  الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.job_offer
+msgid "معلومات الوظيفـة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "مقدم الطلب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "مقر عمل الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "مكافأة نهاية الخدمة _______________________ ريال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "مكان التعاقد :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rfr
+msgid "مكان العمل"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "ملاحظة :-"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "ملاحظة: الرجاء إرفاق صور المستندات المثبتة للإعالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "ملحوظة: يتم تسليم أصل الإقامة مع النموذج"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "ممتاز جيداً جيد مرضي ضعيف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid ""
+"من\n"
+"                                        الفترة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "من أي مطالبات مستقبلية مهما كانت."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"من الشركة لإستخدامها في أغراض العمل\n"
+"                                    وأتعهد\n"
+"                                    بالمحافظة عليها وعلى ملحقاتها بحالة جيدة واستخدامها أثناء الدوام اليومي "
+"ولأغراض\n"
+"                                    العمل."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "موافقة المسؤول المباشر"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "موافقة مدير المالية وشؤون الموظفين"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "موديل:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "موقع العمل :"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ftrr
+msgid "نأمل منكم إصدار تذكرة طيران بإسم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev
+msgid "نأمل منكم إلغاء تأشيرة الخروج النهائي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.fev
+msgid "نأمل منكم اصدار تأشيرة نهائي"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "نأمل منكم تجديد إقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv
+msgid "نأمل منكم تمديد تأشيرة الخروج والعودة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+msgid "نأمل منكم عدم تجديد الاقامة الخاصة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid "ناقصا المبالغ المدينة _______________________ ريال"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "نعم أقر أنا الموظف/"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "نـأمل اعتـــماد مبـاشرة العمل للموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "نقل كفالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid ""
+"نموذج استقالة / انتهاء عقد <br/>\n"
+"                            RESIGNATION / END OF CONTRACT <br/>"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rads
+msgid "نموذج استلام سلفة وخصمها من الراتب"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.rdf
+msgid "نموذج تسليم إقامة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "نموذج طلب إجازة / خروج نهائي / نقل كفالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "نهاية العقد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "نهاية عمل الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "هاتف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid "هوية رقم:"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_disclaimer_argeement
+msgid "والذي كان يعمل بوظيفة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "وبموجب هذا الإشعار يتم إنهاء خدماتي مع ("
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.cfev
+msgid "وذلك لاحتياج العمل له"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "وذلك لاحتياج العمل له , شاكرين ومقدرين حسن تعاونكم"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.laf
+msgid "وفاة الموظف"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_receipt_car
+msgid ""
+"وفي حالة حدوث أي مشكلات أن أبلغ الإدارة فوراً كما أقر بمسئوليتي عن أي تلفيات تحدث\n"
+"                                    للسيارة نتيجة سوء\n"
+"                                    الاستخدام أو عدم العناية. وبعدم تسليم السيارة لأي شخص آخر أو السماح له "
+"باستخدام\n"
+"                                    السيارة\n"
+"                                    وأن أسلم\n"
+"                                    السيارة على الحالة التي استلمتها عليها فور طلب الإدارة ذلك وأن أراعي في "
+"استخدامها\n"
+"                                    القوانين وأنظمة\n"
+"                                    العمل المعمول بها في المملكة العربية السعودية.<br/>\n"
+"                                    وأقر بأنني اطلعت على جميع ما ورد بسياسة إستخدام السيارات بشركة\n"
+"                                    ______________________\n"
+"                                    وأقر بالتزامي\n"
+"                                    الكامل\n"
+"                                    بها وبما ورد فيها."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "وقد اتخذت هذا القرار للأسباب التالية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_final_settlement
+msgid ""
+"وهذا المبلغ يشمل كافة حقوقي المترتبة عن إنهاء عقد عملي مع الشركة وفقا للوائح العامة\n"
+"                                للشركة ونظام العمل\n"
+"                                والعمال، وبهذا تعتبر هذه المخالصة النهائية مبرئة للذمة وتصفية للعقد بمناسبة "
+"انتهائه ولا\n"
+"                                يجوز المطالبة\n"
+"                                بأي شيء بعد ذلك وتكون صلتي بالشركة قد انقطعت نهائياً"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "يخـلى طـرفـه□Clear"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_clearance_form
+msgid "يخلى طرف المذكور □ Clear"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.eerv model_terms:ir.ui.view,arch_db:kb_hr_forms.nrr
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.ror
+msgid "يعمل لدى"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid ""
+"• The Preliminary Item above Mentioned, should be Considered as an Integral part of\n"
+"                                    This Agreement."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_emplyment_contract
+msgid "• المقدمة السالفة تعتبر جزء مكمل للعقد ."
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ Non – Renewal of Contract"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ Others"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ Resignation"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ Sick Leave"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ أخرى"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ أسباب مرضية"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ استقالة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "□ التحق بالعــمل لأول مرة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_effective_date_notice
+msgid "□ التحق بالعمل بعد الإجازة"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_resignation_form
+msgid "□ عدم الرغبة في التجديد"
+msgstr ""
+
+#. module: kb_hr_forms
+#: model_terms:ir.ui.view,arch_db:kb_hr_forms.print_medical_insurance_request
+msgid "□B        □A        □VIP"
+msgstr ""

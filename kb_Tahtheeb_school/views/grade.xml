@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_grade" model="ir.actions.act_window">
+        <field name="name">Grade Form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">grade</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new grade
+            </p>
+        </field>
+    </record>
+
+    <record id="view_grade_form" model="ir.ui.view">
+        <field name="name">grades.form</field>
+        <field name="model">grade</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <label for="grade_id" />
+                            <h4>
+                                <field name="grade_id" />
+                            </h4>
+                            <label for="sequence" />
+                            <h4>
+                                <field name="sequence" />
+                            </h4>
+                            <label for="name" />
+                            <h4>
+                                <field name="name" />
+                            </h4>
+                            <label for="year" />
+                            <h4>
+                                <field name="year" />
+                            </h4>
+
+
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <group>
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                    </group>
+                </div>
+            </form>
+        </field>
+
+    </record>
+
+    <record id="view_grade_tree" model="ir.ui.view">
+        <field name="name">grade.tree</field>
+        <field name="model">grade</field>
+        <field name="arch" type="xml">
+            <tree string="Students">
+
+                <field name="grade_id" />
+                <field name="name" />
+                <field name="state" />
+                <field name="year" />
+                 <field name="nameyear" />
+            </tree>
+        </field>
+    </record>
+
+    
+    <record id="view_grade_search" model="ir.ui.view">
+        <field name="name">grade.search</field>
+        <field name="model">grade</field>
+        <field name="arch" type="xml">
+            <search string="Students">
+                <field name="grade_id" />
+                <field name="name" />
+                <field name="state" />
+                <field name="year" />
+                 <field name="nameyear" />
+<!--                <separator />-->
+<!--               <filter name="years" string="Academic year" domain="[('year','=','nameyear')]" />-->
+            </search>
+        </field>
+    </record>
+
+
+    <menuitem id="grade_submenu" name="Grade" parent="configuration_menu" action="action_grade" sequence="16" />
+
+</odoo>

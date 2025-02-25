@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_report_for_qty_in_sales_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230618\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-21 14:26+0000\n"
+"PO-Revision-Date: 2023-06-21 17:34+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.make_report_wizard_action_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Date Order"
+msgstr "تاريخ الطلب"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Details"
+msgstr "التفاصيل "
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__end_date
+msgid "End Period"
+msgstr "تاريخ الانتهاء"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "From"
+msgstr "من"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.make_report_wizard_action_view_form
+msgid "Get Excel"
+msgstr " Excel"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.make_report_wizard_action_view_form
+msgid "Get PDF"
+msgstr " PDF"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Logo"
+msgstr ""
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid ""
+"Printing date\n"
+"              <br/>"
+msgstr "تاريخ الطباعة"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Product Name"
+msgstr "إسم المنتج"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.make_report_wizard_action_view_form
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.actions.report,name:kb_report_for_qty_in_sales_order.returns_excel_report_action
+msgid "Products QTY Report"
+msgstr "الكمية"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "QTY"
+msgstr "الكمية"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.actions.report,name:kb_report_for_qty_in_sales_order.make_report_wizard_action
+msgid "Sale products Report"
+msgstr "تقرير مبيعات المتجات"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Sales ref"
+msgstr ""
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__start_date
+msgid "Start Period"
+msgstr "تاريخ البداية"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "To"
+msgstr "إلى"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model_terms:ir.ui.view,arch_db:kb_report_for_qty_in_sales_order.sale_wizard_report_with_details
+msgid "Total QTY"
+msgstr "مجموع الكمية"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.actions.act_window,name:kb_report_for_qty_in_sales_order.action_sales_wizard_report
+#: model:ir.ui.menu,name:kb_report_for_qty_in_sales_order.menu_action_wizard
+msgid "Wizard Report"
+msgstr "تقرير طباعة السوق"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model.fields,field_description:kb_report_for_qty_in_sales_order.field_sale_wizard__product_ids
+msgid "products"
+msgstr "المنتجات"
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model,name:kb_report_for_qty_in_sales_order.model_report_kb_report_for_qty_in_sales_order_sale_report
+msgid "report.kb_report_for_qty_in_sales_order.sale_report"
+msgstr ""
+
+#. module: kb_report_for_qty_in_sales_order
+#: model:ir.model,name:kb_report_for_qty_in_sales_order.model_sale_wizard
+msgid "sale.wizard"
+msgstr ""

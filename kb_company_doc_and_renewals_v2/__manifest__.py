@@ -1,0 +1,26 @@
+{
+    'name': 'Company documents and renewals',
+    'version': '16.0.0',
+    'summary': "Company documents and renewals",
+    'description': """Company documents and renewals""",
+    'sequence': '10',
+    'license': 'LGPL-3',
+    'company': 'Knowledge Bonds',
+    'author': 'Knowledge Bonds',
+    'maintainer': 'Knowledge Bonds',
+    'depends': ['base', 'mail'],
+    'demo': [],
+    'data': [
+        'security/kb_security.xml',
+        'security/ir.model.access.csv',
+        'data/kb_email_template.xml',
+        'views/kb_document_type_view.xml',
+        'views/kb_company_details_view.xml',
+    ],
+
+    'images': ['static/description/icon.png'],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'qweb': [],
+}

@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_sale_management_form" model="ir.ui.view">
+            <field name="name">sale.management.form</field>
+            <field name="model">kb.sale.management</field>
+            <field name="arch" type="xml">
+                <form string="Sale and Purchase Request">
+                    <header>
+                        <field name="name" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <notebook>
+                            <page string="Transaction Details">
+                                <group>
+                                    <group>
+                                        <field name="transaction_date"/>
+                                        <field name="purchaser"/>
+                                        <field name="seller"/>
+                                    </group>
+                                    <group>
+                                        <field name="number_of_shares"/>
+                                        <field name="price"/>
+                                    </group>
+                                    <group>
+                                        <field name="description" colspan="2"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree View -->
+        <record id="view_sale_management_tree" model="ir.ui.view">
+            <field name="name">sale.management.tree</field>
+            <field name="model">kb.sale.management</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Management">
+                    <field name="name"/>
+                    <field name="transaction_date"/>
+                    <field name="purchaser"/>
+                    <field name="seller"/>
+                    <field name="number_of_shares"/>
+                    <field name="price"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_sale_management" model="ir.actions.act_window">
+            <field name="name">Sale and Purchase Request</field>
+            <field name="res_model">kb.sale.management</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="menu_sale_management" name="Sale and Purchase Request" parent="system_roots"
+                  action="action_sale_management"
+                  groups="group_sale_management_manager"/>
+    </data>
+</odoo>

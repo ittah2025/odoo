@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_student_assessment_qweb" model="ir.actions.report">
+            <field name="name">Student Assessment</field>
+            <field name="model">studentassessment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kb_Tahtheeb_school.student_payslip</field>
+            <field name="report_file">kb_Tahtheeb_school.student_payslip</field>
+            <field name="binding_model_id" eval="False"/>
+            <field name="binding_type">report</field>
+        </record>
+
+</odoo>

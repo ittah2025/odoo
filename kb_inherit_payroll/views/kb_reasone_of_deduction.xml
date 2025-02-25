@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_kb_reason_of_deduction" model="ir.actions.act_window">
+        <field name="name">Reason of deduction</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb_reason_of_deduction</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                 Add new reason of deduction
+            </p>
+        </field>
+    </record>
+
+    <record id="view_kb_reason_of_deductio_form" model="ir.ui.view">
+        <field name="name">Reason of deduction.form</field>
+        <field name="model">kb_reason_of_deduction</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kb_reason_of_deduction" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_reason_of_deduction_tree" model="ir.ui.view">
+        <field name="name">Reason of deduction.tree</field>
+        <field name="model">kb_reason_of_deduction</field>
+        <field name="arch" type="xml">
+            <tree string="Reason of deduction">
+                <field name="kb_reason_of_deduction" />
+            </tree>
+        </field>
+    </record>
+
+     <menuitem
+            id="menu_reason_of_deduction" name="Reason of deduction"
+            parent="hr_payroll_community.menu_hr_payroll_community_configuration"
+            action="action_kb_reason_of_deduction"
+            sequence="13" />
+</odoo>

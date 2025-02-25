@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_late_payment_report" model="ir.actions.report">
+        <field name="name">Payment Report</field>
+        <field name="model">summary_report_wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_property_managment_alsalem.late_payment</field>
+        <field name="report_file">kb_property_managment_alsalem.late_payment</field>
+        <field name="binding_model_id" ref="model_summary_report_wizard" />
+        <field name="binding_type">report</field>
+    </record>
+
+    
+    <template id="late_payment">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                   <div class="page">
+                        <div class="text-center">
+                            <style>
+                                .header {
+                                    background-color: #9c0f2f;
+                                    text-align: center;
+                                    padding: 20px;
+                                    }
+
+                                .information {
+                                    background-color: #d5d8dc;
+                                    text-align: left;
+                                    }
+
+                                .good {
+                                    background-color: #ebedef;
+                                    text-align: center;
+                            
+                                    }
+
+
+                                .grey {
+                                    text-align: left;
+                                    background-color: #c7c9ca;
+                        
+                                    }
+
+                                .gfg {
+                                    border-collapse:separate;
+                                    border-spacing:3px 3px;
+                                    width: 100%;
+                                    }
+
+                            </style>
+                    <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+
+                        <h2 class="header" style="color: #fdfefe;">
+                            <td>Late Payment Report</td>
+                        </h2>
+                    </div>
+
+                    <table class="gfg">
+                        <group>
+                                <tr>
+                                    <t t-foreach="propertyids" t-as="lines">
+                                    <!-- <tr> <th colspan="7" class="grey">   <span t-esc="lines['apartment_ids']" /> </th></tr>  -->
+                                <tr>
+                                    <th class="information" colspan="3"> No </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['no']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Total: </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['total']" />
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <th class="information" colspan="3"> Customer Name: </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['customer_id']" />
+                                        </td>
+    
+                                    <th class="information" colspan="3">Payment Date: </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['payment_date']" />
+                                        </td>
+                                </tr>
+                                </t> 
+                             </tr>
+                        </group>
+                    </table>
+                    </div> 
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+
+
+    
+          

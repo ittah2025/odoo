@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_contract" model="ir.actions.act_window">
+        <field name="name">Contract</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">contract</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{'search_default_type':0}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a New Contract
+            </p>
+        </field>
+    </record>
+
+
+    <record id="view_contract_form" model="ir.ui.view">
+        <field name="name">contract.form</field>
+        <field name="model">contract</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button id="button_conf" name="action_confirm" string="Confirm" class="btn-primary" states="new"
+                        confirm="Are you sure that you need to confirm ?" type="object" />
+
+                    <button id="button_conf" name="action_done" string="Done" class="btn-primary" states="confirm"
+                        confirm="Are you sure that you ?" type="object" />
+
+                    <button id="button_conf" name="action_new" string="Set As new" states="confirm, done"
+                        confirm="Are sure?" type="object" />
+
+
+                    <field name="state" widget="statusbar" statusbar_visible="new,done,confirm" />
+
+                    <button id="button_conf" name="action_state" string="State" class="btn-primary" states="confirm"
+                        confirm="Are you sure that you ?" type="object" />
+
+                    <button name="calculate" string="Calculate" type="object"
+                        attrs="{'invisible': [('state', '==', 'confirm')]}" /> 
+                    <button string="Create Invoice" name="create_invoice" type="object" />
+                    
+                    <button name="action_share_whatsapp" string="Shara In Whatsapp"  type="object" 
+                            icon="fa-whatsapp"/>
+
+                </header>
+                <sheet>
+                    <field name="contract_id" readonly="1"/>
+            
+                    <group string="Contract Data">
+                        <group>
+                           <label for="contract_sellingDate" />
+                            <h4>
+                                <field name="contract_sellingDate" />
+                            </h4>
+
+
+                            <label for="period_of_contract" />
+                            <h4>
+                                <field name="period_of_contract" />
+                            </h4>
+
+                            <label for="customer_id" />
+                            <h4>
+                                <field name="customer_id" />
+                            </h4>
+                     
+                        </group>
+                        <group string="">
+            
+                             <label for="Tenancy_startDate" />
+                            <h4>
+                                <field name="Tenancy_startDate" />
+                            </h4>
+                            <label for="Tenancy_endDate" />
+                            <h4>
+                                <field name="Tenancy_endDate" />
+                            </h4>
+
+                        </group>
+                    </group>
+                    <group string="">
+                        <group string="">
+                        
+                            <label for="transportation" />
+                            <h4>
+                                <field name="transportation" />
+                            </h4>
+                               <label for="transportation_period" 
+                                        attrs="{'invisible': [('transportation', '=', 'no')]}"/>
+                            <h4>
+                                <field name="transportation_period" 
+                                        attrs="{'invisible': [('transportation', '=', 'no')]}" />
+                            </h4>
+                        </group>
+
+                        <group string="">
+                        
+                            <label for="apartment_ids" />
+                            <h4>
+                                <field name="apartment_ids" />
+                            </h4>
+                             <label for="room_ids" />
+                            <h4>
+                                <field name="room_ids" />
+                                
+                            </h4>
+                              <field name="room_rent" />
+                        </group>
+
+                        <group string="">
+
+                           <label for="room_cost" />
+                            <h4>
+                                <field name="room_cost"/>
+                            </h4>
+
+                            <label for="rent_payments" />
+                            <h4>
+                                <field name="rent_payments" />
+                            </h4>
+                       
+                             <label for="regRent_payment" />
+                            <h4>
+                                <field name="regRent_payment" />
+                            </h4>
+
+                               <label for="total_contract_value" />
+                            <h4>
+                                <field name="total_contract_value" />
+                            </h4>
+                            
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Payments" name="Payments">
+                            <field name="property_line_ids">
+                                <tree editable="bottom">
+                                    <field name="no" />
+
+                                    <field name="total" />
+
+                                    <field name="payment_date" />
+
+                                    <field name="isPaid" />
+                                    
+                                    <field name="date_of_paid" 
+                                        attrs="{'readonly':[('oneTimeEdit','=',True)]}"
+                                        options= "{'no_create':True}"  /> 
+                                    <field name="oneTimeEdit" invisible="1"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="no" />
+                                        <field name="total" />
+                                        <field name="payment_date" />
+                                        <field name="date_of_paid" />
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                      
+                        <page string="Terms and Conditions" name="Terms and Conditions">
+                            <h3> : بموجب هذا العقد على الطرف الثاني الإلتزام بالآتي </h3>
+                           <ol type="1">
+                                <li>عدم التنقل بغير الحافلات المخصصة من إدارة المجمع</li>
+                                <li>عدم اصطحاب الزوار إلا بعد موافقة الإدارة</li>
+                                <li> عدم اصطحاب الأطفال دون موافقة ساكني الشقة والإدارة</li>
+                                <li> الإلتزام بالهدوء في الشقق والممرات</li>
+                                <li> في حالة عدم إلتزام الطالبة بالتعليمات الموضحة ضمن العقد أو ما يصدر لاحقا من إدراة المجمع ضمن لائحة السكن الداخلية فإنها سوف تستبعد من السكن مع عدم الممطالبة بأي تعويض</li>
+                                <li> في حالة الإنسحاب من الشهر الأول تخصم قيمة الشهر كاملا بالإضافة إلى خصم 25% من المبلغ المتبقي</li>
+                                <li> في حالة الإنسحاب من الشهر الثاني تخصم قيمة الشهرين بالإضافة إلى خصم 50% من المبلغ المتبقي</li>
+                                <li> في حالة الإنسحاب من الشهر الثالث تخصم قيمة الثلاثة أشهر بالإضافة إلى خصم 75% من المبلغ المتبقي</li>
+                                <li> يلتزم الطرف الثاني بتوفير مواصلات السكن بالمجمع إلى الجامعةوالعكس</li>
+                                <li> يلتزم الطرف الثاني بدفع كامل المبلغ للعقد مقدم</li>
+                                <li> يحق للطرف الأول إلغاء العقد في أي وقت</li>
+                            </ol>
+
+                        </page>
+                   
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <group>
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                    </group>
+                </div>
+            </form>
+        </field>
+
+    </record>
+
+    <record model='ir.ui.view' id='cont_tree_view'>
+        <field name="name">contract.tree</field>
+        <field name="model">contract</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="contract_id"/>
+                <field name="customer_id"/>
+                <field name="room_ids" />
+                <field name="room_cost" sum="Total of cost"/>
+
+            </tree>
+        </field>
+    </record>
+
+   
+</odoo>

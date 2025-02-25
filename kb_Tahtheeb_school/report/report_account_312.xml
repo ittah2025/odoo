@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_fees_312_view" model="ir.actions.report">
+        <field name="name">IN RECEIPT REPORT</field>
+        <field name="model">fees_reports</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_Tahtheeb_school.account_fees_312_report</field>
+        <field name="report_file">kb_Tahtheeb_school.account_fees_312_report</field>
+        <field name="print_report_name">'FEES COLLECTION REPORT'</field>
+        <field name="binding_model_id" ref="model_fees_reports"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="account_fees_312_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet"/>
+                <div style="font-family: 'Tajawal', sans-serif;">
+                    <div style="text-align: left; direction: rtl;">
+                        <h2 style="color:#afa30a;">IN RECEIPT REPORT</h2>
+                    </div>
+                    <table style="border: none; border-collapse: collapse; width: 98%; margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176;color:#2b3176; ">
+                                ID
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176; color:#2b3176;">
+                                ACCOUNT
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid;  background-color:#d3d3d3; border-color: #2b3176;color:#2b3176;">
+                                AMOUNT
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid;  background-color:#d3d3d3; border-color: #2b3176;color:#2b3176;">
+                                STUDENT CODE
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid;  background-color:#d3d3d3; border-color: #2b3176;color:#2b3176;">
+                                FROM
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid;  background-color:#d3d3d3; border-color: #2b3176;color:#2b3176;">
+                                PAY METHOD
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid;  background-color:#d3d3d3; border-color: #2b3176;color:#2b3176;">
+                                DATE
+                            </th>
+                        </tr>
+                        <t t-foreach="student" t-as="line">
+                            <tr>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['invoice_reference']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['account_id']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['amount']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['student_id']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['partner']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['payment']"/>
+                                </th>
+                                <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                    <span t-esc="line['date']"/>
+                                </th>
+                            </tr>
+                        </t>
+                    </table>
+                    <br/>
+                    <br/>
+                    <table style="border: none; border-collapse: collapse; width: 98%; margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176;">
+                                Total Bank
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176;">
+                                Total Cash
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176;">
+                                Total Mada
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; background-color:#d3d3d3; border-color: #2b3176;">
+                                Total
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                <t t-set="total_BANK" t-value="0"/>
+                                <t t-foreach="student" t-as="line">
+                                    <t t-if="line['payment'] == 'Bank'">
+                                        <t t-set="total_BANK"
+                                           t-value="total_BANK + line['amount']"/>
+                                    </t>
+                                </t>
+                                <span t-esc="total_BANK"/>
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                <t t-set="total_cash" t-value="0"/>
+                                <t t-foreach="student" t-as="line">
+                                    <t t-if="line['payment'] == 'Cash'">
+                                        <t t-set="total_cash" t-value="total_cash + line['amount']"/>
+                                    </t>
+                                </t>
+                                <span t-esc="total_cash"/>
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                <t t-set="total_MADA" t-value="0"/>
+                                <t t-foreach="student" t-as="line">
+                                    <t t-if="line['payment'] == 'MADA'">
+                                        <t t-set="total_MADA" t-value="total_MADA + line['amount']"/>
+                                    </t>
+                                </t>
+                                <span t-esc="total_MADA"/>
+                            </th>
+                            <th style="font-size:large; text-align: center; border: 1px solid; border-color: #2b3176;">
+                                <t t-set="total_row"
+                                   t-value="total_BANK +  total_cash+total_MADA"/>
+                                <span t-esc="total_row"/>
+                            </th>
+                        </tr>
+
+
+                    </table>
+
+                    <br/>
+                    <br/>
+                    <div style="text-align: center; direction: rtl;">
+                        <h2>End of document</h2>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

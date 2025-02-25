@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_account_asset_form_custody" model="ir.ui.view">
+            <field name="name">account.asset.form</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='account_analytic_id']" position="after">
+                    <field name="kb_show_asset_in_custody"/>
+
+                </xpath>
+
+                <xpath expr="//notebook" position="inside">
+                    <page string="Custody Info" name="custody_info">
+                        <field name="kb_custody_ids">
+                            <tree>
+                                <field name="kb_name"/>
+                                <field name="kb_employee_id" string="Employee"/>
+                                <field name="kb_requested_date" string="Requested Date"/>
+                                <field name="kb_return_date" string="Return Date"/>
+                                <field name="kb_state" string="State"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,323 @@
+<odoo>
+    <record id="additional_hours_schools_action" model="ir.actions.report">
+        <field name="name">نموذج ساعات اضافية - مدارس</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.additional_hours_schools_template</field>
+        <field name="report_file">kb_hr_tahtheeb.additional_hours_schools_template</field>
+        <field name="print_report_name">'نموذج ساعات اضافية - مدارس'</field>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="additional_hours_schools_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    body {
+                    /* font-family: 'Arial', sans-serif; */
+                    direction: rtl;
+                    }
+                    .table {
+                    border: 2px solid #000;
+                    }
+
+                    .my-bold-table {
+                    font-weight: 700;
+                    }
+
+                    .custom-check {
+                    border: 2px solid #000 !important;
+                    background: #ccc !important;
+                    border-radius: 50% !important;
+                    }
+
+                    .custom-check-white {
+                    border: 2px solid #000 !important;
+                    background: #fff !important;
+                    border-radius: 50% !important;
+                    }
+                </style>
+                <t t-foreach="employee_list" t-as="line">
+
+                    <div class="page" style="font-family: 'Droid Naskh'">
+                        <div class="container">
+                            <div style="text-align: left;">
+                                <span t-esc="line['kb_date']"/>
+                            </div>
+
+                            <br/>
+                            <br/>
+                            <div class="text-center mb-3" style="font-weight: bold;">
+                                تكليف عمل إضافي
+                                - مدارس
+                            </div>
+                            <div>
+                                <table class="table table-bordered my-bold-table mb-3">
+                                    <tr>
+                                        <td>
+                                            اسم المكلف :
+                                            <span t-esc="line['employee_name']"/>
+
+                                        </td>
+                                        <td>الوظيفه :
+                                            <span t-esc="line['job_id']"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>فتره التكليف من :</span>
+                                            <span>
+                                                <span t-esc="line['kb_date']"/>
+                                            </span>
+                                            <span>الى :</span>
+                                            <span>
+                                                <span t-esc="line['kb_date_to']"/>
+                                            </span>
+
+                                        </td>
+                                        <td>
+                                            مكان العمل :
+                                            <span t-esc="line['kb_branchName']"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span style="margin-left: 20px;">زمن التكليف :</span>
+
+                                            <input class="form-check-input custom-check-white" type="checkbox"/>
+                                            <span style="margin-right: 10px;">ساعات</span>
+
+                                            <input style="margin-right: 50px;"
+                                                   class="form-check-input custom-check-white"
+                                                   type="checkbox"/>
+                                            <span style="margin-right: 10px;">أيام</span>
+
+                                        </td>
+                                        <td>
+                                            عدد الساعات / الايام :
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="over-time mb-3">
+                                <p style="font-weight: bold; margin-bottom: 0;">أوقات العمل الإضافي :</p>
+
+                                <input style="border: 1px solid #000;" class="form-check-input" type="checkbox"/>
+                                <span style="margin-right: 10px;">الأجازه الأسبوعية</span>
+
+                                <input style="margin-right: 50px; border: 1px solid #000;" class="form-check-input"
+                                       type="checkbox"/>
+                                <span style="margin-right: 10px;">اجازات الأعياد</span>
+
+                                <input style="margin-right: 50px; border: 1px solid #000;" class="form-check-input"
+                                       type="checkbox"/>
+                                <span style="margin-right: 10px;">دوام مسائي</span>
+
+                                <input style="margin-right: 50px; border: 1px solid #000;" class="form-check-input"
+                                       type="checkbox"/>
+                                <span style="margin-right: 10px;">أخرى :</span>
+                            </div>
+
+                            <div>
+                                <table class="table table-bordered my-bold-table mb-3">
+                                    <tr>
+                                        <td>مبررات العمل اﻹضافي</td>
+                                        <td style="width: 80%;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="over-time mb-3">
+                                <p style="font-weight: bold; margin-bottom: 0;">مقدم الطلب :</p>
+
+                                <span>الاسم /
+                                    <span t-esc="line['employee_name']"/>
+                                </span>
+
+                                <span style="margin-right: 50px;">التوقيع / .........................................
+                                </span>
+
+                            </div>
+
+                            <div class="text-center">
+                                <p style="margin-bottom: 0; font-weight: bold;">تقرير الأداء - الساعات الإضافية</p>
+                                <table class="table table-bordered my-bold-table mb-3">
+                                    <tr>
+                                        <td>م</td>
+                                        <td>التاريخ</td>
+                                        <td>وقت الحضور</td>
+                                        <td>وقت الانصراف</td>
+                                        <td>عدد الساعات الاضافيه</td>
+                                        <td>التوقيع</td>
+                                        <td>النسبه المنجزه</td>
+                                        <td>الاعمال المنجزه / ملاحظات</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">مجموع الساعات</td>
+                                        <td></td>
+                                        <td colspan="5">ﻻ تزيد الساعات الإضافية عن (48) ساعة شهؤيا</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">طريقة التعويض</td>
+                                        <td style="background-color: #ccc;">
+                                            <input class="form-check-input custom-check" type="checkbox"/>
+                                            <span>مالي</span>
+                                        </td>
+                                        <td colspan="2" style="text-align: right">مبلغ البدل :</td>
+                                        <td style="background-color: #ccc;">
+                                            <input class="form-check-input custom-check" type="checkbox"/>
+                                            <span style="margin-right: 10px;">أجازه :</span>
+                                        </td>
+                                        <td colspan="2" style="text-align: right">عدد أيام الأجازه :</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                            <div dir="rtl" style="width: 100%;">
+                                <!-- Approval of the CEO -->
+                                <table class="table table-bordered" style="width: 100%; margin-bottom: 10px;">
+                                    <tr>
+                                        <td style="text-align: center; font-weight: bold;">اعتماد الرئيس المباشر</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <input class="form-check-input custom-check-white" type="checkbox"/>
+                                            <span style="margin-right: 10px;">موافق</span>
+                                            <input class="form-check-input custom-check-white" type="checkbox"/>
+                                            <span style="margin-right: 10px;">غير موافق</span>
+                                            <br/>
+                                            <span>التوقيع :
+                                                .................................................................................................
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Company Management Approval -->
+                                <p style="font-weight: bold; text-align: center; margin-top: 20px;">موافقة اداره
+                                    الشركه
+                                </p>
+
+                                <table class="table table-bordered" style="width: 100%;">
+                                    <tr style="text-align: center;">
+                                        <th style="width: 50%;">اعتماد الموارد البشريه</th>
+                                        <th style="width: 50%;">اعتماد الرئيس التنفيذي</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;">
+                                            <div style="text-align: right;">
+                                                <input class="form-check-input custom-check-white" type="checkbox"/>
+                                                <span style="margin-right: 10px;">موافق</span>
+                                                <input class="form-check-input custom-check-white" type="checkbox"/>
+                                                <span style="margin-right: 10px;">غير موافق</span>
+                                                <br/>
+                                                <span>التوقيع :
+                                                    .................................................................................................
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                            <div style="text-align: right;">
+                                                <input class="form-check-input custom-check-white" type="checkbox"/>
+                                                <span style="margin-right: 10px;">موافق</span>
+                                                <input class="form-check-input custom-check-white" type="checkbox"/>
+                                                <span style="margin-right: 10px;">غير موافق</span>
+                                                <br/>
+                                                <span>التوقيع :
+                                                    .................................................................................................
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="cust-foot">
+                        <div class=" footer">
+                            <div class="my-footer">
+                                <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg" style="width: 1300px"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kb_company_documents,access.kb.company.documents,model_kb_company_documents,group_authorization,1,1,1,1
+access_kb_company_documents_info,access.kb.company.documents.info,model_kb_company_documents_info,group_authorization,1,1,1,1

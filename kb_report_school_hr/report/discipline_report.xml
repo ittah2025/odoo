@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="kb_discipline_report_action" model="ir.actions.report">
+        <field name="name"> Discipline Report </field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_report_school_hr.print_report_Tow</field>
+        <field name="report_file">kb_report_school_hr.print_report_Tow</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+        <template id="print_report_Tow">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+<!--                     <t t-foreach="docs" t-as="o">-->
+                     <t t-foreach='student' t-as='line'>
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="text-align: center; direction: rtl;">
+                            <h4><Strong>إشعار إنذار (1)  <br /></Strong></h4>
+                        </div>
+                        <div style="text-align: right; ">
+                            <br/>
+                            <h5>التاريخ: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                                <br/><br/>
+                                من: مدير الشؤون اﻹدارية و الخدمات المساندة
+                                <br/>  الى:
+                                 <span t-esc="line['name']" />
+                                <br/><br/><br/><br/>
+                                السلام عليكم ورحمة الله و بركاته،،
+                                <br/><br/>
+                                بناءاً على ما وردنا من مرؤسك بعدم انضباطك سلوكياً
+                                و إساءة المعاملة دون احترام الذي يُعد خرقاً للوائح الشركة
+                                الداخلية من حيث عدم انضباط سلوكك و احترام مرؤسيك عليهِ تقرَر:
+                                <br/><br/>
+                                توجيه هذا اﻹنذار لكم، و نأمل ان
+                                تكونوا في مستوى المسؤولية و الالتزام مستقبلا و التقيد اكثر بالأنظمة
+                                و اللوائح المعمول بها في الشركة حرصا على مصلحتكم و
+                                مصلحة العمل على حد سواء ، حيث سيتم تطبيق
+                                ﻻئحة المخالفات و الجزاءات الخاصة بمواعيد العمل.
+                            </h5>
+                        </div>
+                        <div style="text-align: center; direction: rtl;">
+                            <h5>شكرا لتعاونكم ،،،  <br /></h5>
+                        </div>
+                        <div style="text-align: right; ">
+                            <h5><Strong>  : التوقيع بالعلم   </Strong></h5>
+                             <br/><br/>
+                            <h5>اﻷسم: <span t-esc="line['name']" /> </h5>
+                            <h5> <img t-attf-src="data:image/jpg;base64,{{ line['Signature'] }}" style="align:left; width:85px;height:85px;"/>
+                             : التوقيع
+                            </h5>
+                            <br/><br/><br/>
+                            <h5><Strong>
+                            مدير الشؤون اﻻدارية</Strong></h5>
+                        </div>
+                    </div>
+                </t>
+            </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>

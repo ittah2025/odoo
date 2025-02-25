@@ -1,0 +1,201 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "fleet_view_form2" >
+            <field name = "name" >Fleet Vehicle Extend Form View</field >
+            <field name = "model" >fleet.vehicle</field >
+            <field name = "inherit_id" ref = "fleet.fleet_vehicle_view_form" />
+
+            <field name = "arch" type = "xml" >
+
+                <field name = "write_off_date" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+                <field name = "location" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+                <field name = "acquisition_date" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+
+                <xpath expr = "//field[@name='horsepower_tax']/.." position = "replace" >
+                    <field name = "horsepower_tax" invisible = "1" />
+                </xpath >
+
+                <field name = "plan_to_change_car" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+
+                <field name = "next_assignation_date" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+
+                <field name = "manager_id" position = "attributes" >
+                    <attribute name = "invisible" >True</attribute >
+                </field >
+
+<!--                <field name = "vin_sn" position = "attributes" >-->
+<!--                    <attribute name = "invisible" >True</attribute >-->
+<!--                </field >-->
+
+                <xpath expr = "//field[@name='odometer']/.." position = "replace" >
+                    <field name = "odometer" invisible = "1" />
+                </xpath >
+
+                <xpath expr = "//field[@name='contract_count']/.." position = "replace" >
+                    <field name = "contract_count" invisible = "1" />
+                </xpath >
+                <!-- smart button -->
+                <xpath expr = "//field[@name='odometer_count']/.." position = "replace" >
+                    <field name = "odometer_count" invisible = "1" />
+                </xpath >
+
+                <!--Tax info-->
+                <xpath expr = "//field[@name='first_contract_date']/.." position = "replace" >
+                    <field name = "first_contract_date" invisible = "1" />
+                </xpath >
+
+                <xpath expr = "//field[@name='model_year']/.." position = "replace" >
+                    <field name = "model_year" invisible = "1" />
+                    <field name = "color"/>
+
+                </xpath >
+                <xpath expr = "//field[@name='horsepower']/.." position = "replace" >
+                    <field name = "horsepower" invisible = "1" />
+                </xpath >
+
+                <xpath expr = "//field[@name='tag_ids']/.." position = "after" >
+
+                    <h2 >
+                        <label for = "plateNumberAR" />
+                        <br />
+                        <field name = "plateNumberAR" class = "oe_inline" />
+                    </h2 >
+
+                    <!-- <br/> -->
+
+
+                    <label for = "busNameAR" />
+                    <br />
+                    <field name = "busNameAR" style = "width:30%" />
+                    <br />
+                    <label for = "busNameEN" />
+                    <br />
+                    <field name = "busNameEN" style = "width:30%" />
+
+
+                </xpath >
+                <group >
+                    <group string = "Insurance Information" >
+                        <field name = "insuranceName" />
+                        <field name = "insuranceStartDate" />
+                        <field name = "insuranceEndDate" />
+                        <field name = "insuranceStatus" />
+                        <field name = "insurancePrice" />
+
+                    </group >
+
+                    <xpath expr = "//field[@name='category_id']/.." position = "Replace" >
+
+                        <group >
+                            <field name = "ownerName" />
+                            <field name = "ownerElectronicumber" />
+                            <field name = "electronicNumer" />
+                            <field name = "modelYear" />
+                            <field name = "colorVh" />
+                            <field name = "passengerCapacity" />
+                            <field name = "searialNumbers" />
+                            <field name = "registrationEndDate" />
+                            <field name = "status_field" />
+                            <field name = "InspectionDate" />
+                            <field name = "fleetAttachment" widget = "many2many_binary" class = "oe_inline" />
+
+                        </group >
+
+                    </xpath >
+
+                    <!--                    <group>-->
+                    <!--                        <field name="electronicNumer"/>-->
+                    <!--                        <field name="modelYear"/>-->
+                    <!--                        <field name="ownerName"/>-->
+                    <!--                        <field name="ownerElectronicumber"/>-->
+                    <!--                        <field name="passengerCapacity"/>-->
+                    <!--                        <field name="searialNumbers"/>-->
+                    <!--                        <field name="registrationEndDate"/>-->
+                    <!--                        <field name="fleetAttachment" widget="many2many_binary" class="oe_inline"/>-->
+                    <!--                        <field name="status_field"/>-->
+
+                    <!--                    </group>-->
+
+                    <group string = "Custom Information" >
+                        <field name = "customFormNumber" />
+                        <field name = "customDate" />
+                        <field name = "customSource" />
+
+                    </group >
+
+                    <group string = "Operations Card" >
+                        <field name = "oprCardNumber" />
+                        <field name = "oprCardStart" />
+                        <field name = "oprCardEnd" />
+
+                    </group >
+
+
+                </group >
+
+                <xpath expr = "//field[@name='horsepower_tax']/.." position = "after" >
+                    <group >
+                        <group string = "Engine" >
+                            <field name = "engineOil" />
+                            <field name = "oil_filter" />
+                            <field name = "oilCapacityOf" />
+                            <field name = "oilCapacityWf" />
+                            <field name = "oil_serv_km" />
+                            <field name = "engineFilter" />
+                            <field name = "oil_filter_serv_km" />
+
+                        </group >
+                        <group string = "transmission" >
+                            <field name = "transOil" />
+                            <field name = "transcapacity" />
+                            <field name = "trans_serv_km" />
+                        </group >
+
+                        <group string = "Differential Oil" >
+                            <field name = "diffOil" />
+                            <field name = "diffoilCapacity" />
+                            <field name = "diffoil_serv_km" />
+                        </group >
+
+                        <group string = "Other" >
+
+                            <field name = "engineBelts" />
+                            <field name = "tirelife" />
+                            <field name = "batterylife" />
+                            <field name = "brakes" />
+                            <field name = "acFilters" />
+                        </group >
+                    </group >
+                </xpath >
+
+<!--                <xpath expr = "//notebook" position = "inside" >-->
+<!--                    <page name = "date_fields" string = "Documents Date" >-->
+<!--                        <group >-->
+<!--                            <field name="date_table_id123">-->
+<!--                                <tree editable="bottom">-->
+<!--                                    <field name="docs_id" />-->
+<!--&lt;!&ndash;                                    <field name="startDates" />&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="EndtDates" />&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="descriptionfield" />&ndash;&gt;-->
+
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group >-->
+<!--                    </page >-->
+<!--                </xpath >-->
+
+
+            </field >
+        </record >
+    </data >
+</odoo >

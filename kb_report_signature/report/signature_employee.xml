@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="kb_signature_employee_action" model="ir.actions.report">
+        <field name="name"> Confidentiality of the information </field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_report_signature.print_report_signature</field>
+        <field name="report_file">kb_report_signature.print_report_signature</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+        <template id="print_report_signature">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                     <t t-foreach="docs" t-as="o">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="text-align: center; direction: rtl;">
+                            <h4><Strong>" اتفاقية سرية المعلومات "  <br /></Strong></h4>
+                        </div>
+                        <div style="text-align: right; direction: rtl; ">
+                            <h5>-: ابرم هذا الاتفاق في يوم <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+ ما بين كلاً من  </h5>
+                            <br/>
+
+                            <h5 style="text-align: right; direction: rtl; ">  الطرف اﻷول :<br/><br/>
+                                شركة التهذيب للخدمات التعليمية ، و يقع مقرها في مدينة سيهات - المنطقة الشرقية
+                                - المملكة العربية السعودية ، سجل تجاري رقم :   <span t-field="o.company_id.company_registry" />
+                            <br/><br/>
+                             الطرف الثاني:
+                            <br/><br/>
+                                السيد :
+                                <span t-field="o.name" />
+                            <br/>
+                                 الجنسية: 
+                                <span t-field="o.country_id" />
+                                 
+                            <br/>
+                                 يحمل هوية رقم:
+                                <span t-field="o.identification_id" />
+                            <br/>
+                                 جوال رقم:
+                                   <span t-field="o.mobile_phone" />
+                            <br/>
+                                <br/><br/>
+                            ذلك بغرض (منع اﻹفصاح غير المصرح به عن معلومات سرية) كما هو موضح أدناه ،
+                                قد يتم اﻷفصاح ما بين طرفي هذا اﻷتفاق بسبب علاقة عمل ،
+                                أو معامﻻت تجارية أو تفاوض أو إبرام اي عقود أو مشاريع بينهما ،
+                                و  يعمل بها في هذا الصدد.
+                            <br/><br/>
+
+                            بند (1) : مفهوم السرية : طبقا لما هو معمول به في هذا اﻻتفاق ،
+                                و يقصد ب " المعلومات السرية " كل المعلومات المفصح عنها من قبل
+                                الطرف اﻷول للطرف الثاني، و يشمل ذلك أي معلومات تم اﻷفصاح عنها بعد تاريخ هذا الاتفاق، و
+                                يشمل أيضا و بدون قيد المعلومات التي يحصل عليها أي من الطرفين بسبب التعاون فيما بينهما ،
+                                سواء كانت هذه المعلومات كتابية، شفهية، مصورة، أو كانت معلومات مجسدة في شكل إلكتروني،
+                                متصلة بنماذج أولية، خدمات مستقبلية أو مقترحة، المعرفة،البحث الفعلي أو المتوقع، التطوير،
+                                الخدمات و العمليات و المفاهيم و اﻷفكار و التصاميم و الموظفين و العملاء و اﻷسواق و
+                                المبيعات و تسويق الخطط و حقوق التأليف و النشر، و الرسوم البيانية ، و برامج الحاسوب، و
+                                الدراسات و العمليات التجارية الجارية، المعلومات السرية ، العمليات التجارية المستقبلية ،
+                                التسعير ، اﻷستراتيجيات ، و البيانات المالية و المحاسبية و المعلومات ،
+                                المورودون ، العمال ، قوائم العملاء و بيانات الشراء ،
+                                و خطط العمل المستقبلية، المعلومات السرية المفصح عنها من قيل طرف ثالث للطرف اﻷول،
+                                و أية معلومات اخرى غير مسجلة الملكية و سرية.
+                            <br/><br/><br/><br/><br/><br/><br/>
+                            مصطلح " المعلومات السرية "
+                                ﻻ يجوز أن يقتصر على تجميع البيانات و تحليلها ولكن يجب أن تشمل أيضا اﻷحاديث و المناقشات
+                            و التعبير عن الرأي و وصف اﻷحداث وثيقة الصلة باﻷعمال القائمة بين الطرفين <br/><br/>
+                             بند (2) : حيث ان الطرف الثاني سيصبح مطلعا و مدرك اﻷساليب و الممارسات واﻹجراءات و
+                                مستندات الشركة التي يدير بها الطرف اﻷول أعماله،
+                                و منها على سبيل المثال
+                                ( اطلاعه على "أسرار المنشأة من برامج الكمبيوتر و المفاهيم التقنية " و
+                            "الدراية" و "الخطة الاستراتيجية" و " المعلومات المتعلقة بالعملاء")
+                                <br/><br/>
+                                وهذه كلها متفق عليها من قبل العملاء
+                                على انها معلومات مملوكة للطرف اﻷول و أنها تعتبر أسرارا تجارية.
+                                <br/><br/>
+                                تعتبر المقدمة أعلاه جزءا ﻻ يتجزأ من هذه اﻹتفاقية.
+                                <br/><br/>
+                                بند (3) : يلتزم اطرفان في اي وقت خلال التعاقد أو فيما بعد، بعدم افشاء أو عدم تقديم أو عدم
+                                توفير بشكل مباشر أو غير مباشر الى اي شخص أو منشأة أو مؤسسة او أي جهة أخرى
+                                المعلومات المملوكة و المستخدمة من قبل الطرفين، و يتعهدان بالاحتفاظ بتلك اﻷمور
+                                و المعلومات بشكل سري جدا.
+                                <br/><br/>
+                                بند(4) : يقر الطرفان بأن مخالفتهما ﻷي من أحكام هذه اﻹتفاقية تؤدي الى إلحاق الضرر المتواصل غير القابل للاصلاح
+                                بالطرف اﻻخر، و يكون له (أي الطرف اﻻخر) باﻹضافة الى كافة حقوقه اﻷخرى بما في ذلك حقه في المطالبة بالعطل و الضرر من الطرف الثاني.
+
+                            </h5>
+                            <br/><br/><br/>
+                            <div style="direction: rtl; font-family: 'Almarai', sans-serif;">
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    الطرف الاول:
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    الطرف الثاني:
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                     شركة التهذيب للخدمات التعليمية عنها / <br/>الرئيس التنفيذي </p>
+
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    الأسم: <span t-field="o.name" />
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    الأسم: علوي ياسين علي الساده
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    التوقيع:
+                                    <img t-attf-src="data:image/jpg;base64,{{ o.Signature }}" style="align:left; width:85px;height:85px;"/>
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    التوقيع:
+                                </p>
+                                 <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    التاريخ:
+                                </p>
+                                <p style="text-align=rtl ;display:inline-block; width:300px; " >
+                                    التاريخ:
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>

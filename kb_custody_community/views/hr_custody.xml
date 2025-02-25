@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="custody_details_view_tree" model="ir.ui.view">
+        <field name="name">custody_details_view_tree</field>
+        <field name="model">custody.details</field>
+        <field name="arch" type="xml">
+            <tree string="custody_details_tree">
+                <field name="kb_name"/>
+                <field name="kb_employee_id" string="Employee"/>
+                <field name="kb_asset_id" string="Property"/>
+                <field name="kb_asset_type_id" string="Asset Type"/>
+                <field name="kb_requested_date" string="Requested Date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="custody_details_form_view" model="ir.ui.view">
+        <field name="name">custody.details.form.view</field>
+        <field name="model">custody.details</field>
+        <field name="arch" type="xml">
+            <form string="custody Details">
+                <header>
+                    <field name="kb_state" widget="statusbar"/>
+                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('kb_state', '!=','draft')]}"/>
+                    <button name="action_approve" type="object" string="Approve" class="oe_highlight"
+                            attrs="{'invisible': [('kb_state', '!=','waiting_approval')]}"
+                            groups="kb_custody_community.group_hr_custody"/>
+                    <button name="action_refuse" type="object" string="Refuse" class="oe_highlight"
+                            attrs="{'invisible': [('kb_state', '!=','waiting_approval')]}"
+                            groups="kb_custody_community.group_hr_custody"/>
+                    <button name="action_return" type="object" string="Return" class="oe_highlight"
+                            attrs="{'invisible': [('kb_state', '!=','approved')]}"
+                            groups="kb_custody_community.group_hr_custody"/>
+                </header>
+                <sheet>
+                    <group string="custody Details">
+                        <group>
+                            <field name="kb_name" required="1"/>
+                            <field name="kb_employee_id" required="1" string="Employee"
+                                   attrs="{'readonly': [('kb_state', '!=','draft')]}"/>
+                            <field name="kb_asset_id" required="1" string="Property"
+                                   attrs="{'readonly': [('kb_state', '!=','draft')]}"
+                                   groups="kb_custody_community.group_hr_asset"
+                            domain="[('kb_show_asset_in_custody', '=', True)]"/>
+                            <field name="kb_asset_type_id" required="1" string="Property Type"
+                                   attrs="{'readonly': [('kb_state', '!=','draft')]}"/>
+                            <field name="kb_reason" string="Reason"/>
+                        </group>
+                        <group>
+                            <field name="kb_requested_date" string="Requested Date" readonly="1"/>
+                            <field name="kb_return_date" string="Return Date" readonly="1"/>
+                            <field name="kb_company_id" string="Company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="kb_note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_custody_details">
+        <field name="name">Custody Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">custody.details</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_custody_details" action="action_custody_details"
+              name="Custody" parent="hr.menu_hr_root" sequence="10"/>
+
+</odoo>

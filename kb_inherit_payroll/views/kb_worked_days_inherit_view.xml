@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="kb_hr_payslip_fields" model="ir.ui.view">
+        <field name="name">hr_payslip_fields</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='worked_days_line_ids']/tree/field[@name='number_of_hours']" position="after">
+                <field name="kb_reason_of_deduction"/>
+                <field name="kb_discount_by_days"/>
+                <field name="kb_discount_by_amount"/>
+                <field name="kb_deduction_from_one_day_salary"/>
+                <field name="kb_fingerprint_discount"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+

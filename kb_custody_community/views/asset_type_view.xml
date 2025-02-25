@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asset_type_form_view" model="ir.ui.view">
+        <field name="name">asset.type.form.view</field>
+        <field name="model">asset.type</field>
+        <field name="arch" type="xml">
+            <form string="asset Type">
+                <sheet>
+                    <group string="asset Type">
+                        <group>
+                            <field name="kb_name_seq" required="1"/>
+                            <field name="kb_name" required="1"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id="asset_Type_view_tree" model="ir.ui.view">
+        <field name="name">asset_Type_view_tree</field>
+        <field name="model">asset.type</field>
+        <field name="arch" type="xml">
+            <tree string="asset_Type_tree">
+                <field name="kb_name_seq"/>
+                <field name="kb_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_asset_type">
+        <field name="name">Asset Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">asset.type</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_asset_type" action="action_asset_type"
+              name="Asset Type" parent="hr.menu_config_employee" sequence="3"/>
+
+</odoo>

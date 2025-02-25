@@ -1,0 +1,205 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_partner_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221018\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-21 11:25+0000\n"
+"PO-Revision-Date: 2023-06-21 11:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid ""
+"<b style=\"text-align:center; border:none;\">Powerd by knowledge bonds</b>\n"
+"                                    <br/>\n"
+"                                    <span style=\"text-align:center; border:none;\">www.knowledge-bonds.com</span>"
+msgstr ""
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "<strong>إلى تاريخ</strong>"
+msgstr ""
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "<strong>من تاريخ</strong>"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__account_ids
+msgid "Account ID"
+msgstr "معرف الحساب"
+
+#. module: kb_partner_account
+#: model:ir.actions.report,name:kb_partner_account.action_account_partner_report_template
+msgid "Account Report"
+msgstr "تقرير الحساب"
+
+#. module: kb_partner_account
+#: model:ir.actions.report,name:kb_partner_account.report_balance_partner_xlsx
+msgid "Account Report Excel"
+msgstr "تقرير الحساب اكسل"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Balance begin"
+msgstr "الرصيد الافتتاحي"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Balance end"
+msgstr "الرصيد النهائي"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_partner_report_wizard_view_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Credit"
+msgstr "دائن"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__date_to
+msgid "Date To"
+msgstr "التاريخ الى"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Debit"
+msgstr "مدين"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__display_name
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_account_report_bydate__display_name
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_report_balance_xlsx_bydate__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "End of document"
+msgstr "نهاية المستند"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_partner_report_wizard_view_form
+msgid "Excel"
+msgstr "اكسل"
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__file_name
+msgid "Excel File"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__excel_file
+msgid "Excel Report"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__id
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_account_report_bydate__id
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_report_balance_xlsx_bydate__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard____last_update
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_account_report_bydate____last_update
+#: model:ir.model.fields,field_description:kb_partner_account.field_report_kb_partner_account_report_balance_xlsx_bydate____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model.fields,field_description:kb_partner_account.field_account_partner_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "No."
+msgstr "م"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_partner_report_wizard_view_form
+msgid "PDF"
+msgstr ""
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Partner Balance Report"
+msgstr "تقرير رصيد الشريك"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Partner Name"
+msgstr "اسم شريك"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_partner_report_wizard_view_form
+msgid "Partner balance report"
+msgstr "تقرير رصيد الشريك"
+
+#. module: kb_partner_account
+#: model:ir.actions.act_window,name:kb_partner_account.account_partner_report_action
+msgid "Partner balance report By date"
+msgstr "تقرير رصيد الشريك حسب الفترة"
+
+#. module: kb_partner_account
+#: model:ir.ui.menu,name:kb_partner_account.menu_account_partner_report
+msgid "Partner report by date"
+msgstr "تقرير الشريك حسب الفترة"
+
+#. module: kb_partner_account
+#: model:ir.model,name:kb_partner_account.model_report_kb_partner_account_account_report_bydate
+msgid "Report Account"
+msgstr "تقرير الحساب"
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "Total"
+msgstr "المجموع"
+
+#. module: kb_partner_account
+#: model:ir.model,name:kb_partner_account.model_account_partner_report_wizard
+msgid "account.partner.report.wizard"
+msgstr ""
+
+#. module: kb_partner_account
+#: model:ir.model,name:kb_partner_account.model_report_kb_partner_account_report_balance_xlsx_bydate
+msgid "report.kb_partner_account.report_balance_xlsx_bydate"
+msgstr ""
+
+#. module: kb_partner_account
+#: model_terms:ir.ui.view,arch_db:kb_partner_account.account_report_bydate
+msgid "اسم الحساب:"
+msgstr ""

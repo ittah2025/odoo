@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+    <record id="create_appointment_form" model="ir.ui.view">
+        <field name="name">vendorwizard</field>
+        <field name="model">wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Appointment">
+                <group>
+                    <field name="cancelReason" />
+
+                </group>
+                <footer>
+                    <button name="update_order_status" string="Submit" type="object" class="btn-primary" />
+<!--                    <button string="Cancel" class="btn-secondary" special="cancel" />-->
+<!--                    <button special="cancel" data-hotkey="z" string="Cancel" />-->
+
+
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_appointment_wizard" model="ir.actions.act_window">
+        <field name="name">Create print</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_appointment_form" />
+        <field name="target">new</field>
+    </record>
+
+
+
+</odoo>

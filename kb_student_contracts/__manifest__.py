@@ -1,0 +1,21 @@
+{
+    'name': 'Student Contracts',
+    'version': '16.0',
+    'currency': 'SAR',
+    'website': 'http://www.knowledge-bonds.com',
+    'support': 'info@knowledge-bonds.com',
+    'author': 'Knowledge Bonds',
+    # "depends": ['kb_Tahtheeb_school'],
+    'license': 'OPL-1',
+    'sequence': 20,
+    'data': [
+        #'security/ir.model.access.csv',
+        #'views/kb_tuition_fees_for_boys_view.xml',
+        #'views/kb_tuition_fees_for_girls_view.xml',
+        #'views/kb_student_contracts_view.xml',
+        #'views/kb_inherit_student_profile_view.xml',
+        #'reports/kb_student_contracts.xml',
+    ],
+    'images': ['static/description/icon.png'],
+    'application': True,
+}

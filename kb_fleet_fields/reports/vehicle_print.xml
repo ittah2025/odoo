@@ -1,0 +1,224 @@
+<odoo >
+    <record id = "VehiclePrint_report" model = "ir.actions.report" >
+        <field name = "name" >Vehicle Print</field >
+        <field name = "model" >fleet.vehicle</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_name" >kb_fleet_fields.report_VehiclePrint</field >
+        <field name = "report_file" >kb_fleet_fields.report_VehiclePrint</field >
+        <!--        <field name = "binding_model_id" ref = "fleet_vehicle" />-->
+        <field name = "binding_type" >report</field >
+        <!--        <field name="orientation">Landscape</field>-->
+    </record >
+
+    <template id = "report_VehiclePrint" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <t t-foreach = "docs" t-as = "o" >
+                    <style >
+                        .numberCircle {
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        padding: 2px;
+                        float: center;
+                        background: #fff;
+                        border: 2px solid #666;
+                        color: #666;
+                        text-align: center;
+                        }
+                    </style >
+                    <center >
+                        <h2 >Vehicle Information</h2 >
+                    </center >
+
+                    <!--                    <table style="width:80%">-->
+
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Model</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.model_id" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Model Year</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.modelYear" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Category</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.category_id" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >License Plate</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.license_plate" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Plate Number (Arabic)</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.plateNumberAR" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Chassis Number</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.vin_sn" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Passenger Capacity</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.passengerCapacity" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Registration Expiration Date</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.registrationEndDate" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Vehicle Status</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.status_field" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black; background-color:#c0d9f0;text-align:center" >Periodic Inspection Expiration Date</th>-->
+                    <!--                            <td style=" border:1px solid black; text-align:center"><span t-field="o.InspectionDate" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                    </table >-->
+                    <!--                    <br/>-->
+
+                    <!--                    <table style="width:80%">-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Owner Name</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.ownerName" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Operating Code Number</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.electronicNumer" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Serial Number</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.searialNumbers" /></td>-->
+                    <!--                        </tr>-->
+
+
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Electronic Owner Number</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.ownerElectronicumber" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                     </table >-->
+                    <!--                    <br/>-->
+
+                    <!--                    <table style="width:80%">-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Operations Card Number</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.oprCardNumber" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Operations Card Start Date</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.oprCardStart" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Operations Card End Date</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.oprCardEnd" /></td>-->
+                    <!--                        </tr>-->
+
+                    <!--                     </table >-->
+                    <!--                    <br/>-->
+
+                    <!--                    <table style="width:80%">-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Insurance Name</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.insuranceName" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Insurance Start Date</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.insuranceStartDate" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Insurance End Date</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.insuranceEndDate" /></td>-->
+                    <!--                        </tr>-->
+                    <!--                        <tr>-->
+                    <!--                            <th style=" border:1px solid black;background-color:#c0d9f0;text-align:center">Insurance Status</th>-->
+                    <!--                            <td style="border:1px solid black; text-align:center"><span t-field="o.insuranceStatus" /></td>-->
+                    <!--                        </tr>-->
+
+                    <!--                     </table >-->
+
+                    <table style=  "width:100%">
+                        <tr >
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0;" >License
+                                Plate
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0 " >Model
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >
+                                Category
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >Model
+                                Year
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >Serial
+                                Number
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >Chassis
+                                Number
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >Color
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >
+                                Registration Expiration Date
+                            </td >
+
+
+                            <td style = " border:1px solid black; text-align:center; background-color:#c0d9f0" >
+                                Insurance Status
+                            </td >
+
+                        </tr >
+
+
+                        <tr >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.license_plate" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.model_id" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.category_id" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.modelYear" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.searialNumbers" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.vin_sn" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.colorVh" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.registrationEndDate" />
+                            </td >
+                            <td style = "border:1px solid black; text-align:center" >
+                                <span t-field = "o.insuranceStatus" />
+                            </td >
+
+
+                        </tr >
+
+                    </table >
+
+
+                </t >
+            </t >
+        </t >
+    </template >
+</odoo >

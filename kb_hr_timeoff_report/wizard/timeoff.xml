@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo >
+    <record id = "employee_time_off_print" model = "ir.actions.report" >
+        <field name = "name" >Employee Time Off</field >
+        <field name = "model" >employee_timeoff</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_hr_timeoff_report.employee_timeoff_ids</field >
+        <field name = "report_name" >kb_hr_timeoff_report.employee_timeoff_ids</field >
+        <field name = "binding_model_id" ref = "model_employee_timeoff" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "employee_timeoff_ids" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Almarai" rel = "stylesheet" />
+                <style >
+                    .numberCircle {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    border: 2px solid #666;
+                    color: #666;
+                    text-align: center;
+                    }
+
+                    .numberCirclenot {
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    color: #666;
+                    text-align: center;
+                    }
+                </style >
+
+
+                <div style = "page-break-after: always;" >
+                    <div class = "page" style = "font-family: 'Tajawal', sans-serif;page-break-after: always;" >
+
+                        <div style = "text-align:center; font-weight: bold;">
+                            <t t-if="form_data['leave_type'] == 'paid'">
+                              Paid Time Off Report
+                            </t>
+                        </div>
+
+                         <div style = "text-align:center; font-weight: bold;">
+                            <t t-if="form_data['leave_type'] == 'notpaid'">
+                                Unpaid Time Off Report
+                            </t>
+                        </div>
+
+                        <div style = "text-align:center; font-weight: bold;">
+
+                          <t t-if="form_data['leave_type'] == 'all'">Time Off Report</t>
+                        </div>
+
+
+                        <t t-set="total_off" t-value="0" />
+                        <t t-set="total_take" t-value="0" />
+                        <t t-set="total_rem" t-value="0" />
+                        <t t-set="total_cost" t-value="0" />
+
+                        <table style = "width:100%;" >
+                            <tr >
+                                 <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Employee ID
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Name
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Time Off
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Time Off Taken
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Remaining
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Cost
+                                </th >
+                            </tr >
+                            <t t-foreach = "employees_id" t-as = "bs" >
+
+                                <tr >
+                                     <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                        <span t-esc = "bs['badge_id']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                        <span t-esc = "bs['name']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+
+                                        <span t-esc = "bs['total_timeoff']" t-options='{"widget": "float", "precision": 2}'/>
+                                        <t t-set="total_off" t-value="total_off + bs['total_timeoff']" />
+
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                        <span t-esc = "bs['Total_timeoff_taken']" t-options='{"widget": "float", "precision": 2}'/>
+                                        <t t-set="total_take" t-value="total_take + bs['Total_timeoff_taken']" />
+
+
+                                    </td >
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                        <span t-esc = "bs['time_remaining']" t-options='{"widget": "float", "precision": 2}'/>
+                                        <t t-set="total_rem" t-value="total_rem + bs['time_remaining']" />
+
+                                    </td >
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                        <span t-esc = "bs['employee_cost']" t-options='{"widget": "float", "precision": 2}' />
+                                        <t t-set="total_cost" t-value="total_cost + bs['employee_cost']" />
+                                    </td >
+                                </tr >
+
+
+                            </t >
+                             <tr>
+                                    <td colspan="5" style = "text-align:center;border:1px solid black; font-weight: bold; ">
+                                    TOTAL
+                                    </td>
+<!--                                    <td style = "background-color:#D3D3D3; text-align:center; ">-->
+<!--                                        <span t-esc="total_off" />-->
+<!--                                    </td>-->
+<!--                                    <td style = "background-color:#D3D3D3; text-align:center; ">-->
+<!--                                        <span t-esc="total_take" />-->
+<!--                                    </td>-->
+<!--                                    <td style = "background-color:#D3D3D3; text-align:center; ">-->
+<!--                                        <span t-esc="total_rem" />-->
+<!--                                    </td>-->
+                                    <td style = "background-color:#D3D3D3; text-align:center; border:1px solid black">
+                                        <span t-esc="total_cost" t-options='{"widget": "float", "precision": 2}' />
+                                    </td>
+                                </tr>
+                        </table >
+
+
+                    </div >
+                </div >
+            </t >
+        </t >
+    </template >
+</odoo >
+

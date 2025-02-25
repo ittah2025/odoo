@@ -1,0 +1,22 @@
+{
+    'name': 'Holiday Approvals Access Rights',
+    'version': '16.0.1.0.2',
+    'category': 'Extra Tools',
+    'sequence': -240,
+    'summary': '',
+    'description': """Add New Access Rights For Expense Module""",
+    'website': 'https://www.knowledge-bonds.com',
+    'depends': ['hr_holidays'],
+    'data': [
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'views/hr_leave_view.xml',
+    ],
+    'images': ['static/description/icon.png'],
+    'qweb': [],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
+}

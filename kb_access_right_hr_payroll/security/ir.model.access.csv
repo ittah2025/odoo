@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kb_hr_payslip_human_res,access.hr.payslip,model_hr_payslip,kb_access_right_hr_payroll.group_kb_human_resources,1,1,1,1
+access_kb_hr_payslip_accounting,access.hr.payslip,model_hr_payslip,kb_access_right_hr_payroll.group_kb_accounting,1,1,1,1

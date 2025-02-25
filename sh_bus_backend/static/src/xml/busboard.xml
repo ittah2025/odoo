@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <!--  Bus type layout -->
+    <t t-name="seatBookingBoardMain">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="container">
+                    <h1></h1>
+                    <div id="seat_layout">
+                        <div id="seat_layout_left" style="width: 80%; padding-left: 80px;">
+                            <div id="seat-map">
+                            </div>
+                        </div>
+
+                        <div class="booking-details" style="display: none; width: 15%; padding: 14px; margin-top: 65px;">
+                            <div class="front-indicator" style="font-size: 14px; display: none;">Seat Selection Information</div>
+                            <ul id="selected-seats" style="display: none;"></ul>
+                            <button disabled="disabled" type="submit" class="btn btn-primary change-seat-button">Change Seat</button>
+                            <div id="legend"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <!--  Bus Booking layout -->
+
+    <t t-name="seatBookingBoard">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="container">
+                    <h1></h1>
+                    <div class="row" id="seat_layout">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="border-right: 1px dotted #adadad;">
+                            <div id="seat_layout_left" style="border-right: none;">
+                                <div id="seating-map"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="padding-left: 10px;">
+                            <div class="booking-details" style="padding: 10px; font-size: 12px;">
+                                <div class="front-indicator" style="font-size: 14px; display: none;">Seat Selection Information</div>
+                                <h3 class="text-primary">Selected Seats ( <span id="counter">0</span>):</h3>
+                                <ul id="selected-seats" style="padding-left: 0px; width: 200px;"></ul>
+                                <span class="total">Total: </span>
+                                <b>
+                                    <span id="currency_symbol" />
+                                    <span id="total">0</span>
+                                </b>
+
+                                <div id="legend"></div>
+                                <button class="checkout-button btn-primary">Checkout</button>
+                                <div class="boarding-point" style="padding: 10px;"></div>
+                                <div class="dropping-point" style="padding: 10px;"></div>
+                                <div class="amenities_list" style="padding: 10px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row passenger_info" style="visibility: hidden; margin-top: 20px;">
+                        <div class="col-12">
+                            <div>
+                                <div class="front-indicator" style="font-size: 12px; margin-bottom: 15px;">
+                                    <div class="heading_title">
+                                        <h3 class="text-primary">Passenger Information</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row passenger_info" style="visibility: hidden; margin-top: 0px;">
+                        <table class="pi_table">
+                            <thead>
+                                <th></th>
+                                <th>NAME</th>
+                                <th>EMAIL</th>
+                                <th>AGE</th>
+                                <th>GENDER</th>
+                            </thead>
+                            <tbody class="passenger-detail" id="sh_passenger_detail"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button class="go-button mtb-10 btn btn-primary" style="visibility: hidden;">GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

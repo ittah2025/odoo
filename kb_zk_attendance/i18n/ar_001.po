@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_zk_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221128\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-30 08:36+0000\n"
+"PO-Revision-Date: 2023-05-30 08:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_punching_time_in
+msgid "Attend Time"
+msgstr "وقت الحضور"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_attendance_type_in
+msgid "Attendance Type In"
+msgstr "نوع التحضير عند الدخول"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_attendance_type_out
+msgid "Attendance Type Out"
+msgstr "نوع التحضير عند الخروج"
+
+#. module: kb_zk_attendance
+#: model:ir.actions.act_window,name:kb_zk_attendance.action_kb_zk_attendance
+msgid "Biometric Device Log"
+msgstr "سجل اجهزة البصمة"
+
+#. module: kb_zk_attendance
+#: model:ir.ui.menu,name:kb_zk_attendance.menu_kb_zk_attendance
+msgid "Biometric Log"
+msgstr "سجل اجهزة البصمة"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_worked_hours
+msgid "Calculate Worked Hours"
+msgstr "حساب ساعات العمل"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_attendance_type_in
+msgid "Check-In Type (Finger, Face, Card)"
+msgstr "نوع تسجيل الحضور (الإصبع، الوجه، البطاقة)"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_attendance_type_out
+msgid "Check-Out Type (Finger, Face, Card)"
+msgstr "نوع تسجيل الخروج (الإصبع، الوجه، البطاقة)"
+
+#. module: kb_zk_attendance
+#: model_terms:ir.actions.act_window,help:kb_zk_attendance.action_kb_zk_attendance
+msgid "Create A New Kb Zk Attendance"
+msgstr "إنشاء حضور جديد"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__create_date
+msgid "Created on"
+msgstr "انشأ في"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_zk_attendance
+#: model_terms:ir.ui.view,arch_db:kb_zk_attendance.kb_zk_attendance_tree_view
+msgid "Employee attendances"
+msgstr "حضور الموظفين"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_employee_id
+msgid "Employees List"
+msgstr "قائمة الموظفين"
+
+#. module: kb_zk_attendance
+#: model:ir.actions.server,name:kb_zk_attendance.cron_move_data_ir_actions_server
+#: model:ir.cron,cron_name:kb_zk_attendance.cron_move_data
+#: model:ir.cron,name:kb_zk_attendance.cron_move_data
+msgid "HR Attendance: Move data from Log to Attendance"
+msgstr "حضور الموارد البشرية: نقل البيانات من سجل اجهزة البصمة إلى الحضور"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_moved_check
+msgid "If Recorded Moved to main attendance module this checkbox Will Be True"
+msgstr "إذا تم نقل السجل إلى موديول الحضور الرئيسي، فسيكون مربع الاختيار هذا صحيحًا"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_punching_time_out
+msgid "Leaving Time"
+msgstr "وقت المغادرة"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_moved_check
+msgid "Moved Record?"
+msgstr "هل السجل إنتقل؟"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_punch_type_in
+msgid "Punch Type In"
+msgstr "نوع التبصيم في الحضور"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_punch_type_out
+msgid "Punch Type Out"
+msgstr "نوع التبصيم في الخروج"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_punching_time_in
+msgid "Punching Time In"
+msgstr "وقت الحضور"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_punching_time_out
+msgid "Punching Time Out"
+msgstr "وقت الخروج"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_punch_type_in
+msgid "Type Of Punch When Attend"
+msgstr "نوع التبصيم عند الحضور"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,help:kb_zk_attendance.field_kb_zk_attendance__kb_punch_type_out
+msgid "Type Of Punch When Leaving"
+msgstr "نوع التبصيم عند الخروج"
+
+#. module: kb_zk_attendance
+#: model:ir.model.fields,field_description:kb_zk_attendance.field_kb_zk_attendance__kb_worked_hours
+msgid "Worked Hours"
+msgstr "ساعات العمل"
+
+#. module: kb_zk_attendance
+#: model:ir.model,name:kb_zk_attendance.model_kb_zk_attendance
+msgid "kb_zk_attendance"
+msgstr ""

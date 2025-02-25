@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+	<record model="ir.ui.view" id="pay_fees_wizard_form">
+		<field name="name">Pay Fees Wizard form</field>
+		<field name="model">pay.fees.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Pay Fees">
+            
+                <group>
+                    <field name="is_paid" required="1"/>
+                </group>
+
+                <group>
+                    <field name="journal_id"  placeholder="Journal" options="{'no_open':True,'no_create':True}"/>
+                    <field name="company_id"  invisible="1"/>
+                </group>
+
+                <footer>
+                    <button name="action_pay_fees" type="object" string="Fees Invoice" class="btn btn-primary"/>
+                       
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+	</record>
+    <record  id="action_pay_fees_wizard" model="ir.actions.act_window">
+        <field name="name">PayFeesWizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">pay.fees.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pay_fees_wizard_form"/>
+        <field name="binding_model_id" ref="school_fees.model_pay_fees_wizard" />
+        <field name="target">new</field>
+    </record> 
+
+
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_partner_extend_form_view">
+            <field name="name">res.partner.doc.inherits</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']/.." position="after">
+                    <group>
+                        <field name="kb_idNumber" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

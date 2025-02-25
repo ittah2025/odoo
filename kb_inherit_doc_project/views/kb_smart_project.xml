@@ -1,0 +1,57 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "kb_project_view_form" >
+            <field name = "name" >Project Extend Form View</field >
+            <field name = "model" >project.project</field >
+            <field name = "inherit_id" ref = "project.edit_project" />
+            <field name = "arch" type = "xml" >
+                <!-- smart button -->
+                <xpath expr = "//button[@name='project_update_all_action']" position = "after" >
+                    <button class="oe_stat_button" name="kb_attachment_tree_views" type="object" icon="fa-file-text-o" string="Documents for task">
+<!--                            <field string="Documents for task" name="doc_count" widget="statinfo"/>-->
+                    </button>
+                     <button class="oe_stat_button" name="kb_attachment_tree_view_for_project" type="object" string="Documents for project" icon="fa-file-text-o">
+<!--                            <field string="Documents for project" name="doc_count_project" widget="statinfo"/>-->
+                    </button>
+                    <button class="oe_stat_button" name="kb_attachment_tree_view_for_invoice" type="object" string="Documents for invoice" icon="fa-file-text-o">
+<!--                            <field string="Documents for invoice" name="doc_count_invoice" widget="statinfo"/>-->
+                    </button>
+                </xpath >
+
+            </field >
+        </record >
+
+        <record model = "ir.ui.view" id = "kb_ir_attachment_view_form" >
+            <field name = "name" >ir attachment Extend Form View</field >
+            <field name = "model" >ir.attachment</field >
+            <field name = "inherit_id" ref = "base.view_attachment_form" />
+            <field name = "arch" type = "xml" >
+                <xpath expr = "//field[@name='mimetype']" position = "before" >
+                     <field name="document_type_porject" attrs="{'invisible': [('res_model','!=','project.project')]}" />
+                </xpath >
+                <field name="index_content" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field>
+                <field name="description" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field>
+                <!-- <field name="creation_div" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field> -->
+                <!-- <field name="res_field" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field> -->
+                <!-- <field name="res_name" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field> -->
+                <!-- <field name="res_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field>
+                <field name="res_model" position="attributes">
+                <attribute name="invisible">1</attribute>
+                </field> -->
+
+            </field >
+        </record >
+    </data >
+</odoo >

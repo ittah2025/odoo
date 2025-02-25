@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_bus_booking_wizard_form" model="ir.ui.view">
+        <field name="name">sh.bus.booking.wizarde.form</field>
+        <field name="model">sh.bus.booking.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Bus Booking">
+                <group>
+                    <group>
+                        <field name="date" required="1"></field>
+                        <field name="fleet_type" options="{'no_create':True,'no_create_edit':True}" />
+                    </group>
+                    <group>
+                        <field name="from_location" required="1" options="{'no_create':True,'no_create_edit':True}"></field>
+                        <field name="to_location" required="1" options="{'no_create':True,'no_create_edit':True}"></field>
+                    </group>
+                </group>
+
+                <footer>
+                    <group>
+                        <span>
+                            <button string="Search Buses" type="object" class="oe_highlight" name="action_search_bus" />
+                            <button string="Cancel" class="oe_link" special="cancel" />
+                        </span>
+                    </group>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="sh_bus_booking_wizard_action" model="ir.actions.act_window">
+        <field name="name">Bus Booking</field>
+        <field name="res_model">sh.bus.booking.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

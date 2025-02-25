@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="Salary_report_print_id" model="ir.module.category">
+            <field name="name">Print Salary Report</field>
+            <field name="sequence">22</field>
+            <field name="visible" eval="True" />
+        </record>
+        <record id="group_HR" model="res.groups">
+            <field name="name">HR</field>
+            <field name="category_id" ref="Salary_report_print_id"/>
+        </record>
+
+            <record id="group_User" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="Salary_report_print_id"/>
+        </record>
+    </data>
+</odoo>

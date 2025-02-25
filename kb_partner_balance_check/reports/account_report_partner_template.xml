@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <template id="account_report_balance_check">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <br />
+                        <br />
+                        <style>
+                            #table_css {
+                                border: 1px solid black border-collapse: collapse;
+                                border-spacing: 0px;
+                                border-top-spacing: 0px;
+                            }
+
+                            #table_css td,
+                            #table_css th {
+                                border: 1px solid black
+                            }
+
+                            #table_css tr: {
+                                border: 1px solid black
+                            }
+
+                            #table_css th {
+                                style="border: 1px solid black"
+                            }
+                        </style>
+                        <h3><span t-esc="res_company.name"/></h3>
+                        <h3>Partner Balance Check</h3>
+                      
+                        <table class="table table-sm o_main_table" id="table_css">
+                            <tr t-foreach="out_list" t-as="line">
+                                <td>
+                                    <b>Dear Sir,</b> <br/>
+                                    <span t-esc="line['partner_name']" /> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>As on </b> <span t-esc="form_data['date_to']" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                                </td>
+                            </tr>
+                            <tr t-foreach="out_list" t-as="line">
+                                <td>
+                                    <b>Outstanding Balance </b> <span t-esc="line['balanceend']" /> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    This to inform you that the above amount is your credit balance according to our ledger, it is worthy to you to pay it.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 <b>In </b> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Please sign and stamp for the correctness of the balance at the space provided below.
+                                </td>
+                            </tr>
+                        </table>    
+                        
+                        <br /><br />
+
+                        <table class="table table-sm o_main_table" id="table_css">
+                            <tr>
+                                <td>
+                                    This to inform you that your credit balance owed to you as on
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Credit Amount _______________ SAR
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Only ________________________ SAR
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    The balance owed to you:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img t-att-src="'/kb_partner_balance_check/static/description/checkbox.png'" /> Agrees &#160;&#160;/&#160;&#160;  <img t-att-src="'/kb_partner_balance_check/static/description/checkbox.png'" />Not Agrees
+                                </td>
+                            </tr>
+                            
+                        </table>  
+
+                        <table style="border:none; width:100%; background-color:white;">
+                            <tr style="border:none;">
+                                <td colspan="6" style="border:none; text-align:center; background-color:white;">
+                                    <h5>We wolud like to draw your kind attention; the company considers the balance is reconcild/correct as to our records, if no reply within 15 days from date of recived</h5>
+                                    <h4>End of document</h4>
+                                    <b style="text-align:center; border:none;">Powerd by knowledge bonds</b>
+                                    <br />
+                                    <span style="text-align:center; border:none;">www.knowledge-bonds.com</span>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

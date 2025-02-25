@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="kb_school_withdrawal.parent_withdrawal_web_form_result" name="Parent withdrawal Result">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure">
+
+                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001"
+                             data-snippet="s_title" data-scroll-background-ratio="1">
+                        <span class="s_parallax_bg oe_img_bg"
+                              style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container">
+                            <h1>Parent withdrawal</h1>
+                        </div>
+                    </section>
+
+                    <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+                        <div class="container s_allow_columns">
+                            <div class="row">
+                                <!-- <div class="col-lg-8 mt-4 mt-lg-0"> -->
+                                <br/>
+                                <center>
+                                    <h1>
+                                        Parent Withdrawal
+                                    </h1>
+                                    <br/>
+                                </center>
+                                <div class="container">
+                                    <form id="parent_withdrawal_web_form_result" role="from" action="/parent/successful"
+                                          enctype="multipart/form-data"
+                                          method="POST">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                        <div style="position: relative; display: block; width: 100%; max-width: 1000px; margin: auto; padding: 10px; background-color: white; box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); border-radius: 5px;">
+                                            <!--                                            <h5>Honorable Parents... The amount required is:</h5>-->
+                                            <!--                                            <t t-esc="st_list"/>-->
+                                            <label for="student_model" class="control-label">Students</label>
+                                            <select name="student_model" class="form-control link-style">
+                                                <t t-foreach="student_model" t-as="student">
+                                                    <option t-esc="student.name" t-att-value="student.id"/>
+                                                </t>
+                                            </select>
+                                            <br/>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                                 data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label for="Reason"
+                                                           class="col-form-label col-sm-auto s_website_form_label"
+                                                           style="width: 250px; text-align:left;">
+                                                        <span class="s_website_form_label_content">Reason for
+                                                            withdrawal
+                                                        </span>
+                                                    </label>
+                                                    <div class="col-sm">
+
+                                                        <select name="Reason" class="form-control link-style">
+                                                            <option value="">Reason for withdrawal...</option>
+                                                            <option value="change_of_place">Change of place of residence
+                                                            </option>
+                                                            <option value="fees_high">Fees are high</option>
+                                                            <option value="school_building">The school building is not
+                                                                set
+                                                            </option>
+                                                            <option value="educational_path">Change educational path
+                                                            </option>
+                                                            <option value="educational_staff">Educational Staff</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <br/>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                                 data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label for="dates"
+                                                           class="col-form-label col-sm-auto s_website_form_label"
+                                                           style="width: 250px; text-align:left;">
+                                                        <span class="s_website_form_label_content">Date</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="date" name="dates" id="dates"
+                                                               class="form-control"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                                 data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label for="description"
+                                                           class="col-form-label col-sm-auto s_website_form_label"
+                                                           style="width: 250px; text-align:left;">
+                                                        <span class="s_website_form_label_content">Description</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input name="description" id="description"
+                                                               class="form-control"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group col-12 s_website_form_submit text-center"
+                                                 data-name="Submit Button">
+                                                <div style="width: 200px;" class="s_website_form_label"/>
+                                                <button type="submit" id="get_successful_withdrawal"
+                                                        class="btn btn-primary s_website_form_send my-4">Send
+                                                </button>
+                                                <span id="s_website_form_result"></span>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </section>
+                </div>
+
+            </t>
+        </template>
+
+        <template id="kb_school_withdrawal.successful_web_form" name="Successful Page">
+
+            <t t-call="website.layout">
+                <div class="oe_structure">
+                    <div class="container" style="padding-top:40px;">
+
+                        <div style="width: 500px; height: 650px; overflow: hidden; border-radius: 12px; border: thin solid #ddd; text-align:center;margin: auto; ">
+
+                            <div style="text-align:center;" class="contentAlert">
+
+                                <div style="width: 100%; color: white; overflow: hidden; min-height: 250px; position: relative; padding: 40px 0; background: rgb(0,0,0); background: -webkit-linear-gradient(45deg, #019871, #a0ebcf);">
+
+                                    <p>
+                                        <svg viewBox="0 0 512 512" width="100" title="check-circle">
+                                            <path fill="#FFF"
+                                                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+                                        </svg>
+                                    </p>
+                                    <h1>Well Done!</h1>
+
+                                    <ul style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                        <li style="position: absolute; list-style: none; display: block; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/ bottom: -160px; -webkit-animation: square 20s infinite; animation:         square 20s infinite; -webkit-transition-timing-function: linear; transition-timing-function: linear;"></li>
+                                    </ul>
+                                </div>
+
+                                <div style="align-items: center; padding: 55px;">
+
+                                    <p>Our team will check your information and contact you</p>
+                                    <h5 style="padding-bottom: 10px;">Your request number <span style="color:#019871"><t t-esc="school_register_id"/></span></h5>
+                                    <br/><br/>
+                                    <h3 style="padding-bottom: 10px;">Thank you</h3>
+                                    <a href="/">
+                                        <button style="border: none; color: white; cursor: pointer; border-radius: 12px; padding: 10px 18px; background-color: #019871; text-shadow: 0 1px rgba(128, 128, 128, 0.75);"
+                                                type="button">
+                                            Home page
+                                        </button>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

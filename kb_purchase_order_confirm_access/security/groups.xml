@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="kb_purchase_order_confirm_access.purchase_confirm_access" model="ir.module.category">
+            <field name="name">Purchase Confirm Access</field>
+            <field name="description">Description of your category</field>
+        </record>
+
+        <record id="purchase_access_confirm_group" model="res.groups">
+            <field name="name">Purchase Confirm Access</field>
+            <field name="category_id" ref="kb_purchase_order_confirm_access.purchase_confirm_access"/>
+        </record>
+
+    </data>
+</odoo>

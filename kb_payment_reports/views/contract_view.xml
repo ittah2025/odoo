@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_payment" inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//div[@class='page']" position="replace">
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" /> 
+        <div class="header">
+            <img class="center" t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 110px;" alt="Logo"/>
+        </div>
+            <div class="page" style="font-family: 'Tajawal', sans-serif; font-size:20px; direction:ltr;">
+            <br/><br/>
+                <table style="width:100%; border:none;">
+                    <tr>
+                        <td colspan="3" style="text-align:center; border:none; background-color:white;">
+                            <t t-if="o.payment_type == 'outbound'">
+                                <h3>Payment Voucher | سند صرف</h3>
+                            </t>
+                            <t t-elif="o.payment_type == 'inbound'">
+                               <h3>Receipt Voucher | سند فبض</h3> 
+                            </t>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:white; border:none;">
+                                <span>Total </span> <b style="color: red"  t-field="o.amount"
+                                t-options="{'widget': 'monetary', 'display_currency': o.currency_id}" /><span> المبلغ   </span>
+                        </td>
+                        <td style="background-color:white; border:none;">
+                            No. <span style="color: red" t-field="o.name" />
+                        </td>
+                        <td style="background-color:white; border:none;">
+                           دفتر اليومية:
+                           <span style="color: red" t-field="o.journal_id.name" />
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px; background-color:white; border:none;"></div>
+                <table style="width:100%; border:none; ">
+                    <tr>
+                        <td style="width:5%; padding:4px; background-color:white; border:none;">
+                            Date:
+                        </td>
+                        <th style="background-color:white; border:none; text-align:center; border-bottom:1px solid black; padding:2px; " colspan="4">
+                            <span t-field="o.date" t-options='{"widget": "date","format": "dd-MM-yyyy"}'/>
+                        </th>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:5%; padding:4px; ">
+                            التاريخ:
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px;"></div>
+                <table style="width:100%; border:none;">
+                    <tr>
+                        <td style="width:19%; padding:4px; background-color:white; border:none;">
+                            Paid to Mr./Ms.:
+                        </td>
+                        <th style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; padding:2px; " colspan="4">
+                            <span t-field="o.partner_id" />
+                        </th>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:25%; padding:4px; ">
+                            يصرف إلى السيد/السادة:
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px;"></div>
+                <table style="width:100%; border:none;">
+                    <tr t-if="o.check_amount_in_words">
+                    <!-- <tr> -->
+                        <td style="background-color:white; border:none; width:14%; padding:4px; ">
+                            The Sum of:
+                        </td>
+                        <td style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; padding:2px;" colspan="4">
+                            <!-- <span t-field="o.check_amount_in_words" /> -->
+                            <span t-esc="o.amount_to_text_custom(o.amount, 'en')"/>
+                        </td>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:14%; padding:4px; ">
+                            
+                        </td>
+                    </tr>
+                </table>
+                <table style="width:100%; border:none;">
+                    <tr t-if="o.check_amount_in_words">
+                        <td style=" background-color:white; border:none; width:14%; padding:4px; ">
+                            
+                        </td>
+                        <td style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; padding:2px;" colspan="4">
+                          
+                            <span t-esc="o.amount_to_text_custom(o.amount, 'ar')"/>
+                        </td>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:14%; padding:4px; ">
+                            مبلغ وقدره:
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px;"></div>
+                <table style="width:100%; border:none;">
+                    <tr>
+                        <td style="background-color:white; border:none; width:11%; padding:4px; ">
+                            On Bank:
+                        </td>
+                        <td style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; width:20%;">
+                            <span t-field="o.payment_method_id.name" />
+                        </td>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:11%; padding:2px;">
+                            على بنك:
+                        </td>
+                        <td style="background-color:white; border:none; width:19%;  ">
+                            Cash/Cheque No:
+                        </td>
+                        <td style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; width:16%; padding:2px;">
+                            <span t-field="o.cash_cheque_no" />
+                        </td>
+                        <td style=" background-color:white; border:none; text-align:right; direction:rtl; width:28%; padding:4px; ">
+                            بموجب نقدا/شيك رقم:
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px;"></div>
+                <table style="width:100%; border:none;">
+                    <tr>
+                        <td style="background-color:white; border:none; width:5%; padding:4px; ">
+                            For:
+                        </td>
+                        <td style="background-color:white; border:none; border-bottom:1px solid black; text-align:center; padding:4px;" colspan="4">
+                            <span t-field="o.ref" />
+                        </td>
+                        <td style="background-color:white; border:none; text-align:right; direction:rtl; width:12%; padding:4px; ">
+                            وذلك عن:
+                        </td>
+                    </tr>
+                </table>
+                <div style="padding-top:6px; padding-bottom:6px;"></div>
+                <table style="width:100%; border:none;">
+                    <tr>
+                        <td style="background-color:white; border:none; width:20%; text-align:left;">
+                            
+                        </td>
+                        <td style="background-color:white; border:none; width:60%; text-align:center;">
+                            
+                        </td>
+                        <td style="background-color:white; border:none; width:20%;  text-align:right;">
+                             <span t-field="o.user_id.name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:white; border:none; width:20%; text-align:left; border-top:1px solid black; font-size:18px;">
+                            Recevied By <br/> توقيع المستلم
+                        </td>
+                        <td style="background-color:white; border:none; width:60%; text-align:center;">
+                            
+                        </td>
+                        <td style="background-color:white; border:none; width:20%; text-align:right; border-top:1px solid black; font-size:18px;">
+                            Created By <br/> اصدر بواسطة
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                   <table style="width:100%;border:none;">
+                    <tr>
+                        <td style="background-color:white; border:none; width:20% font-size:18px;">
+                            الصندوق<br/> ____________________
+                        </td>
+                       <td style="background-color:white; border:none; width:20% font-size:18px;">
+                            المحاسبة<br/> ____________________
+                        </td>
+                         <td style="background-color:white; border:none; width:20%; font-size:18px;">
+                             المالية<br/> ____________________
+                        </td>
+                        <td style="background-color:white; border:none; width:20%; font-size:18px;">
+                           المستلم<br/> ____________________
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             <div class="footer" style="font-family: 'Tajawal', sans-serif; border-top:1px solid black; text-align:center; font-size:18px;">
+        <b>Phone: </b> <span t-esc="o.company_id.phone" /> <b>Mobile: </b> <span t-esc="o.company_id.mobile" /> <b>VAT: </b> <span t-esc="o.company_id.vat" /> <b>CR: </b> <span t-esc="o.company_id.company_registry" />
+        <br/>
+        <span style="text-align:center;">Powerd by Knowledge bonds</span>
+        </div>
+
+        </xpath>
+
+    </template>
+</odoo>

@@ -1,0 +1,182 @@
+<odoo>
+    <record id="administrative_new_job_offer_action" model="ir.actions.report">
+        <field name="name">عرض وظيفي - اداري</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.administrative_new_job_offer_tem</field>
+        <field name="report_file">kb_hr_tahtheeb.administrative_new_job_offer_tem</field>
+        <field name="print_report_name">'عرض وظيفي - اداري'</field>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="administrative_new_job_offer_tem">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    body {
+                    /* font-family: 'Arial', sans-serif; */
+                    direction: rtl;
+                    }
+                    .header {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    }
+
+                    .details-table {
+                    margin-top: 20px;
+                    }
+
+                    .signature-section {
+                    margin-top: 50px;
+                    }
+
+                    .signature-section div {
+                    text-align: center;
+                    font-size:20px;
+                    }
+
+                    .table td,
+                    .table th {
+                    vertical-align: middle;
+                    text-align: center;
+                    font-size:20px;
+                    }
+
+                    .spaced {
+                    letter-spacing: 0.1em;
+                    }
+
+                    .bottom-border {
+                    display: inline-block;
+                    border-bottom: 1px solid #000;
+                    min-width: 150px;
+                    }
+                </style>
+                <div class="page" style="font-family: 'Calibri (Body)'">
+                    <div class="container">
+                        <!-- <div class="header">
+                            <p class="text-end fw-bold" style="font-size: 13px;">حرر في: الخميس 00 يناير 2000م</p>
+                            <h5 class="bottom-border fw-bold">"عرض وظيفي"</h5>
+                        </div> -->
+                        <div style="font-size: 16px; font-weight: bold;">
+                                <p style=" text-align:right;">حرر في  : <t t-foreach="assignmentID" t-as="employee">
+                                    <t t-esc="employee['weekday_label']"/>
+                                </t>
+                                &#160;&#160;<span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م
+                                </p>
+
+                        </div>
+
+                        <!-- Title -->
+                        <h3 style="margin-bottom: 25px" class="text-center">"عــرض وظيــفي "</h3>
+
+
+
+                        <p class="mb-4 " style="font-size:20px;">
+                            <span class="fw-bold">الأستاذ/ة</span>
+                            <t t-foreach="assignmentID" t-as="employee">
+                                <t t-esc="employee['kb_employeeID']"/>
+                            </t>
+                            <span style="margin-right: 250px;" class="fw-bold"> المحترم/ ة</span>
+                        </p>
+                        <p class="mb-0" style="font-size:20px;">السلام عليكم ورحمة الله وبركاته وبعد،</p>
+                        <p class="mb-0" style="font-size:20px;">
+                            يسر فريق العمل المميز في شركة التهذيب للخدمات التعليمية أن يعرض عليكم الانضمام إليه وفق القواعد والأنظمة في المملكة العربية السعودية وحسب التفاصيل التالية :-
+                        </p>
+                        <p class="mb-0" style="font-size:20px;">
+                            <span style="font-weight: 700;">مسمى الوظيفه :</span>
+                            <t t-foreach="assignmentID" t-as="employee">
+                                <t t-esc="employee['kb_job_title']"/>
+                            </t>
+                        </p>
+                        <p style="font-size:20px;"><strong>الموقع :</strong>سيهات / المنطقه الشرقيه
+                        </p>
+                        <p style="font-size:20px;">
+                            <strong>الراتب الشهري الإجمالي :</strong>
+                            (
+                            <t t-foreach="salary_list_loop" t-as="w">
+                                <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                            </t>
+                            ) ريال سعودي، لكل شهر ميلادي .
+                        </p>
+
+                        <table class="table table-bordered details-table" style="border: 1px solid #000;">
+                            <thead>
+                                <tr>
+                                    <th>راتب اساسي</th>
+                                    <th>بدل سكن</th>
+                                    <th>بدل نقل</th>
+                                    <th>الإجمالي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['hra']"
+                                                  t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                    </td>
+                                    <td>0000</td>
+                                    <td>
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>ريال سعودي</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Working Hours and Leave -->
+                        <p style="font-size:20px;">الإجازة السنوية: 30 يوم</p>
+                        <p style="font-size:20px;">أيام العمل: 5 أيام في الأسبوع</p>
+                        <p style="font-size:20px;">التأمين الطبي : للموظف ولمن يعول (الزوج/الزوجة والأبناء) حسب انظمة الشركة .</p>
+
+                        <!-- Additional Conditions -->
+                        <h4 style="font-weight: bold; margin-top: 50px;">شروط خاصة:</h4>
+
+                        <ul style="font-size:20px;">
+                            <li >
+                                يخضع عرض العمل هذا لفترة تجريبية مدتها 3 اشهر (تمدد ل3 اشهر اضافية)
+                                حسب نظام العمل السعودي  .
+                            </li>
+                            <li>يحق للموظف الحصول على تخفيض 50% على الرسوم الدراسية عند تدريس الطفل الأول في المدارس
+                                التابعة
+                                للشركة حسب سياستها .
+                            </li>
+                            <li>هذا العرض ساري لمدة اسبوع من تاريخه .</li>
+                        </ul>
+
+                        <!-- Signature Section -->
+                        <div class="signature-section row" style="margin-top: 80px;">
+                            <div class="col-4 text-center">
+                                <p style="font-weight: bold; margin-bottom: 50px;">المتقدم للوظيفة</p>
+                                <p>.................</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p style="font-weight: bold; margin-bottom: 50px;">الموارد البشرية</p>
+                                <p>.................</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p style="font-weight: bold; margin-bottom: 50px;">المدير الإداري</p>
+                                <p>.................</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id = "view_employee_inherit" model = "ir.ui.view">
+        <field name = "name">employee.inherit.form </field>
+        <field name = "model">hr.employee</field>
+        <field name = "inherit_id" ref ="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                 <page string="Report" name="select report">
+                          <field name="select_report">
+                              <tree editable="bottom">
+                                    <field name="Select"/>
+                                    <field name="kb_date_from" attrs="{'invisible': [('Select', '=' , 'reason2')]}" />
+                                    <field name="kb_date_to" attrs="{'invisible': [('Select', '!=' , 'reason1')]}" />
+                                    <field name="kb_Late_for" attrs="{'invisible': [('Select', '!=' , 'reason3')]}"/>
+                                    <field name="select_report_to_print" invisible="1"/>
+                                    <field name="kb_teacher_dec" attrs="{'invisible': [('Select', '!=' , 'reason3')] }" />
+                                    <field name="Signature" widget="signature" style=" width:10%" />
+                                   <button name="print_pdf" string="Print" type="object" class="btn-primary" icon=""/>
+                              </tree>
+                          </field>
+                 </page>
+
+                </xpath>
+            </field>
+    </record>
+
+
+
+</odoo>

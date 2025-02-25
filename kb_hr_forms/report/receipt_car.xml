@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="receipt_car" model="ir.actions.report">
+        <field name="name">Acknowledgment of receipt of a car </field>
+        <field name="model">fleet.vehicle.log.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.print_receipt_car</field>
+        <field name="report_file">kb_hr_forms.print_receipt_car</field>
+        <field name="print_report_name">'Acknowledgment of receipt of a car - %s' % (object.name).replace('/', '')
+        </field>
+        <field name="binding_model_id" ref="model_fleet_vehicle_log_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="print_receipt_car">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <div style="text-align: right; direction: rtl;">
+                        التاريخ : / / 20 .
+                    </div>
+                    <div style="direction: rtl;">
+                        <h2 style="text-align: center;text-decoration: underline">
+                            إقرار استلام سيارة
+                            <br />
+                            Acknowledgment of receipt of a car
+                        </h2>
+                    </div>
+                    <t t-foreach="docs" t-as="o">
+                        <table
+                            style="border: 2px solid black;border-collapse: collapse; width: 98%; margin-left: auto; margin-right: auto; ">
+                            <tr>
+
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; width: 40%;padding: 8px;">
+                                    I admit:
+                                    <t t-esc="o.user_id.name" /> Nationality:
+                                    <t t-esc="o.user_id.country_id.name" /> National ID No.:
+                                    <t t-esc="o.user_id.identification_id" /> Issued by: ______________________ Expiry
+                                    ID: ___/____/_________
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px;width: 40%; direction: rtl;">
+                                    أقر أنا :
+                                    <t t-esc="o.user_id.name" /> الجنسية :
+                                    <t t-esc="o.user_id.country_id.name" /> هوية رقم:
+                                    <t t-esc="o.user_id.identification_id" />
+
+                                    صادرة من:______________________ وتنتهي في تاريخ: ___/____/_________
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; padding: 8px;">
+                                    I received a car brand:
+                                    <t t-esc="o.vehicle_id.name" /> Model:
+                                    <t t-esc="o.vehicle_id.model_year" /> Plate
+                                    number:
+                                    <t t-esc="o.vehicle_id.license_plate" /> Color:
+                                    <t t-esc="o.vehicle_id.color" /> from the company to use it for work
+                                    purposes
+                                    and I pledge to maintain it and its accessories in good condition and use it during
+                                    daily work and
+                                    for work purposes.
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px; direction: rtl;">
+                                    بأنني استلمت سيارة ماركة:
+                                    <t t-esc="o.vehicle_id.name" /> موديل:
+                                    <t t-esc="o.vehicle_id.model_year" /> رقم
+                                    اللوحات:
+                                    <t t-esc="o.vehicle_id.license_plate" /> اللون:
+                                    <t t-esc="o.vehicle_id.color" /> من الشركة لإستخدامها في أغراض العمل
+                                    وأتعهد
+                                    بالمحافظة عليها وعلى ملحقاتها بحالة جيدة واستخدامها أثناء الدوام اليومي ولأغراض
+                                    العمل.
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; padding: 8px;">
+                                    In the event of any problems, I inform the management immediately as I acknowledge
+                                    my
+                                    responsibility
+                                    for any damages that occur to the car as a result of misuse or lack of care. And not
+                                    to
+                                    hand over
+                                    the car to any other person or allow him to use the car and to hand over the car to
+                                    the
+                                    condition in
+                                    which it was received as soon as the management so requests, and to take into
+                                    account in
+                                    its use the
+                                    laws and work regulations in force in the Kingdom of Saudi Arabia. <br />
+                                    I acknowledge that I have read all of what is stated in the car use policy of the
+                                    company
+                                    ______________________ and acknowledge my full commitment to it and what is stated
+                                    in
+                                    it.
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px; direction: rtl;">
+                                    وفي حالة حدوث أي مشكلات أن أبلغ الإدارة فوراً كما أقر بمسئوليتي عن أي تلفيات تحدث
+                                    للسيارة نتيجة سوء
+                                    الاستخدام أو عدم العناية. وبعدم تسليم السيارة لأي شخص آخر أو السماح له باستخدام
+                                    السيارة
+                                    وأن أسلم
+                                    السيارة على الحالة التي استلمتها عليها فور طلب الإدارة ذلك وأن أراعي في استخدامها
+                                    القوانين وأنظمة
+                                    العمل المعمول بها في المملكة العربية السعودية.<br />
+                                    وأقر بأنني اطلعت على جميع ما ورد بسياسة إستخدام السيارات بشركة
+                                    ______________________
+                                    وأقر بالتزامي
+                                    الكامل
+                                    بها وبما ورد فيها.
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; padding: 8px;">
+                                    Name:
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px; direction: rtl;">
+                                    الاســــــم:
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; padding: 8px;">
+                                    Signature:
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px; direction: rtl;">
+                                    التوقيــــــع:
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"
+                                    style="direction: ltr; border-right: 2px solid black;border-collapse: collapse;  text-align: left; padding: 8px;">
+                                    Vehicle received date:
+                                </td>
+                                <td colspan="2"
+                                    style="border-left: 2px solid black;border-collapse: collapse;  text-align: right; padding: 8px; direction: rtl;">
+                                    تاريخ استلام السيارة:
+
+                                </td>
+
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+                <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                    <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

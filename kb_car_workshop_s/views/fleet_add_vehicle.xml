@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="fleet_create_vehicle">
+            <field name="name">Fleet Vehicle</field>
+            <field name="model">fleet.vehicle.model</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form" />
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//field[@name='doors']/.." position="replace">
+                    <field name="doors" invisible="1" />
+                </xpath>
+
+               
+                <xpath expr="//field[@name='default_fuel_type']/.." position="replace">
+                    <field name="default_fuel_type" invisible="1" />
+                </xpath>
+
+                <xpath expr="//field[@name='horsepower']/.." position="replace">
+                    <field name="horsepower" invisible="1" />
+                </xpath>
+
+
+                   <xpath expr="//field[@name='vendors']/.." position="replace">
+                    <field name="vendors" invisible="1" />
+                </xpath>
+
+                <!-- <xpath expr="//field[@name='vehicle_type']/.." position="replace">
+                    <field name="vehicle_type" invisible="1" />
+                </xpath> -->
+                    
+            
+             <field name="vehicle_type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field> 
+
+
+                <xpath expr="//field[@name='category_id']/.." position="after">
+                <h3>
+                 <label for="vehicleType" />
+                     <field name="vehicleType"  /> 
+                     </h3>
+
+              </xpath>
+<!-- 
+                <group>
+                    <group>
+                    
+                        <field name="vehicleType" />
+                        
+                    </group>
+                </group> -->
+
+            </field>
+        </record>
+    </data>
+</odoo>

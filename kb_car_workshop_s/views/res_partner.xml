@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="res_partner_view_buttons2" model="ir.ui.view">
+        <field name="name">res.partner.view.buttons2</field>
+        <field name="model">order</field>
+        <field name="inherit_id" ref="kb_car_workshop_s.orders_views_form" />
+        <field name="priority" eval="3" />
+        <field name="arch" type="xml">
+<!--            <div class="oe_button_box" name="button_box" position="inside">-->
+<!--                <button name="return_action_to_open_odometers" type="object" class="oe_stat_button" icon="fa-car">-->
+<!--                    <field string="Order" name="order_count" widget="statinfo" />-->
+<!--                </button>-->
+<!--            </div>-->
+        </field>
+    </record>
+</odoo>

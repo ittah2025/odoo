@@ -1,0 +1,97 @@
+<odoo>
+    <record id="report_misconduct_action_last" model="ir.actions.report">
+        <field name="name">اساءه سلوك</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.report_misconduct_template</field>
+        <field name="report_file">kb_hr_tahtheeb.report_misconduct_template</field>
+        <field name="print_report_name">'إشعـــار إنـــذرا'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_misconduct_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    }
+                </style>
+                <div class="page" style="font-family: 'Droid Naskh'">
+
+                    <div>
+                        <h1 style="text-align: center; font-size: 24px; font-weight: bold;">إشعـــار إنـــذرا (1)</h1>
+                        <br/>
+                        <br/>
+                        <div class="oe_structure">
+                            <div class="double-line" style="margin-bottom: 40px;">
+                                <span class="label">التاريخ :</span>
+                                <span t-esc="form_data['date']"/>
+                                <span class="line"></span>
+                                <span>م</span>
+                            </div>
+                            <p style="font-weight: bold;">من: مدير الشؤون الإدارية و الرئيس التنفيذي</p>
+
+                            <div>
+                                <p>إلى:
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <span t-esc="employee['employee_name']"/>,
+                                    </t>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>السلام عليكم ورحمة الله وبركاته،،</p>
+
+                    <p>
+                        بـناءاً عـلى ماوردنا من مرؤوسك بعدم انضباطك سلوكياً وإساءة المعاملة دون احترام الذي يُعد خرقاً
+                        للوائـح الشـركة
+                        الداخلية من حيـث عدم انضباط سلوكك واحترام مرؤسيك عليهِ تقرَر:
+                    </p>
+                    <p>
+                        توجيه هـذا الإنذار لكم , ونأمل ان تـكونوا في مســتوى المسؤولية والالـتزام مسـتقبلا والتـقيد
+                        اكـثر بالأنظمة واللوائح
+                        المعــمول بها في الشركة حرصـا على مصـلحتـكم ومصلـحة العـمل على حد سواء ، حيث سيتم تطبيق لائحة
+                        المخالفات
+                        والجزاءات الخاصة بمواعيد العمل .
+                    </p>
+                    <p style="text-align: center; font-weight: bold;">شكرا لتعاونكم ,,,</p>
+                    <br/>
+                    <div style="margin-top: 50px;">
+                        <p style="text-align: left; margin-top: 5px; margin-left: 50px; font-weight: bold;">مدير الشؤون
+                            الإدارية
+                        </p>
+                    </div>
+
+
+                    <div style="margin-top: 50px;">
+                        <p style="text-align: right; font-weight: bold;">التوقيع بالعلم</p>
+
+                        <p style="text-align: right; margin-bottom: 50px;">
+                            الاسم :
+                            <span t-foreach="employee_list" t-as="employee">
+                                <span t-esc="employee['employee_name']"/>
+                            </span>
+                        </p>
+                        <p style="text-align: right;">التوقيع :</p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg"
+                                 style="width: 1400px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

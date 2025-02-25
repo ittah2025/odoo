@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_id_card_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230501\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-06 11:51+0000\n"
+"PO-Revision-Date: 2023-06-06 14:51+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: kb_id_card_form
+#: model:ir.model.fields.selection,name:kb_id_card_form.selection__hr_employee__bloodGroup__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: kb_id_card_form
+#: model:ir.model.fields.selection,name:kb_id_card_form.selection__hr_employee__bloodGroup__ab-
+msgid "AB-"
+msgstr ""
+
+#. module: kb_id_card_form
+#: model:ir.model.fields,field_description:kb_id_card_form.field_hr_employee__bloodGroup
+msgid "Blood Group"
+msgstr "فصيلة الدم"
+
+#. module: kb_id_card_form
+#: model_terms:ir.ui.view,arch_db:kb_id_card_form.id_card_employees
+msgid "Blood Type:"
+msgstr ""
+
+#. module: kb_id_card_form
+#: model:ir.model,name:kb_id_card_form.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: kb_id_card_form
+#: model:ir.actions.report,name:kb_id_card_form.kb_employees_id_card
+msgid "ID Card"
+msgstr "بطاقة الموظف"
+
+#. module: kb_id_card_form
+#: model_terms:ir.ui.view,arch_db:kb_id_card_form.id_card_employees
+msgid "Logo"
+msgstr ""

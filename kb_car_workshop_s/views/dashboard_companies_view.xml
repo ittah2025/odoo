@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="dashboard_companies_form_view" model="ir.ui.view">
+        <field name="name">dashboard.companies.form.view</field>
+        <field name="model">companies.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="logo" widget="image" class="oe_avatar"/>
+                        <field name="companyId"/>
+                        <field name="contractPeriod"/>
+                    </group>
+                    <notebook>
+                        <page string="Company Detail" name="Company Detail">
+                            <field name="companiesInfoId">
+                                <tree editable="bottom">
+                                    <field name="busType"/>
+                                    <field name="busModel"/>
+                                    <field name="busNo"/>
+                                    <field name="location"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <field name="description" string="" placeholder="This note is only for internal purposes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_companies_ids" model="ir.ui.view">
+        <field name="name">dashboard.kanban</field>
+        <field name="model">companies.info</field>
+        <field name="arch" type="xml">
+
+        
+            <kanban class="o_utm_kanban" on_create="quick_create"  examples="dashboard">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_kanban_record">
+                            <field name="logo" class="o_kanban_image_fill_left d-block" preview_image="logo"
+                                widget="background_image" options="{'zoom': true, 'zoom_delay': 1000}"/>
+                        </div>
+                        <div class="oe_kanban_global_click o kanban record_has_image_fill o_clouds_kanban">
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title"><field name="display_name"/></strong>
+                                <div class="o_kanban_tags_section" />
+                                <ul>
+                                   <li><strong><field name="companyId" /></strong></li>
+                                   <li> Contract Period: <field name="contractPeriod" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+          
+
+        </field>
+    </record>
+
+    <record id="dashboard_companies_tree" model="ir.ui.view">
+        <field name="name">dashboard.block.tree</field>
+        <field name="model">companies.info</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="companyId"/>
+                <field name="contractPeriod"/>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_dashboard_companies" model="ir.actions.act_window">
+        <field name="name">Dashboard Companies</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">companies.info</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+</odoo>

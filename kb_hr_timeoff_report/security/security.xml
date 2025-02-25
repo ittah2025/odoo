@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+        <record id="module_category_timeoff" model="ir.module.category">
+            <field name="name">time off report</field>
+            <field name="description">time off report</field>
+            <field name="sequence">27</field>
+        </record>
+
+        <record id="group_end_of_administration_timeoff" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="kb_hr_timeoff_report.module_category_timeoff"/>
+        </record>
+    </data >
+</odoo >

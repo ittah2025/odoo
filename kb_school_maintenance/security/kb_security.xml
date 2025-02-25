@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="maintenance_order_id" model="ir.module.category">
+            <field name="name">School Maintenance Management</field>
+            <field name="sequence">22</field>
+        </record>
+
+        <record id="group_unauthorization" model="res.groups">
+            <field name="name">Don't Have Authorization</field>
+            <field name="category_id" ref="maintenance_order_id" />
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+        </record>
+
+        <record id="group_create_form" model="res.groups">
+            <field name="name">Create Maintenance Form</field>
+            <field name="category_id" ref="maintenance_order_id" />
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+        </record>
+
+        <record id="group_complete_form" model="res.groups">
+            <field name="name">Complete Maintenance Form</field>
+            <field name="category_id" ref="kb_school_maintenance.maintenance_order_id" />
+        </record>
+
+        <record id="group_approval_form" model="res.groups">
+            <field name="name">Approval Maintenance Form</field>
+            <field name="category_id" ref="kb_school_maintenance.maintenance_order_id" />
+        </record>
+    </data>
+</odoo>

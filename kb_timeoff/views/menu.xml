@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_hr_flight_tickets"
+        name="Extension and return visa extension request"
+        parent="hr_holidays.menu_hr_holidays_my_leaves"
+        action="action_Extension"
+        sequence="5"/>
+</odoo>

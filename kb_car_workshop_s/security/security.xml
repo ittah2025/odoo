@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <data noupdate = "0" >
+            <record id = "module_wrokshopp_end" model = "ir.module.category" >
+                <field name = "name" >Car Workshop</field >
+                <field name = "description" >Car Workshop Access</field >
+                <field name = "sequence" >22</field >
+            </record >
+
+            <record id = "group_end_of_administration" model = "res.groups" >
+                <field name = "name" >Administrator</field >
+                <field name = "category_id" ref = "kb_car_workshop_s.module_wrokshopp_end" />
+            </record >
+        </data >
+    </odoo >

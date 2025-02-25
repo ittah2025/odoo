@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is the wizard with the fields -->
+<odoo>
+    <record id="view_deduct_salary_form" model="ir.ui.view">
+        <field name="name">salary.deduction.wizard.form</field>
+        <field name="model">salary.deduction.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Deduct or Increase Salary">
+                <group>
+                    <field name="employee_id"/>
+                    <field name="change_type"/>
+                    <field name="change_value" />
+                    <field name="increase_reason"  attrs="{'invisible': [('change_type', '=', 'deduction')]}"/>
+                    <field name="deduction_reason"  attrs="{'invisible': [('change_type', '=', 'increase')]}"/>
+                </group>
+                <footer>
+                    <button name="action_change_salary" type="object" string="Deduct or Increase Salary" class="btn-primary"/>
+                    <button string="Cancel" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- we will use this in the button to invoke the wizard -->
+    <record id="action_change_salary" model="ir.actions.act_window">
+        <field name="name">Deduct or Increase Salary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">salary.deduction.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_deduct_salary_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

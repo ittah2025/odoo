@@ -1,0 +1,116 @@
+<odoo>
+    <record id="end_contract_reportID" model="ir.actions.report">
+        <field name="name">إنهاء عقد</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.end_contract_report</field>
+        <field name="report_file">kb_hr_tahtheeb.end_contract_report</field>
+        <field name="print_report_name">'إنهاء عقد'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="end_contract_report">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    text-align: right;
+                    font-weight: bold;
+                    font-size: 15px;
+                    }
+                    .div-space p {
+                    line-height: 1.8;
+                    }
+                </style>
+                <t t-foreach="contractID" t-as="line">
+                    <div class="page" style="font-family: 'Droid Naskh'">
+                        <!-- Date and Header Information -->
+                        <div style="margin-top: 30px; text-align:right;">
+                            <p style="font-size: 14px; margin-bottom: 50px;">التاريخ:
+                                        <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                            </p>
+                            <!-- <p style="margin-bottom: 10px;">الأستاذ/ة الفاضل/ة/
+                                <span t-esc="line['kb_employeeID']"/>
+                            </p> -->
+                            <t t-if="line['gender'] !='female'">
+                               <p style="margin-bottom: 10px;">الأستاذ الفاضل / 
+                                    <span t-esc="line['kb_employeeID']"/>
+                                </p> 
+                            </t>
+                            <t t-if="line['gender'] =='female'">
+                               <p style="margin-bottom: 10px;"> الأستاذة الفاضلة / 
+                                    <span t-esc="line['kb_employeeID']"/>
+                                </p> 
+                            </t>
+                        </div>
+
+                        <!-- Main body -->
+                        <div style="margin-top: 20px; text-align:right;" class="div-space">
+                            <p style="margin-bottom: 15px;">تحية طيبة .. وبعد</p>
+                            <br/>
+                            <p style="margin-bottom: 15px;"> بناءاً على التقارير الواردة لنا من إدارة
+                                مدرسة التهذيب
+
+                                <span t-esc="line['kb_branchName']"/>,
+                                والتي تفيد
+                                بعدم ادائكم لمهام عملكم بالشكل المطلوب
+                                <span t-esc="line['kb_reasonID']"/>,
+                                
+                                تم اتخاذ القرار بإنهاء عقدكم مع الشركة استناداً على المادة خمسة وسبعون على أن يكون آخر يوم دوام لكم هو  يوم 
+                                 <span t-esc="line['weekday_label']"/>
+                                  تاريخ : 
+
+                                <span t-esc="line['kb_date']"/>م
+
+                            </p>
+                            <br/>
+                            <p style="margin-bottom: 35px;">
+                                عليه نرجو منكم التوجه إلى إدارة الموارد البشرية من أجل إتمام إجراءات المخالصة النظامية  وإخلاء الطرف .
+                            </p>
+
+                            <p style="text-align: center; margin-bottom: 10px;">
+                                وتفضلو بقبول فائق الاحترام والتقدير .
+                            </p>
+
+                        </div>
+
+                        <!-- Footer with Signatures -->
+                        <!-- Container for Footer -->
+                        <div style="display: flex; justify-content: space-between; margin-top: 0px;">
+                            <!-- Left-aligned Signature -->
+                            <div style="text-align: center; margin-top: 90px; margin-right: -450px">
+                                <p style="margin-bottom: 10px;">مدير إدارة الشؤون التعليمية والتدريب
+                                </p>
+                                <p style="margin-bottom: 10px;"></p>
+                            </div>
+
+                            <!-- Right-aligned Signature with upward and right adjustment -->
+                            <div style="position: relative; top: -32px; left: 110px;">
+                                <div style="text-align: left;">
+                                    <p style="margin-bottom: 10px;">الموارد البشريه</p>
+                                    <p style="margin-bottom: 10px;"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="cust-foot">
+                        <div class=" footer">
+                            <div class="my-footer">
+                                <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

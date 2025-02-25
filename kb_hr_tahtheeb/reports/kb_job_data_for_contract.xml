@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="job_data_for_contract_action" model="ir.actions.report">
+        <field name="name">بيانات وظيفية لعقد</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.job_data_for_contract_template</field>
+        <field name="report_file">kb_hr_tahtheeb.job_data_for_contract_template</field>
+        <field name="print_report_name">'بيانات وظيفية لعقد'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="job_data_for_contract_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <div class="report-container"
+                     style="font-family: 'Arial'; direction: rtl; text-align: right; padding: 20px;">
+
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h4 style="margin: 0; font-size: 18px;">بيانات وظيفية لعقد الموظف /ـة</h4>
+                    </div>
+
+                    <div class="employee-details" style="margin-bottom: 20px;">
+                        <table style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">الاسم رباعيًا:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <t t-esc="employee['kb_employeeID']"/>
+                                    </t>
+                                </td>
+                                <td style="padding: 10px; font-weight: bold;">الجنسية:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="emp">
+                                        <span t-esc="emp['nationality_name']"/>
+
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">رقم الهوية:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <t t-esc="employee['identification_id']"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">المؤهل العلمي:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <t t-esc="employee['certificate']"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">الوظيفة:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <span t-esc="employee['kb_job_title']"/>
+                                    </t>
+                                </td>
+                                <td style="padding: 10px; font-weight: bold;">المدرسة: </td>
+                                <td style="padding: 10px;">التهذيب</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">الخبرة:</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="assignmentID" t-as="employee">
+                                        <span t-esc="employee['experiance']"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="salary-details" style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">الراتب:</h4>
+                        <table style="width: 100%; border: 1px solid black; text-align: center;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="padding: 10px; font-weight: bold;">الراتب الأساسي</th>
+                                <th style="padding: 10px; font-weight: bold;">بدل سكن</th>
+                                <th style="padding: 10px; font-weight: bold;">بدل نقل</th>
+                                <th style="padding: 10px; font-weight: bold;">المجموع</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="salary_list_loop" t-as="w">
+                                        <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                    </t>
+                                </td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="salary_list_loop" t-as="w">
+                                        <span t-esc="w['hra']"
+                                              t-options='{"widget": "float", "precision": 2}'/>
+                                    </t>
+                                </td>
+                                <td style="padding: 10px;">0000</td>
+                                <td style="padding: 10px;">
+                                    <t t-foreach="salary_list_loop" t-as="w">
+                                        <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg"
+                                 style="width: 1400px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

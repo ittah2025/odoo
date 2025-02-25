@@ -1,0 +1,238 @@
+<odoo>
+    <report
+            id="employee_offer_report_action"
+            model="kb.hr.forms.wizard"
+            report_type="qweb-pdf"
+            string="Employee Offer Report"
+            name="kb_hr_tahtheeb.employee_offer_report_wizard_template"
+            file="kb_hr_tahtheeb.employee_offer_report_wizard_template"
+    />
+
+
+    <template id="employee_offer_report_wizard_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    }
+                </style>
+                <div class="page" style="direction: rtl;">
+                    <div class="row">
+                        <div class="col-12">
+                            <span>
+                                حرر في :
+                                <span t-esc="form_data['weekday_label']"/>
+                                <span t-esc="form_data['kb_date']"/>
+                                م
+                            </span>
+                        </div>
+                    </div>
+                    <h4 style="text-align:center;">"عرض وظيفي"</h4>
+                    <div class="row" style="margin-top:30px;">
+                        <div class="col-6">
+                            <span>
+                                <strong>
+                                    الأستاذ / ة :
+                                </strong>
+                                <span t-esc="form_data['employee_name']"/>
+
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            المحترم/ ة
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:30px;">
+                        <p>
+                            السلام عليكم ورحمه الله وبركاته , وبعد ,,,
+                            <br/>
+                            يسر فريق العمل المميز في شركة التهذيب للخدمات التعليمية ان يعرض عليكم الانضمام اليه وفق
+                            القواعد
+                            <br/>
+                            والانظمة في المملكة العربية السعودية و حسب التفاصيل التالية :.
+                            <br/>
+                            <strong>
+                                مسمى الوظيفة :
+                            </strong>
+                            <span t-esc="form_data['kb_employee_job']"/>
+                            <br/>
+                            <strong>
+                                الموقع :
+                            </strong>
+                            <span t-esc="form_data['location']"/>
+
+                            <br/>
+                            <strong>
+                                الراتب الشهري الاجمالي :
+                            </strong>
+                            <span t-esc="form_data['kb_salary']"/>
+                            (
+                            <span t-esc="form_data['kb_salary_words']"/>
+                            ريال سعودي ) لكل شهر ميلادي
+
+                        </p>
+                    </div>
+                    <table style="text-align:center;margin-top:30px;width:100%">
+                        <tr>
+                            <th>
+                                <span>
+                                    راتب اساسي
+                                </span>
+                            </th>
+                            <th>
+                                <span>
+                                    بدل سكن
+                                </span>
+                            </th>
+                            <th>
+                                <span>
+                                    بدل نقل
+                                </span>
+                            </th>
+                            <th>
+                                <span>
+                                    اجمالي
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span t-esc="form_data['kb_basic_salary']"/>
+                            </td>
+                            <td>
+                                <span t-esc="form_data['kb_housing_allowance']"/>
+                            </td>
+                            <td>
+                                <span t-esc="form_data['kb_transfer_allowance']"/>
+                            </td>
+                            <td>
+                                <span t-esc="form_data['kb_salary']"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="row" style="margin-top:30px">
+                        <div class="col-12">
+                            <p>
+                                <strong>الاجازة السنوية :</strong>
+                                <span t-esc="form_data['holidays']"/>
+                                يوم
+                                <br/>
+                                <strong>أيام العمل</strong>
+                                :
+                                <span t-esc="form_data['days_of_work']"/>
+                                أيام في الاسبوع
+                                <br/>
+                                <strong>التأمين الطبي</strong>
+                                :
+                                <span t-esc="form_data['insurance']"/>
+                                .
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <strong>شروط خاصة :</strong>
+                            <ul style="padding-right:50px;">
+                                <t t-if="form_data['kb_special_conditions'] == True">
+                                    <li>
+                                        يخضع عرض العمل هذا لفترة تجربة مدتها 3 أشهر (تمدد لـ 3 أشهر اضافية) حسب نظام
+                                        العمل السعودي .
+                                    </li>
+                                    <li>
+                                        يحق للموظف الحصول علي تخفيض 50% علي الرسوم الدراسية عند تدريس الطفل الاول في
+                                        المدارس التابعة للشركة حسب سياستها .
+                                    </li>
+                                </t>
+                                <li>
+                                    هذا العرض ساري لمدة اسبوع من تاريخه .
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <t t-if="form_data['kb_special_conditions_2'] == True">
+                        <div class="row" style="margin-top:50px">
+                            <div class="col-12">
+                                <p>
+                                    يخضع هذا العرض لفترة التقييم مدة ثلاثة شهور وعليه يتم تعديل الراتب الاساسي الي (
+                                    <span t-esc="form_data['kb_basic_salary_2']"/>
+                                    ) ريال سعودي
+                                    (
+                                    <span t-esc="form_data['kb_basic_salary_in_words']"/>
+                                    ريال سعودي
+                                    ) لكل شهر ميلادي
+                                </p>
+                                <table style="text-align:center;margin-top:30px;width:100%">
+                                    <tr>
+                                        <th>
+                                            <span>
+                                                راتب اساسي
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                بدل سكن
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                بدل نقل
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                اجمالي
+                                            </span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span t-esc="form_data['kb_basic_salary_2']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="form_data['kb_housing_allowance_2']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="form_data['kb_transfer_allowance_2']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="form_data['kb_salary_2']"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                    <div class="row" style="margin-top:30px;text-align:center;">
+                        <div class="col-4">المتقدم للوظيفة</div>
+                        <div class="col-4">المدير الاداري</div>
+                        <div class="col-4">مدير الشؤون التعليمية</div>
+                    </div>
+                    <div class="row" style="margin-top:30px;text-align:center;">
+                        <div class="col-4">
+                            <span t-esc="form_data['kb_employee_name_2']"/>
+                        </div>
+                        <div class="col-4">علوي السادة</div>
+                        <div class="col-4">سامح رزق</div>
+                    </div>
+                    <div class="cust-foot">
+                        <div class=" footer">
+                            <div class="my-footer">
+                                <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="kb_maintenance_report_wizard_view_form" model="ir.ui.view">
+        <field name="name">maintenance_report.view</field>
+        <field name="model">maintenance_report</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+                    </group>
+                    <footer>
+                        <button class="oe_highlight" string="Print" type="object" name="print_pdf_report" />
+                        <button special="cancel" string="Cancel" />
+                    </footer>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+    <record id="kb_maintenance_report_action" model="ir.actions.act_window">
+        <field name="name">Report</field>
+        <field name="res_model">maintenance_report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="Report"
+        id="menu_maintenance_report"
+        parent="system_rootm"
+        sequence="8" />
+
+    <menuitem name="Reporting"
+        id="submenu_building_information"
+        parent="menu_maintenance_report"
+        sequence="1"
+        action="kb_maintenance_report_action"/>
+</odoo>

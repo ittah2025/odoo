@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_merge_accounts" model="ir.actions.server">
+        <field name="name">Merge Accounts</field>
+        <field name="model_id" ref="account.model_account_account"/>
+        <field name="binding_model_id" ref="account.model_account_account"/>
+        <field name="binding_view_types">list</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_manager'))]"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.action_merge_accounts()
+        </field>
+    </record>
+
+    <record id="view_account_form_inherited" model="ir.ui.view">
+        <field name="name">account.account.form.inherited</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/sheet/div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_rollback_merge_accounts" type="object" class="oe_stat_button" icon="fa-undo" groups="account.group_account_manager">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Rollback Merge Account</span>
+                    </div>
+                </button>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Merge History" name="merge_history">
+                    <field name="history_merge_account_ids" readonly="1">
+                        <tree>
+                            <field name="batch" />
+                            <field name="user_id" />
+                            <field name="date" />
+                            <field name="account_move_line_id" />
+                            <field name="source_account_id" />
+                            <field name="destination_account_id" />
+                            <field name="notes" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

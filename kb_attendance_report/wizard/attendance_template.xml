@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="employee_attendance_today_print" model="ir.actions.report">
+        <field name="name">Employee Attendance</field>
+        <field name="model">attendance_today</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">kb_attendance_report.employee_attendance_today_id</field>
+        <field name="report_name">kb_attendance_report.employee_attendance_today_id</field>
+        <field name="binding_model_id" ref="model_attendance_today"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <template id="employee_attendance_today_id">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet']"/>
+                <style>
+                    .numberCircle {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    border: 2px solid #666;
+                    color: #666;
+                    text-align: center;
+                    }
+
+                    .numberCirclenot {
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    color: #666;
+                    text-align: center;
+                    }
+                </style>
+
+
+                <div style="page-break-after: always;">
+                    <div class="page" style="font-family: 'Tajawal', sans-serif;page-break-after: always;">
+
+                        <table style="width:100%;">
+                            <tr>
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Name
+                                </th>
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Attendance Time 1
+                                </th>
+
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    Afternoon Time-->
+                                <!--                                </th>-->
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Check In 1
+                                </th>
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Check Out 1
+                                </th>
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Attendance Hours 1
+                                </th>
+
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Delay In Minutes 1
+                                </th>
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Attendance Time 2
+                                </th>
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Check In 2
+                                </th>
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Check Out 2
+                                </th>
+
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Attendance Hours 2
+                                </th>
+
+                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                    Delay In Minutes 2
+                                </th>
+
+
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    absence_data-->
+                                <!--                                </th>-->
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    day_count-->
+                                <!--                                </th>-->
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    works_days_in_month-->
+                                <!--                                </th>-->
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    check_in_count-->
+                                <!--                                </th>-->
+                                <!--                                <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">-->
+                                <!--                                    Absence In Month-->
+                                <!--                                </th>-->
+                            </tr>
+                            <t t-foreach="employees_id" t-as="bb">
+                                <tr>
+                                    <th colspan="12" style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                        <span t-esc="bb"/>
+                                    </th>
+                                </tr>
+                                <t t-foreach="employees_id[bb]" t-as="bs">
+                                    <tr>
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-esc="bs['name']"/>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="bs['attendance_time']">
+                                                <t t-esc="bs['attendance_time']"/>
+                                            </span>
+                                        </td>
+
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-esc="bs['check_in']"/>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-esc="bs['check_out']"/>
+                                        </td>
+
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'worked_hours' in bs">
+                                                <t t-esc="'%.2f' % (bs['worked_hours'] or 0.0)"/>
+                                            </span>
+                                        </td>
+
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'delay_1' in bs">
+                                                <t t-esc="bs['delay_1']"/>
+                                            </span>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'attendance_time_2' in bs">
+                                                <t t-esc=" bs['attendance_time_2']"/>
+                                            </span>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'check_in_2' in bs">
+                                                <t t-esc=" bs['check_in_2']"/>
+                                            </span>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'check_out_2' in bs">
+                                                <t t-esc=" bs['check_out_2']"/>
+                                            </span>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'worked_hours_2' in bs">
+                                                <t t-esc="'%.2f' % (bs['worked_hours_2'] or 0.0)"/>
+                                            </span>
+                                        </td>
+
+                                        <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                            <span t-if="'delay_2' in bs">
+                                                <t t-esc=" bs['delay_2']"/>
+                                            </span>
+                                        </td>
+
+                                        <!--                                    <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                                        <!--                                        <span t-esc="bs['is_absence']"/>-->
+                                        <!--                                    </td>-->
+
+                                        <!--                                    <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                                        <!--                                        <span t-esc="bs['day_count']"/>-->
+                                        <!--                                    </td>-->
+
+                                        <!--                                    <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                                        <!--                                        <span t-esc="bs['works_days_in_month']"/>-->
+                                        <!--                                    </td>-->
+
+                                        <!--                                    <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                                        <!--                                        <span t-esc="bs['check_in_count']"/>-->
+                                        <!--                                    </td>-->
+
+                                        <!--                                    <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">-->
+                                        <!--                                        <span t-esc="bs['absence']"/>-->
+                                        <!--                                    </td>-->
+
+
+                                    </tr>
+                                </t>
+                            </t>
+                        </table>
+
+
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+

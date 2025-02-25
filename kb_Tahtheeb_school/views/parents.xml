@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="action_parent" model="ir.actions.act_window">
+        <field name="name">Parent</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">parent</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new parent
+            </p>
+        </field>
+    </record>
+
+    <record id="view_parent_form" model="ir.ui.view">
+        <field name="name">parent.form</field>
+        <field name="model">parent</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+                            
+                            <label for="ParentID" />
+                            <h4>
+                                <field name="ParentID" readonly="1" />
+                            </h4>
+                        </group>
+                        <group>
+                            <field name="photo" widget="image" style="max-width: 30%;" />
+
+                        </group>
+                    </group>
+                    <group>
+                        <group string="English Name">
+                            <field name="name" />
+                        </group>
+                        <group string="Arabic Name">
+                            <field name="ar_name" />
+                        </group>
+                        <group string="Contact information">
+                            <field name="phone" />
+                            <field name="mobile" />
+                            <field name="email" />
+                            <field name="childs" />
+                        </group>
+                        <group string="Personal information">
+                            <field name="parent_nat_id" />
+                            <field name="nationality" />
+                            <!-- <field name="is_teacher" /> -->
+                            <!--<field name="motherTongue" /> -->
+                            <field name="relative" />
+                            <field name="gender" />
+                        </group>
+                        <group string="National address">
+                            <label for="street" string="Address" />
+                            <div class="o_address_format">
+                                <field name="street" class="o_address_street" placeholder="Street" />
+                                <field name="district" class="o_address_street" placeholder="District" />
+                                <field name="city" class="o_address_city" placeholder="City" />
+                                <field name="postal_code" class="o_address_city" placeholder="Postal Code" />
+                                <field name="extra_number" class="o_address_city" placeholder="Extra Number" />
+                                <field name="country_id" class="o_address_city,oe_no_button" placeholder="Country"
+                                    options="{&quot;no_open&quot;: true}"  />
+                            </div>
+                        </group>
+<!--                         <group string="Other information">-->
+<!--                              <field name="otherrelative" />-->
+<!--                            <field name="otherparent_nat_id" />-->
+<!--                            <field name="othernationality" />-->
+<!--                            <field name="othergender" />-->
+<!--                             <field name="Othermobile"/>-->
+                              <field name="compute_field" invisible="1"/>
+<!--                        </group>-->
+                    </group>
+                    <notebook>
+                        <page name="children" string="Children" autofocus="autofocus">
+                            <field name="studentID" mode="kanban" attrs="{'readonly':[('compute_field','=', True)]}">
+                                <kanban>
+                                    <field name="studentID" />
+                                    <field name="gender" />
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div
+                                                class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                                                <div class="o_kanban_image">
+                                                    <field name="photo" widget="image" style="max-width: 30%;" />
+                                                </div>
+                                                <div class="oe_kanban_details d-flex flex-column">
+                                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                                        <field name="name" /></strong>
+                                                    <div class="o_kanban_tags_section oe_kanban_partner_categories" />
+                                                    <ul>
+                                                        <li>
+                                                            <span>Student ID:</span>
+                                                            <field name="studentID" />
+                                                        </li>
+                                                        <li>
+                                                            <span>Mobile:</span>
+                                                            <field name="mobile" />
+                                                        </li>
+                                                        <li>
+                                                            <span>Email:</span>
+                                                            <field name="email" />
+                                                        </li>
+                                                    </ul>
+                                                    <div class="o_row">
+                                                        <span class="oe_kanban_partner_links" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+
+
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="parent_kanban" model="ir.ui.view">
+        <field name="name">parent.kanban</field>
+        <field name="model">parent</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="ParentID" />
+                <field name="gender" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <div class="o_kanban_image">
+                                <field name="photo" widget="image" style="max-width: 30%;" />
+                            </div>
+                            <div class="oe_kanban_details d-flex flex-column">
+                                <strong class="o_kanban_record_title oe_partner_heading">
+                                    <field name="name" /></strong>
+                                <div class="o_kanban_tags_section oe_kanban_partner_categories" />
+                                <ul>
+                                    <li>
+                                        <span>Parent ID:</span>
+                                        <field name="ParentID" />
+                                    </li>
+                                    <li>
+                                        <span>Mobile:</span>
+                                        <field name="mobile" />
+                                    </li>
+                                    <li>
+                                        <span>Email:</span>
+                                        <field name="email" />
+                                    </li>
+
+                                </ul>
+                                <div class="o_row">
+                                    <span class="oe_kanban_partner_links" />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <menuitem id="parent_submenu" name="Parent" parent="users_submenu" action="action_parent" sequence="4" />
+
+</odoo>

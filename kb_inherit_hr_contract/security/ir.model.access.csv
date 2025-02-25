@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_users_admin,res.users,base.model_res_users,group_user,1,1,1,1
+access_res_users_admin,hr.contract,hr_contract.model_hr_contract,group_user,1,1,1,1

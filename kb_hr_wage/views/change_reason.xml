@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- add reason fields in the payslip of an employee (view) -->
+<odoo>
+    <record id="change_reason" model="ir.ui.view">
+        <field name="name">change_reason</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                    <field name="check_way" />
+                    <field name='wage_discount_value'/>
+                    <field name="percentage_value_de"  attrs="{'invisible':[('check_way','=',False)]}"/>
+                    <field name='wage_inclease_value'/>
+                    <field name='sal_deduct_reason'/>
+                    <field name='sal_increase_reason'/>
+            </xpath>
+             <xpath expr="//field[@name='name']" position="after">
+                    <field name='department'/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

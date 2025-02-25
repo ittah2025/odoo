@@ -1,0 +1,147 @@
+<templates>
+    <t t-name="StudentGradeMarks">
+
+        <div style="background: white;height: 100%;overflow: auto;">
+            <div class="mt-5">
+                <div class="filter_view_tb"></div>
+            </div>
+            <br></br>
+            <div>
+                <div class="table_view"></div>
+            </div>
+            <button class="btn btn-primary float-right mr-2 grade-back-page">Back</button>
+        </div>
+    </t>
+    <t t-name="StudentGradeMarksResult">
+        <div>
+            <div class="table_main_view">
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th style="font-size: 15px; text-align:center;" colspan="12">Grading System - <span t-esc="report_lines[1]"/></th>
+                        </tr>
+                        <tr style="font-size: 13px;text-align:center;">
+                            <th style="font-size: 13px;"></th>
+                            <th style="font-size: 13px;" colspan="4">First 5 – weeks instruction (20 points)</th>
+                            <th style="font-size: 13px;" colspan="4">Second 5 – weeks instruction (20 points)</th>
+                            <th style="font-size: 13px;" colspan="1">Internal (40 points)</th>
+                            <th style="font-size: 13px;">Mid-Trimester Exam</th>
+                            <th style="font-size: 13px;">Final Trimester Exam</th>
+                            <th></th>
+                        </tr>
+                        <tr style="text-align:center;">
+                            <th style="font-size: 13px;text-align:left;">STUDENT NAME</th>
+                            <th style="font-size: 13px;">CP</th>
+                            <th style="font-size: 13px;">Avg. HW</th>
+                            <th style="font-size: 13px;">Avg. CW</th>
+                            <th style="font-size: 13px;">TOTAL MARKS</th>
+                            <th style="font-size: 13px;">CP</th>
+                            <th style="font-size: 13px;">Avg. HW</th>
+                            <th style="font-size: 13px;">Avg. CW</th>
+                            <th style="font-size: 13px;">TOTAL MARKS</th>
+                            <th width="15%" style="font-size: 13px;">Total Internal Marks (Out Of 40)</th>
+                            <th style="font-size: 13px;">Mid Trimester</th>
+                            <th style="font-size: 13px;">Final Trimester</th>
+                            <th width="10%" style="font-size: 13px;">TOTAL MARKS (OUT OF 100)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="report_lines[0]" t-as="data">
+                            <tr class="toptr" style="border: 1px solid black;text-align:right;">
+                                <td style="text-align:left;">
+                                    <span class="student-id" t-att-title="data['student_id'][1]" t-att-data-id="data['id']" id="student_id" t-att-data-value="data['student_id'][1]">
+                                        <b>
+                                            <t t-esc="data['student_id'][1]"/>
+                                        </b>
+                                    </span>
+
+                                </td>
+                                <td style="text-align:right">
+                                   
+                                    <span class="cp-number" t-att-data-id="data['id']">
+                                        <t t-esc="data['cp']"/>
+                                    </span>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="hw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_hw']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    
+                                    <b>
+                                        <span class="cw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_cw']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="total-marks" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_marks']"/>
+                                        </span>    
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                   
+                                    <span class="cp-number" t-att-data-id="data['id']">
+                                        <t t-esc="data['cp2']"/>
+                                    </span>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="hw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_hw2']"/>
+                                        </span>
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    
+                                    <b>
+                                        <span class="cw-number-total" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_cw2']"/>
+                                        </span>
+                                    </b>
+                                    <!-- <input type="number" t-att-value="data['total_cw']" /> -->
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="total-marks" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_marks_2']"/>
+                                        </span>    
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="total-internal-marks" t-att-data-id="data['id']">
+                                            <t t-esc="data['total_internal_marks']"/>
+                                        </span>    
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="mid-trimester" t-att-data-id="data['id']">
+                                            <t t-esc="data['mid_sem']"/>
+                                        </span>    
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    <b>
+                                        <span class="final-trimester" t-att-data-id="data['id']">
+                                            <t t-esc="data['final_sem']"/>
+                                        </span>    
+                                    </b>
+                                </td>
+                                <td style="text-align:right">
+                                    <t t-esc="data['total_marks_out_100']"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+</templates>

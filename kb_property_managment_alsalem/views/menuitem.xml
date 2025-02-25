@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+<!-- Actions menu -->
+    <record id="action_apartments" model="ir.actions.act_window">
+        <field name="name">Apartments</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apartments</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a New Contract
+            </p>
+        </field>
+    </record>
+
+    <record id="action_Property" model="ir.actions.act_window">
+        <field name="name">Property</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a New property
+            </p>
+        </field>
+    </record>
+
+    <record id="action_maintenances" model="ir.actions.act_window">
+        <field name="name">Maintenance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">maintenance</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Maintenance
+            </p>
+        </field>
+    </record>
+
+    <record id="action_room_view" model="ir.actions.act_window">
+        <field name="name">Room View</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rooms</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Rooms
+            </p>
+        </field>
+    </record>
+
+
+    
+    <record id="action_transportation" model="ir.actions.act_window">
+        <field name="name">Train Station</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transportation</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Train Station
+            </p>
+        </field>
+    </record>
+
+    <!-- The config menu -->
+    <menuitem id="system_root" name="Property Managment" sequence="9" />
+    <menuitem id="property_subMenu" name="Contract" parent="system_root" sequence="10" />
+
+    <menuitem id="property_subSubMenu" name="Contract" parent="property_subMenu" action="action_contract" sequence="12" />
+    <menuitem id="customer_subMenu" name="Customer" parent="property_subMenu" action="account.res_partner_action_customer" sequence="13" />
+    <menuitem id="transportation_subMenu" name="Train Station" parent="property_subMenu"
+        action="action_transportation" sequence="18" />
+
+
+
+    <menuitem id="apartments_subMenu" name="Property" parent="system_root" sequence="10" />
+    
+    <menuitem id="Propertys_subMenu" name="Property" parent="apartments_subMenu"
+        action="action_Property" sequence="14" />
+        
+    <menuitem id="apartments_subSubMenu" name="Apartments" parent="apartments_subMenu"
+        action="action_apartments" sequence="15" />
+
+
+    <menuitem id="maintenance_subMenu" name="Maintenance" parent="property_subMenu"
+        action="action_maintenances" sequence="16" />
+
+    <menuitem id="room_view_subMenu" name="Room View" parent="apartments_subMenu"
+        action="action_room_view" sequence="17" />
+</odoo>

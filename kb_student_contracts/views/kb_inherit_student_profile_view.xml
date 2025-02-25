@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_student_extend_form_view">
+            <field name="name">student</field>
+            <field name="model">student</field>
+            <field name="inherit_id" ref="kb_Tahtheeb_school.view_students_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']/button[@name='action_open_fees']" position="before">
+                   <button name="return_action_to_view_contract" type="object"  class="oe_stat_button" icon="fa-folder-open">
+                        <field string="Contracts" name="contracts_view_count" widget="statinfo"/>
+                   </button>
+                </xpath>
+                <xpath expr="//notebook/page[@name='parents']" position="after" >
+                      <page string="Relative" name="Relative">
+                          <group>
+                              <group>
+                                   <field name="kb_relativeName"/>
+                                   <field name="kb_relative"/>
+                                   <field name="kb_relativeNationality"/>
+                                   <field name="kb_relativeNationalityID"/>
+                                   <field name="kb_relativePhone"/>
+                              </group>
+                               <group>
+                                   <field name="kb_legitimateAgency"/>
+                                   <field name="kb_legitimateAgencyDate"/>
+                               </group>
+                               <group>
+                                    <field name="kb_custodyBond" />
+                                    <field name="kb_custodyBondDate"/>
+                               </group>
+                               <group>
+                                   <field name="kb_guardianship"/>
+                                   <field name="kb_guardianshipDate"/>
+                               </group>
+                          </group>
+                      </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>

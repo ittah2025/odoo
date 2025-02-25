@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_salem_banks_inherit" model="ir.ui.view">
+     <field name="name">salembanks_inherit</field>
+     <field name="model">res.company</field>
+      <field name="inherit_id" ref="base.view_company_form"/> 
+       <field  name="arch" type="xml">
+        <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="bankditel" string='Bank Accounts'>
+                    <tree editable="bottom">
+                        <field name="bankName1" />
+                        <field name="IBN1" />
+                        <field name="bankimage1" />
+                        <field name="bankditel" invisible="1" />
+                    </tree>
+                </field>
+        </xpath>
+        </field>
+    </record>
+
+ 
+</odoo>
+

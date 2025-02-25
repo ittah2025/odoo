@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_hr_forms_reason" model="ir.actions.act_window">
+        <field name="name">hr.forms.reason</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.hr.forms.reason</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_forms_reason_form" model="ir.ui.view">
+        <field name="name">hr.forms.reason.form.view</field>
+        <field name="model">kb.hr.forms.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="kb_reason"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

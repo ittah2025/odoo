@@ -1,0 +1,35 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "kb_ir_attachment_view_form" >
+            <field name = "name" >ir attachment Extend Form View</field >
+            <field name = "model" >ir.attachment</field >
+            <field name = "inherit_id" ref = "base.view_attachment_form" />
+            <field name = "arch" type = "xml" >
+                <xpath expr = "//field[@name='index_content']/.." position = "replace" >
+                    <field name = "index_content" invisible = "1" />
+                </xpath >
+                <xpath expr = "//field[@name='description']/.." position = "replace" >
+                    <field name = "description" invisible = "1" />
+                </xpath>
+                <xpath expr = "//div[@name='creation_div']/.." position = "replace" >
+                  <div name = "creation_div" invisible = "1" />
+                </xpath >
+                <xpath expr = "//field[@name='res_field']" position = "replace" >
+                  <field name = "res_field" invisible = "1" />
+                </xpath >
+                <xpath expr = "//field[@name='res_name']" position = "replace" >
+                  <field name = "res_name" invisible = "1" />
+                </xpath >
+
+                <xpath expr = "//field[@name='res_id']" position = "replace" >
+                  <field name = "res_id" invisible = "1" />
+                </xpath >
+                <xpath expr = "//field[@name='res_model']/.." position = "replace" >
+                  <field name = "res_model" invisible = "1" />
+                </xpath >
+
+
+            </field >
+        </record >
+    </data >
+</odoo >

@@ -1,0 +1,129 @@
+.my-side-menu {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 93%;
+    background-color: #333;
+    color: #fff;
+    padding: 80px 20px 20px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.my-side-menu .user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.my-side-menu .user-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-bottom: 15px
+}
+
+.my-side-menu .user-info p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.dash-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.dash-content .card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.dash-content .card img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+.dash-content .card-body {
+    padding: 15px;
+    background: transparent !important;
+    /*color: #fff !important;*/
+}
+.dash-content .card-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.dash-content .card-text {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.my-attendance {
+    border-radius: 20px;
+    background: #eee;
+    text-align: center;
+}
+.allocation-details {
+    text-align: center;
+    background: #000f3d;
+    color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.progress-circle {
+  position: relative;
+  /*width: 120px;*/
+  /*height: 120px;*/
+  text-align: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring__circle {
+  transition: stroke-dasharray 0.3s;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.percentage {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.progress-ring__circle {
+  transition: stroke-dasharray .5s;
+  stroke-dasharray: 326.725;
+  stroke-dashoffset: 0;
+}
+
+
+/*.my-reports button {*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    right: -50px;*/
+/*    transform: translateY(-50%);*/
+/*    background-color: #3498db;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*    cursor: pointer;*/
+/*    transition: right 0.3s ease;*/
+/*}*/
+/*.my-reports button:hover {*/
+/*    right: 0;*/
+/*}*/

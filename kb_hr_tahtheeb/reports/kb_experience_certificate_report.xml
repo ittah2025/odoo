@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="experience_certificate_reportID" model="ir.actions.report">
+        <field name="name">شهادة خبرة وإخلاء طرف</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.experience_certificate_report</field>
+        <field name="report_file">kb_hr_tahtheeb.experience_certificate_report</field>
+        <field name="print_report_name">'شهادة خبرة وإخلاء طرف' </field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="experience_certificate_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                    <div>
+                        <p style=" text-align:right;">التاريخ <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م</p>
+                    </div>
+                    <br></br>
+                    <div>
+                        <p style="text-align:center; text-decoration: underline; font-weight: bold; font-size: 30px;">"شهادة خبرة وإخلاء طرف" </p>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div>
+                       <p  style=" text-align:right; font-size: 22px;" > تشهد <span t-field="o.company_id.name"/>
+                           بأن اﻷستاذ/ة <span t-field="o.name"/>
+                           الجنسية <span t-field="o.country_id"/>
+                           بموجب هوية وطنية رقم <span t-field="o.identification_id"/>
+                           قد عمل/ت لدينا بوظيفة <span t-field="o.job_title"/>
+<!--                           من تاريخ <span t-field="o.first_contract_date"/>م-->
+                           إلى تاريخ  <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م
+                           <br></br>
+                           وقد أعطيت هذا الخطاب دون أدنى مسؤولية على الشركة .
+                       </p>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <div>
+                        <p style=" text-align:left; font-size: 17px;"><span t-field="o.company_id.name"/></p>
+                        <p style=" text-align:left; font-size: 17px;">الموارد البشرية</p>
+                        <p style=" text-align:left; font-size: 15px;">_________________</p>
+                    </div>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+
+    <!--Your comment-->
+    <record id = "accidents_views" model = "ir.actions.act_window" >
+        <field name = "name" >accidents</field >
+        <field name = "type" >ir.actions.act_window</field >
+        <field name = "res_model" >accidents</field >
+        <field name = "view_mode" >tree,kanban,form</field >
+        <field name = "help" type = "html" >
+            <p class = "o_view_nocontent_smiling_face" >
+                Create new accidents record
+            </p >
+        </field >
+    </record >
+
+    <!--Yourt-->
+    <record id = "view_accidents_form" model = "ir.ui.view" >
+        <field name = "name" >accidents.form</field >
+        <field name = "model" >accidents</field >
+        <field name = "arch" type = "xml" >
+
+            <form >
+                <sheet >
+
+                    <group string = "Accidents Information" >
+                        <field name = "electronicNumer_accd" style="width:30%; border:1px solid black;"/>
+                        <field name = "accidentsDate" style="width:30%; border:1px solid black;" />
+                        <field name = "accidentsStatus" style="width:30%; border:1px solid black;"/>
+                        <field name = "accidentNumber" style="width:30%; border:1px solid black;"/>
+                        <field name = "driver_name" style="border:1px solid black;" widget="many2many_tags" options="{'no_create_edit': True}" />
+                        <field name = "accidentsDescription" style="border:1px solid black;"/>
+                        <field name = "accidentsAttachment" widget = "many2many_binary" />
+
+                    </group >
+                    <notebook>
+                    			<page string="Vehicle Info " name="Vehicle_Info">
+
+
+                                    <group>
+                                <group string="Vehicle Information">
+                                    <field name="electronicNumer_accd" readonly="1" force_save="1"/>
+                                    <field name="carModel_acc"  readonly="1" force_save="1"/>
+<!--                                    <field name="busNameAR_acc"  readonly="1" force_save="1"/>-->
+<!--                                    <field name="busNameEN_acc"  readonly="1" force_save="1"/>-->
+                                    <field name="searialNumbers_acc"  readonly="1" force_save="1"/>
+                                    <field name="electronicNumer_acc" readonly="1" force_save="1"/>
+                                    <field name="insuranceName_acc" readonly="1" force_save="1"/>
+                                    <field name="insuranceStartDate_acc" readonly="1" force_save="1"/>
+                                    <field name="insuranceEndDate_acc" readonly="1" force_save="1"/>
+                                </group>
+                                        <group string="Vehicle Information">
+                                    <field name="modelYear_acc" readonly="1" force_save="1"/>
+                                    <field name="ownerName_acc" readonly="1" force_save="1"/>
+                                    <field name="ownerElectronicumber_acc" readonly="1" force_save="1"/>
+                                    <field name="passengerCapacity_acc" readonly="1" force_save="1"/>
+                                    <field name="searialNumbers_acc" readonly="1" force_save="1"/>
+                                    <field name="registrationEndDate_acc" readonly="1" force_save="1"/>
+                                    <field name="status_field_acc" readonly="1" force_save="1"/>
+                                </group>
+
+                                    </group>
+                        </page>
+                    </notebook>
+
+
+                </sheet >
+
+                <div class = "oe_chatter" >
+                    <field name = "message_follower_ids" />
+                    <field name = "activity_ids" />
+                    <field name = "message_ids" />
+                </div >
+            </form >
+        </field >
+    </record >
+
+
+    <record id = "view_car_tree" model = "ir.ui.view" >
+        <field name = "name" >Vehicle_Accidents.tree</field >
+        <field name = "model" >accidents</field >
+        <field name = "arch" type = "xml" >
+            <tree string = "Vehicles" >
+                <field name = "electronicNumer_accd" />
+                <field name = "driver_name" />
+                <field name = "accidentsDate" />
+                <field name = "accidentsStatus" />
+
+            </tree >
+        </field >
+    </record >
+
+
+    <menuitem id = "accidents_main_menu" name = "Vehicle Accidents" />
+
+    <menuitem id = "accidents_config" name = "Accidents" action = "accidents_views" parent = "accidents_main_menu" />
+
+
+</odoo >

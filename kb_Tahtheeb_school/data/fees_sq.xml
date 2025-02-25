@@ -1,0 +1,51 @@
+<odoo>
+    <data noupdate="1">
+        <record id="fees_ar_1" model="fees_structure">
+            <field name="name">الرسوم الدراسية/ Tuition fees</field>
+            <field name="id">1</field>
+            <field name="code">Tuition001</field>
+        </record>
+        <record id="fees_ar_2" model="fees_structure">
+            <field name="name">رسوم بطاقة التعريف/ ID card fees</field>
+            <field name="id">2</field>
+            <field name="code">IDCARD001</field>
+        </record>
+        <record id="fees_ar_3" model="fees_structure">
+            <field name="name">الرسوم النقل/ Transportation fees</field>
+            <field name="id">3</field>
+            <field name="code">Trans001</field>
+        </record>
+        <record id="fees_ar_4" model="fees_structure">
+            <field name="name">رسوم الزي الموحد / Uniform fees</field>
+            <field name="id">4</field>
+            <field name="code">Tuition001</field>
+        </record>
+        <record id="fees_ar_5" model="fees_structure">
+            <field name="name">رسوم التسجيل/ Register fees</field>
+            <field name="id">5</field>
+            <field name="code">Uniform001</field>
+        </record>
+        <record id="fees_ar_6" model="fees_structure">
+            <field name="name">رسوم الكتب / Books fees</field>
+            <field name="id">6</field>
+            <field name="code">Books001</field>
+        </record>
+        <record id="fees_ar_7" model="fees_structure">
+            <field name="name">رسوم الأنشطة / Activity fees</field>
+            <field name="id">7</field>
+            <field name="code">Activity001</field>
+        </record>
+        <record id="fees_ar_8" model="fees_structure">
+            <field name="name"> رسوم أخرى / Other fees</field>
+            <field name="id">8</field>
+            <field name="code">Other001</field>
+        </record>
+        <record id="fees_ar_9" model="fees_structure">
+            <field name="name">Seat reservation fee / رسوم حجز مقعد</field>
+            <field name="id">9</field>
+            <field name="code">Seat001</field>
+            <field name="fees_structure_line_ids" eval="[(0,0, {'sequence':0, 'name':'رسوم حجز مقعد' , 'account':1 ,'code':'Seat001','taxes':15, 'amount':1000, 'quantity':1})]" />
+        </record>
+
+ </data>
+</odoo>

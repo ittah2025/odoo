@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+
+
+
+        <record id = "kb_group_can_make_payments" model = "res.groups" >
+            <field name = "name" >Select Payment Type in Accounting</field >
+            <field name = "implied_ids" eval = "[(4, ref('base.group_user'))]" />
+            <field name = "comment" >Can Send Payments in Accounting</field >
+        </record >
+
+
+</odoo >
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_rejectnewstudent" model="ir.ui.view">
+        <field name="name">wizard_rejectnewstudent.wizerd</field>
+        <field name="model">rejectnewstudent</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                    <group>
+                         <field name="resone"/>
+                        <field name="Note"/>
+                  </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_mail_to_student"
+                        string="Send email"
+                        type="object"
+                        class="btn-primary"/>
+                    <button special="cancel" string="Cancel"/>
+             </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="wizard_action_wizard_rejectnewstudent_form" model="ir.actions.act_window">
+        <field name="name">Rejection Reason</field>
+        <field name="res_model">rejectnewstudent</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+
+  </odoo>

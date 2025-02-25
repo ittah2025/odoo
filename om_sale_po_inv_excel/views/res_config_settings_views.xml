@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.delivery</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='sale_management']" position="inside">
+                   <h2>Sale Excel Color</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Backgound Color</span>
+                                <div class="text-muted">
+                                    Backgound Color Code Like #c79816
+                                </div>
+                                <div>
+                                    <field name="excel_bg_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Font Color</span>
+                                <div class="text-muted">
+                                    Font Color Code Like #FFFFFF
+                                </div>
+                                <div>
+                                    <field name="bg_font_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="res_config_settings_po_excelview_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.po.excel</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='purchase']" position="inside">
+                   <h2>Purchase Excel Color</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Backgound Color</span>
+                                <div class="text-muted">
+                                    Backgound Color Code Like #c79816
+                                </div>
+                                <div>
+                                    <field name="po_excel_bg_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Font Color</span>
+                                <div class="text-muted">
+                                    Font Color Code Like #FFFFFF
+                                </div>
+                                <div>
+                                    <field name="po_bg_font_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="res_config_settings_invoice_excel_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.invoice.excel</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='account']" position="inside">
+                   <h2>Invoice Excel Color</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Backgound Color</span>
+                                <div class="text-muted">
+                                    Backgound Color Code Like #c79816
+                                </div>
+                                <div>
+                                    <field name="inv_excel_bg_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Font Color</span>
+                                <div class="text-muted">
+                                    Font Color Code Like #FFFFFF
+                                </div>
+                                <div>
+                                    <field name="inv_bg_font_color" readonly="0"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+    
+    </data>
+</odoo>

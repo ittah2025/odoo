@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_Fixation_salary_French_report" model="ir.actions.report">
+        <field name="name">تثبيت الراتب بنك الفرنسي</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.kb_Fixation_salary_French_report</field>
+        <field name="report_file">kb_hr_tahtheeb.kb_Fixation_salary_French_report</field>
+        <field name="print_report_name">'تثبيت الراتب بنك الفرنسي'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="kb_Fixation_salary_French_report">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.internal_empty_header_footer">
+                <div class="page"  style="font-family: 'Droid Naskh'">
+                    <div style="direction: rtl;">
+                        <style>
+                            .th1{
+                            border:1px solid black ;
+                            height:30px;
+                            font-size:15px;
+                            }
+                            .spacer {
+                            margin-bottom: 30px; /* Adjust this value for space between elements */
+                            }
+
+                        </style>
+
+                        <!-- Date Section -->
+                        <div>
+                            <span t-esc="form_data['date']"/>
+                            <span class="line"></span>
+                            <span>م</span>
+                            <br/>
+                        </div>
+
+                        <!-- Spacer between dates and the text -->
+                        <div class="spacer"></div>
+
+                        <!-- Address Section -->
+                        <div>
+                            <p style="text-align:right; font-size: 20px; font-weight:bold; margin-top:19px; ">السادة/
+                                البنك السعودي الفرنسي
+                            </p>
+                            <div>
+                                <p style="display:inline-block; width:200px; text-align:right; font-size: 18px;">
+                                    عمليات التمويل الشخصي
+                                </p>
+                                <p style="display:inline-block; width:230px;"></p>
+                                <p style="font-size: 20px; display:inline-block; width:150px;">المحترمين</p>
+                            </div>
+                            <br/>
+                            <p style="text-align:right; font-size: 20px;">تحية طيبة، وبعد,,,</p>
+                        </div>
+
+                        <!-- Spacer -->
+                        <br/>
+                        <br/>
+
+                        <!-- Employee Details Section -->
+                        <div>
+                            <table style="text-align:center; border: 1px solid; width: 100%;">
+                                <tr>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">الاسم</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <!-- Iterate over the assignmentID list to display the employee names -->
+                                        <t t-foreach="assignmentID" t-as="employee">
+                                            <t t-esc="employee['kb_employeeID']"/>
+                                        </t>
+                                    </td>
+
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">تاريخ التعيين</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <t t-esc="w['date_start']"/>
+                                        </t>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">الجنسية</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-esc="employee['nationality_name']"/>
+                                    </td>
+
+
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">الراتب الأساسي
+                                    </td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">رقم الهوية</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-esc="employee['identification_id']"/>
+                                    </td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">بدل السكن</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['hra']"
+                                                  t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                        <!--                                        <t t-esc="employee['house_rent_allowance']"/>-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">رقم الآيبان</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        0
+                                    </td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">بدل المواصلات</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['travel_allowance']"
+                                                  t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">إجمالي الراتب</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        <t t-foreach="salary_list_loop" t-as="w">
+                                            <span t-esc="w['wage']" t-options='{"widget": "float", "precision": 2}'/>
+                                        </t>
+                                    </td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">بدلات أخرى</td>
+                                    <td class="th1" style="text-align:center; vertical-align:middle;">
+                                        0
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div>
+                            <p style=" text-align:right; font-size: 20px;">
+                                ووبهذا نؤكد أن الموظف المذكور أعلاه يعمل لدينا بمهنة 
+                                <t t-esc="employee['kb_job_title']"/>
+                                "، قد اخطرنا برغبته بتحويل راتبه الشهري إلى الحساب المذكور في تواريخ الاستحقاق من كل شهر, وعليه فإننا بموجب هذا الخطاب نتعهد لكم بأن نقوم بتحويل الراتب الشهري إليكم في تاريخ 28 من كل شهر ميلادي , وعدم تغيير الحساب المحول عليه الا بعد الحصول على اخلاء طرف من قبلكم , وأن نقوم كذلك في حالة انتهاء خدمة المذكور معنا بإخطاركم خطياً بذلك ويستمر تعهدنا نافذاً وساري المفعول حتى استلامنا اشعار منكم بإعفائنا من التزاماتنا الواردة أعلاه .
+                            </p>
+                        </div>
+
+                        <!-- Spacer -->
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <p style=" text-align:right; font-size: 20px;">شاكرين لكم حسن تعاونكم ...</p>
+                        </div>
+
+                        <!-- Spacer -->
+                        <br/>
+                        <br/>
+
+                        <div>
+                            <p style="display:inline-block; width:100%; margin-right:500px; font-weight:bold; font-size: 20px;">
+                                الرئيس
+                                التنفيذي
+                            </p>
+                            <br/>
+                        </div>
+                        <div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="building_info_form" model="ir.ui.view">
+        <field name="name">kb.building.info.form.view</field>
+        <field name="model">kb.building.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                      <div class = "oe_button_box" name = "button_box" >
+
+                         <button class = "oe_stat_button" type = "object" name = "return_action_to_open_floor"
+                                icon = "fa-building" >
+                             <field name = "floors_count" widget = "statinfo" />
+
+                        </button >
+                      </div>
+
+                    <group>
+                        <group>
+                            <field name="kb_buildingName"/>
+                            <field name="kb_building_admin" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="building_info_tree" model="ir.ui.view">
+        <field name="name">kb.building.info.tree</field>
+        <field name="model">kb.building.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_buildingName"/>
+                <field name="kb_building_admin" />
+
+            </tree>
+        </field>
+    </record>
+</odoo>

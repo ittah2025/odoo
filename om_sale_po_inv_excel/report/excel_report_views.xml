@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_export_sale_excel" model="ir.actions.report">
+        <field name="name">Sale Excel</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">om_sale_po_inv_excel.om_sale_excel_report</field>
+        <field name="report_file">om_sale_po_inv_excel.om_sale_excel_report</field>
+        <field name="print_report_name">'Sale - %s' % (object.name) or 'Sale Excel'</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_export_purchase_excel" model="ir.actions.report">
+        <field name="name">Purchase Excel</field>
+        <field name="model">purchase.order</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">om_sale_po_inv_excel.om_purchase_excel_report</field>
+        <field name="report_file">om_sale_po_inv_excel.om_purchase_excel_report</field>
+        <field name="print_report_name">(object.state in ('draft', 'sent') and 'Request for Quotation - %s' % (object.name) or
+                'Purchase Order - %s' % (object.name))</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_export_invoice_excel" model="ir.actions.report">
+        <field name="name">Invoice Excel</field>
+        <field name="model">account.move</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">om_sale_po_inv_excel.om_invoice_excel_report</field>
+        <field name="report_file">om_sale_po_inv_excel.om_invoice_excel_report</field>
+        <field name="print_report_name">'Invoice - %s' % (object.name) or 'Invoice Excel'</field>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    
+</odoo>

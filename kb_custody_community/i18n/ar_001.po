@@ -1,0 +1,540 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_custody_community
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-17 14:18+0000\n"
+"PO-Revision-Date: 2023-12-17 14:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Custody Name:</strong>"
+msgstr "اسم العهدة"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Employee:</strong>"
+msgstr "الموظف"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Property:</strong>"
+msgstr "نوع الاصل"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Reason:</strong>"
+msgstr "السبب"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Requested Date:</strong>"
+msgstr "تاريخ الطلب"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "<strong>Return Date:</strong>"
+msgstr "تاريخ الاعادة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_needaction
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_state
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_type_icon
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields.selection,name:kb_custody_community.selection__custody_details__kb_state__approved
+msgid "Approved"
+msgstr "موافقة"
+
+#. module: kb_custody_community
+#: model:ir.actions.act_window,name:kb_custody_community.action_asset_type
+#: model:ir.ui.menu,name:kb_custody_community.menu_asset_type
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_view_tree
+msgid "Asset Type"
+msgstr "نوع الأصول"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__kb_name_seq
+msgid "Asset Type ID"
+msgstr "رقم الاصل"
+
+#. module: kb_custody_community
+#: model:ir.model,name:kb_custody_community.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_attachment_count
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_company_id
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Company"
+msgstr "شركة"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Confirm"
+msgstr "موافق"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__create_uid
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__create_date
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.ui.menu,name:kb_custody_community.menu_custody_details
+#: model:res.groups,name:kb_custody_community.group_hr_custody
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_employee_form_smartbutton_inherit
+msgid "Custody"
+msgstr "العهدة"
+
+#. module: kb_custody_community
+#: model:ir.actions.act_window,name:kb_custody_community.action_custody_details
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_document
+msgid "Custody Details"
+msgstr "تفاصيل العهدة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_name
+msgid "Custody ID"
+msgstr "رقم العهدة"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_account_asset_form_custody
+msgid "Custody Info"
+msgstr "معلومات العهدة"
+
+#. module: kb_custody_community
+#: model:res.groups,name:kb_custody_community.group_hr_asset
+msgid "Custody Property"
+msgstr "خصائص العهدة"
+
+#. module: kb_custody_community
+#: model:ir.actions.report,name:kb_custody_community.custody_report
+msgid "Custody Report"
+msgstr "تقرير العهدة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_account_asset_asset__display_name
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__display_name
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__display_name
+#: model:ir.model.fields,field_description:kb_custody_community.field_hr_employee__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: kb_custody_community
+#: model:ir.model.fields.selection,name:kb_custody_community.selection__custody_details__kb_state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kb_custody_community
+#: model:ir.model,name:kb_custody_community.model_hr_employee
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_view_tree
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_account_asset_form_custody
+msgid "Employee"
+msgstr "موظف"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_follower_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_channel_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_partner_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__activity_type_icon
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_account_asset_asset__id
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__id
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__id
+#: model:ir.model.fields,field_description:kb_custody_community.field_hr_employee__id
+msgid "ID"
+msgstr "رقم"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__activity_exception_icon
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_needaction
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_unread
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_needaction
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_has_error
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_has_sms_error
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_has_error
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_is_follower
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_asset_id
+msgid "Kb Asset"
+msgstr "الاصل"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_asset_type_id
+msgid "Kb Asset Type"
+msgstr "نوع الاصل"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_account_asset_asset__kb_custody_ids
+msgid "Kb Custody"
+msgstr "العهدة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_hr_employee__kb_custody_count
+msgid "Kb Custody Count"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_employee_id
+msgid "Kb Employee"
+msgstr "الموظف"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_note
+msgid "Kb Note"
+msgstr "ملحوظة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_reason
+msgid "Kb Reason"
+msgstr "السبب"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_requested_date
+msgid "Kb Requested Date"
+msgstr "تاريخ الطلب"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_return_date
+msgid "Kb Return Date"
+msgstr "تاريخ العودة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_account_asset_asset____last_update
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type____last_update
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details____last_update
+#: model:ir.model.fields,field_description:kb_custody_community.field_hr_employee____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__write_uid
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__write_date
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_has_error
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__kb_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_summary
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_type_id
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Notes"
+msgstr "ملحوظات"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_needaction_counter
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_has_error_counter
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__message_unread_counter
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_view_tree
+msgid "Property"
+msgstr "خصائص"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Property Type"
+msgstr "نوع الخصائص"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: kb_custody_community
+#: model:ir.model.fields.selection,name:kb_custody_community.selection__custody_details__kb_state__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_view_tree
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_account_asset_form_custody
+msgid "Requested Date"
+msgstr "تاريخ الطلب"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__activity_user_id
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__activity_user_id
+msgid "Responsible User"
+msgstr "المسئول"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "Return"
+msgstr "اعادة"
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_account_asset_form_custody
+msgid "Return Date"
+msgstr "تاريخ العودة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields.selection,name:kb_custody_community.selection__custody_details__kb_state__returned
+msgid "Returned"
+msgstr "عاد"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_account_asset_asset__kb_show_asset_in_custody
+msgid "Show The Asset In Custody"
+msgstr "اظهر الأصل فى العهدة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__kb_state
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.view_account_asset_form_custody
+msgid "State"
+msgstr "الحالة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__activity_state
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__activity_exception_decoration
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_unread
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__message_unread_counter
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields.selection,name:kb_custody_community.selection__custody_details__kb_state__waiting_approval
+msgid "Waiting For Approval"
+msgstr "انتظار الموافقة"
+
+#. module: kb_custody_community
+#: model:ir.model.fields,field_description:kb_custody_community.field_asset_type__website_message_ids
+#: model:ir.model.fields,field_description:kb_custody_community.field_custody_details__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_custody_community
+#: model:ir.model.fields,help:kb_custody_community.field_asset_type__website_message_ids
+#: model:ir.model.fields,help:kb_custody_community.field_custody_details__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.asset_type_form_view
+msgid "asset Type"
+msgstr "نوع الاصل"
+
+#. module: kb_custody_community
+#: model:ir.model,name:kb_custody_community.model_asset_type
+msgid "asset.type"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.asset_Type_view_tree
+msgid "asset_Type_tree"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_form_view
+msgid "custody Details"
+msgstr "تفاصيل العهدة"
+
+#. module: kb_custody_community
+#: model:ir.model,name:kb_custody_community.model_custody_details
+msgid "custody.details"
+msgstr ""
+
+#. module: kb_custody_community
+#: model_terms:ir.ui.view,arch_db:kb_custody_community.custody_details_view_tree
+msgid "custody_details_tree"
+msgstr ""

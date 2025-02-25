@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_vender_payment_form_inherited" model="ir.ui.view">
+        <field name="name">register.vender.payment.form.inherited</field>
+        <field name="model">kb.vender.register.payment</field>
+        <field name="inherit_id" ref="kb_register_payment.customer_payment_typeform_view" />
+        <field name="arch" type="xml">
+            <field name="kb_state" position="attributes">
+                 <attribute name="statusbar_visible">draft,waiting,posted</attribute>
+            </field>
+            <xpath expr="//button[@name='action_confirm_payment']" position="before">
+                <field name="is_approval_user" invisible="1"/>
+                <button name="action_approve" attrs="{'invisible':['|',('kb_state', '!=', 'waiting'),('is_approval_user','=',False)]}" class="oe_highlight" string="Approve Payment" type="object"  />
+                <button name="%(kb_rejection_reason_action)d" attrs="{'invisible':['|',('kb_state', '!=', 'waiting'),('is_approval_user','=',False)]}" class="oe_highlight" string="Reject Payment" type="action"  />
+            </xpath>
+            <xpath expr="//field[@name='payment_method_line_id']" position="after">
+                <field name="approval_config_id" />
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page name="approvalIinfo" string="Approval Information">
+                        <group>
+                            <group name="next_approval" string="Next Approval">
+                                <field name="level" readonly="1"/>
+                                <field name="user_ids" readonly="1" widget='many2many_tags'/>
+<!--                                <field name="group_ids" readonly="1" widget='many2many_tags'/>-->
+                            </group>
+                            <group name="reject_info" string="Rejection Information">
+                                <field name="rejection_date" readonly="1" />
+                                <field name="reject_by" readonly="1" />
+                                <field name="reject_reason" readonly="1" />
+                            </group>
+                        </group>
+                        <div>
+                            <field name="approval_info_line" readonly="1" >
+                                <tree>
+                                    <field name="level" readonly="1" />
+                                    <field name="user_ids" readonly="1" />
+<!--                                    <field name="group_ids" readonly="1" />-->
+                                    <field name="status" widget="boolean_toggle" readonly="1" />
+                                    <field name="approval_date" readonly="1" />
+                                    <field name="approved_by" readonly="1" />
+                                    <field name="sh_payment_idv" invisible="1" readonly="1" />
+                                </tree>
+                            </field>
+                        </div>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="kb_outbound_waiting_approval_action" model="ir.actions.act_window">
+        <field name="name">Waiting Approval</field>
+        <field name="res_model">kb.vender.register.payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('kb_state','=','waiting'),('kb_payment_type','=','outbound')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face"></p>
+        </field>
+    </record>
+
+    <record id="kb_outbound_my_approval_action" model="ir.actions.act_window">
+        <field name="name">My Approval</field>
+        <field name="res_model">kb.vender.register.payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('is_approval_user','=',True),('kb_payment_type','=','outbound')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face"></p>
+        </field>
+    </record>
+
+    <menuitem
+        name="Waiting Payment Approval"
+        action="kb_outbound_waiting_approval_action"
+        id="kb_outbound_waiting_approval_action_menu"
+        parent="menu_vendor_payments_id"
+        sequence="4" />
+
+    <menuitem name="My Payment Approval"
+        action="kb_outbound_my_approval_action"
+        id="kb_outbound_my_approval_menu"
+        parent="menu_vendor_payments_id"
+        sequence="5" />
+</odoo>

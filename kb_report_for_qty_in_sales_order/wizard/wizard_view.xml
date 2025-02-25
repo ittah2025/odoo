@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="make_report_wizard_action_view_form" model="ir.ui.view">
+      <field name="name">sale.wizard</field>
+      <field name="model">sale.wizard</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <label for="product_ids" string="Products" style="font-weight:bold;"/>
+            <field name="product_ids" required="0" widget="many2many_tags"
+                   options="{'no_create_edit': True,'no_create': True, 'no_open': True}"/>
+            <group>
+              <field name="start_date"/>
+            </group>
+            <group>
+              <field name="end_date"/>
+            </group>
+          </group>
+          <footer>
+            <button name="get_returns_report" string="Get Excel" type="object" class="oe_highlight"/>
+            <button name="get_product_ids_report" string="Get PDF" type="object"
+                    class="oe_highlight"/>
+            <button special="cancel" string="Cancel" data-hotkey="z" type="object" class="btn-secondary"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_sales_wizard_report" model="ir.actions.act_window">
+      <field name="name">Wizard Report</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">sale.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+    </record>
+
+    <menuitem
+            id="menu_action_wizard"
+            name="Wizard Report"
+            parent="sale.sale_order_menu"
+            sequence="100"
+            groups="sales_team.group_sale_salesman"
+            action="action_sales_wizard_report"
+    />
+
+  </data>
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="remove_old_search_result" model="ir.cron">
+        <field name="name">Remove Old Search Result</field>
+        <field name="model_id" ref="model_sh_bus_search_result" />
+        <field name="state">code</field>
+        <field name="code">model.clear_data()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+
+    <record id="sale.email_template_edi_sale" model="mail.template">
+        <field name="report_template" ref="sh_bus_backend.ticket_report" />
+    </record>
+
+    <record id="sale.mail_template_sale_confirmation" model="mail.template">
+        <field name="report_template" ref="sh_bus_backend.ticket_report" />
+    </record>
+
+    <!-- Sequences for bus route -->
+    <record id="seq_route_order" model="ir.sequence">
+        <field name="name">Route</field>
+        <field name="code">sh.route.management</field>
+        <field name="prefix">RO</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <!-- Sequences for Trip -->
+    <record id="trip_route_order" model="ir.sequence">
+        <field name="name">Trip</field>
+        <field name="code">sh.bus.trip</field>
+        <field name="prefix">TR</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="search_result_seq" model="ir.sequence">
+        <field name="name">Trip</field>
+        <field name="code">sh.bus.search.result</field>
+        <field name="prefix"></field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+    <record id="seat_c1" model="available.seat.selection">
+        <field name="name">1</field>
+    </record>
+    <record id="seat_c2" model="available.seat.selection">
+        <field name="name">2</field>
+    </record>
+    <record id="seat_c3" model="available.seat.selection">
+        <field name="name">3</field>
+    </record>
+    <record id="seat_c4" model="available.seat.selection">
+        <field name="name">4</field>
+    </record>
+    <record id="seat_c5" model="available.seat.selection">
+        <field name="name">5</field>
+    </record>
+    <record id="seat_c6" model="available.seat.selection">
+        <field name="name">6</field>
+    </record>
+</odoo>

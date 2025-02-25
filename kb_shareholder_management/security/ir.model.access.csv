@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kb_shareholder_management_fields,access.kb.shareholder.management.fields,model_kb_shareholder_management_fields,group_shareholder_administration,1,1,1,1
+access_access_kb_shareholder_management_user,access.kb.shareholder.management.fields,model_kb_shareholder_management_fields,group_user_profile,1,0,0,0
+access_access_kb_sale_management,access_kb_sale_management,model_kb_sale_management,,1,1,1,1

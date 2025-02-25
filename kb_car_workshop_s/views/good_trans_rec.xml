@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Your comment-->
+    <record id="goods_report" model="ir.actions.act_window">
+        <field name="name">Goods Transfer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">goods_transfer</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Report
+            </p>
+        </field>
+    </record>
+
+    <!--goods list-->
+    <record id="goods_views_form" model="ir.ui.view">
+        <field name="name">goods_transfer.form</field>
+        <field name="model">goods_transfer</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+
+                        <group string="Goods Transfer Receipt">
+                            <field name="transferTo" />
+                            <field name="recip" />
+                            <field name="psite_1" />
+                            <field name="Addrs" />
+                            <field name="phon_1" />
+                            <field name="mail_E" />
+                        </group>
+
+                        <group string="Comment">
+
+                        <tr>
+                           <td style="border:1px solid black;">Kindly immediately return used or scrap items.
+                           appreciate your promp response.
+                           (don't throw anthing send all items)
+                           After received send hard or soft copy by email</td>
+                                
+                        </tr>
+
+                        </group>
+
+
+
+
+                    </group>
+                    <!--table form-->
+                    <notebook>
+                        <page string="Goods Transfer Receipt">
+
+                            
+                            <field name="goodtr_ids">
+                                <tree editable="bottom">
+                                    <field name="no" />
+                                    <field name="reportdiscr_2" />
+                                    <field name="qty_1" />
+                                    <field name="price_1" />
+
+                                </tree>
+                           
+
+                                <form>
+                                    <group>
+                                        <field name="no" />
+                                        <field name="reportdiscr_2" />
+                                        <field name="qty_1" />
+                                        <field name="price_1" />
+
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+
+
+                    </notebook>
+
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <!--Report view table-->
+    <record id="damage_report_treee" model="ir.ui.view">
+        <field name="name">goods_transfer.tree</field>
+        <field name="model">goods_transfer</field>
+        <field name="arch" type="xml">
+            <tree string="Reports">
+                <field name="transferTo" />
+                <field name="recip" />
+                
+                
+
+            </tree>
+
+        </field>
+    </record>
+
+<menuitem id="goods1_views"
+              name="Goods Transfer"
+              parent= "config"
+              action="goods_report"
+              sequence="5"/>
+
+
+</odoo>

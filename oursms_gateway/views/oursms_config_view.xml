@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sms_mail_server_oursms_formview" model="ir.ui.view">
+            <field name="name">sms.mail.server.oursms.config</field>
+            <field name="model">sms.mail.server</field>
+            <field name="inherit_id" ref="sms_notification.sms_mail_server_formview"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='conn_info']" position="after">
+                    <group string='Security And Authentication' > <!--attrs="{'invisible':[('gateway','!=','oursms')]}"-->
+                        <field name="username" attrs="{'required':[('gateway','=','oursms')]}"/>
+                        <field name="password" attrs="{'required':[('gateway','=','oursms')]}" password="True"/>
+                        <field name="token" attrs="{'required':[('gateway','=','oursms')]}" password="True"/>
+                        <field name="sender" attrs="{'required':[('gateway','=','oursms')]}"/>
+                        <button name="test_conn_oursms" string="Test Connection" type="object"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

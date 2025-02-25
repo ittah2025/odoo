@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+        <!-- This records For Complete Action status -->
+    <record id="completes_action_form" model="ir.ui.view">
+        <field name="name">complete action</field>
+        <field name="model">wizards_complete</field>
+        <field name="arch" type="xml">
+            <form string="Create Appointment">
+                <group>
+                    <field name="employeeComplete" />
+
+                </group>
+                <footer>
+                    <button name="update_orders_status_to_complete" string="Submit" type="object" class="btn-primary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="completes_wizard" model="ir.actions.act_window">
+        <field name="name">complete print</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizards_complete</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="completes_action_form" />
+        <field name="target">new</field>
+    </record>
+
+</odoo>

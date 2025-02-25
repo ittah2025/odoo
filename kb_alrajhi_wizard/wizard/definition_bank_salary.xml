@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="raajhi_bank_action_form" model="ir.ui.view">
+        <field name="name">print salary</field>
+        <field name="model">rajhi_salary</field>
+        <field name="arch" type="xml">
+            <form string="Create">
+                <group>
+                    <group>
+                        <field name="kb_definition_type" />
+                        <field name="employee_id" attrs="{'invisible':[('kb_definition_type', '=', 'employee_salary')]}"/>
+
+                    </group>
+
+                    <group >
+                        <field name="kb_sign_employee" attrs="{'invisible':[('kb_definition_type', '=', 'employee_salary')]}"/>
+                        <field name="kb_end_of_service" attrs="{'invisible':[('kb_definition_type', '!=', 'fix_salary')]}"/>
+                        <field name="kb_end_of_service_terminate" attrs="{'invisible':[('kb_definition_type', '!=', 'fix_salary')]}"/>
+                    </group>
+
+
+
+
+                </group>
+                <footer>
+                    <button name="print_wizard_pdf" string="Print" type="object" class="btn-primary" attrs="{'invisible':[('kb_definition_type', '=', 'employee_salary')]}"/>
+                    <button name="print_wizard_excel" string="Excel" type="object" class="btn-primary" attrs="{'invisible':[('kb_definition_type', '!=', 'employee_salary')]}"/>
+                    <button special="cancel" data-hotkey="z" string="Cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="salary_action_wizard" model="ir.actions.act_window">
+        <field name="name">print</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rajhi_salary</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="raajhi_bank_action_form" />
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id = "menu_raajhi_bank"
+              name = "Al raajhi bank Salary Definition"
+              action = "salary_action_wizard"
+              parent = "hr.menu_hr_root"
+              sequence = "99" />
+
+
+</odoo>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="menu_parent_withdrawal0" model="website.menu">
+            <field name="name">Parent withdrawal</field>
+            <field name="url">/parent/withdrawal</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence">55</field>
+        </record>
+        <template id="kb_school_withdrawal.parent_withdrawal_web_form" name="Parent withdrawal">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure">
+
+                    <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;" />
+                        <div class="o_we_bg_filter bg-black-50" />
+                        <div class="container">
+                            <h1>Parent withdrawal</h1>
+                        </div>
+                    </section>
+
+                    <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+                        <div class="container s_allow_columns">
+                            <div class="row">
+                                <br />
+                                <center>
+                                    <h1>
+                                        Parent withdrawal
+                                    </h1>
+                                    <br />
+                                </center>
+                                <div class="container">
+                                    <form id="parent_withdrawal_web_form" role="from" action="/parent/withdrawal_check" enctype="multipart/form-data"
+                                        method="POST">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+
+                                        <div style="position: relative; display: block; width: 100%; max-width: 1000px; margin: auto; padding: 10px; background-color: white; box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); border-radius: 5px;">
+                                            <h5>Honorable Parents, please enter your ID number or residence number</h5>
+
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                                data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label for="kb_id_w" class="col-form-label col-sm-auto s_website_form_label"
+                                                        style="width: 250px; text-align:left;">
+                                                        <span class="s_website_form_label_content">Parent ID / Iqama number</span>
+                                                        <span class="s_website_form_mark">*</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="tel" name="kb_id_w" pattern="[0-9]{10}"
+                                                            t-att-value="kb_id_w" id="kb_id_w" placeholder="Parent ID / Residence number"
+                                                            class="form-control" required=""
+                                                            title="Please Enter ID / Iqama number"
+                                                            maxlength="10" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-12 s_website_form_submit text-center"
+                                                data-name="Submit Button">
+                                                <div style="width: 200px;" class="s_website_form_label" />
+                                                <!-- <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a> -->
+                                                <button type="submit" id="get_student_data"
+                                                    class="btn btn-primary btn-lg s_website_form_send col-4 my-4">Search
+                                                </button>
+                                                <span id="s_website_form_result"></span>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </section>
+                </div>
+
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

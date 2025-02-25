@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_account_payment_form" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <field name="destination_journal_id" position="after">
+                    <field name="purchase_order" attrs="{'invisible':[('payment_type','=','in_bound')],'readonly':[('state','=','posted')]}" groups="kb_pr_po_levels.group_advance_payment"/>
+                </field>
+
+
+            </field>
+        </record>
+<!--     <menuitem name="Payment Request"
+        id="menu_main_payment_request"
+        sequence="257" groups="kb_pr_po_levels.group_advance_payment">
+        <menuitem id="menu_main_menu_p" name="Requests " sequence="1">
+            <menuitem id="menu_payment_request_2" action="account.action_account_payments_payable" sequence="1" groups="kb_pr_po_levels.group_advance_payment"/>
+        </menuitem>
+    </menuitem> -->
+
+</odoo>

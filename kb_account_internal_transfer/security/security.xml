@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+        <record id="module_internal_transfer" model="ir.module.category">
+            <field name="name">Internal Transfer</field>
+            <field name="description">Accounting</field>
+            <field name="sequence">22</field>
+        </record>
+
+        <record id="group_internal_of_administration" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="kb_account_internal_transfer.module_internal_transfer"/>
+        </record>
+    </data >
+</odoo >

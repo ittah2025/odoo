@@ -1,0 +1,489 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_bus_frontend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 04:24+0000\n"
+"PO-Revision-Date: 2020-10-26 04:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">Arrival : </strong>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">到达时间： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">To : </strong>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">至 ： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">1000</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">1000</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">100</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">100</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">2000</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">2000</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">30</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">30</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "<span class=\"total\">Total:</span>"
+msgstr "<span class=\"total\">总：</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Boarding Point : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">登机口： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Departure : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">出发时间： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Dropping Point : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">落点： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">From : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">来自： </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "AGE"
+msgstr "年龄"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "About Us"
+msgstr "关于我们"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Add one"
+msgstr "加一"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Arrival"
+msgstr "到达"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "BUSES"
+msgstr "巴士"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Book"
+msgstr "书"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Book Ticket"
+msgstr "订票"
+
+#. module: sh_bus_frontend
+#: model:website.menu,name:sh_bus_frontend.menu_bus_booking
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Bus Booking"
+msgstr "巴士订票"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "CUSTOMERS"
+msgstr "顾客"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Checkout"
+msgstr "查看"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose End Point"
+msgstr "选择终点"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose Fleet Type"
+msgstr "选择机队类型"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose Start Point"
+msgstr "选择起点"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Contact Us"
+msgstr "联系我们"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Customer Service"
+msgstr "客户服务"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Departure"
+msgstr "离开"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "EMAIL"
+msgstr "电子邮件"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Find Now"
+msgstr "立即寻找"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "From"
+msgstr "从"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "GENDER"
+msgstr "性别"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "GO"
+msgstr "走"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Image"
+msgstr "图片"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Invalid order."
+msgstr "无效的订单。"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Invalid signature data."
+msgstr "无效的签名数据。"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem Ipsum"
+msgstr "Lorem Ipsum"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet consectetur <span "
+"class=\"o_default_snippet_text\">adipiscing</span> elit"
+msgstr ""
+"Lorem ipsum dolor sit amet consectetur <span "
+"class=\"o_default_snippet_text\">adipiscing</span> elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem ipsum dolor sit amet consectetur adipiscing elit"
+msgstr "Lorem ipsum dolor sit amet consectetur adipiscing elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem ipsum dolor sit amet consectetur edipiscing elit"
+msgstr "Lorem ipsum dolor sit amet consectetur edipiscing elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+" quis nostrud exercitation ullamco"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+" quis nostrud exercitation ullamco"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
+"eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+" veniam."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
+"eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+" veniam."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Make Your Reservation"
+msgstr "进行预订"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "NAME"
+msgstr "名称"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "No Result Found !"
+msgstr "找不到结果！"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Online Booking"
+msgstr "网上订票"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Online Payment"
+msgstr "网上支付"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Operator"
+msgstr "操作员"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Order signed by %s"
+msgstr "订单签署人 %s"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "PASSENGER NAME"
+msgstr "乘客姓名"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Passenger Information"
+msgstr "旅客资讯"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Price"
+msgstr "价钱"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Quotation viewed by customer %s"
+msgstr "客户查看的报价 %s"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "ROUTES"
+msgstr "路线"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Regular Offers"
+msgstr "定期优惠"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Remaining Seats"
+msgstr "剩余座位"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Remove from cart"
+msgstr "从购物车中删除"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Remove one"
+msgstr "删除一个"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Route"
+msgstr "路线"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "SEAT NO."
+msgstr "座位号"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Search"
+msgstr "搜索"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Seat Booked"
+msgstr "预订座位"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Seat Selection Information"
+msgstr "座位选择信息"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Selected Seats ("
+msgstr "选定座位（"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Services"
+msgstr "服务"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Signature is missing."
+msgstr "签名丢失。"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "TICKETS SOLD"
+msgstr "票已售"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Testimonial"
+msgstr "感言"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "The order is not in a state requiring customer signature."
+msgstr "订单未处于需要客户签名的状态。"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "To"
+msgstr "至"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Total Seats"
+msgstr "总座位"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "image"
+msgstr "图片"

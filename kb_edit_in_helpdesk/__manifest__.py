@@ -1,0 +1,21 @@
+{
+    'name': 'help desk changes',
+    'version': '16.0.0',
+    'author': 'Knowledge bonds',
+    'website': 'knowledge-bonds.com',
+    "depends": ['odoo_website_helpdesk'],
+    'data': [
+        'security/kb_security.xml',
+        'security/ir.model.access.csv',
+        'data/kb_stage_data.xml',
+        'data/kb_email_template.xml',
+        'views/kb_helpdesk_fields_view.xml',
+    ],
+    'images': ['static/description/icon.png'],
+    'demo': [],
+    'installable': True,
+    'license': 'LGPL-3',
+    'auto_install': False,
+    'qweb': [],
+    'application': True,
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_company_doce_type" model="ir.actions.act_window">
+        <field name="name">Company documents type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.company.documents.info</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="document_type_form" model="ir.ui.view">
+        <field name="name">kb.company.documents.info.form.view</field>
+        <field name="model">kb.company.documents.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="kb_documentType"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_type_tree" model="ir.ui.view">
+        <field name="name">kb.company.documents.info.tree</field>
+        <field name="model">kb.company.documents.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_documentType"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

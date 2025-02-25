@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="bus_seat_booking_action" model="ir.actions.client">
+        <field name="name">Bus Seat Layout</field>
+        <field name="target">new</field>
+        <field name="tag">busBoard.main</field>
+    </record>
+    <record id="bus_book_seat_action" model="ir.actions.client">
+        <field name="name">Book Seat</field>
+        <field name="target">new</field>
+        <field name="tag">busBoard.book</field>
+    </record>
+    <record id="sh_bus_type_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.type.form</field>
+        <field name="model">sh.bus.type</field>
+        <field name="arch" type="xml">
+            <form string="Fleet Type">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="layout" required="1" />
+                            <field name="row_count" string="Total Row" />
+                            <field name="col_count" string="Max Seat Number in Single row" />
+
+                            <button name="%(sh_bus_backend.bus_seat_booking_action)d" string="Check Layout" class="btn-primary" type="action" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_bus_type_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.type.tree</field>
+        <field name="model">sh.bus.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+                <field name="layout" string="Layout" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_bus_type_search_view" model="ir.ui.view">
+        <field name="name">sh.bus.type.search</field>
+        <field name="model">sh.bus.type</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <group expand="0" string="Group by...">
+                    <filter string="Fleet Name" name="name" context="{'group_by': 'name'}" />
+                    <filter string="Layout" name="layout" context="{'group_by': 'layout'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_bus_type_view_actions" model="ir.actions.act_window">
+        <field name="name">Fleet Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_bus_amenities_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.amenities.form</field>
+        <field name="model">sh.bus.amenities</field>
+        <field name="arch" type="xml">
+            <form string="Bus Amenities">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="description" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_bus_amenities_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.amenities.tree</field>
+        <field name="model">sh.bus.amenities</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+                <field name="description" string="Description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_bus_amenities_search_view" model="ir.ui.view">
+        <field name="name">sh.bus.amenities.search</field>
+        <field name="model">sh.bus.amenities</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <group expand="0" string="Group by...">
+                    <filter string="Bus Amenities" name="name" context="{'group_by': 'name'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_bus_amenities_view_actions" model="ir.actions.act_window">
+        <field name="name">Bus Amenities</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.amenities</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_bus_point_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.point.form</field>
+        <field name="model">sh.bus.point</field>
+        <field name="arch" type="xml">
+            <form string="Bus Point">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="point_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_bus_point_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.point.tree</field>
+        <field name="model">sh.bus.point</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_bus_point_search_view" model="ir.ui.view">
+        <field name="name">sh.bus.point.search</field>
+        <field name="model">sh.bus.point</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <group expand="0" string="Group by...">
+                    <filter string="Bus Point" name="name" context="{'group_by': 'name'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_bus_point_view_actions" model="ir.actions.act_window">
+        <field name="name">Bus point</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.point</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_route_management_form_view" model="ir.ui.view">
+        <field name="name">sh.route.management.form</field>
+        <field name="model">sh.route.management</field>
+        <field name="arch" type="xml">
+            <form string="Route Management">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="fleet_id" required="1" />
+                            <field name="baording_id" required="1" />
+                            <field name="dropping_id" required="1" />
+                        </group>
+                        <group>
+                            <field name="str_time" required="1" widget="float_time" />
+                            <field name="end_time" required="1" widget="float_time" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Route">
+                            <label for="route_line_ids" string="Route Lines"></label>
+                            <field name="route_line_ids" widget="section_and_note_one2many">
+                                <tree editable="bottom">
+                                    <field name="bording_from" required="1" />
+                                    <field name="to" required="1" />
+                                    <field name="start_times" widget="float_time" required="1" />
+                                    <field name="end_times" widget="float_time" required="1" />
+                                    <field name="price" required="1" sum="total" />
+                                </tree>
+                            </field>
+                            <label for="route_line_ids" string="Special Price"></label>
+                            <field name="special_price_ids" widget="section_and_note_one2many">
+                                <tree editable="bottom">
+                                    <field name="bording_from" required="1" />
+                                    <field name="to" required="1" />
+                                    <field name="price" required="1" sum="total" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_route_management_tree_view" model="ir.ui.view">
+        <field name="name">sh.route.management.tree</field>
+        <field name="model">sh.route.management</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="fleet_id" required="1" />
+                <field name="baording_id" required="1" />
+                <field name="dropping_id" required="1" />
+                <field name="str_time" required="1" widget="float_time" />
+                <field name="end_time" required="1" widget="float_time" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_route_management_search_view" model="ir.ui.view">
+        <field name="name">sh.route.management.search</field>
+        <field name="model">sh.route.management</field>
+        <field name="arch" type="xml">
+            <search string="Operations">
+                <field name="name" />
+                <group expand="0" string="Group by...">
+                    <filter string="Route" name="name" context="{'group_by': 'name'}" />
+                    <filter string="Dropping Point" name="dropping_id" context="{'group_by': 'dropping_id'}" />
+                    <filter string="Boarding Point" name="baording_id" context="{'group_by': 'baording_id'}" />
+                    <filter string="Start Time" name="str_time" context="{'group_by': 'str_time'}" /><filter string="End Time" name="end_time" context="{'group_by': 'end_time'}" />
+                    <filter string="Bus" name="fleet_id" context="{'group_by': 'fleet_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_route_management_view_actions" model="ir.actions.act_window">
+        <field name="name">Route Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.route.management</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_bus_brand_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.brand.form</field>
+        <field name="model">sh.bus.brand</field>
+        <field name="arch" type="xml">
+            <form string="Bus Brand">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_bus_brand_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.brand.tree</field>
+        <field name="model">sh.bus.brand</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Brand Name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_bus_brand_search_view" model="ir.ui.view">
+        <field name="name">sh.bus.brand.search</field>
+        <field name="model">sh.bus.brand</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <group expand="0" string="Group by...">
+                    <filter string="Brands Name" name="name" context="{'group_by': 'name'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_bus_brand_view_actions" model="ir.actions.act_window">
+        <field name="name">Bus Brand</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.brand</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_bus_trip_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.trip.form</field>
+        <field name="model">sh.bus.trip</field>
+        <field name="arch" type="xml">
+            <form string="Bus Trip" create="0" edit="0" delete="0">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_booked_seat" type="object" icon="fa-user" class="oe_stat_button">
+                            <field name="booked_seat" string="Booked Seat" widget="statinfo" />
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="name" string="Trip Reference" />
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="route" readonly="1" />
+                            <field name="bus_id" readonly="1" />
+                            <field name="trip_date" readonly="1" />
+                            <field name="bording_from" readonly="1" />
+                            <field name="to" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="trip_start_time" readonly="1" widget="float_time" />
+                            <field name="trip_end_time" readonly="1" widget="float_time" />
+
+                            <field name="total_seat" />
+                            <field name="seat_booked" />
+                            <field name="remaining_seats" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Booked Seats" invisible="1">
+                            <field name="booked_seat_ids">
+                                <tree> <field name="name" /><field name="seat_no" /><field name="bus_id" /> </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_bus_trip_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.trip.tree</field>
+        <field name="model">sh.bus.trip</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0">
+                <field name="name" string="Trip Reference" readonly="1" />
+                <field name="route" readonly="1" />
+                <field name="bus_id" readonly="1" />
+                <field name="trip_date" readonly="1" />
+                <field name="bording_from" readonly="1" />
+                <field name="to" readonly="1" />
+
+                <field name="trip_start_time" readonly="1" widget="float_time" />
+                <field name="trip_end_time" readonly="1" widget="float_time" />
+
+                <field name="total_seat" />
+                <field name="seat_booked" />
+                <field name="remaining_seats" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_bus_trip_search_view" model="ir.ui.view">
+        <field name="name">ssh.bus.trip.search</field>
+        <field name="model">sh.bus.trip</field>
+        <field name="arch" type="xml">
+            <search string="Bus Trip">
+                <field name="route" />
+                <group expand="0" string="Group by...">
+                    <filter string="Route Name" name="route" context="{'group_by': 'route'}" />
+                    <filter string="Bus" name="bus_id" context="{'group_by': 'bus_id'}" />
+                    <filter string="Trip Date" name="trip_date" context="{'group_by': 'trip_date'}" />
+                    <filter string="Start Time" name="trip_start_date" context="{'group_by': 'trip_start_time'}" />
+                    <filter string="End Time" name="trip_end_date" context="{'group_by': 'trip_end_time'}" />
+                    <filter string="Total Seats" name="total_seat" context="{'group_by': 'total_seat'}" />
+                    <filter string="Seat Booked" name="seat_booked" context="{'group_by': 'seat_booked'}" />
+                    <filter string="Remaining Seats" name="remaining_seats" context="{'group_by': 'remaining_seats'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_bus_trip_view_actions" model="ir.actions.act_window">
+        <field name="name">Bus Trip</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.trip</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="sh_bus_search_result_form_view" model="ir.ui.view">
+        <field name="name">sh.bus.search.result.form</field>
+        <field name="model">sh.bus.search.result</field>
+        <field name="arch" type="xml">
+            <form string="Bus Trip">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="route" required="1" />
+                            <field name="trip_date" required="1" />
+                            <field name="trip_start_date" required="1" widget="float_time" />
+                            <field name="trip_end_date" required="1" widget="float_time" />
+                        </group>
+                        <group>
+                            <field name="bus_id" required="1" />
+                            <field name="total_seat" required="1" />
+                            <field name="seat_booked" required="1" />
+                            <field name="remaining_seats" required="1" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Booked Seats">
+                            <field name="booked_seat_ids">
+                                <tree> <field name="name" /><field name="seat_no" /> </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_bus_search_result_tree_view" model="ir.ui.view">
+        <field name="name">sh.bus.search.result.tree</field>
+        <field name="model">sh.bus.search.result</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0">
+                <field name="route" string="Route" />
+                <field name="trip_date" />
+                <field name="bording_from" />
+                <field name="to" />
+                <field name="bus_id" />
+                <field name="trip_start_date" widget="float_time" />
+                <field name="trip_end_date" widget="float_time" />
+                <field name="price" />
+                <field name="total_seat" />
+                <field name="seat_booked" />
+                <field name="remaining_seats" />
+                <button name="%(sh_bus_backend.bus_book_seat_action)d" string="Book" type="action" class="btn-primary"></button>
+            </tree>
+        </field>
+    </record>
+    <record id="sh_bus_search_result_actions" model="ir.actions.act_window">
+        <field name="name">Bus Search Result</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.bus.search.result</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="bus_bookings_menu" name="Bus Management" groups="sh_bus_backend.sh_bus_user_group" />
+
+    <menuitem id="configuration_menu" name="Configuration" parent="bus_bookings_menu" sequence="100" />
+
+    <menuitem id="route_management_menu" name="Route Management" parent="bus_bookings_menu" action="sh_route_management_view_actions" />
+
+    <menuitem id="bus_point_menu" name="Bus Point" parent="configuration_menu" action="sh_bus_point_view_actions" />
+
+    <menuitem id="bus_amenities_menu" name="Bus Amenities" parent="configuration_menu" action="sh_bus_amenities_view_actions" />
+
+    <menuitem id="fleet_types_menu" name="Fleet Type" parent="configuration_menu" action="sh_bus_type_view_actions" sequence="2" />
+    <menuitem id="bus_brand_menu" name="Bus Brand" parent="configuration_menu" action="sh_bus_brand_view_actions" sequence="2" />
+
+    <menuitem id="call_fleets_menu" name="Buses" parent="bus_bookings_menu" action="fleet.fleet_vehicle_action" sequence="3" />
+
+    <menuitem id="bus_trip_menu" name="Bus Trip" parent="bus_bookings_menu" action="sh_bus_trip_view_actions" />
+
+    <menuitem id="bus_booking_wizard_menu" name="Book Bus Ticket" parent="bus_bookings_menu" action="sh_bus_booking_wizard_action" />
+</odoo>

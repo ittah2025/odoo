@@ -1,0 +1,18 @@
+<odoo >
+    <data >
+        <record model = "ir.ui.view" id = "employee_fields_form2" >
+            <field name = "name" >employee fields Form View</field >
+            <field name = "model" >hr.employee</field >
+            <field name = "inherit_id" ref = "hr.view_employee_form" />
+            <field name = "arch" type = "xml" >
+
+
+                <xpath expr = "//field[@name='coach_id']/.." position = "after" >
+                        <group>
+                            <field name = "carshop_employee" />
+                        </group >
+                    </xpath >
+            </field >
+        </record >
+    </data >
+</odoo >

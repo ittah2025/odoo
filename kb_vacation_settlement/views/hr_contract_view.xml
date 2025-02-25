@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_hr_contract_inherit" model="ir.ui.view">
+        <field name="name">hrcontract_inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field  name="arch" type="xml">
+              <xpath expr="//page[@name='information']" position="after">
+                <page string="Information">
+                    <group>
+                    <group string="Iqama Information">
+                        <field name="Iqama_price" />
+                        <field name="Iqama_start" />
+                        <field name="Iqama_exp" />
+                    </group>
+                    <group string="Visa Information">
+                          <field name="Visa_price" />
+                         <field name="Visa_start" />
+                    </group>
+                    <group  string="Work Permit Information">
+                          <field name="Work_Permit_price" />
+                         <field name="Work_Permit_start" />
+                    </group>
+                    <group string="Health Ins Information">
+                          <field name="Health_Ins_price" />
+                         <field name="Health_Ins_start" />
+                        <field name="Health_Ins_exp" />
+                    </group>
+                    <group string="GOSI Ins Information">
+                          <field name="GOSI_price" />
+                         <field name="GOSI_start" />
+                        <field name="GOSI_exp" />
+                    </group>
+                     <group string="Health certificate">
+                         <field name="Health_certificate_price" />
+                    </group>
+                    </group>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

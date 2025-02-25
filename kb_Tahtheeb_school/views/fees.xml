@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_fees" model="ir.actions.act_window">
+        <field name="name">Fees </field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fees</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new fees
+            </p>
+        </field>
+    </record>
+
+    <record id="view_fees_form" model="ir.ui.view">
+        <field name="name">fees.form</field>
+        <field name="model">fees</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="payments" string="Calculate" type="object" class="btn btn-primary"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                     <button name="action_open_invoice" class="oe_stat_button" type="object" icon="fa-pencil-square-o">
+                            <field string="Invoice" name="invoice_ids_num" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="student_id" />
+                        </group>
+
+                    </group>
+                    <group>
+                        <group>
+                            <field name="siblings" />
+                        </group>
+                        <group>
+                            <field name="student_ID" />
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Information">
+                            <field name="date" />
+                            <field name="trimester" />
+                            <field name="academic_id" />
+
+                        </group>
+                        <group string="Stander Information">
+                            <field name="student_grade" />
+                            <field name="student_nationality" />
+                        </group>
+                        <group string="Fees Structure">
+                            <field name="structure_id" />
+                            <field name="payment_type" />
+                             <field name="paymentNumber" attrs="{'invisible':[('payment_type','!=','month')]}" />
+                             <field name="has_dicount"/>
+                              <field name="journal_id"/>
+                        </group>
+
+                    </group>
+                    <notebook colspan="4">
+                            <page string="Fees Structure">
+                                <field name="fees_line_ids" nolabel="1" colspan="2">
+                                    <tree string="Fees Structure" editable="bottom">
+                                        <field name="name" />
+                                        <field name="code" />
+                                        <field name="account" />
+                                        <field name="quantity" />
+                                        <field name="tax" />
+                                        <field name="discount" />
+                                        <field name="amount" />
+                                        <field name="subtotal" />
+                                        <field name="fees_line_id" invisible="1" />
+            
+                                    </tree>
+                                    <form string="Fees Structure">
+                                        <group col="4" colspan="4">
+                                            <field name="name" />
+                                            <field name="name" />
+                                            <field name="code" />
+                                            <field name="account" />
+                                            <field name="quantity" />
+                                            <field name="tax" />
+                                            <field name="discount" />
+                                            <field name="amount" />
+                                            <field name="subtotal" />
+                                            <field name="fees_line_id" invisible="1" />
+                                        </group>
+                                    </form>
+                                </field>
+                                <group>
+                                <group>
+                                    <field name="Total" />
+                                    <field name="taxTotal" />
+                                    <field name="netTotal" />
+                                </group>
+                                </group>
+                            </page>
+                        <page string="Siblings">
+                                <field name="siblings_line_ids" nolabel="1" colspan="2">
+                                    <tree string="Siblings" editable="bottom">
+                                        <field name="sr"/>
+                                        <field name="student_id" string="Student Name"/>
+                                        <field name="studentID" />
+                                        <field name="admissionDate" />
+                                        <field name="siblings_line_id" invisible="1" />
+                                    </tree>
+                                </field>
+                            </page>
+                          <page string="Payments">
+                                <field name="payments_line_ids" nolabel="1" colspan="2">
+                                    <tree string="Payments" editable="bottom">
+                                        <field name="sr"/>
+                                        <field name="payment_date" />
+                                        <field name="total" />
+                                         <button string="Create Invoice" name="create_invoices" type="object" attrs="{'invisible':[('isPaid','=',True)]}" />
+                                        <field name="isPaid" />
+                                        <field name="payments_line_id" invisible="1" />
+                                    </tree>
+                                </field>
+                               <group class="oe_subtotal_footer oe_right" colspan="2" >
+                                <field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                <field name="total_paid_amount" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                <field name="balance_amount" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                   <group>
+                                        <group class="oe_subtotal_footer oe_right" colspan="2" >
+                                            <field name="final_total" widget="monetary" />
+                                            <field name="subFinal_total" widget="monetary" />
+                                        </group>
+                                    </group>
+                            </group>
+                            </page>
+                    </notebook>
+
+                </sheet>
+                
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+
+       
+
+    </record>
+
+
+    <record id="view_fees_tree" model="ir.ui.view">
+        <field name="name">fees.tree</field>
+        <field name="model">fees</field>
+        <field name="arch" type="xml">
+            <tree string="fees">
+                <field name="student_id" />
+                <field name="date" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_product_extend_form_view">
+            <field name="name">product.template.doc.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='general_information']" position="after">
+                    <page string="Local Analytic Distribution">
+                    </page>
+                </xpath>
+            </field>
+    </record>
+
+    <menuitem id="fees_submenu" name="Fees" parent="fees_menu" action="action_fees" sequence="10" />
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--created by Mujtaba-->
+    <template id="invoice_product_inherit" inherit_id="l10n_gcc_invoice.arabic_english_invoice">
+    <xpath expr="//th[@name='th_description']" position="after">
+           <th name="th_customerCode" class="text-end">
+               <span>
+                   Customer Code
+               </span>
+               <br/>
+               <span>
+                   رقم العميل
+               </span>
+           </th>
+    </xpath>
+<!--        line.product_id-->
+    <xpath expr="//td[@name='account_invoice_line_name']" position="after">
+           <td class="text-center">
+               <span class="text-nowrap" t-esc="line.kb_vendor_id.kb_code"/>
+           </td>
+    </xpath>
+</template>
+</odoo>
+

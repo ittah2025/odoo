@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="continuity_desire_statement_action" model="ir.actions.report">
+        <field name="name">نموذج بيان الرغبة بالاستمرارية</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.continuity_desire_statement_template</field>
+        <field name="report_file">kb_hr_tahtheeb.continuity_desire_statement_template</field>
+        <field name="print_report_name">'نموذج بيان الرغبة بالاستمرارية'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="continuity_desire_statement_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <div>
+                    <style>
+                        body {
+                        font-family: 'Arial', sans-serif;
+                        direction: rtl;
+                        text-align: right;
+                        }
+
+                        .header {
+                        text-align: center;
+                        margin-bottom: 20px;
+                        }
+
+                        .header img {
+                        width: 150px;
+                        vertical-align: middle;
+                        }
+
+                        h4 {
+                        text-align: center;
+                        margin-bottom: 40px;
+                        font-weight: bold;
+                        color: #000 !important;
+                        }
+
+                        .section {
+                        margin-bottom: 15px;
+                        line-height: 1.6;
+                        font-size: 20px;
+                        }
+
+                        .table-content {
+                        width: 100%;
+                        border: 1px solid #000;
+                        border-collapse: collapse;
+                        margin-bottom: 20px;
+                        }
+
+                        .table-content td {
+                        border: 1px solid #000;
+                        padding: 10px;
+                        vertical-align: top;
+                        }
+
+                        .line-box {
+                        margin-top: 10px;
+                        }
+
+                        .line-box span {
+                        display: block;
+                        border-bottom: 1px dotted #000;
+                        height: 20px;
+                        margin-top: 5px;
+                        width: 100%;
+                        }
+
+                        .table-container {
+                        width: 100%;
+                        max-width: 100%;
+                        }
+
+                        .table-section {
+                        border: 1px solid #000;
+                        margin-top: 20px;
+                        width: 100%;
+                        border-collapse: collapse;
+                        table-layout: fixed;
+                        font-size: 20px;
+                        }
+
+                        .table-section th, .table-section td {
+                        border: 1px solid #000;
+                        padding: 10px;
+                        text-align: center;
+                        vertical-align: middle;
+                        }
+
+                        .checkbox-group {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px;
+                        }
+
+                        .checkbox-group label {
+                        margin: 0 10px;
+                        }
+
+                        .remark {
+                        text-align: right;
+                        font-size: 20px;
+                        }
+
+                        .footer-box {
+                        margin-top: 20px;
+                        }
+
+                        <!-- .footer-box .double-line {
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: center;
+                        } -->
+
+                        .footer-box .line {
+                        width: 25%;
+                        }
+
+                        .footer-box .label {
+                        margin: 5px 0;
+                        font-weight: bold;
+                        }
+
+                        .clear {
+                        clear: both;
+                        }
+                    </style>
+
+
+                    <h4>((نموذج بيان الرغبة بالاستمرارية 2024- 2025))</h4>
+
+
+                    <p class="section">
+                        السادة / إدارة الموارد البشرية بشركة التهذيب للخدمات التعليمية
+                        <span style="margin-right: 80px;">المحترمين</span>
+                        <br/>
+                        مقدم / ة الطلب:&#160;
+                        <t t-foreach="employee_list" t-as="employee">
+                            <t t-esc="employee['employee_name']"/>
+                        </t>
+                        &#160;&#160;&#160;&#160; الوظيفة:&#160;
+                        <span t-esc="employee['job_id']"/>
+                        &#160;&#160;&#160;&#160; المدرسة:
+                        <span t-esc="employee['kb_branchName']"/>
+                    </p>
+
+
+                    <table class="table-content">
+                        <tr>
+                            <td style="width: 50%; text-align: center;font-size: 20px;">
+                                <label>
+                                    <input type="checkbox"/>
+                                    أرغب في استمرار العمل للعام الدراسي القادم
+                                </label>
+                            </td>
+                            <td style="width: 50%; text-align: center;font-size: 20px;">
+                                <label>
+                                    <input type="checkbox"/>
+                                    لا أرغب في استمرار العمل للعام الدراسي القادم للأسباب التالية:
+                                </label>
+                                <div class="line-box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="footer-box">
+                        <div class="double-line col-6" style="font-size: 20px;">
+                            <span class="label">تاريخ تقديم الطلب:</span>
+                            <span t-esc="form_data['date']"/>
+                            <span class="line"></span>
+                            <span>م</span>
+                        </div>
+                        <div class="double-line col-6" style="margin-top: 15px;font-size: 20px;">
+                            <span class="label">توقيع مقدم / ة الطلب: .........................................</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <p style="font-weight: bold; margin-top: 40px;font-size: 18px;">** اعتماد إدارة الشركة </p>
+                        <table class="table-section">
+                            <tr style="font-size: 20px;">
+                                <th colspan="2">مدير الشؤون التعليمية والتدريب</th>
+                                <th colspan="2">الموارد البشرية</th>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom-color: #fff;" colspan="2">
+                                    <p>....................................................
+                                    </p>
+                                    <p>....................................................
+                                    </p>
+                                </td>
+                                <td style="border-bottom-color: #fff;" colspan="2">
+                                    <p>....................................................
+                                    </p>
+                                    <p>....................................................
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 20px;">
+                                <td colspan="2">التوقيع: .....................................</td>
+                                <td colspan="2">التوقيع: .....................................</td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <p style="font-size: 20px;"><strong>** الموارد البشرية والعلاقات الحكومية </strong></p>
+                        <table class="table-section">
+                            
+                            <tr>
+                                <td colspan="2" style="font-size: 18px;">
+                                    <label>
+                                        <input type="checkbox"/>&#160;&#160;
+                                        طي قيد الموظف
+                                    </label>
+                                </td>
+                                <td colspan="2" style="font-size: 18px;">
+                                    <label>
+                                        <input type="checkbox"/>&#160;&#160;
+                                        اصدار تأشيرة الخروج النهائي
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 18px;">
+                                <td>الاسم: ...............</td>
+                                <td>التوقيع: ................</td>
+                                <td>الاسم: ................</td>
+                                <td>التوقيع: .................</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <p class="remark">
+                        ملاحظة: عقد العمل السعودي - غير محدد، يتطلب تقديم استقالة
+                        <br/>
+                        عقد العمل الأجنبي - محدد المدة، يتطلب تقديم استقالة
+                    </p>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg" style="width: 1400px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_upload_xlsx_wizard" model="ir.ui.view">
+        <field name="name">upload_xlsx_wizard.form</field>
+        <field name="model">upload_xlsx_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select the excel file">
+                <group>
+<!--                    <group string="Upload Excel">-->
+<!--                        <field name="kb_excel_file"/>-->
+<!--                        <button name="export_template" type="object" string="Export Template" class="btn-primary"/>-->
+<!--                        <a href="/xlsx_file/invoice_template.xls">Download the template from here</a>-->
+<!--                        <a role="button" class="btn btn-primary d-none d-md-inline-block" href="/xlsx_file/invoice_template.xls" target="_blank" aria-label="Print" title="Print"><i class="fa fa-print"></i> Print</a>-->
+<!--                    </group>-->
+                </group>
+                <group>
+                    <group string="Download the template" colspan="99"  >
+                        <field name="kb_invoice" widget="many2many_tags" options="{'no_create_edit': True, 'no_create':True, 'no_open':True}" />
+                        <button name="export_template" type="object" string="Export Template" class="btn-primary" />
+                        <h5>You can download the template from here</h5>
+                    </group>
+                </group>
+
+                <group string="Upload Excel">
+                        <field name="kb_excel_file"/>
+                    </group>
+
+                <footer>
+                    <button name="import_excel" type="object" string="Upload" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="upload_xlsx_action" model="ir.actions.act_window">
+        <field name="name">Upload excel</field>
+        <field name="res_model">upload_xlsx_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_upload_xlsx_wizard"/>
+    </record>
+
+
+    <menuitem id="menu_upload_xlsx_wizard"
+              name="Pay the invoices"
+              sequence="100"
+              parent="account.menu_finance"/>
+
+    <menuitem id="menu_upload_xlsx_wizard2"
+              name="Pay by excel"
+              sequence="100"
+              action="upload_xlsx_action"
+              parent="menu_upload_xlsx_wizard"/>
+
+</odoo>

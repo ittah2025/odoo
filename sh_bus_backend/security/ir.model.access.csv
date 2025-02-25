@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_bus_type,sh.bus.type,model_sh_bus_type,base.group_user,1,1,1,1
+access_sh_bus_amenities,sh.bus.amenities,model_sh_bus_amenities,base.group_user,1,1,1,1
+access_sh_bus_point,sh.bus.point,model_sh_bus_point,base.group_user,1,1,1,1
+access_sh_route_management,sh.route.management,model_sh_route_management,base.group_user,1,1,1,1
+access_sh_route_line,sh.route.line,model_sh_route_line,base.group_user,1,1,1,1
+access_sh_bus_brand,access_sh_bus_brand,model_sh_bus_brand,base.group_user,1,1,1,1
+access_sh_bus_trip,access_sh_bus_trip,model_sh_bus_trip,base.group_user,1,1,1,1
+access_bus_seat_arrangement,access_bus_seat_arrangement,model_bus_seat_arrangement,base.group_user,1,1,1,1
+access_available_seat_selection,access_available_seat_selection,model_available_seat_selection,base.group_user,1,1,1,1
+access_bus_booked_seat,access_bus_booked_seat,model_bus_booked_seat,base.group_user,1,1,1,1
+access_sh_bus_search_result,access_sh_bus_search_result,model_sh_bus_search_result,base.group_user,1,1,1,1
+access_sh_special_price,access_sh_special_price,model_sh_special_price,base.group_user,1,1,1,1
+access_sh_location_point,access_sh_location_point,model_sh_location_point,base.group_user,1,1,1,1
+access_sh_bus_booking_wizard,access_sh_bus_booking_wizard,model_sh_bus_booking_wizard,base.group_user,1,1,1,1

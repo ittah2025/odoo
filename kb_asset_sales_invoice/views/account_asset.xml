@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_asset_asset_form_inherit" model="ir.ui.view">
+        <field name="name">account.asset.asset.inherit</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='set_to_draft']" position="after">
+                <button name="sales_invoice_from_asset" attrs="{'invisible': [('invoice_count' , '>', 0)]}"
+                        class="btn-primary" string="Sales Invoice" type="object"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button class="oe_stat_button" attrs="{'invisible': [('invoice_count' , '=', 0)]}"
+                        name="open_invoice" type="object" icon="fa-money">
+                    <field string="Invoice" name="invoice_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

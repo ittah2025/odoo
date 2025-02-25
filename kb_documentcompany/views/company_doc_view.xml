@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="company_data_reminder" model="ir.cron">
+        <field name="name">HR Company Data Expiration</field>
+        <field name="model_id" ref="model_hr_company_document"/>
+        <field name="state">code</field>
+        <field name="code">model.mail_reminder()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+    </record>
+
+    <record model='ir.ui.view' id='company_document_form_view'>
+        <field name="name">hr.company.document.form</field>
+        <field name="model">hr.company.document</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="document_name"/>
+                            <field name="doc_attachment_id1" widget="many2many_binary" class="oe_inline"/>
+<!--                            <field name="employee_ref" invisible="1"/>-->
+                        </group>
+                        <group>
+                            <field name="issue_date"/>
+                            <field name="expiry_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='company_document_tree_view'>
+        <field name="name">hr.company.document.tree</field>
+        <field name="model">hr.company.document</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="issue_date"/>
+                <field name="expiry_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_company_document_inherit_form_view">
+        <field name="name">hr.company.form.view</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+    
+             <xpath expr="//field[@name='logo']" position="after">
+                    <!-- <field name="id" invisible="1"/> -->
+                    <div class="oe_button_box" name="button_box">
+                            <button name="document_view" type="object"  class="oe_stat_button" icon="fa-list-ul">
+                                <field string="Documents" name="document_count" widget="statinfo"/>
+                            </button>
+                    </div>
+            </xpath>
+          
+        </field>
+    </record>
+
+</odoo>

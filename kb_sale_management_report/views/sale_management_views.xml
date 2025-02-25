@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_sale_management_form" model="ir.ui.view">
+        <field name="name">sale.management.form</field>
+        <field name="model">kb.sale.management</field>
+        <field name="arch" type="xml">
+            <form string="Sale Management">
+                <header>
+                    <button name="%(action_report_sale_management)d" type="action" string="Print PDF" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="transaction_date"/>
+                        <field name="purchaser"/>
+                        <field name="seller"/>
+                        <field name="number_of_shares"/>
+                        <field name="price"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

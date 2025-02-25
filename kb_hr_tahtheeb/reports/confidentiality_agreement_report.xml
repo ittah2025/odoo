@@ -1,0 +1,200 @@
+<odoo>
+    <record id="confidentiality_agreement_action" model="ir.actions.report">
+        <field name="name">اتفاقية سرية المعلومات</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.confidentiality_agreement_template</field>
+        <field name="report_file">kb_hr_tahtheeb.confidentiality_agreement_template</field>
+        <field name="print_report_name">'اتفاقية سرية المعلومات'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="confidentiality_agreement_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    src: url("/kb_hr_tahtheeb/static/scss/custom-font.ttf") format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh', sans-serif;
+                    direction: rtl;
+                    line-height: 1.8;
+                    margin: 0;
+                    padding: 0;
+                    }
+                    .page {
+                    padding: 20px;
+                    font-family: 'Droid Naskh';
+                    }
+                    h3 {
+                    border-bottom: 2px solid black;
+                    padding-bottom: 10px;
+                    margin-bottom: 20px;
+                    }
+                    .section {
+                    margin-bottom: 30px;
+                    }
+                    .section p, .section span {
+                    margin-bottom: 15px;
+                    display: block;
+                    }
+                    .cust-foot {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    text-align: center;
+                    }
+                    .footer img {
+                    width: 100%;
+                    }
+
+                    /* Calligraphy style for the title */
+                    .calligraphy-title {
+                    font-family: 'Droid Naskh', sans-serif;
+                    font-weight: bold;
+                    font-size: 28px; /* Adjust the size for calligraphy effect */
+                    letter-spacing: 2px; /* Adds spacing between letters */
+                    text-align: center;
+                    border-bottom: 2px solid black;
+                    padding-bottom: 10px;
+                    margin-bottom: 20px;
+                    word-spacing: 5px; /* Adds space between words */
+                    }
+                </style>
+
+                <div class="page">
+                    <div class="section">
+                        <div style="text-align: center;">
+                            <h3 style="display: inline-block;">"اتفاقية سرية المعلومات"</h3>
+                        </div>
+                    </div>
+
+                    <div style="white-space: nowrap;">
+                        <span>أبرم هذا الاتفاق في يوم</span><t t-foreach="employee_list" t-as="employee"><span t-esc="employee['weekday_label']"/></t> تاريخ 
+                        <span t-esc="form_data['kb_date']"/>
+                        <span>بين كلا من:</span>
+                    </div>
+
+
+                    <div class="section">
+                        <span>طرف أول:</span>
+                        <p>
+                            شركة التهذيب للخدمات التعليمية، ويقع مقرها في مدينة سيهات – المنطقة الشرقية – المملكة
+                            العربية السعودية، سجل تجاري رقم 2062014760.
+                        </p>
+                        <p>
+                            <strong>الطرف الثاني:</strong>
+                            <p>
+                                
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <span class="line" style="width: 80%;">
+                                             <strong>السيد/ه:</strong>  <span style="color: blue;"> <t t-esc="employee['employee_name']"/></span>
+                                        </span>
+                                     </t>
+                                <br/>
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <strong>جنسيته/ها:</strong><span style="color: blue;"><t t-esc="employee['nationality_name']"/></span>
+                                    </t>
+                                <br/>
+                                
+                                <span style="color: blue;">
+                                    <span style="color: blue;">
+                                    <t t-foreach="employee_list" t-as="employee">
+                                       <strong>تحمل هوية رقم:</strong> <t t-esc="employee['identification_id']"/>
+                                    </t>
+                                </span>
+                                </span>
+                            </p>
+
+                        </p>
+                        <p>
+                            ذلك بغرض (منع الإفصاح غير المصرح به عن معلومات سرية) كما هو موضح أدناه قد يتم
+                            الإفصاح ما بين طرفي هذا الاتفاق بسبب علاقة عمل، أو معاملات تجارية أو تفاوض أو إبرام
+                            أية عقود أو مشاريع بينهما، ويعمل بها في هذا الصدد .
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <strong>بند (1): مفهوم السرية:</strong>
+                        <p>
+                            طبقاً لما هو معمول به في هذا الاتفاق، يقصد بـ "المعلومات السرية" كل المعلومات
+                            المفصح عنها من قبل الطرف الأول للطرف الثاني، ويشمل ذلك أي معلومات تم الإفصاح
+                            عنها بعد تاريخ هذا الاتفاق، ويشمل أيضاً وبدون قيد المعلومات التي يحصل عليها أي من
+                            الطرفين بسبب التعاون فيما بينهما، سواءً كانت هذه المعلومات كتابة أو شفاهة أو مصورة
+                            أو كانت معلومات مجسدة في شكل إلكتروني، متصلة بنماذج أولية، خدمات مستقبلية أو
+                            مقترحة، المعرفة، البحث الفعلي أو المتوقع، التطوير، الخدمات، العمليات والمفاهيم
+                            والأفكار والتصاميم، والموظفين والعملاء والأسواق والمبيعات والتسويق، الخطط وحقوق
+                            التأليف والنشر، والرسوم البيانية، وبرامج الحاسوب، والدراسات، العمليات التجارية
+                            الجارية، المعلومات السرية، العمليات التجارية المستقبلية، والتسعير، الاستراتيجيات،
+                            والبيانات المالية والمحاسبية والمعلومات، الموردون، العمال، وقوائم العملاء وبيانات
+                            الشراء، وخطط العمل المستقبلية، المعلومات السرية المفصح عنها من قبل طرف ثالث
+                            للطرف الأول، وأية معلومات أخرى غير مسجلة الملكية وسرية .
+                            مصطلح "المعلومات السرية " لا يجوز ان يقتصر علي تجميع البيانات وتحليلها ولكن يجب ان تشمل ايضا
+                            الاحاديث والمناقشات والتعبير عن الرأي ووصف الأحداث وثيقة الصلة بالأعمال القائمة بين الطرفين
+                            .
+                        </p>
+                    </div>
+                    <div class="section">
+                        <p>بند (2):
+                      
+                            حيث أن الطرف الثاني سيصبح مطلعا ومدرك الاساليب والممارسات والاجراءات
+                            ومستندات الشركة التي يديربها الطرف الأول أعماله، منها على سبيل المثال
+                            (اطلاعه على أسرار المنشأة من برامج الكمبيوتر والمفاهيم التقنية و الدرايةو الخطة الاستراتيجية
+                            و المعلومات المتعلقة بالعملاء).
+                            وهذه كلها متفق عليها من قبل الطرفين على أنها معلومات مملوكة للطرف الأول وأنها تعتبر أسراراً
+                            تجارية.
+                            تعتبر المقدمة أعلاه جزءاً لا يتجزأ من هذه الإتفاقية .
+                        </p>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="section">
+                        <p>بند (3):
+                        
+                            يلتزم الطرفان في أي وقت خلال التعاقد أو فيما بعد، بعدم افشاء أو عدم تقديم أو عدم
+                            توفير بشكل مباشر أو غير مباشر إلى أي شخص أو منشأة أو مؤسسة أو أي جهة أخرى
+                            المعلومات المملوكة والمستخدمة من قبل الطرفين، ويتعهدان بالاحتفاظ بتلك الأمور والمعلومات
+                            بشكل سري جداً .
+                        </p>
+                    </div>
+<br/>
+                    <div class="section">
+                        <p>بند (4):
+                            يقر الطرفان بأن مخالفتهما لأيٍ من أحكام هذه الإتفاقية تؤدي إلى إلحاق الضرر
+                            المتواصل غير القابل للإصلاح بالطرف الآخر، ويكون له (أي الطرف الآخر) بالإضافة إلى
+                            كافة حقوقه الأخرى بما في ذلك حقه في المطالبة بالعطل والضرر من الطرف الثاني .
+                        </p>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="section" style="text-align: right; font-weight: bold;">
+                        <p>الطرف الاول</p>
+                        <p>شركة التهذيب للخدمات التعليمية</p>
+                        <p>عنها / مدير الشئون التعليمية</p>
+                        <p>الاسم :______________</p>
+                        <p>التوقيع :____________</p>
+                        <p>التاريخ :&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;</p>
+                    </div>
+                    <div style="position: relative; top: -200px; left: 100px; font-weight: bold;">
+                        <div style="text-align: left;">
+                            <p style="margin-bottom: 10px;">الطرف الثاني&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                            </p>
+                            <p >الاسم : <t t-esc="employee['employee_name']"/> </p>
+                            <p >التوقيع :________________</p>
+                            <p >التاريخ :&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cust-foot">
+                    <div class="footer">
+                        <img src="/kb_hr_tahtheeb/static/description/footer.png"/>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

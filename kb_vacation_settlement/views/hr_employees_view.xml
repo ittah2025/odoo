@@ -1,0 +1,19 @@
+<odoo>
+    <record id="viewIN_inherit" model="ir.ui.view">
+        <field name="name">hremployee_inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/> 
+        <field  name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <h1> <label for="name" string="English Name"/> </h1>
+
+            </xpath>
+            <xpath expr="//field[@name='job_title']" position="before">
+                <h1> <label for="arabic_name" string="Arabic Name"/> </h1>
+                <field name="arabic_name"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
+

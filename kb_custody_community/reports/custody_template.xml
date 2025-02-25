@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="custody_report" model="ir.actions.report">
+        <field name="name">Custody Report</field>
+        <field name="model">custody.details</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_custody_community.custody_document</field>
+        <field name="report_file">kb_custody_community.custody_document</field>
+        <field name="binding_model_id" ref="kb_custody_community.model_custody_details"/>
+        <field name="binding_type">report</field>
+    </record>
+    <template id="custody_document">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="row mt-0">
+                        <div class="col-5">
+                            <!-- Existing content on the left side -->
+                        </div>
+                        <div class="col-7">
+                            <h4>Custody Details</h4>
+                            <!-- Existing content on the left side -->
+                        </div>
+                    </div>
+                    <table style="width:100%;" class="table table-condensed table-border">
+                        <tr style="text-align:center;background-color:#C8C8C8;border: 2px solid black">
+                            <td style="width:25%;">
+                                <strong>Custody Name:</strong>
+                            </td>
+                            <td style="width:25%;">
+                                <!--                                <t t-esc="o.partner_id.name"/>-->
+                                <span t-field="o.kb_name"/>
+
+                            </td>
+                            <td>
+                                <strong>Employee:</strong>
+                            </td>
+                            <td>
+                                <t t-esc="o.kb_employee_id.name"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <tr style="text-align:center;background-color:#C8C8C8;border: 2px solid black">
+                            <td style="width:25%;">
+                                <strong>Property:</strong>
+                            </td>
+                            <td style="width:25%;">
+                                <t t-esc="o.kb_asset_id.name"/>
+                            </td>
+
+                            <td style="width:25%;">
+                            </td>
+                            <td style="width:25%;">
+                            </td>
+
+                        </tr>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <tr style="text-align:center;background-color:#C8C8C8;border: 2px solid black">
+                            <td>
+                                <strong>Requested Date:</strong>
+                            </td>
+                            <td>
+                                <t t-esc="o.kb_requested_date"/>
+                            </td>
+                            <td>
+                                <strong>Return Date:</strong>
+                            </td>
+                            <td>
+                                <t t-esc="o.kb_return_date"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <!--                        <tr>-->
+                        <!--                            <td>-->
+                        <!--                                <strong>Reason:</strong>-->
+                        <!--                            </td>-->
+                        <!--                            <td>-->
+                        <!--                                <t t-esc="o.kb_reason"/>-->
+                        <!--                            </td>-->
+                        <!--                        </tr>-->
+                    </table>
+
+                    <br/>
+                    <br/>
+
+                    <h5>
+                        <strong>Reason:</strong>
+                        <span t-esc="o.kb_reason"/>
+                    </h5>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

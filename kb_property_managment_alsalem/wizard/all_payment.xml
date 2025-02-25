@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_all_payment_report" model="ir.actions.report">
+        <field name="name">Payment Report</field>
+        <field name="model">summary_report_wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_property_managment_alsalem.all_payment</field>
+        <field name="report_file">kb_property_managment_alsalem.all_payment</field>
+        <field name="binding_model_id" ref="model_summary_report_wizard" />
+        <field name="binding_type">report</field>
+    </record>
+
+    
+    <template id="all_payment">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                   <div class="page">
+                        <div class="text-center">
+                        <style>
+                               .header {
+                                    background-color: #51a79e;
+                                    text-align: center;
+                                    padding: 20px;
+                                 
+                                    }
+
+                                .information {
+                                    background-color: #d5d8dc;
+                                    text-align: left;
+                                    }
+
+                                .good {
+                                    background-color: #ebedef;
+                                    text-align: center;
+                            
+                                    }
+
+
+                                .grey {
+                                    text-align: left;
+                                    background-color: #c7c9ca;
+                           
+                                    }
+
+                                .gfg {
+                                    border-collapse:separate;
+                                    border-spacing:3px 3px;
+                                    width: 100%;
+                                    }
+                       
+
+                    </style>
+                    <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+
+                        <h2 class="header" style="color: #fdfefe;">
+                            <td>All Payment</td>
+                        </h2>
+                    </div>
+
+     
+
+                        <table class="gfg">
+                            <group>
+                                <tr>
+                                    <t t-foreach="propertyids" t-as="lines">
+                                    <!-- <tr> <th class="grey" colspan="5"> <span t-esc="lines['property_id']" /> </th></tr>  -->
+                                <tr>
+
+                                    <th class="information" colspan="3"> Apartment  </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['apartment_ids']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Room </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['room_ids']" />
+                                        </td>
+
+                                </tr>
+                                
+                                <tr>
+
+                                    <th class="information" colspan="3"> No </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['no']" />
+                                        </td>
+
+                                    <th class="information" colspan="3"> Customer Name </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['customer_id']" />
+                                        </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th class="information" colspan="3">Total </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['total']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Payment Date </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['payment_date']" />
+                                        </td>
+
+                                </tr>
+
+                                <tr>
+                                <th class="information" colspan="3" >Date Of Paid</th>
+                                        <td class="good" colspan="3" >
+                                            <span t-esc="lines['date_of_paid']" />
+                                        </td>
+                                </tr>
+
+                                </t> 
+                                </tr>
+                            </group>
+                    </table>
+                </div> 
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

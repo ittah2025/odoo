@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+
+
+    <record id = "action_payments_report_template" model = "ir.actions.report" >
+        <field name = "name" >Vendor Payment</field >
+        <field name = "model" >account.payment</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_name" >kb_payment_reports.kb_account_report_template</field >
+        <field name = "report_file" >kb_payment_reports.kb_account_report_template</field >
+        <field name = "binding_model_id" ref = "model_account_payment" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "kb_account_report_template" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Tajawal:wght@800" rel = "stylesheet" />
+                <div class = "page" style = "font-family: 'Tajawal', sans-serif;" >
+                <style>
+                * {
+                    font-size:30px 
+                }
+
+                </style>
+
+
+                    <div style = "text-align: center;" >
+                        <h5 >Vendor Payment
+                            <br />
+                        </h5 >
+
+                    </div >
+
+                    <t t-foreach = "docs" t-as = "o" >
+
+                        <div style = "direction: rtl;" >
+                            <span >Date:</span >
+                            <span t-esc = "o.date" />
+                        </div >
+
+                        <br />
+                        <br />
+
+                        <table style = "width:80%; table-align:center; margin-left: auto; margin-right: auto; direction: rtl; " >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 10px; font-weight: bold" >
+                                    No.
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:; font-weight: bold" >
+                                    Name
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center ; font-weight: bold" >
+                                    Amount
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center font-weight: bold" >
+                                    Description
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center font-weight: bold" >
+                                    Currency
+                                </th >
+                            </tr >
+
+                            <tr >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; padding: 16px" >
+                                    1
+                                </td >
+
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-esc = "o.partner_id.name" />
+                                </td >
+
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-esc = "o.amount"
+                                          t-options = "{'widget': 'monetary', 'display_currency': o.currency_id}" />
+                                </td >
+
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-esc = "o.kb_description" />
+                                </td >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-esc = "o.currency_id.name" />
+                                </td >
+                            </tr >
+                        </table >
+
+                        <div style = "direction: rtl" >
+                            <br />
+                            <div style="text-align:center">
+                                <span t-esc = "o.amount_to_text_custom(o.amount, 'ar')" />
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+
+                            <span style = "font-weight: bold;  text-align: right" >Beneficiary Name:&#160;&#160;</span >
+                            <span t-esc = "o.partner_id.name" />
+                            <br />
+                            <span style = "font-weight: bold;  direction: rtl;" >Payment Method:&#160;&#160;</span >
+                            <!--                       <span t-esc = "o.payment_method_line_id" &#160;&#160;/>-->
+                            <span t-esc = "o.bank_partner_id.name" />
+
+                            <br />
+                            <span style = "font-weight: bold; direction: rtl;" >Memo:&#160;&#160;</span >
+                            <span t-esc = "o.ref" />
+
+
+                            <br />
+                            <span style = "font-weight: bold; direction: rtl;" >Invoice Number:&#160;&#160;</span >
+
+
+                            <t t-foreach = "o.reconciled_invoice_ids" t-as = "rec_inv" >
+                                <span t-esc = "rec_inv.name" />
+                            </t >
+
+                            <t t-foreach = "o.reconciled_bill_ids" t-as = "rec_bill" >
+                                <span t-esc = "rec_bill.name" />
+
+                            </t >
+                        </div >
+
+
+                    </t >
+
+
+                </div >
+            </t >
+        </t >
+    </template >
+
+</odoo >

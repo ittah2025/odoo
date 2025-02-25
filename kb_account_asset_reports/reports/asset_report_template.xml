@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <template id="asset_report">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <br/>
+                        <br/>
+                        <style>
+                            #table_css {
+                            border: 1px solid black
+                            border-collapse: collapse;
+                            border-spacing : 0px;
+                            border-top-spacing : 0px;
+                            }
+                            #table_css td, #table_css th {
+                            border: 1px solid black
+                            }
+                            #table_css tr: {
+                            border: 1px solid black
+                            }
+                            #table_css th {
+                            style="border: 1px solid black"
+                            }
+                        </style>
+
+                        <table class="table table-sm o_main_table"
+                               id="table_css">
+                            <thead>
+                                <tr>
+                                    <th>Asset Name</th>
+                                    <th>Asset Category</th>
+                                    <th>Date</th>
+                                    <th>First Depreciation Date</th>
+                                    <th>Gross Value</th>
+                                    <th>Residual Value</th>
+                                    <th>Number of Entries</th>
+                                    <th>On Entry Every(months)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="data" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="line.get('asset')"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.get('categ_id')"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.get('date')"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.get('first_depr_date')"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.get('gross_value')"
+                                                  t-options="{'widget': 'monetary', 'display_currency': env.company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="'%.2f'%(line.get('residual_value'))"/>     </td>
+                                        <td>
+                                            <span t-esc="line.get('no_of_entries')"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.get('on_entry_every')"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

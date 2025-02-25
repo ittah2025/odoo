@@ -1,0 +1,101 @@
+<odoo>
+    <record id="kb_regarding_delay" model="ir.actions.report">
+        <field name="name">انذار تأخير</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.regarding_delay_template</field>
+        <field name="report_file">kb_hr_tahtheeb.regarding_delay_template</field>
+        <field name="print_report_name">'انذار تأخير'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="regarding_delay_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    text-align: right;
+                    font-weight: bold;
+                    font-size: 15px;
+                    }
+                    .div-space p {
+                    line-height: 1.8;
+                    }
+                </style>
+                <div class="page" style="font-family: 'Droid Naskh'">
+                    <h1 style="text-align: center; font-size: 24px; font-weight: bold;">إشعـــار إنـــذار 1</h1>
+                    <div class="double-line" style="margin-bottom: 40px; text-align: right;">
+                        <span class="label">التاريخ :</span>
+                        <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                        <span class="line"></span>
+                        <span>م</span>
+                    </div>
+
+                    <p style="text-align: right;">من : مدير الشؤون الإدارية والخدمات المساندة</p>
+                    <div style="text-align: right;">
+                        <p>إلى :
+                            <t t-foreach="employee_list" t-as="employee">
+                                <span t-esc="employee['employee_name']"/>
+                            </t>
+                        </p>
+                    </div>
+                    <p style="text-align: right;">السلام عليكم ورحمة الله وبركاته ,,</p>
+                    <p style="text-align: right;">
+                        بـناءاً عـلى عدم التـزامكم بساعات الدوام المعتمدة الذي يُعد خرقاً للوائـح الشـركة الداخلية من حيـث عدم الدقة والانضباط واحترام مواعيـد العمـل الرسمية حضوراً وانصرافاً، وبناءاً على تقرير الحضور والانصراف من 
+                        <span class="label">تاريخ :</span>
+                        <span t-esc="form_data['kb_date']"/>
+                        <span class="line"></span>
+                        <span>م </span>
+                        <span class="label">الي تاريخ :</span>
+                        <span t-esc="form_data['kb_date_to']"/>
+                        <span class="line"></span>
+                        <span>م </span>
+
+                    </p>
+                    <p style="text-align: right; ">
+                        نوجه لكم هذا الإنذار ونأمل أن تكونوا في مستوى المسؤولية والالتزام مستقبلًا والتقيد أكثر بالأنظمة
+                        واللوائح المعمول بها في الشركة حرصًا على مصلحتكم ومصلحة العمل على حد سواء . حيث سيتم تطبيق لائحة
+                        المخالفات
+                        والجزاءات الخاصة بمواعيد العمل .
+                    </p>
+                    <div>
+                        <p style="text-align: center; font-weight: bold;">شكرا لتعاونكم ,,,</p>
+                    </div>
+                </div>
+                <div style="margin-top: 50px;">
+                    <p style="text-align: left; margin-top: 5px; margin-left: 50px; font-weight: bold;">مدير الشؤون
+                        الإدارية
+                    </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p style="text-align: right; font-weight: bold;">التوقيع بالعلم</p>
+
+                    <p style="text-align: right; margin-bottom: 50px;">
+                        الاسم :
+                        <span t-foreach="employee_list" t-as="employee">
+                            <span t-esc="employee['employee_name']"/>
+                        </span>
+                    </p>
+                    <p style="text-align: right;">التوقيع :</p>
+
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg"
+                                 style="width: 1400px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

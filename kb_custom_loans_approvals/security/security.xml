@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="hr_approval_group_in_loans" model="res.groups">
+    <field name="name">HR Approval in Loans</field>
+  </record>
+
+  <record id="accounting_approval_group_in_loans" model="res.groups">
+    <field name="name">Accounting Approval in Loans</field>
+  </record>
+
+
+</odoo>

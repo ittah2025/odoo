@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_wizard_merge_account_form" model="ir.ui.view">
+        <field name="name">wizard.merge.account.form</field>
+        <field name="model">wizard.merge.account</field>
+        <field name="arch" type="xml">
+            <form string="Merge Accounts">
+                <sheet>
+                    <group>
+                        <field name="source_account_ids" widget="many2many_tags"/>
+                        <field name="destination_account_id"/>
+                        <field name="start_date"/>
+                        <field name="force"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Merge" name="action_merge_accounts" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_merge_account" model="ir.actions.act_window">
+        <field name="name">Merge Accounts</field>
+        <field name="res_model">wizard.merge.account</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_wizard_merge_account_form"/>
+    </record>
+</odoo>

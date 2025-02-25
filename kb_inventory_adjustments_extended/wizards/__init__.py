@@ -1,0 +1,1 @@
+from . import kb_inventory_adjustments_extended_wizard

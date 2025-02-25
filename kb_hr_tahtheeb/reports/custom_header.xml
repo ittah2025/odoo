@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <template id="kb_internal_layout_custom_header">
+
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <!-- Internal Table Header -->
+            <div class="header" style="margin-bottom: 0 !important;">
+                <div class="row">
+                    <!--  CSS Links -->
+                    <link rel="stylesheet" type="text/css"
+                          href="/kb_hr_tahtheeb/static/css/style.css"/>
+                    <style>
+                        <!--                        .header {-->
+                        <!--                        display: flex;-->
+                        <!--                        justify-content: space-between;-->
+                        <!--                        align-items: center;-->
+                        <!--                        padding: 10px;-->
+                        <!--                        }-->
+
+                    </style>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="header-img pt-3 float-end">
+                                <img src="/kb_hr_tahtheeb/static/description/ar.png" alt="Image 3"/>
+                            </div>
+                        </div>
+                        <div class="col-2 text-center">
+                            <div class="p-0">
+                                <img src="/kb_hr_tahtheeb/static/description/logo.png" alt="Image 1"/>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="header-img pt-3">
+                                <img src="/kb_hr_tahtheeb/static/description/en.png" alt="Image 2"/>
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+            <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            </div>
+
+
+        </template>
+    </data>
+</odoo>

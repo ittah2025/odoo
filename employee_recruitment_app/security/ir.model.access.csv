@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+staff_recruitment_te,staff_recruitment,employee_recruitment_app.model_staff_recruitment,group_internal_job_teacher,1,1,1,1
+staff_recruitment_adm,staff_recruitment,employee_recruitment_app.model_staff_recruitment,group_internal_job_administration,1,1,1,1
+staff_recruitment_hr,staff_recruitment,employee_recruitment_app.model_staff_recruitment,group_internal_job_hr,1,1,1,1

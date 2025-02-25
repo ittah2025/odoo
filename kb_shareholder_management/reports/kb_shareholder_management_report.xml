@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="shareholder_management_reportID" model="ir.actions.report">
+        <field name="name">Shareholder Management</field>
+        <field name="model">kb.shareholder.management.fields</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_shareholder_management.shareholder_management_report</field>
+        <field name="report_file">kb_shareholder_management.shareholder_management_report</field>
+        <field name="binding_model_id" ref="model_kb_shareholder_management_fields"/>
+        <field name="binding_type">report</field>
+    </record>
+    <template id="shareholder_management_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet"/>
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                            <div>
+                                <p style=" text-align:left;">رقم المساهمة
+                                    <span t-field="o.kb_shareholderID"/>
+                                </p>
+                                <p style=" text-align:left;">رقم الشهادة</p>
+                            </div>
+                            <div>
+                                <p style=" text-align:right;">تحولت وفقاً لاحكام نظام الشركات السعودية الصادر بالمرسوم
+                                    الملكي رقم (م/6) وتاريخ 22/03/1385ه
+                                    وتعدلاتع من شركة ذات مسوؤلية محدودة إلى شركة مساهمة سعودية.
+                                </p>
+                                <p style=" text-align:right;">مدة الشركة 99 عاماً هجرياً تبدأ من تاريخ صدور قرار وزارة
+                                    الصناعة رقم (128/ق) وتاريخ 16/3/1432ه بإعلان تحويلها,رأس المال المصرح به 35,000,000
+                                    (خمسة وثلاثون مليون ريال سعودي) مقسمة إلى 3,500,000 "ثلاثة مليون وخمسمائة ألف " سهم
+                                    متساوية القيمة تبلغ القيمة القسمة لكل منها (10) (عشرة ريالات سعودية ) كلها أسهم
+                                    عادية عينية.
+                                </p>
+
+
+                                <p>
+                                    <span style="display:inline-block;text-decoration: underline; text-align:right; font-weight: bold;">
+                                        نشاط الشركة :
+                                    </span>
+                                    إدارة وتملك وصيانةالمراكز التدريبية والتعليمية والكليات والمعاهد والجامعات وإقامة
+                                    وإدارة وتشغيل وصيانة المنشآت وتطوير العقارات وتملك وإدارة المدارس الخاصة والأطفال
+                                    والمعاهد التعليمية الخاصة ومراكز التدريب وشراء الأراضي وإقامة المباني عليها
+                                    واستثمارها بالبيع أو الايجار لصالح الشركة.
+                                </p>
+
+
+                                <p style=" text-align:right;">تشهد بأن/
+                                    <span t-field="o.kb_shareholderName"/>
+                                </p>
+                                <p style=" text-align:right;">رقم السجل المدني /
+                                    <span t-field="o.kb_idNumberIDs"/>
+                                </p>
+                                <div>
+                                    <p style="display:inline-block; width:250px;  text-align:right; ">تاريخه :
+                                        <span t-field="o.kb_shareholderName.kb_issueDate"/>
+                                    </p>
+                                    <p style="display:inline-block; width:200px; text-align:right;">مكان الاصدار :
+                                        <span t-field="o.kb_sourceIDs"/>
+                                    </p>
+                                </div>
+                                <p style=" text-align:right;">العنوان /</p>
+
+                                <div>
+                                    <p style="display:inline-block; width:250px;  text-align:right; ">رقم المبنى :
+                                        <span t-field="o.kb_shareholderName.kb_buildingNumber"/>
+                                    </p>
+                                    <p style="display:inline-block; width:250px; text-align:right;">اسم الحي :
+                                        <span t-field="o.kb_street"/>
+                                    </p>
+                                    <p style="display:inline-block; width:250px; text-align:right;">اسم الشارع :
+                                        <span t-field="o.kb_street2"/>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p style="display:inline-block; width:250px;  text-align:right; ">يملك
+                                        <span t-field="o.kb_stockNumber"/>
+                                        سهم فقط لاغير
+                                    </p>
+                                    <!--                            <p style="display:inline-block; width:200px; text-align:right;"> سهم فقط </p  >-->
+                                    <!--                            <p style="display:inline-block; width:80px; text-align:right;"> سهم لاغير </p>-->
+                                </div>
+
+                                <p style=" text-align:right;">صدرت هذه الشهادة في مدينة سيهات بتاريخ
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                                </p>
+                                <br></br>
+
+                                <div>
+                                    <style>
+                                        .no-border-table {
+                                        border: 1px solid white !important;
+                                        border-collapse: collapse !important;
+                                        }
+                                        .no-border-cell {
+                                        border: none !important;
+                                        border: 1px solid white !important; }
+                                    </style>
+                                    <table class="no-border-table" style="width: 100%; margin-bottom: 5px" border="0">
+                                        <tr>
+                                            <td class="no-border-cell" style="text-align: right; width: 250px;">
+                                                نائب رئيس مجلس الإدارة
+                                            </td>
+                                            <td class="no-border-cell" style="text-align: center; width: 250px;">
+                                                (ختم الشركة)
+                                            </td>
+                                            <td class="no-border-cell" style="text-align: right; width: 250px;">
+                                                رئيس مجلس الإدارة
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="no-border-cell" style="height: 50px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border-cell" style="text-align: right; font-weight: bold;">
+                                                م.عبدالله بن صالح بن محمد زين الدين
+                                            </td>
+                                            <td class="no-border-cell" style="text-align: center;">
+                                                <img src="/kb_shareholder_management/static/description/seal_company.jpeg"
+                                                     width="100" height="100"/>
+                                            </td>
+                                            <td class="no-border-cell" style="text-align: right; font-weight: bold;">
+                                                م.جاسم بن علي بن محمد الناصر
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="padding: 8px; border: 1px solid #000; text-align: center;">
+                        <t t-if="o.kb_qr_code">
+                            <img t-att-src="'data:image/png;base64,' + o.kb_qr_code"
+                                 style="width: 100px; height: 100px;"/>
+
+                            <!--                            <img class="border border-dark rounded" t-att-src="qr_code_urls[o.id]"/>-->
+
+                        </t>
+                    </div>
+
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,352 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_alrajhi_wizard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-03 11:10+0000\n"
+"PO-Revision-Date: 2023-09-03 14:15+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ") لأجل ساد الديون التى سوف تترتب عليه لصالح مصرف الراجحي"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<br/>\n"
+"                                    <span style=\"font-size: 18px;\">لذالك نود أن نؤكد لكم موافقتنا والتزامنا بهذا التحويل في مواعيده الشهرية "
+"واستمراره حتى نهاية علاقته الوظيفية معنا مع التزامنا بعدم تسليم الموظف المذكور مستحقات نهاية الخدمة أو أي مستحقات أخرى حتى نحصل على مخالصة معتمدة منكم "
+"تفيد بانتهاء الالتزامات المترتبة عليه لصالحكمو مواقتكم على الغاءتحويل راتبه</span> <br/>\n"
+"\n"
+"                                    <span style=\"font-size: 18px;\">.وتقبلوا تحياتي</span>\n"
+"\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<br/>\n"
+"                                    <span style=\"font-weight: bold; font-size: 18px\"> مستحقات نهاية الخدمة في حالة الاستقالة قبل نهاية العقد: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<br/>\n"
+"                                    <span style=\"font-weight: bold; font-size: 18px\"> مستحقات نهاية الخدمة: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<br/>\n"
+"                                 <span style=\"font-weight: bold;\">المكرمون: </span> <span>مصرف الراجحي </span><br/>\n"
+"\n"
+"                                  <span>السلام عليكم ورحمة الله وبركاته   </span><br/>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<br/>\n"
+"                                 <span style=\"font-weight: bold;\">الموضوع: </span> <span>تعريفة راتب موظف </span><br/>\n"
+"                                 <span style=\"font-weight: bold;\">السادة: </span> <span>مصرف الراجحي </span><br/>\n"
+"                                 <span style=\"font-weight: bold;\">             </span> <span>السلام عليكم ورحمة الله وبركاته   </span><br/>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold; font-size: 18px\">:اسم الموظف </span><br/>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<span style=\"font-weight: bold;\"> :رقم بطاقة العمل/الرقم الوظيفي </span><br/>\n"
+"                                    <span style=\"font-weight: bold; font-size: 18px\"> تاريخ الاتحاق بالعمل: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\"> بدلات اخرى: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid ""
+"<span style=\"font-weight: bold;\">/اسم المفوض بالتوقيع</span>\n"
+"                                         <br/>\n"
+"                                        <br/>\n"
+"                                        <span style=\"margin-left: 20%\"/> <span style=\"font-weight: bold;\">/التوقيع</span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">التاريخ: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">الختم الرسمي</span><span style=\"margin-right: 20%\"/>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل العمل في شركات أخرى: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل الوجبات: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل ثابت: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل سكن: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل غربة: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل غير ثابت: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدل مواصلات: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">بدلات طبية: </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "<span style=\"font-weight: bold;\">كما نفيدكم أن الموظف المذكور بياناته أعلاه لازال يعمل لدينا حتى تاريخه </span>"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.actions.report,name:kb_alrajhi_wizard.salary_rajhi_report_print
+msgid "Al Rajhi Reports"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields.selection,name:kb_alrajhi_wizard.selection__rajhi_salary__kb_definition_type__rajhi_salary
+msgid "Al Rajhi Salary Definition"
+msgstr "تعريف بنك الراجحي"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.ui.menu,name:kb_alrajhi_wizard.menu_raajhi_bank
+msgid "Al raajhi bank Salary Definition"
+msgstr "تعريف راتب بنك الراجحي"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.raajhi_bank_action_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.raajhi_bank_action_form
+msgid "Create"
+msgstr "انشاء"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "Definition of Al Rajhi Bank salary"
+msgstr "تعريف راتب بنك الراجحي"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__kb_definition_type
+msgid "Document Type"
+msgstr "نوع الوثيقة"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__employee_id
+msgid "Employee name"
+msgstr "اسم الموظف"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields.selection,name:kb_alrajhi_wizard.selection__rajhi_salary__kb_definition_type__employee_salary
+msgid "Employees Salaries"
+msgstr "رواتب الموظفين"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__kb_end_of_service
+msgid "End of service benefits"
+msgstr "مستحقات نهاية الخدمة"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__kb_end_of_service_terminate
+msgid "End of service benefits before the end of contract"
+msgstr "مستحقات نهاية الخدمة في حالة الاستقالة قبل نهاية العقد"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.raajhi_bank_action_form
+msgid "Excel"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__file_name
+msgid "Excel File"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__excel_file
+msgid "Excel Report Salaries"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields.selection,name:kb_alrajhi_wizard.selection__rajhi_salary__kb_definition_type__fix_salary
+msgid "Fixing Salary"
+msgstr "تثبيت الراتب"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model.fields,field_description:kb_alrajhi_wizard.field_rajhi_salary__kb_sign_employee
+msgid "Name of the authorized signatory"
+msgstr "اسم المفوض بالتوقيع"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.raajhi_bank_action_form
+msgid "PDF"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.raajhi_bank_action_form
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "SR"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model:ir.actions.act_window,name:kb_alrajhi_wizard.salary_action_wizard
+msgid "print"
+msgstr "طباعات بنك الراجحي"
+
+#. module: kb_alrajhi_wizard
+#: model:ir.model,name:kb_alrajhi_wizard.model_rajhi_salary
+msgid "rajhi_salary"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "اجمالي الراتب"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "التزام جهة العمل بتحويل راتب الموظف"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "الجنسية"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "الراتب الاساسي"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "الرقم الوظيفي"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "الوظيفة"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "تاريخ التعيين"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "تفاصيل البدلات"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "تقدم موظفنا الموضحة بياناته أعلاه طالبا تحوبل راتبه وبدلاته الشهرية وجميع مستحقاته الوظيفية الى حسابه الجاري رقم ("
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "رقم إثبات الهوية"
+msgstr ""
+
+#. module: kb_alrajhi_wizard
+#: model_terms:ir.ui.view,arch_db:kb_alrajhi_wizard.salary_def_templates
+msgid "رقم حساب الموظف"
+msgstr ""

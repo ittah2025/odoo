@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_vender_payment_type" model="ir.actions.act_window">
+        <field name="name">Vendors Payments</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.vender.register.payment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="customer_payment_typeform_view" model="ir.ui.view">
+        <field name="name">vender.payment.type.form.view</field>
+        <field name="model">kb.vender.register.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button id="button_conf" name="action_confirm_payment" string="Confirm" type="object" class="btn-primary"
+                            attrs="{'invisible': [('kb_state', '!=', 'draft')]}"/>
+
+                    <button name="action_cancel" string="Cancel" type="object"
+                            attrs="{'invisible': [('kb_state', '!=', 'draft')]}" data-hotkey="z"/>
+
+                    <button name="action_draft" string="Reset To Draft" type="object" class="btn-primary"
+                            attrs="{'invisible': [('kb_state', 'not in', ('posted', 'cancel'))]}"/>
+
+                    <field name="kb_state" widget="statusbar" statusbar_visible="draft,posted" nolabel="1"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                     <button name="button_open_journal_entry" type="object" class="oe_stat_button" icon="fa-bars">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Journal Entry</span>
+                            </div>
+                     </button>
+                     </div>
+                    <div class="oe_title">
+                            <h1><field name="kb_paymentId" readonly="1" attrs="{'invisible': [('kb_state', '!=', 'posted')]}"/></h1>
+                     </div>
+                    <br/> <br/>
+                        <group>
+                            <group>
+                                <field name="available_payment_method_line_ids" invisible="1"/>
+                                <field name="kb_internalTransfer" attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                                <field name="kb_payment_type" widget="radio" attrs="{'readonly': [('kb_state', '!=', 'draft')]}" options="{'horizontal': True}"/>
+                                <field name="kb_CustomerName" attrs="{'readonly': [('kb_state', '!=', 'draft')]}" options="{'no_quick_create': True}"/>
+                                <field name="kb_amount" attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                                <field name="kb_date" attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                                <field name="kb_memo"/>
+                            </group>
+                            <group>
+                                 <field name="journal_id" attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                                 <field name="payment_method_line_id" required="1" options="{'no_create': True, 'no_open': True}"
+                                       attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                                <field name="kb_companyBankAccount" attrs="{'readonly': [('kb_state', '!=', 'draft')]}"/>
+                            </group>
+
+                        </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="kb_vender_register_payment_tree" model="ir.ui.view">
+        <field name="name">kb.vender.register.payment.tree</field>
+        <field name="model">kb.vender.register.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_date"/>
+<!--                <field name="kb_paymentId"/>-->
+                <field name="journal_id"/>
+                <field name="payment_method_line_id"/>
+                <field name="kb_CustomerName"/>
+                <field name="kb_amount" />
+                <field name="kb_state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    
+    <menuitem name="Vendor"
+        id="menu_vendor_payments_id"
+        parent="system_root"
+        sequence="2" />
+
+    <menuitem name="Vendors"
+        id="submenu_vender_payments_id"
+        parent="menu_vendor_payments_id"
+        sequence="4"
+        action="action_vender_payment_type"/>
+
+</odoo>

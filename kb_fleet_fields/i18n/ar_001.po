@@ -1,0 +1,349 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_fleet_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-21 12:45+0000\n"
+"PO-Revision-Date: 2022-12-21 15:49+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__acFilters
+msgid "AC Filter (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__engineFilter
+msgid "Air Filter (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__fleetAttachment
+msgid "Attachments"
+msgstr "مرففات"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields.selection,name:kb_fleet_fields.selection__fleet_vehicle_model__vehicle_type__bus
+msgid "BUS"
+msgstr "باص"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__batterylife
+msgid "Battery"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__brakes
+msgid "Brakes (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__busNameAR
+msgid "Bus Name Arabic"
+msgstr "اسم المركبة (عربي)"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__busNameEN
+msgid "Bus Name English"
+msgstr "اسم المركبة (انجليزي)"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields.selection,name:kb_fleet_fields.selection__fleet_vehicle_model__vehicle_type__costar
+msgid "COSTAR"
+msgstr "كوستر"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Category"
+msgstr "النوع"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid ""
+"Chassis\n"
+"                                Number"
+msgstr "رقم الشاسيه"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__colorVh
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Color"
+msgstr "اللون"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__customFormNumber
+msgid "Custom Card Number"
+msgstr "رقم البطاقة الجمركية"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__customDate
+msgid "Custom Date"
+msgstr "التاريخ البطاقة الجمركية"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Custom Information"
+msgstr "معلومات البطاقة الجمركية"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__customSource
+msgid "Custom Source"
+msgstr "المصدر"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Differential Oil"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__diffoilCapacity
+msgid "Differential Oil Capacity"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__diffOil
+msgid "Differential Oil Type"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__diffoil_serv_km
+msgid "Differential Oil change Every (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__ownerElectronicumber
+msgid "Electronic Owner Number"
+msgstr "هوية المالك"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Engine"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__engineBelts
+msgid "Engine Belts (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oilCapacityWf
+msgid "Engine Oil Capacity With Filter"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oilCapacityOf
+msgid "Engine Oil Capacity Without Filter"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__engineOil
+msgid "Engine Oil Type"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oil_serv_km
+msgid "Engine Oil change Every (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields.selection,name:kb_fleet_fields.selection__fleet_vehicle__insuranceStatus__expired
+msgid "Expired"
+msgstr "منتهي"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__insuranceEndDate
+msgid "Insurance End Date"
+msgstr "تاريخ انتهاء التامين"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Insurance Information"
+msgstr "معلومات التأمين"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__insuranceName
+msgid "Insurance Name"
+msgstr "اسم التامين"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__insurancePrice
+msgid "Insurance Price"
+msgstr "قيمة التامين"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__insuranceStartDate
+msgid "Insurance Start Date"
+msgstr "تاريخ بدء التامين"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__insuranceStatus
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Insurance Status"
+msgstr "حالة التأمين"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid ""
+"License\n"
+"                                Plate"
+msgstr "اللوحة"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Model"
+msgstr "الطراز"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid ""
+"Model\n"
+"                                Year"
+msgstr "السنة"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__modelYear
+msgid "Model Year"
+msgstr "السنة"
+
+#. module: kb_fleet_fields
+#: model:ir.model,name:kb_fleet_fields.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "موديل مركبة"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oil_filter
+msgid "Oil Filter"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__electronicNumer
+msgid "Operating Code Number"
+msgstr "رقم كود التشغيل"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Operations Card"
+msgstr "بطاقة التشغيل"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oprCardEnd
+msgid "Operations Card End Date"
+msgstr "تاريخ انتهاء بطاقة التشغيل"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oprCardNumber
+msgid "Operations Card Number"
+msgstr "رقم بطاقة التشغيل"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__oprCardStart
+msgid "Operations Card Start Date"
+msgstr "تاريخ بدء بطاقة التشغيل"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "Other"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__ownerName
+msgid "Owner Name"
+msgstr "اسم المالك"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__passengerCapacity
+msgid "Passenger Capacity"
+msgstr "عدد الركاب"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__InspectionDate
+msgid "Periodic Inspection Expiration Date"
+msgstr "تاريخ انتهاء الفحص الدوري"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__plateNumberAR
+msgid "Plate Number (Arabic)"
+msgstr "رقم اللوحة (عربي)"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__registrationEndDate
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Registration Expiration Date"
+msgstr "تاريخ انتهاء الاستمارة"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields.selection,name:kb_fleet_fields.selection__fleet_vehicle__insuranceStatus__run
+msgid "Running"
+msgstr "ساري المفعول"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid ""
+"Serial\n"
+"                                Number"
+msgstr "الرقم التسلسلي"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__searialNumbers
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__tirelife
+msgid "Tires (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__trans_serv_km
+msgid "Transmission Oil change Every (Km)"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model,name:kb_fleet_fields.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.report_VehiclePrint
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: kb_fleet_fields
+#: model:ir.actions.report,name:kb_fleet_fields.VehiclePrint_report
+msgid "Vehicle Print"
+msgstr "طباعة المركبة"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__status_field
+msgid "Vehicle Status"
+msgstr "الحالة"
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle_model__vehicle_type
+msgid "Vehicle Type"
+msgstr "نوع المركبة "
+
+#. module: kb_fleet_fields
+#: model_terms:ir.ui.view,arch_db:kb_fleet_fields.fleet_view_form2
+msgid "transmission"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__transcapacity
+msgid "transmission Oil Capacity"
+msgstr ""
+
+#. module: kb_fleet_fields
+#: model:ir.model.fields,field_description:kb_fleet_fields.field_fleet_vehicle__transOil
+msgid "transmission Oil Type"
+msgstr ""

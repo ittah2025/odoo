@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_changeable_allowance" model="ir.ui.view">
+        <field name="name">Changeable Allowance</field>
+        <field name="model">changeable_allowance</field>
+        <field name="arch" type="xml">
+            <form string="Select Employees">
+                <script type="text/javascript" src="/kb_hr_changeable_allowances/static/src/js/wiz.js"></script>
+                <sheet>
+                <!-- <header>
+                        <button icon="fa-cogs" string="Generate" name="compute_sheet" type="object" class="oe_highlight"  />
+                    </header> -->
+                <group>
+                </group>
+                <span nolabel="1">This Wizard Will Allows You To Modify Allowances </span>
+                <separator string="Employee Contracts" />
+                <newline />
+                <field name="contract_ids">
+                    <tree editable="top" create="0" delete="1" multi_edit="1" string="Changeable Allowance Tree">
+                        <field name="company_id" invisible="1" />
+                        <field name="name"/>
+                        <field name="employee_id" widget="many2one_avatar_employee" />
+                        <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-warning="state == 'close'" decoration-success="state == 'open'"/>
+                        <field name="hra" />
+                        <field name="travel_allowance" />
+                        <field name="da" />
+                        <field name="meal_allowance" />
+                        <field name="medical_allowance" />
+                        <field name="kb_assignment_allowance" />
+                        <field name="kb_overtime_allowance" />
+                        <field name="other_allowance" />
+                    </tree>
+                </field>
+                <!-- <footer>
+                    <button name="" string="Save" type="object" class="oe_highlight" />
+                    <button string="Close" class="btn-secondary" special="cancel" />
+                </footer> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_changeable_allowance__" model="ir.actions.act_window">
+        <field name="name">Changeable Allowance</field>
+        <field name="res_model">changeable_allowance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_changeable_allowance" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_payroll_community_changeable_allowance"
+        action="action_view_changeable_allowance__"
+        parent="hr_payroll_community.menu_hr_payroll_community_root"
+        sequence="12"
+    />
+
+</odoo>

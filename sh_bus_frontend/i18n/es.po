@@ -1,0 +1,489 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_bus_frontend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 04:24+0000\n"
+"PO-Revision-Date: 2020-10-26 04:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">Arrival : </strong>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">Llegada: </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">To : </strong>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<strong class=\"travel-detail-cart\">A : </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">1000</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">1000</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">100</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">100</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">2000</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">2000</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "<span class=\"sh_count_name o_default_snippet_text\">30</span>"
+msgstr "<span class=\"sh_count_name o_default_snippet_text\">30</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "<span class=\"total\">Total:</span>"
+msgstr "<span class=\"total\">Total:</span>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Boarding Point : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">Punto de embarque : </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Departure : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">Salida : </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">Dropping Point : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">Punto de goteo : </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart
+msgid "<strong class=\"travel-detail-cart\">From : </strong>"
+msgstr "<strong class=\"travel-detail-cart\">Desde : </strong>"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "AGE"
+msgstr "AÑOS"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "About Us"
+msgstr "Sobre nosotras"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Add one"
+msgstr "Agrega uno"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Arrival"
+msgstr "Llegada"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "BUSES"
+msgstr "AUTOBUSES"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Book"
+msgstr "Libro"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Book Ticket"
+msgstr "Reservar entrada"
+
+#. module: sh_bus_frontend
+#: model:website.menu,name:sh_bus_frontend.menu_bus_booking
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Bus Booking"
+msgstr "Reserva de bus"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "CUSTOMERS"
+msgstr "CLIENTES"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Checkout"
+msgstr "Revisa"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose End Point"
+msgstr "Elija el punto final"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose Fleet Type"
+msgstr "Elija el tipo de flota"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Choose Start Point"
+msgstr "Elija el punto de inicio"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Contact Us"
+msgstr "Contacta con nosotras"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Customer Service"
+msgstr "Servicio al Cliente"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Departure"
+msgstr "Salida"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "EMAIL"
+msgstr "CORREO ELECTRÓNICO"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Find Now"
+msgstr "Encuentra ahora"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "From"
+msgstr "Desde"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "GENDER"
+msgstr "GÉNERO"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "GO"
+msgstr "VAMOS"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Image"
+msgstr "Imagen"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Invalid order."
+msgstr "Orden inválida."
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Invalid signature data."
+msgstr "Datos de firma no válidos."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem Ipsum"
+msgstr "Lorem Ipsum"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet consectetur <span "
+"class=\"o_default_snippet_text\">adipiscing</span> elit"
+msgstr ""
+"Lorem ipsum dolor sit amet consectetur <span "
+"class=\"o_default_snippet_text\">adipiscing</span> elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem ipsum dolor sit amet consectetur adipiscing elit"
+msgstr "Lorem ipsum dolor sit amet consectetur adipiscing elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Lorem ipsum dolor sit amet consectetur edipiscing elit"
+msgstr "Lorem ipsum dolor sit amet consectetur edipiscing elit"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+" quis nostrud exercitation ullamco"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+" quis nostrud exercitation ullamco"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
+"eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+" veniam."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
+"eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+" veniam."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor<br/> incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+"veniam"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Make Your Reservation"
+msgstr "Haga su reserva"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "NAME"
+msgstr "NOMBRE"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "No Result Found !"
+msgstr "No se han encontrado resultados !"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Online Booking"
+msgstr "Reserva en línea"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Online Payment"
+msgstr "Pago en línea"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Operator"
+msgstr "Operadora"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Order signed by %s"
+msgstr "Pedido firmado por% s"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "PASSENGER NAME"
+msgstr "NOMBRE DEL PASAJERO"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Passenger Information"
+msgstr "Información del pasajero"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Price"
+msgstr "Precio"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Quotation viewed by customer %s"
+msgstr "Cita vista por la cliente% s"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "ROUTES"
+msgstr "RUTAS"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Regular Offers"
+msgstr "Ofertas regulares"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Remaining Seats"
+msgstr "Asientos restantes"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Remove from cart"
+msgstr "Quitar del carrito"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "Remove one"
+msgstr "Quitar uno"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Route"
+msgstr "Ruta"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.sh_bus_booking_front_product_cart_lines
+msgid "SEAT NO."
+msgstr "ASIENTO NO."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Search"
+msgstr "Buscar"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Seat Booked"
+msgstr "Asiento reservado"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Seat Selection Information"
+msgstr "Información de selección de asiento"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.seat_booking_template
+msgid "Selected Seats ("
+msgstr "Asientos seleccionados ("
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Services"
+msgstr "Servicios"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "Signature is missing."
+msgstr "Falta la firma."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "TICKETS SOLD"
+msgstr "ENTRADAS VENDIDAS"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Testimonial"
+msgstr "Testimonial"
+
+#. module: sh_bus_frontend
+#: code:addons/sh_bus_frontend/controllers/main.py:0
+#, python-format
+msgid "The order is not in a state requiring customer signature."
+msgstr "El pedido no se encuentra en un estado que requiera la firma del cliente."
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "To"
+msgstr "A"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "Total Seats"
+msgstr "Asientos totales"
+
+#. module: sh_bus_frontend
+#: model_terms:ir.ui.view,arch_db:sh_bus_frontend.website_bus_booking_template
+#: model_terms:website.page,arch_db:sh_bus_frontend.bus_booking_page
+msgid "image"
+msgstr "imagen"

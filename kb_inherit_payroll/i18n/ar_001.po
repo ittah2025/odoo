@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_inherit_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-21 07:20+0000\n"
+"PO-Revision-Date: 2024-05-21 10:27+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: kb_inherit_payroll
+#: model_terms:ir.actions.act_window,help:kb_inherit_payroll.action_kb_reason_of_deduction
+msgid "Add new reason of deduction"
+msgstr "إضافة سبب جديد للخصم"
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_hr_payslip_worked_days__kb_deduction_from_one_day_salary
+#: model:ir.model.fields,help:kb_inherit_payroll.field_hr_payslip_worked_days__kb_deduction_from_one_day_salary
+msgid "Deduction from one day salary"
+msgstr "الخصم من راتب يوم واحد"
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_hr_payslip_worked_days__kb_discount_by_amount
+#: model:ir.model.fields,help:kb_inherit_payroll.field_hr_payslip_worked_days__kb_discount_by_amount
+msgid "Discount based on amount"
+msgstr "الخصم على أساس المبلغ"
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_hr_payslip_worked_days__kb_discount_by_days
+#: model:ir.model.fields,help:kb_inherit_payroll.field_hr_payslip_worked_days__kb_discount_by_days
+msgid "Discount based on days"
+msgstr "خصم على أساس الأيام"
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_hr_payslip_worked_days__kb_fingerprint_discount
+#: model:ir.model.fields,help:kb_inherit_payroll.field_hr_payslip_worked_days__kb_fingerprint_discount
+msgid "Fingerprint deduction"
+msgstr "خصم البصمات"
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_inherit_payroll
+#: model:ir.model,name:kb_inherit_payroll.model_hr_payslip_worked_days
+msgid "Payslip Worked Days"
+msgstr "أيام العمل في القسيمة"
+
+#. module: kb_inherit_payroll
+#: model:ir.actions.act_window,name:kb_inherit_payroll.action_kb_reason_of_deduction
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_hr_payslip_worked_days__kb_reason_of_deduction
+#: model:ir.model.fields,field_description:kb_inherit_payroll.field_kb_reason_of_deduction__kb_reason_of_deduction
+#: model:ir.model.fields,help:kb_inherit_payroll.field_hr_payslip_worked_days__kb_reason_of_deduction
+#: model:ir.ui.menu,name:kb_inherit_payroll.menu_reason_of_deduction
+#: model_terms:ir.ui.view,arch_db:kb_inherit_payroll.view_reason_of_deduction_tree
+msgid "Reason of deduction"
+msgstr "سبب الخصم"
+
+#. module: kb_inherit_payroll
+#: model:ir.model,name:kb_inherit_payroll.model_kb_reason_of_deduction
+msgid "kb_reason_of_deduction"
+msgstr ""

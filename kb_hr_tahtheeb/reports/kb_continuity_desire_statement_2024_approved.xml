@@ -1,0 +1,241 @@
+<odoo>
+    <record id="contract_termination_form_2024_action" model="ir.actions.report">
+        <field name="name">نموذج انهاء عقد2024</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.contract_termination_form_2024_template</field>
+        <field name="report_file">kb_hr_tahtheeb.contract_termination_form_2024_template</field>
+        <field name="print_report_name">'نموذج انهاء عقد2024'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="contract_termination_form_2024_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet"/>
+                <div class="page" style="font-family: 'Almarai', sans-serif;">
+                    <style>
+                        body {
+                        direction: rtl;
+                        text-align: right;
+                        margin: 0;
+                        padding: 0;
+                        }
+                        h2 {
+                        text-align: center;
+                        margin-bottom: 10px;
+                        text-decoration: underline;
+                        font-size: 20px;
+                        }
+                        .section {
+                        margin-bottom: 10px;
+                        line-height: 1.2;
+                        }
+                        .line {
+                        display: inline-block;
+                        border-bottom: 1px dotted #000;
+                        height: 20px;
+                        margin: 0 5px;
+                        width: 100%;
+                        }
+                        .inline-section {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 5px;
+                        width: 100%;
+                        }
+                        .inline-section span {
+                        margin: 0 5px;
+                        }
+                        .signature-section {
+                        margin-top: 20px;
+                        }
+                        .signature-section div {
+                        display: inline-block;
+                        width: 48%;
+                        text-align: center;
+                        }
+                        .signature-section .line {
+                        border-bottom: 1px solid #000;
+                        margin-top: 30px;
+                        }
+                        .table-section {
+                        border: 1px solid #000;
+                        margin-top: 15px;
+                        }
+                        .table-section table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        table-layout: fixed;
+                        }
+                        .table-section table th,
+                        .table-section table td {
+                        border: 1px solid #000;
+                        padding: 8px;
+                        text-align: center;
+                        vertical-align: middle;
+                        }
+                        .checkbox-group {
+                        margin-top: 15px;
+                        border: 1px solid #000;
+                        padding: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        }
+                        .checkbox-group label {
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        }
+                    </style>
+
+                    <div>
+                        <h2>(( نموذج إنهاء عقد ))</h2>
+                        <br/>
+                        <p class="section">
+                            المكرم / مدير الشؤون الإدارية بشركة التهذيب للخدمات التعليمية
+                            <span style="float: left; margin-left: 50px;">المحترم</span>
+                            <br/>
+                            السلام عليكم ورحمة الله وبركاته
+                        </p>
+
+                        <p class="section">
+                            أوصي بإنهاء عقد الموظف / ـة:
+                            <t t-foreach="employee_list" t-as="employee">
+                                <span style="width: 80%;">
+                                    <t t-esc="employee['employee_name']"/>
+                                </span>
+                            </t>
+                        </p>
+                        <div class="inline-section">
+                            <span>الوظيفة:
+                                <t t-foreach="employee_list" t-as="employee">
+                                    <span style="width: 80%;">
+                                        <t t-esc="employee['job_id']"/>
+                                    </span>
+                                </t>
+                            </span>
+                            <!-- <span class="line" style="width: 30%;"></span> -->
+                            <p>المدرسة:
+                                <t t-foreach="employee_list" t-as="employee">
+                                    <span style="width: 80%;">
+                                        <t t-esc="employee['kb_branchName']"/>
+                                    </span>
+                                </t>
+                            </p>
+
+                            <!-- <span class="line" style="width: 30%;"></span> -->
+                        </div>
+                        <p class="section">
+                            رأي المشرف التربوي بالمدرسة / وكيل/ـة المدرسة:
+                            <br/>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                        </p>
+                        <div class="inline-section">
+                            <span>التاريخ: &#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;</span>
+                            <span>الاسم:</span>
+                            <span class="line" style="width: 30%;"></span>
+                            <span>التوقيع:</span>
+                            <span class="line" style="width: 30%;"></span>
+                        </div>
+                        <br/>
+                        <p class="section">
+                            اعتماد قائد/ـة المدرسة:
+                            <br/>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                        </p>
+                        <div class="inline-section">
+                            <span>التاريخ: &#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;</span>
+                            <span>الاسم:</span>
+                            <span class="line" style="width: 30%;"></span>
+                            <span>التوقيع:</span>
+                            <span class="line" style="width: 30%;"></span>
+                        </div>
+                        <br/>
+                        <p class="section">
+                            اعتماد المشرف العام للمدرسة:
+                            <br/>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                            <span class="line" style="width: 100%;"></span>
+                        </p>
+                        <div class="inline-section">
+                            <span>التاريخ: &#160;&#160;&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;/&#160;&#160;&#160;&#160;&#160;&#160;</span>
+                            <span>الاسم:</span>
+                            <span class="line" style="width: 30%;"></span>
+                            <span>التوقيع:</span>
+                            <span class="line" style="width: 30%;"></span>
+                        </div>
+                        <br/>
+                        <p class="section">
+                            ** ملاحظة: يجب إرفاق جميع الشواهد والوثائق التي تؤكد الأسباب المذكورة
+                        </p>
+                        <hr/>
+                        <div class="section table-section">
+                            <table>
+                                <tr>
+                                    <th colspan="2">** اعتماد إدارة الشركة</th>
+                                </tr>
+                                <tr>
+                                    <td>مدير الشؤون التعليمية والتدريب<br/>
+                                    <span class="line" style="width: 100%;"></span><br/>
+                                    <span class="line" style="width: 100%;"></span>
+                                    </td>
+                                    <td>الموارد البشرية<br/>
+                                        <span class="line" style="width: 100%;"></span><br/>
+                                        <span class="line" style="width: 100%;"></span><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>التوقيع: .....................................</td>
+                                    <td>التوقيع: .....................................</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="section table-section">
+                            <table>
+                                <tr>
+                                    <th colspan="4">** الموارد البشرية والعلاقات الحكومية</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label>
+                                            <input type="checkbox"/> &#160;&#160;
+                                            طي قيد الموظف
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <label>
+                                            <input type="checkbox"/>&#160;&#160;
+                                            اصدار تأشيرة الخروج النهائي
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>الاسم: .....................................</td>
+                                    <td>التوقيع: .....................................</td>
+                                    <td>الاسم: .....................................</td>
+                                    <td>التوقيع: .....................................</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/tahtheb_footer.jpg" style="width: 1400px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

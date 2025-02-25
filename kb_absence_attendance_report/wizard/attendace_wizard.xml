@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_employee_attendance_new" model="ir.ui.view">
+        <field name="name">att.wizard.form</field>
+        <field name="model">attendance_today_new</field>
+        <field name="arch" type="xml">
+            <form string="Print Attendance Report">
+                <group>
+                    <group>
+                        <field name="date_from"/>
+
+
+                    </group>
+                    <group>
+                        <field name="date_to"/>
+
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_print_document" string="Attendance" type="object" class="btn-primary"/>
+                    <button name="action_print_absence" string="Absence" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendance_report_new" model="ir.actions.act_window">
+        <field name="name">Attendance Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendance_today_new</field>
+        <field name="view_mode">form</field>
+        <!--        <field name="view_id" ref="view_hr_attendance_view_filter" />-->
+        <field name="target">new</field>
+    </record>
+
+    <!-- <menuitem id="menu_employee_attendance_new"
+              name="Attendance And Absence Report"
+              parent="hr_attendance.menu_hr_attendance_root"
+              action="action_attendance_report_new" sequence="100"/> -->
+
+              <menuitem id="menu_employee_attendance_new"
+              name="Attendance And Absence Report"
+              parent="kb_hr_attendance_report.menu_employee_attendance_root"
+              action="action_attendance_report_new" sequence="100"/>
+
+</odoo>

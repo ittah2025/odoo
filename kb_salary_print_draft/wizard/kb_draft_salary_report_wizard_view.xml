@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_kb_draft_salary_report_wizard" model="ir.actions.act_window">
+        <field name="name">Draft Salary Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb_draft_salary_report_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="kb_draft_salary_report_wizard_form" model="ir.ui.view">
+        <field name="name">Draft Salary Report wizard</field>
+        <field name="model">kb_draft_salary_report_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Print Draft Salary Report">
+                <group>
+                    <group>
+                        <field name="kb_search_employee" widget="radio"/>
+                        <field name="kb_name_employee"
+                               attrs="{'invisible': [('kb_search_employee','=','selection1')]}"/>
+                        <field name="kb_country_id"
+                              />
+                    </group>
+                    <group>
+                        <field name="kb_date_start"/>
+                        <field name="kb_date_end"/>
+                    </group>
+
+
+                </group>
+                <footer>
+                    <button name="action_print_document_pdf" string="Print PDF report " type="object"
+                            class="btn-primary"/>
+                    <button name="action_print_document_xlsx" string="Print Exal report " type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="kb_draft_salary_excel_action" model="ir.actions.report">
+        <field name="name">Draft Salary Excel Report</field>
+        <field name="model">kb_draft_salary_report_wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">kb_salary_print_draft.kb_draft_salary_excel_action</field>
+        <field name="report_file">kb_salary_print_draft.kb_draft_salary_excel_action</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="model_kb_draft_salary_report_wizard"/>
+    </record>
+
+     <menuitem action="action_kb_draft_salary_report_wizard"
+              id="kb_draft_salary_menu"
+              name="Draft Salary Report"
+              parent="hr_payroll_community.menu_hr_payroll_community_root"
+    />
+
+</odoo>

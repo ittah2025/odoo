@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- add button to invoke change salary wizard at payslip page -->
+<odoo>
+    <record id="salary_deduction" model="ir.ui.view">
+        <field name="name">salary_deduction</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll_community.hr_payslip_run_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='draft_payslip_run']" position="after">
+                <button id="change_salary" name="%(action_change_salary)d" string="Deduct or Increase Salary" type="action" class="btn-primary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

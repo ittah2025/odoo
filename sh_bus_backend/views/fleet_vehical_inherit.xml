@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Here we can modified Fleet module -->
+    <record id="fleets_vehicles_form_view_inherit" model="ir.ui.view">
+        <field name="name">fleet.form.inherit</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group/group[1]" position="before">
+                <group string="Other Info">
+                    <field name="reg_no" />
+                    <field name="brand" />
+                    <field name="fleet_type" required="1" />
+                    <field name="amenities_ids" widget="many2many_tags" />
+                    <field name="engine_no" />
+                    <field name="owner" />
+                </group>
+            </xpath>
+
+            <xpath expr="//form/header" position="replace">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fleet_vehicle_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">fleet.kanban.inherit</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban/templates/t/div/div[2]/ul" position="replace">
+                <br />
+                Engine No. :<field name="engine_no" /> <br />
+
+                Brand :<field name="brand" /> <br />
+
+                Owner :<field name="owner" /> <br />
+            </xpath>
+            <xpath expr="//kanban/templates/t/div/div[2]/div" position="replace" />
+            <!--   <xpath expr="//kanban/templates/t/div/div[3]" position="replace"/>   -->
+            <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="replace" />
+        </field>
+    </record>
+
+    <record id="fleet.fleet_vehicle_action" model="ir.actions.act_window">
+        <field name="name">Buses</field>
+        <field name="res_model">fleet.vehicle</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{'search_default_groupby_status': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new vehicle
+            </p>
+            <p>
+                Manage your fleet by keeping track of the contracts, services, odometers and fuel logs associated to each vehicle.
+            </p>
+        </field>
+    </record>
+</odoo>

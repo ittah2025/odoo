@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_registrationrequest" model="ir.actions.act_window">
+        <field name="name">Registration Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">registrationrequest</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click to add Registration Request
+            </p>
+        </field>
+    </record>
+
+    <record id="view_registrationrequest_tree" model="ir.ui.view">
+        <field name="name">registrationrequest.tree</field>
+        <field name="model">registrationrequest</field>
+        <field name="arch" type="xml">
+            <tree string="Registration Request">
+                <field name="fullstudentname"/>
+                <field name="NID"/>
+                <field name="email"/>
+                <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_registrationrequest" model="ir.ui.view">
+        <field name="name">registrationrequest.form</field>
+        <field name="model">registrationrequest</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="send_massage"
+                            type="object"
+                            class="btn btn-success"
+                            icon="fa-check"
+                            string="Academic Accept "
+                            attrs="{'invisible': [('state','!=','draft')]}"
+                            groups="kb_Tahtheeb_school.group_school_acadimc_teacher"/>
+
+                    <button name="create_invoice_seat"
+                            type="object"
+                            class="btn btn-success"
+                            icon="fa-check"
+                            string="Invoice for reservation seat"
+                            attrs="{'invisible': ['|',('state','!=','academic_accept'),('invisibile_butten','=', True)]}"
+                            groups="kb_Tahtheeb_school.group_school_acadimc_teacher"/>
+
+                    <button name="interview_reasult"
+                            type="object"
+                            class="btn btn-success"
+                            icon="fa-check"
+                            string="Send Message"
+                            attrs="{'invisible': [('state','!=','academic_accept')]}"
+                            groups="kb_Tahtheeb_school.group_school_acadimc_teacher"/>
+
+                    <button name="print_action_registrationrequest"
+                            type="object"
+                            class="btn btn-success"
+                            icon="fa-check"
+                            string="Managerial Accept"
+                            attrs="{'invisible': [('state','!=','academic_send')]}"
+                            groups="kb_Tahtheeb_school.group_school_mager"/>
+
+                    <button name="%(wizard_action_wizard_rejectnewstudent_form)d"
+                            type="action"
+                            class="btn btn-danger"
+                            icon="fa-ban "
+                            string="Reject"
+                            groups="kb_Tahtheeb_school.group_school_mager , kb_Tahtheeb_school.group_school_acadimc_teacher "/>
+
+
+                    <field name="state" widget="statusbar" nolabel="1"/>
+
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Student Information">
+
+                            <field name="fullstudentname"/>
+                            <field name="Firstname"/>
+                            <field name="Fathername"/>
+                            <field name="Grandfathername"/>
+                            <field name="Familyname"/>
+                            <field name="NID"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="Nationality"/>
+                            <field name="birthdayDate"/>
+                            <field name="country_id"/>
+                            <field name="city"/>
+                            <field name="street"/>
+                            <field name="Postal"/>
+                            <field name="Additional"/>
+                            <field name="school_transportation"/>
+                            <field name="Educational_system"/>
+                            <field name="company_id"/>
+                            <field name="invisibile_butten" invisible="1"/>
+                            <field name="attachments" widget="many2many_binary"/>
+
+                        </group>
+                        <group string="Father information">
+                            <field name="fullfathername"/>
+                            <field name="firstnamefather"/>
+                            <field name="fathernamefather"/>
+                            <field name="grandfathernamefather"/>
+                            <field name="familynamefather"/>
+                            <field name="emailFather"/>
+                            <field name="phoneFather"/>
+                            <field name="NIDfather"/>
+                            <field name="NationalityFather"/>
+
+                        </group>
+                        <group string="Mother Information">
+                            <field name="fullmothername"/>
+                            <field name="firstnamemother"/>
+                            <field name="fathernamemother"/>
+                            <field name="grandfathernamemother"/>
+                            <field name="familynamemother"/>
+                            <field name="emailmother"/>
+                            <field name="phonemother"/>
+                            <field name="NIDmother"/>
+                            <field name="Nationalitymother"/>
+                        </group>
+                        <group string="Relative Information">
+                            <field name="namerelative"/>
+                            <field name="relativerelation"/>
+                            <field name="Phonerelative"/>
+                        </group>
+                        <group string="Interview Information"
+                               attrs="{'invisible': [('state','!=','academic_accept')]}"/>
+
+                        <group/>
+                        <group>
+                            <field name="interview_date"
+                                   attrs="{'invisible':[('state','not in',['academic_accept']),('state','not in',['managerial_accept'])]}"/>
+                            <field name="interview_Result" widget="radio"
+                                   attrs="{'invisible': [('state','!=','academic_send'),('state','not in',['managerial_accept'])]}"/>
+                            <field name="interview_note"
+                                   attrs="{'invisible': [('state','!=','academic_send'),('state','not in',['managerial_accept'])]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="registration_request_menu" name="Admission Register" parent="system_root" sequence="17"/>
+    <menuitem id="Student_registration_request_menu" name="Student Registration Request"
+              parent="registration_request_menu" sequence="18" action="action_registrationrequest"/>
+
+
+</odoo>

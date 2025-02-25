@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo >
+    <record id = "maintenance_report_print" model = "ir.actions.report" >
+        <field name = "name" >maintenance Reports</field >
+        <field name = "model" >maintenance_report</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_school_maintenance.maintenance_wizards_multi</field >
+        <field name = "report_name" >kb_school_maintenance.maintenance_wizards_multi</field >
+        <field name = "binding_model_id" ref = "model_maintenance_report" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "maintenance_wizards_multi" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Almarai" rel = "stylesheet" />
+                <style >
+                    .numberCircle {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    border: 2px solid #666;
+                    color: #666;
+                    text-align: center;
+                    }
+
+                    .numberCirclenot {
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    color: #666;
+                    text-align: center;
+                    }
+                </style >
+
+
+                <div style = "page-break-after: always;  " >
+                    <div class = "page" style = "font-family: 'Almarai', sans-serif;" >
+
+
+
+                            <div style = "text-align: center; font-size: 34px;" >
+                                <h2 >Maintenance History</h2 >
+                            </div >
+
+                    <t t-set="counter" t-value="1" />
+                        <table style = "width:100%; " >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                    No.
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                    Completed By
+                                </th >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center padding: 3px;" >
+                                    Order Date
+                                </th >
+
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                    Building Name
+                                </th >
+
+                                 <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                    Floor
+                                </th >
+
+                                 <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                   Room
+                                </th >
+
+                                 <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                   Description
+                                </th >
+                                 <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 3px;" >
+                                   Type
+                                </th >
+                            </tr >
+
+                            <t t-foreach = "orders_list_loop" t-as = "w" >
+                                <tr >
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "counter" />
+                                        <t t-set = "counter" t-value = "counter + 1" />
+
+                                    </td >
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+
+                                        <span t-esc = "w['kb_completedBy']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_orderDate']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_building']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_floor']" />
+                                    </td >
+
+                                     <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_room']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_description']" />
+                                    </td >
+
+                                    <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; color:black" >
+                                        <span t-esc = "w['kb_maintenanceTypeName']" />
+                                    </td >
+                                </tr>
+
+
+                            </t >
+                        </table >
+
+
+
+
+
+
+
+                    </div >
+                </div >
+            </t >
+        </t >
+    </template >
+</odoo >
+

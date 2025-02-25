@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="apartments_search" model="ir.ui.view">
+        <field name="name">rooms.search</field>
+        <field name="model">rooms</field>
+        <field name="arch" type="xml">
+            <search string="Rooms">
+                <field name="rented_room" />
+                <separator />
+                <filter string="Available Room" name="rented_room" domain="[('rented_room', '=', False)]" />
+            </search>
+        </field>
+    </record>
+<!-- Form view inside the document -->
+    <record model='ir.ui.view' id='rooms_form_view'>
+        <field name="name">rooms.form</field>
+        <field name="model">rooms</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="cost" />
+                            <field name="bathroom" />
+                            <field name="aprtment_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+<!-- Tree inside the document-->
+    <record model='ir.ui.view' id='rooms_tree_view'>
+        <field name="name">rooms.tree</field>
+        <field name="model">rooms</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

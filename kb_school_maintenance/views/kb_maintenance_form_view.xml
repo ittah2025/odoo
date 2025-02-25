@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="school_maintenance_orders_form" model="ir.ui.view">
+        <field name="name">kb.maintenance.orders.form.view</field>
+        <field name="model">kb.maintenance.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button id="button_conf" name="complete_order_in_maintenance" string="Confirm" type="object" class="btn-primary" attrs="{'invisible': [('kb_state', '!=', 'draft')]}" groups="kb_school_maintenance.group_create_form"/>
+                    <button id="button_waiting" name="waiting_approval_maintenance_form" string="To Service " type="object" class="btn-primary" attrs="{'invisible': [('kb_state', '!=', 'completeForm')]}" groups="kb_school_maintenance.group_complete_form"/>
+                    <button id="button_approval" name="approval_maintenance_form" string="Approval" type="object" class="btn-success" attrs="{'invisible':['|','|','|',('kb_state', '=', 'approval'),('kb_state', '=', 'reject'),('kb_state','=','inProgress'),('kb_state','=','done')]}" groups="kb_school_maintenance.group_approval_form"/>
+                    <button name="%(kb_rejection_reason_action)d" attrs="{'invisible':['|','|','|',('kb_state', '=', 'approval'),('kb_state', '=', 'reject'),('kb_state','=','inProgress'),('kb_state','=','done')]}" class="btn-danger" string="Reject" type="action" groups="kb_school_maintenance.group_approval_form"/>
+                    <field name="kb_state" widget="statusbar" statusbar_visible="draft,completeForm,waiting,approval" nolabel="1"/>
+                </header>
+                    <sheet>
+                         <div class="oe_title">
+                                <h1><field name="kb_ordersID" readonly="1"/></h1>
+                         </div>
+                            <group>
+                                <field name="kb_createdBy"/>
+                                <field name="kb_completedBy" attrs="{'readonly': [('kb_state', '!=', 'completeForm')]}"/>
+<!--                                <field name="kb_userID"  attrs="{'readonly':['|',('kb_state', '=', 'draft'),('kb_state', '=', 'completeForm')]}"/>-->
+                                <field name="kb_userID" />
+                                <!-- <field name="kb_responsible" attrs="{'readonly':['|',('kb_state', '=', 'draft'),('kb_state', '=', 'completeForm')]}" /> -->
+                                <field name="kb_orderDate" readonly="1"/>
+                                <field name="kb_building" options="{'no_create': True}"/>
+                                <field name="kb_floor"/>
+                                <field name="kb_room" options="{'no_create': True}"/>
+                                <field name="kb_expected_cost" />
+
+                            </group>
+                        <notebook>
+                            <page string="Maintenance Details" name="Maintenance Details">
+                                <field name="kb_maintenanceFormID">
+                                    <tree editable="bottom">
+                                        <field name="kb_description"/>
+                                        <field name="kb_maintenanceType"/>
+                                        <field name="doc_attachment_ids8" widget="many2many_binary" class="oe_inline" />
+                                        <field name="Note"  />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="reject_info" string="Rejection Information" attrs="{'invisible': [('kb_state', '!=', 'reject')]}">
+                                <group name="reject_info" string="Rejection Information">
+                                    <field name="kb_rejection_date" readonly="1" />
+                                    <field name="kb_reject_by" readonly="1" />
+                                    <field name="kb_reject_reason" readonly="1" />
+                                </group>
+                            </page>
+                        </notebook>
+                    <group>
+                        <field name="kb_note" string="" placeholder="This note is only for internal purposes"/>
+                    </group>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <record id="Maintenance_orders_tree" model="ir.ui.view">
+        <field name="name">kb.maintenance.form.tree</field>
+        <field name="model">kb.maintenance.form</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="kb_ordersID"/>
+                <field name="kb_orderDate"/>
+                <field name="kb_state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

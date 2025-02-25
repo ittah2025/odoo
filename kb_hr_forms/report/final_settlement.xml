@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="final_settlement" model="ir.actions.report">
+        <field name="name">Final Settlement</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.print_final_settlement</field>
+        <field name="report_file">kb_hr_forms.print_final_settlement</field>
+        <field name="print_report_name">'Final Settlement - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="print_final_settlement">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <div style="text-align: right; direction: rtl;">
+                        إدارة الموارد البشرية والشؤون الإدارية
+                    </div>
+                    <div style="text-align: center; direction: rtl;">
+                        <b>نموذج مخالصة نهائية
+                            <br />
+                            FINAL SETTLEMENT </b>
+                    </div>
+                    <t t-foreach="docs" t-as="o">
+                    <table>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right;  padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                بيانات الموظف
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                Employee Data 
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                الاسم
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Name
+                            </th>
+                           
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;"  colspan="2">
+                                الوظيفة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.job_title" />
+                            </th>
+                             <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Job Title
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                الجـنــــســـــيـة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                               <t t-esc="o.country_id.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Nationality
+                            </th>
+
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                القسم
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.department_id.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Department
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    تاريخ إنهاء الخدمة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.contract_id.date_end" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    Date of termination of Services
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    تاريخ التعيين
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    <t t-esc="o.first_contract_date" />
+                            </th>
+                             <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                    Joining Date
+                            </th> 
+                        </tr>
+                    </table>
+                    </t>
+                    <br/>
+                    <table>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6">
+                                إقـــــرار الـمـوظـــــف
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6">
+                                Employee Affirmance
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                بهذا أقر أنا الموقع أدناه بأنني قد تسلمت المبالغ الآتية نسبة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                Date Of termination of services
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                بهذا أقر أنا الموقع أدناه بأنني قد تسلمت المبالغ الآتية نسبة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                Date Of termination of services
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                لإنهاء العقد المبرم بيني وبين ______________________ 
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                I, the undersigned hereby declare that I have received the amounts below at termination
+                                of my contract
+                                with the Com:
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                أجــــور عن الفـــــترة من  ___/___/____
+                                وحتى نهاية انتهاء الخدمة في  ___/___/____
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                WAGES for the Period from ____________________________ until termination of services.
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                               مكافأة نهاية الخدمة _______________________ ريال
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                _______________________ End of services award S.R
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                التعويض عن فترة الإنذار _______________________ ريال
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                 _______________________ comp. For notice period S.R
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                تعويض عن مدة الإجازة المتبقية  _______________________ ريال
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                 _______________________________________ Accrued leave pay S.R
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                مدفوعات متفرقة _______________________ ريال
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                ___________________________________________ Other payments S.R
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                ناقصا المبالغ المدينة _______________________ ريال
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                 _______________________ Less amount received S.R
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                     المجموع (_______________________) ريال فقط <br />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                Total ( _______________________ Only S.R )
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                وهذا المبلغ يشمل كافة حقوقي المترتبة عن إنهاء عقد عملي مع الشركة وفقا للوائح العامة
+                                للشركة ونظام العمل
+                                والعمال، وبهذا تعتبر هذه المخالصة النهائية مبرئة للذمة وتصفية للعقد بمناسبة انتهائه ولا
+                                يجوز المطالبة
+                                بأي شيء بعد ذلك وتكون صلتي بالشركة قد انقطعت نهائياً 
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                The amount comprises all accrued entitlements due to me at termination of my contract
+                                pursuant to co.
+                                regulations and the labor and workmen law. Hence, this is deemed the final settlement
+                                absolving the co.
+                                of all responsibility and presenting a clearance of the contract because of the
+                                termination thereof: and
+                                I shall not have the right to make claims against the company thereafter. My relation
+                                with the co. is
+                                hereby irrevocably ended
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                اسم الموظف _______________________ 
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                _______________________ Name
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                توقـــيـــعــــه  _______________________ 
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                _______________________ Signature 
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right; padding: 8px; width:6%;"  colspan="6">
+                                التــــاريـــــخ ___/___/______ 
+                            </th> 
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width:6%;" colspan="6">
+                                _______/___/___ Date
+                            </th>
+                        </tr>
+                    </table>
+                    <p style="text-align: center;">
+                        * الأصل + صورة لشؤون الموظفين * صورة لملف المذكور * صورة لإدارة * صورة لمحاسب الرواتب
+                    </p>
+                </div>
+                <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                    <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="action_contract" model="ir.actions.act_window">
+        <field name="name">End of Service Reward Calculator</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">contract</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new contract
+            </p>
+        </field>
+    </record>
+
+    <record id="view_hotel_room_type_tree" model="ir.ui.view">
+        <field name="name">End of Service Reward Calculator.tree</field>
+        <field name="model">contract</field>
+        <field name="arch" type="xml">
+            <tree string="Hotel Room Type">
+                <field name="name_employe" />
+            </tree>
+        </field>
+    </record>
+
+    
+    <record id="view_contract_form" model="ir.ui.view">
+        <field name="name">End of Service Reward Calculator.form</field>
+        <field name="model">contract</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name_employe"/>
+                        </group>
+                         <group>
+                           <field name="startDate"/>
+                           <field name="endDate"/> 
+                           <field name="total_days"/>
+                           <field name="total_years"/>
+                           <field name="total_month"/>
+                           <field name="salary"/>
+                           <field name="Reward"/>
+                        </group>
+                        <group>
+                        <field name="type_contract"/>
+                        <field name="notspecific" attrs="{'invisible': [('type_contract', '==', 'specific')]}"/>
+                        <field name="specific" attrs="{'invisible': [('type_contract', '==', 'notspecific')]}"/>
+                        <field name="covenant"/>
+                        <field name="button_set_evacuation"/>
+                        <field name="button_set_covenant"/>
+                        <field name="RewardNotSpecific" attrs="{'invisible': [('type_contract', '==', 'specific')]}"  />
+                        <field name="RewardSpecific" attrs="{'invisible': [('type_contract', '==', 'notspecific')]}" />
+                        </group>
+                    </group>
+        
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <menuitem id="contract_root"
+              name="End of Service Reward Calculator"
+              sequence="10"/>
+    
+    <menuitem id="contract_menu"
+              name="End of Service Reward Calculator"
+              parent="contract_root"
+              sequence="2"/>
+
+    <menuitem id="contract_submenu"
+              name="End of Service Reward Calculator"
+              parent="contract_menu"
+              action="action_contract"
+              sequence="2"/>
+    
+</odoo>

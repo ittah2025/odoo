@@ -1,0 +1,448 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_end_of_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20231101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-10 07:51+0000\n"
+"PO-Revision-Date: 2023-12-10 10:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
+"%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__salary
+msgid " salary"
+msgstr "الراتب"
+
+#. module: kb_end_of_service
+#: model:res.groups,name:kb_end_of_service.group_end_of_administration
+msgid "Administrator"
+msgstr "المدير "
+
+#. module: kb_end_of_service
+#: model:ir.module.category,description:kb_end_of_service.module_category_end
+msgid "Category For End of Services"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__clicked
+msgid "Clicked"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__contract_end_date
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Contract End date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Covenant"
+msgstr "عهدة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__covenant__covenantto
+msgid "Covenant delivered"
+msgstr "تسليم العهد"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__date_today
+msgid "Date Today"
+msgstr "تاريخ اليوم"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_days
+msgid "Days"
+msgstr "أيام "
+
+#. module: kb_end_of_service
+#: model:ir.ui.menu,name:kb_end_of_service.menu_defintion_of_salary_report
+msgid "Defintion of salary"
+msgstr "تعريف الراتب"
+
+#. module: kb_end_of_service
+#: model:ir.actions.act_window,name:kb_end_of_service.defintion_of_salary_report_action
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.hr_defintion_of_salary_reports_view_form
+msgid "Defintion of salary reports"
+msgstr "تعريف الراتب"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__covenant__notcovenantto
+msgid "Delivery has not been done"
+msgstr "لم يتم التسليم"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Department"
+msgstr "القسم"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__display_name
+msgid "Display Name"
+msgstr "اسم العرض "
+
+#. module: kb_end_of_service
+#: model:ir.model,name:kb_end_of_service.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__employee_id
+msgid "Employee name"
+msgstr "اسم الموظف"
+
+#. module: kb_end_of_service
+#: model:ir.actions.report,name:kb_end_of_service.end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.Employee_view_form2
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "End of Services Calculator"
+msgstr "حاسبة نهاية الخدمات"
+
+#. module: kb_end_of_service
+#: model:ir.module.category,name:kb_end_of_service.module_category_end
+msgid "End of Services Calculator 11"
+msgstr "حاسبة نهاية الخدمة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__button_set_evacuation
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Hand over all the covenant to the worker"
+msgstr "تسليم كل العهد للعامل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__kb_journal_id
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons4
+msgid ""
+"Leaving the worker to work without submitting a resignation other than the cases "
+"mentioned in Article 81"
+msgstr "ترك العامل للعمل دون تقديم استقالة في غير الحالات المذكورة في المادة 81"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons6
+msgid "Leaving work as a result of force majeure"
+msgstr "ترك العمل نتيجة قوة قاهرة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason4
+msgid "Leaving work as a result of force majeure "
+msgstr "ترك العمل نتيجة قوة قاهرة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_month
+msgid "Month"
+msgstr "شهر"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_defintion_of_salary_reports__sender
+msgid "Name of the sender"
+msgstr "الجهة الموجه إليها"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__type_contract__notspecific
+msgid "None specified contract time"
+msgstr "لا يوجد وقت محدد للعقد"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.hr_defintion_of_salary_reports_view_form
+msgid "PDF"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__notspecific
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__specific
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Reason"
+msgstr "السبب"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__remaining_days
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Remaining Days"
+msgstr "الأيام المتبقية"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_remaining_salary
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Remaining Salary"
+msgstr "الراتب المتبقي"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__time_off_salary_id
+msgid "Remaining salary time off"
+msgstr "راتب المتبقي من الاجازات"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__time_off_remaining_id
+msgid "Remaining time off"
+msgstr "باقي ايام الاجازات"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__Reward
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Reward"
+msgstr "مكافأة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__kb_salary_credit
+msgid "Salary Credit Account"
+msgstr "حساب الراتب الدائن"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__kb_salary_debit
+msgid "Salary Debit Account"
+msgstr "حساب الراتب المدين"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.Employee_view_form2
+msgid "Send"
+msgstr "أرسل"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Service Reward"
+msgstr "مكافأة الخدمة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__RewardNotSpecific
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__RewardSpecific
+msgid "Service reward"
+msgstr "مكافأة الخدمة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason2
+msgid "Termination of the contract by the employer"
+msgstr "إنهاء العقد من قبل صاحب العمل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons7
+msgid "Termination of the contract by the employer "
+msgstr "إنهاء العقد من قبل صاحب العمل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons8
+msgid ""
+"Termination of the contract by the employer for one of the cases mentioned in Article "
+"80"
+msgstr "إنهاء العقد من قبل صاحب العمل لإحدى الحالات المنصوص عليها في المادة 80"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason3
+msgid ""
+"Termination of the contract by the employer for one of the cases mentioned in Article "
+"80 "
+msgstr "إنهاء العقد من قبل صاحب العمل لإحدى الحالات المنصوص عليها في المادة 80"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason7
+msgid ""
+"Termination of the contract by the worker or the worker leaving the work in cases "
+"other than those mentioned in Article 81"
+msgstr ""
+"إنهاء العقد من قبل العامل أو ترك العامل للعمل في غير الحالات المذكورة في المادة 81"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "The act of evading a party for the worker"
+msgstr "فسخ العقد من صاحب العمل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__button_set_covenant
+msgid "The act of evading a party for the worker "
+msgstr "فسخ العقد من صاحب العمل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons2
+msgid "The agreement of the worker and the employer to terminate the contract"
+msgstr "موافقة العامل وصاحب العمل على إنهاء العقد"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons3
+msgid "The employees resignation"
+msgstr "استقالة الموظفين"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason1
+msgid ""
+"The expiration of the contract period or the agreement of the two parties to terminate "
+"the contract "
+msgstr "انتهاء مدة العقد أو اتفاق الطرفين على إنهاء العقد"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason6
+msgid "The worker leaving work for one of the cases mentioned in Article 81"
+msgstr "ترك العامل العمل لإحدى الحالات المنصوص عليها في المادة 81"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons5
+msgid "The worker left work for one of the cases mentioned in Article 81"
+msgstr "ترك العامل العمل لإحدى الحالات المذكورة في المادة 81"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__notspecific__reasons1
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__specific__reason5
+msgid ""
+"The worker termination of the work contract within six months of the marriage contract "
+"or within six months of giving birth"
+msgstr "إنهاء العامل لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ستة أشهر من الولادة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__kb_timeoff_debit_account
+msgid "Timeoff Debit Account"
+msgstr "حساب الإجازات المدين "
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_daily_rates
+msgid "Total Daily Rate"
+msgstr "إجمالي  اليومي"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_loan
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Total Loans"
+msgstr "مجموع السلف"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_reward_remaining
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Total Reward"
+msgstr "مكافأة الخدمة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_salary
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Total wage"
+msgstr "مجموع الرواتب"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Type of Contract"
+msgstr "نوع العقد"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__type_contract
+msgid "Type of contract"
+msgstr "نوع العقد"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Work Phone"
+msgstr "هاتف العمل"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__total_years
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.end_of_service_report_ids
+msgid "Years"
+msgstr "سنة"
+
+#. module: kb_end_of_service
+#: model:ir.model.fields,field_description:kb_end_of_service.field_hr_employee__covenant
+msgid "covenant"
+msgstr "العهدة"
+
+#. module: kb_end_of_service
+#: model:ir.model,name:kb_end_of_service.model_hr_defintion_of_salary_reports
+msgid "hr_defintion_of_salary_reports"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model:ir.model.fields.selection,name:kb_end_of_service.selection__hr_employee__type_contract__specific
+msgid "specified contract time "
+msgstr "وقت العقد المحدد"
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "إجمالـي الراتب"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "الاسـم"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "الجهة الموجه إليها"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "المسمى الوظيفي"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid ""
+"بأن الموظف الموضح اسمه وبياناته أعلاه, أحد منسوبينها ولا يزال على رأس العمل حتى "
+"تاريخه.\n"
+"                            <br/>\n"
+"                            وبناء على طلبه أعطي هذه الشهادة لتقديمها إلى من يهمه الامر."
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "تشهد"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "رقم الهوية / الاقامـة"
+msgstr ""
+
+#. module: kb_end_of_service
+#: model:ir.actions.report,name:kb_end_of_service.defintion_of_salary_ids_wizard
+#: model_terms:ir.ui.view,arch_db:kb_end_of_service.defintion_of_salary_reports_2
+msgid "شهادة تعريف بإجمالـي الراتب"
+msgstr ""

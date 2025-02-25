@@ -1,0 +1,234 @@
+<odoo >
+
+    <record id = "end_of_service" model = "ir.actions.report" >
+        <field name = "name" >End of Services Calculator</field >
+        <field name = "model" >hr.employee</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_end_of_service.end_of_service_report_ids</field >
+        <field name = "report_name" >kb_end_of_service.end_of_service_report_ids</field >
+        <field name = "binding_model_id" ref = "model_hr_employee" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "end_of_service_report_ids" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <t t-foreach = "docs" t-as = "doc" >
+                    <link href = "https://fonts.googleapis.com/css2?family=Tajawal" rel = "stylesheet" />
+                    <div class = "page" style = "font-family: 'Tajawal', sans-serif;page-break-after: always;" >
+                        <h3 style = "text-align:center; font-weight: bold;" >End of Services Calculator</h3 >
+                        <br />
+                        <br />
+
+
+                        <table style = "width:100%;" >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Name
+                                </th >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Work Phone
+                                </th >
+                            </tr >
+                            <tr >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.name" />
+                                </td >
+
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.work_phone" />
+                                </td >
+                            </tr >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    Department
+                                </th >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Job Title
+                                </th >
+                            </tr >
+                            <tr >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.department_id" />
+                                </td >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.job_title" />
+                                </td >
+                            </tr >
+                        </table >
+
+
+                        <br />
+
+                        <table style = "width:100%;" >
+                            <tr >
+                                <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Contract End date
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.contract_end_date" />
+                                </td >
+                                <th rowspan="2" style = "border:1px solid black; background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Type of Contract
+                                </th >
+                                <td rowspan="2" style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.type_contract" />
+                                </td >
+                            </tr >
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Total wage
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.total_salary" t-options='{"widget": "float", "precision": 2}'/>
+                                </td >
+
+
+                            </tr >
+
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Years
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.total_days" />
+                                </td >
+
+                                <t t-if="doc.specific">
+                                 <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Reason
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.specific" />
+                                </td >
+                                </t>
+
+                                <t t-else="">
+                                 <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center; vertical-align:middle;" >
+                                    Reason
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center; vertical-align:middle;" >
+                                    <span t-field = "doc.notspecific" />
+                                </td >
+                                </t>
+
+                            </tr >
+
+
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Reward
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.Reward" t-options='{"widget": "float", "precision": 2}'/>
+                                </td >
+
+                                <t t-if="doc.RewardNotSpecific">
+
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Service Reward
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.RewardNotSpecific" />
+                                </td >
+                             </t>
+
+
+                             <t t-else="">
+
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Service Reward
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.RewardSpecific" />
+                                </td >
+
+
+                              </t>
+                            </tr>
+
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Remaining Days
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.remaining_days" />
+                                </td >
+
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Remaining Salary
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.total_remaining_salary" t-options='{"widget": "float", "precision": 2}'/>
+                                </td >
+
+
+
+                            </tr >
+
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Total Loans
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.total_loan" t-options='{"widget": "float", "precision": 2}'/>
+                                </td >
+
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Covenant
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.covenant" />
+                                </td >
+
+                            </tr >
+
+                            <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Total Reward
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <span t-field = "doc.total_reward_remaining" />
+                                </td >
+                            </tr >
+                        </table >
+
+<br />
+                         <table style = "width:40%;" >
+
+                             <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    Hand over all the covenant to the worker
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+                                    <t t-if="doc.button_set_evacuation">
+                                                <i class="fa fa-check" />
+                                    </t>
+                                            <t t-else=""></t>
+                                </td >
+                            </tr >
+
+                             <tr >
+                                <th style = "border:1px solid black;background-color:#D3D3D3;text-align:center" >
+                                    The act of evading a party for the worker
+                                </th >
+                                <td style = "border:1px solid black;background-color:#F5F5F5;text-align:center" >
+
+                                    <t t-if="doc.button_set_covenant">
+                                                <i class="fa fa-check" />
+                                    </t>
+                                            <t t-else=""></t>
+
+                                </td >
+                            </tr >
+                        </table >
+
+
+                    </div >
+
+                </t >
+            </t >
+        </t >
+    </template >
+</odoo >

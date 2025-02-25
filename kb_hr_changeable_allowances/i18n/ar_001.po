@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_hr_changeable_allowances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-25 10:02+0000\n"
+"PO-Revision-Date: 2024-03-25 10:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_hr_changeable_allowances
+#: model_terms:ir.ui.view,arch_db:kb_hr_changeable_allowances.view_changeable_allowance
+msgid ""
+"<span nolabel=\"1\">This Wizard Will Allows You To Modify Allowances </span>"
+msgstr "<span nolabel=\"1\">سيسمح لك هذا المعالج بتعديل البدلات </span>"
+
+#. module: kb_hr_changeable_allowances
+#: model_terms:ir.ui.view,arch_db:kb_hr_changeable_allowances.hr_contract_form_additional_allowance_kb
+msgid "<span>/ month</span>"
+msgstr "<span>/ شهر</span>"
+
+#. module: kb_hr_changeable_allowances
+#: model:hr.salary.rule,name:kb_hr_changeable_allowances.hr_rule_aa
+#: model:hr.salary.rule.category,name:kb_hr_changeable_allowances.AA
+msgid "Assignment Allowance"
+msgstr "بدل الانتقال"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_hr_contract__kb_assignment_allowance
+msgid "Assignment allowance"
+msgstr "بدل الانتقال"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.actions.act_window,name:kb_hr_changeable_allowances.action_view_changeable_allowance__
+#: model:ir.model,name:kb_hr_changeable_allowances.model_changeable_allowance
+#: model:ir.ui.menu,name:kb_hr_changeable_allowances.menu_hr_payroll_community_changeable_allowance
+msgid "Changeable Allowance"
+msgstr "بدل قابل للتغيير"
+
+#. module: kb_hr_changeable_allowances
+#: model_terms:ir.ui.view,arch_db:kb_hr_changeable_allowances.view_changeable_allowance
+msgid "Changeable Allowance Tree"
+msgstr "شجرة البدلات القابلة للتغيير"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__contract_ids
+msgid "Contracts"
+msgstr "انكماش"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model,name:kb_hr_changeable_allowances.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: kb_hr_changeable_allowances
+#: model_terms:ir.ui.view,arch_db:kb_hr_changeable_allowances.view_changeable_allowance
+msgid "Employee Contracts"
+msgstr "عقود الموظفين"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,help:kb_hr_changeable_allowances.field_hr_contract__kb_assignment_allowance
+msgid "Enter assignment_allowance"
+msgstr "أدخل الواجب_البدل"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,help:kb_hr_changeable_allowances.field_hr_contract__kb_overtime_allowance
+msgid "Enter overtime_allowance"
+msgstr "أدخل overtime_allowance"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_changeable_allowance__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: kb_hr_changeable_allowances
+#: model:hr.salary.rule,name:kb_hr_changeable_allowances.hr_rule_oa
+#: model:hr.salary.rule.category,name:kb_hr_changeable_allowances.OA
+msgid "Overtime Allowance"
+msgstr "بدل العمل الإضافي"
+
+#. module: kb_hr_changeable_allowances
+#: model:ir.model.fields,field_description:kb_hr_changeable_allowances.field_hr_contract__kb_overtime_allowance
+msgid "Overtime allowance"
+msgstr "بدل العمل الإضافي"
+
+#. module: kb_hr_changeable_allowances
+#: model_terms:ir.ui.view,arch_db:kb_hr_changeable_allowances.view_changeable_allowance
+msgid "Select Employees"
+msgstr "حدد الموظفين"

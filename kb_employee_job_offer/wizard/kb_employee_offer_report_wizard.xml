@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="employee_offer_wizard_view_form" model="ir.ui.view">
+        <field name="name">Employee Offer Wizard Form</field>
+        <field name="model">employee.offer.report</field>
+        <field name="arch" type="xml">
+            <form string="Print Employee Assignment Report">
+                <group>
+                    <group>
+                        <field name="kb_employee_name"/>
+                        <field name="kb_employee_job"/>
+                        <field name="location"/>
+                        <field name="holidays"/>
+                        <field name="days_of_work"/>
+                        <field name="insurance"/>
+
+                        <field name="kb_special_conditions"/>
+
+                    </group>
+                    <group>
+                        <field name="kb_date"/>
+                        <field name="kb_basic_salary"/>
+                        <field name="kb_housing_allowance"/>
+                        <field name="kb_transfer_allowance"/>
+                        <field name="kb_special_conditions_2"/>
+
+                        <field name="kb_salary_2" attrs="{'invisible':[('kb_special_conditions_2','=', False)]}"/>
+                        <field name="kb_basic_salary_2" attrs="{'invisible':[('kb_special_conditions_2','=', False)]}"/>
+                        <field name="kb_housing_allowance_2"
+                               attrs="{'invisible':[('kb_special_conditions_2','=', False)]}"/>
+                        <field name="kb_transfer_allowance_2"
+                               attrs="{'invisible':[('kb_special_conditions_2','=', False)]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_print_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_employee_offer_wizard_view" model="ir.actions.act_window">
+        <field name="name">Employee Offer Report Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.offer.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- <menuitem id="employee_offer_report_menu_item"
+              name="Employee Offer Report"
+              parent="hr.menu_hr_root"
+              action="action_employee_offer_wizard_view" sequence="300"/> -->
+
+</odoo>

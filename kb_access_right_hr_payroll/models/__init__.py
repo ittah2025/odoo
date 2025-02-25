@@ -1,0 +1,1 @@
+from . import kb_inherit_hr_payslip

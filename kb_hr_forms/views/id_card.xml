@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="alsalem_id_card" model="ir.actions.report">
+        <field name="name">ID Card</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.id_card</field>
+        <field name="report_file">kb_hr_forms.id_card</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="id_card">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <!-- <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" /> -->
+                    <t t-foreach="docs" t-as="o">
+                       <style> 
+                            .top { 
+                                border-width: 1px;
+                                height: 5%; 
+                                width: 5%; 
+                                background-color: #2e2c7d; 
+                                position: sticky;
+                                top: 1px;
+                                bottom:1px;
+                                } 
+                
+                        </style>
+
+                        <table align="center" width="850px" height="850px" style="border: 1px solid #2e2c7d; border-top-left-radius: 30px; border-top-right-radius: 30px;">
+                            <tr class="top">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="border-radius: 3px;">
+                                    <img align="center" width="350" height="400" src="/kb_alsalem_id_card/static/description/logo.png"/><br/>
+                                    <img align="center" width="200" height="200" src="/kb_alsalem_id_card/static/description/qr.png"/>
+                                </td>
+                            </tr>
+                            <br/><br/>
+                            <tr>
+                                <td align="center" style="font-family:Josefin Sans; color:#2e2c7d;font-size:30px;">
+                                <img align="center" width="30" height="30" src="/kb_alsalem_id_card/static/description/snapchat.png"/>
+                                <br/>
+                                  
+                                </td>
+                                <tr>
+                                <td align="center" style="font-family:Tajawal; color:#2e2c7d; font-size:30px;">
+                                <img align="center" width="30" height="30" src="/kb_alsalem_id_card/static/description/facebook.png"/>
+                                <br/>
+                                    شركة التهذيب للخدمات التعليمية
+                                </td>
+                            </tr>
+                            </tr>
+                            <br/><br/>
+                            <tr class="top">
+                                <td></td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table align="center" width="850px" height="850px" style="border: 1px solid #2e2c7d; border-top-left-radius: 30px; border-top-right-radius: 30px;">
+                            <tr class="top">
+                                <td></td>
+                            </tr>
+                            <br/><br/>
+                            <tr>
+                                <td align="center" style="border: none;" >
+                                  <!-- <img t-att-src="image_data_uri(hr.employee.image_1920)"
+                                    t-if="hr.employee.image_1920"
+                                    alt="test"
+                                    width="150"
+                                    height="150" /> -->
+
+                                    <img align="center" width="150" height="150" src="/kb_alsalem_id_card/static/description/logo.png"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="20px" style="font-family:Josefin Sans; color:#299ad6; border: none;">
+                                    <strong style="font-family:Josefin Sans; color:#299ad6; font-size:70px;"><t t-esc="o.name" /></strong><br/><br/>
+                                    <strong style="font-family:Josefin Sans; color:#2e2c7d; font-size:70px;"><t t-esc="o.job_title" /></strong><br/><br/>
+                                    <strong style="font-family:Josefin Sans; color:#299ad6; font-size:70px;">Blood Type:<t t-esc="o.bloodGroup" /></strong><br/><br/>
+                                    <strong style="font-family:Josefin Sans; color:#299ad6; font-size:70px;"><t t-esc="o.employeeId" /></strong><br/>
+                                </td>
+                            </tr>
+                            <br/><br/>
+                            <tr class="top">
+                                <td></td>
+                            </tr>
+                        </table>
+                    </t>
+                </t>
+            </t>
+    </template>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_count_inventory_adjustments_wizard_form">
+        <field name="name">Inventory Adjustments Wizard</field>
+        <field name="model">kb.inventory.adjustments.extended.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kb_warehouse" options="{'no_create': True, 'no_create_edit':True}" />
+                        </group>
+                    </group>
+                    <div class="alert alert-info" role="alert">
+                        Are You Sure To Start Inventory Adjustments With All Products?
+                    </div>
+
+                </sheet>
+                <footer>
+                    <button string="Create" type="object" name="count_inventory_adjustments"
+                            class="btn-primary o_create_job"/>
+                    <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_count_inventory_adjustments">
+        <field name="name">Inventory Adjustments Wizard</field>
+        <field name="res_model">kb.inventory.adjustments.extended.wizard</field>
+        <field name="view_id" ref="view_count_inventory_adjustments_wizard_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

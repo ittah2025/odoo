@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="move_year_wizard_view_form" model="ir.ui.view">
+        <field name="name">move.year.wizard.form</field>
+        <field name="model">move.year.wizard</field>
+        <field name="arch" type="xml">
+            <form string="School Report">
+                <group>
+                    <field name="kb_academic_year_id_from"/>
+                    <field name="kb_academic_year_id_to"/>
+                    <field name="kb_current_standard"/>
+                    <field name="kb_move_standard"/>
+                    <!-- <field name="kb_excel_file"/> -->
+
+                    
+                </group>
+                <footer>
+                
+                    
+                    <button name="move_student" type="object" string="Move" class="oe_highlight" confirm="Are you sure you want to move?"/>
+                    <button special="cancel" string="Cancel"/>
+                    <!-- <button name="print_excel_report" type="object" string="Download Excel" class="oe_highlight"/> -->
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="move_student_action" model="ir.actions.act_window">
+        <field name="name">Move Student</field>
+        <field name="res_model">move.year.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="move_year_wizard_view_form"/>
+    </record>
+
+    <!-- <menuitem id="menu_account_partner_balance_report"
+              name="Partner balance report"
+              sequence="100"
+              action="account_report_action"
+              parent="account.menu_finance_reports"
+              groups="account.group_account_manager,account.group_account_user"/> -->
+    
+
+    <!-- <menuitem id="move_students" name="Student Reports" parent="school.menu_ems" sequence="19"
+        groups="school.group_school_administration,school.group_is_admission,school.group_school_academic_supervisor" /> -->
+    <menuitem id="menu_move_students_wizard_sub_form" parent="kb_Tahtheeb_school.configuration_menu" action="move_student_action"
+        groups="kb_Tahtheeb_school.group_school_administration,kb_Tahtheeb_school.group_school_teacher" sequence="53" />
+
+</odoo>

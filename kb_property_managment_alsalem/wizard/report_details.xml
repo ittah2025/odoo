@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_summary_report" model="ir.actions.report">
+        <field name="name">Summary Report</field>
+        <field name="model">summary_report_wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_property_managment_alsalem.report_details</field>
+        <field name="report_file">kb_property_managment_alsalem.report_details</field>
+        <field name="binding_model_id" ref="model_summary_report_wizard" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_details">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="text-center">
+                            <style>
+                           
+                                .header {
+                                    background-color: #86d0b3;
+                                    text-align: center;
+                                    padding: 20px;
+                                 
+                                    }
+
+                                .information {
+                                    background-color: #d5d8dc;
+                                    text-align: left;
+                                    }
+
+                                .good {
+                                    background-color: #ebedef;
+                                    text-align: center;
+                            
+                                    }
+
+
+                                .grey {
+                                    text-align: left;
+                                    background-color: #c7c9ca;
+                           
+                                    }
+
+                                .gfg {
+                                    border-collapse:separate;
+                                    border-spacing:3px 3px;
+                                    width: 100%;
+                                    }
+
+                            </style>
+
+                    <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+
+                        <h2 class="header" style="color: #fdfefe;">
+                            <td>Summary Report</td>
+                        </h2>
+                    </div>
+                    
+                        <table class="gfg">
+                            <group>
+                                <tr>
+                                <t t-foreach="propertyids" t-as="lines">
+                                <tr> <th class="grey" colspan="5"> Contract Information: </th></tr>
+
+                                <tr>
+                                    <th class="information" colspan="3"> Customer Name : </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['customer_id']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Contract No:</th>  
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['contract_id']" />
+                                        </td>
+                                
+                                </tr>
+                    
+                                <tr>
+                                    <th class="information" colspan="3">Tenancy Start Date:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['Tenancy_startDate']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Tenancy End Date:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['Tenancy_endDate']" />
+                                        </td>
+                                </tr>
+
+                                <tr>
+
+                                    <th class="information" colspan="3">Regular Rent Payment:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['regRent_payment']" />
+                                        </td>
+
+
+                                    <th class="information" colspan="3">Rent payments:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['rent_payments']" />
+                                        </td>
+
+                                </tr>
+                                
+                                <tr>
+                                
+                                    <th class="information" colspan="3">Room Cost:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['room_cost']" />
+                                        </td>
+                                    <th class="information" colspan="3">Total Contract Value:</th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['total_contract_value']" />
+                                        </td>
+                                </tr>
+
+                                    </t> 
+                                </tr> 
+                             </group>
+                        </table>
+                    </div> 
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

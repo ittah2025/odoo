@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="flight_ticket_reservation_request" model="ir.actions.report">
+        <field name="name">Flight Ticket Reservation Request</field>
+        <field name="model">hr.leave</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.ftrr</field>
+        <field name="report_file">kb_hr_forms.ftrr</field>
+        <field name="print_report_name">'Flight Ticket Reservation Request' </field>
+        <field name="binding_model_id" ref="model_hr_leave" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="ftrr">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+         <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                <style>
+                    table, 
+                    th,
+                    td
+                    {
+                        border: 1px solid black;
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        height:30px; 
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                    }
+                    body.double {border-style: double;}
+                </style>
+        
+                <h3 style="text-align: right; ">تاريخ</h3>
+                <h1 style="text-align: center; ">طلب حجز تذكرة طيران</h1>
+
+                <table style="border: none ;">
+                    <tr style="border: none ;">
+                        <td style="border: none ; text-align: right;"></td>
+                        <th style="border: none ; text-align: right;"><h3>الى قسم الطيران</h3></th>
+                    </tr>
+                    <tr style="border: none ;">
+                        <th colspan="4" style="border: none ; text-align: right;"><h3>نأمل منكم إصدار تذكرة طيران بإسم</h3></th>
+                    </tr>
+                </table>
+             
+                <table >
+                    <tr>
+                        <th style="text-align: center;">الإقلاع من</th>
+                        <th style="text-align: center;">الوصول إلى</th>
+                    
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">value</td>
+                        <td style="text-align: center;">value</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" style="text-align: center;"><form action="">
+                            <label for="go">ذهاب</label>
+                            <input type="radio" id="go" name="flight_type" value="go"/>
+                              <label for="back">عودة</label>
+                              <input type="radio" id="back" name="flight_type" value="back"/>
+                            <label for="go_and_mack">ذهاب و عودة</label>
+                            <input type="radio" id="go_and_mack" name="flight_type" value="go_and_mack"/>
+                          </form></th>
+                    </tr>
+                    <tr>
+                     <th style="text-align: center;">تاريخ رحلة الذهاب</th>
+                        <th style="text-align: center;">تاريخ رحلة العودة</th>
+                       
+                    </tr>
+                    <tr>
+                    <th style="text-align: center;"></th>
+                    <th style="text-align: center;"></th>
+                    </tr>
+                </table>
+                <br/>
+                <h3 style="text-align: right;">         المرفقات</h3>
+               <br/>
+                <table style="border: none;">
+                    <tr style="border: none;">
+                    <th style="border: none; text-align: center;">
+                        <form action="">
+                              <label for="back">صورة من التأشيرة</label>
+                              <input type="radio" id="visa" name="attachment_type" value="visa"/>
+                          </form>
+                    </th>
+                    <th style="border: none;">
+                        <form action="">
+                            <label for="go">صورة من جواز السفر</label>
+                            <input type="radio" id="passport" name="attachment_type" value="passport"/>
+                        </form>
+                    </th>
+                </tr>
+                </table>
+               <br/>    
+            
+                <table style="border: none ;">
+                    <tr style="border: none ;">
+                        <th style="border: none ; text-align: right;"><h3>اعداد : شؤون الموظفين</h3></th>
+                    </tr>
+                    <tr style="border: none ;">
+                        <th style="border: none ; text-align: right;"></th>
+                    </tr>
+                </table>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <table style="border: none;">
+                    <tr style="border: none;">
+                        <th style="text-align: center; border: none;"><h3>مدير تطوير الأعمال</h3></th>
+                        <th style="text-align: center; border: none;"><h3>رئيس الحسابات</h3></th>
+                    </tr>
+                    <td style="text-align: center; border: none;"></td>
+                    <td style="text-align: center; border: none;"></td>
+                </table>
+            </div>
+            </t>
+            </t>
+    </template>
+</odoo>

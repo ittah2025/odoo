@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_help_ticket_stage_administration,access.ticket.stage,model_ticket_stage,kb_edit_in_helpdesk.group_helpDesk_administration,1,1,1,1
+access_help_help_ticket_administration,access.help.ticket,model_help_ticket,kb_edit_in_helpdesk.group_helpDesk_administration,1,1,1,1
+
+access_help_ticket_stage_employee,access.ticket.stage,model_ticket_stage,kb_edit_in_helpdesk.group_helpDesk_employee,1,1,1,1
+access_help_help_ticket_employee,access.help.ticket,model_help_ticket,kb_edit_in_helpdesk.group_helpDesk_employee,1,1,1,1
+
+access_help_ticket_stage_sub_administration,access.ticket.stage,model_ticket_stage,kb_edit_in_helpdesk.group_helpDesk_sub_administration,1,1,1,1
+access_help_help_ticket_sub_administration,access.help.ticket,model_help_ticket,kb_edit_in_helpdesk.group_helpDesk_sub_administration,1,1,1,1

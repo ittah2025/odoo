@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo >
+    <!--  school_maintenance_orders  -->
+    <record id = "action_school_maintenance_orders" model = "ir.actions.act_window" >
+        <field name = "name" >Maintenance Orders</field >
+        <field name = "type" >ir.actions.act_window</field >
+        <field name = "res_model" >kb.maintenance.form</field >
+        <field name = "view_mode" >tree,form</field >
+    </record >
+
+    <!--  building_information-->
+    <record id = "action_building_info" model = "ir.actions.act_window" >
+        <field name = "name" >Building Information</field >
+        <field name = "type" >ir.actions.act_window</field >
+        <field name = "res_model" >kb.building.info</field >
+        <field name = "view_mode" >tree,form</field >
+    </record >
+
+    <!--  maintenance_information-->
+    <record id = "action_maintenance_type" model = "ir.actions.act_window" >
+        <field name = "name" >Maintenance Type</field >
+        <field name = "type" >ir.actions.act_window</field >
+        <field name = "res_model" >kb.maintenance.type</field >
+        <field name = "view_mode" >tree,form</field >
+    </record >
+
+    <record id = "action_buildings_rooms" model = "ir.actions.act_window" >
+        <field name = "name" >Rooms</field >
+        <field name = "type" >ir.actions.act_window</field >
+        <field name = "res_model" >building_rooms</field >
+        <field name = "view_mode" >tree,form</field >
+    </record >
+
+
+    <menuitem id = "system_rootm"
+              name = "School Maintenance"
+              web_icon = "kb_school_maintenance,views/maintenance.png"
+              sequence = "9" />
+
+    <menuitem name = "Maintenance Orders"
+              id = "menu_school_maintenance_orders"
+              parent = "system_rootm"
+              sequence = "1" />
+
+    <menuitem name = "Maintenance Orders"
+              id = "submenu_school_maintenance_orders"
+              parent = "menu_school_maintenance_orders"
+              sequence = "4"
+              action = "action_school_maintenance_orders" />
+
+
+    <menuitem name = "configuration"
+              id = "menu_school_maintenance_config"
+              parent = "system_rootm"
+              sequence = "4" />
+
+    <menuitem name = "Buildings"
+              id = "submenu_building_information2"
+              parent = "menu_school_maintenance_config"
+              sequence = "2"
+              action = "action_building_info" />
+
+    <menuitem name = "Floors and Rooms"
+              id = "submenu_building_rooms"
+              parent = "menu_school_maintenance_config"
+              sequence = "4"
+              action = "action_buildings_rooms" />
+
+
+    <menuitem name = "Maintenance Type"
+              id = "submenu_maintenance_information"
+              parent = "menu_school_maintenance_config"
+              sequence = "8"
+              action = "action_maintenance_type" />
+
+
+</odoo >

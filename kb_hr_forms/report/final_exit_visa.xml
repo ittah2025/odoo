@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="final_exit_visa" model="ir.actions.report">
+        <field name="name">Final Exit Visa</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.fev</field>
+        <field name="report_file">kb_hr_forms.fev</field>
+        <field name="print_report_name">'Final Exit Visa' </field>
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="fev">
+      <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+         <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+         <div class="page" style="font-family: 'Tajawal', sans-serif;">
+            <style>
+                table, 
+                th,
+                td
+                {
+                    border: 1px solid black;
+                    width: 100%;
+                   table-layout: fixed;
+                    border-collapse: collapse;
+                      vertical-align: text-top;
+                }
+        
+                <!-- body.double {border-style: double;} -->
+            </style>
+
+
+            <h3 style="text-align: right; font-size: 20px;"> التاريخ</h3>
+            <h1 style="text-align: center;font-size: 20px; ">طلب اصدار تأشيرة نهائي   </h1>
+            <br/><br/>
+
+          
+
+            <t t-foreach="docs" t-as="o">
+            <table class="a" style="height:100px; border:none;">
+            <h4 style="text-align: right; font-size: 20px;"> السيد /   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; المحترم</h4>
+            <h4 style="text-align: right; font-size:     20px;">تحية طيبة وبعد</h4>
+            <h4 style="text-align: right; font-size: 20px; text-indent: 15px;">نأمل منكم اصدار تأشيرة نهائي   </h4>
+            <br/>
+          
+           
+                <tr>
+                 <th style="font-size:large; text-align: right; border: none;">للسيد</th>
+                    <th style=" text-align: right; border: none;"><t t-esc="o.name" /></th>
+                 <th style="font-size:large; text-align: right; border: none;"> الجنسية</th>
+                    <th style=" text-align: right; border: none;"><t t-esc="o.country_id.name" /></th>
+                </tr>
+                <tr>
+                   <th style="font-size:large; text-align: right; border: none;">إقامة رقم</th>
+                      <th style="text-align: right; border: none;">value</th>
+                    <th style="font-size:large; text-align: right; border: none;"> تاريخ إنتهاء الإقامة</th>
+                    <th style="text-align: right; border: none;">value</th>
+                   
+                </tr>
+
+            </table>
+         
+            <br/>
+            <table style="border:none;">
+           
+            <h4 style="text-align: right; font-size: 20px; border:none;">اعداد</h4>
+             <h4 style=" text-align: right; border:none;"> valu </h4>
+            
+            </table>
+            </t>
+           
+            <br/><br/><br/>
+       
+            <table style="width:100%; height:180px; ">
+                <tr style="border-top: 1px solid black; " >
+                  
+                    <th style="padding-bottom: 50px; padding-top: 50px; border:none; ">المدير المباشر</th>
+                 <td style="text-align: right; border:none; "> data1</td>
+                  
+                    <th style="padding-bottom: 50px; padding-top: 50px;border:none; ">المدير الإداري</th>
+                    <td style="text-align: right; border:none;">data2</td>
+               
+                <th style="padding-bottom: 50px; padding-top: 50px; border:none;">المدير التنفيذي</th>
+                     <td style="text-align: right; border:none;">data5</td>
+                </tr>
+          
+                <tr >
+                
+                    <th style="padding-bottom: 50px; padding-top: 50px;border:none; ">مدير المالية وشؤون الموظفين</th>
+                    <td style="text-align: right; border:none;">data3</td>
+                 
+                    <th style="padding-bottom: 50px; padding-top: 50px; border:none;">رئيس الحسابات</th>
+                       <td style="text-align: right; border:none;">data4</td>
+                
+                <th style="padding-bottom: 50px; padding-top: 50px; border:none;">مسؤول الدوائر الحكومية</th>
+                        <td style="text-align: right;border:none;">data6</td>
+                </tr>
+                
+                 <tr style="border-top: 1px solid black; ">
+                
+                    <th style="padding-bottom: 50px; padding-top: 50px; ">الاجرائات</th>
+                      <td colspan="5" style="text-align: center;"> data5</td>
+                </tr>
+               
+            </table>
+      
+
+
+           </div>
+        
+        </t>
+        </t>
+    </template>
+</odoo>

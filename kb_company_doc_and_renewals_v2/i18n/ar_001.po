@@ -1,0 +1,310 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_company_documents_and_renewals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-18 11:47+0000\n"
+"PO-Revision-Date: 2024-03-18 14:50+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_needaction
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_ids
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ترتيب استثناء النشاط"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_state
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_type_icon
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model,name:kb_company_documents_and_renewals.model_ir_attachment
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_ir_attachment__kb_doc_attach
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__kb_doc_attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_attachment_count
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.actions.act_window,name:kb_company_documents_and_renewals.action_company_document
+#: model:ir.module.category,name:kb_company_documents_and_renewals.company_documentsID
+#: model:ir.ui.menu,name:kb_company_documents_and_renewals.menu_companyDocument
+#: model:ir.ui.menu,name:kb_company_documents_and_renewals.system_root
+msgid "Company Documents"
+msgstr "مستندات الشركة "
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.actions.act_window,name:kb_company_documents_and_renewals.action_company_doce_type
+msgid "Company documents type"
+msgstr "نوع المستند"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__create_uid
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__create_date
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__display_name
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__kb_documentTypeID
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__kb_documentType
+msgid "Document Name"
+msgstr "اسم المستند"
+
+#. module: kb_company_documents_and_renewals
+#: model_terms:ir.ui.view,arch_db:kb_company_documents_and_renewals.view_company_doc_tree
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: kb_company_documents_and_renewals
+#: model:res.groups,name:kb_company_documents_and_renewals.group_unauthorization
+msgid "Dont't Have Authorization"
+msgstr "ليس لديه صلاحية الوصول "
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__kb_date
+msgid "Expiry Date"
+msgstr "تاريخ الانتهاء "
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_follower_ids
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_partner_ids
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__activity_type_icon
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__has_message
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:res.groups,name:kb_company_documents_and_renewals.group_authorization
+msgid "Have Authorization"
+msgstr "لديه صلاحية الوصول"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__id
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__activity_exception_icon
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__message_needaction
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__message_has_error
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_is_follower
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents____last_update
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__write_uid
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__write_date
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_has_error
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_ids
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_summary
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_type_id
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__kb_srNo
+msgid "No."
+msgstr "الرقم التسلسلي "
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.actions.server,name:kb_company_documents_and_renewals.ir_cron_auto_email_ir_actions_server
+#: model:ir.cron,cron_name:kb_company_documents_and_renewals.ir_cron_auto_email
+msgid "Notice of expiry of a document"
+msgstr "إشعار بانتهاء صلاحية الوثيقة"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات "
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__message_needaction_counter
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__message_has_error_counter
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents__activity_user_id
+#: model:ir.model.fields,field_description:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__activity_state
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__activity_exception_decoration
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents_info__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model.fields,help:kb_company_documents_and_renewals.field_kb_company_documents__kb_doc_attachment
+msgid "You can attach the copy of your document"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model,name:kb_company_documents_and_renewals.model_kb_company_documents
+msgid "kb.company.documents"
+msgstr ""
+
+#. module: kb_company_documents_and_renewals
+#: model:ir.model,name:kb_company_documents_and_renewals.model_kb_company_documents_info
+msgid "kb.company.documents.info"
+msgstr ""

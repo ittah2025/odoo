@@ -1,0 +1,360 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_accidents
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-19 13:29+0000\n"
+"PO-Revision-Date: 2022-12-19 16:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__accidentsDescription
+msgid "Accident Description"
+msgstr "وصف الحادث"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__accidentNumber
+msgid "Accident Number"
+msgstr "رقم الحادث"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__accidentsStatus
+msgid "Accident Status"
+msgstr "حالة الحادث"
+
+#. module: kb_accidents
+#: model:ir.ui.menu,name:kb_accidents.accidents_config
+msgid "Accidents"
+msgstr "الحوادث"
+
+#. module: kb_accidents
+#: model_terms:ir.ui.view,arch_db:kb_accidents.view_accidents_form
+msgid "Accidents Information"
+msgstr "معلومات الحادث"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__accidentsAttachment
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: kb_accidents
+#: model_terms:ir.actions.act_window,help:kb_accidents.accidents_views
+msgid "Create new accidents record"
+msgstr "انشاء حادث جديد"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها في"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__accidentsDate
+msgid "Date of Accidents"
+msgstr "تاريخ الحادث"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__driver_name
+msgid "Drivers Name"
+msgstr "أسماء السائقين"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__ownerElectronicumber_acc
+msgid "Electronic Owner Number"
+msgstr "هوية المالك"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__message_has_error
+#: model:ir.model.fields,help:kb_accidents.field_accidents__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__insuranceEndDate_acc
+msgid "Insurance End Date"
+msgstr "تاريخ انتهاء التامين"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__insuranceName_acc
+msgid "Insurance Name"
+msgstr "اسم التامين"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__insurancePrice_acc
+msgid "Insurance Price"
+msgstr "قيمة التامين"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__insuranceStartDate_acc
+msgid "Insurance Start Date"
+msgstr "تاريخ بدء التامين"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__carModel_acc
+msgid "Model"
+msgstr "الموديل"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__modelYear_acc
+msgid "Model Year"
+msgstr "السنة"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__electronicNumer_acc
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__electronicNumer_accd
+msgid "Operating Code Number"
+msgstr "رقم كود التشغيل"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__ownerName_acc
+msgid "Owner Name"
+msgstr "اسم المالك"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__passengerCapacity_acc
+msgid "Passenger Capacity"
+msgstr "عدد الركاب"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__plateNumberAR_acc
+msgid "Plate Number (Arabic)"
+msgstr "رقم اللوحة(عربي)"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__registrationEndDate_acc
+msgid "Registration Expiration Date"
+msgstr "تاريخ انتهاء التسجيل"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__searialNumbers_acc
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.ui.menu,name:kb_accidents.accidents_main_menu
+msgid "Vehicle Accidents"
+msgstr "حوادث المركبات"
+
+#. module: kb_accidents
+#: model_terms:ir.ui.view,arch_db:kb_accidents.view_accidents_form
+msgid "Vehicle Info"
+msgstr "معلومات المركبة"
+
+#. module: kb_accidents
+#: model_terms:ir.ui.view,arch_db:kb_accidents.view_accidents_form
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__status_field_acc
+msgid "Vehicle Status"
+msgstr "الحالة"
+
+#. module: kb_accidents
+#: model_terms:ir.ui.view,arch_db:kb_accidents.view_car_tree
+msgid "Vehicles"
+msgstr "المركبات"
+
+#. module: kb_accidents
+#: model:ir.model.fields,field_description:kb_accidents.field_accidents__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.model.fields,help:kb_accidents.field_accidents__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_accidents
+#: model:ir.actions.act_window,name:kb_accidents.accidents_views
+#: model:ir.model,name:kb_accidents.model_accidents
+msgid "accidents"
+msgstr "حوادث"

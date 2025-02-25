@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Create Project Stages -->
+    <record id="stage_New" model="ticket.stage">
+        <field name="sequence">20</field>
+        <field name="name">new</field>
+    </record>
+
+    <record id="stage_In_progress" model="ticket.stage">
+        <field name="sequence">21</field>
+        <field name="name"> in progress</field>
+    </record>
+
+    <record id="stage_Solved" model="ticket.stage">
+        <field name="sequence">22</field>
+        <field name="name" >solved</field>
+    </record>
+
+    <record id="kb_stage_closed" model="ticket.stage">
+        <field name="sequence">23</field>
+        <field name="name">closed</field>
+    </record>
+
+    <record id="kb_stage_cancel" model="ticket.stage">
+        <field name="sequence">24</field>
+        <field name="name">canceled</field>
+    </record>
+
+<!--    Delete Project Stages-->
+    <delete model = "ticket.stage" search="[('name','=','In Progress')]"/>
+    <delete model = "ticket.stage" search="[('name','=','Done')]"/>
+    <delete model = "ticket.stage" search="[('name','=','Closed')]"/>
+    <delete model = "ticket.stage" search="[('name','=','Canceled')]"/>
+
+</odoo>

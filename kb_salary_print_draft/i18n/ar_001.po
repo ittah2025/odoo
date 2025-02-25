@@ -1,0 +1,276 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_salary_print_draft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-30 12:08+0000\n"
+"PO-Revision-Date: 2024-05-30 15:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: kb_salary_print_draft
+#: model:ir.actions.report,print_report_name:kb_salary_print_draft.kb_draft_salary_report_wizard
+msgid "'Draft Salary Report'"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields.selection,name:kb_salary_print_draft.selection__kb_draft_salary_report_wizard__kb_search_employee__selection1
+msgid "All employee"
+msgstr "كل الموظفين"
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.kb_draft_salary_report_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__kb_date_end
+msgid "Date From"
+msgstr "التاريخ من "
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__kb_date_start
+msgid "Date To"
+msgstr "التاريخ الى "
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.actions.report,name:kb_salary_print_draft.kb_draft_salary_excel_action
+msgid "Draft Salary Excel Report"
+msgstr " تقرير الرواتب المسودة في برنامج Excel"
+
+#. module: kb_salary_print_draft
+#: model:ir.actions.act_window,name:kb_salary_print_draft.action_kb_draft_salary_report_wizard
+#: model:ir.actions.report,name:kb_salary_print_draft.kb_draft_salary_report_wizard
+#: model:ir.ui.menu,name:kb_salary_print_draft.kb_draft_salary_menu
+msgid "Draft Salary Report"
+msgstr "تقرير الرواتب المسودة"
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__kb_search_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__kb_name_employee
+msgid "Employee name"
+msgstr "اسم الموظف"
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields,field_description:kb_salary_print_draft.field_kb_draft_salary_report_wizard__kb_country_id
+msgid "Nationality (Country)"
+msgstr "الجنسية "
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.kb_draft_salary_report_wizard_form
+msgid "Print Draft Salary Report"
+msgstr "تقرير الرواتب المسودة"
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.kb_draft_salary_report_wizard_form
+msgid "Print Exal report"
+msgstr "طباعة اكسل"
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.kb_draft_salary_report_wizard_form
+msgid "Print PDF report"
+msgstr "طباعة PDF"
+
+#. module: kb_salary_print_draft
+#: model:ir.model.fields.selection,name:kb_salary_print_draft.selection__kb_draft_salary_report_wizard__kb_search_employee__selection2
+msgid "Specific employee"
+msgstr " موظف محدد"
+
+#. module: kb_salary_print_draft
+#. odoo-python
+#: code:addons/kb_salary_print_draft/wizard/kb_draft_salary_report_wizard.py:0
+#, python-format
+msgid "The start date and end date must in same month"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model:ir.model,name:kb_salary_print_draft.model_kb_draft_salary_report_wizard
+msgid "draft salary report"
+msgstr "تقرير الرواتب المسودة"
+
+#. module: kb_salary_print_draft
+#: model:ir.model,name:kb_salary_print_draft.model_report_kb_salary_print_draft_kb_draft_salary_excel_action
+msgid "report.kb_salary_print_draft.kb_draft_salary_excel_action"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "اجمالي الراتب المستحق"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "التأمينات الاجتماعية"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "التقرير"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الجنسية"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الراتب الاساسي"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الشهر"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الصافي"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الفرع"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "القسم"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "المنصب"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "الموظف"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "ايام الدوام"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "بدل سكن"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "بدل نقل"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "بدلات إعاشه"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "بدلات اخرى"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "حالة الكشف"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "حالة الموظف"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "رقم"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "رقم الموظف"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "سلفة"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "صندوق التنمية"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "طرق الدفع"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "عقوبات و جزاءات"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "كشف رواتب لشهر"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "مجموع الاقتطاعات"
+msgstr ""
+
+#. module: kb_salary_print_draft
+#: model_terms:ir.ui.view,arch_db:kb_salary_print_draft.print_draft_salary_report
+msgid "ملف مكتب العمل"
+msgstr ""

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo >
+    <record id = "quotation_sale_delivery_note_id" model = "ir.actions.report" >
+        <field name = "name" >Delivery Note / امر التوصيل</field >
+        <field name = "model" >sale.order</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_name" >kb_delivery_note.template_delivery_note_sale_order</field >
+        <field name = "report_file" >kb_delivery_note.template_delivery_note_sale_order</field >
+        <field name = "binding_model_id" ref = "model_sale_order" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "template_delivery_note_sale_order" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Tajawal" rel = "stylesheet" />
+
+                <div style = "font-family: 'Tajawal', sans-serif;" >
+                    <br />
+                    <body >
+                        <style >
+                            .th1 {
+                            border:1px solid black ;
+                            background-color: #c4c4c4 ;
+                            height:30px;
+                            padding: 3px;
+                            }
+                            .td1{
+                            border:1px solid black;
+                            text-align:center;100%;
+                            height:30px;
+                            font-size:17px;
+                            padding: 3px;
+                            }
+                        </style >
+                        <t t-foreach = "docs" t-as = "o" >
+                            <table style = "border:1px solid black; text-align:center; width: 100%;" >
+                                <tr >
+                                    <td colspan = "6"
+                                        style = "border:1px solid black; text-align:center;100%; height:50px; font-size:17px;background-color: #f5f6f7; " >
+                                        <br />
+                                        DELIVERY NOTE <br/>
+                                        اوامر التوصيل
+
+                                    </td >
+                                </tr >
+                                <tr >
+                                    <td colspan = "6"
+                                        style = "border:1px solid black; text-align:center;100%; height:30px; font-size:17px; " >
+                                        <br />
+                                        <span>Saeed Mahde Al Slais Co. For Fishers &amp; Shrimps L.L.C</span>
+                                    </td >
+                                </tr >
+                                <tr >
+                                    <th class = "th1" >
+                                        Date <br/>
+                                        التاريخ
+                                    </th >
+                                    <th class = "th1" >
+                                        Customer <br/>
+                                        العميل
+                                    </th >
+                                    <th class = "th1" >
+                                        Vendor Number <br/>
+                                        رقم المورد
+                                    </th >
+                                    <th class = "th1" >
+                                        Sales Order <br/>
+                                        أمر البيع
+
+                                    </th >
+                                    <th class = "th1" >
+                                        P.O
+                                    </th >
+                                </tr >
+                                <tr >
+                                    <td colspan = "1" class = "td1" >
+                                        <span t-field = "o.date_order" t-options='{"widget": "date","format": "dd-MM-yyyy"}'/>
+                                    </td >
+                                    <td colspan = "1" class = "td1" ><span t-field = "o.partner_id.name" /> </td >
+                                    <td colspan = "1" class = "td1" ><span t-field = "o.partner_id.kb_supplier" /></td >
+                                    <td colspan = "1" class = "td1" ><span t-field = "o.name" /></td >
+                                    <td colspan = "1" class = "td1" ><span t-field = "o.kb_po" /></td >
+
+
+                                </tr >
+                                <tr >
+                                    <th class = "th1" >
+                                        Item Code <br/>
+                                        رقم المنتج
+
+                                    </th >
+
+                                    <th class = "th1" >
+                                        Item Name  <br/>
+                                        اسم المنتج
+                                    </th >
+
+                                    <th class = "th1" >
+                                        Unit Price  <br/>
+                                        سعر الوحدة
+                                    </th >
+
+                                    <th class = "th1" >
+                                        Qty  <br/>
+                                        الكمية
+                                    </th >
+
+                                    <th class = "th1" >
+                                        Total  <br/>
+                                        المجموع
+                                    </th >
+                                </tr >
+                                 <t t-foreach="o.order_line" t-as="line">
+                                    <tr >
+
+                                        <td colspan = "1" class = "td1" >
+                                            <span t-field="line.kb_vendor_id.kb_code" />
+                                        </td >
+                                        <td colspan = "1" class = "td1" >
+                                             <t t-set="translation_name" t-value="line.with_context(lang='ar_001').product_id.name"/>
+                                                <t t-if="line.product_template_id">
+                                                    <span t-out="line.with_context(lang='ar_001').product_template_id.name" t-options="{'widget': 'text'}"/>
+                                                    <span t-out="line.with_context(lang='en_US').product_template_id.name" t-options="{'widget': 'text'}"/>
+                                                </t>
+                                        </td >
+                                        <td colspan = "1" class = "td1" >
+                                            <span t-field="line.price_unit" t-options="{&quot;widget&quot;: &quot;float&quot;, &quot;precision&quot;: 2}"/>
+                                        </td >
+                                        <td colspan = "1" class = "td1" >
+                                             <span t-field="line.product_uom_qty"/>
+                                        </td >
+                                        <td colspan = "1" class = "td1" >
+                                            <span class="text-nowrap" t-field="line.price_subtotal" t-options="{&quot;widget&quot;: &quot;float&quot;, &quot;precision&quot;: 2}"/>
+                                        </td >
+
+                                    </tr >
+
+
+
+
+                                 </t>
+                                <tr >
+                                    <td colspan = "6"
+                                        style = "border:1px solid black; text-align:center;100%; height:50px; font-size:17px; padding: 3px;" >
+                                        <br />
+                                        Customer stamp / Signature  <br/>
+                                        ختم / توقيع العميل
+
+                                    </td >
+                                </tr >
+                                <tr >
+                                    <td colspan = "6"
+                                        style = "border:1px solid black; text-align:center;100%; height:50px; font-size:17px;  padding: 3px; " >
+                                        <br />
+                                        ..............................
+                                    </td >
+                                </tr >
+                            </table >
+                        </t >
+
+                        <br />
+                    </body >
+                </div >
+            </t >
+
+        </t >
+    </template >
+
+
+</odoo >

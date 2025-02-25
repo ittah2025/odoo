@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_finance_loan,finance_loan,model_finance_loan,,1,1,1,1
+access_finance_loan_line,finance_loan_line,model_finance_loan_line,,1,1,1,1

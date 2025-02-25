@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_excel_wizard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-04 10:41+0000\n"
+"PO-Revision-Date: 2023-06-04 13:42+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__display_name
+msgid "Display Name"
+msgstr "اسم العرض "
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Download the template"
+msgstr "قم بتنزيل النموذج"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__file_name
+msgid "Excel File"
+msgstr "ملف اكسل"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__excel_file
+msgid "Excel Report"
+msgstr "تقرير اكسل"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Export Template"
+msgstr "تصدير  القالب"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: kb_excel_wizard
+#. odoo-python
+#: code:addons/kb_excel_wizard/wizard/kb_upload_xlsx.py:0
+#, python-format
+msgid "Invalid file!"
+msgstr "ملف غير صالح!"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__kb_invoice
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: kb_excel_wizard
+#: model:ir.ui.menu,name:kb_excel_wizard.menu_upload_xlsx_wizard2
+msgid "Pay by excel"
+msgstr "الدفع بواسطة ملف اكسل"
+
+#. module: kb_excel_wizard
+#: model:ir.ui.menu,name:kb_excel_wizard.menu_upload_xlsx_wizard
+msgid "Pay the invoices"
+msgstr "دفع الفواتير"
+
+#. module: kb_excel_wizard
+#: model:ir.model,name:kb_excel_wizard.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: kb_excel_wizard
+#: model:ir.model.fields,field_description:kb_excel_wizard.field_upload_xlsx_wizard__kb_excel_file
+msgid "Select File"
+msgstr "اختر الملف"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Select the excel file"
+msgstr "اختر ملف إكسل"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Upload"
+msgstr "رفع"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "Upload Excel"
+msgstr "رفع إكسل"
+
+#. module: kb_excel_wizard
+#: model:ir.model,name:kb_excel_wizard.model_upload_xlsx_wizard
+msgid "Upload XLSX"
+msgstr "رفع XLSX"
+
+#. module: kb_excel_wizard
+#: model:ir.actions.act_window,name:kb_excel_wizard.upload_xlsx_action
+msgid "Upload excel"
+msgstr "رفع إكسل"
+
+#. module: kb_excel_wizard
+#: model_terms:ir.ui.view,arch_db:kb_excel_wizard.view_upload_xlsx_wizard
+msgid "You can download the template from here"
+msgstr "يمكنك تحميل النموذج من هنا"

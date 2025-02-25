@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  
+        
+
+
+    <record id="report1" model="ir.actions.report">
+        <field name="name">Goods Transfer</field>
+        <field name="model">goods_transfer</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_car_workshop_s.print_goods_report1</field>
+        <field name="report_file">kb_car_workshop_s.contract_report</field>
+        <field name="print_report_name">186164</field>
+        <field name="binding_model_id" ref="model_goods_transfer" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+    <template id="print_goods_report1">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Tajawal', sans-serif;">
+
+                   
+                        <h3 style="text-align: center;">
+                            Goods Transfer Receipit </h3>
+                    
+
+
+                        <div style="text-align: right; direction: rtl;">
+                            <h5 style="text-align:left;"><b>Transfer To:</b><span t-field="doc.transferTo" /></h5>
+                            <h5 style="text-align:left;"><b>Recipient:</b><span t-field="doc.recip" /></h5>
+                            <h5 style="text-align:left;"><b>Address:</b><span t-field="doc.Addrs" /></h5>
+                            <h5 style="text-align:left;"><b>Site:</b><span t-field="doc.psite_1" /></h5>
+                            <h5 style="text-align:left;"><b>Phone:</b><span t-field="doc.phon_1" /></h5>
+                            <h5 style="text-align:left;"><b>Email:</b><span t-field="doc.mail_E" /></h5>
+
+
+                        </div>
+                        <div style="text-align: right; direction: rtl;">
+                            <h3 style="text-align:center;">Items</h3>
+                        </div>
+
+
+
+                        <table style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th style="border:1px solid black;">
+                                        No
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Description
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Qty
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Price
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <t t-foreach="doc.goodtr_ids" t-as="line">
+                                    <tr>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.no" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.reportdiscr_2" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.qty_1" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.price_1" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        
+                        <br/>
+                        <div style="text-align: left; direction; width: 350px;">
+                        <h6 style="border:1px solid black;">
+                            Comment:
+                            Kindly immediately return used or scrap items.
+                            appreciate your promp response.
+                            (don't throw anthing send all items)
+                            After received send hard or soft copy by email </h6>
+                        </div>
+
+<!--table-->
+                <br/>
+
+                                        <table style="width:100%; border: none;">
+                                            
+                                               
+                                                    <th style="width:33%; border: center;">
+                                                        Inventory Supervisor
+                                                    </th>
+                                                    <th style="width:33%; border: center;">
+                                                        Store Keeper
+                                                    </th>
+                                                    <th  style="width:33%; border: center;">
+                                                        Recipient
+                                                    </th>
+
+                                        </table>
+                    
+                    
+
+
+                    </div>
+                    <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                        <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                            Page: <span class="page" /> / <span class="topage" />
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+
+
+</odoo>

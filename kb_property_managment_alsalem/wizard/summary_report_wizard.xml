@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_summary_report_form" model="ir.ui.view">
+    <field name="name">summary.report.wizard.form</field>
+    <field name="model">summary_report_wizard</field>
+    <field name="arch" type="xml">
+      <form string="summary">
+    <group>
+
+      <group string="Tenant Name">                               
+         <field name="customer_id" />
+      </group>
+
+      <group string="Tenancy Start Date">                               
+         <field name="date_froms" />
+         <field name="date_tos" />
+      </group> 
+
+      <group string="Tenancy End Date">                               
+         <field name="date_from" />
+         <field name="date_to" />
+      </group>
+            
+    </group>
+
+          <footer>
+            <button name="action_summary_print" string="Print PDF" type="object" class="btn-primary" />
+            <!-- <button name="action_summary_report_xlsx" string="Print Excel" type="object" class="btn-primary" /> -->
+            <button string="Cancel" class="btn-secondary" special="cancel" />
+
+          </footer>
+       
+      </form>
+    </field>
+
+  </record>
+
+
+  <record id="action_summary_report_" model="ir.actions.act_window">
+    <field name="name">Summary Print</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">summary_report_wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="view_summary_report_form" />
+    <field name="target">new</field>
+  </record>
+
+  
+    <menuitem id="print_root" name="Reports" parent="system_root" sequence="18" />
+    <menuitem id="print_property" name="Contract Reports" parent="print_root" action="action_summary_report_" sequence="10"/>
+  
+</odoo>

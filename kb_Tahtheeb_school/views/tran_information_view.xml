@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="action_Transport_id" model="ir.actions.act_window">
+        <field name="name">Transport Information</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tran_information</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport
+            </p>
+        </field>
+    </record>
+
+    <record id="view_Transport_form_id" model="ir.ui.view">
+        <field name="name">Transport Information</field>
+        <field name="model">tran_information</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kb_TransportRoot"/>
+                            <field name="kb_ContactPerson"/>
+                            <field name="KB_price"/>
+                            <field name="academic_id"/>
+                        </group>
+                        <group>
+                            <field name="kb_district"/>
+                            <field name="kb_bus_responsible" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Vehicle Details" name="Vehicle Details">
+                            <field name="kb_VehicleDetails">
+                                <tree editable="bottom">
+                                    <field name="kb_Model"/>
+                                    <field name="kb_driver"/>
+                                    <field name="futureDriverId"/>
+                                    <field name="kb_LicensePlate"/>
+                                </tree>
+                            </field>
+                        </page>
+                          <page  string="Participants Details" name="Participants Details" >
+                             <group>
+                                <field name="trans_participants_ids" />
+                            </group>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transport_info_tree" model="ir.ui.view">
+        <field name="name">tran.information.tree</field>
+        <field name="model">tran_information</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="kb_TransportRoot"/>
+                <field name="kb_bus_responsible"/>
+                <field name="kb_StartDate"/>
+                <field name="kb_EndDate"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <menuitem id="transport_Submenu" name="Transport Information" parent="transport_menu" sequence="1" action="action_Transport_id" />
+
+
+</odoo>

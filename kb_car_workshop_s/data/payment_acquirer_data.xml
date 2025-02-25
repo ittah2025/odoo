@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_tabby_payment" model="payment.acquirer">
+            <field name="name">Tabby</field>
+            <field name="display_as">Tabby Payment</field>
+            <field name="provider">tabby_payment</field>
+            <field name="image_128" type="base64" file="kb_car_workshop_s\static\src\img\tabby-logo.png"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="state">test</field>
+            <field name="view_template_id" ref="tabby_payment_form"/>
+            <field name="tabby_payment_authorization">pk_test_7737784c-889b-42fc-97fd-4119811a44fa</field>
+            <field name="tabby_payment_merchant_id">sk_test_488e68dd-29d8-4d9f-be85-78c388fe529f</field>
+            <field name="pre_msg"><![CDATA[
+            <div>Testing Credential for tabby Test Mode</div>
+            ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>

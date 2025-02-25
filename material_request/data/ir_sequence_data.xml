@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="seq_material_request" model="ir.sequence">
+        <field name="name">Material Request Sequence</field>
+        <field name="code">material.request</field>
+        <field name="prefix">MR</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+       <record id="seq_sale_q" model="ir.sequence">
+        <field name="name">Sale Quotations Sequence</field>
+        <field name="code">sale.quotation</field>
+        <field name="prefix">Q</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

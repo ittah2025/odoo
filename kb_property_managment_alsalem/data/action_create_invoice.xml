@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_cron_auto_invoice_id" model="ir.cron">
+            <field name="name">Create: Invoice with payment</field>
+            <field name="model_id" ref="model_contract" />
+            <!-- <field name="res_model">contract.details</field> -->
+            <field name="state">code</field>
+            <field name="code">model.billing_scheduling()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+
+
+    <data noupdate="1">
+        <record id="ir_cron_auto_invoices_ids" model="ir.cron">
+            <field name="name">Create: Invoice with payment</field>
+            <field name="model_id" ref="model_transportation" />
+            <!-- <field name="res_model">contract.details</field> -->
+            <field name="state">code</field>
+            <field name="code">model.billing_scheduling()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+
+</odoo>

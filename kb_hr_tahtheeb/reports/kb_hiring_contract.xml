@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_kb_hiring_contract" model="ir.actions.report">
+            <field name="name">عقد اجير </field>
+            <field name="model">kb.hr.forms.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kb_hr_tahtheeb.kb_hiring_contract_report</field>
+            <field name="report_file">kb_hr_tahtheeb.kb_hiring_contract_report</field>
+            <field name="print_report_name">'عقد اجير' </field>
+            <field name="binding_model_id" ref="model_kb_hr_forms_wizard" />
+            <field name="binding_type">report</field>
+    </record>
+
+
+    <template id="kb_hiring_contract_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-foreach="employeeTransferID" t-as="line">
+                    <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css2?family=Lalezar" rel="stylesheet"/>
+                     <div class="header" style="direction: rtl;">
+                        <div style="text-align: center;">
+                            <img  src='/kb_hr_tahtheeb/static/description/tahtheb_header.png' style="width:800px;height:90px;"/>
+                        </div>
+                     </div>
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                            <table style="text-align:center; width: 100%;">
+                                <td style="text-align:right; font-size: 17px;" colspan="2" >
+                                    <br/>
+                                    <b><u>
+                                        " عقد اتفاق على عمل  'نظام أجير' "
+                                    </u></b>
+                                    <br/><br/>
+                                    إنه في يوم
+                                    يوم <span t-esc="line['kb_day_name']"/> <span t-esc="line['kb_day_date']"/> هـ<br/>
+                                    الموافق <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/> م
+                                    تم الاتفاق بين كل من :
+                                    <br/>
+                                    <b>
+                                   أولاً : الطرف الأول:
+                                    </b>
+                                    <br/><br/>
+                                    شركة التهذيب للخدمات <br/>
+                                    التعليمية , سجل تجاري (2062014760) ، <br/>
+                                    ومركزها الرئيسي سيهات- العنوان/ سيهات<br/>
+                                    - حي الكوثر - ص.ب 743 -  الرمز البريدي 31972<br/>
+                                    - هاتف الشركة 8086208 - ويمثلها في التوقيع
+
+                                    <br/>
+                                    <b>
+                                    ممثل ملاك المدارس  : جاسم علي محمد الناصر
+                                    </b>
+                                     <br/><br/>
+                                    <b>
+                                   ثانيًا : الطرف الثاني: <span t-esc="line['kb_employee_name']"/> <br/>
+                                    </b>
+                                    الجنسية <span t-esc="line['kb_nationality']"/>, <br/>
+                                    هوية رقم/<span t-esc="line['kb_employeeID']"/> <br/>
+                                    عنوانه/ مدينة/ <span t-esc="line['kb_city']"/> <br/>
+                                    حي/ <span t-esc="line['kb_street']"/><br/>
+                                    رقم المبنى/  <span t-esc="line['kb_bulding']"/>  <br/>
+                                    الرمز البريدي <span t-esc="line['kb_zip']"/>  <br/>
+                                   الرقم الاضافي/ <span t-esc="line['kb_bulding']"/><br/>
+                                    الجوال/<span t-esc="line['kb_phone']"/> <br/>
+                                    بريد الكتروني/<span t-esc="line['kb_email']"/>
+                                    <br/>
+                                    <b>
+                                        ويشار إليها فيما بعد بالطرف الثاني.
+                                    </b>
+
+                                    <br/><br/>
+                                    <b><u>
+                                        البند الأول: موضوع العقد
+                                    </u></b>
+                                    <br/>
+                                    .1)
+                                        اتفق الطرفان وتراضيا، بعد أن أقرا<br/> بأهليتهما الكاملة المعتبرة شرعاً ونظاماً<br/> للتعاقد على أن يعمل الطرف الثاني لدى <br/>الطرف الأول تحت إدارته، وإشرافه<br/> بوظيفه (<span t-esc="line['kb_job_title']"/>) ومباشرة الأعمال التي <br/>تكلف بها بما يتناسب مع قدراتها<br/> العلمية والعملية، والفنية وفقا<br/>ً لاحتياجات العمل حسب أنظمة <br/> ولوائح وزارة التعليم بالمملكة
+                                   <br/><br/>
+                                    .2)
+                                        مدة العقد عام دراسي يبدأ من تاريخ<br/> المباشرة الفعلية للطرف الثاني لنفس العام<br/> الدراسي وينتهي في <span t-esc="line['kb_heg_date_start']"/> هـ <br/> الموافق <span t-esc="line['kb_date_start']"/>م<br/> حسب تعليمات وزارة التعليم وما <br/>يستجد من تعديلات ماعدا ما يطرأ<br/> في أي وقت من تجاوزات من الطرف الثاني.
+                                    <br/><br/>
+                                    .3)
+                                     يخضع الطرف الثاني لفترة تجربة <br/> مدتها ثلاثة أشهر ابتداءً من <br/> تاريخ مباشرة العمل ويجوز تمديدها<br/>  باتفاق مكتوب بين الطرفين لمدة<br/>  ثلاثة أشهر أخرى ولا تدخل في<br/>  حساب فترة التجربة إجازة عيدي<br/>  الفطر والأضحى والإجازة المرضية،<br/>  ويكون للطرف الأول فقط إنهاء هذا<br/>  العقد خلال هذه الفترة بدون مقابل ,<br/>  وفي حال انهاءه من قبل الطرف <br/>الثاني يدفع للطرف الأول اجر شهرين كتعويض.
+                                    <br/><br/>
+                                    .4)
+                                    يتعهد الطرف الثاني بأن تقدم أصول<br/> جميع الوثائق التي يطلبها الطرف الأول.
+                                    <br/><br/>
+                                    .5)
+                                    يحق للطرف الأول إنهاء هذا العقد<br/>
+                                    ودون إشعار مسبق ودون دفع بدل إنذار <br/>
+                                    أو مكافأة أو تعويض في أي وقت <br/>
+                                    بسبب مخالفات الطرف الثاني التي <br/>
+                                    ترتكبها ضد أنظمة أو تعليمات الشركة،<br/>
+                                    أو أي أنظمة يعمل بها<br/>
+                                    في المملكة العربية السعودية.
+                                   <br/><br/>
+                                    .6)
+                                    يحق للطرف الأول في حالة عدم صلاحية<br/>
+                                    الطرف الثاني فسخ هذا العقد دون مكافأة<br/>
+                                    أو سبق إعلام الطرف الثاني خلال فترة<br/>
+                                    التجربة على ألا تحتسب الإجازات<br/>
+                                    الرسمية والأعياد ضمن تلك الفترة وفي<br/>
+                                    هذه الحالة يتحمل الطرف الثاني<br/>
+                                    تكاليف التدريب في النمو المهني<br/>
+                                    المقدمة لها في التهذيب
+                                    <br/><br/>
+                                    .7)
+                                    ذا تسبب الطرف الثاني في فقد أو إتلاف أو<br/>
+                                    تدمير آلات أو منتجات يملكها الطرف الأول<br/>
+                                    أو هي في عهدتها وكان ذلك ناشئاً<br/>
+                                    عن خطأ الطرف الثاني أو مخالفتها تعليمات<br/>
+                                    الطرف الأول، فللطرف الأول أن يقتطع من أجرها<br/>
+                                    المبلغ اللازم لإصلاح أو إعادة الوضع إلى ما<br/>
+                                    كان عليه حسب لائحة تنظيم العمل لشركة<br/>
+                                    التهذيب للخدمات التعليمية والمصادق عليها<br/>
+                                    من وزارة العمل.
+                                    <br/><br/>
+                                    .8)
+                                    في حالة عدم الصلاحية المهنية أو الصحية<br/>
+                                    (<span t-esc="line['kb_job_title']"/>) ضمن اختبار ومقابلة الإدارة<br/>
+                                    العامة للتعليم او مكتب التعليم بالمحافظة<br/>
+                                    او وزارة الصحة او أي مستشفى او وحدة صحية في<br/>
+                                    المملكة فليس للطرف الثاني الاشتراط بالبقاء في<br/>
+                                    العمل طالما انها لا تصلح للوظيفة التي عُينت<br/>
+                                    عليها وفي هذه الحالة يُنهى عقدها<br/>
+                                    فورا في أي وقت من العام.
+                                    <br/><br/>
+                                    .9)
+                                    يحق للطرف الأول وحده إنهاء هذا<br/>
+                                    العقد قبل انتهائه دون سبب مشروع<br/>
+                                    ودون تعويض.
+                                    <br/><br/><br/>
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <b><u>
+                                       البند الثاني : أيام وساعات العمل والاجازات
+                                    </u></b>
+                                    <br/><br/>
+                                    تحدد ايام العمل بألا تزيد عن (5) أيام في<br/>
+                                    الاسبوع، وتحدد ساعات العمل بـ (8) ساعات<br/>
+                                    يومياً أو بـ(48) ساعة عمل أسبوعياً ويلزم<br/>
+                                    الطرف الأول بأن يدفع للطرف الثاني اجراً<br/>
+                                    إضافياً عن ساعات العمل الإضافية يوازي اجر<br/>
+                                    الساعة، مضاف إليه (50%) من أجره الأساسي.
+                                    <br/><br/>
+                                    • لا يجوز للطرف الثاني أثناء عملها أن تعمل <br/>
+                                    لدى منشأة أخرى أو أفراد، فإذا ثبت ذلك فللطرف<br/>
+                                    الأول أن يفسخ العقد أو يستخدم أي عقاب<br/>
+                                    يراه مناسباأو يسترد ما سبق أن أداه إليها من <br/>
+                                    الأجور السابقة.
+                                    <br/><br/>
+                                    • لا يحق للطرف الثاني إلا الإجازات الآتية:<br/>
+                                    (1) اليوم الوطني - (5) أيام في حال التأكد<br/>
+                                    من وفاة احد أصول أو فروع الموظفة  عليها إرفاق<br/>
+                                    ما يثبت بشكل رسمي)  -إجازة عيد الفطر وعيد<br/>
+                                    الأضحى وفق ما يقرره الطرف الأول ولا يستحق<br/>
+                                    الطرف الثاني أي  إجازات أخرى تحت أي مسمى.
+                                    <br/><br/><br/>
+                                    <br/>
+                                    <b><u>
+                                         البند الثالث: التزامات الطرف الأول
+                                    </u></b>
+                                    <br/><br/>
+                                     يدفع الطرف الأول للطرف الثاني أجرًا شهريًا قدره<br/>
+                                     ( <span t-esc="line['kb_latter_ar']"/> ريال سعودي) فقط تستحقه نهاية الشهر
+                                    <br/><br/>
+
+                                        <table style="text-align:center; border: 1px solid; width: 80%;">
+                                         <tr>
+                                             <th style="text-align:center; border: 1px solid; ">راتب أساسي </th>
+                                             <th style="text-align:center; border: 1px solid; ">بدل نقل</th>
+                                             <th style="text-align:center; border: 1px solid; ">بدل سكن</th>
+                                             <th style="text-align:center; border: 1px solid; ">المجموع</th>
+                                         </tr>
+                                         <tr>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_basic_salary']"/>
+                                                </td>
+                                                <td style="text-align:center; border: 1px solid; ">
+                                                    <span t-esc="line['kb_transport']"/>
+                                                </td>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_Housing']"/>
+                                                </td>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_salary']"/>
+                                                </td>
+                                         </tr>
+
+                                    </table>
+                                    <br/>
+                                    • يحتسب الأجر من تاريخ المباشرة الفعلية للعمل. <br/>
+                                    • أن يعامل الطرف الثاني بالاحترام اللائق. <br/>
+                                    • أن يمتنع عن كل قول أو فعل يمس كرامة الطرف الثاني ودينها. <br/>
+                                    • ألا يحتجز دون سند قضائي أجر الطرف الثاني أو جزءاً منه.
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <b><u>
+                                      البند الرابع : التزامات الطرف الثاني :
+                                    </u></b>
+                                    <br/><br/>
+                                    • أن تنجز العمل وفقاً لأصول المهنة ووفق تعليمات<br/>
+                                    الطرف الأول، إذا لم يكن في هذه التعليمات ما <br/>
+                                    يخالف العقد أو النظام أو الآداب الإسلامية،<br/>
+                                    ولم يكن في تنفيذها ما يعرض للخطر.
+                                    <br/><br/>
+                                    • أن تعتني عناية كافية بالآلات والأدوات والمهمات<br/>
+                                    والخامات المملوكة للطرف الأول الموضوعة تحت<br/>
+                                    تصرفها، أو التي في عهدتها، وأن تعيد للطرف الأول<br/>
+                                    المواد غير المستهلكة ولايخلى طرفها ويبرأ<br/>
+                                    ذمتها إلا بتسليم ما بعهدتها للطرف الأول.<br/>
+                                    <br/><br/>
+                                    • أن تقدم كل عون ومساعدة دون أن تشترط لذلك<br/>
+                                    أجراً إضافياً في حالات الكوارث والأخطار<br/>
+                                    التي تهدد سلامة ومكان العمل أو الأشخاص<br/>
+                                    العاملين فيه.
+                                    <br/><br/>
+                                    • أن تخضع وفقاً لطلب الطرف الاول للفحوص<br/>
+                                    الطبية التي يرغب في إجرائها عليها قبل<br/>
+                                    الالتحاق بالعمل، أو اثناءه للتحقق من<br/>
+                                    خلوها من الامراض المهنية، أو السارية.
+                                    <br/><br/>
+                                    • أن تحفظ الأسرار الفنية والتجارية والصناعية<br/>
+                                    للمواد التي تنتجها، أو التي أسهمت في إنتاجها<br/>
+                                    بصورة مباشرة أو غير مباشرة، وجميع الأسرار<br/>
+                                    المهنية المتعلقة بالعمل أو المنشأة التي<br/>
+                                    من شأن إفشائها الإضرار بمصلحة الطرف الأول.
+                                    <br/><br/>
+                                    • أن تبتعد عن استخدام العنف اللفظي أو الجسدي <br/>
+                                    للطالبات أو الزميلات أو العاملات أو الزائرات<br/>
+                                    أو الرؤساء أو لغيرهم.
+                                    <br/><br/>
+                                    • يلتزم الطرف الثاني بحسن السيرة والسلوك،<br/>
+                                    والأخلاق اثناء العمل، وفي جميع الاوقات<br/>
+                                    يلتزم بالأنظمة، والأعراف، والعادات، والآداب<br/>
+                                    المرعية في المملكة العربية السعودية، وكذلك<br/>
+                                    في القواعد، واللوائح النظامية، والتعليمات<br/>
+                                    المعمول بها لدى الطرف الأول.
+                                    <br/><br/>
+                                    • أن تلتزم بحسن السلوك والأخلاق وحسن المظهر<br/>
+                                    وارتداء الزي المناسب والرسمي حسب تعليمات <br/>
+                                    وزارة التعليم أثناء العمل.
+                                    <br/><br/>
+                                    • أن تكون فاعلة في الإشراف والمناوبة وتدخل<br/>
+                                    حصص الانتظار (متى طلب منها ذلك) حسب<br/>
+                                    الجداول المعدة من إدارة المدرسة.
+                                     <br/><br/>
+                                    • أن تحضر الدورات والورش التدريبية في أي وقت<br/>
+                                    تخطط له المشرفة أو القائدة التربوية بالمدارس<br/>
+                                    وتكون فاعلة وتلتزم بتطبيق ما ورد بها.
+                                     <br/><br/>
+                                     • أن تلتزم بما تكلف به من قبل الطرف الأول<br/>
+                                    من أعمال فنية وتدريسية أو إشرافيه أو تنسيقية.<br/>
+                                    <br/><br/>
+                                    • تلتزم (معلمات اللغة الانجليزية) باستخدام اللغة<br/>
+                                    الانجليزية فقط (أما معلمات بقية المواد) باستخدام<br/>
+                                    اللغة العربية الفصحى للتواصل مع الطالبات<br/>
+                                    داخل الصف وخارجه دون غيرها ويعتبر عدم<br/>
+                                    الالتزام مخالف لبنود العقد.
+                                    <br/><br/>
+
+                                    <b><u>
+                                       البند الخامس: انتهاء العقد أو إنهاؤه :
+                                    </u></b>
+                                    <br/><br/>
+                                    i. يحق للطرف الأول فسخ العقد دون مكافأة <br/>
+                                    أو إشعار الطرف الثاني أو تعويضها وذلك <br/>
+                                    في أي وقت خلال سريان مدة العقد.
+                                    <br/><br/>بر
+                                    ii. اذا ظهر أي خلاف فعلى الطرف الثاني<br/>
+                                    التوجه للرئيسة المباشرة والتفاهم وبعدها<br/>
+                                    للمسؤولة التي تليها بالتسلسل الهرمي وفي حالة <br/>
+                                    عدم حل الخلاف يتم مخاطبة المدير العام ولا <br/>
+                                    يحق لها تجاهل كل المسؤولين وتقديم شكوى في<br/>
+                                    الجهات الرسمية.
+                                    <br/><br/>
+                                    <b><u>
+                                      البند السادس: الاختصاص القضائي:
+                                    </u></b>
+                                    <br/><br/>
+                                    • في حالة نشوء خلاف بين الطرفين حول هذا العقد <br/>
+                                    وتنفيذه فإن الاختصاص ينعقد للمحكمة العمالية<br/>
+                                    بمدينة الدمام.
+                                    <br/><br/>
+                                    <b><u>
+                                      البند الثامن:الإخطارات ،والإشعارات ،ونسخ العقد :
+                                    </u></b>
+                                    <br/><br/>
+                                    (ا) تتم الإخطارات ، والاشعارات بين الطرفين كتابة <br/>
+                                    على العنوان الموضح بصدر هذا العقد عن طريق<br/>
+                                    البريد المستعجل ،أو البريد الممتاز ، أو البريد<br/>
+                                    الالكتروني لكل من الطرفين ، ويلتزم كل طرف<br/>
+                                    بإشعار الطرف الاخر خطياً في حال تغييره للعنوان<br/>
+                                    الخاص به ، أو تغيير البريد الالكتروني ، وإلا <br/>
+                                    اعتبر العنوان ، أو البريد الالكتروني المدونان<br/>
+                                    أعلاه، هما المعمول بهما نظاماً .
+                                    <br/><br/>
+                                    (ب) حُرر هذا العقد من نسختين أصليتين<br/>
+                                    ، وقد تسلم كل طرف نسخه منه للعمل بموجبها.<br/>
+
+
+
+
+
+
+
+
+                                </td>
+                                <td style="text-align:left; font-size: 16px;" colspan="2">
+                                    <br/>
+                                    <b><u>
+                                        " ' EMPLOYMENT CONTRACT 'AJEER SYSTEM "
+                                    </u></b>
+                                    <br/><br/>
+                                    This Contract signed on <span t-esc="line['kb_day_name']"/>
+                                    <span t-esc="line['kb_day_date']"/> H <br/>
+                                    : corresponding to <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/> between and by
+                                    <br/>
+                                    <br/>
+                                    <b>
+                                        First: First Party
+                                    </b>
+                                    <br/><br/>
+                                    ,Al-Tahtheeb Educational Services Company <br/>
+                                    ,( commercial registration No.(2062014760<br/>
+                                    - headquartered in Seihat Al-Kawthar District  <br/>
+                                    - P.O. Box 743 - Postal Code 31972 <br/>
+                                    Company Phone 8086208, represented by the
+                                    <br/>
+                                    <b> : Representative of school owners
+                                    <br/>
+                                        Jassim Ali Muhammad Al-Nasser</b>
+                                    <br/><br/>
+                                    <b>
+                                        Second: Second Party:<span t-esc="line['kb_employee_name']"/> <br/>
+                                    </b>
+                                     Nationality <span t-esc="line['kb_nationality']"/> <br/>
+                                    Identity No.<span t-esc="line['kb_employeeID']"/> <br/>
+                                    National Address <span t-esc="line['kb_city']"/> <br/>
+                                    District Street <span t-esc="line['kb_street']"/><br/>
+                                    Bulding No <span t-esc="line['kb_bulding']"/>  <br/>
+                                    Zip code: <span t-esc="line['kb_zip']"/>  <br/>
+                                    Additional No <span t-esc="line['kb_bulding']"/><br/>
+                                    Mobile: <span t-esc="line['kb_phone']"/> <br/>
+                                    E-mail:<span t-esc="line['kb_email']"/>
+                                    <br/><br/>
+                                    <b><u>
+                                    Article 1: Subject of Contract
+                                    </u></b>
+                                    <br/><br/>
+                                    <ol style="text-align:left; direction:ltr" type="1">
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The parties agreed and consensually, after  </li>
+                                        recognizing their full legal capacity to for<br/>
+                                        contracting, that the second party shall work<br/>
+                                        for the first party under his management and<br/>
+                                        supervision in a profession of  (<span t-esc="line['kb_job_title']"/>) and<br/>
+                                        carry out the work assigned to him in a manner<br/>
+                                        commensurate with his scientific, practical,<br/>
+                                        and technical capabilities; according to work<br/>
+                                        needs, as per the rules and regulations of<br/>
+                                        the Ministry of Education in the Kingdom.
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The duration of the contract is one </li>
+                                        academic year, starts from the date of<br/>
+                                        the actual commencement of the second<br/>
+                                        party for the same academic year and<br/>
+                                        ends on <span t-esc="line['kb_heg_date_start']"/>  AH corresponding<br/>
+                                        to <span t-esc="line['kb_date_start']"/> AD according to the<br/>
+                                        instructions of the Ministry of<br/>
+                                       ,Education and any new amendments<br/>
+                                        except for the violations that occur<br/>
+                                        at any time from the second party.
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The second party is subject to a </li>
+                                        probationary period of three months<br/>
+                                        starting from the date of commencement<br/>
+                                        of work, and it may be extended by <br/>
+                                        written agreement between the two parties<br/>
+                                        for another three months. The probationary<br/>
+                                        period does not include Eid al-Fitr and Eid<br/>
+                                        al-Adha holidays and sick leave. Only the<br/>
+                                        first party has the right to terminate this<br/>
+                                        contact during this period without compensation<br/>
+                                        and in case of termination this contract by<br/>
+                                        second party , the second party will be paid<br/>
+                                        two months wages as compensation  may terminate<br/>
+                                        this contract during this period.
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The second party admits to submit </li>
+                                        the originals of all documents<br/>
+                                        required by the first party.
+                                         <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The first party has the right to terminate </li>
+                                        this contract without prior notice and without<br/>
+                                        paying a warning allowance, reward or compensation<br/>
+                                        at any time due to the violations committed by<br/>
+                                        the second party against the regulations or<br/>
+                                        instructions of the first party, or any laws in<br/>
+                                        which it operates in the Kingdom of Saudi Arabia
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> The first party has the right, in the event that</li>
+                                        the second party is ineligible, to terminate this<br/>
+                                        contract without a reward, or the second party was<br/>
+                                        previously notified during the probationary period,<br/>
+                                        provided that official holidays and public holidays<br/>
+                                        are not counted within that period. In this case,<br/>
+                                        the second party shall bear the costs of training<br/>
+                                        in the professional growth provided to him by<br/>
+                                        Al-Tahtheeb
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> If the second party causes the loss, damage or </li>
+                                        destruction of machinery or products owned by the<br/>
+                                        first party or is in its custody, and this is a<br/>
+                                        result of the second party’s mistake or its<br/>
+                                        violation of the instructions of the first party,<br/>
+                                        then the first party may deduct from its wages<br/>
+                                        the amount necessary to repair or re-position<br/>
+                                        according to the regulation Work for Al-Tahtheeb<br/>
+                                        Educational Services Company, which is approved<br/>
+                                        by the Ministry of Labor
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> In the event of professional or health incompetence</li>
+                                        (<span t-esc="line['kb_job_title']"/>) within the examination and interview of the<br/>
+                                        General Administration of Education, the Education<br/>
+                                        Office in the governorate, the Ministry of Health,<br/>
+                                        or any hospital or health unit in the Kingdom, the<br/>
+                                        second party does not have the right to remain at<br/>
+                                        work as long as he is not fit for the job to which<br/>
+                                        he was appointed. Status His contract is terminated<br/>
+                                        immediately at any time of the year
+                                        <br/><br/>
+                                        <li style="text-align:left;  margin: 0;padding: 0; list-style-position: inside; "> 	The first party alone has the right to terminate</li>
+                                        this contract before its expiry without a legitimate<br/>
+                                        reason and without compensation
+                                        <br/><br/>
+                                    </ol>
+                                    <b><u>
+                                      : Article 2: Working Days, Hours and Vacations
+                                    </u></b>
+                                    <br/><br/>
+                                    Working days are limited to no more than (5) days per -<br/>
+                                    week, and working hours are limited to (8) hours per <br/>
+                                    day or (48) working hours per week. The first party <br/>
+                                    is obligated to pay the second party an additional <br/>
+                                    wage for additional working hours equal to the hourly <br/>
+                                    wage, plus (50%) of his basic wage
+                                    <br/><br/>
+                                    The second party may not, during her work, work for - <br/>
+                                    another establishment or individuals. If this is <br/>
+                                    proven, the first party may terminate the contract,<br/>
+                                    use any punishment he deems appropriate, or recover <br/>
+                                    what he previously paid to her from the previous wages<br/>
+                                    <br/><br/>
+                                    :The second party is only entitled to the following - <br/>
+                                    holidays (1) National Day. (5) days in the event of<br/>
+                                    confirmation of the death of one of the female employee’s<br/>
+                                    ascendants or descendants (she must attach an official proof)<br/>
+                                    Eid Al-Fitr and Eid Al-Adha leave according to what -<br/>
+                                    the first party decides and does notdeserve The second <br/>
+                                    party takes any other vacations under any name<br/>
+                                    <br/><br/>
+                                    <b><u>
+                                      :  Article 3: Obligations of First Part
+                                    </u></b>
+                                    <br/><br/>
+                                    The first party shall pay the second party a monthly <br/>
+                                    wage of ( <span t-esc="line['kb_latter']"/> Saudi Riyals) due at the end <br/>
+                                    of the month
+                                    <br/><br/>
+                                    <br/>
+                                    <table style="text-align:left; border: 1px solid; width: 80%;" align="left">
+                                             <tr>
+                                                 <th style="text-align:center; border: 1px solid; ">Basic Salary</th>
+                                                 <th style="text-align:center; border: 1px solid; ">Transportation Allowance</th>
+                                                 <th style="text-align:center; border: 1px solid; ">Housing Allowance</th>
+                                                 <th style="text-align:center; border: 1px solid; ">Total Salary</th>
+                                             </tr>
+                                             <tr>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_basic_salary']"/>
+                                                </td>
+                                                <td style="text-align:center; border: 1px solid; ">
+                                                    <span t-esc="line['kb_transport']"/>
+                                                </td>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_Housing']"/>
+                                                </td>
+                                                 <td style="text-align:center; border: 1px solid; ">
+                                                     <span t-esc="line['kb_salary']"/>
+                                                </td>
+                                             </tr>
+                                    </table>
+                                    <br/> <br/><br/>
+                                    <br/> <br/>
+                                     The wage is calculated from the actual start date •<br/>
+                                        .of work<br/>
+                                    .To treat the second party with due respect •<br/>
+                                    Refrain from every word or action that affects the •<br/>
+                                    .dignity and religion of the second party<br/>
+                                    Not to withhold without a judicial document •<br/>
+                                    .the wages of the second party or part thereof<br/>
+                                    <br/> <br/>
+                                     <b><u>
+                                       : Article 4: Obligations of Second Party
+                                     </u></b>
+                                    <br/><br/>
+                                     To carry out the work in accordance with the -<br/>
+                                    principles of the profession and in accordance <br/>
+                                    with the instructions ofthe first party, if there <br/>
+                                    is nothing in these instructions that contradicts <br/>
+                                    the contract, the system or Islamic morals, and <br/>
+                                    there is nothing in their implementation that <br/>
+                                    .exposes to danger
+                                    <br/><br/>
+                                    To take sufficient care of the machines, tools -<br/>
+                                    supplies and raw materials owned by the first party<br/>
+                                    that are placed at its disposal, or that are in its<br/>
+                                    custody, and to return to the first party the unconsumed<br/>
+                                    materials and not release them and discharge them from <br/>
+                                    their liability except by handing over what they<br/>
+                                    .entrusted to the first party
+                                    <br/><br/>
+                                    To provide all aid and assistance without requiring an -<br/>
+                                    additional fee for that in cases of disasters and dangers<br/>
+                                    that threaten the safety and place of work or the people <br/>
+                                    .working in it
+                                    <br/><br/>
+                                    ,To undergo, in accordance with the first party's request -<br/>
+                                    the medical examinations he wishes to undergo before joining<br/>
+                                    work or during it, to verify that she is free from occupational<br/>
+                                    .or communicable diseases
+                                    <br/><br/>
+                                    To keep the technical, commercial and industrial secrets -<br/>
+                                    ofthe materials it produces, or which contributed to its <br/>
+                                    productiondirectly or indirectly, and all professional secrets<br/>
+                                    related to the work or establishment, the disclosure of<br/>
+                                    .which would harm the interest of the first party
+                                    <br/><br/>
+                                    To refrain from using verbal or physical violence against -  <br/>
+                                    .students, colleagues,workers, visitors, bosses or others<br/>
+                                    <br/><br/>
+                                    ,The second party is committed to good conduct, conduct - <br/>
+                                    and ethics during work,and at all times adheres to the <br/>
+                                    regulations, customs, customs, and morals in force in the <br/>
+                                    Kingdom of Saudi Arabia, as well as the rules, regulations,<br/>
+                                    .and instructions in force with the first party
+                                    <br/><br/>
+                                    ,To adhere to good behavior, morals, and good appearance - <br/>
+                                    and to wear the appropriate and official dress, according <br/>
+                                    to the instructions of the Ministry of Education, while <br/>
+                                    .at work
+                                    <br/><br/>
+                                    To be effective in supervising and shifting, and to - <br/>
+                                    enter waiting classes (when asked to do so) according <br/>
+                                    .to the schedules prepared by the school administration<br/>
+                                    <br/><br/>
+                                    To attend courses and training workshops at any time - <br/>
+                                    planned by the supervisor or educational leader in schools,<br/>
+                                    and to be effectiveand committed to implementing what is <br/>
+                                    .stated therein.
+                                    <br/><br/>
+                                    To abide by what is entrusted to him by the first party - <br/>
+                                    in terms of technical, teaching, supervisory or coordinating<br/>
+                                    .work
+                                    <br/><br/>
+                                    English language teachers) are obligated to use the English ) - <br/>
+                                    (language only (as for the teachers of the rest of the subjects <br/>
+                                    to use the standard Arabic language to communicate with the <br/>
+                                    students inside and outside the classroom only, and <br/>
+                                    non-compliance is considered a violation of the terms of<br/>
+                                    .the contract
+                                    <br/><br/>
+                                    <b><u>
+                                       Article 5: Expiration or Termination of Contract
+                                    </u></b>
+                                    <br/><br/>
+                                    The first party has the right to terminate the contract • 	<br/>
+                                    without a reward or notice to the second party or compensate<br/>
+                                    .it at any time during the validity of the contract period<br/>
+                                    <br/>
+                                    If any dispute arises, the second party should go to • 	<br/>
+                                    the direct supervisor and the understanding, and then to <br/>
+                                    the official who follows him in the hierarchy. In the event<br/>
+                                    that the dispute is not resolved, the Director-General is <br/>
+                                    addressed, and she has no right to ignore all officials and <br/>
+                                    .file a complaint with the official authorities
+                                    <br/><br/>
+                                    <b><u>
+                                       Article Six: Jurisdiction
+                                    </u></b>
+                                    <br/><br/>
+                                    In the event of a dispute arising between the two - <br/>
+                                    parties regarding this contract and its implementation, <br/>
+                                    .the jurisdiction shall be held by the Labor Court in Dammam
+                                    <br/><br/>
+                                    <b><u>
+                                        Article 8: Notifications and Copies of Contract
+                                    </u></b>
+                                    <br/><br/>
+                                    (a) Notifications and correspondence between the two <br/>
+                                    parties shall be made in writing at the address indicated <br/>
+                                    at the bottom of this contract by express mail, priority <br/>
+                                    mail, or e-mail for each of the parties, and each party <br/>
+                                    shall notify the other party in writing in the event of <br/>
+                                    a change to his address or change of e-mail. Otherwise, <br/>
+                                    the address or e-mail listed above shall be deemed to <br/>
+                                    be applicable by law.
+                                    <br/><br/>
+                                    (b) This contract has been drawn up in two original <br/>
+                                    copies, and each party has received a copy of it <br/>
+                                    to comply with.<br/>
+
+
+
+
+
+
+
+
+                                </td>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer" style="direction: rtl;">
+                        <div style="text-align: center;">
+                            <img  src='/kb_hr_tahtheeb/static/description/tahtheb_footer.png' style="width:800px;height:90px;"/>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;">   </p>
+                    <div class="header" style="direction: rtl;">
+                            <div style="text-align: center;">
+                                <img  src='/kb_hr_tahtheeb/static/description/tahtheb_header.png' style="width:800px;height:90px;"/>
+                            </div>
+                         </div>
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                            <div style="text-align:center ; font-size:15px;  font-family: 'Tajawal', sans-serif;">
+                                <p> اسم وتوقيع الطرف الاول </p>
+                                <p>  Name and signature of the First Party </p>
+                                <p>السيـد : جاسم علي محمد الناصر </p>
+                                <p> Mr: Jassim Ali Muhammad Al-Nasser <br/>  بصفته : ممثل ملاك المدارس </p>
+                                <p>In his capacity as: The Representative of the School Owners <br> </br> التوقيعSignature: </p>
+                                <br/><br/><br/>
+                                <p>اسم وتوقيع الطرف الثاني: </p>
+                                <p>Name and Signature of the Second Party:</p>
+                                <p>    <span t-esc="line['kb_employee_name']"/>  الاسم<br/>  Name:  <span t-esc="line['kb_employee_name']"/>  </p>
+                                <p>التوقيع  Signature: </p>
+                                <br/><br/><br/><br/>
+                                <p>الختم  الرسمي
+                                    <br/>
+                                Official Stamp</p>
+                                 <br/> <br/> <br/> <br/> <br/>
+                                 <br/> <br/><br/>
+                                <p>أي تعديلات أو شطب أو إضافات في النصوص المطبوعة لهذا الاتفاق تعتبر لاغية ما لم تكن معتمده بختم وتوقيع الشركة </p>
+                                <br/>
+                                <hr/>
+                                <br/>
+                                <b>
+                                     <p>---------- نهاية العقد ---------- </p>
+                                </b>
+                                <p>
+                                    Any amendments, deletions or additions in the printed texts of this agreement are considered null unless they are approved by the seal and signature of the company.
+                                </p>
+                                <br/>
+                                <hr/>
+                                <p>
+                                    <b>
+                                         ---------- End of the contract ----------
+                                    </b>
+                                </p>
+
+
+
+                            </div>
+                        </div>
+                    <div class="footer" style="direction: rtl;">
+                            <div style="text-align: center;">
+                                <img  src='/kb_hr_tahtheeb/static/description/tahtheb_footer.png' style="width:800px;height:90px;"/>
+                            </div>
+                        </div>
+                    <p style="page-break-after:always;">   </p>
+                    <div class="header" style="direction: rtl;">
+                            <div style="text-align: center;">
+                                <img  src='/kb_hr_tahtheeb/static/description/tahtheb_header.png' style="width:800px;height:90px;"/>
+                            </div>
+                         </div>
+                    <div class="page" style="font-family: 'Almarai', sans-serif;">
+                        <div  style="font-size:15px;  font-family: 'Tajawal', sans-serif;">
+                            <p style="text-align:right ; font-size:17px;">
+                                <b>
+                                    <u>
+                                        . يجب ان تملأ كل الفراغات
+                                    </u>
+                                </b>
+                            </p>
+                            <p style="text-align:right ;">
+                                <b>
+                                  الاسم رباعيا Fill up all the gaps:
+                                </b>
+                            </p>
+                            <table style="border:1px solid black; text-align:center; width: 100%;">
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                   </td>
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                            </table>
+                            <br/>
+                            <table style="border:1px solid black; text-align:center; width: 100%;">
+                                <tr>
+                                    <td  colspan="2" style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                          جوال : Mobile:
+                                    </td>
+
+                                    <td  colspan="2" style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        هواتف الاتصال  contat:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                         اسم الشارع   Street Name
+                                    </td>
+                                    <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                            رقم المبنى Building No.:
+                                    </td>
+    <!--                                <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >-->
+
+    <!--                                </td>-->
+                                    <td  colspan="2" style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                    لعنوان الوطني                National Address
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                          المنطقة : Area
+                                    </td>
+                                    <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                             مدينة / قرية  : City/Village
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        اسم الحي       District Name
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td  colspan="2" style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                          الرمز البريدي: Postal Code
+                                    </td>
+
+                                    <td  colspan="2" style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                    </td>
+                                    <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الرقم الاضافي : Additional No.
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="text-align:right ;">
+                                <b>
+                                    <u>
+                                        اسم شخص يمكن الوصول إلى الطرف الثاني من خلاله
+                                    </u>
+                                </b>
+                            </p>
+                             <table style="border:1px solid black; text-align:center; width: 100%;">
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                   </td>
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                       الجوال Mobil
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الهاتف الأرضي  Land Line
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                         Relationship صلة القرابة
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الاسم Name
+                                  </td>
+                            </table>
+                            <br/>
+                            <table style="border:1px solid black; text-align:center; width: 100%;">
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                   </td>
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                       الجوال Mobil
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الهاتف الأرضي  Land Line
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                         Relationship صلة القرابة
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الاسم Name
+                                  </td>
+                            </table>
+                            <br/>
+                            <table style="border:1px solid black; text-align:center; width: 100%;">
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                   </td>
+                                   <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                       الجوال Mobil
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الهاتف الأرضي  Land Line
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                         Relationship صلة القرابة
+                                  </td>
+                                  <td  style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+
+                                  </td>
+                                  <td style="border:1px solid black; text-align:center; width:400px; height:50px;" >
+                                        الاسم Name
+                                  </td>
+                            </table>
+                            <br/>
+                            <di style="text-align:left ;  width: 100%;" >
+                                <p style="text-align:left ;">
+                                <b>
+                                    <u>
+                                        هذه البيانات كلها صحيحة
+                                    </u>
+                                </b>
+                                <br/>
+                                <b>
+                                    <u>
+                                        All these information are correct
+                                    </u>
+                                </b>
+                            </p>
+                            <p style="text-align:left ;">
+                                <b>
+                                    <u>
+                                       التوقيع
+                                    </u>
+                                </b>
+                                <br/>
+                                <b>
+                                    <u>
+                                       Signature
+                                    </u>
+                                </b>
+                            </p>
+
+                            </di>
+                        </div>
+                    </div>
+                    <div class="footer" style="direction: rtl;">
+                            <div style="text-align: center;">
+                                <img  src='/kb_hr_tahtheeb/static/description/tahtheb_footer.png' style="width:800px;height:90px;"/>
+                            </div>
+                        </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

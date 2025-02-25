@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo >
+    <data >
+
+        <record id = "kb_hr_loans_form_inherit" model = "ir.ui.view" >
+            <field name = "name" >hr.loans.form.inherit</field >
+            <field name = "model" >hr.loan</field >
+            <field name = "inherit_id" ref = "ohrms_loan.hr_loan_form_view" />
+            <field name = "arch" type = "xml" >
+
+                <xpath expr = "//field[@name='state']" position = "replace" >
+                    <field name = "state" widget = "statusbar" statusbar_visible = "draft,accounting,hr,approve" />
+                </xpath >
+
+
+                <xpath expr = "//button[@name='action_submit']" position = "replace" >
+                    <button string = "Set to Accounting" name = "kb_set_to_accounting_state_loan" type = "object"
+                            states = "draft"
+                            class = "oe_highlight"
+                    />
+
+                    <button string = "Set to HR" name = "kb_set_to_hr_state_loan" type = "object" states = "accounting"
+                            class = "oe_highlight"
+                            groups = "kb_custom_loans_approvals.accounting_approval_group_in_loans"
+                    />
+
+                    <button string = "Approve" name = "action_approve" type = "object" states = "hr"
+                            class = "oe_highlight" groups = "kb_custom_loans_approvals.hr_approval_group_in_loans"
+                    />
+                </xpath >
+
+
+                <button name = "action_refuse" position = "replace" >
+                    <button string = "Refused" name = "action_refuse" type = "object" states = "hr,accounting"
+                            class = "btn-danger" />
+                </button >
+
+            </field >
+        </record >
+
+    </data >
+</odoo >

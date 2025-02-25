@@ -1,0 +1,155 @@
+<odoo>
+    <record id="kb_extension_letter_action" model="ir.actions.report">
+        <field name="name">خطاب تمديد</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.kb_extension_letter_template</field>
+        <field name="report_file">kb_hr_tahtheeb.kb_extension_letter_template</field>
+        <field name="print_report_name">'خطاب تمديد'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="kb_extension_letter_template">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    text-align: right;
+                    font-size: 20px;
+                    }
+
+                    .header,
+                    .footer {
+                    text-align: center;
+                    }
+
+                    .header .right-section {
+                    text-align: left;
+                    }
+
+                    .header .left-section {
+                    text-align: right;
+                    }
+
+                    .header img {
+                    max-width: 150px;
+                    }
+
+                    .table th,
+                    .table td {
+                    text-align: center;
+                    vertical-align: middle;
+                    }
+
+                    .signature-section {
+                    margin-top: 30px;
+                    }
+
+                    .footer {
+                    margin-top: 40px;
+                    font-size: 12px;
+                    color: gray;
+                    }
+
+                    hr {
+                    border: 1px solid #000;
+                    }
+
+                    .table-bordered {
+                    margin-top: 20px;
+                    }
+
+                    .signature-section p {
+                    text-align: center;
+                    font-weight: bold;
+                    }
+
+                    .custom-span {
+                    padding-right: 100px;
+                    }
+
+                    table th, table td {
+                    border: 1px solid #000;
+                    padding : 8px;
+                    }
+                </style>
+
+                <div class="page" style="font-family: 'Almarai', sans-serif;">
+                    <div>
+                        <!-- Header Section -->
+                        <div class="page">
+                            <div class="text-right">
+
+                                <p style="margin-bottom: 5px;">
+                                    <span t-esc="form_data['date']"/>
+                                    م
+                                </p>
+                            </div>
+                            <div style="margin-top: 30px;">
+                                <!-- Salutation -->
+                               
+                                <t t-foreach="employee_list" t-as="employee">
+                                        <t t-if="employee['gender'] !='female'">
+                                           <p style="margin-bottom: 10px;">الأستاذ الفاضل / 
+                                                <span t-esc="employee['employee_name']"/>
+                                            </p> 
+                                        </t>
+                                        <t t-if="employee['gender'] =='female'">
+                                           <p style="margin-bottom: 10px;"> الأستاذة الفاضلة / 
+                                                <span t-esc="employee['employee_name']"/>
+                                            </p> 
+                                        </t>
+                                </t>
+
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <!-- Main Body -->
+                                <p>السلام عليكم ورحمة الله وبركاته، وبعد،</p>
+                                <p>
+                                    نظراً لأنكم تحت فترة التجربة، نقيدكم بانه صدر قرار من إدارة الشركة بتمديد فترة
+                                    التجربة
+                                    حسب
+                                    النظام، علماً بأن الإجازات كإجازة عيد الفطر والأضحى والإجازات المرضية لا تدخل في
+                                    فترة
+                                    التجربة. وعليه وجب إشعاركم بذلك.
+                                </p>
+                                <p style="text-align: center;">مع فائق الشكر والتقدير</p>
+                                <br/>
+                            </div>
+                            <div style="margin-top: 50px;">
+                                <!-- Signature Section -->
+                                <div style="float: right; width: 33%;">
+
+                                    <p>الموظفة</p>
+                                    <t t-foreach="employee_list" t-as="employee">
+                                        <t t-esc="employee['employee_name']"/>
+                                    </t>
+                                </div>
+                                <div style="float: right; width: 33%; text-align: center;">
+                                    <p>مدير الشؤون التعليمية</p>
+                                </div>
+                                <div style="float: right; width: 33%; text-align: right;">
+                                    <p>الموارد البشرية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

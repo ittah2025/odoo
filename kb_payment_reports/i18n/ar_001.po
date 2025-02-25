@@ -1,0 +1,258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_payment_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-22 08:26+0000\n"
+"PO-Revision-Date: 2023-08-22 11:26+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<b>CR: </b>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<b>Mobile: </b>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<b>Phone: </b>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<b>VAT: </b>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"\n"
+"                            <span style=\"font-weight: bold;  text-align: right\">Beneficiary Name:  </span>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                        <span style=\"font-weight: bold;\">اسم المستفيد </span>"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-weight: bold;  direction: rtl;\">Payment Method:  </span>"
+msgstr ""
+"<br/>\n"
+"                         <span style=\"font-weight: bold;\">طريقة السداد:  </span>"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-weight: bold; direction: rtl;\">Invoice Number:  </span>"
+msgstr ""
+"<br/>\n"
+"                         <span style=\"font-weight: bold;\">رقم الفاتورة  </span>"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-weight: bold; direction: rtl;\">Memo:  </span>"
+msgstr ""
+"<br/>\n"
+"                         <span style=\"font-weight: bold;\">الغرض:  </span>"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid ""
+"<br/>\n"
+"        <span style=\"text-align:center;\">Powerd by Knowledge bonds</span>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<span> المبلغ   </span>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid "<span>Date:</span>"
+msgstr "التاريخ"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "<span>Total </span>"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kb_payment_reports
+#: model:ir.model.fields,field_description:kb_payment_reports.field_account_payment__cash_cheque_no
+msgid "Cash/Cheque No"
+msgstr "رقم نقدا / شيك"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Cash/Cheque No:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Created By <br/> اصدر بواسطة"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid "Currency"
+msgstr "العملة"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Date:"
+msgstr "التاريخ:"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid "Description"
+msgstr "الملاحظات"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "For:"
+msgstr "الي:"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "No."
+msgstr "رقم"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "On Bank:"
+msgstr "أسم البنك"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Paid to Mr./Ms.:"
+msgstr "دفعت للسيد / السيدة:"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Payment Voucher | سند صرف"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model:ir.model,name:kb_payment_reports.model_account_payment
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Receipt Voucher | سند فبض"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "Recevied By <br/> توقيع المستلم"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "The Sum of:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model:ir.actions.report,name:kb_payment_reports.action_payments_report_template
+msgid "Vendor Payment"
+msgstr "نموذج سداد الموردين"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.kb_account_report_template
+msgid ""
+"Vendor Payment\n"
+"                            <br/>"
+msgstr "نموذج سداد الموردين<br/>"
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "التاريخ:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "الصندوق<br/> ____________________"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "المالية<br/> ____________________"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "المحاسبة<br/> ____________________"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "المستلم<br/> ____________________"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "بموجب نقدا/شيك رقم:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "دفتر اليومية:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "على بنك:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "مبلغ وقدره:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "وذلك عن:"
+msgstr ""
+
+#. module: kb_payment_reports
+#: model_terms:ir.ui.view,arch_db:kb_payment_reports.report_payment
+msgid "يصرف إلى السيد/السادة:"
+msgstr ""

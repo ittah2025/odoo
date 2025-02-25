@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_alsalembank
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 11:48+0000\n"
+"PO-Revision-Date: 2022-12-26 11:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_alsalembank
+#: model_terms:ir.ui.view,arch_db:kb_alsalembank.view_salem_banks_inherit
+msgid "Bank Account"
+msgstr "الحسابات البنكية"
+
+#. module: kb_alsalembank
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__iban1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__iban2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__iban3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__iban1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__iban2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__iban3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__iban1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__iban2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__iban3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__IBN1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__IBN2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__IBN3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__IBN4
+msgid "Bank IBN"
+msgstr "رقم الايبان"
+
+#. module: kb_alsalembank
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__bankNames1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__bankNames2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_bank_statement_line__bankNames3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__bankNames1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__bankNames2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_move__bankNames3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__bankNames1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__bankNames2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_account_payment__bankNames3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankName1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankName2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankName3
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankName4
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#. module: kb_alsalembank
+#: model:ir.model,name:kb_alsalembank.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: kb_alsalembank
+#: model:ir.model,name:kb_alsalembank.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: kb_alsalembank
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankimagE4
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankimage1
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankimage2
+#: model:ir.model.fields,field_description:kb_alsalembank.field_res_company__bankimage3
+msgid "image"
+msgstr "الشعار"

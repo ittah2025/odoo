@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+
+<odoo>
+    <data noupdate="1">
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[(4, ref('product.group_discount_per_so_line')), (4, ref('product.group_product_pricelist'))]"/>
+        </record>
+
+
+        <!-- <record id="action_client_sale_order_menu" model="ir.actions.client">
+            <field name="name">Open Sale Order Menu</field>
+            <field name="tag">reload</field>
+            <field name="params" eval="{'menu_id': ref('sale.menu_sale_quotations')}"/>
+        </record>
+        <record id="base.open_menu" model="ir.actions.todo">
+            <field name="action_id" ref="action_client_sale_order_menu"/>
+            <field name="state">open</field>
+        </record> -->
+    </data>
+</odoo>

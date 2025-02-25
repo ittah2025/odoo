@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="action_transpport_registration" model="ir.actions.act_window">
+        <field name="name">Transport Registration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transport_registration</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Transport Registration
+            </p>
+        </field>
+    </record>
+
+    <record id="transpport_registration_view" model="ir.ui.view">
+        <field name="name">Transport Registration</field>
+        <field name="model">transport_registration</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                <button string="Send" name="send_state" type="object" attrs="{'invisible':['|','|','|','|',('state', '=', 'send'),('state','=','reject'),('state','=','topaid'),('state','=','registration'),('state','=','done')]}"/>
+                <button string="Accept and To Paid" name="topaid_state" type="object" class="btn btn-success"
+                attrs="{'invisible':['|','|','|','|',('state', '=', 'draft'),('state','=','reject'),('state','=','topaid'),
+                ('state','=','registration'),('state','=','done') ]}" />
+                <button string="Reject" name="reject_state" type="object" class="btn btn-danger" attrs="{'invisible':['|','|','|','|',('state', '=', 'draft'),('state', '=', 'draft'),('state','=','reject')
+                ,('state','=','registration'),('state','=','done') ]}" />
+                <button string="Registration" name="registration_state" type="object" class="btn btn-danger" attrs="{'invisible':['|','|','|','|',('state', '=', 'send'),('state', '=', 'draft'),('state','=','reject')
+                ,('state','=','registration'),('state','=','done') ]}" />
+                <button string="Done" name="done_state" type="object" class="btn btn-danger" attrs="{'invisible':['|','|','|','|',('state', '=', 'send'),('state', '=', 'draft'),('state','=','reject'),('state','=','topaid'),
+                ('state','=','done') ]}" />
+                <field name="state" widget="statusbar"  nolabel="1" />
+
+            </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="student_id"/>
+                            <field name="transportRoot"/>
+                            <field name="PaidAmount"/>
+                        </group>
+                        <group>
+                            <field name="RegistrationForMonths"/>
+                            <field name="reg_date"/>
+                            <field name="reg_end_date"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="transport_registration_tree" model="ir.ui.view">
+        <field name="name">transport.registration.tree</field>
+        <field name="model">transport_registration</field>
+        <field name="arch" type="xml">
+            <tree >
+               <field name="student_id"/>
+                <field name="transportRoot"/>
+                <field name="PaidAmount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <menuitem id="transport_Submenus" name="Transport Registration" parent="transport_menu" sequence="2" action="action_transpport_registration" />
+
+
+</odoo>

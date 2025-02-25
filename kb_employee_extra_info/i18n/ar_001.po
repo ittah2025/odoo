@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_employee_extra_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221030\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-25 14:07+0000\n"
+"PO-Revision-Date: 2023-01-25 14:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_employee_extra_info
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.hr_contract_form_total_with_allowances
+msgid "<span>/ month</span>"
+msgstr "شهر"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__bank_account_number
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__license_attachment_id
+msgid "Attachment"
+msgstr "المرفق"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__bachelor
+msgid "Bachelor"
+msgstr "بكالوريوس"
+
+#. module: kb_employee_extra_info
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.hr_employee_inherit_form_view
+msgid "Bank Information"
+msgstr "المعلومات البنكية"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__bank_name
+msgid "Bank Name"
+msgstr "إسم البنك"
+
+#. module: kb_employee_extra_info
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.hr_employee_inherit_form_view
+msgid "Border Information"
+msgstr "معلومات الحدود"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__border_number
+msgid "Border Number"
+msgstr "رقم الحدود"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__certificate
+msgid "Certificate Level"
+msgstr "مستوى الشهادة"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__date_of_entry
+msgid "Date of Entry"
+msgstr "تاريخ الدخول"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__diploma
+msgid "Diploma"
+msgstr "دبلوم"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__doctor
+msgid "Doctor"
+msgstr "دكتوراه"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__license_expiry_date
+msgid "Driver License Expiry Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__license_id
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.hr_employee_inherit_form_view
+msgid "Driver License Id"
+msgstr "رقم رخصة القيادة"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__license_release_date
+msgid "Driver License Release Date"
+msgstr "تاريخ الإصدار"
+
+#. module: kb_employee_extra_info
+#: model:ir.model,name:kb_employee_extra_info.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: kb_employee_extra_info
+#: model:ir.model,name:kb_employee_extra_info.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__bank_account_number
+msgid "Enter Account Number"
+msgstr "أدخل رقم الحساب"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__bank_name
+msgid "Enter Bank Name"
+msgstr "أدخل إسم البنك"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__border_number
+msgid "Enter Border Number"
+msgstr "أدخل رقم الحدود"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__date_of_entry
+msgid "Enter Date of Entry"
+msgstr "أدخل تاريخ الدخول"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__license_expiry_date
+msgid "Enter Driver License Expiry Date"
+msgstr "أدخل تاريخ الإنتهاء"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__license_id
+msgid "Enter Driver License Id"
+msgstr "أدخل رقم الرخصة"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__license_release_date
+msgid "Enter Driver License Release Date"
+msgstr "أدخل تاريخ إصدار رخصة القيادة"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__bank_iban_number
+msgid "Enter Iban Number"
+msgstr "أدخل رقم الآيبان"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__bank_soft_code
+msgid "Enter Soft Code"
+msgstr "أدخل السوفت كود"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__graduate
+msgid "Graduate"
+msgstr "خريج"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__high_school
+msgid "High School"
+msgstr "ثانوي"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__bank_iban_number
+msgid "Iban Number"
+msgstr "رقم الآيبان"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__master
+msgid "Master"
+msgstr "ماجستير"
+
+#. module: kb_employee_extra_info
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.hr_contract_history_form_total_with_allowances
+msgid "Monthly Wage With Allowances"
+msgstr "الأجر الشهري مع البدلات"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields.selection,name:kb_employee_extra_info.selection__hr_employee__certificate__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_employee__bank_soft_code
+msgid "Soft Code"
+msgstr "سوفت كود"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,field_description:kb_employee_extra_info.field_hr_contract__totalallowances
+msgid "Total With Allowances"
+msgstr "الأجر مع البدلات"
+
+#. module: kb_employee_extra_info
+#: model:ir.model.fields,help:kb_employee_extra_info.field_hr_employee__license_attachment_id
+msgid "You can attach the copy of driver license"
+msgstr "يمكنك إرفاق نسخة من رخصة القيادة"
+
+#. module: kb_employee_extra_info
+#: model_terms:ir.ui.view,arch_db:kb_employee_extra_info.employee_barcode_search_view
+msgid "barcode"
+msgstr "رقم الشارة"

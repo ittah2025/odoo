@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_product_extend_form_view">
+            <field name="name">product.template.doc.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='route_ids']/.." position="after">
+                    <field name="length" col="2" />
+                    <field name="width" col="2"/>
+                    <field name="height" col="2" />
+
+                        <xpath expr="//field[@name='route_ids']/.." position="after">
+                            <group string="أبعاد المنتج / القطر / اخرى">
+                            <div>
+
+                                <!-- Dimension -->
+                                <label for="dimensionL" string="البعد"/>
+                                    <div class="o_row ">
+                                        <label for="dimensionL" />
+                                        <h5>
+                                          <field name="dimensionL" class="oe_inline" nolabel="1"  style="width: 100%"/>
+                                        </h5>
+                                        <label for="dimensionW" />
+                                        <h5>
+                                            <field name="dimensionW" class="oe_inline" nolabel="1" style="width: 100%"/>
+                                        </h5>
+                                        <label for="dimensionH" />
+                                        <h5>
+                                            <field name="dimensionH" class="oe_inline" nolabel="1" style="width: 100%"/>  
+                                        </h5>
+                                    </div>
+
+                                <!-- Diameter -->
+
+                                <label for="diameterInletI" string="قطر الدائرة"/>
+                                    <div class="o_row">
+                                    <label for="diameterInletI" string="داخل"/>
+                                        <label for="diameterInletI" />
+                                        <h5>
+                                          <field name="diameterInletI" class="oe_inline" nolabel="1"  style="width: 100%"/>
+                                        </h5>
+                                        <label for="diameterOutletI" />
+                                        <h5>
+                                            <field name="diameterOutletI" class="oe_inline" nolabel="1" style="width: 100%"/>
+                                        </h5>
+                                    <label for="diameterInletO" string="خارج"/>
+                                        <label for="diameterInletO" />
+                                        <h5>
+                                            <field name="diameterInletO" class="oe_inline" nolabel="1" style="width: 100%"/>  
+                                        </h5>  
+                                        <label for="diameterOutletO" />
+                                        <h5>
+                                            <field name="diameterOutletO" class="oe_inline" nolabel="1" style="width: 100%"/>  
+                                        </h5>  
+                                    </div>
+                                    
+                                <!-- Condition -->
+                                
+                                <label for="newC" string="الشرط"/>
+                                    <div class="o_row">
+                                        <label for="newC" string=""/>
+                                        <span class="oe_inline">
+                                   
+                                        </span>
+                                            <field name="newC" class="oe_inline" nolabel="1"  placeholder="جديد" style="width: 100%"/>
+                                        <span class="oe_inline">
+                                 
+                                        </span>
+                                            <field name="usedC" class="oe_inline" nolabel="1" placeholder="مستخدم" style="width: 100%"/>
+
+                                        <span class="oe_inline">
+                                 
+                                        </span>
+                                            <field name="remanufacturedC" class="oe_inline" nolabel="1" placeholder="اعادة التصنيع" style="width: 100%"/>    
+                                    </div>
+                                </div>
+                            </group>
+                        </xpath>
+                    </xpath>
+            </field>
+    </record>
+</odoo> 

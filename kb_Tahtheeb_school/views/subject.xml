@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <!--Find the object to print on module-->
+    <record id="action_subject" model="ir.actions.act_window">
+        <field name="name">Subject Form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">subject</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Subject
+            </p>
+        </field>
+    </record>
+
+    <record id="view_subject_form" model="ir.ui.view">
+        <field name="name">subject.form</field>
+        <field name="model">subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <label for="subject_id" />
+                            <h4>
+                                <field name="subject_id" />
+                            </h4>
+                            <label for="name" />
+                            <h4>
+                                <field name="name" />
+                            </h4>
+                             <field name="code" />
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="">
+                            <field name="school_id" />
+                            <field name="elective_id"/>
+
+                        </group>
+                        <group string="">
+                            <field name="Hours" />
+                            <field name="max_mark" />
+                            <field name="min_mark" />
+                        </group>
+                    </group>
+                    <notebook>
+                         <page string="Grade">
+                             <field name="grade_id" nolabel="1" colspan="4" options="{'no_create':0}" >
+                                 <tree editable="bottom">
+                                    <field name="grade_id"/>
+                                    <field name="name"/>
+                                </tree>
+                                 <form string="grade">
+                                    <group col="4" colspan="4">
+                                         <field name="grade_id" />
+                                        <field name="name" />
+                                    </group>
+                                </form>
+                             </field>
+                         </page>
+                        <page string="Teachers">
+                            <field name="teacher_ids" nolabel="1" colspan="4" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+
+                </div>
+            </form>
+        </field>
+
+    </record>
+
+
+
+    <record id="view_subject_tree" model="ir.ui.view">
+        <field name="name">subject.tree</field>
+        <field name="model">subject</field>
+        <field name="arch" type="xml">
+            <tree string="Students">
+                <field name="subject_id" />
+                 <field name="name" placeholder="Name" />
+                 <field name="code" placeholder="Code" />
+                  <field name="max_mark" placeholder="Maximum Marks" />
+                <field name="min_mark" placeholder="Minimum Marks" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+     <!-- Form View Of Elective Subject Group -->
+     <record id="action_elective_subject_form" model="ir.actions.act_window">
+        <field name="name">Elective Subject(s)</field>
+        <field name="res_model">elective_subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_elective_group_form" model="ir.ui.view">
+        <field name="name">elective.subject.form</field>
+        <field name="model">elective_subject</field>
+        <field name="arch" type="xml">
+            <form string="Elective Subjects">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field name="name" colspan="4" required="1" />
+                        <field name="grade_id" string="Grade" colspan="4" required="1" />
+                    </group>
+
+                    <separator String="Subjects" col="4" colspan="4" />
+                    <notebook>
+                        <page name="subject" string="Subjects">
+                            <field name="subject_ids" nolabel="1" colspan="4">
+                                <form>
+                                    <group col="4" colspan="4">
+                                        <field name="name" placeholder="Name" />
+                                        <field name="code" placeholder="Code" />
+                                        <field name="max_mark" placeholder="Maximum Marks" />
+                                        <field name="min_mark" placeholder="Minimum Marks" />
+                                        <field name="elective_id" string="Elective Subject" invisible="1" />
+                                    </group>
+                                    <notebook colspan="4">
+                                        <page string="Grade">
+                                            <field name="grade_id" nolabel="1" colspan="4"
+                                                options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}">
+                                                <tree string="Grade">
+                                                    <field name="name" />
+                                                    <field name="code" />
+                                                </tree>
+                                                <form string="Grade">
+                                                    <group col="4" colspan="4">
+                                                        <field name="name" placeholder="Name" />
+                                                        <field name="code" placeholder="Code" />
+                                                    </group>
+                                                </form>
+                                            </field>
+                                        </page>
+                                        <page string="Teachers">
+                                            <field name="teacher_ids" nolabel="1" colspan="4" />
+                                        </page>
+                                    </notebook>
+                                </form>
+                            </field>
+                        </page>
+                        <page name="elective" string="Elective Subjects">
+                            <field name="elective_subject_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_subject_subject_form" name="Subjects" parent="configuration_menu" sequence="10" groups="kb_Tahtheeb_school.group_school_administration" />
+    <menuitem id="subject_submenu" name="Subject" parent="menu_subject_subject_form" action="action_subject" groups="kb_Tahtheeb_school.group_school_administration"/>
+    <menuitem id="menu_subject_elective_form" name="Elective Subject(s)" parent="menu_subject_subject_form" action="action_elective_subject_form"  groups="kb_Tahtheeb_school.group_school_administration"/>
+
+
+    
+
+
+</odoo>

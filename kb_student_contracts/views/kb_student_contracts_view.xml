@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_kb_student_contracts" model="ir.actions.act_window">
+        <field name="name">Student Contact</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.student.contracts</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <record id="kb_student_contracts_form" model="ir.ui.view">
+        <field name="name">kb.student.contracts.form.view</field>
+        <field name="model">kb.student.contracts</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="print_student_contracts" string="Print Contract PDF"  type="object" icon="fa-arrow-down"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="">
+                            <field name="kb_StudentName"/>
+                            <field name="kb_yearInfo"/>
+                            <field name="kb_startDate"/>
+                            <field name="kb_ednDate"/>
+                            <field name="kb_grade"/>
+                            <field name="kb_createdBy"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <record id="kb_student_contracts_tree" model="ir.ui.view">
+        <field name="name">kb.student.contracts.tree</field>
+        <field name="model">kb.student.contracts</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kb_StudentName"/>
+                <field name="kb_yearInfo"/>
+                <field name="kb_startDate"/>
+                <field name="kb_ednDate"/>
+                <field name="kb_grade"/>
+                <field name="kb_createdBy"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

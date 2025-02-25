@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--  Ticket Report	 -->
+    <template id="report_ticket_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <br />
+                        <br />
+                        <table style="width: 100%;">
+                            <tbody>
+                                <t t-set="count" t-value="1" />
+                                <t t-foreach="o.order_line" t-as="line_data">
+                                    <t t-if="count==1">
+                                        <tr>
+                                            <td colspan="2" style="border: 1px solid black; padding: 5px;">
+                                                Ticket No. :&amp;nbsp;&amp;nbsp;&amp;nbsp;<b><span t-field="o.name" /></b>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; width: 50%;"><center>Departure</center></td>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; width: 50%;"><center>Arrival</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; font-size: 22px;">
+                                                <b>
+                                                    <center><span t-field="line_data.bording_from.name" /></center>
+                                                </b>
+                                            </td>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; font-size: 22px;">
+                                                <b>
+                                                    <center><span t-field="line_data.to.name" /></center>
+                                                </b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; font-size: 18px;">
+                                                <b>
+                                                    <center><span t-field="line_data.departure_time" /></center>
+                                                </b>
+                                            </td>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; padding: 5px; font-size: 18px;">
+                                                <b>
+                                                    <center><span t-field="line_data.arrival_time" /></center>
+                                                </b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 5px; font-size: 14px;">
+                                                <b>
+                                                    <center><span t-field="o.date_travel" t-options='{"format": "EE, dd MMM yyyy"}' /></center>
+                                                </b>
+                                            </td>
+                                            <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding: 5px; font-size: 14px;">
+                                                <b>
+                                                    <center><span t-field="o.date_travel" t-options='{"format": "EE, dd MMM yyyy"}' /></center>
+                                                </b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="border: 1px solid black; padding: 5px;"><b>Boarding Point :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b><span t-field="line_data.boarding_point.name" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="border: 1px solid black; padding: 5px;"><b>Dropping Point :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b><span t-field="line_data.dropping_point.name" /></td>
+                                        </tr>
+                                        <t t-set="count" t-value="0" />
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br />
+                        <span><b>Traveller Details</b></span><br />
+                        <br />
+                        <table t-if="o.order_line" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="border-left: 1px solid black; border-bottom: 1px solid black; border-top: 1px solid black; padding: 5px;"><b>Name</b></td>
+                                    <td style="border-bottom: 1px solid black; border-top: 1px solid black; padding: 5px;"><b>Gender</b></td>
+                                    <td style="border-bottom: 1px solid black; border-top: 1px solid black; padding: 5px;"><b>Age</b></td>
+                                    <td style="border-right: 1px solid black; border-bottom: 1px solid black; border-top: 1px solid black; padding: 5px;"><b>Seat No.</b></td>
+                                </tr>
+                                <t t-foreach="o.order_line" t-as="line">
+                                    <tr>
+                                        <td style="border-left: 1px solid black; border-bottom: 1px solid black; padding: 5px;"><span t-field="line.p_name" /></td>
+                                        <td style="border-bottom: 1px solid black; padding: 5px;"><span t-field="line.p_gender" /></td>
+                                        <td style="border-bottom: 1px solid black; padding: 5px;"><span t-field="line.p_age" /></td>
+                                        <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding: 5px;"><span t-field="line.seat" /></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br />
+                        <span><b>Fair Payment Details</b></span><br />
+                        <br />
+                        <table t-if="o.order_line" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;"><b>Total Fair :&amp;nbsp;&amp;nbsp;&amp;nbsp;</b><span t-field="o.amount_total" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <t t-if="o.note">
+                            <span><b>Other Details</b></span><br />
+                            <br />
+                            <table t-if="o.order_line" style="width: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <td style="border: 1px solid black; padding: 5px;"><span t-field="o.note" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="ticket_report" model="ir.actions.report">
+        <field name="name">Ticket Report</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_bus_backend.report_ticket_template</field>
+        <field name="report_file">sh_bus_backend.report_ticket_template</field>
+        <field name="binding_model_id" ref="sale.model_sale_order" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

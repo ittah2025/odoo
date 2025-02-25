@@ -1,0 +1,2126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+   
+
+    <record id="paperformat_tabned_report" model="report.paperformat">
+        <field name="name">Customer Order Report</field>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+    </record>
+    <record id="report" model="ir.actions.report">
+        <field name="name">Customer Order</field>
+        <field name="model">orders</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_car_workshop_s.print_contract_report</field>
+        <field name="report_file">kb_car_workshop_s.contract_report</field>
+        <field name="print_report_name">123123</field>
+        <field name="binding_model_id" ref="model_orders" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_tabned_report" />
+    </record>
+
+
+
+    <template id="print_contract_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300" rel="stylesheet" />
+                    <div class="page" style="font-family: 'Tajawal', sans-serif; page-break-after: always;">
+
+                        <div  style="text-align: center; ">
+                            <span style="font-size: 20px">
+                            Order </span>
+                           
+                        <div>
+
+                         <table style="width:100%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Operating Code Number
+                            </th>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Created by
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Model
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Odometer (Km)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.vehicleOperatingCodeNumber" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.user_id" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.carModel" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.CarMilage" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Plate Number (Arabic)
+                            </th>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Serial Number
+                            </th>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Model Year
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.plateNumberAR_order" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.searialNumbers_order" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.modelYear_order" />
+                            </td>
+                        </tr>
+                    </table>
+<!--                        <table style="width:100%;">-->
+<!--                            <tr>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Date:</b><span-->
+<!--                                        t-field="doc.date_1" /></th>-->
+
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Employee:</b><span-->
+<!--                                        t-field="doc.techName" /></th>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Time In:</b><span-->
+<!--                                        t-field="doc.timeIn" /></th>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Time Out:</b><span-->
+<!--                                        t-field="doc.timeOut" /></th>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Fuel Level:</b><span-->
+<!--                                        t-field="doc.fuelLevel" /></th>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Fuel Type:</b><span-->
+<!--                                        t-field="doc.fuelType" /></th>-->
+
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Odometer-->
+<!--                                        In:</b><span t-field="doc.odometerIN" /></th>-->
+<!--                                -->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Odometer-->
+<!--                                        Out:</b><span t-field="doc.odometerOut" /></th>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Model:</b><span-->
+<!--                                        t-field="doc.carModel" /></th>-->
+<!--                                <th style="text-align:left; border:1px solid black;padding:2px;"><b>Odometer:</b><span-->
+<!--                                        t-field="doc.CarMilage" /></th>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+                        <br />
+                        <table style="width:100%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Customer Complaints:
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.customerComm" />
+                            </td>
+                        </tr>
+                        </table>
+                        <br />
+
+
+                        <div style="text-align: right; direction: rtl;">
+                            <h3 style="text-align:center;">Products</h3>
+                        </div>
+                        <table style="width:100%;">
+                            <thead>
+                                <tr>
+
+                                    <th style="border:1px solid black;">
+                                        Product Barcode
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        product Id
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Product Qty
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        product_price
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.order_line_ids" t-as="line">
+                                    <tr>
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.product_barcode" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.product_id" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.product_qty" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.product_price" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--checklist page 2-->
+                    <br />
+                    <div>
+
+                        <h3 style="text-align: center;">
+                            Vehicle Checklist </h3>
+                        <table style="width:100%;">
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Date:</b><span
+                                    t-field="doc.date_1" /></th>
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Branch:</b><span
+                                    t-field="doc.branch_1" /></th>
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Inspected
+                                    By:</b><span t-field="doc.inpBy_1" /></th>
+<!--                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Driver-->
+<!--                                    name:</b><span t-field="doc.driverName" /></th>-->
+<!--                            <th style="text-align:left; border:1px solid black;padding:0px; font-size: 12px;">-->
+<!--                                <b>Odometer:</b><span t-field="doc.CarMilage" /></th>-->
+                        </table>
+                        <br />
+                        <table style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        No
+                                    </th>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        Item To Be Checked
+                                    </th>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        Good
+                                    </th>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        Repair
+                                    </th>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        Change
+                                    </th>
+                                    <th style="border:1px solid black; font-size: 12px;">
+                                        Remarks
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!--1-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center; font-size: 13px;">1</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Front Windshield
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center; font-size: 13px;">
+                                        <t t-if="doc.fw_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.fw_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.fw_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black; font-size: 13px;"><span
+                                            t-field="doc.fw_remark" />
+                                    </td>
+                                </tr>
+                                <!--2-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center; font-size: 13px;">2</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Side Glass R/L
+                                    </th>
+                                    <td style="border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.SGR_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.SGR_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.SGR_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black; font-size: 13px;"><span
+                                            t-field="doc.SGR_remark" />
+                                    </td>
+                                </tr>
+                                <!--3-->
+                                <tr>
+                                    <th
+                                        style="border:1px solid black; text-align:center;text-align:center; font-size: 13px;">
+                                        3</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Side Mirror R/L
+                                    </th>
+                                    <td style="border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RLM_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RLM_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RLM_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black; font-size: 13px;"><span
+                                            t-field="doc.RLM_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--4-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center; font-size: 13px;">4</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Rear Glass</th>
+                                    <td style="border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RG_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RG_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.RG_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black; font-size: 13px;"><span
+                                            t-field="doc.RG_remark" />
+                                    </td>
+                                </tr>
+                                <!--5-->
+
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center; font-size: 13px;">5</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Passenger Chairs
+                                    </th>
+                                    <td style="border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PC_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PC_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center; font-size: 13px;">
+                                        <t t-if="doc.PC_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.PC_remark" />
+                                    </td>
+                                </tr>
+
+
+
+                                <!--6-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">6</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Passenger Chair
+                                        Seat Belts</th>
+                                    <td style="border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PCSB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PCSB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PCSB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.PCSB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--7-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">7</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Passsenger Door
+                                        Working</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PDW_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PDW_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.DSG_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.DSG_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--8-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">8</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Driver Side Glass
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PDW_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;font-size: 13px; text-align:center;">
+                                        <t t-if="doc.PDW_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; font-size: 13px; text-align:center;">
+                                        <t t-if="doc.PDW_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black; font-size: 13px;"><span
+                                            t-field="doc.PDW_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--9-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center; font-size: 13px;">9</th>
+                                    <th style="border:1px solid black; padding:0px; font-size: 13px;">Bus Baggage Handle
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center; font-size: 13px;">
+                                        <t t-if="doc.BBH_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BBH_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BBH_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.BBH_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--10-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">10</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Front Bumper</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.FB_remark" />
+                                    </td>
+                                </tr>
+                                <!--11-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">11</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Rear Bumper</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.RB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--12-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">12</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Right Side Body
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RSB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RSB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RSB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.RSB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--13-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">13</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Left Side Body</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.LSB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.LSB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.LSB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.LSB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--14-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">14</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Back Side Body</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.BSB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--15-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">15</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Front Head Lights
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FHL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FHL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FHL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.FHL_remark" />
+                                    </td>
+                                </tr>
+                                <!--16-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center; font-size: 13px;">16</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Indicators R/L</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IDRL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IDRL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IDRL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.IDRL_remark" />
+                                    </td>
+                                </tr>
+                                <!--17-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">17</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Brake Lights</th>
+                                    <td style="border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.BL_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--18-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">18</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Back Signal Lights
+                                    </th>
+                                    <td style="border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BSL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.BSL_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--19-->
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;font-size: 13px;">19</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Horn</th>
+                                    <td style="border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Horn_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Horn_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black;text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Horn_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.Horn_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--20-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">20</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Reverse Alarm</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RA_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RA_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RA_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.RA_remark" />
+                                    </td>
+                                </tr>
+                                <!--21-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">21</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Reverse Lights</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.RL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.RL_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--22-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">22</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">SpeedoMeter</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.SM_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.SM_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.SM_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.SM_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--23-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">23</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Air Conditioner
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AC_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AC_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AC_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.AC_remark" />
+                                    </td>
+                                </tr>
+                                <!--24-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">24</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">A/C Filter Clean
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACF_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACF_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACF_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.ACF_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--25-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">25</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Inside Vehicle
+                                        Lights</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IVL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IVL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.IVL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.IVL_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--26-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">26</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Wiper Blades +
+                                        Wipre Water</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WBWW_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WBWW_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WBWW_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.WBWW_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--27-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">27</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">A/C Belt</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.ACB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;font-size: 13px;">
+                                        <span t-field="doc.ACB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--28-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">28</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">All Engine Belts
+                                        Condition</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.EABC_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.EABC_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.EABC_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.EABC_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--29-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">29</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Refrigerator</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Refr_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Refr_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Refr_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.Refr_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--30-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">30</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Brakes Front/Back
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BFB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BFB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.BFB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.BFB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--31-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">31</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Hand Break</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.HandB_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.HandB_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.HandB_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.HandB_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--32-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">32</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Engine Oil</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Oil_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Oil_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Oil_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.Oil_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--33-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">33</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Oil Filter</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.OilF_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.OilF_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.OilF_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.OilF_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--34-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">34</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Water Level</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WL_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WL_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.WL_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.WL_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--35-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">35</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Power Steering</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PS_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PS_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.PS_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.PS_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--36-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">36</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Transmission</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Gear_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Gear_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.Gear_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.Gear_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--37-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">37</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Transmission Oil
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.GearOil_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.GearOil_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.GearOil_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.GearOil_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--38-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">38</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Fuel Filter</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FF_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FF_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.FF_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.FF_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--39-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">39</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Air Filter</th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AF_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AF_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.AF_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.AF_remark" />
+                                    </td>
+                                </tr>
+
+                                <!--40-->
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">40</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Tires Condition
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.TC_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.TC_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.TC_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.TC_remark" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">41</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Fire Extinguisher
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.fireExt_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.fireExt_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.fireExt_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.fireExt_remark" />
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">42</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Fist Aid Kit
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.firstAid_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.firstAid_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.firstAid_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.firstAid_remark" />
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th style="border:1px solid black; text-align:center;font-size: 13px;">43</th>
+                                    <th style="border:1px solid black; padding:0px;font-size: 13px;">Overall Cleanliness
+                                    </th>
+                                    <td style="border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.overallClean_itemGood">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.overallClean_itemrepair">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+                                    </td>
+                                    <td
+                                        style="text-align:left;border:1px solid black; text-align:center;font-size: 13px;">
+                                        <t t-if="doc.overallClean_change">
+                                            <i class="fa fa-check" />
+                                        </t>
+                                        <t t-else="">
+
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:left;border:1px solid black;font-size: 13px;"><span
+                                            t-field="doc.overallClean_remark" />
+                                    </td>
+                                </tr>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <br />
+
+                        <table style="width:100%; border: none;">
+
+
+                            <th>
+                                Driver Signature
+                            </th>
+                            <th>
+                                Supervisor Signature
+                            </th>
+                        </table>
+                    </div>
+
+                    <br />
+
+                    <!--checklist page 3-->
+                     <table style="width:50%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Battery
+                            </th>
+                        </tr>
+                    </table>
+                    <table style="width:100%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Battery
+                            </th>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Company Name
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Battery Serial Number
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Amps
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Battery Voltage
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Install Date
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Expiration Date
+                            </th>
+                             <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Battery Warranty
+                            </th>
+                        </tr>
+                        <tr>
+                            <t t-foreach="doc.battery_table_ids" t-as="line">
+                                    <tr>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batteryItem" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.company_name" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batterySerialNumber" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batteryAmps" />
+                                        </td>
+                                         <td style="border:1px solid black;">
+                                            <span t-field="line.batteryvolts" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batteryinstallDate" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batterychangeDate" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.batteryWarranty" />
+                                        </td>
+                                    </tr>
+                                </t>
+                        </tr>
+                    </table>
+                    <br />
+
+
+                  <table style="width:50%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Tire Inspection
+                            </th>
+                        </tr>
+                    </table>
+                    <table style="width:100%;">
+                        <tr>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Tire Condition
+                            </th>
+                            <th style="border:1px solid black; background-color:#D3D3D3;text-align:center">
+                                Spare Tire
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Side
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Tire Tread Depth
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Tire Serial Number
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Install Date
+                            </th>
+                            <th style="border:1px solid black;background-color:#D3D3D3;text-align:center">
+                                Install Km
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.tireCondition" />
+                            </td>
+                            <td style="border:1px solid black;background-color:#F5F5F5;text-align:center">
+                                <span t-field="doc.spareTire" />
+                            </td>
+                            <t t-foreach="doc.tire_table_ids" t-as="line">
+                                    <tr>
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.tireItem" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.tireMeasure" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.tireSerialNumber" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.tireInstallDate" />
+                                        </td>
+                                         <td style="border:1px solid black;">
+                                            <span t-field="line.tireKm" />
+                                        </td>
+                                    </tr>
+                                </t>
+                        </tr>
+                    </table>
+
+                    <br />
+
+                    
+
+
+                    <div style="page-break-before: always">
+                        <br />
+
+                        <h3 style="text-align: center;">
+                            Order Summary Information </h3>
+
+                        <table style="width:100%;">
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Date:</b><span
+                                    t-field="doc.date_1" /></th>
+
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Driver
+                                    name:</b><span t-field="doc.driverName" /></th>
+
+                            <th style="text-align:left; border:1px solid black;padding:0px; font-size: 12px;">
+                                <b>Odometer:</b><span t-field="doc.CarMilage" /></th>
+
+                            <!-- <th style="text-align:left; border:1px solid black;padding:0px; font-size: 12px;">
+                                <b>Plate:</b><span t-field="doc.carPlate" /></th> -->
+
+                            <th style="text-align:left; border:1px solid black;padding:0px; font-size: 12px;"><b>Time
+                                    In:</b><span t-field="doc.timeIn" /></th>
+
+                            <th style="text-align:left; border:1px solid black;padding:0px; font-size: 12px;"><b>Time
+                                    Out:</b><span t-field="doc.timeOut" /></th>
+
+                        </table>
+
+
+                        <br />
+
+
+                        <table style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th style="border:1px solid black;">
+                                        Service Type
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Remarks
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Technicians
+                                    </th>
+
+                                    <th style="border:1px solid black;">
+                                        Work Start Time
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Work End Time
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Total Time
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Status
+                                    </th>
+                                    <th style="border:1px solid black;">
+                                        Completed By
+                                    </th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <t t-foreach="doc.order_summary_id" t-as="line">
+                                    <tr>
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.ServiceType" />
+                                        </td>
+
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.orederRem" />
+                                        </td>
+
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.techPer" />
+                                        </td>
+
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.techTimein" />
+                                        </td>
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.techTimeout" />
+                                        </td>
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.total_days" />
+                                        </td>
+
+                                        <td style="border:1px solid black;">
+                                            <span t-field="line.statOr" />
+                                        </td>
+                                         <td style="border:1px solid black;">
+                                            <span t-field="line.employeeComplete" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br />
+
+<!--                        <table style="width:100%;">-->
+<!--                            <thead>-->
+<!--                                <tr>-->
+<!--                                    <th style="border:1px solid black;">-->
+<!--                                        Maintenance Item-->
+<!--                                    </th>-->
+<!--                                    <th style="border:1px solid black;">-->
+<!--                                        Installation Date-->
+<!--                                    </th>-->
+<!--                                    <th style="border:1px solid black;">-->
+<!--                                        Change Date-->
+<!--                                    </th>-->
+<!--                                    <th style="border:1px solid black;">-->
+<!--                                         Total Time-->
+<!--                                    </th>-->
+<!--                                    <th style="border:1px solid black;">-->
+<!--                                        Description-->
+<!--                                    </th>-->
+<!--                                </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                                <t t-foreach="doc.order_summary_id" t-as="line">-->
+<!--                                    <tr>-->
+
+<!--                                        <td style="border:1px solid black;">-->
+<!--                                            <span t-field="line.maintenanceItem" />-->
+<!--                                        </td>-->
+<!--                                        <td style="border:1px solid black;">-->
+<!--                                            <span t-field="line.installDate" />-->
+<!--                                        </td>-->
+<!--                                        <td style="border:1px solid black;">-->
+<!--                                            <span t-field="line.changeDate" />-->
+<!--                                        </td>-->
+<!--                                        <td style="border:1px solid black;">-->
+<!--                                            <span t-field="line.total_days_count" />-->
+<!--                                        </td>-->
+
+<!--                                        <td style="border:1px solid black;">-->
+<!--                                            <span t-field="line.maintDescrription" />-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+<!--                                </t>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<br />
+                        <table style="width:100%;">
+                            <th style="text-align:left; border:1px solid black; font-size: 12px;"><b>Reason for
+                                    Cancel</b><span t-field="doc.cancelReason" /></th>
+
+                        </table>
+                        <br />
+                        <table style="width:100%; border: none;">
+
+
+                            <th>
+                                 Signature
+                            </th>
+
+                        </table>
+
+                    </div>
+
+                    <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                        <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                            Page: <span class="page" /> / <span class="topage" />
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+
+
+
+
+    </template>
+
+</odoo>

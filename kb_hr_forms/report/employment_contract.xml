@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="emplyment_contract" model="ir.actions.report">
+        <field name="name">Emplyment Contract</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.print_emplyment_contract</field>
+        <field name="report_file">kb_hr_forms.print_emplyment_contract</field>
+        <field name="print_report_name">'Emplyment Contract - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="print_emplyment_contract">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <t t-foreach="docs" t-as="o">
+                        <table
+                            style="border: 4px solid black;border-collapse: collapse; width: 98%; margin-left: auto; margin-right: auto; ">
+                            <tr>
+                                <th colspan="2" style="  text-align: center; padding: 8px;">
+                                    <h3>EMPLOYMENT CONTRACT</h3>
+                                </th>
+                                <th colspan="2" style="direction: rtl;   text-align: center; padding: 8px;">
+                                    <h3>عـــقـــــد عـــــمــــــــل</h3>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px; width:40%;">
+                                    Employee Name:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;width:20%;">
+                                    <t t-esc="o.employee_id.name" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;width:40%;">
+                                    اسم الموظف :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Bathaka/Iqama Number:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.identification_id" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    رقم الهوية /الاقامة :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Passport Number:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.passport_id" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    رقم الجواز :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Permanent Address:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.address_home_id.name" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    العنوان الدائم :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Nationality:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.country_id.name" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    الجنسية :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Job Title:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.job_title" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    مسمى الوظيفة :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Point of Hire:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <!-- <t t-esc="o.employee_id." /> -->
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    مكان التعاقد :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Job Location :
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.work_location_id.id" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    موقع العمل :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Date of Birth
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.birthday" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    تاريخ الميلاد:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Contract Start Date:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.date_start" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    تاريخ بداية التعاقد:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Contract Period :
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <!-- <t t-esc="o.date_start" /> - <t t-esc="o.date_end" />
+                                    <br/> -->
+                                    <!-- <t t-esc="o.date_start"/> - <t-esc="o.date_start"/> -->
+                                    <t t-esc="o.date_start"/>
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    مدة التعاقد :
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Basic Salary (SAR):
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.wage" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    الراتب الأساسي/ ريال سعودي:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Housing Allowance:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.hra" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    بدل السكن:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Transport Allowance:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.travel_allowance" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    بدل النقل:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Other Allowance:
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.other_allowance" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    بدلات اخرى:
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"
+                                    style="border: #000000 1px solid;  text-align: left; padding: 8px; color:red;">
+                                    Note:-
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;color:red;">
+                                    ملاحظة :-
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    • The Preliminary Item above Mentioned, should be Considered as an Integral part of
+                                    This Agreement.
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    • المقدمة السالفة تعتبر جزء مكمل للعقد .
+
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th style="border: #000000 1px solid;  text-align: left; padding: 8px;;">
+                                    Employee Badge Number:
+
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: center; padding: 8px;">
+                                    <t t-esc="o.employee_id.barcode" />
+                                </th>
+                                <th
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    الرقم الوظيفي:
+
+                                </th>
+                            </tr>
+                        </table>
+                        <div style="page-break-after: always;">
+
+                        </div>
+                        <table
+                            style="border: 4px solid black;border-collapse: collapse; width: 98%; margin-left: auto; margin-right: auto; ">
+                            <tr>
+                                <th colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    <h3> EMPLOYMENT CONDITIONS:</h3>
+                                </th>
+                                <th colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    <h3> شروط التوظيف :</h3>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    1. This contract is concluded between the above mentioned Employee (hereinafter
+                                    referred to as Employee)
+                                    and the company. (hereinafter referred as Employer), to specify the
+                                    Employment Conditions and
+                                    benefits agreed upon by both Parties.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    1. أبرم هذا العقد بين الموظف المذكور أعلاه، ويشار إليه فيما بعد بكلمة ( الموظف)، و
+                                    الشركة ، ويشار إليها بكلمة (الشركة) لتحديد شروط التوظيف والمزايا التي تم
+                                    الاتفاق عليها بين الطرفين.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    2. Employee acknowledges and certifies that: He is fully qualified and physically
+                                    fit to Perform the
+                                    duties of the job to which he is Assigned in a loyal and honest manner, and in
+                                    accordance with his
+                                    position description and the provisions of the Saudi Labor and workmen’s Law
+                                    (hereinafter referred to as
+                                    the Labor Law), and the work rules and regulations of the Employer. </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    2. يقر الموظف ويتعهد بأنه مؤهل علميًا ولائق بدنيًا لإنجاز المهام ومتطلبات العمل
+                                    الموكلة إليه على أكمل
+                                    وجه وبكل أمانة وإخلاص وفقًا لمواصفات وظيفته، وطبقًا لأحكام نظام العمل والعمال
+                                    السعودي، والمشار إليه فيما
+                                    بعد بـ ( نظام العمل) مع الالتزام بلوائح تنظيم العمل. </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    3. Employee shall train others, as assigned. Employee shall not engage in any other
+                                    employment,
+                                    occupation or service, whatsoever, or divulge confidential employer information to
+                                    unauthorized person
+                                    and he shall not breah any of valid Saudi customs and regulations. </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    3. على الموظف القيام بتدريب الآخرين حسب ما يكلف به، ويتعهد بأن لا يمارس أي عمل أو
+                                    حرفة أو أية خدمات من
+                                    أي نوع كان خلاف عمله مع (الشركة) خلال فترة هذا العقد، وأن لا يفشي المعلومات السرية
+                                    الخاصة بالشركة لأشخاص
+                                    غير مصرح لهم بمعرفتها، وألا يخل بأي من الأنظمة واللوائح والتقاليد المعمول بها
+                                    بالمملكة. </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    4. In accordance with the Labor Law and Ministerial Decision No. 16 of 18-01-1397H
+                                    (08 January 1977) of
+                                    the Ministry of Labor and Social Affairs, the normal work week for which Employee
+                                    will be paid consists
+                                    of six (6) days per week eight (8) hours per day, and one (1) paid day of rest as
+                                    scheduled by Employer.
+                                    For the purpose of determining over time compensation, the hourly rate of the
+                                    Employee compensation will
+                                    be determined by dividing the monthly base salary rate by 240 and such hourly rate
+                                    will be multiplied by
+                                    1.5.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    4. استنادًا إلى نظام العمل والقرار الوزاري رقم (16) بتاريخ 18/1/1397هـ الموافق
+                                    8/1/1977م الصادر عن وزارة
+                                    العمل والشئون الاجتماعية فإن أيام العمل الأسبوعية العادية مدفوعة الأجر للموظف تتكون
+                                    من (6) ستة ايام
+                                    مدفوعة الأجر لمدة (8) ثمان ساعات يوميًا. ويوم واحد للراحة مدفوع الأجر حسب ما تقر
+                                    الشركة وستكون ساعات
+                                    العمل الفعلية محددة، ولغرض تحديد أجر الساعات الاضافية ، فإن أجر الساعة الاضافية يتم
+                                    احتسابه بتقسيم
+                                    الراتب على (240) ثم بضرب الناتج في (1.5).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    5. All dates referred to herein be as per the Gregorian calendar.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    5. كافة التواريخ المشار إليها هنا هي بالتقويم الميلادي.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    6. During the Holy month of Ramadan, the workweek for non-Moslem employee will be
+                                    Forty-eight (48) hours
+                                    per week. However, Moslem employee normal workweek during Ramadan will be Thirty-six
+                                    (36) hour per week
+                                    as stipulated in the workmen’s and Labor Law.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    6. خلال شهر رمضان المبارك يكون أسبوع العمل لغير المسلمين (48) ثمان وأربعون ساعة في
+                                    الأسبوع، هذا وبالنسبة
+                                    للعمال المسلمين يكون أسبوع العمل (36) ست وثلاثون ساعة في الأسبوع حسب نظام العمل
+                                    والعمال.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    7. Employee acknowledges and accepts that he may be under the direct supervision of
+                                    personal designated
+                                    by the Employer.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    7. يقر الموظف ويوافق على أنه ربما يعمل تحت إشراف مباشر لموظفين قد تعينهم الشركة
+                                    وحسبما تقتضيه المصلحة.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    8. Employee shall be deemed subject to Ninety (90) days probationary period
+                                    effective from the Contract
+                                    start date mentioned above. Then Employer may decide the fitness of the employee for
+                                    the work. And
+                                    extend extra to ninety days (90) as rules in labor office.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    8. يخضع الموظف لفترة تجريبية مدتها (90) تسعون يومًا اعتبارًا من تاريخ العقد المذكور
+                                    أعلاه بعدها تقرر
+                                    الشركة مدى صلاحيته للعمل من عدمه. وتمدد الى تسعين (90) يوم آخرى حسب نظام العمل
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    9. Employer shall provide Employee with free transportation from home of record to
+                                    job location at the
+                                    commencement of the Contract and return him to home of record upon satisfactory
+                                    completion of this
+                                    contract if the employee is not residing in KSA.
+
+
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    9. تلتزم الشركة بتأمين نقل الموظف من مكان التعاقد إلى موقع عمله عند بداية العقد.
+                                    وتأمين عودته إن لم يكون
+                                    مقيمًا بالمملكة العربية السعودية إلى مكان التعاقد مجانًا عند إكمال الموظف مدة هذا
+                                    العقد بصورة مرضية.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    10. Employer shall provide Employee with full medical care as stipulated in the
+                                    Labor Law.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    10. تقوم الشركة بتأمين العناية الطبية الكاملة للموظف حسبما هو منصوص عليه في نظام
+                                    العمل والعمال.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    11. Employee shall be entitled to nine (9) working days paid holidays per year.
+                                    Holiday scheduling is to
+                                    be determined by Employer.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    11. يحصل الموظف على إجازة أعياد مدفوعة الأجر تبلغ (9) تسعة أيام عمل في السنة وتقوم
+                                    الشركة بتحديد موعد
+                                    هذه الإجازات.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    12.A: Employee shall be eligible for twenty one (21) calendar days leave after
+                                    completing each full year
+                                    of service.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    12. أ .يحصل الموظف على إجازة سنوية مدتها (21) واحد و عشرون يومًا بعد إتمام سنة كاملة
+                                    من الخدمة.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="border: #000000 1px solid;  text-align: left; padding: 8px; text-indent: 1em;">
+                                    B: After Employee completes Twenty-four (24) full months of service, Employer shall
+                                    provide Employee
+                                    with one (1) round trip ticket between job location and nearest airport to the home
+                                    of Record.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;text-indent: 1em;">
+                                    ب. بعد إتمام الموظف (24) أربعة و عشرون شهرًا من الخدمة تؤمن الشركة للموظف تذكرة
+                                    إركاب واحدة مرجعة من
+                                    موقع العمل حتى أقرب مطار لمكان التعاقد.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="border: #000000 1px solid;  text-align: left; padding: 8px; text-indent: 1em;">
+                                    C: Employer shall not provide such ticket at the end of the Contract period unless a
+                                    contract renewal is
+                                    agreed upon and executed between Employer and Employee. In case a contract renewal
+                                    is not desired by
+                                    either party, the provision of Paragraph (9) above shall be applied.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;text-indent: 1em;">
+                                    ج. لن تؤمن الشركة للموظف هذه التذكرة عند انتهاء مدة العقد مالم يتم الاتفاق على تجديد
+                                    عقد عمل الموظف بين
+                                    الشركة والموظف، وفي حالة عدم رغبة أي من الطرفين تجديد العقد يتم تطبيق نص الفقرة (9)
+                                    تسعة أعلاه.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    13. The employee will receive after completing the contract period his end of
+                                    service compensation as
+                                    stipulated in Labor Law.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    13. عند إكمال الموظف مدة العقد يحصل على مكافأة نهاية الخدمة كما هو منصوص عليها في
+                                    نظام العمل والعمال.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    14. Should either party desire to terminate this contract or not to renew it, there
+                                    shall be a written
+                                    notification to the other party before thirty (30) days from the date he wishes to
+                                    terminate the
+                                    contract or expiry of the contract.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    14. في حالة رغبة أي من الطرفين إنهاء هذا العقد، أو عدم تجديده، فعليه أن يقدم للطرف
+                                    الآخر إشعارًا خطيًا
+                                    بذلك قبل (30) ثلاثين يومًا من تاريخ رغبته في الإنهاء أو من تاريخ إنتهاء العقد. </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    15. The Labor Law will be referred to resolve any difference concerning the terms
+                                    contained in this
+                                    contract and other not specified in it.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    15. يرجع إلى نظام العمل والعمال في حالة نشوء أي خلاف بشأن أي من الشروط الواردة في
+                                    هذا العقد أو غيرها مما
+                                    لم يرد ذكره للفصل فيه. </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    16. The Employee agreed to abide in all cases with the security arrangements of the
+                                    Government of Saudi
+                                    Arabia relevant to this field of work and is obliged to keep this secrecy of all
+                                    confidential material.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    16. يوافق الموظف على أن يلتزم في جميع الأحوال بالترتيبات الأمنية لحكومة المملكة
+                                    العربية السعودية أو
+                                    الجهات التي ترتبط في مجاله عمله، ويلتزم بالمحافظة على سرية جميع المواد السرية.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    17. A: The Employee undertakes not to divulge any military or civilian information
+                                    related to
+                                    his work for any person outside the work. The Employee will be held responsible for
+                                    any consequences of
+                                    his action.
+
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    17. أ . يتعهد الموظف بعدم الإدلاء بأي معلومات
+                                    عسكرية أو مدنية تتعلق بعمل لأي شخص خارج عمله. وأنه سيكون مسئولا عن أي إشكال ناتج عن
+                                    تصرفاته.
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="border: #000000 1px solid;  text-align: left; padding: 8px;text-indent: 1em; ">
+                                    B:The Employee acknowledges that he has read and understood the text of the whole
+                                    contract and this
+                                    contract constitutes the only agreement and understanding between him and the
+                                    Employer concerning his
+                                    employment.
+                                    It supersedes and replaces all pervious undertakings, promises’ and agreements,
+                                    whether verbal or in
+                                    writing, between them concerning this employment.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;text-indent: 1em;">
+                                    ب. يقر الموظف بأنه قد قرأ وفهم نص هذا العقد بكامله بشكلٍ نافٍ للجهالة، وأنه يشكل
+                                    الاتفاق والمفهوم الوحيد
+                                    المبرم بينه وبين الشركة بشأن توظيفه، كما أنه يلغي ويحل محل كل التعهدات والوعود
+                                    والاتفاقيات السابقة سواء
+                                    كانت خطية أو شفوية بينهما بخصوص هذا التوظيف.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    18. This contract has been made in one original retained by Employer and one copy
+                                    given to Employee.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    18. تم إعداد هذا لعقد من أصل واحد واحتفظ به لدى الشركة وصورة واحدة أعطيت للموظف.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: #000000 1px solid;  text-align: left; padding: 8px; ">
+                                    19. In witness there of, Employee and Employer have executed this contract.
+                                </td>
+                                <td colspan="2"
+                                    style="direction: rtl; border: #000000 1px solid;  text-align: right; padding: 8px;">
+                                    19. وإشهادًا على ذلك تم توقيع العقد من قِبل الطرفين بقبول ما جاء في بنوده نصُا
+                                    وروحًا.
+                                </td>
+                            </tr>
+                            <br />
+                        </table>
+
+                    </t>
+                </div>
+                <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                    <table style="width:100%">
+                        <tr>
+                            <th colspan="2" style="  text-align: center; padding: 8px; ">
+                                <h3> Company : --------------------------------</h3>
+                            </th>
+                            <th colspan="2" style=" text-align: center; padding: 8px;">
+                                <h3> Employee: ---------------------- </h3>
+
+                            </th>
+                        </tr>
+                    </table>
+                    <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

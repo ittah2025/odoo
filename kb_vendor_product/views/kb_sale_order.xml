@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--created by Mujtaba-->
+    <record id="sale_order_line_form_vendor" model="ir.ui.view">
+        <field name="name">sale.order.line.inherited.form.vendor</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_template_id']" position="after">
+                     <field name="kb_vendor_ids" invisible="1" />
+                    <field name="kb_vendor_id" domain="[('kb_customer_id', '=', kb_vendor_ids), ('kb_product_ids.product_tmpl_id', '=', product_template_id)]" options='{"no_open": True, "no_create": True}'/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

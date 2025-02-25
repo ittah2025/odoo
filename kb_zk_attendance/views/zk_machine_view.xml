@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <record id="view_zk_report_daily_attendance_search" model="ir.ui.view">
+        <field name="name">zk.report.daily.attendance.search</field>
+        <field name="model">zk.report.daily.attendance</field>
+        <field name="arch" type="xml" >
+            <search string="Hr Attendance Search">
+                <filter icon="terp-stock_align_left_24" string="My Attendance" name="my_attendance" domain="[('name.user_id.id', '=', uid)]" />
+                <filter name="today" string="Today" domain="[('punching_time', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('punching_time', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
+                <filter string="Current Month" name="month" domain="[('punching_time', '&gt;=', datetime.datetime.now().strftime('%Y-%m-01'))]" />
+                <separator/>
+                <field name="name" string="Name"/>
+            </search>
+        </field>
+    </record> -->
+    <record id="action_kb_zk_attendance" model="ir.actions.act_window">
+        <field name="name">Biometric Device Log</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb_zk_attendance</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create A New Kb Zk Attendance
+            </p>
+        </field>
+    </record>
+
+
+    <record id="view_kb_zk_attendance_form" model="ir.ui.view">
+        <field name="name">kb_zk_attendance.form</field>
+        <field name="model">kb_zk_attendance</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                        <group>
+                        <group>
+                            <field name="kb_employee_id" />
+                            <field name="kb_punching_time_in" />
+                            <field name="kb_punching_time_out" />
+                            <field name="kb_worked_hours" widget="float_time"/>
+                            <field name="kb_punch_type_in" />
+                            <field name="kb_punch_type_out" />
+                            <field name="kb_attendance_type_in" />
+                            <field name="kb_attendance_type_out" />
+                            <field name="kb_moved_check" />
+                        </group>
+                        </group>
+                </sheet>
+                <!-- odoo chatter ( log )  -->
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div> -->
+            </form>
+        </field>
+    </record>
+
+
+    <record id="kb_zk_attendance_tree_view" model="ir.ui.view">
+        <field name="name">kb_zk_attendance.view.tree</field>
+        <field name="model">kb_zk_attendance</field>
+        <field name="arch" type="xml">
+            <tree string="Employee attendances" edit="1" editable="bottom">
+                <field name="kb_employee_id" />
+                <field name="kb_punching_time_in" />
+                <field name="kb_punching_time_out" />
+                <field name="kb_worked_hours" widget="float_time"/>
+                <field name="kb_moved_check" />
+                <field name="kb_punch_type_in" />
+                <field name="kb_punch_type_out" />
+                <field name="kb_attendance_type_in" />
+                <field name="kb_attendance_type_out" />
+            </tree>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_kb_zk_attendance"
+        name="Biometric Log"
+        sequence="30"
+        parent="hr_attendance.menu_hr_attendance_root"
+        action="action_kb_zk_attendance"
+        groups="hr_attendance.group_hr_attendance_user"/>
+</odoo>

@@ -1,0 +1,28 @@
+{
+    'name': 'Odoo Salla Integration',
+    'version': '16.0.0',
+    'category': 'Store',
+    'author': 'Knowledge Bonds',
+    'sequence': -100,
+    'summary': 'Salla Management System',
+    'description': """salla Management System""",
+    "depends": ["stock",
+        "sale",
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/dashboard_data.xml',
+        'views/store_customer.xml',
+        'views/store_product.xml',
+        # 'views/store_order.xml',
+        'views/store_dashboard.xml',
+        'views/store_product_category.xml',
+        'views/store_warehouse.xml',
+        'views/store_brand.xml',
+    ],
+    'demo': [],
+    'application': True,
+    'auto_install': False,
+    'License': 'LGPL-3',
+
+}

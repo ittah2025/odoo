@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_category_type_form_inh" model="ir.ui.view">
+            <field name="model">res.partner</field>
+            <field name="name">customer_category</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_name']/.." position="after">
+                    <group>
+                            <field name="kb_customer_category" style="width: 50%"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    <record id="partner_customer_category_search" model="ir.ui.view">
+        <field name="name">customer_category_group_by</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <search>
+
+                <field name="kb_customer_category"/>
+
+                <group expand="0" string="Group By">
+                    <filter string="Customer Category" name="kb_customer_category" context="{'group_by':'kb_customer_category: name'}" />
+               </group>
+            </search>
+        </field>
+    </record>
+
+
+
+    </data>
+</odoo>

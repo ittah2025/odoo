@@ -1,0 +1,1397 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_student_contracts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-30 11:08+0000\n"
+"PO-Revision-Date: 2024-05-30 14:20+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "\"عقد اتفاق\""
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__contracts_view_count
+msgid "# Contract"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "- إقرار تحمل المسئولية -"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "- سند لأمر -"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "- كفالة غرم وأداء -"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>أولا:</b> يعتبر التمهيد السابق جزء لا يتجزء من العقد ومتمما ومكملا له."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>الثالث عشر الإخطارات والتبليغات:</b>\n"
+"                                <br/>\n"
+"                               . تكون الإخطارات والخطابات بين طرفي العقد عن طريق التسليم باليد مقابل التوقيع بالاستلام أو الارسال بالبريد على العناوين الموضحة بمقدمة هذا العقد أو الارسال بالبريد الالكتروني أو الارسال برسائل نصية أو واتساب على أرقام الجوالات الموضحة أعلاه أو من خلال المنصة الالكترونية ويعتبر الإبلاغ بأي وسيلة مما سبق إبلاغا إبلاغا صحيحاً منتجا لآثاره القانونية، وفي حال تغيير أحد الطرفين لأي من بياناته فعليه تبليغ الطرف الآخر بذلك وإلا يعتبر متبلغا بما يرد إليه من إخطارات"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>الثاني عشر يحق للطرف الأول فسخ العقد مع الاحتفاظ بكامل حقوقه المالية المذكورة بالعقد في الحالات الآتية:</b>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>الحادي عشر خدمة الحافلات المدرسية:</b>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>الخامس عشر نسخ العقد:</b>\n"
+"                                <br/>\n"
+"                               . حرر هذا العقد من عدد (15) بندأ على عدد (8) صفحات واطلع الطرفان على مضمونه كما استلما نسخة منه للعمل بموجبها ويعتبر هذا العقد نافذ المفعول وملزما للطرفين اعتبارا من تاريخه\n"
+"                                <br/>\n"
+"                                والله الموفق"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>الرابع عشر الاختصاص:</b>\n"
+"                                <br/>\n"
+"                                .يخضع هذا العقد ويعمل به حسب ما يتوافق مع أنظمة المملكة العربية السعودية وفي حال الخلاف - لا قدر الله - تكون المحكمة العامة بالدمام هي المحكمة المختصة مكانيا\n"
+"                                <br/>\n"
+"                                .وإلا يعتبر متبلغا بما يرد إليه من إخطارات"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>المستجدون:</b> تدفع الرسوم الدراسية كاملة عن العام الدراسي مع انتهاء إجراءات التسجيل واستلام الملف وإلا فلا يعتبر الطالبية مسجلا ولا يحجز له مقعدا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>الملتحقون بالمدارس خلال العام الدراسي:</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>المنتظمون:</b> يلتزم الطرف الثاني بدفع رسوم العام الدراسي حسب الجدول التالي :-\n"
+"                                        <br/><br/>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>الموهوبون:</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>تاسعا الخصومات:</b>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>تمهيد:</b> لكون الطرف الأول شركة خدمات تعليمية ولديها مدارس أهلية وعالمية لجميع المراحل من (رياض الأطفال - الأبتدائية - المتوسطة - الثانوية), ولرغبة الطرف الثاني في التعاقد معها وتسجيل ابنه/ابنته الموضح بياناته أعلاه لديها, لذا فقد التقت إدارة الطرفان وهما بكامل الأهلية المعتبرة شرعا ونظاما واتفقا على مايلي:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>ثالثا مدة العقد:</b> تبدأ مدة هذا العقد من تاريخ قيد الطالبـ/ـة لدى الطرف الأول لمدة عام دراسي واحد ولا يتجدد تلقائيا الا بدفع رسوم العام الدراسي السابق واللاحق وتأكيد طلب الاستمرار الكترونيا, ولن يسمح للطالبـ/ـة بدخول المدرسة الا بعد دفع الرسوم الدراسية قبل بدء العام الدراسي, وبتوقيع الطرف الثاني على هذا العقد يعتبر إقرار منه بالعلم بهذا البند ولا يحق له الرجوع مستقبلا على الطرف الأول بحجة عدم العلم او التبليغ."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>ثامنا: آلية استرجاع الرسوم:</b>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>ثانيا القبول والتسجيل:</b> لقبول الطالبـ/ـة واكتمال التسجيل بالمدارس يجيب تطبيق الألتزامات التالية:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>خامسا: التزامات الطرف الثاني</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>رابعا: التزامات الطرف الاول</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>سابعا: آلية الرسوم الدراسية:</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<b>سادسا: الرسوم الدراسية</b>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"<b>عاشرا التأخر في سداد الرسوم:</b>\n"
+"                                <br/>\n"
+"                                في حال عدم التزام الطرف الثاني بسداد الرسوم الدراسية في المواعيد المحددة وطبقا لنظام القبول بالمدارس يحق للطرف الأول اتباع الإجراءات التالية لتحصيل الرسوم الدراسية المتأخرة:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>(الرسوم المعتمدة من وزارة التعليم)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>1"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>2"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>3"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>30%"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>4"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>40%"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>5"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>6"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب بببسبب السفر داخل أو خارج المملكة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب بعد الأسبوع الثالث من الفصل الدراسي الأول أو الثاني أو الثالث"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب خلال الأسبوع الأول من بداية الفصل الدراسي الأول أو الثاني أو الثالث"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب خلال الأسبوع الثاني أو الثالث من بداية الفصل الدراسي الأول أو الثاني أو الثالث"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب قبل بدء الدراسة(المستجد)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>إذا كان الانسحاب قبل بدء الدراسة(المنتظم)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الأول"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الابتدائية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>البيان"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الثالث الى السادس"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الثانوية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الثاني"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الثاني والثالث"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الرسوم الدراسية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الصفوف"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الفصل الدراسي"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الفصل الدراسي الأول"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الفصل الدراسي الثالث"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>الفصل الدراسي الثاني"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>القرار"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>القسم الدولي"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>المتوسطة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>تاريخ الاستحقاق"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>تعاد الرسوم المدفوعة للعام الدراسي القادم كاملة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>جميع الصفوف"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>حالات الانسحاب"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>رياض الأطفال"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>قبل بداية اختبارات الفصل الدراسي الأول بأسبوعين كحد أقصى"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>قبل بداية اختبارات الفصل الدراسي الثاني بأسبوعين كحد أقصى"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>قبل بداية العام الدراسي بشهر كحد أقصى"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>لا ترد أي مبالغ مسددة ويستحق عليه سداد رسوم الفصل الدراسي كاملا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>للطرف الأول النظر في إعادة جزء من الرسوم المدفوعة في حال الانسحاب بعد الأسبوع الثالث من بداية الفصل الدراسي بعد تقديم مايثبت ذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>م"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>نسبة الرسوم المستحقة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>يخصم 25% من رسوم الفصل الدراسي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>يخصم 50% من رسوم الفصل الدراسي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "<br/>يخصم 550 ريال رسوم خدمة الاختبارات والمقابلة الشخصية."
+msgstr ""
+
+#. module: kb_student_contracts
+#. odoo-python
+#: code:addons/kb_student_contracts/models/kb_inherit_student_profile.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                           Click to Create for New service\n"
+"                        </p>"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_yearInfo model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_yearID model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_yearID
+msgid "Academic Year"
+msgstr "السنة الدراسية"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_needaction model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_needaction model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_exception_decoration model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_exception_decoration model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_state model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_state model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_type_icon model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_type_icon model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_attachment_count model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_attachment_count model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_student__kb_relativeNationality
+msgid "Choose the Parent nationality"
+msgstr ""
+
+#. module: kb_student_contracts
+#. odoo-python
+#: code:addons/kb_student_contracts/models/kb_inherit_student_profile.py:0 model_terms:ir.ui.view,arch_db:kb_student_contracts.view_student_extend_form_view
+#, python-format
+msgid "Contracts"
+msgstr "العقود"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_createdBy
+msgid "Created By"
+msgstr "انشأ بواسطة"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__create_uid model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__create_uid model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__create_uid
+msgid "Created by"
+msgstr "انشأ بواسطة"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__create_date model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__create_date model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_custodyBond
+msgid "Custody bond NO."
+msgstr "رقم صك الحضانة "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_custodyBondDate
+msgid "Custody bond date"
+msgstr "تاريخ صك الحضانة "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__display_name model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__display_name model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_ednDate
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_primaryFirstGrade model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_secondaryFirstGrade model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_primaryFirstGrade_g model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_secondaryFirstGrade_g
+msgid "First Grade"
+msgstr "الصف اﻷول"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_follower_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_follower_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_partner_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_partner_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__activity_type_icon model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_type_icon model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_grade
+msgid "Grade"
+msgstr "الصف"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_guardianship
+msgid "Guardianship NO."
+msgstr "رقم صك الولاية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_guardianshipDate
+msgid "Guardianship date"
+msgstr "تاريخ صك الولاية"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__has_message model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__has_message model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_exception_icon model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_exception_icon model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__activity_exception_icon model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_exception_icon model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__message_needaction model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__message_needaction model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__message_has_error model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__message_has_sms_error model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_error model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_sms_error model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_error
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_boys_tuition_fees_form model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_girls_tuition_fees_form
+msgid "Intermediate"
+msgstr "المتوسطة "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_intermediateFees model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_intermediateFees_g
+msgid "Intermediate Fess"
+msgstr "رسوم المرحلة المتوسطة "
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_boys_tuition_fees_form model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_girls_tuition_fees_form
+msgid "International"
+msgstr "القسم الدولي "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_internationalFees model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_internationalFees_g
+msgid "International Section Fees"
+msgstr "رسوم القسم الدولي "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_is_follower model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_is_follower model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts____last_update model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys____last_update model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__write_uid model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__write_uid model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__write_date model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__write_date model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_legitimateAgency
+msgid "Legitimate agency NO."
+msgstr "رقم  الوكالة الشرعية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_legitimateAgencyDate
+msgid "Legitimate agency date"
+msgstr "تاريخ الوكالة الشرعية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_main_attachment_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_main_attachment_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_has_error model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_error model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__my_activity_date_deadline model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__my_activity_date_deadline model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_relativeName
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_relativeNationality
+msgid "Nationality"
+msgstr "الجنسية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_relativeNationalityID
+msgid "Nationality ID"
+msgstr "رقم الهوية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_calendar_event_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_calendar_event_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_date_deadline model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_date_deadline model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_summary model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_summary model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_type_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_type_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields.selection,name:kb_student_contracts.selection__student__kb_relativeNationality__nonsaudi
+msgid "Non"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_needaction_counter model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_needaction_counter model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_has_error_counter model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_error_counter model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__message_needaction_counter model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__message_needaction_counter model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__message_has_error_counter model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_error_counter model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_primaryOtherGrade model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_secondaryOtherGrade model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_primaryOtherGrade_g model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_secondaryOtherGrade_g
+msgid "Other Grade"
+msgstr "الثالث الى السادس"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_relativePhone
+msgid "Phone"
+msgstr "الجوال"
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_boys_tuition_fees_form model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_girls_tuition_fees_form
+msgid "Primary"
+msgstr "الابتدائية "
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_student_contracts_form
+msgid "Print Contract PDF"
+msgstr "طباعة العقد"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__kb_ednDate model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__kb_startDate model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__kb_yearInfo
+msgid "Related academic year"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_yearID model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_yearID
+msgid "Related academic year "
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_student__kb_relative model_terms:ir.ui.view,arch_db:kb_student_contracts.view_student_extend_form_view
+msgid "Relative"
+msgstr "القرابة "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__activity_user_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_user_id model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__message_has_sms_error model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__message_has_sms_error model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields.selection,name:kb_student_contracts.selection__student__kb_relativeNationality__saudi
+msgid "Saudi"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.ui.menu,name:kb_student_contracts.system_root
+msgid "School System"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__kb_primarySecondGrade model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__kb_primarySecondGrade_g
+msgid "Second Grade"
+msgstr "الصف الثاني "
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_boys_tuition_fees_form model_terms:ir.ui.view,arch_db:kb_student_contracts.kb_girls_tuition_fees_form
+msgid "Secondary"
+msgstr "الثانوية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__kb_grade
+msgid "Select Grade"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_startDate
+msgid "Start Date"
+msgstr "تاريخ البداية "
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__activity_state model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_state model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.actions.act_window,name:kb_student_contracts.action_kb_student_contracts
+msgid "Student Contact"
+msgstr "عقود الطالب"
+
+#. module: kb_student_contracts
+#: model:ir.model,name:kb_student_contracts.model_kb_student_contracts
+msgid "Student Contract"
+msgstr "عقود الطالب"
+
+#. module: kb_student_contracts
+#: model:ir.actions.report,name:kb_student_contracts.student_contracts_report_id
+msgid "Student Contracts Report"
+msgstr "تقرير عقود الطالب"
+
+#. module: kb_student_contracts
+#: model:ir.model,name:kb_student_contracts.model_student
+msgid "Student Information"
+msgstr "معلومات الطالب"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__kb_StudentName
+msgid "Student Name"
+msgstr "اسم الطالب "
+
+#. module: kb_student_contracts
+#: model:ir.actions.act_window,name:kb_student_contracts.action_kb_boys_tuition_fees
+msgid "Tuition Fees For Boys"
+msgstr "الرسوم الدراسية للبنين "
+
+#. module: kb_student_contracts
+#: model:ir.actions.act_window,name:kb_student_contracts.action_kb_girls_tuition_fees
+msgid "Tuition Fees For Girls "
+msgstr "الرسوم الدراسية للبنات"
+
+#. module: kb_student_contracts
+#: model:ir.ui.menu,name:kb_student_contracts.submenue_tuition_fees_for_boys
+msgid "Tuition fees for boys"
+msgstr "الرسوم الدراسية للبنين "
+
+#. module: kb_student_contracts
+#: model:ir.ui.menu,name:kb_student_contracts.submenu_tuition_management
+msgid "Tuition fees for girls"
+msgstr "الرسوم الدراسية للبنات"
+
+#. module: kb_student_contracts
+#: model:ir.ui.menu,name:kb_student_contracts.menu_tuition_fees_for_students
+msgid "Tuition fees for students"
+msgstr "الرسوم الدراسية للطلاب"
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__activity_exception_decoration model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__activity_exception_decoration model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,field_description:kb_student_contracts.field_kb_student_contracts__website_message_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_boys__website_message_ids model:ir.model.fields,field_description:kb_student_contracts.field_kb_tuition_fees_for_girls__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model.fields,help:kb_student_contracts.field_kb_student_contracts__website_message_ids model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_boys__website_message_ids model:ir.model.fields,help:kb_student_contracts.field_kb_tuition_fees_for_girls__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model,name:kb_student_contracts.model_academic_year
+msgid "academic year"
+msgstr "السنة الدراسية "
+
+#. module: kb_student_contracts
+#: model:ir.model,name:kb_student_contracts.model_kb_tuition_fees_for_boys
+msgid "kb.tuition.fees.for.boys"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model:ir.model,name:kb_student_contracts.model_kb_tuition_fees_for_girls
+msgid "kb.tuition.fees.for.girls"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "أسباب خاصة بالطرف الثاني تكون سبب في ضعف المستوى الأكاديمي وعدم قدرة  الطالبـ/ـة على التحصيل العلمي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "أقر انا/ _____________________________________ الجنسية / ____________ هوية رقم /______________________ في حال عدم صحة توقيع الطرف الثاني(ولي أمر) الطالبـ/ـة فإنني أتحمل المسؤولية كاملة عن العقد وكافة آثاره القانونية المترتبة عليه من التزامات ماليةوخلافه,وهذا إقرار مني بذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "أن يلتزم الطالبـ/ـة بمتابعة دروسه وواجباته الحضورية والالكترونية عبر منصة التعليم الالكتروني المعتمدة من الطرف الأول والقيام بما عليه من مهام."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "أولا: شركة التهذيب للخدمات التعليمية, سجل تجاري رقم (2062014760) ومقرها سيهات ويمثلها في التوقيع على هذا العقد"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "إبداء رغبته لمسئول النقل المدرسي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "إذا التحق الطالبـ/ـة بالمدارس خلال الفصل الدراسي الثالث (من بداية الفصل الدراسي وحتى نهايته) الطرف الثاني بسداد رسوم الفصل الدراسي الثالث."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "إذا التحق الطالبـ/ـة بالمدارس خلال الفصل الدراسي الثاني (من بداية الفصل الدراسي وحتى نهايته)يلتزم الطرف الثاني بسداد رسوم الفصل الدراسي الثاني."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "إذا التحق الطالبـ/ـة بالمدارس متأخراً عن بداية الفصل الدراسي الأول (خلال الفصل الدراسي وحتى نهايته) يلتزم الطرف الثاني بسداد رسوم العام الدراسي كاملا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "إنه في يوم"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "اتفق الطرفان على سداد الطرف الثاني للرسوم الدراسية طبقا لما هو منصوص عليه بالبند سابعا من هذا العقد(آلية تحصيل الرسوم الدراسية),وأن تكون هذه هي طريقة سداد الرسوم الدراسية طوال فترة دراسة الطالبـ/ـة بمدراس الطرف الأول , ويحق للطرف الأول اعتبار الطالبـ/ـة منسحبا وقبول طالبـ/ـة آخر مكانه في حال عدم التزام الطرف الثاني بالسداد."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "اجتياز الطالبـ/ـة لاختيار القبول التحريري والمقابلة الشخصية التي يحددها الطرف الأول."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "احضار كافة الأوراق الثبوتية المطلوبة لالتحاق الطالبـ/ـة ومقدرة وزارة التعليم وذلك في مدة أقصاها (5) أيام عمل من تاريخ اجتياز المقابلة الشخصية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "اسم الام"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "اسم ممثل ولي أمر الطالبـ/ـة:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الاسم/"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الاسم/شركة التهذيب للخدمات التعليمية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الالتحاق بجميع البرامج المقدمة من الطرف الأول والتي يرى الطرف الأول ضرورتها لتحسين أداء الطالبـ/ـة دراسيا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الالتزام بالزي المدرسي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الالتزام بتعليمات وأنظمة ولوائح وبرامج وزارة التعليم فيما يخدم اهداف العامة للتعليم."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الاهتمام بالجانب التربوي والتعليمي للطالبـ/ـة وتوفير مختصصين لتحقيق ذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "البريد الالكتروني"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التأكد من سلامة الطالبـ/ـة من أي مرض معدي او وبائي مع التأكيد على عدم حضور الطالبـ/ـة الحصص او الامتحانات أثناء مرضه/مرضها وعند التأكد من شفائه يرجى تقديم تقرير طبي يثبت ذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التزام الطالبـ/ـة بالنظافة الشخصية والمظهر العام."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التواصل مع إدارة الطرف الأول وحضور الاجتماعات واللقاءات ومنها مجالس(الاباء- الامهات) لمناقشة بعض الأمور الخاصة بالطالبـ/ـة بالمدارس وتقبل ودعم قرارات إدارة المدارس لتقديم أفضل خدمة تربوية وتعليمية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التواصل مع الطالبـ/ـة وولي الأمر في كل مايخص بناء شخصية الطالبـ/ـة بالصورة الصحيحة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التوقيع"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التوقيع على نموذج إقرار الالتزامات والواحبات الخاصة بالطلاب والمرفقة بهذا العقد ويعد ذلك إقرارا بالعلم به ولا يحق للطرف الثاني الرجوع مستقبلا على الطرف الأول بحجة عدم العلم او التبليغ."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "التوقيع/"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الجنس"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الجنسية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الحرمان من التخفيض المعتمد للرسوم الدراسية من قبل الطرف الأول وتطبيق عليه الرسوم المعتمدة من وزارة التعليم كما هو موضح بالجدول أعلاه بالبند سادسا فقره (1)."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الرسوم المحددة أعلاه لا تنطبق على الطلاب الطالبات المقبولين المقبولات من خلال برنامج الشركة لاستقطاب طلبة طالبات موهبة وتحدد الرسوم بناءً على الخصم المعتمد من قبل الطرف الأول."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الرسوم المحددة أعلاه لا تنطبق على الطلاب الطالبات المقبولين المقبولات من خلال برنامج شراكة المدارس مع مؤسسة موهبة وتحدد الرسوم بناء على اتفاقية برنامج الشراكة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الصف"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الطرف الأول"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الطرف الأول غير مسئول عن أي سداد لا يُظهر اسم الطرف الثاني في حساباته ويلزم الطرف الثاني بتقديم ما يفيد السداد مستنديا.ً"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الطرف الأول هو الجهة الوحيدة المخولة بقبول أو رفض تسجيل الطالبـ/ـة طبقا لاستيفاء شروط القبول المطلوبة ويعد القبول مبدئيا حتى يتم استكمال كافة اجراءات وشروط القبول."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "الطرف الثاني"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "العبث وعدم المحافظة على الممتلكات العامة للمدارس أو الخاصة بمنسوبي المدارس والطلاب الطالبات."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"الكفيل/أتعهد أنا الموقع أدناه/___________________________________________ هوية رقم(________________________)وعنواني/_______________________ مدينة/______________________ حي/________________________ شارع/_____________________ بأن أسدد مبلغ هذا السند بدون قيد او شرط لأمر شركة/التهذيب للخدمات التعليمية _ سجل تجاري رقم(2062014760)وأن أكون كفيلا للمدين/________________________ كفالة غرم وتسليم وأداء.\n"
+"                                <br/><br/>\n"
+"                                اسم الكفيل/\n"
+"                                <br/>\n"
+"                                التوقيع/"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "المحافظة على مقدرات وممتلكات الطرف الأول وفي حال حدوث اي تلفيات يكون سببها الطالبـ/ـة فيلتزم الطرف الثاني بإصلاح ماتم اتلافه او استبداله على حسابه الخاص او دفع التلفيات نقدا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "المرحلة الدراسية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ان يلتزم الطالبـ/ـة بالتقيد باللوائح والأنظمة الداخلية للطرف الأول وان يحترم زملاءخ ومعلميه ومنسوبي المدارس."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "بصفته"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "بموجب الوكالة الشرعية"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid ""
+"تاريخ الإنشاء:\n"
+"                                <br/>\n"
+"                                مكان الإنشاء/ الدمام\n"
+"                                <br/>\n"
+"                                مبلغ السند(19000 ريال سعودي) كتابة(فقط تسع عشرة الف ريالا سعوديا).\n"
+"                                <br/>\n"
+"                                    أتعهد أنا الموقع أدناه / ______________________     هوية رقم ______________________ وعنواني ______________ بأن ادفع بموجب هذا السند بدون قيد او شرط لأمر شركة/ التهذيب للخدمات التعليمية _ سجل تجاري رقم (2062014760) مبلغ قدره (19000 ريال سعودي) فقط (تسع عشرة الف ريالا سعوديا)وذلك مقابل رسوم دراسية مستحقة عند الطلب وبمجرد الاطلاع على هذا العقد.\n"
+"\n"
+"                                <br/>\n"
+"                                وبموجب هذا السند يسقط المدين كافة حقوق التقديم والمطالبة والاحتجاج والاخطار بالامتناع عن الوفاء المتعلقة بهذا السند ولحامل هذا السند حق الرجوع بلا مصروفات ودون اخطار أو عمل احتجاج بعدم الوفاء.\n"
+"                                <br/>\n"
+"                                هذا السند واجب الدفع بدون تعطيل بموجب قرار مجلس الوزراء الموقر رقم (692) وتاريخ (26/09/1383هـ) والمتوج بالمرسوم الملكي الكريم رقم (37) وتاريخ (11/10/1383هـ) من نظام الأوراق التجارية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تاريخ الميلاد"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تخضع جميع الرسوم (الدراسية-نقل-برامج مدفوعة-...الخ)لضريبة القيمة المضافة لأنظمة هيئة الزكاة والضربة والجمارك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تسليم كافة الوثائق المطلوبة للطرف الأول عند التسجيل."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تعامل الطالبـ/ـة أو الطرف الثاني بأسلوب غير لائق مع الطرف الأول أو منسوبيه أو زملائه بها سواء بشكل مباشر أو غير مباشر عبر الوسائل الإعلامية أو وسائل التواصل الاجتماعي أو غير ذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تعد هذه الرسوم الموضحة في الفقرة (د) قابلة للإلغاء أو التعديل وفق شروط الاتفاقية المبرمة مع مؤسسة موهبة أو برنامج الشركة لاستقطاب الموهوبين."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تكرار ابلاغ الطرف الثاني بمشاكل الطالبية دون جدوى أو تحسن حسب لائحة الواجبات والالتزامات."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "تهيئة بيئة مدرسية متكاملة وتعلم إيجابي يساعد الطالبـ/ـة على قضاء يوم دراسي مثمر."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "توقيع عقد النقل المدرسي المنفصل عن هذا العقد بعد الاطلاع عليه."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ثانيا:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "جدول رقم(1)الرسوم المعتمدة بعد التخفيض من قبل الطرف الأول(مدارس البنين الأهلية)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "جدول رقم(2)الرسوم المعتمدة بعد التخفيض من قبل الطرف الأول(مدارس البنات الأهلية-القسم الدولي)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "جوال"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "حجز الشهادة الدراسية والوثائق للطالبـ/ـة إلى أن تتم المخالصة المالية حسب ما جاء في تعميم وزير التعليم رقم 3974805 بتاريخ 22/01/1439هـ."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "حجز شهادة الطالبـ/ـة في برنامج نور ويصنف الطالبة متعثرا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "دفع رسوم النقل مقدما."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ريال"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "سداد الرسوم الدراسية في مدة أقصاها يومين عمل من اجتياز المقابلة الشخصية ويكون السداد طبقا لما ورج ببنزد هذا العقد."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "سوء سلوك الطالبـ/ـة داخل المدارس."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "صك الحضانة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "صك الولاية رقم"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "صلة القرابة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "عدم استقبال الطالبـ/ـة خلال فترة الدراسة وعدم توفير المنصات الالكترونية له."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "عدم تزويد الطرف الثاني بنتائج الاختبارات الشهرية أو النهائية وعدم منحه أي إفادات تربوية أو إدارية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "عدم تقيد الطرف الثاني بسداد الرسوم الدراسية المستحقة بالمواعيد المحددة للسداد سواء خلال العام الدراسي أو بنهايته."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "عمل خارطة مبسطة لموقع المنزل محدداً بها بعض المعالم لتمكين وصول الحافلات للمنزل."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "عند تعليق الدراسة لظروف خارجة عن إرادة المدارس مع استمرار المدارس في تقديم الخدمة التعليمية عبر البدائل التقنية لا يحق للطرف الثاني المطالبة بأي خصومات أو إعفاء من الرسوم الدراسية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "في حال استفادة الطالبـ/ـة من خدمة الخزائن الخاصة لتخزين اغراضه المدرسية تكون برسوم سنوية مقدارها(100 ريال)عن كل عام دراسي."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "في حال تقديم الطرف الثاني شيك وتم إرجاع الشيك من قبل البنك عليه سداد قيمة الشيك نقدا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "في حال عدم التزام الطرف الثاني بتوفير كافة المستندات المطلوبة في الموعد المحدد فان المدرسة غير مسئولة عن اعتماد الملف من ادارة التعليم وعليه سيتم ارجاع الملف وعدم استقبال الطالبـ/ـة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "في حال كون الطالب المقبول من ذوي الهمم يلتزم الطرف الثاني بتحمل التكلفة الإضافية التي يحددها الطرف الأول لتوفير الإمكانيات والتخصصات البشرية لتقديم الخدمة اللازمة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "قد تم الرضا والاتفاق بين كلا من:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "لا يحق للطرف الثاني استقطاع اي مبالغ من الرسوم الدراسية نظير غياب الطالبـ/ـة ايا كانت مدة الغياب."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "لا يستحق خصم الإخوة في حال تسجيل الابن الثاني أو البنت الثانية خلال الفصل الدراسي الثالث."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "لا يستحق خصم الإخوة من منح خصما استثنائيا على الرسوم الدراسية الأساسية سواء كان الطالبـ/ـة من أبناء المنسوبين أو كان الطالبـ/ـة من الموهوبين أو كان هناك أي خصماً استثنائيا حيث لا يجوز الجمع لأكثر من خصم للطالبـ/ـة ويستفيد الطالبـ/ـة من الخصم الأكبر."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "لا يعتبر الطالبـ/ـة  المنتظم بمدارس الطرف الأول منقول للصف التالي في بداية العام الدراسي الجديد إلا بعد سداد كامل الرسوم الدراسية للعام السابق وإلا يعتبر الطالبـ/ـة منسحب ويحق للطرف الأول منعه من دخول المدرسة تمهيداً لإنهاء قيده لديه."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "لضمان الاستمرار بالمدارس يجب الا يقل متوسط اداء الطالبـ/ـة في اختبارات ضبط الجودة ونهاية عام الدراسي عن نسبة 85% ويحق للطرف الأول الاعتذار عن استمرار الطالبـ/ـة في حال الحصول على نسبة اقل من ذلك."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "للحصول على الخصم يشترط انتظام الأبناء (الإخوة) بالفصل الدراسي الأول وسداد رسوم العام كاملة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "للطرف الأول الحق في إيقاف خدمة النقل عن الطالبـ/ـة في حال عدم سداد الطرف الثاني لكامل الرسوم الدراسية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "للطرف الأول الحق في إيقاف خدمة النقل عند ارتكاب الطالبـ/ـة (أي مخالفة سلوكية أو مشاغبات داخل الحافلة أو تكرار التأخير صباحا عند وصول الحافلة للمنزل) مع عدم أحقية الطرف الثاني في المطالبة باسترداد أي جزء من رسوم النقل المدفوع مقدما."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "للمدرسة الحق في تفتيش الطالبـ/ـة ومصادرة الهواتف النقالة والكاميرات والأجهزة الصوتية او أي شيء مصنف ضمن قائمة الممنوعات بما يتوافق مع التعاميم الصادرة من وزارة التعليم."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "مطالبة الطرف الثاني بقيمة الرسوم بكافة الوسائل القانونية مع تحمل الطرف الثاني كافة الأتعاب والتكلفة المترتبة على تحصيل الرسوم في حال التعاقد مع طرف ثالث كمكاتب المحاماة أو التحصيل أو غيرها."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "هوية رقم"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "وتاريخ"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ولي امر الطالبـ/ـة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ويشار إليه فيما بعد بـ(الطرف الثاني)"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ويشار إليها فيها بعد بــ(الطرف الأول)."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "ويمثله بالتوقيع على هذا العقد السيد/ة"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يتعهد الطرف الثاني بالإفصاح عن كافة الأمرتض الصحية والنفسية المزمنة في حال وجودها لدى الطالبـ/ـة مع الأخذ في الاعتبار أن هذه المعلومات سرية تخص المدرسة فقط, وفي حال عدم الإفصاح فان الطرف الأول يكون غير مسؤول عن أي مضاعفات قد تحدث للطالبـ/ـة, كما يحق له انهاء العقد بناء على ذلك مع عدم رد أي مبالغ من الرسوم الدراسية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يتم الغاء أي خصم للطرف الثاني في حال عدم التزامه بسداد الرسوم الدراسية المقررة في مواعيدها."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يتم الغاء خصم أبناء المنسوبين في حال انتهاء سبب الحصول على الخصم وذلك للفصول الدراسية اللاحقة."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يحصل الطرف الثاني على خصم مبلغ 1000 ريال لكل أخوين ومبلغ 1000 ريال لكل ابن تال أو ابنة تالية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يدفع الطرف الثاني الرسوم الدراسية المتفق عليها وقدرها (19.000) فقط تسع عشرة الف ريالا سعوديا."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يطبق بند الخصم في حال الالتزام بسداد الرسوم الدراسية وفقا للبند سابعا فقره (2)."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يقبل الطالبـ/ـة المستجد شريطة عدم وجود مستحقات مالية على الطرف الثاني للطرف الأول."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يقوم الطرف الثاني او من ينوب عنه بسداد الرسوم الدراسية المعتمدة من الطرف الأول وذلك طبقا للجدولين أرقام (1و2)ادناه, وتكون هذه الرسوم  قابلة للتغيير وملزمة للطرف الثاني بعد موافقة وزارة التعليم عليها:"
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يكون السداد في قسم المحاسبة بالمدارس أو التحويل الحساب الطرف الأول أو شيك باسم شركة التهذيب للخمات التعليمية."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يلتزم الطرف الثاني بأي تعديلات يجريها الطرف الأول على السياسات المعمول بها داخل المدارس على سبيل المثال وليس الحصر(القبول والتسجيل-الخصم-الانسحاب-إلخ.....)حيث يحق له إجراء هذه التعديلات دون الرجوع إلى الطرف الثاني مع أخطاره بالتعديل وفق الآلية المعتمدة للتواصل."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يلتزم الطرف الثاني بالضوابط المنظمة لحضور وانصراف الطالبـ/ـة التي يضعها الطرف الأول."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يلغى خصم الإخوة في حال انتقال أحد الإخوة من المدارس خلال الفصل الدراسي الأول أو قبل بداية الفصل الدراسي الثاني أو الثالث."
+msgstr ""
+
+#. module: kb_student_contracts
+#: model_terms:ir.ui.view,arch_db:kb_student_contracts.student_contracts_report
+msgid "يوقع الطرف الثاني على نموذج التعهد المخصص لطلاب / طالبات دعم المعرفة وبرنامج الشركة لاستقطاب الموهوبين."
+msgstr ""

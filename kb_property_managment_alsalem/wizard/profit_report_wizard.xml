@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+   <!-- Profit Reports -->
+
+  <record id="view_profit_report_form" model="ir.ui.view">
+    <field name="name">profit.report.wizard.form</field>
+    <field name="model">summary_report_wizard</field>
+    <field name="arch" type="xml">
+      <form string="summary">
+    <group>
+
+      <group string="Property Name">                               
+        <field name="apartment_ids" /> 
+ <!-- <field name="properyId" />  -->
+        
+      </group>
+
+    </group>
+
+          <footer>
+            <button name="summary_profit_report" string="Profit Report" type="object" class="btn-primary" />
+            <button string="Cancel" class="btn-secondary" special="cancel" />
+          </footer>
+       
+      </form>
+    </field>
+
+  </record>
+  
+  <record id="action_profit" model="ir.actions.act_window">
+    <field name="name">Profit Report</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">summary_report_wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="view_profit_report_form" />
+    <field name="target">new</field>
+
+  </record>
+    <menuitem id="print_root" name="Reports" parent="system_root" sequence="18" />
+    <menuitem id="print_profit" name="Profit Reports" parent="print_root" action="action_profit" sequence="21" /> 
+</odoo>

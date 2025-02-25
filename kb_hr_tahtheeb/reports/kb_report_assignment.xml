@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="kb_report_assignment" model="ir.actions.report">
+            <field name="name">إنتداب</field>
+            <field name="model">kb.hr.forms.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kb_hr_tahtheeb.print_report_assignment</field>
+            <field name="report_file">kb_hr_tahtheeb.print_report_assignment</field>
+            <field name="print_report_name">'إنتداب'</field>
+            <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="print_report_assignment">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="assignmentID" t-as="line">
+                        <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet"/>
+                        <div class="page" style="font-family: 'Almarai', sans-serif;">
+                            <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                                <style>
+                                    .th1{
+                                    border:1px solid black ;
+                                    height:30px;
+                                    font-size:15;
+                                    }
+                                </style>
+                                <div>
+                                    <p style="text-align:right;">التاريخ<span
+                                            t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>م
+                                    </p>
+                                </div>
+                                <br/>
+                                <div>
+                                    <p style="text-align:center; text-decoration: underline; font-weight: bold; font-size: 30px;">
+                                        "إنتداب موظف"
+                                    </p>
+                                    <p style="text-align:right; font-size: 18px;">من: إدارة شركة التهذيب للخدمات
+                                        التعليمية
+                                    </p>
+                                    <div>
+                                        <p style="font-size: 15px; display:inline-block; width:150px; text-align:right; font-size: 18px;">
+                                            إلى:
+                                            <span t-esc="line['kb_branchName']"/>
+                                        </p>
+                                        <p style="display:inline-block; width:250px;"></p>
+                                        <p style="font-size: 18px; display:inline-block; width:150px;">المحترمين</p>
+                                    </div>
+                                    <br/>
+                                    <p style="text-align:right; font-size: 18px;">بشأن: نقل الموظف/ة
+                                        <span t-esc="line['kb_employeeID']"/>
+                                    </p>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div>
+                                    <p style=" text-align:right; font-size: 18px;">نوجه لكم اﻷستاذ/ة:</p>
+                                    <br/>
+                                    <table style="text-align:center; border: 1px solid; width: 100%;">
+                                        <tr>
+                                            <th class="th1">#</th>
+                                            <th class="th1">الاسم</th>
+                                            <th class="th1">الجنسية</th>
+                                            <th class="th1">الوظيفة</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="th1">
+                                                <span t-esc="line['kb_employeeID']"/>
+                                            </td>
+                                            <td class="th1">
+                                                <span t-esc="line['kb_country_id']"/>
+                                            </td>
+                                            <td class="th1">
+                                                <span t-esc="line['kb_job_title']"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <div>
+                                    <p>بناء على حاجة العمل يتم ندب الموظفة<span t-esc="line['kb_employeeID']"/>(<span
+                                            t-esc="line['kb_job_title']"/>)
+                                        <br/>الى
+                                        <span t-esc="line['kb_branchNamesecond']"/>
+                                        <span t-esc="line['kb_teacher_job_description']"/>كـ
+                                        <span t-esc="line['kb_job_title']"/>
+                                        <br/>
+                                        وذلك للقيام بمهمة
+                                        <span t-esc="line['kb_reasonID']"/>
+                                        <br/>
+                                        تاريخ الندب: من
+                                        <span t-esc="line['kb_date']"/>
+                                        الى
+                                        <span t-esc="line['kb_date_to']"/>
+
+                                    </p>
+                                </div>
+                                <br/><br/><br/>
+                                <div>
+                                    <p style=" text-align:center; font-size: 18px;">و تفضلوا بقبول خالص الاحترام والتقدير...</p>
+                                </div><br/><br/><br/>
+                                <div>
+                                    <p style="display:inline-block; width:200px;"></p>
+                                    <p style="display:inline-block; width:300px; text-align:right; font-size: 18px;">
+                                        مدير إدارة الشؤون التعليمية والتدريب
+                                    </p>
+                                    <p style="display:inline-block; width:300px; text-align:right; font-size: 18px;">
+                                        الموارد البشرية
+                                    </p>
+                                    <br/>
+                                    <p style="display:inline-block; width:200px;"></p>
+                                    <p style=" display:inline-block; width:300px; text-align:right; font-size: 15px;">
+                                        _______________________________
+                                    </p>
+                                    <p style="display:inline-block; width:300px;">
+                                        <span t-esc="line['kb_responsible']"/>
+                                    </p>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

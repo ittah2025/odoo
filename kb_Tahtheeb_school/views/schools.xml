@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="action_school" model="ir.actions.act_window">
+        <field name="name">Schools Management System</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new school
+            </p>
+        </field>
+    </record>
+
+    <record id="view_school_form" model="ir.ui.view">
+        <field name="name">school.form</field>
+        <field name="model">school</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="School info."/>
+                    <group>
+                        <group>
+                            <label for="school_id" />
+                            <h4>   
+                                <field name="school_id" readonly="1" />
+                            </h4>
+                             <label for="name" />
+                            <h4>   
+                                <field name="name" string="School Name" placeholder="School Name" required="0"/>
+                            </h4>
+                            <field name="code" />
+                            <field name="license_No" />
+                            <field name="company_id" />
+                            <field name="com_name" />
+                        </group>
+                        
+<!--                        <group>-->
+<!--                             <field name="Gpa_out_of" />-->
+
+<!--                        </group>-->
+                    </group>
+                    <group>
+                        <group string="Principal  Name">
+                            <field name="Principal_name" />
+                        </group>
+                        <group string="">
+
+                        </group>
+                    </group>
+                    <group>
+                         <group string="National address">
+                        <label for="street" string="Address" />
+                        <div class="o_address_format">
+                            <field name="street" class="o_address_street" placeholder="Street" />
+                            <field name="district" class="o_address_street" placeholder="District" />
+                            <field name="city" class="o_address_city" placeholder="City" />
+                            <field name="postal_code" class="o_address_city" placeholder="Postal Code" />
+                            <field name="extra_number" class="o_address_city" placeholder="Extra Number" />
+                            <field name="country_id" class="o_address_city,oe_no_button" placeholder="Country"  options="{&quot;no_open&quot;: true}" required="0" default="Saudi Arabia"/>
+                        </div>
+                            
+                         </group>
+                        <group string="More info.">
+                            <field name="cr" />
+                            <field name="vat" />
+                            <field name="currency_id" />
+                            <field name="lang" placeholder="language"/>
+                            <field name="min_age" />
+                            <field name="max_age" />
+                            <field name="gender" />
+                            <field name="grade" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_school_tree" model="ir.ui.view">
+        <field name="name">school.tree</field>
+        <field name="model">school</field>
+        <field name="arch" type="xml">
+            <tree string="Schools">
+                <field name="name" />
+                <field name="code" />
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- The system Menu -->
+    <menuitem id="system_root" name="School System" sequence="7" groups="kb_Tahtheeb_school.group_school_administration,kb_Tahtheeb_school.group_school_student,kb_Tahtheeb_school.group_school_parent,kb_Tahtheeb_school.group_school_alumni"
+        web_icon="kb_Tahtheeb_school,static/description/kb_Tahtheeb_school.png"
+    />
+
+    <!-- The config menu -->
+    <menuitem id="configuration_menu" name="Configuration" parent="system_root" sequence="20" />
+   
+    <!-- attendance -->
+    <menuitem id="attendance_menu" name="Attendance" parent="system_root" sequence="6" />
+
+    <!-- egrade -->
+    <menuitem id="egrade_menu" name="Exam grades" parent="system_root" sequence="7" />
+
+    <menuitem id="schools_submenu" name="Schools" parent="configuration_menu" action="action_school" sequence="1" />
+
+    <!-- Fees -->
+    <menuitem id="fees_menu" name="Fees" parent="system_root" sequence="7" />
+
+    <!-- Users -->
+    <menuitem id="users_submenu" name="Profile" parent="system_root" sequence="3" />
+
+    <!-- Grades -->
+    <menuitem id="grades_menu" name="Grades" parent="system_root" sequence="8" />
+
+    <!-- registration stage -->
+
+    <menuitem id="registration_menu" name="Registration Stage" parent="system_root" sequence="2" />
+
+    <!-- evaluation stage -->
+
+<!--    <menuitem id="evaluation_menu" name="Evaluation Stage" parent="system_root" sequence="9" />-->
+
+    <!-- preparation stage -->
+
+    <menuitem id="preparation_menu" name="Preparation Stage" parent="system_root" sequence="12" />
+
+    <!-- treatment stage -->
+
+    <menuitem id="treatment_menu" name="Treatment Stage" parent="system_root" sequence="10" />
+
+    <!-- The system Menu -->
+
+    <menuitem id="menu_stu_eval" name="Evaluations" parent="system_root" sequence="16"/>
+
+    <menuitem id="assignment_menuu" name="Homeworks" parent="system_root" sequence="15" />
+
+    <menuitem id="certfecate_menu" name="Certfecate" parent="system_root" sequence="13" />
+
+    <menuitem id="course_menu" name="Courses" parent="system_root" sequence="5" />
+
+    <menuitem id="teacher_manege_menu" name="Teacher management" parent="system_root" sequence="14" />
+
+    <menuitem id="transport_menu" name="Transport" parent="system_root" sequence="19" />
+</odoo>

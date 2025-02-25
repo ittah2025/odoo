@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="employee_form_view_id_card">
+        <field name="name">employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='phone']/.." position="after">
+                    
+                        <label for="bloodGroup"/>  
+                    <h4>  
+                        <field name="bloodGroup"/>
+                    </h4> 
+                  
+            </xpath>
+        </field>
+    </record>
+</odoo>

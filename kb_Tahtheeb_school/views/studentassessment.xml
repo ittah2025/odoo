@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="action_student_assessment_line_marks" model="ir.actions.client">
+		<field name="name">student Assessment Line Marks client Action</field>
+		<field name="tag">std_assessment_marks</field>
+		<field name="target">current</field>
+	</record>
+	<record id="action_student_grade_marks" model="ir.actions.client">
+		<field name="name">student Assessment Grade Marks client Action</field>
+		<field name="tag">student_grade_marks</field>
+		<field name="target">current</field>
+	</record>
+
+    <record id="student_assessment_action" model="ir.actions.act_window">
+        <field name="name">Student assessment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">studentassessment</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new student assessment
+            </p>
+        </field>
+    </record>
+
+
+    <record id="student_assessment_view_tree" model="ir.ui.view">
+		<field name="name">student.assessment.view.tree</field>
+		<field name="model">studentassessment</field>
+		<field name="arch" type="xml">
+			<tree  string="Student Assessment">
+				<field name="name" />
+				<field name="subject_id" />
+				<field name="class_id" />
+				<field name="teacher_id" />
+				<field name="state" />
+				<field name="semester" />
+				<field name="trimester" />
+			</tree>
+		</field>
+	</record>
+
+    <record id="student_assessment_view_form" model="ir.ui.view">
+		<field name="name">student.assessment.view.form</field>
+		<field name="model">studentassessment</field>
+		<field name="arch" type="xml">
+			<form string="Student Assessment">
+				<header>
+					<field name="state" widget="statusbar" readonly="1"/>
+						<button
+						name="action_confirm"
+						string="Confirm"
+						class="oe_highlight"
+						type="object"
+						attrs="{'invisible': [('state','!=','draft')]}"/>
+					<button
+						name="get_client_action"
+						string="Enter Students Marks"
+						class="oe_highlight" type="object"
+						attrs="{'invisible': [('state','in',['draft'])]}"/>
+					<button
+						name="get_client_action2"
+						string="Grade System"
+						class="oe_highlight"
+						type="object"
+						attrs="{'invisible':
+								[('state','not in',['done','locked'])]}"/>
+					<button
+						name="mark_done"
+						string="Mark as Done"
+						class="oe_highlight"
+						type="object"
+						attrs="{'invisible': [('state','!=','pending')]}"/>
+					<button
+						name="lock_marks"
+						string="Lock The Marks"
+						class="oe_highlight"
+						type="object"
+						attrs="{'invisible': [('state','!=','done')]}"/>
+
+					<button
+						name="unlock_marks"
+						string="UnLock The Marks"
+						class="oe_highlight"
+						type="object"
+						attrs="{'invisible': [('state','!=','locked')]}"
+						/>
+					<button
+						name="reset_to_draft"
+						string="Reset To Draft"
+						type="object"
+						attrs="{'invisible': [('state','not in',['confirm'])]}"
+						/>
+					<button
+						name="%(wizard_action_student_addition_grade_form)d"
+						string="Add Students"
+						type="action"
+						class="oe_highlight"
+						attrs="{'invisible': [('state','in',['draft','confirm'])]}"/>
+
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="all_marks_entered" invisible="1" readonly="1"/>
+							<field name="name" />
+							<field name="teacher_id"/>
+							<field name="subject_id"/>
+                            <field name="class_id" />
+<!--							domain="[('teacher_id','=',teacher_id)]" -->
+						</group>
+						<group>
+							<field name="no_of_assignments" required="1"/>
+							<field name="semester" attrs="{'readonly': [('state','in',['confirm','pending','done','locked'])]}" />
+							<field name="trimester" attrs="{'readonly': [('state','in',['confirm','pending','done','locked'])]}" required="1"/>
+							<field name="year_id" attrs="{'readonly': [('state','in',['confirm','pending','done','locked'])]}"/>
+							<field name="exam_month" attrs="{'readonly': [('state','in',['confirm','pending','done','locked'])]}"/>
+						</group>
+                        <field name="assessment_line_ids" attrs="{'readonly': [('state','in',['locked'])]}">
+							<tree editable="bottom" create="0">
+								<field name="marks_entered_in_line" invisible="1" />
+								<field name="kb_boolean_field" invisible="1"/>
+								<field name="student_id" readonly="1" />
+								<field name="subject_id" invisible="1"/>
+								<field name="subject"/>
+								<field name="subject_idss" invisible="1"/>
+								<field name="semester" readonly="1" />
+								<field name="cp" readonly="1" />
+								<field name="total_hw" readonly="1" />
+								<field name="total_cw" readonly="1" />
+								<field name="total_marks" readonly="1" />
+								<field name="mid_sem"  attrs="{'column_invisible':[('parent.semester','!=','mid-semester')]}" readonly="1"/>
+								<field name="final_sem"  attrs="{'column_invisible':[('parent.semester','!=','final-semester')]}" readonly="1"/>
+								<button name="action_show_assesments_line" string="See Line Marks" class="oe_highlight" icon="fa-list" width="0.1"  type="object"/>
+
+							</tree>
+						</field>
+					</group>
+				</sheet>
+				 <div class="oe_chatter">
+
+                        <field name="message_follower_ids" />
+                        <field name="activity_ids" />
+                        <field name="message_ids" />
+
+                </div>
+			</form>
+		</field>
+	</record>
+    <menuitem id="student_assessment_menu_act" name="Student Assessment" parent="egrade_menu" action="student_assessment_action" groups="kb_Tahtheeb_school.group_school_administration,kb_Tahtheeb_school.group_school_teacher"/>
+
+
+	<!-- student.assessment.line form view default-->
+	<record id="student_assessment_line_view_form_default" model="ir.ui.view">
+		<field name="name">student.assessment.line.view.form</field>
+		<field name="model">student.assessment.line</field>
+		<field name="arch" type="xml">
+			<form string="Student assesment Line">
+			<sheet>
+				<group>
+					<group>
+						<field name="student_id" readonly="1"/>
+					</group>
+					<group>
+						<field name="total_cw" readonly="1"/>
+						<field name="total_hw" readonly="1"/>
+						<field name="cp" readonly="1"/>
+						<field name="total_marks" readonly="1"/>
+						<field name="mid_sem" readonly="1"/>
+						<field name="tri_sem" readonly="1"/>
+						<field name="final_sem" readonly="1"/>
+					</group>
+				</group>
+				<field name="student_assessment_line_marks_ids" readonly="1">
+					<tree editable="bottom" create="0" delete="0" edit="0">
+						<field name="seq" />
+						<field name="assignment_hw" />
+						<field name="hw" />
+						<field name="name"/>
+						<field name="cw" />
+						<button name="action_show_assesments_line_marks" string="See Line Marks" class="oe_highlight" icon="fa-list" width="0.1" type="object" />
+					</tree>
+				</field>
+			</sheet>
+				<div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- student.assessment.line form view -->
+	<record id="student_assessment_line_view_form" model="ir.ui.view">
+		<field name="name">student.assessment.line.view.form</field>
+		<field name="model">student.assessment.line</field>
+		<field name="priority">1000</field>
+		<field name="arch" type="xml">
+			<form string="Student assesment Line">
+				<group>
+					<group>
+						<field name="student_id" readonly="1"/>
+					</group>
+				</group>
+				<field name="student_assessment_line_marks_ids" >
+					<tree editable="bottom">
+						<field name="seq" widget="handle"/>
+						<field name="assignment_hw"  />
+						<field name="hw" />
+						<field name="name" />
+						<field name="cw" />
+					</tree>
+				</field>
+				<footer class="oe_edit_only">
+					<button string="Confirm" special="save" class="oe_highlight"/>
+					<button string="Discard" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<!-- student_assessment_line_marks_view_form_default -->
+	<record id="student_assessment_line_marks_view_form_default" model="ir.ui.view">
+		<field name="name">student.assessment.line.marks.form</field>
+		<field name="model">student.assessment.line.marks</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+					  <group>
+						<field name="student_assessment_line_id" readonly="1"/>
+						</group>
+						<group>
+						  <field name="hw" readonly="1"/>
+						  <field name="cw" readonly="1"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+			</form>
+		</field>
+	</record>
+	<record id="student_assessment_line_marks_tree" model="ir.ui.view">
+		<field name="name">student.assessment.line.marks.tree</field>
+		<field name="model">student.assessment.line.marks</field>
+		<field name="arch" type="xml">
+			<tree editable="top" string="Student Marks" sample="1">
+				<field name="seq" widget="handle"/>
+				<field name="student_assessment_line_id" readonly="1"/>
+				<field name="assignment_hw" />
+				<field name="hw" />
+				<field name="name" />
+				<field name="cw" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="student_assessment_line_marks_search" model="ir.ui.view">
+		<field name="name">student.assessment.line.marks.search</field>
+		<field name="model">student.assessment.line.marks</field>
+		<field name="arch" type="xml">
+			<search string="Search Student Assessment Line Marks">
+				<field name="name"/>
+				<separator/>
+				<group expand="0" string="Group By">
+					<filter string="Student" name="student_group_id" context="{'group_by': 'student_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+</odoo>

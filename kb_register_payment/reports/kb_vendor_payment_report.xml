@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="paperformat_Certfecate" model="report.paperformat">
+        <field name="name">Customer Payment</field>
+        <field name="format">custom</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_spacing">35</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <record id="action_vendor_payment_view" model="ir.actions.report">
+        <field name="name">Payment Receipt</field>
+        <field name="model">kb.vender.register.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_register_payment.vender_payment_report</field>
+        <field name="report_file">kb_register_payment.vender_payment_report</field>
+        <field name="binding_model_id" ref="model_kb_vender_register_payment" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="kb_register_payment.paperformat_Certfecate" />
+    </record>
+
+    <template id="vender_payment_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                    <t t-foreach="docs" t-as="o">
+                        <div style="font-family: 'Tajawal', sans-serif;" align="center">
+                            <div class="page">
+                                <br/> <br/>
+                                <h3><center><strong>Payment Voucher | سند صرف</strong></center></h3>
+                                <br/>  <br/>
+                                <p style="text-align=left ;display:inline-block; width:500px; ">No: <span t-field="o.kb_paymentId"/></p>
+                                <p style="display:inline-block;width:500px; ">Total <span t-field="o.kb_amount"/> SR المبلغ</p>
+                                <br/> <br/>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">Date:</p>
+                                <p style="text-align=left ;display:inline-block; width:333px; "><span t-field="o.kb_date"/></p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">:التاريخ</p>
+                                <br/>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">Paid to Mr./Ms. :</p>
+                                <p style="text-align=left ;display:inline-block; width:333px; "><span t-field="o.kb_CustomerName"/></p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">:يصرف الى السيد/ السادة</p>
+                                <br/>
+                                <p style="text-align=left ;display:inline-block; width:333px; "> The Sum Of :</p>
+                                <p style="text-align=left ;display:inline-block; width:333px; "><span t-field="o.kb_amount"/> SR</p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">: مبلغ وقدره </p>
+                                <br/>
+
+                                <p style="text-align=left ;display:inline-block; width:333px; ">On Bank : </p>
+                                <p style="text-align=left ;display:inline-block; width:333px; "><span t-field="o.payment_method_line_id"/></p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">: على البنك </p>
+                                <br/>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">Cash/Cheque No : </p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">______________________________________________</p>
+                                <p style="text-align=left ;display:inline-block; width:333px; ">: بموجب نقدا/شيك رقم</p>
+
+                                <br/>
+                                <p style="width:1000px;">For : __________________________________________________________________________________________________ : وذلك عن  </p>
+                                <br/><br/><br/>
+                                <p style="text-align=left ;display:inline-block; width:500px; ">Recevied by : __________________ : توقيع المستلم </p>
+                                <p style="display:inline-block;width:500px; "> Created By : __________________ : اصدر بواسطة </p>
+                            </div>
+                     </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

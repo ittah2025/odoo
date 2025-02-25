@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="employee_inherit" model="ir.ui.view">
+            <field name="name">Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='mobile_phone']" position="after">
+                    <field name="attendance_time" />
+
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

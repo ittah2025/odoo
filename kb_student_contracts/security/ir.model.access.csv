@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+kb_tuition_fees_for_boys,access.kb.tuition.fees.for.boys,model_kb_tuition_fees_for_boys,,1,1,1,1
+kb_tuition_fees_for_girls,access.kb.tuition.fees.for.girls,model_kb_tuition_fees_for_girls,,1,1,1,1
+kb_student_contracts,access.kb.student.contracts,model_kb_student_contracts,,1,1,1,1

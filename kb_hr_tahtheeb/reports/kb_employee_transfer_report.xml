@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="employee_transfer_reportID" model="ir.actions.report">
+        <field name="name">نقل موظف</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_tahtheeb.employee_transfer_report</field>
+        <field name="report_file">kb_hr_tahtheeb.employee_transfer_report</field>
+        <field name="print_report_name">'نقل موظف'</field>
+        <field name="binding_model_id" ref="model_kb_hr_forms_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="employee_transfer_report">
+        <t t-call="web.html_container">
+            <t t-call="kb_hr_tahtheeb.kb_internal_layout_header_footer">
+                <style>
+                    @font-face {
+                    font-family: 'Droid Naskh';
+                    source: url("kb_hr_tahtheeb/static/scss/custom-font.scss").format('truetype');
+                    }
+                    body {
+                    font-family: 'Droid Naskh';
+                    direction: rtl;
+                    text-align: right;
+                    font-size: 18px;
+                    }
+
+                    .header,
+                    .footer {
+                    text-align: center;
+                    }
+
+                    .header .right-section {
+                    text-align: left;
+                    }
+
+                    .header .left-section {
+                    text-align: right;
+                    }
+
+                    .header img {
+                    max-width: 150px;
+                    }
+
+                    .table th,
+                    .table td {
+                    text-align: center;
+                    vertical-align: middle;
+                    }
+
+                    .signature-section {
+                    margin-top: 30px;
+                    }
+
+                    .footer {
+                    margin-top: 40px;
+                    font-size: 12px;
+                    color: gray;
+                    }
+
+                    hr {
+                    border: 1px solid #000;
+                    }
+
+                    .table-bordered {
+                    margin-top: 20px;
+                    }
+
+                    .signature-section p {
+                    text-align: center;
+                    font-weight: bold;
+                    }
+
+                    .custom-span {
+                    padding-right: 100px;
+                    }
+
+                    table th, table td {
+                    border: 1px solid #000;
+                    padding : 8px;
+                    }
+                </style>
+                <t t-foreach="employeeTransferID" t-as="line">
+                    <div class="page">
+                        <div style="direction: rtl;">
+                            <div class="row">
+                                <div class="col-12 text-end mb-5">
+                                    <p>التاريخ:
+                                        <span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p>
+                                من: إدارة شركة التهذيب للخدمات التعليمية
+                                <br></br>
+                                إلى: مدرسة التهذيب - فرع
+                                <span t-esc="line['kb_branchName']"/>
+                                <span class="custom-span">المحترمين</span>
+                                <br></br>
+                                بشأن: نقل الموظفة
+                                (<span t-esc="line['kb_employeeID']"/>)
+                            </p>
+
+                            <p class="mt-5">نوجه لكم الأستاذة:</p>
+
+                            <div class="text-center">
+                                <table style="text-align:center; border: 1px solid; width: 100%;">
+                                    <tr>
+                                        <th class="th1">#</th>
+                                        <th class="th1">الاسم</th>
+                                        <th class="th1">الجنسية</th>
+                                        <th class="th1">الوظيفة</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="th1">1</td>
+                                        <td class="th1">
+                                            <span t-esc="line['kb_employeeID']"/>
+                                        </td>
+                                        <td class="th1">
+                                            <span t-esc="line['nationality_name']"/>
+                                        </td>
+                                        <td class="th1">
+                                            <span t-esc="line['kb_job_title']"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="text-right">
+                                <p style="margin: 60px 0;">
+                                    وسوف تبدأ بمشيئة الله تعالى ابتداء من يوم
+                                    <span t-esc="line['weekday_label']"/>بتاريخ 
+                                    <span t-esc="line['kb_date']"/>م ,منقولة من 
+                                    <span t-esc="line['kb_branchName']"/>الى
+                                    <span t-esc="line['to_branch']"/>, وذلك بناءاً على حاجة العمل
+                                   
+                                </p>
+
+                                
+                            </div>
+                            <div class="text-center">
+                                <p class="mb-5">مع خالص الاحترام والتقدير ...</p>
+                            </div>
+                            <div class="row text-center" style="margin-top: 110px">
+                                <div class="col-1"></div>
+                                <div class="col-5">
+                                    <p class="mb-5">مدير إدارة الشؤون التعليمية والتدريب
+                                    </p>
+                                </div>
+                                <div class="col-5">
+                                    <p>الموارد البشرية</p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <div class="cust-foot">
+                    <div class=" footer">
+                        <div class="my-footer">
+                            <img src="/kb_hr_tahtheeb/static/description/footer.png" style="width: 1300px"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="store_brand" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.inherit.salla</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="salla_id"/>
+                <field name="description"/>
+                <field name="banner"/>
+                <field name="logo"/>
+                <!-- <field name="type"/>
+                <field name="address_description"/>
+                <field name="street"/>
+                <field name="local"/>
+                <field name="postal_code"/>
+                <field name="phone"/>
+                <field name="whatsapp"/>
+                <field name="telephone"/> -->
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

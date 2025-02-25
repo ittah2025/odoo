@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo >
+
+    <record id = "buildings_rooms" model = "ir.ui.view" >
+        <field name = "name" >kb.maintenance.building.rooms.view</field >
+        <field name = "model" >building_rooms</field >
+        <field name = "arch" type = "xml" >
+            <form >
+                <sheet >
+                    <group >
+                        <group >
+                            <field name = "kb_building" options = "{'no_create': True}" />
+                            <field name = "kb_floor" />
+                        </group >
+                    </group >
+
+                    <notebook >
+                        <page string = "Floor Details " name = "floor_details" >
+
+                            <field name = "kb_floor_details_ids" >
+                                <tree editable = "bottom" >
+                                    <field name = "kb_name" />
+                                    <field name = "kb_type" />
+                                </tree >
+                            </field >
+
+                        </page >
+                    </notebook >
+
+                </sheet >
+                <div class = "oe_chatter" >
+                    <field name = "message_follower_ids" />
+                    <field name = "activity_ids" />
+                    <field name = "message_ids" />
+                </div >
+            </form >
+        </field >
+    </record >
+
+     <record id = "floors_and_rooms_search_fields" model = "ir.ui.view" >
+        <field name = "name" >floors.room.search</field >
+        <field name = "model" >building_rooms</field >
+        <field name = "arch" type = "xml" >
+               <search >
+                   <field name = "kb_building" />
+                   <field name = "kb_floor" />
+
+                  <group expand = "0" string = "Group By" >
+                    <filter string = "Buildings" name = "kb_building" context = "{'group_by':'kb_building'}" />
+                  </group >
+
+              </search >
+        </field >
+    </record >
+
+
+
+    <record id = "maintenance_room_tree" model = "ir.ui.view" >
+        <field name = "name" >kb.rooms.tree</field >
+        <field name = "model" >building_rooms</field >
+        <field name = "arch" type = "xml" >
+            <tree >
+                <field name = "kb_building" />
+                <field name = "kb_floor" />
+            </tree >
+        </field >
+    </record >
+</odoo >

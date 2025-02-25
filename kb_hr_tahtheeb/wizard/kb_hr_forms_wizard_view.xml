@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_forms_wizard_form" model="ir.ui.view">
+        <field name="name">hr.report.wizard</field>
+        <field name="model">kb.hr.forms.wizard</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <group>
+                    <group>
+                        <field name="kb_reportType"/>
+                        <field name="kb_employeeID"/>
+                        <field name="kb_date" attrs="{'invisible': [('kb_reportType', 'in' , ['report5','report6','report9','report7','report19','report1','report8','report11','report20','report12','report4','report14'])]}" string="From Date"/>
+                        <field name="kb_date_to" attrs="{'invisible': [('kb_reportType', 'not in', ['report3', 'report13',  'report23', 'report24'])]}"/>
+                        <field name="kb_reasonID" attrs="{'invisible': [('kb_reportType','in',['report22','report2','report4','report5','report6','report1','report8','report9','report10','report7','report11','report12','report16','report17','report15','report14','report13','report18','report20','report19'])]}"/>
+                        <field name="kb_responsible" invisible="1"/>
+                          <field name="kb_branchName" attrs="{'invisible': [('kb_reportType','in',['report22','report4','report5','report6','report16','report8','report9','report10','report7','report19','report20','report1','report11','report12'])]}"/>
+                       
+                        <field name="to_branch" attrs="{'invisible': [('kb_reportType', '!=' , 'report2')]}"/>
+                        <field name="kb_branchNamesecond" attrs="{'invisible': [('kb_reportType','!=','report3')]}"/>
+                        <field name="kb_type_bank" attrs="{'invisible': [('kb_reportType','!=','report4')]}"/>
+<!--                        <field name="kb_sender" attrs="{'invisible': [('kb_reportType','!=','report8')]}"/>-->
+                        <field name="date" attrs="{'invisible': [('kb_reportType','!=','report9')]}"/>
+                        <field name="arabic_date" attrs="{'invisible': [('kb_reportType','!=','report9')]}"/>
+                        <field name="job" attrs="{'invisible': [('kb_reportType','!=','report9')]}"/>
+                        <field name="content" attrs="{'invisible': [('kb_reportType','!=','report9')]}"/>
+
+<!--                        <field name="kb_employee_name_2" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>-->
+                        <field name="kb_employee_job" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="location" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="holidays" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="days_of_work" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="insurance" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_special_conditions" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                    </group>
+                    <group>
+                        <field name="kb_basic_salary" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_housing_allowance" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_transfer_allowance" attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_special_conditions_2"
+                               attrs="{'invisible': [('kb_reportType','!=','report10')]}"/>
+
+                        <field name="kb_salary_2"
+                               attrs="{'invisible':['|',('kb_special_conditions_2','=', False),('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_basic_salary_2"
+                               attrs="{'invisible':['|',('kb_special_conditions_2','=', False),('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_housing_allowance_2"
+                               attrs="{'invisible':['|',('kb_special_conditions_2','=', False),('kb_reportType','!=','report10')]}"/>
+                        <field name="kb_transfer_allowance_2"
+                               attrs="{'invisible':['|',('kb_special_conditions_2','=', False),('kb_reportType','!=','report10')]}"/>
+                    </group>
+
+                </group>
+                <footer>
+                    <button name="generate_report" string="Print" type="object" class="btn btn-success"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_forms_wizard" model="ir.actions.act_window">
+        <field name="name">Reports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.hr.forms.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_forms_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!--    <menuitem id="menu_human_resources_reports_configuration"-->
+    <!--          name="Reporting"-->
+    <!--          sequence="100"-->
+    <!--          parent="hr.menu_human_resources_configuration"/>-->
+
+    <!--    <menuitem id="submenu_human_resources_reports_configuration"-->
+    <!--        name="Reports"-->
+    <!--        parent="menu_human_resources_reports_configuration"-->
+    <!--        action="action_hr_forms_wizard"-->
+    <!--        sequence="101"/>-->
+
+    <menuitem id="menu_defintion_of_salary_report"
+              name="Reports"
+              sequence="101"
+              action="action_hr_forms_wizard"
+              parent="hr.menu_hr_root"
+              groups="hr.group_hr_manager"/>
+</odoo>

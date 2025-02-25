@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kb_hr_experience_certificate_reports_form" model="ir.ui.view">
+        <field name="name">kb_hr_experience_certificate_reports.form</field>
+        <field name="model">kb_hr_experience_certificate_reports</field>
+        <field name="arch" type="xml">
+            <form string="Experience Certificate">
+                <group>
+                    <field name="employee_id"/>
+                </group>
+                <footer>
+                    <button name="print_wizard_pdf" type="object" string="PDF" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="experience_certificate_report_action" model="ir.actions.act_window">
+        <field name="name">Experience Certificate</field>
+        <field name="res_model">kb_hr_experience_certificate_reports</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="kb_hr_experience_certificate_reports_form"/>
+    </record>
+<!-- 
+    <menuitem id="menu_experience_certificate_report"
+              name="Experience Certificate"
+              sequence="102"
+              action="experience_certificate_report_action"
+              parent="hr.menu_hr_root"/> -->
+
+</odoo>

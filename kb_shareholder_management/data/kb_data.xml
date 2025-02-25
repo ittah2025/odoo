@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="1">
+        <record id="seq_shareholderID" model="ir.sequence">
+            <field name="name">Shareholder ID</field>
+            <field name="code">kb_shareholderID.seq</field>
+            <field name="prefix">00</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_kb_sale_management" model="ir.sequence">
+            <field name="name">Sale Management Sequence</field>
+            <field name="code">kb.sale.management</field>
+            <field name="prefix">SAL/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

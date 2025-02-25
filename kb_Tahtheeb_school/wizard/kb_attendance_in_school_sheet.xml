@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="attendance_sheet_school_action" model="ir.actions.act_window">
+        <field name="name">Attendance Sheet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendance.sheet</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{'create': True}</field>
+    </record>
+    <record id="attendance_sheet_school_tree" model="ir.ui.view">
+        <field name="name">attendance.sheet.school.tree</field>
+        <field name="model">attendance.sheet.school</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Sheet" editable="bottom">
+                <field name="kb_studentID" />
+                <field name="kb_check_in" />
+                <field name="kb_check_out" />
+                <field name="kb_TransportRoot" />
+                <field name="kb_weekday" />
+
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="attendance_sheet_school_submenu" name="Attendance Sheet" parent="in_school_menu" action="attendance_sheet_school_action" sequence="23" />
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <record id="action_shareholder_management" model="ir.actions.act_window">
+        <field name="name">Shareholder Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb.shareholder.management.fields</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+
+
+    <menuitem id="system_roots"
+        name="Shareholder Management"
+        sequence="5"
+        web_icon="kb_shareholder_management,static/description/shareholder.png"
+        />
+
+    <menuitem name="Shareholder Management"
+        id="menu_shareholder_management"
+        parent="system_roots"
+        sequence="2" />
+
+    <menuitem name="Shareholder Management"
+        id="submenu_shareholder_management"
+        parent="menu_shareholder_management"
+        sequence="2"
+        action="action_shareholder_management"/>
+</odoo>

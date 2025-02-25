@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_auto_email" model="ir.cron">
+            <field name="name">Notice of expiry of a document</field>
+            <field name="model_id" ref="model_kb_company_documents" />
+            <field name="state">code</field>
+            <field name="code">model.mail_reminder()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

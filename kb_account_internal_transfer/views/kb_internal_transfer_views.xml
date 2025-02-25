@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kb_internal_transfer_form_view" model="ir.ui.view">
+        <field name="name">internal.transfer.form.view</field>
+        <field name="model">kb_internal_transfer</field>
+        <field name="arch" type="xml">
+            <form string="Internal Transfer">
+                <header>
+                    <button id="button_conf" name="action_confirm" string="Confirm" type="object" class="btn-primary"
+                    
+                           attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button id="button_done" name="action_done" string="Done" type="object" class="btn-primary"
+           
+                         attrs="{'invisible': [('state', '!=', 'confirm')]}"/>
+                    <button id="button_cancel" name="action_cancel" string="Cancel" type="object" class="btn-primary"
+                         attrs="{'invisible': [('state','not in',['draft', 'confirm'])]}"/>
+
+<!--                    attrs="{'invisible': [('state', 'not in', ('draft','confirm'))]}"-->
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done" />
+                </header>
+                <sheet>
+                    <!-- <div class="oe_button_box" name="button_box">
+                    <button type="object" class="oe_state_button" icon="fa-pencil-square-o" name="get_move" string="Sale Order">
+                        <field string="Journal Item" name="int_count" widget="statinfo"/>
+                    </button>
+                </div> -->
+                    <group>
+                         <group >
+                            <field name="kb_name" required="1"/>
+                            <field name="kb_partner_id" />
+                            <field name="amount" />
+                            <field name="kb_date" />
+                            <field name="payment_reference" />
+                            </group>
+                        <group >
+                            <field name="journal_id" options="{'no_create': True, 'no_create_edit':True,'no_open': True,}" required="1"/>
+                            <field name="destination_journal_id" options="{'no_create': True, 'no_create_edit':True,'no_open': True,}" required="1" />
+                            <field name="company_id" />
+                            <field name="currency_id" invisible="1"/>
+                            <field name="kb_account_move" readonly="1" force_save="1"/>
+                            </group>
+
+                        </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_kb_internal_transfer">
+        <field name="name">Internal Transfer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kb_internal_transfer</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="internal_rule" model="ir.rule">
+        <field name="name">Internal</field>
+        <field name="model_id" ref="kb_account_internal_transfer.model_kb_internal_transfer"/>
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+
+    <menuitem id="menu_kb_internal_transfer" action="action_kb_internal_transfer"
+              name="Internal Transfer" parent="account.menu_finance_entries" sequence="1"/>
+
+</odoo>

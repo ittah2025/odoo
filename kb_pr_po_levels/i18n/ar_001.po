@@ -1,0 +1,619 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_pr_po_levels
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20231101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 14:45+0000\n"
+"PO-Revision-Date: 2024-10-13 17:46+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_user_id
+msgid " Created By"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__deli_count
+msgid "# Delivery"
+msgstr "# التسليم"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__order_count
+msgid "# Requests"
+msgstr "# الطلبات"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "<span class=\"o_form_label\">Purchase Request</span>"
+msgstr "<span class=\"o_form_label\">طلب الشراء</span>"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:res.groups,name:kb_pr_po_levels.group_pr_po_of_administration
+msgid "Administrator"
+msgstr "إداري"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Approve Order"
+msgstr "الموافقة على الطلب"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__ceo
+msgid "CEO"
+msgstr "المدير التنفيذي"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__cancel
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__cancel
+msgid "Cancelled"
+msgstr "تم الإلغاء "
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__state
+msgid "Choose the state"
+msgstr "اختار الحالة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Confirm Order"
+msgstr "أكد الطلب"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Confirm Receipt Date"
+msgstr "تأكيد تاريخ الاستلام"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Create Bill"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Create Delivery"
+msgstr "إنشاء التسليم"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Create Internal Transfer"
+msgstr "إنشاء نقل داخلي"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.actions.act_window,help:kb_pr_po_levels.kb_pr_levels_views
+msgid "Create New Record"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Create Purchase Order"
+msgstr "إنشاء أمر الشراء"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__create_uid
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__create_date
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kb_pr_po_levels
+#. odoo-python
+#: code:addons/kb_pr_po_levels/models/pr_level.py:0
+#, python-format
+msgid "Delivery"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_destination_id
+msgid "Destination Location"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__dir_m
+#: model:res.groups,name:kb_pr_po_levels.group_pr_po_of_direct_manager
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__display_name
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__done
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__internal_hide_button
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__stock_hide_button
+msgid "Hide"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__id
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__message_has_error
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_product_line_ids
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_line_ids
+msgid "Kb Product Line"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level____last_update
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__write_uid
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__write_date
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Lock"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__done
+msgid "Locked"
+msgstr "مقفل"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#. odoo-python
+#: code:addons/kb_pr_po_levels/models/pr_level.py:0
+#, python-format
+msgid "Must Select Source Location And Destination Location!"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#. odoo-python
+#: code:addons/kb_pr_po_levels/models/pr_level.py:0
+#, python-format
+msgid "Must Select Source Location!"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kb_pr_po_levels
+#. odoo-python
+#: code:addons/kb_pr_po_levels/models/pr_level.py:0
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__new
+#, python-format
+msgid "New"
+msgstr "مسودة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__note
+msgid "Note"
+msgstr "ملحوظة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_purchase_req_tree
+msgid "Orders"
+msgstr "الطلبات"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Print RFQ"
+msgstr "طباعة RFQ"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: kb_pr_po_levels
+#: model:ir.module.category,description:kb_pr_po_levels.module_po_pr_request_access
+msgid "Purchase"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model,name:kb_pr_po_levels.model_purchase_order
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__purchase
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: kb_pr_po_levels
+#: model:ir.actions.act_window,name:kb_pr_po_levels.kb_pr_levels_views
+#: model:ir.ui.menu,name:kb_pr_po_levels.kb_kb_pr_req_level_config
+#: model:ir.ui.menu,name:kb_pr_po_levels.kb_pr_req_level_root
+msgid "Purchase Request"
+msgstr "طلبات الشراء"
+
+#. module: kb_pr_po_levels
+#: model:ir.module.category,name:kb_pr_po_levels.module_po_pr_request_access
+msgid "Purchase Request "
+msgstr "طلبات الشراء"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_qty
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_qty_on_hand
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__draft
+msgid "RFQ"
+msgstr "طلب عرض سعر"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__sent
+msgid "RFQ Sent"
+msgstr "تم إرسال طلب عرض السعر"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Re-Send by Email"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__reject
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kb_pr_po_levels
+#: model:ir.model,name:kb_pr_po_levels.model_kb_pr_level
+msgid "Request"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_pr_levels_ids
+msgid "Request ID"
+msgstr "رقم الطلب"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_purchase_order__kb_requests_id
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_stock_picking__kb_requests_id
+msgid "Request id"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#. odoo-python
+#: code:addons/kb_pr_po_levels/models/pr_level.py:0
+#, python-format
+msgid "Requests"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Send PO by Email"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Send by Email"
+msgstr "ارسل بالبريد الإلكترونى"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Set to Draft"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_location_id
+msgid "Source Location"
+msgstr "المخزن"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_purchase_order__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__line_subtotal
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_subtotal
+msgid "Subtotal"
+msgstr "المجموع "
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__supervisor
+#: model:res.groups,name:kb_pr_po_levels.group_pr_po_of_supervisors
+msgid "Supervisor"
+msgstr "المشرف"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__kb_pr_level__state__scm
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__scm
+#: model:res.groups,name:kb_pr_po_levels.group_pr_po_of_scm
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Supply Chain Manager"
+msgstr "مدير سلسلة التوريد"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_tax
+msgid "Taxes"
+msgstr "الضريبة"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields.selection,name:kb_pr_po_levels.selection__purchase_order__state__to_approve
+msgid "To Approve"
+msgstr "بانتظار الموافقة "
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "To CEO"
+msgstr "الى المدير التنفيذي"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "To Supervisor"
+msgstr "الى المشرف"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.view_kb_pr_form
+msgid "To Supply Chain Manager"
+msgstr "الى مدير سلسلة التوريد"
+
+#. module: kb_pr_po_levels
+#: model:ir.model,name:kb_pr_po_levels.model_stock_picking
+msgid "Transfer"
+msgstr "نقل"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level_line__kb_product_price
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: kb_pr_po_levels
+#: model_terms:ir.ui.view,arch_db:kb_pr_po_levels.id_purchase_order_form_view_pr_inherits
+msgid "Unlock"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__kb_vendor_id
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,help:kb_pr_po_levels.field_kb_pr_level__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_purchase_order__kb_amount_check
+msgid "amount"
+msgstr "المبلغ"
+
+#. module: kb_pr_po_levels
+#: model:ir.model,name:kb_pr_po_levels.model_kb_pr_level_line
+msgid "kb_pr_level_line"
+msgstr ""
+
+#. module: kb_pr_po_levels
+#: model:ir.model.fields,field_description:kb_pr_po_levels.field_kb_pr_level__purchase_hide_button
+msgid "purchase Hide"
+msgstr ""

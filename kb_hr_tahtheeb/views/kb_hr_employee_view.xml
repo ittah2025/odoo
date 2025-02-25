@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_id" model="ir.ui.view">
+        <field name="name">Employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='work_location_id']" position="after">
+                 <field name="kb_branchID" />
+
+             </xpath>
+             <xpath expr="//field[@name='job_id']/.." position="after">
+                    <h6>Teacher job Description : <field name="kb_teacher_job_description" style=" width:40%"/></h6>
+            </xpath>
+            <xpath expr="//field[@name='bank_account_id']" position="after">
+                    <field name="kb_iban" />
+            </xpath>
+            <field name="country_id" position="after">
+                <field name="nationality_name"/>
+                <field name="experiance"/>
+            </field>
+        </field>
+    </record>
+</odoo>

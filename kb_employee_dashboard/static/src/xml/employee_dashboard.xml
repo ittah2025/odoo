@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="EmployeeDashboard">
+       <div class="oh_dashboards">
+           <div class="container-fluid my-5 o_hr_dashboard"/>
+       </div>
+    </t>
+    <t t-name="MainSection">
+        <div class="my-side-menu" style="margin-left:7%;">
+            <div class="user-info">
+                <span id="employee-img"/>
+                <p class="fw-bold fs-5 mt-2 employee-name"/>
+                <p class="fs-6 employee-job"/>
+                <p class="fs-6 employee-department"/>
+                <div class="mt-3">
+                    Manager: <span class="fs-6 employee-manager"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <h2 class="mb-4">Employee Dashboard</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white time-off-card">
+                        <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/time-off.png" alt="Employees Icon"/>
+                            <div>
+                                <h5 class="card-title">Time Off</h5>
+                                <p class="card-text employee-time-off"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-success text-white contract-card">
+                        <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/contract.png" alt="Projects Icon"/>
+                            <div>
+                                <h5 class="card-title">Contract</h5>
+                                <p class="card-text employee-contract"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white payslip-card">
+                        <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/payslip.png" alt="Messages Icon"/>
+                            <div>
+                                <h5 class="card-title">Payslip</h5>
+                                <p class="card-text payslip-count"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-danger text-white project-card">
+                        <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/contract.png" alt="Projects Icon"/>
+                            <div>
+                                <h5 class="card-title">My Tasks</h5>
+                                <p class="card-text employee-task"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white ticket-card">
+                        <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/contract.png" alt="Projects Icon"/>
+                            <div>
+                                <h5 class="card-title">My Helpdesk</h5>
+                                <p class="card-text employee-ticket"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-3 my-reports"> -->
+
+                    <!-- Button trigger modal -->
+                    <!-- <div class="card bg-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                         <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/reports.png" alt="Events Icon"/>
+                             <div>
+                                <h5 class="card-title">Reports</h5>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Reports</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                          </div>
+                            <div class="modal-body">
+                                <label for="reportSelection">Select Report:</label>
+                                <select class="form-control report-selection">
+                                    <option value="medical_insurance_request">Medical Insurance Request</option>
+                                    <option value="effective_date_notice">Effective Date Notice</option>
+                                    <option value="leave_application_request">Leave Application Request</option>
+                                    <option value="emplyment_contract">Employment Contract</option>
+                                    <option value="final_settlement">Final Settlement</option>
+                                    <option value="resignation_form">RESIGNATION / END OF CONTRACT</option>
+                                    <option value="print_disclaimer_argeement">DISCLAIMER AGREEMENT</option>
+                                    <option value="print_clearance_form">Clearance Form</option>
+                                    <option value="rdf">Residence Delivery Form</option>
+                                    <option value="nrr">Non-Renewal Residence</option>
+                                    <option value="fev">Final Exit Visa</option>
+                                    <option value="eerv">Extension of Exit and Return visa</option>
+                                    <option value="ror">Renewal of Residence</option>
+                                    <option value="cfev">Cancellation of Final Exit Visa</option>
+                                    <option value="job_offer">Job Offer</option>
+                                </select>
+                            </div>
+
+                            <div class="modal-footer">
+                             <button class="btn btn-primary mt-2 submit-report">Print Report</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> -->
+                <!--                Loan-->
+
+                <div class="col-md-3 my-reports">
+                    <!-- Button trigger modal -->
+                    <div class="card bg-warning text-white" data-bs-toggle="modal" data-bs-target="#askLoan">
+                         <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/reports.png" alt="Events Icon"/>
+
+                             <div>
+                                <h5 class="card-title">Loan request</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <form role="form">
+                    <div class="modal fade" id="askLoan" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Loan request</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                          </div>
+                            <div class="modal-body">
+                                <label for="lamount">Employee</label>
+                                <p class="fw-bold fs-5 mt-2 employee-name"/>
+                                <label for="lamount">Loan Amount</label>
+                                <input type="number" step="0.01" id="lamount" name="lamount" required=""/>
+                                <label for="installments">No Of Installments</label>
+                                <input type="number" id="installments" name="installments" required=""/>
+                                <label for="sdate">Payment Start Date</label>
+                                <br/>
+                                <input type="date" id="sdate" name="sdate" required=""/>
+                            </div>
+                            <div class="modal-footer">
+                             <button class="btn btn-primary mt-2 ask-for-loan" data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </form>
+                </div>
+
+                <!--                Resignation-->
+                <div class="col-md-3 my-reports">
+                    <!-- Button trigger modal -->
+                    <div class="card bg-danger text-white" data-bs-toggle="modal" data-bs-target="#askResignation">
+                         <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/reports.png" alt="Events Icon"/>
+
+                             <div>
+                                <h5 class="card-title">Resignation request</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <form role="form">
+                    <div class="modal fade" id="askResignation" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Resignation request</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                          </div>
+                            <div class="modal-body">
+                                <label for="lamount">Employee</label>
+                                <p class="fw-bold fs-5 mt-2 employee-name"/>
+                                <label for="sdate">Last Day of Employee</label>
+                                <br/>
+                                <input type="date" id="rdate" name="rdate" required=""/>
+                                <br/>
+                                <label for="sdate">Reason for resignation</label>
+                                <br/>
+                                <input type="text" id="sreason" name="sreason" required=""/>
+
+                            </div>
+                            <div class="modal-footer">
+                             <button class="btn btn-primary mt-2 ask-for-resignation"
+                                     data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </form>
+                </div>
+
+
+
+                <!--                meeting-->
+                <div class="col-md-3 my-reports">
+                    <!-- Button trigger modal -->
+                    <div class="card bg-success text-white" data-bs-toggle="modal" data-bs-target="#askMeeting">
+                         <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/reports.png" alt="Events Icon"/>
+
+                             <div>
+                                <h5 class="card-title">Meeting request</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <form role="form">
+                    <div class="modal fade" id="askMeeting" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Meeting request</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                          </div>
+                            <div class="modal-body">
+                                <label for="lamount">Employee</label>
+                                <p class="fw-bold fs-5 mt-2 employee-name"/>
+                                <p class="fw-bold fs-5 mt-2 passenger-detail"/>
+
+                                <label for="ttitle">Meeting Subject</label>
+                                <input type="text" id="msubject" name="msubject" required=""/>
+                                <br/>
+                                <label for="startingdate">Start</label>
+                                <input type="date" id="startingdate" name="startingdate" required=""/>
+                                <input type="time" id="startingtime" name="startingtime" required=""/>
+                                <label for="endingdate">End</label>
+                                <input type="date" id="endingdate" name="endingdate" required=""/>
+                                <input type="time" id="endingtime" name="endingtime" required=""/>
+                                <div class="approvedItems">
+                                <p class="h5 mb-3">Select Partner</p>
+                                    <select id="xpartner" name="xpartner" class="form-control partner-selection"
+                                            multiple="multiple">
+
+                                </select>
+                            </div>
+                                <div class="transferBtns">
+                                  <input type='button' id='AttendsRight' value='ADD'/>
+                                    <input type='button' id='AttendsLeft' value='REMOVE'/>
+                                </div>
+                                <div class="approvedItems">
+                                        <b>Attends</b>
+                                    <br/>
+                                    <select multiple="multiple" id='AttendsBox2'>
+                                        </select>
+                                </div>
+
+
+                                <div class="modal-footer">
+                             <button class="btn btn-primary mt-2 ask-for-meeting" data-dismiss="modal">Submit</button>
+                                    <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                            </div>
+                      </div>
+                    </div>
+              </form>
+                </div>
+
+                <!--                Task-->
+                <div class="col-md-3 my-reports">
+                    <!-- Button trigger modal -->
+                    <div class="card bg-warning text-white" data-bs-toggle="modal" data-bs-target="#askProject">
+                         <div class="card-body d-flex align-items-center">
+                            <img src="/kb_employee_dashboard/static/src/img/reports.png" alt="Events Icon"/>
+
+                             <div>
+                                <h5 class="card-title">Task request</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <form role="form">
+                    <div class="modal fade" id="askProject" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Task create</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                          </div>
+                            <div class="modal-body">
+                                <label for="lamount">Employee</label>
+                                <p class="fw-bold fs-5 mt-2 employee-name"/>
+                                <p class="fw-bold fs-5 mt-2 passenger-detail"/>
+
+
+                                <label for="ttitle">Task title</label>
+                                <input type="text" id="ttitle" name="ttitle" required=""/>
+                                <div class="subject-info-box-1">
+                                <p class="h5 mb-3">Project</p>
+                                    <select id="xprojects" name="xprojects" class="form-control project-selection">
+                                    <option>Select project</option>
+                                </select>
+                                </div>
+                                <div class="subject-info-box-1">
+                                <p class="h5 mb-3">Assigness</p>
+                                    <select id="xassignees" name="xassignees" class="form-control user-selection"
+                                            multiple="multiple">
+<!--                                    <option>Select User</option>-->
+                                </select>
+                            </div>
+                                <div class="transferBtns">
+                                  <input type='button' id='btnRight' value='ADD'/>
+                                    <br/>
+                                    <input type='button' id='btnLeft' value='REMOVE'/>
+                                </div>
+                                <div class="approvedItems">
+                                        <b>People how Assigned</b>
+                                    <br/>
+                                    <select multiple="multiple" id='lstBox2'>
+                                        </select>
+                                </div>
+
+                                </div>
+
+                            <div class="modal-footer">
+                             <button class="btn btn-primary mt-2 ask-for-tasking" data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </form>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+
+                <div>
+                    <p class="h5 mb-3">Attendance</p>
+                    <div class="my-attendance pb-2">
+                        <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Check In</th>
+                                <th scope="col">Check Out</th>
+                                <th scope="col">Worked Hours</th>
+                            </tr>
+                        </thead>
+                            <tbody class="attend-body">
+                        </tbody>
+                    </table>
+                        <p class="mt-3 mb-2 h5 more-attendance" style="cursor: pointer;">More</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <p class="h5 mb-3">Leaves of this year</p>
+                    <div class="allocation-details">
+                        <div class="my-total-alloctions"/>
+                        <div class="progress-circle">
+                          <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring__circle" stroke="#007bff" stroke-width="8" fill="transparent"
+                                    r="52" cx="60"
+                                    cy="60"></circle>
+                          </svg>
+                            <div class="progress-value">
+                            <span class="percentage">0%</span>
+                          </div>
+                        </div>
+                        <div class="my-alloctions"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

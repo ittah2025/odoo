@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <record id="paperformat_draft_salary" model="report.paperformat">
+            <field name="name">Certfecate</field>
+            <field name="format">custom</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+       </record>
+        <record id="kb_draft_salary_report_wizard" model="ir.actions.report">
+        <field name="name">Draft Salary Report</field>
+        <field name="model">kb_draft_salary_report_wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_salary_print_draft.print_draft_salary_report</field>
+        <field name="report_file">kb_salary_print_draft.print_draft_salary_report</field>
+        <field name="print_report_name">'Draft Salary Report'</field>
+        <field name="binding_model_id" ref="model_kb_draft_salary_report_wizard" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="kb_salary_print_draft.paperformat_draft_salary" />
+        </record>
+        <template id="print_draft_salary_report">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                     <t t-foreach="information" t-as="inf">
+                    <link href="https://fonts.googleapis.com/css2?family=Almarai" rel="stylesheet"/>
+                    <div class="page" style=" font-family: 'Tajawal', sans-serif;">
+<!--                        <div style=" font-family: 'Tajawal', sans-serif;">-->
+                            <h4 style="text-align:center;"><span t-esc="inf['dates']"/> كشف رواتب لشهر  </h4>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <table style="text-align:center; width: 100%;">
+                                <tr>
+                                    <th style="text-align:right; ">
+                                        <span t-esc="inf['company']"/>
+                                    </th>
+                                    <th style="text-align:right;">الفرع </th>
+                                     <th style="text-align:right;">
+                                        <span t-esc="inf['dates']"/>كشف رواتب لشهر
+                                    </th>
+                                    <th style="text-align:right;">التقرير</th>
+
+                                </tr>
+                                <tr>
+                                     <th style="text-align:right; ">
+<!--                                        <span t-field="o.identification_id"/>-->
+                                    </th>
+                                    <th style="text-align:right;">القسم </th>
+                                    <th style="text-align:right; ">
+                                        <span t-esc="inf['month']"/>
+                                    </th>
+                                      <th style="text-align:right; ">الشهر </th>
+
+                                </tr>
+                                <tr>
+
+                                    <th style="text-align:right;"> </th>
+                                    <th style="text-align:right;"> </th>
+                                    <th style="text-align:right; ">
+                                         <span t-esc="inf['all']"/>
+                                    </th>
+                                     <th style="text-align:right; ">طرق الدفع </th>
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align:right;"> </th>
+                                    <th style="text-align:right;"> </th>
+                                     <th style="text-align:right; ">
+                                        <span t-esc="inf['all']"/>
+                                    </th>
+                                      <th style="text-align:right; ">حالة الموظف </th>
+
+                                </tr>
+                                <tr>
+
+
+                                    <th style="text-align:right;"> <span t-esc="inf['all']"/></th>
+                                     <th style="text-align:right;"> حالة الكشف </th>
+                                     <th style="text-align:right; ">
+                                       <span t-esc="inf['all']"/>
+                                    </th>
+                                     <th style="text-align:right; ">صندوق التنمية</th>
+
+                                </tr>
+                                <tr>
+                                    <th style="text-align:right;"> <span t-esc="inf['kb_country_id']"/></th>
+                                    <th style="text-align:right;">الجنسية  </th>
+                                    <th style="text-align:right; ">
+                                        <span t-esc="inf['all']"/>
+                                    </th>
+                                     <th style="text-align:right; ">ملف مكتب العمل  </th>
+
+                                </tr>
+
+                            </table>
+                        <br/>
+                        <br/>
+                            <div>
+                                <table style="text-align:center; border: 1px solid; width: 100%;">
+
+                                    <tr>
+                                        <th style="border: 1px solid;">الصافي</th>
+                                        <th style="border: 1px solid;">مجموع الاقتطاعات</th>
+                                        <th style="border: 1px solid;">عقوبات و جزاءات </th>
+                                        <th style="border: 1px solid;">سلفة</th>
+                                        <th style="border: 1px solid;">التأمينات الاجتماعية</th>
+                                        <th style="border: 1px solid;">اجمالي الراتب المستحق </th>
+                                        <th style="border: 1px solid;">بدلات إعاشه </th>
+                                        <th style="border: 1px solid;">بدلات اخرى </th>
+                                        <th style="border: 1px solid;">بدل نقل </th>
+                                        <th style="border: 1px solid;">بدل سكن </th>
+                                        <th style="border: 1px solid;">الراتب الاساسي </th>
+                                        <th style="border: 1px solid;">ايام الدوام</th>
+                                        <th style="border: 1px solid;">المنصب</th>
+                                        <th style="border: 1px solid;">الموظف</th>
+                                        <th style="border: 1px solid;">رقم الموظف</th>
+                                        <th style="border: 1px solid;">رقم</th>
+                                    </tr>
+                                    <t t-set="i" t-value="1"/>
+                                    <t t-foreach="employees" t-as="line">
+
+
+                                        <tr>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['total_salary']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['total_deduction']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['Punishments']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['INSUR']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['LO']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['NET']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['DA']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['Other']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['Travel']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['HRA']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['BASIC']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['number_day']"/>
+                                            </td>
+                                              <td style="border: 1px solid;">
+                                                <span t-esc="line['employee_job_title']"/>
+                                            </td>
+                                             <td style="border: 1px solid;">
+                                                <span t-esc="line['employee_name']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-esc="line['employee_id']"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                            <span t-esc="i"/>
+                                            <t t-set="i" t-value="i+1"/>
+                                            </td>
+
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                        </div>
+<!--                    </div>-->
+                </t>
+            </t>
+            </t>
+        </template>
+</odoo>

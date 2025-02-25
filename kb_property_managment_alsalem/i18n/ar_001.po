@@ -1,0 +1,1224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kb_property_managment_alsalem
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-29 07:49+0000\n"
+"PO-Revision-Date: 2022-11-29 07:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__room_view_countss
+msgid "# Contract"
+msgstr "العقد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__maintenance_countss
+msgid "# maintenance"
+msgstr "الصيانة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__period_of_contract__1month
+msgid "1 Month"
+msgstr "شهر "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation_period__1month_450
+msgid "1 Month 450SR"
+msgstr "شهر واحد 450 ريال"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__period_of_contract__3months
+msgid "3 Months"
+msgstr "ثلاثة اشهر "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation_period__3months_1350
+msgid "3 Months 1350SR"
+msgstr "ثلاثة اشهر 1350 ريال  "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__period_of_contract__4months
+msgid "4 Months"
+msgstr "أربعة اشهر "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation_period__4months_1800
+msgid "4 Months 1800SR"
+msgstr "أربعة اشهر 1800 ريال"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__period_of_contract__6months
+msgid "6 Months"
+msgstr "ستة اشهر"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation_period__6months_2700
+msgid "6 Months 2700SR"
+msgstr "ستة اشهر 2700  ريال"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid ": بموجب هذا العقد على الطرف الثاني الإلتزام بالآتي"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/apartments.py:0
+#: code:addons/kb_property_managment_alsalem/models/apartments.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                           Click to Create for New service\n"
+"                        </p>"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_needaction
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_needaction
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_exception_decoration
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_state
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_state
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_type_icon
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_type_icon
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+msgid "All Payment"
+msgstr "جميع الدفعات "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_payment_report_form
+msgid "All Payments"
+msgstr "جميع الدفعات "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.profit
+msgid "Apartment"
+msgstr "وحدة سكنية "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__apartment_cost
+msgid "Apartment Cost"
+msgstr "تكلفة الشقة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_apartments
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__apartment_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__apartment_ids
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.apartments_subSubMenu
+msgid "Apartments"
+msgstr "وحدات سكنية"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__aprtment_id
+msgid "Aprtment"
+msgstr "وحدة سكنية "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Are sure?"
+msgstr "هل أنت متأكد؟"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Are you sure that you ?"
+msgstr "هل أنت متأكد أنك؟"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Are you sure that you need to confirm ?"
+msgstr "هل أنت متأكد أنك بحاجة إلى التأكيد؟"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_ir_attachment
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_ir_attachment__doc_attach_rel4
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__doc_attachment_id3
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_attachment_count
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_attachment_count
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.apartments_search
+msgid "Available Room"
+msgstr "الغرف المتاحة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__bathroom
+msgid "Bathroom"
+msgstr "دورة المياة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__bathroom
+msgid "Bathroom Number"
+msgstr "عدد دورات المياة "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Calculate"
+msgstr "حساب "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__state__cancel
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_payment_report_form
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_profit_report_form
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__state
+msgid "Choose the state"
+msgstr "اختر الحالة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__state__confirm
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Confirm"
+msgstr "يتأكد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_contract
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.property_subMenu
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.property_subSubMenu
+msgid "Contract"
+msgstr "العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Contract Data"
+msgstr "معلومات العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Contract Information:"
+msgstr "معلومات العقد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__contract_id
+msgid "Contract No "
+msgstr "رقم العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Contract No:"
+msgstr "تقرير العقد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.print_property
+msgid "Contract Reports"
+msgstr "تقارير العقود"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__contract_sellingDate
+msgid "Contract Selling Date"
+msgstr "تاريخ ابرام العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.res_partner_view_button_main
+msgid "Contracts"
+msgstr "العقود"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__total_cost
+msgid "Cost"
+msgstr "تكلفة الغرفة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__cost
+msgid "Cost Of the room"
+msgstr "تكلفة الغرفة "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Create Invoice"
+msgstr "انشاء فاتورة "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_apartments
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_contract
+msgid "Create a New Contract"
+msgstr "انشاء عقد جديد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_Property
+msgid "Create a New property"
+msgstr "انشاء منشأة عقارية "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.server,name:kb_property_managment_alsalem.ir_cron_auto_invoice_id_ir_actions_server
+#: model:ir.actions.server,name:kb_property_managment_alsalem.ir_cron_auto_invoices_ids_ir_actions_server
+#: model:ir.cron,cron_name:kb_property_managment_alsalem.ir_cron_auto_invoice_id
+#: model:ir.cron,cron_name:kb_property_managment_alsalem.ir_cron_auto_invoices_ids
+#: model:ir.cron,name:kb_property_managment_alsalem.ir_cron_auto_invoice_id
+#: model:ir.cron,name:kb_property_managment_alsalem.ir_cron_auto_invoices_ids
+msgid "Create: Invoice with payment"
+msgstr "إنشاء: فاتورة مع الدفع"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__create_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__create_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.customer_subMenu
+msgid "Customer"
+msgstr "العميل"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+msgid "Customer Name"
+msgstr "اسم العميل "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Customer Name :"
+msgstr "اسم العميل "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.late_payment
+msgid "Customer Name:"
+msgstr "اسم العميل "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__date_of
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+msgid "Date Of Paid"
+msgstr "تاريخ الاستحقاق "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__date_of_paid
+msgid "Date of Paid"
+msgstr "تاريخ الاستحقاق "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__description_general
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__display_name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__display_name
+msgid "Display Name"
+msgstr "الاسم "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__state__done
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Done"
+msgstr "منتهي"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_follower_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_follower_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_partner_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_partner_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__activity_type_icon
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__activity_type_icon
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__date_from
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__date_froms
+msgid "From Date"
+msgstr "من التاريخ"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__has_message
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__has_message
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__id
+msgid "ID"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__inv_id
+msgid "INV No "
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_exception_icon
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__activity_exception_icon
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__activity_exception_icon
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_needaction
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_unread
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_needaction
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_unread
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_needaction
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_has_error
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_has_sms_error
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_has_error
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_has_sms_error
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_has_error
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_is_follower
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_is_follower
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard____last_update
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__write_uid
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__write_date
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.late_payment
+msgid "Late Payment Report"
+msgstr "تقرير السدادات المتأخرة "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_payment_report_form
+msgid "Late Payments"
+msgstr "المدفوعات المتأخرة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_main_attachment_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_maintenances
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__maintenance_ids
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.maintenance_subMenu
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_maintenances
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.maintenances_form_view
+msgid "Maintenance"
+msgstr "الصيانة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_maintenance
+#: model:ir.model,name:kb_property_managment_alsalem.model_maintenance_fields
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__maintenance_line
+msgid "Maintenance Details"
+msgstr "تفاصيل الصيانة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_has_error
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_has_error
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/contract.py:0
+#, python-format
+msgid "Missing phone number"
+msgstr "رقم الهاتف مفقود"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__name
+msgid "Name"
+msgstr "الاسم "
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/apartments.py:0
+#: code:addons/kb_property_managment_alsalem/models/contract.py:0
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__state__new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_date_deadline
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_summary
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_summary
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_type_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_type_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation__no
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.late_payment
+msgid "No"
+msgstr "لا"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__no
+msgid "No."
+msgstr "رقم"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__note
+msgid "Note"
+msgstr "ملاحظة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__note3
+msgid "Note3"
+msgstr "ملاحظة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_needaction_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__rent_payments
+msgid "Number of Rent Payments"
+msgstr "عدد مدفوعات الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_has_error_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_needaction_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_needaction_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_has_error_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_has_error_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__message_unread_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__message_unread_counter
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__oneTimeEdit
+msgid "Onetimeedit"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__isPaid
+msgid "Paid?"
+msgstr "مدفوع؟"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__payment_date
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.late_payment
+msgid "Payment Date:"
+msgstr "تاريخ الدفع"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_payment_late
+#: model:ir.actions.report,name:kb_property_managment_alsalem.action_all_payment_report
+#: model:ir.actions.report,name:kb_property_managment_alsalem.action_late_payment_report
+msgid "Payment Report"
+msgstr "تقرير المدفوعات "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.print_payment
+msgid "Payment Reports"
+msgstr "تقرير المدفوعات "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__property_line_ids
+msgid "Payments Lines"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__period_of_contract
+msgid "Period Of contract"
+msgstr "مدة العقد"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__transportation_period
+msgid "Period of Transportation"
+msgstr "مدة المواصلات "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__price
+msgid "Price"
+msgstr "السعر "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Print Excel"
+msgstr "طباعة اكسل "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Print PDF"
+msgstr "طباعة PDF "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__rooms__bathroom__private
+msgid "Private"
+msgstr "خاص "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.profit
+msgid "Profit"
+msgstr "منشأة عقارية"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_profit
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_profit_report_form
+msgid "Profit Report"
+msgstr "تقرير الربح"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.print_profit
+msgid "Profit Reports"
+msgstr "تقرير الربح"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.report,name:kb_property_managment_alsalem.action_profite_report
+msgid "Profite Report"
+msgstr "تقرير الربح"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_Property
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__property_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__property_id
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.Propertys_subMenu
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.apartments_subMenu
+msgid "Property"
+msgstr "إدارة العقار "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.system_root
+msgid "Property Managment"
+msgstr "إدارة العقار "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_payment_report_form
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_profit_report_form
+msgid "Property Name"
+msgstr "اسم المنشأة العقارية"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__property_unit
+msgid "Property Unit"
+msgstr "الوحدة العقارية"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__amount
+msgid "Quantity"
+msgstr "الكمية "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Regular Rent Payment:"
+msgstr "دفع الإيجار المنتظم:"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__regRent_payment
+msgid "Rent Payment"
+msgstr "دفع الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Rent payments:"
+msgstr "مدفوعات الإيجار:"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__room_rent
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__rented_room
+msgid "Rented"
+msgstr "مستأجرة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.print_root
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__activity_user_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__activity_user_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/apartments.py:0
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__room_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__maintenance_id
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.profit
+#, python-format
+msgid "Room"
+msgstr "الغرفة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__room_cost
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.profit
+msgid "Room Cost"
+msgstr "تكلفة الغرفة "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Room Cost:"
+msgstr "تكلفة الغرفة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__properyId
+msgid "Room Name"
+msgstr "الغرف"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_room_view
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.room_view_subMenu
+msgid "Room View"
+msgstr "الغرف "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__room_id
+msgid "Room lines"
+msgstr "تفاصيل الغرف"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_room_view
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.apartments_search
+msgid "Rooms"
+msgstr "الغرف"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.apart_form_view
+msgid "Rooms Details"
+msgstr "تفاصيل الغرف"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_has_sms_error
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Set As new"
+msgstr "تعيين كجديد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Shara In Whatsapp"
+msgstr "المشاركة عبر الواتس اب "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__rooms__bathroom__shared
+msgid "Shared"
+msgstr "مشترك "
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/contract.py:0
+#, python-format
+msgid "Something went wrong"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__state
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__state__state
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "State"
+msgstr "الحالة "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__activity_state
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__activity_state
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__summ
+msgid "Summ"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.report,name:kb_property_managment_alsalem.action_summary_report_xlsx
+msgid "Summary Excel"
+msgstr "ملخص اكسل "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_summary_report_
+msgid "Summary Print"
+msgstr "طباعة الملخص "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.report,name:kb_property_managment_alsalem.action_summary_report
+#: model:ir.model,name:kb_property_managment_alsalem.model_summary_report_wizard
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Summary Report"
+msgstr "تقرير مبسط"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_report_kb_property_managment_alsalem_report_summary_xlsx
+msgid "Summary XLSX Report"
+msgstr "تقرير مبسط اكسل "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__Tenancy_endDate
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Tenancy End Date"
+msgstr "تاريخ انتهاء الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Tenancy End Date:"
+msgstr "تاريخ انتهاء الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__Tenancy_startDate
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Tenancy Start Date"
+msgstr "تاريخ بداية الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Tenancy Start Date:"
+msgstr "تاريخ بداية الإيجار"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__customer_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__customer_id
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__customer_id
+msgid "Tenant Data"
+msgstr "بيانات المستأجر"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "Tenant Name"
+msgstr "اسم المستأجر "
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "Terms and Conditions"
+msgstr "الشروط والاحكام"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__date_to
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_summary_report_wizard__date_tos
+msgid "To Date"
+msgstr "الى التاريخ"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_apartments__final_total_apartment
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance__final_total
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_maintenance_fields__totalGeneral
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property_lines_ids__total
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.all_payment
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.profit
+msgid "Total"
+msgstr "المجموع "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__total_contract_value
+msgid "Total Contract Value"
+msgstr "إجمالي قيمة العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.report_details
+msgid "Total Contract Value:"
+msgstr "إجمالي قيمة العقد"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.apart_form_view
+msgid "Total of Cost"
+msgstr "إجمالي التكلفة"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.cont_tree_view
+msgid "Total of cost"
+msgstr "إجمالي التكلفة"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.trans_tree_viewss
+msgid "Total of price"
+msgstr "إجمالي السعر"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.late_payment
+msgid "Total:"
+msgstr "المجموع "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.actions.act_window,name:kb_property_managment_alsalem.action_transportation
+#: model:ir.ui.menu,name:kb_property_managment_alsalem.transportation_subMenu
+#: model_terms:ir.actions.act_window,help:kb_property_managment_alsalem.action_transportation
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_transportation_form
+msgid "Train Station"
+msgstr "محطة القطار "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__transportation
+msgid "Transportation"
+msgstr "المواصلات "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__activity_exception_decoration
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__activity_exception_decoration
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_unread
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_unread
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__message_unread_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__message_unread_counter
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_contract__website_message_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__website_message_ids
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_contract__website_message_ids
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_rooms__website_message_ids
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_transportation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__contract__transportation__yes
+msgid "Yes"
+msgstr "نعم "
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,help:kb_property_managment_alsalem.field_maintenance_fields__doc_attachment_id3
+msgid "You can attach the copy of your document"
+msgstr "يمكنك إرفاق نسخة من المستند الخاص بك"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_apartments
+msgid "apartments"
+msgstr "وحدات سكنية"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__apartment_no
+msgid "apartments lines"
+msgstr "خطوط الشقق"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_contract
+msgid "contract"
+msgstr "عقد"
+
+#. module: kb_property_managment_alsalem
+#: code:addons/kb_property_managment_alsalem/models/apartments.py:0
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.res_partner_view_button_main
+#, python-format
+msgid "maintenance"
+msgstr " صيانة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_property__name
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_rooms__name
+msgid "name"
+msgstr " صيانة"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_property
+msgid "property"
+msgstr "اسم"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_property_lines_ids
+msgid "property.lines.ids"
+msgstr "منشأه"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_rooms
+msgid "rooms"
+msgstr "غرف"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_payment_report_form
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_profit_report_form
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_summary_report_form
+msgid "summary"
+msgstr "ملخص"
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model,name:kb_property_managment_alsalem.model_transportation
+msgid "transportation"
+msgstr "المواصلات لمحطة القطار"
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "الإلتزام بالهدوء في الشقق والممرات"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__transportation__train_station__going
+msgid "الذهاب "
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields.selection,name:kb_property_managment_alsalem.selection__transportation__train_station__back
+msgid "العودة"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model:ir.model.fields,field_description:kb_property_managment_alsalem.field_transportation__train_station
+msgid "المواصلات لمحطة القطار"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "عدم اصطحاب الأطفال دون موافقة ساكني الشقة والإدارة"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "عدم اصطحاب الزوار إلا بعد موافقة الإدارة"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "عدم التنقل بغير الحافلات المخصصة من إدارة المجمع"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid ""
+"في حالة الإنسحاب من الشهر الأول تخصم قيمة الشهر كاملا بالإضافة إلى خصم 25% "
+"من المبلغ المتبقي"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid ""
+"في حالة الإنسحاب من الشهر الثالث تخصم قيمة الثلاثة أشهر بالإضافة إلى خصم 75%"
+" من المبلغ المتبقي"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid ""
+"في حالة الإنسحاب من الشهر الثاني تخصم قيمة الشهرين بالإضافة إلى خصم 50% من "
+"المبلغ المتبقي"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid ""
+"في حالة عدم إلتزام الطالبة بالتعليمات الموضحة ضمن العقد أو ما يصدر لاحقا من "
+"إدراة المجمع ضمن لائحة السكن الداخلية فإنها سوف تستبعد من السكن مع عدم "
+"الممطالبة بأي تعويض"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "يحق للطرف الأول إلغاء العقد في أي وقت"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "يلتزم الطرف الثاني بتوفير مواصلات السكن بالمجمع إلى الجامعةوالعكس"
+msgstr ""
+
+#. module: kb_property_managment_alsalem
+#: model_terms:ir.ui.view,arch_db:kb_property_managment_alsalem.view_contract_form
+msgid "يلتزم الطرف الثاني بدفع كامل المبلغ للعقد مقدم"
+msgstr ""

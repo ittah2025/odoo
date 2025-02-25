@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_employee_form_smartbutton_inherit" model="ir.ui.view">
+        <field name="name">inherit.hr.employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form_smartbutton"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="get_custody"
+                        icon="fa-pencil-square-o">
+                    <field string="Custody" name="kb_custody_count" widget="statinfo"/>
+                </button>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

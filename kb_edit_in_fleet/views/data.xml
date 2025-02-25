@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+ 
+        <record model="registration_type" id="data_registration_type_private">
+            <field name="kb_name">نقل خاص</field>
+        </record>
+
+        <record model="registration_type" id="data_registration_type_public">
+            <field name="kb_name">نقل عام</field>
+        </record>
+ 
+    </data>
+</odoo>

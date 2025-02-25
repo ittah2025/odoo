@@ -1,0 +1,1 @@
+from . import kb_draft_salary_report_wizard

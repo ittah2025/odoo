@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- <record id="action_car_dashboard2" model="ir.ui.view">
+        <field name="name">car.dashboard.view</field>
+        <field name="model">car_dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Car Dashboard" create="false" edit="false">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="car_dashboard_kanban" model="ir.ui.view">
+        <field name="name">car_dashboard.kanban</field>
+        <field name="model">car_dashboard</field>
+        <field name="arch" type="xml">
+            <kanban create="false">
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click" style="width:100%;">
+                            <br />
+
+                            <div class="row">
+                                    
+                                <div class="col-3"><h3><field name="no_cars" /></h3><h2>All Cars</h2></div>
+                                <div class="col-6">col-6</div>
+                                <div class="col-3">col-3</div> -->
+
+
+
+                                <!-- <div class="col-3">
+                                <h2>All Cars</h2>
+                                <h3><field name="no_cars" /></h3>
+                                <div class="fa fa-bath"></div>
+                                
+                                </div>
+
+                                <div class="col-3">
+                                <h2>Orders done</h2>
+                                <h3><field name="no_order_done" /></h3>
+                                </div>
+
+                                <div class="col-3">
+                                <h2>Cars ordering Parts</h2>
+                                <h3><field name="no_order_parts" /></h3>
+                                </div>
+
+                                <div class="col-3">
+                                <h2>Cars In Progress</h2>
+                                <h3><field name="no_order_going" /></h3>
+                                </div>
+
+                                <div class="col-3">
+                                <h2>Cars On Hold </h2>
+                                <h3><field name="no_order_onHold" /></h3>
+                                </div>  -->
+
+
+                            <!-- </div>
+                            <br />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_car_dashboard" model="ir.actions.act_window">
+        <field name="name">All Import</field>
+        <field name="res_model">car_dashboard</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="car_dashboard_kanban" />
+    </record> -->
+
+
+
+</odoo>

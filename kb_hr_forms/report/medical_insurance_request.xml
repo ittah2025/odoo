@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="medical_insurance_request" model="ir.actions.report">
+        <field name="name">Medical Insurance Request</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.print_medical_insurance_request</field>
+        <field name="report_file">kb_hr_forms.print_medical_insurance_request</field>
+        <field name="print_report_name">'Medical Insurance Request - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_employee" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="print_medical_insurance_request">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <style>
+                    .btn {
+                        border: 1px solid black;
+                        background-color: white;
+                        color: black;
+                        <!-- padding: 14px 28px;
+                        font-size: 16px; -->
+                        <!-- cursor: pointer; -->
+                    }
+                </style>
+                <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <div style="text-align: right; direction: rtl;">
+                        إدارة الموارد البشرية والشؤون الإدارية
+                    </div>
+                    <div style="text-align: center; direction: rtl;">
+                        <b>طلب تأمين صحي <br />
+                            Medical Insurance Request
+                        </b>
+                    </div>
+                    
+                    <t t-foreach="docs" t-as="o">
+                    <table>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: right;  padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                بيانات الموظف
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: left; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                Employee Data 
+                            </th>
+                           
+                        </tr>
+                        <tr>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                الاسم
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Name
+                            </th>
+                           
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;"  colspan="2">
+                                الوظيفة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.job_title" />
+                            </th>
+                             <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Job Title
+                            </th>
+                        </tr>
+                        <tr>
+                            
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                الجـنــــســـــيـة
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                               <t t-esc="o.country_id.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Nationality
+                            </th>
+
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                القسم
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.department_id.name" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Department
+                            </th>
+                           
+                        </tr>
+
+                        <tr>
+                            
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                رقم بطاقة الأحوال / الإقامة
+                            </th>
+
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                               <t t-esc="o.identification_id" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                ID NO
+                            </th>
+                           
+                           
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                تاريخ الميلاد 
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.birthday" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Birth
+                            </th>
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                رقم الموظف
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.barcode" />
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                NO
+                            </th>
+                        
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                               الحالة الاجتماعية
+                            </th>
+                            <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                <t t-esc="o.marital" />
+                            </th>
+                             <th style="border: #000000 1px solid; text-align: center; padding: 8px; width:10%;" colspan="2">
+                                Marital status
+                            </th>
+                            
+                        </tr>
+
+                        <tr>
+                            <th colspan="4" style="border: #000000 1px solid;  text-align: center; padding: 8px; width:40%;">
+                                طلب جديد □ New Request
+                            </th>
+                            <th colspan="4" style="border: #000000 1px solid;  text-align: center; padding: 8px; width:40%;">
+                                بدل فاقد □ Issue For Lost
+                            </th>
+                            <th colspan="4" style="border: #000000 1px solid;  text-align: center; padding: 8px; width:40%;">
+                                أخرى □ Other
+                            </th>
+                        </tr>
+                        <br/>
+                         <tr>
+                            <th colspan="12" style="direction: rtl; border: none; text-align: center; padding: 8px;">
+                                توقيع __________________________________________ Signature
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="8" style=" border: none; text-align: right; padding: 12px;">
+                                المضافون إلى التأمين 
+                            </th>
+
+                            <th colspan="4" style=" border: none; text-align: left; padding: 8px;">
+                                Addition 
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                ت /No
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                الإسم Name
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                الميلاد Birth
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                القرابة Relation
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px; ">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px; ">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px; ">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px; ">
+                                
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                            <th colspan="3" style=" border: 1px double black; text-align: center; padding: 8px;">
+                                
+                            </th>
+                        </tr>
+                        
+                        <tr>
+                            <th colspan="8" style="text-align: right; direction: rtl; padding: 3px;">
+                                <p>
+                                    ملاحظة: الرجاء إرفاق صور المستندات المثبتة للإعالة
+                                </p>
+                            </th>
+                            <th colspan="6" style="text-align: left; direction: ltr; padding: 3px;">
+                                <p>
+                                    Note: please attach the Proven
+                                    documents for
+                                    sponsoring
+                                </p>
+                            </th>
+                        </tr>
+                    </table>
+                    </t>
+                    <table class="btn">
+                        <tr>
+                            <th
+                                style="border: #000000 1px solid; text-align: right; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                الاعتماد
+                            </th>
+                            <th
+                                style="border: #000000 1px solid; text-align: left; padding: 8px; width: 2%; background-color: lightgrey; width:40%;" colspan="6" >
+                                Approval
+                            </th>
+                        
+                        </tr>
+                        <tr>
+                            <th colspan="9"  style="text-align: right; padding: 8px;">
+                                حسب النظام : يتم منح المذكور تأمين صحي من الفئة 
+                            </th>
+                            <th colspan="4" style="text-align: left; padding: 8px;">
+                                According the system : Medical Insurance Class is 
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="direction: rtl;text-align: right; padding: 8px;">
+                                فئة التأمين 
+                            </th>
+                            <th colspan="8"  style="text-align: center; padding: 8px;">
+                                □B &#160;  &#160; &#160; □A  &#160; &#160; &#160; □VIP
+                            </th>
+                            <th style="text-align: left; padding: 8px;"  colspan="9">
+                                Class
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="9" style="direction: rtl;text-align: right; padding: 8px;">
+                                الملاحظات 
+                            </th>
+                            <th colspan="2"  style="border: none; text-align: center; padding: 8px;">
+
+                            </th>
+                            <th style="text-align: left; padding: 8px;">
+                                Remark
+                            </th>
+                        </tr>
+                        
+                        <tr>
+                            <th colspan="12" style="direction: rtl; text-align: center; padding: 8px;">
+                                مدير إدارة
+                                الموارد البشرية والشؤون الإدارية
+                            </th>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <th colspan="12" style="direction: rtl; text-align: center; padding: 8px;">
+                                التوقيع  ___________________________________________
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="12" style="direction: rtl;text-align: center; padding: 8px;">
+                                التاريخ  ___/___/_________
+                            </th>
+                        </tr>
+                    </table>
+                    
+                    <p style="text-align: right; direction: rtl;">
+                        <b> *الأصل – إدارة الموارد البشرية والشؤون الإدارية *صورة للملف </b>
+                    </p>
+                </div>
+                <div class="footer" style="font-family: 'Tajawal', sans-serif;">
+                    <div t-if="report_type == 'pdf'" style="font-family: 'Tajawal', sans-serif; text-align:center;">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+                        

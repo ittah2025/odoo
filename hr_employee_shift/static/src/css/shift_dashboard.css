@@ -1,0 +1,15 @@
+.style_shift {
+    color: black !important;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 0px 2px 3px;
+}
+
+.table-responsive-spec {
+    overflow-x: inherit;
+    -webkit-overflow-scrolling: touch;
+    width: 46rem;
+    max-width: inherit;
+    min-width: auto;
+    
+}

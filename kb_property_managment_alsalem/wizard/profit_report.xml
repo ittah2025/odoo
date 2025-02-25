@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_profite_report" model="ir.actions.report">
+        <field name="name">Profite Report</field>
+        <field name="model">summary_report_wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_property_managment_alsalem.profit</field>
+        <field name="report_file">kb_property_managment_alsalem.profit</field>
+        <field name="binding_model_id" ref="model_summary_report_wizard" />
+        <field name="binding_type">report</field>
+    </record>
+
+    
+    <template id="profit">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                   <div class="page">
+                        <div class="text-center">
+                        <style>
+                               .header {
+                                    background-color: #51a79e;
+                                    text-align: center;
+                                    padding: 20px;
+                                 
+                                    }
+
+                                .information {
+                                    background-color: #d5d8dc;
+                                    text-align: left;
+                                    }
+
+                                .good {
+                                    background-color: #ebedef;
+                                    text-align: center;
+                            
+                                    }
+
+
+                                .grey {
+                                    text-align: left;
+                                    background-color: #c7c9ca;
+                           
+                                    }
+
+                                .gfg {
+                                    border-collapse:separate;
+                                    border-spacing:3px 3px;
+                                    width: 100%;
+                                    }
+                       
+
+                    </style>
+                    <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+
+                        <h2 class="header" style="color: #fdfefe;">
+                            <td>Profit</td>
+                        </h2>
+                    </div>
+
+                        <t t-set="total_cost" t-value="0" />
+                        <table class="gfg">
+                            <group>
+                                <tr>
+                                    <t t-foreach="contId" t-as="lines">
+                                <tr>
+
+                                    <th class="information" colspan="3"> Apartment  </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['apartment_ids']" />
+                                        </td>
+
+                                    <th class="information" colspan="3">Room </th>
+                                        <td class="good" colspan="3">
+                                            <span t-esc="lines['room_ids']" />
+                                        </td>
+
+                                    <th class="information" colspan="3" >Room Cost</th>
+                                        <td class="good" colspan="3" >
+                                            <span t-esc="lines['room_cost']" />
+                                            <t t-set="total_cost" t-value="total_cost + lines['room_cost']" />
+                                        </td>
+                                </tr>
+                                </t> 
+                               <div style="direction: rtl;">
+                                <tr>
+                                    
+                                    <th class="information" colspan="3" >Total </th>
+                                        <td class="good" colspan="3" >
+                                            <span t-esc="total_cost" />
+                                            <!-- <field name="summ"/> -->
+                                        </td>
+                                    
+                                </tr>
+                                </div>
+                                </tr>
+                            </group>
+                    </table>
+                </div> 
+            </div>
+            </t>
+        </t>
+    </template>
+</odoo>

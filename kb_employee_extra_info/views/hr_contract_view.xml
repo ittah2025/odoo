@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_contract_form_total_with_allowances" model="ir.ui.view">
+            <field name="name">hr.contract.view.additional.allowance</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='wage']" position="after">
+
+                    <label for="totalallowances" />
+                    <div class="o_row">
+                        <!-- <field name="totalallowances" class="oe_inline" nolabel="1" /> -->
+                        <span>/ month</span>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

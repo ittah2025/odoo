@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_sale_order_form_view_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_information']" position="after">
+                <page string="Bording Info." name="bording_info">
+                    <group>
+                        <field name="bording_from" readonly="1" />
+                        <field name="to" readonly="1" />
+                        <field name="boarding_point" readonly="1" />
+                        <field name="dropping_point" readonly="1" />
+                        <field name="departure_time" />
+                        <field name="arrival_time" />
+                        <field name="trip_id" readonly="1" />
+                        <field name="date_travel" />
+                    </group>
+
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="seat" readonly="1" />
+                <field name="p_name" readonly="1" />
+                <field name="p_email" readonly="1" />
+                <field name="p_age" readonly="1" />
+                <field name="p_gender" readonly="1" />
+                <field name="bording_from" readonly="1" invisible="1" />
+                <field name="to" readonly="1" invisible="1" />
+                <field name="boarding_point" readonly="1" invisible="1" />
+                <field name="dropping_point" readonly="1" invisible="1" />
+                <field name="trip_start_date" readonly="1" widget="float_time" invisible="1" />
+                <field name="departure_time" invisible="1" />
+                <field name="arrival_time" invisible="1" />
+                <field name="trip_end_date" readonly="1" widget="float_time" invisible="1" />
+            </xpath>
+            <field name="date_order" position="after">
+                <field name="paid_amount" invisible="1" />
+                <field name="journal_id" required="1" />
+            </field>
+            <xpath expr="//div[@name='button_box']" position="after">
+                <field name="sale_paid" invisible="1" />
+                <widget name="web_ribbon" title="Paid" attrs="{'invisible': [('sale_paid', '!=', True)]}" />
+            </xpath>
+            <button name="action_confirm" position="after">
+                <button name="action_paid" string="Ticket Paid" class="btn-primary" type="object"
+                    attrs="{'invisible': [('sale_paid', '=', True)]}"></button>
+            </button>
+        </field>
+    </record>
+    <record id="sh_so_line_tree_view_inherit" model="ir.ui.view">
+        <field name="name">sale.order.line.tree.inherit</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_order_line_tree" />
+        <field name="arch" type="xml">
+            <field name="order_id" position="replace">
+                <field name="seat" readonly="1" />
+                <field name="p_name" readonly="1" />
+                <field name="p_email" readonly="1" />
+                <field name="p_age" readonly="1" />
+                <field name="p_gender" readonly="1" />
+                <field name="bording_from" readonly="1" />
+                <field name="to" readonly="1" />
+                <field name="boarding_point" readonly="1" />
+                <field name="dropping_point" readonly="1" />
+                <field name="trip_start_date" readonly="1" widget="float_time" />
+                <field name="trip_end_date" readonly="1" widget="float_time" />
+            </field>
+            <field name="order_partner_id" position="replace">
+                <field name="order_partner_id" invisible="1" />
+            </field>
+            <field name="name" position="replace">
+                <field name="name" invisible="1" />
+            </field>
+            <field name="salesman_id" position="replace">
+                <field name="salesman_id" invisible="1" />
+            </field>
+            <field name="product_uom_qty" position="replace">
+                <field name="product_uom_qty" invisible="1" />
+            </field>
+            <field name="qty_delivered" position="replace">
+                <field name="qty_delivered" invisible="1" />
+            </field>
+            <field name="qty_invoiced" position="replace">
+                <field name="qty_invoiced" invisible="1" />
+            </field>
+            <field name="qty_to_invoice" position="replace">
+                <field name="qty_to_invoice" invisible="1" />
+            </field>
+            <field name="product_uom" position="replace">
+                <field name="product_uom" invisible="1" />
+            </field>
+            <field name="price_subtotal" position="after">
+                <field name="booking_status" />
+
+                <button name="action_check_seat" string="Check-in" class="btn-primary" type="object"
+                    attrs="{'invisible':[('booking_status','!=','confirm')]}"></button>
+                <button name="action_cancel_seat" string="Cancel" type="object"
+                    attrs="{'invisible':[('booking_status','!=','confirm')]}"></button>
+            </field>
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-muted">booking_status == 'draft'</attribute>
+                <attribute name="decoration-info">booking_status == 'confirm'</attribute>
+                <attribute name="decoration-danger">booking_status == 'cancel'</attribute>
+                <attribute name="decoration-success">booking_status == 'check_in'</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

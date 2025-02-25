@@ -1,0 +1,37 @@
+{
+    'name': 'Register Payment',
+    'version': '1.0.0',
+    'category': 'Account',
+    'summary': "Payment Type",
+    'description': """Payment Type""",
+    'sequence': '10',
+    'license': 'LGPL-3',
+    'company': 'Knowledge Bonds',
+    'author': 'Knowledge Bonds',
+    'maintainer': 'Knowledge Bonds',
+    'depends': ['base','mail','account'],
+    'demo': [],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/kb_data.xml',
+        'views/kb_customer_register_payment_view.xml',
+        'views/kb_vender_register_payment_view.xml',
+        'reports/kb_customer_payment_report.xml',
+        'reports/kb_vendor_payment_report.xml',
+        'views/kb_payment_approval_config_line_view.xml',
+        'views/kb_payment_approval_config_view.xml',
+        'views/kb_approval_info_view.xml',
+        'wizard/kb_rejection_wizard_view.xml',
+        'views/kb_customer_payment_approval_view.xml',
+        'views/kb_vender_payment_approval_view.xml',
+
+
+    ],
+
+    'images': ['static/description/icon.png'],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+    'qweb': [],
+}

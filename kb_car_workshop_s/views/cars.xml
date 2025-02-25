@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--Your comment-->
+    <record id="cars_views" model="ir.actions.act_window">
+        <field name="name">Cars</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cars</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Vehicle
+            </p>
+        </field>
+    </record>
+
+<!--Yourt-->
+    <record id="view_cars_form" model="ir.ui.view">
+        <field name="name">cars.form</field>
+        <field name="model">cars</field>
+        <field name="arch" type="xml">
+        
+            <form>
+                <sheet>
+                  <group>
+                        <!--enter car information "fields"-->
+                        <group string = "Car Information">
+                            <!-- <field name="car_id"/> -->
+                            <!-- <field name="carMake"/> -->
+                            <field name="vehicleSerialNumber"/>
+                            <field name="carModel"/>
+                            <!-- <field name="carYear" style="width:40%"/> -->
+                            <field name="CarMilage"/>
+                            <!-- <field name="carPlate"/> -->
+                            <!-- <field name="carVin"/> -->
+                            <!-- <field name="carColor"/> -->
+                            <field name="uploadImage" widget="many2many_binary"/>
+                        </group>
+
+
+                        <!-- <group string = " Customer Information">
+                            <field name="partner_id"/>
+                        </group> -->
+
+                    </group>
+                        
+            
+                    
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    
+
+    <record id="view_car_tree" model="ir.ui.view">
+            <field name="name">cars.tree</field>
+            <field name="model">cars</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicles">
+                    <!-- <field name="carMake"/> -->
+                    <field name="vehicleSerialNumber"/>
+                    <field name="carModel"/>
+                    <!-- <field name="carYear"/> -->
+                    <!-- <field name="carColor"/> -->
+                    <!-- <field name="carPlate"/> -->
+                    <!-- <field name="car_id"/> -->
+
+                </tree>
+            </field>
+    </record>
+
+
+
+    <menuitem id="car_workshop" name="Car workshop" />
+
+    <menuitem id="config" name="Service" parent="car_workshop"/>
+
+
+    <!-- <menuitem id="custom_dashboard_actiondd" name="Dashboard" parent="car_workshop" action="custom_dashboard_action" sequence="2"/> -->
+    
+    <menuitem id="view_carsM"
+              name="Cars"
+              action="cars_views"
+              parent= "config"
+              sequence="2"/>
+
+    <menuitem id="custom_dashboard_actiondd" name="Dashboard" parent="car_workshop" action="custom_dashboard_action" sequence="2"/>
+    
+    
+    
+    
+
+    
+</odoo>

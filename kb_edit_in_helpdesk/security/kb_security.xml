@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+     <data noupdate="1">
+
+<!-- Groups Administrator -->
+
+         <record id="group_helpDesk_administration" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+         </record>
+
+         <record id="help_desk_dashboard_administration"  model="ir.rule">
+            <field name="name">Record Rule for Administrator</field>
+            <field ref="model_help_ticket" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_administration'))]"/>
+            <field name="domain_force">['|','|','|','|',('stage_id.sequence', '=', 20), ('stage_id.sequence', '=', 21),('stage_id.sequence', '=', 22),('stage_id.sequence', '=', 23),('stage_id.sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+         <record id="help_desk_dashboard_administration_stage"  model="ir.rule">
+            <field name="name">Record Rule for Administrator</field>
+            <field ref="model_ticket_stage" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_administration'))]"/>
+            <field name="domain_force">['|','|','|','|',('sequence', '=', 20), ('sequence', '=', 21),('sequence', '=', 22),('sequence', '=', 23),('sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+<!-- Groups Employee -->
+
+         <record id="group_helpDesk_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+         </record>
+
+         <record id="help_desk_dashboard_employee"  model="ir.rule">
+            <field name="name">Record Rule for Employee</field>
+            <field ref="model_help_ticket" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_employee'))]"/>
+            <field name="domain_force">['|','|','|',('stage_id.sequence', '=', 20), ('stage_id.sequence', '=', 21),('stage_id.sequence', '=', 22),('stage_id.sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+         <record id="help_desk_dashboard_employee_stage"  model="ir.rule">
+            <field name="name">Record Rule for Employee</field>
+            <field ref="model_ticket_stage" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_employee'))]"/>
+            <field name="domain_force">['|','|','|',('sequence', '=', 20), ('sequence', '=', 21),('sequence', '=', 22),('sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+<!--Other Groups-->
+
+         <record id="group_helpDesk_sub_administration" model="res.groups">
+            <field name="name">Other</field>
+            <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+         </record>
+
+         <record id="help_desk_dashboard_sub_administration"  model="ir.rule">
+            <field name="name">Record Rule for sub administration</field>
+            <field ref="model_help_ticket" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_sub_administration'))]"/>
+            <field name="domain_force">['|','|',('stage_id.sequence', '=', 20),('stage_id.sequence', '=', 23),('stage_id.sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+         <record id="help_desk_dashboard_sub_administration_stage"  model="ir.rule">
+            <field name="name">Record Rule for sub administration</field>
+            <field ref="model_ticket_stage" name="model_id"/>
+            <field name="groups" eval="[(4, ref('kb_edit_in_helpdesk.group_helpDesk_sub_administration'))]"/>
+            <field name="domain_force">['|','|',('sequence', '=', 20),('sequence', '=', 23),('sequence', '=', 24)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Find the object to print on module-->
+    <record id="action_academic" model="ir.actions.act_window">
+        <field name="name">academic year</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">academic_year</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new academic year
+            </p>
+        </field>
+    </record>
+
+    <record id="view_academic_form" model="ir.ui.view">
+        <field name="name">academic year.form</field>
+        <field name="model">academic_year</field>
+        <field name="arch" type="xml">
+            <form string="Academic Years">
+                <header>
+                    <button name="generate_academicmonth" type="object" string="Generate Months"/>
+                </header>
+                <sheet>
+                    <group>
+                        <label for="academic_yearID" />
+                            <h4>
+                                <field name="academic_yearID" />
+                            </h4>
+                        <label for="name" />
+                            <h4>
+                                <field name="name" />
+                            </h4>
+                        <group string="Select School">
+                            <field name="school_id"
+                                options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" />
+                            <field name="date_start" required="1" />
+                            <field name="date_stop" required="1" />
+                            <field name="academic_type" required="1" />
+                            
+                             <field name="current"  />
+
+                        </group>
+                    </group>
+                        <notebook colspan="4">
+                            <page string="Months">
+                                <field name="month_ids" nolabel="1" colspan="4" >
+                                    <tree string="Months" editable="bottom">
+                                        <field name = "sequence" widget="handle"/>
+                                        <field name="code" />
+                                        <field name="date_start" />
+                                        <field name="date_stop" />
+                                    </tree>
+                                    <form string="Months">
+                                        <group col="4" colspan="4">
+                                            <field name="code" placeholder="Code" />
+                                            <field name="date_start" placeholder="Start Date" />
+                                            <field name="date_stop" placeholder="Stop Date" />
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_academic_year_tree" model="ir.ui.view">
+        <field name="name">academic_year.tree</field>
+        <field name="model">academic_year</field>
+        <field name="arch" type="xml">
+            <tree string="Academic Years">
+                <field name="academic_yearID" />
+                <field name="date_start" />
+                <field name="date_stop" />
+            </tree>
+        </field>
+    </record>
+    
+
+    <menuitem id="academic_submenu" name="academic year" parent="configuration_menu" action="action_academic" sequence="16" groups="kb_Tahtheeb_school.group_school_administration"/>
+
+</odoo>

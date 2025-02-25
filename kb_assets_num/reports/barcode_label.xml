@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+    <record id = "paper_format_asset_label" model = "report.paperformat" >
+        <field name = "name" >label Custom reports</field >
+        <field name = "default" eval = "True" />
+        <field name = "format" >custom</field >
+        <field name = "page_height" >25</field >
+        <field name = "page_width" >70</field >
+        <field name = "orientation" >Portrait</field >
+        <field name = "margin_top" >0</field >
+        <field name = "margin_bottom" >0</field >
+        <field name = "margin_left" >0</field >
+        <field name = "margin_right" >0</field >
+        <field name = "header_line" eval = "False" />
+        <field name = "header_spacing" >0</field >
+        <field name = "dpi" >90</field >
+
+    </record >
+
+    <record id = "account_asset_label_template" model = "ir.actions.report" >
+        <field name = "name" >Barcode Label</field >
+        <field name = "model" >account.asset.asset</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_name" >kb_assets_num.print_barcode_label_template</field >
+        <field name = "report_file" >kb_assets_num.print_barcode_label_template</field >
+        <field name = "paperformat_id" ref = "kb_assets_num.paper_format_asset_label" />
+        <field name = "binding_model_id" ref = "model_account_asset_asset" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "print_barcode_label_template" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.basic_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Tajawal" rel = "stylesheet" />
+                <t t-foreach = "docs" t-as = "o" >
+
+
+                    <div style="text-align:center; padding: 6px;">
+                        <span style="font-size: 14px;">
+                            <t t-esc = "o.company_id.name"  />
+                        </span>
+                    </div>
+
+
+
+                    <table style = "width:100%;  " >
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle; ">
+                                <img t-att-src = "'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.kb_ordersIDP, 600, 100)"
+                                        style = "width:200px;height:40px;" alt = "Barcode" />
+                                    <span style="text-align: center">
+                                        <t t-esc = "o.kb_ordersIDP" />
+                                    </span >
+                            </td >
+
+                            <td style="text-align: center;">
+                                <img t-if = "o.company_id.logo" t-att-src = "image_data_uri(o.company_id.logo)"
+                                     alt = "Logo" style = "max-height: 50px;" />
+                            </td >
+                        </tr >
+
+
+                    </table >
+                </t >
+
+            </t >
+        </t >
+    </template >
+</odoo >

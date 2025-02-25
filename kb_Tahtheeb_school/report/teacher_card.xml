@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_teacher_cards" model="ir.actions.report">
+        <field name="name">teacher cards</field>
+        <field name="model">teacher</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_Tahtheeb_school.teacher_cards</field>
+        <field name="report_file">kb_Tahtheeb_school.teacher_cards</field>
+        <field name="print_report_name">'Teacher card'</field>
+        <field name="binding_model_id" ref="model_teacher" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+    <template id="teacher_cards">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <table width="50%" height="50mm" style="border: 3px solid black;background-image:url('https://e0.pxfuel.com/wallpapers/958/550/desktop-wallpaper-business-design-background-design-neon-design-and-futuristic-design-business-cards.jpg');">
+                    <tr>
+                        <td><img class="img" src="https://zemez.io/html/wp-content/uploads/sites/9/2018/01/logo.png" style="max-height: 40px;max-width: 100px; "/></td>
+                    </tr>
+
+                    <tr>
+                        <td><img t-attf-src="data:image/*;base64,{{doc.photo}}" style="max-height: 120px;max-width: 160px;" /></td>
+                        <td style="font-family: 'Helvetica'">
+                            <strong><span t-field="doc.name" /></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Helvetica'">
+                            <strong>Teacher ID :  </strong>
+                            <span t-field="doc.teacherID" />
+                        </td>
+                        <td style="font-family: 'Helvetica'">
+                            <strong>Gender : </strong>
+                            <span t-field="doc.gender" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-family: 'Helvetica';padding-left:5px;">
+                            <strong>Nationality : </strong>
+                            <span t-field="doc.nationality" />
+                        </td>
+                        <td style="font-family: 'Helvetica';padding-left:5px;">
+                            <strong>National ID : </strong>
+                            <span t-field="doc.teacher_nat_id" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Helvetica';padding-left:5px;">
+                            <strong>Teacher Phone : </strong>
+                            <span t-field="doc.phone" />
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </t>
+    </template>
+</odoo>

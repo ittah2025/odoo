@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="Student_account_statement_view" model="ir.actions.report">
+        <field name="name">Student account statement</field>
+        <field name="model">fees_reports</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_Tahtheeb_school.Student_account_statement_report</field>
+        <field name="report_file">kb_Tahtheeb_school.Student_account_statement_report</field>
+        <field name="print_report_name">'Student account statement'</field>
+        <field name="binding_model_id" ref="model_fees_reports"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="Student_account_statement_report">
+       <t t-call="web.html_container">
+             <t t-call="web.external_layout">
+                <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                <t t-foreach="student" t-as="line">
+                 <div style="font-family: 'Tajawal', sans-serif;">
+                     <br/>
+                    <div style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+                    <head>
+                        <title>كشف حساب الطلاب </title>
+                    </head>
+                    <style>
+                     .center2 {
+                  display: block;
+                  margin-left: 250px;
+                  margin-right: 15px;
+                  width: 15%;
+                       }
+                     .th1 {
+                     border:1px solid black ;
+                     background-color: #cdcdce ;
+                     height:30px;
+                     font-size:15;
+                     }
+                     .td1{
+                     border:1px solid black;
+                     text-align:center;100%;
+                     height:30px;
+                     font-size:17px;
+                     }
+                    .td2{
+                      border: 1px solid ;
+                        text-align:center;
+                     width: 290px;
+                     height:18px;
+                        }
+                     .center {
+                      margin-left: auto;
+                      margin-right: auto;
+                    }
+                    </style>
+                        <div style="text-align:center;">
+                            <h5>كشف حساب الطالب </h5>
+                            </div>
+                        <br>
+
+                        </br>
+                    <table class="center" style="text-align:right;border:none; ">
+                        <tr>
+                            <th>التاريخ </th>
+                            <th class="td2 ">25/10/2023</th>
+                        </tr>
+                    <tr>
+                        <th>رقم الطالب </th>
+                    <td class="td2 "><span t-esc="line['student_ids']"/></td>
+                        <th>اسم الطالب </th>
+                     <th class="td2"><span t-esc="line['student_id']"/></th>
+                    </tr>
+                    <tr>
+                    <th> رقم ولي الأمر </th>
+                    <td class="td2"><span t-esc="line['parent_ids']"/></td>
+                    <th>اسم ولي الأمر  </th>
+                    <td class="td2"><span t-esc="line['parent_id']"/></td>
+                    </tr>
+                        <tr>
+                        <th> المدرسة </th>
+                            <td class="td2"><span t-esc="line['school_id']"/></td>
+                        </tr>
+                        <tr>
+                          <th> الصف الدراسي </th>
+                            <td class="td2"><span t-esc="line['grades']"/></td>
+                        </tr>
+                    </table>
+
+                        <br></br>
+                        <br></br>
+                    <body>
+                     <table class="center" style="border:none; text-align:center; width: 90%; ">
+                             <tr>
+                                 <th class="th1" >
+                                   البيان
+                                 </th>
+                                 <th class="th1" >
+                                    الفصل الأول
+                                 </th>
+                                 <th class="th1" >
+                                    الفصل الثاني
+                                 </th>
+                                 <th class="th1" >
+                                    الفصل الثالث
+                                 </th>
+                                 <th class="th1" >
+                                    المجموع
+                                 </th>
+                             </tr>
+                         <tr>
+                             <t t-set="total_school" t-value="line['schoolt1']+line['schoolt2']+line['schoolt3']" />
+                             <td class="td2">الرسوم الدراسية </td>
+                             <td class="td2"><span t-esc="line['schoolt1']"/></td>
+                             <td class="td2"><span t-esc="line['schoolt2']"/></td>
+                             <td class="td2"><span t-esc="line['schoolt3']"/></td>
+                             <td class="td2"><span t-esc="total_school"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_discount" t-value="line['discountt1']+line['discountt2']+line['discountt3']" />
+                             <td class="td2">الخصومات</td>
+                             <td class="td2"><span t-esc="line['discountt1']"/></td>
+                             <td class="td2"><span t-esc="line['discountt2']"/></td>
+                             <td class="td2"><span t-esc="line['discountt3']"/></td>
+                             <td class="td2"><span t-esc="total_discount"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_school2" t-value="line['school2t1']+line['school2t2']+line['school2t3']" />
+                             <td class="td2">صافي الرسوم الدراسية  </td>
+                             <td class="td2"><span t-esc="line['school2t1']"/></td>
+                             <td class="td2"><span t-esc="line['school2t2']"/></td>
+                             <td class="td2"><span t-esc="line['school2t3']"/></td>
+                             <td class="td2"><span t-esc="total_school2"/></td>
+
+                         </tr>
+                         <tr>
+                             <t t-set="total_other" t-value="line['Other1']+line['Other2']+line['Other3']" />
+                            <td class="td2">الرسوم الاخرى  </td>
+                             <td class="td2"><span t-esc="line['Other1']"/></td>
+                             <td class="td2"><span t-esc="line['Other2']"/></td>
+                             <td class="td2"><span t-esc="line['Other3']"/></td>
+                             <td class="td2"><span t-esc="total_other"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_tran" t-value="line['Tran1']+line['Tran2']+line['Tran3']" />
+                            <td class="td2">رسوم المواصلات   </td>
+                             <td class="td2"><span t-esc="line['Tran1']"/></td>
+                             <td class="td2"><span t-esc="line['Tran2']"/></td>
+                             <td class="td2"><span t-esc="line['Tran3']"/></td>
+                             <td class="td2"><span t-esc="total_tran"/></td>
+
+
+                         </tr>
+                         <tr>
+                             <t t-set="total_tax" t-value="line['tax1']+line['tax2']+line['tax3']" />
+                            <td class="td2">الضريبة المضافة   </td>
+                             <td class="td2"><span t-esc="line['tax1']"/></td>
+                             <td class="td2"><span t-esc="line['tax2']"/></td>
+                             <td class="td2"><span t-esc="line['tax3']"/></td>
+                             <td class="td2"><span t-esc="total_tax"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_nettotalt" t-value="line['nettotalt1']+line['nettotalt2']+line['nettotalt3']" />
+                             <td class="td2">مجموع المبلغ المستحق   </td>
+                             <td class="td2"><span t-esc="line['nettotalt1']"/></td>
+                             <td class="td2"><span t-esc="line['nettotalt2']"/></td>
+                             <td class="td2"><span t-esc="line['nettotalt3']"/></td>
+                             <td class="td2"><span t-esc="total_nettotalt"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_totalt" t-value="line['totalt1']+line['totalt2']+line['totalt3']" />
+                             <td class="td2">مجموع المدفوع</td>
+                             <td class="td2"><span t-esc="line['totalt1']"/></td>
+                             <td class="td2"><span t-esc="line['totalt2']"/></td>
+                             <td class="td2"><span t-esc="line['totalt3']"/></td>
+                             <td class="td2"><span t-esc="total_totalt"/></td>
+                         </tr>
+                         <tr>
+                             <td class="td2">مجموع الصرف   </td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+
+                         </tr>
+                         <tr>
+                             <td class="td2">اشعارات التحويل    </td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+                             <td class="td2">0.00</td>
+
+                         </tr>
+                         <tr>
+                             <t t-set="total_totalt" t-value="line['totalt1']+line['totalt2']+line['totalt3']" />
+                             <td class="td2">صافي الرصيد السنة</td>
+                             <td class="td2"><span t-esc="line['totalt1']"/></td>
+                             <td class="td2"><span t-esc="line['totalt2']"/></td>
+                             <td class="td2"><span t-esc="line['totalt3']"/></td>
+                             <td class="td2"><span t-esc="total_totalt"/></td>
+                         </tr>
+                         <tr>
+                             <t t-set="total_nettotalt" t-value="line['nettotalt1']+line['nettotalt2']+line['nettotalt3']" />
+                             <td class="td2">صافي الرصيد المطلوب</td>
+                             <td class="td2"><span t-esc="line['nettotalt1']"/></td>
+                             <td class="td2"><span t-esc="line['nettotalt2']"/></td>
+                             <td class="td2"><span t-esc="line['nettotalt3']"/></td>
+                             <td class="td2"><span t-esc="total_nettotalt"/></td>
+                         </tr>
+
+                     </table>
+
+</body>
+                    </div>
+                 </div>
+             </t>
+             </t>
+       </t>
+    </template>
+</odoo>

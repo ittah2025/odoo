@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kb_email_template" model="mail.template">
+        <field name="name">Solved Ticket</field>
+        <field name="model_id" ref="odoo_website_helpdesk.model_help_ticket"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="email_from">{{object.kb_userID.email or ''}}</field>
+        <field name="email_to">{{object.kb_userID.email}}</field>
+        <field name="subject">Solved Ticket</field>
+        <field name="body_html" type="html">
+            <p>
+                Dear
+                <t t-out="object.kb_userID.name"/>
+                <br/>
+                I Think your Problem <span t-field="object.description"/> is Solved.
+                Your Ticket
+                <t t-out="object.name"/>
+                <br/>
+                <br/>
+                Thanks.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo >
+    <record id = "salary_rajhi_report_print" model = "ir.actions.report" >
+        <field name = "name" >Al Rajhi Reports</field >
+        <field name = "model" >rajhi_salary</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_alrajhi_wizard.salary_def_templates</field >
+        <field name = "report_name" >kb_alrajhi_wizard.salary_def_templates</field >
+        <field name = "binding_model_id" ref = "model_rajhi_salary" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+
+    <template id = "salary_def_templates" >
+        <t t-call = "web.html_container" >
+            <t t-call = "web.external_layout" >
+                <link href = "https://fonts.googleapis.com/css2?family=Almarai" rel = "stylesheet" />
+                <style >
+                    .numberCircle {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    border: 2px solid #666;
+                    color: #666;
+                    text-align: center;
+                    }
+
+                    .numberCirclenot {
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                    float: center;
+                    background: #fff;
+                    color: #666;
+                    text-align: center;
+                    }
+
+                </style >
+
+
+                <div style = "page-break-after: always;" >
+                    <div class = "page" style = "font-family: 'Tajawal', sans-serif;page-break-after: always;" >
+
+                         <t t-if = "form_data['kb_definition_type'] == 'rajhi_salary'" >
+                            <h2 style="text-align: center;" >Definition of Al Rajhi Bank salary</h2>
+                                <div style="text-align: right;">
+
+                                 <span style="font-weight: bold;" >التاريخ: </span> <t t-esc="datetime.datetime.now().strftime('%Y-%m-%d')" /><br/>
+                                 <span style="font-weight: bold;" >الموضوع: </span> <span  >تعريفة راتب موظف </span><br/>
+                                 <span style="font-weight: bold;" >السادة: </span> <span  >مصرف الراجحي </span><br/>
+                                 <span style="font-weight: bold;" >&#160; &#160; &#160; &#160; &#160; &#160; &#160;</span> <span >السلام عليكم ورحمة الله وبركاته   </span><br/>
+                                </div>
+                             <br/>
+
+                             <t t-foreach = "salary_list_loop" t-as = "w" >
+                             <table style = "width:100%; text-align: right;">
+                                 <tr>
+
+                                     <th  style = "border:1px solid black; background-color:#D3D3D3;text-align:center; padding: 5px;" >
+                                    الجنسية
+                                    </th >
+                                     <th colspan="2" style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    اسم الموظف
+                                    </th >
+                                 </tr>
+                                 <tr>
+                                      <td  style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['nationality']" />
+                                    </td >
+                                     <td colspan="2" style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['name']" />
+                                    </td >
+                                 </tr>
+
+
+                                 <tr>
+                                     <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    الرقم الوظيفي
+                                    </th >
+                                     <th colspan="2" style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    رقم إثبات الهوية
+                                    </th >
+                                 </tr>
+                                 <tr>
+                                     <td style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['barcode']" />
+                                    </td >
+                                     <td colspan="2" style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['identification_id']" />
+                                    </td >
+                                 </tr>
+
+
+                                 <tr>
+                                      <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    تاريخ التعيين
+                                    </th >
+                                     <th colspan="2" style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    الوظيفة
+                                    </th >
+
+                                 </tr>
+                                 <tr>
+                                     <td style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['first_contract_date']" />
+                                    </td >
+                                     <td colspan="2" style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['job_id']" />
+                                    </td >
+                                 </tr>
+
+                                 <tr>
+                                      <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    تفاصيل البدلات
+                                    </th >
+                                     <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    الراتب الاساسي
+                                    </th >
+                                      <th style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                    اجمالي الراتب
+                                    </th >
+                                 </tr>
+
+                                  <tr>
+                                     <td style = "border:1px solid black;text-align:center; " >
+                                        <t t-if="w['hra']">
+                                         <span style="font-weight: bold;" >بدل سكن: </span><span t-esc = "w['hra']" />
+                                          </t>
+
+                                         <t t-if="w['da']">
+                                         <span style="font-weight: bold;" >بدل غربة: </span><span t-esc = "w['da']" />
+                                          </t>
+                                         <t t-if="w['travel_allowance']">
+                                         <span style="font-weight: bold;" >بدل مواصلات: </span><span t-esc = "w['travel_allowance']" />
+                                             <br/>
+                                          </t>
+
+
+                                         <t t-if="w['fixed_allowance']">
+                                         <span style="font-weight: bold;" >بدل ثابت: </span><span t-esc = "w['fixed_allowance']" />
+                                          </t>
+
+                                         <t t-if="w['unfixed_allowance']">
+                                         <span style="font-weight: bold;" >بدل غير ثابت: </span><span t-esc = "w['unfixed_allowance']" />
+                                          </t>
+
+                                         <t t-if="w['working_other_companies_allowance']">
+                                         <span style="font-weight: bold;" >بدل العمل في شركات أخرى: </span><span t-esc = "w['working_other_companies_allowance']" />
+                                         <br/>
+                                         </t>
+
+                                         <t t-if="w['meal_allowance']">
+                                         <span style="font-weight: bold;" >بدل الوجبات: </span><span t-esc = "w['meal_allowance']" />
+                                          </t>
+
+                                         <t t-if="w['medical_allowance']">
+                                         <span style="font-weight: bold;" >بدلات طبية: </span><span t-esc = "w['medical_allowance']" />
+                                          </t>
+
+                                         <t t-if="w['other_allowance']">
+                                         <span style="font-weight: bold;" > بدلات اخرى: </span><span t-esc = "w['other_allowance']" />
+                                         <br/>
+                                         </t>
+
+
+                                    </td >
+                                     <td style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['wage']" /> SR
+                                    </td >
+                                      <td style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['total_wage']" /> SR
+                                    </td >
+                                 </tr>
+
+                                 <tr>
+                                      <th colspan="3" style = "border:1px solid black; background-color:#D3D3D3;text-align:center" >
+                                     رقم حساب الموظف
+                                    </th >
+                                 </tr>
+                                  <tr>
+                                     <td colspan="3" style = "border:1px solid black;text-align:center; " >
+                                       <span t-esc = "w['bank_account_id']" />
+                                    </td >
+                                  </tr>
+                                </table>
+
+                                 <br/>
+                                    <div style="text-align: right;">
+                                        <span style="font-weight: bold;" >كما نفيدكم أن الموظف المذكور بياناته أعلاه لازال يعمل لدينا حتى تاريخه </span>
+                                    </div>
+                                 <br/>
+                                 <br/>
+                                 <br/>
+                                 <div style="text-align: left;">
+                                        <span style="font-weight: bold;" >اسم المفوض بالتوقيع/</span> <span t-esc = "w['kb_sign_employee']" />
+                                         <br/>
+                                        <br/>
+                                        <span style="margin-left: 20%"></span> <span style="font-weight: bold;" >التوقيع/</span>
+                                    </div>
+                                 <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                 <div style="text-align:right;">
+                                        <span style="font-weight: bold;" >الختم الرسمي</span><span style="margin-right: 20%"></span>
+                                 </div>
+                             </t>
+                         </t>
+
+
+
+
+
+
+                        <t t-if = "form_data['kb_definition_type'] == 'fix_salary'" >
+                             <t t-foreach = "salary_list_loop" t-as = "w" >
+
+                             <h2 style="text-align: center;" >التزام جهة العمل بتحويل راتب الموظف </h2>
+                                <div style="text-align: right;">
+
+                                 <span style="font-weight: bold;" >التاريخ: </span> <t t-esc="datetime.datetime.now().strftime('%Y-%m-%d')" /><br/>
+                                 <span style="font-weight: bold;" >المكرمون: </span> <span  >مصرف الراجحي </span><br/>
+
+                                  <span >السلام عليكم ورحمة الله وبركاته   </span><br/>
+
+                                    <span style="font-weight: bold; font-size: 18px" >:اسم الموظف </span><span t-esc = "w['name']" /><br/>
+                                   <span style="font-weight: bold;" > :رقم بطاقة العمل/الرقم الوظيفي </span><span t-esc = "w['barcode']" /><br/>
+                                    <span style="font-weight: bold; font-size: 18px" > تاريخ الاتحاق بالعمل: </span><span t-esc = "w['first_contract_date']" /><br/>
+                                    <span style="font-weight: bold; font-size: 18px" > مستحقات نهاية الخدمة: </span><span t-esc = "w['kb_end_of_service']" /><br/>
+                                    <span style="font-weight: bold; font-size: 18px" > مستحقات نهاية الخدمة في حالة الاستقالة قبل نهاية العقد: </span><span t-esc = "w['kb_end_of_service_terminate']" /><br/>
+                                    <br />
+                                    <br />
+                                    <br />
+
+                                    <span style="font-size: 18px;"> تقدم موظفنا الموضحة بياناته أعلاه طالبا تحوبل راتبه وبدلاته الشهرية وجميع مستحقاته الوظيفية الى حسابه الجاري رقم (<span t-esc = "w['bank_account_id']" />) لأجل ساد الديون التى سوف تترتب عليه لصالح مصرف الراجحي</span><br/>
+                                    <span style="font-size: 18px;">لذالك نود أن نؤكد لكم موافقتنا والتزامنا بهذا التحويل في مواعيده الشهرية واستمراره حتى نهاية علاقته الوظيفية معنا مع التزامنا بعدم تسليم الموظف المذكور مستحقات نهاية الخدمة أو أي مستحقات أخرى حتى نحصل على مخالصة معتمدة منكم تفيد بانتهاء الالتزامات المترتبة عليه لصالحكمو مواقتكم على الغاءتحويل راتبه</span> <br/>
+
+                                    <span style="font-size: 18px;">.وتقبلوا تحياتي</span>
+
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <div style="text-align: left;">
+                                        <span style="font-weight: bold;" >اسم المفوض بالتوقيع/</span> <span t-esc = "w['kb_sign_employee']" />
+                                         <br/>
+                                        <br/>
+                                        <span style="margin-left: 20%"></span> <span style="font-weight: bold;" >التوقيع/</span>
+                                    </div>
+                                 <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                 <div style="text-align:right;">
+                                        <span style="font-weight: bold;" >الختم الرسمي</span><span style="margin-right: 20%"></span>
+                                 </div>
+
+
+                                </div>
+                             <br/>
+                             </t>
+                        </t>
+
+
+
+
+
+
+
+
+
+
+                    </div >
+                </div >
+
+
+            </t >
+        </t >
+    </template >
+</odoo >
+

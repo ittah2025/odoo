@@ -1,0 +1,107 @@
+<odoo>
+    <record id ="kb_hr_experience_certificate_ids" model = "ir.actions.report">
+        <field name = "name" >شهادة خبرة</field >
+        <field name = "model" >kb.hr.forms.wizard</field >
+        <field name = "report_type" >qweb-pdf</field >
+        <field name = "report_file" >kb_hr_tahtheeb.experience_certificate_reportss</field>
+        <field name = "report_name" >kb_hr_tahtheeb.experience_certificate_reportss</field>
+        <field name = "binding_model_id" ref = "model_kb_hr_forms_wizard" />
+        <field name = "binding_type" >report</field >
+    </record >
+
+    <template id ="experience_certificate_reportss" >
+        <t t-call = "web.html_container">
+            <t t-call = "web.external_layout">
+                    <link href = "https://fonts.googleapis.com/css2?family=Tajawal" rel = "stylesheet" />
+                    <div class = "page" style = "font-family: 'Tajawal', sans-serif;page-break-after: always;">
+                        <style>
+                            .size{
+                                font-size: 24px;
+                            }
+                        </style>
+                        <h3 style = "text-align:center; font-weight: bold; font-size: 34px;">شهادة خبرة </h3>
+                        <br/><br/>
+                        <br/><br/>
+                        <t t-foreach = "experienceCertificate_list_loop" t-as = "w" >
+                            <p align="right" class="size">
+                            تشهد شركة اﻟﺘﻬﺬﻳﺐ للخدمات التعليمية بأن السيد/   <span t-esc = "w['name']"/> <br/>
+
+                            قد عمل لدينا ضمن موظفين الشركة بوظيفة <span t-esc = "w['job_title']" />
+
+<!--                            خلال الفترة من <span t-esc = "w['first_contract_date']" />-->
+
+                            وحتى <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/> م
+
+                            وقد تمكن خلال فترة عمله لدينا إثبات جدارته، وتفوقه والإتقان والخبرة، ونحن نشهد له بحسن الخلق والأداء الاحترافي المتميز.
+                            <br/>
+
+                            وقد تم تحرير هذه الشهادة بناءً على رغبة الموظف في اليوم الموافق <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/> م
+                            </p>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+                            <br/><br/>
+
+
+
+
+
+                            <table  style = "width:100%; border: white;">
+
+                                <tr class="size" style="text-align: center; border: white;">
+
+
+                                    <td style="text-align: right; border: white;">
+                                            توقيع مدير الشركة
+
+                                    </td>
+
+
+                                    <td class="size" style="text-align: right; border: white; background-color: white;">
+                                        ختم الشركة
+                                    </td>
+
+                                     <td > </td>
+
+                                </tr>
+
+                            </table>
+
+
+                            <!-- <div style="text-align: right;">
+
+                                <p align="right"  class="size">
+                                توقيع مدير الشركة
+                                </p>
+
+                            </div> -->
+
+
+                            <!-- <p align="right"  class="size">
+                            توقيع مدير الشركة
+                                <br/>
+                            </p> -->
+
+                             <!-- <div style="text-align: left;">
+                                <p align="left"  class="size">
+                                    ختم الشركة
+                                    <br/>
+
+                                </p>
+                              </div> -->
+                        </t>
+                    </div>
+                </t>
+            </t>
+    </template>
+</odoo>

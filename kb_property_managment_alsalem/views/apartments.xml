@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="apartments_search" model="ir.ui.view">
+        <field name="name">rooms.search</field>
+        <field name="model">rooms</field>
+        <field name="arch" type="xml">
+            <search string="Rooms">
+                <field name="rented_room" />
+                <separator />
+                <filter string="Available Room" name="rented_room" domain="[('rented_room', '=', False)]" />
+            </search>
+        </field>
+    </record>
+<!-- Form view inside the apartment -->
+    <record model='ir.ui.view' id='apart_form_view'>
+        <field name="name">apartments.form</field>
+        <field name="model">apartments</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button name="return_action_to_maintenance" type="object" class="oe_stat_button" icon="fa-bars">
+                        <field name="maintenance_countss" widget="statinfo" string="maintenance"/>
+                    </button>
+                    <button name="return_action_to_view_room" type="object" class="oe_stat_button" icon="fa-align-justify">
+                        <field name="room_view_countss" widget="statinfo" string="Contracts"/>
+                    </button>
+
+                </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="bathroom" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Rooms Details">
+                            <field name="room_id">
+                                <tree editable="bottom">
+
+                                    <field name="name" />
+                                   
+                                    <field name="bathroom" />
+                                    <!-- <field name="aprtment_id" /> -->
+                                    <field name="cost" sum= "Total of Cost"/>
+                                    <field name="rented_room" />
+                                    
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <!-- <label for="final_total_apartment" />
+                    <field name="final_total_apartment" readonly="1" /> -->
+                       
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Totals --> 
+    <!-- <div class="row"> 
+    <div class="col-xs-3"> 
+        Count: <t t-esc="len(docs)" /> 
+    </div> 
+    <div class="col-xs-2" /> 
+    <div class="col-xs-1"> 
+        Total:  
+    <t t-esc="sum([o.amount_cost for o in docs])" /> 
+    </div> 
+    <div class="col-xs-3" /> 
+    <div class="col-xs-3" /> 
+    </div>  -->
+
+   
+<!-- Tree inside the apartments-->
+    <record model='ir.ui.view' id='apart_tree_view'>
+        <field name="name">apartments.tree</field>
+        <field name="model">apartments</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <!-- <field name="final_total_apartment" sum= "Total of apartment"/> -->
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="res_partner_view_button_main">
+        <field name="name">apartments.view.buttons2</field>
+        <field name="model">apartments</field>
+        <field name="inherit_id" ref="kb_property_managment_alsalem.apart_form_view"/>
+        <field name="priority" eval="3"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='name']" position="before">
+                <!-- <div class="oe_button_box" name="button_box">
+                    <button name="return_action_to_maintenance" type="object" class="oe_stat_button" icon="fa-bars">
+                        <field name="maintenance_countss" widget="statinfo" string="maintenance"/>
+                    </button>
+                    <button name="return_action_to_view_room" type="object" class="oe_stat_button" icon="fa-align-justify">
+                        <field name="room_view_countss" widget="statinfo" string="Contracts"/>
+                    </button>
+
+                </div> -->
+            </xpath>     
+        </field>
+
+    </record>
+
+</odoo>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="receive_advance_deduct_salary" model="ir.actions.report">
+        <field name="name">Receive Advance and Deduct From Salary</field>
+        <field name="model">hr.loan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kb_hr_forms.rads</field>
+        <field name="report_file">kb_hr_forms.rads</field>
+        <field name="print_report_name">'Receive Advance and Deduct From Salary' </field>
+        <field name="binding_model_id" ref="model_hr_loan" />
+        <field name="binding_type">report</field>
+    </record>
+    <template id="rads">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                 <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
+                 <div class="page" style="font-family: 'Tajawal', sans-serif;">
+                    <style>
+                        table, 
+                        th,
+                        td
+                        {
+                            border: 1px solid black;
+                            width: 100%;
+                            table-layout: fixed;
+                            vertical-align: text-top;
+                            border-collapse: collapse;
+                            text-align: center; 
+                                 border: 1px solid black;
+                      
+                        height:30px; 
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        }
+                    </style>
+                   
+                    <h1 style="text-align: center; ">نموذج استلام سلفة وخصمها من الراتب</h1>
+                    <h2 style="text-align: right;">التاريخ</h2>
+                    <h3 style="text-align: right;">معلومات  الموظف</h3>
+                    <t t-foreach="docs" t-as="o">
+                    <table>
+                        <tr>
+                           <th style="text-align: center;">الإسم</th>
+                            <th><t t-esc="o.name" /></th>
+                         
+                        </tr>
+                        <tr>
+                          <th style="text-align: center;">رقم الهوية/ الأقامة</th>
+                            <th><t t-esc="o.identification_id" /></th>
+                          
+                        </tr>
+                        <tr>
+                           <th style="text-align: center;">الوظيفة</th>
+                            <th><t t-esc="o.job_title" /></th>
+                         
+                        </tr>
+                        <tr>
+                              <th style="text-align: center;">راتب الموظف</th>
+                            <th></th>
+                      
+                        </tr>
+                        <tr>
+                         <th style="text-align: center;">مبلغ السلفية</th>
+                            <th></th>
+                           
+                        </tr>
+                        <tr>
+                         <th style="text-align: center;">الدين السابق</th>
+                            <th></th>
+                           
+                        </tr>
+                        <tr>
+                            <th style="text-align: center;">طريقة السداد</th>
+                            <th></th>
+                        
+                        </tr>
+                    </table>
+                    </t>
+                    <br/>
+                <table style="width:100%; height:180px; ">
+                <tr style="border-top: 1px solid black; " >
+                  
+                    <th style="padding-bottom: 50px; padding-top: 50px; border:none; ">المدير المباشر</th>
+               
+                    <td style="text-align: right; border:none;">data2</td>
+                    <th style="padding-bottom: 50px; padding-top: 50px;border:none; ">المدير الإداري</th>
+                  
+                    <td style="text-align: right; border:none;">data5</td>
+                <th style="padding-bottom: 50px; padding-top: 50px; border:none;">المدير التنفيذي</th>
+                  <td style="text-align: right; border:none; "> data1</td>
+                </tr>
+          
+                <tr >
+                
+                    <th style="padding-bottom: 50px; padding-top: 50px;border:none; ">مدير المالية وشؤون الموظفين</th>
+                     <td style="text-align: right; border:none;"></td>
+                 
+                    <th style="padding-bottom: 50px; padding-top: 50px; border:none;"></th>
+                      <td style="text-align: right; border:none;"></td>
+
+                       <td style="text-align: right; border:none;">data4</td>
+                    
+                    <th style="padding-bottom: 50px; padding-top: 50px; border:none;">رئيس الحسابات</th>
+                     <td style="text-align: right; border:none;">data3</td>
+                    
+                </tr>
+                
+            </table>
+      
+                    <br></br>
+                    <table style="border: none">
+                        <tr style="border-top: 1px solid black;">
+                         <th style="border: none; text-align: right;"><h3>استلمت انا</h3></th>  
+                            <th style="border: none; text-align: center;"><h3>مبلغ وقيمته() من المكتب الرئيسي على ان يخصم من راتبي.</h3></th>
+                           
+                        </tr>
+                    </table>
+                    <table style="border: none ;">
+                        <tr style="border: none ;">
+                             <th style="border: none ; text-align: right;"><h3>الاسم</h3></th>
+                            <th style="border: none ; text-align: right;"></th>
+                       
+                            </tr>
+                            <tr style="border: none ;">
+                            <th style="border: none ; text-align: right;"><h3>التوقيع</h3></th>
+                                <th style="border: none ; text-align: right;"></th>
+                                
+                                </tr>
+                                <tr style="border: none ;">
+                                  <th style="border: none ; text-align: right;"><h3>البصمة</h3></th>
+                                    <th style="border: none ; text-align: right;"></th>
+                                  
+                                    </tr>
+                    </table>
+                    </div>
+                </t>
+                </t>
+</template>
+
+</odoo>

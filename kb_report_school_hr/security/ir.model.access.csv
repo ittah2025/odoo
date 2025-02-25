@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_for_employee,access.report_for_employee,model_report_for_employee,hr.group_hr_user,1,0,0,0
+access_report_for_employees,access.report_for_employee,model_report_for_employee,hr.group_hr_manager,1,1,1,1
+

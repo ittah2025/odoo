@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_Extension" model="ir.actions.act_window">
+        <field name="name">Extension of Exit and Return visa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">extensionof.exit</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Extension of Exit and Return visa
+            </p>
+        </field>
+    </record>
+
+    <record id="view_ExtensionofExit_tree" model="ir.ui.view">
+        <field name="name">ExtensionofExit.tree</field>
+        <field name="model">extensionof.exit</field>
+        <field name="arch" type="xml">
+            <tree string="report">
+            <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    
+    <record id="view_ExtensionofExitt_form" model="ir.ui.view">
+        <field name="name">ExtensionofExitt.form</field>
+        <field name="model">extensionof.exit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                <group>
+                    <field name="workin" />
+                    <field name="Date" />
+                    <field name="name" />
+                    <field name="nationality" />
+                    <field name="number"/>
+                    <field name="exp"/>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
+

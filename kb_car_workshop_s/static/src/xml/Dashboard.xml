@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="car_dash" xml:space="preserve">
+
+    <record id="custom_dashboard_action" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">custom_dashboard_tags</field>
+    </record>
+
+    <!-- <openerp>   
+ <data>      
+     <template id="assets_backend" name="project assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">     
+                 <link rel="stylesheet" href="/kb_car_workshop_s/static/src/css/dashboard_style.css"/>
+            </xpath>       
+    </template>  
+ </data> 
+</openerp> -->
+
+    <!-- 
+
+    <t t-name="DashboardOrders">
+        <div style="padding-bottom:50px" class="col-sm-4" t-att-data-id="widget.id">
+            <a t-attf-href="/web#cids=1&amp;action=484&amp;model=cars&amp;view_type=list">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col">
+                                <h3>
+                                    <t t-esc="widget.total_cars" />
+                                    <p>All Cars</p>
+                                </h3>
+                            </div>
+                            <div class="col">
+                                <div style="float:right;">
+                                    <i title="Configuration" class="fa fa-bath" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+    </t>
+
+ -->
+
+    <t t-name="CustomDashBoard">
+        <div class="oh_dashboards" style="margin-top: 20px;">
+            <div class="container-fluid o_pj_dashboard">
+            </div>
+        </div>
+    </t>
+    <t t-name="Dashboard_Orders">
+        <div class="row main-section" style="margin-left: 170px">
+
+
+        <!-- <form action="/web#cids=1&amp;action=484&amp;model=cars&amp;view_type=list"> -->
+        <!-- <button > -->
+            <!-- <a href="http://localhost:8069/web#cids=1&amp;menu_id=174&amp;action=263&amp;model=cars&amp;view_type=list"> -->
+            <div class="col-md-4 col-sm-6 tot_projects oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body" >
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#e08048; position: relative;">
+                                <i class="fa fa-car"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Total Vehicles</div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_cars" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- </button> -->
+             <!-- </form> -->
+             <!-- </a> -->
+
+      
+                 
+                 
+            <div class="col-md-4 col-sm-6 tot_emp oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#645bd0; position: relative;">
+                                <i class="fa fa-taxi"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Completed Orders</div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_order_compleate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 col-sm-6 tot_tasks oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#85d05b; position: relative;">
+                                <i class="fa fa-ambulance"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Cars on Hold </div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_order_onHold" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 tot_tasks oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#dd53e2; position: relative;">
+                                <i class="fa fa-truck"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">In Progress</div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_order_inprogress" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 tot_tasks oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#85d05b; position: relative;">
+                                <i class="fa fa-tasks"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Order Parts </div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_order_Parts" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 tot_tasks oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#125c0b; position: relative;">
+                                <i class="fa fa-tasks"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" />
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">All Orders </div>
+                                <div class="stat_count">
+                                    <t t-esc="widget.total_orders" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
+
+   
