@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+      
+        <record id="student_reject_wizard" model="ir.ui.view">
+            <field name="name">Dismissal Cause</field>
+            <field name="model">dismissal.cause</field>
+            <field name="arch" type="xml">
+                <form string="Rejection  Wizard">
+                 
+                        <group>
+                            <field name="reason_type_id" required="1" placeholder="Reason types" string="Rejection Reason"/>
+                          
+                            
+                         </group>
+                         <group>
+                            <field name="reason" required="1"  placeholder="Reason"/>
+                        </group>
+
+                        <footer>
+                         
+                       
+                            <button name="cancel_state" class="btn btn-danger" string="Reject" type="object"/>
+                            <button special="cancel" string="Cancel"/>
+
+                        </footer>
+                       
+                </form>
+            </field>
+        </record>
+      
+        <record id="action_student_reject_wizard" model="ir.actions.act_window">
+            <field name="name">Dismissal Cause</field>
+            <field name="res_model">dismissal.cause</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="student_reject_wizard"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

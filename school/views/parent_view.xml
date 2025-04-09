@@ -44,7 +44,10 @@
                                             class="o_kanban_record_title oe_partner_heading"
                                         >
                                         <field name="name" />
+<!--                                        <field name="name2" placeholder="Arabic Name"  />-->
+                                        
                                     </strong>
+                                
                                     <div
                                             class="o_kanban_tags_section oe_kanban_partner_categories"
                                         />
@@ -79,6 +82,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+<!--                <field name="name2" placeholder="Arabic Name" />-->
                 <field name="relation_id" />
                 <field name="phone" />
                 <field name="email" />
@@ -105,13 +109,33 @@
                     />
                 <div class="oe_title">
                     <h1>
+                        <field name="id_partner_1" placeholder="ID Partner" />
                         <field
                                 name="name"
                                 default_focus="1"
                                 placeholder="Name"
                                 attrs="{'required' : [('type', '=', 'contact')]}"
                             />
+<!--                        <field name="name2" placeholder="Arabic Name" />-->
+
                     </h1>
+                    <div style="display: flex; gap: 10px;">
+                                        <field name="name_arabic_1" placeholder="First Name in Arabic" nolabel="1" required="1" />
+                                        <field name="name_arabic_2" placeholder="Second Name in Arabic" nolabel="1" required="1" />
+                                        <field name="name_arabic_3" placeholder="Third Name in Arabic" nolabel="1" required="1" />
+                                        <field name="name_arabic_4" placeholder="Family Name in Arabic" nolabel="1" required="1" />
+                                </div>  
+                                <br />
+                    <div style="display: flex; gap: 10px;">
+                                        <field name="name_en_1" placeholder="First Name in English" nolabel="1" required="1" 
+                                            />
+                                        <field name="name_en_2" placeholder="Second Name in English" nolabel="1" required="1" 
+                                            />
+                                        <field name="name_en_3" placeholder="Third Name in English" nolabel="1" required="1" 
+                                            />
+                                        <field name="name_en_4" placeholder="Family Name in English" nolabel="1" required="1" 
+                                           />
+                                </div>
                 </div>
                 <div>
                     <label for="relation_id" />
@@ -144,29 +168,47 @@
                                     context="{'country_id': country_id, 'zip': zip}"
                                 />
                             <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                            <field name="home_number" placeholder="Home numbe"  />
                             <field
                                     name="country_id"
                                     placeholder="Country"
                                     class="o_address_country"
                                     options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"
                                 />
+                                <field name="home_number" placeholder="Home numbe"  />
+                                <!-- <field name="job_position" placeholder="Job position" string="Job positionr"/>
+                                <field name="Educational_level" placeholder="Educational level" string="Educational level"/> -->
                         </div>
+                          
                     </group>
                     <group string="Communication" name="communication">
                         <field name="phone" widget="phone" />
                         <field name="mobile" widget="phone" />
+                        <field name="International_phone" widget="International Phone"/>
                         <field name="user_ids" invisible="1" />
                         <field name="email" widget="email" required="1" />
                         <field name="title" options="{&quot;no_open&quot;: True}" />
                         <field name="lang" />
+                        <field name="status" />
+                        <field name="nationality" />
+                        <field name="working_address" />
                         <field
                                 name="category_id"
                                 widget="many2many_tags"
                                 placeholder="Tags..."
                             />
+                        <field name="job_position" placeholder="Job position" string="Job positionr"/>
+                        <field name="Educational_level" placeholder="Educational level" string="Educational level"/>
+                        <field name="specialty" placeholder="Specialty" string="Specialty"/>
                         <field name="standard_id" invisible="1" />
                         <field name="stand_id" invisible="1" />
                     </group>
+                </group>
+                <group string="General Information" name="General Information">
+                        <field name="father_nat_id" widget="ifather_nat_id"/>
+                        <field name="create_date_id" />
+                        <field name="SMS_phone" widget="phone"/>
+
                 </group>
                 <notebook>
                     <page name="children" string="Children">

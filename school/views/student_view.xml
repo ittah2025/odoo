@@ -44,6 +44,10 @@
                     <div class="oe_button_box" name="buttons" />
                     <div class="oe_inline">
                         <newline />
+                        <group>
+                            <field name="condition_accept" string="Is_conditionally accepted"
+                                attrs="{'readonly':[('state','=','done')]}" />
+                        </group>
                         <separator string="Personal Information" />
                         <b>
                             <field name="reg_code" readonly="1" />
@@ -66,7 +70,7 @@
                         <div class="oe_title">
                             <field
                                 name="name"
-                                placeholder="Full Name"
+                                placeholder="Full Name Arabic"
                                 nolabel="1"
                                 required="1"
                                 attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
@@ -74,12 +78,30 @@
                             <br />
                                 <field
                                 name="name_arabic"
-                                placeholder="Full Name in Arabic"
+                                placeholder="Full Name in English"
                                 nolabel="1"
                                 required="1"
                                 attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
                             />
-<!--                            <br />-->
+                           <br/>
+                                <div style="display: flex; gap: 10px;">
+                                <field name="name_arabic_1" placeholder="First Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_2" placeholder="Second Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_3" placeholder="Third Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_4" placeholder="Family Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                            </div>  
+                                <br />
+                            <div style="display: flex; gap: 10px;">
+                                <field name="name_en_1" placeholder="First Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_2" placeholder="Second Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_3" placeholder="Third Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_4" placeholder="Family Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                            </div>
+                           
 <!--                            <field-->
 <!--                                name="middle"-->
 <!--                                placeholder="Middle Name"-->
@@ -184,7 +206,6 @@
                                     name="state_id"
                                     domain="[('country_id','=',country_id)]"
                                     class="o_address_state"
-                                    required="1"
                                     placeholder="State"
                                     options="{&quot;no_open&quot;: True}"
                                     attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
@@ -193,6 +214,12 @@
                                     name="zip"
                                     placeholder="ZIP"
                                     class="o_address_zip"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="home_number"
+                                    placeholder="Home number"
+                                    
                                     attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
                                 />
                                 <field
@@ -214,6 +241,11 @@
                             <field
                                 name="mobile"
                                 placeholder="Mobile Number"
+                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                            />
+                            <field
+                                name="SMS_phone"
+                                placeholder="SMS Phone"
                                 attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
                             />
                             <field
@@ -241,6 +273,13 @@
                              <field name="total_discount" invisible="1" />
 <!--                             <field name="discount_ids" widget="many2many_tags"/>-->
                              <field name="father_nat_id"  />
+                             <field
+                                                name="mawhiba"
+                                                placeholder="mawhiba"
+                                                string="Mawhiba"
+                                                attrs="{'readonly':[('state','=','alumni')]}"
+                                                
+                                            />
 
                         </group>
                     </group>
@@ -327,6 +366,37 @@
                                 />
                               </group>
                         </page>
+                        <page string="Document">
+
+                            <form string="Student School ID credentials">
+                                <!-- <group col="4" colspan="4">
+                                    <field name="student_card" />
+                                    <field name="bus_information" />
+                                    <field name="books_title" />
+                                    <field name="username_password_t" />
+                                    <field name="username_password_s" />
+                                </group> -->
+                            </form>
+                            <newline />
+                            <group string="Documents">
+                                <field name="certificate_ids" nolabel="1" colspan="4"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}">
+                                    <form string="Document">
+                                        <group col="4">
+                                            <field name="doc" placeholder="Description About Certificate" />
+                                            <field name="certi" />
+                                            <field name="expiry_date" />
+                                        </group>
+                                    </form>
+
+                                    <tree string="Document" editable="top">
+                                        <field name="doc" required="1" placeholder="list of documents" />
+                                        <field name="certi" required="1" placeholder="Upload Certi" />
+                                        <field name="expiry_date" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
                         <page string="Parents">
                             <field
                                 name="parent_id"
@@ -335,6 +405,7 @@
                                 options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"
                             />
                         </page>
+                        
                         <page string="References">
                             <field
                                 name="reference_ids"
@@ -383,6 +454,7 @@
                                 attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
                             >
                                 <tree>
+                                    
                                     <field name="name" string="Name" />
                                     <field name="registration_no" />
                                     <field
@@ -696,6 +768,13 @@
                                 </form>
                             </field>
                         </page>
+                        <page string="Conditionally Accepted Reason" attrs="{'invisible':[('state','!=','condition')]}">
+                            <form string="Conditionally Accepted Reason">
+                                <field name="conditional_acceptance_reason"
+                                    placeholder="Reason fo Conditional Acceptance" nolabel="1" colspan="4"
+                                    attrs="{'invisible':[('state','!=','condition')],'readonly':[('state','=','condition')]}" />
+                            </form>
+                        </page>
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
@@ -722,6 +801,9 @@
                 <field name="admission_date" />
                 <field name="gender" />
                 <field name="state" />
+                <field name="state" decoration-success="state=='done'"
+                    decoration-warning="condition_accept==True,state=='condition'" widget="badge" />
+                <field name="condition_accept" invisible="1" />
                 <field name="school_id" />
             </tree>
         </field>
@@ -785,12 +867,16 @@
                     domain="[('state','=', 'terminate')]"
                     help="Admission In Pending State"
                 />
+
                 <filter
                     name="done"
-                    string="Done"
-                    domain="[('state','=', 'done')]"
+                    string="Accepted"
+                    domain="[('condition_accept', '=',False),('state','=', 'done')]"
                     help="Admission In Done State"
                 />
+                <filter name="done" string="Conditionally Accepted"
+                    domain="[('condition_accept', '=',True),('state','in',('done', 'condition'))]"
+                    help="Admission In Done state" />
                 <filter
                     name="english"
                     string="English Medium"
@@ -969,15 +1055,22 @@
                         groups="school.group_school_administration"
                     />
                     <button
-                        class="oe_stat_button"
+                        class="btn btn-success"
                         icon="fa-check"
                         name="admission_done"
                         type="object"
-                        string="Done"
+                        string="Accept"
                         states="draft"
                         groups="school.group_school_administration"
                     />
-                    <button
+                    <button class="btn btn-warning" icon="fa-check" name="%(school.action_student_acceptance_wizard)d"
+                        type="action" string="ConditionallyAccepted" states="draft"
+                        groups="school.group_school_administration,school.group_school_academic_supervisor" />
+
+                    <button class="btn btn-danger" icon="fa-ban" name="%(school.action_student_reject_wizard)d"
+                        type="action" string="Reject" states="draft" groups="school.group_school_administration" />
+
+                    <!-- <button
                         class="oe_stat_button"
                         icon="fa-ban"
                         name="cancel_admission"
@@ -985,7 +1078,7 @@
                         string="Cancel"
                         states="draft"
                         groups="school.group_school_administration"
-                    />
+                    /> -->
                     <button
                         class="oe_stat_button"
                         icon="fa-ban"
@@ -1004,6 +1097,10 @@
                 <sheet>
                     <div class="oe_inline">
                         <newline />
+                        <group>
+                            <field name="condition_accept" 
+                                attrs="{'invisible':[('state','in',['draft','done','cancel'])]}" />
+                        </group>
                         <separator string="Personal Information" />
                         <field
                             name="photo"
@@ -1039,6 +1136,24 @@
                                 attrs="{'readonly':[('state','=','alumni')]}"
                                 style="font-size: min(4vw, 2.6rem);"
                             />
+                            <br/>
+                            <div style="display: flex; gap: 10px;">
+                                <field name="name_arabic_1" placeholder="First Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_2" placeholder="Second Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_3" placeholder="Third Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_arabic_4" placeholder="Family Name in Arabic" nolabel="1" required="1" attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                            </div>  
+                                <br />
+                            <div style="display: flex; gap: 10px;">
+                                <field name="name_en_1" placeholder="First Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_2" placeholder="Second Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_3" placeholder="Third Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                                <field name="name_en_4" placeholder="Family Name in English" nolabel="1" required="1" 
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"/>
+                            </div>
 <!--                                <br />-->
 <!--                                <field-->
 <!--                                name="middle"-->
@@ -1135,7 +1250,6 @@
                                     domain="[('country_id','=',country_id)]"
                                     placeholder="State"
                                     options="{&quot;no_open&quot;: True}"
-                                    required="1"
                                     attrs="{'readonly':[('state','=','alumni')]}"
                                 />
                                 <field
@@ -1143,6 +1257,12 @@
                                     placeholder="ZIP"
                                     class="o_address_zip"
                                     attrs="{'readonly':[('state','=','alumni')]}"
+                                />
+                                <field
+                                    name="home_number"
+                                    placeholder="Home number"
+                                    
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
                                 />
                             </div>
                         </group>
@@ -1158,6 +1278,11 @@
                                 attrs="{'readonly':[('state','=','alumni')]}"
                             />
                             <field
+                                name="SMS_phone"
+                                placeholder="SMS Phone"
+                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                            />
+                            <field
                                 name="email"
                                 placeholder="Email Address"
                                 String="Email"
@@ -1169,6 +1294,31 @@
                                 placeholder="e.g. www.serpentcs.com"
                                 attrs="{'readonly':[('state','=','alumni')]}"
                             />
+                        </group>
+                    </group><group string="Personal Information">
+                        <group>
+                            <field name="date_of_birth" placeholder="Birthdate" attrs="{'readonly':[('state','=','alumni')]}"/>
+                            <field
+                                        name="cast_id"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                        widget="selection"
+                                        placeholder="Religion/Caste"
+                                    />
+                            <field name="country_id" placeholder="Nationality" String="Nationality" class="o_address_country,oe_no_button" required="1" options="{&quot;no_open&quot;: True}" attrs="{'readonly':[('state','=','alumni')]}"/>
+                            <label for="idr_number" string="IQama Number" attrs="{'invisible':[('country_code','=','SA')]}"/>
+                            <field name="idr_number" attrs="{'invisible':[('country_code','=','SA')]}" nolabel="1"/>
+                            <label for="idr_number" string="National ID Number" attrs="{'invisible':[('country_code','!=','SA')]}"/>
+                            <field name="idr_number" attrs="{'invisible':[('country_code','!=','SA')]}" nolabel="1"/>
+                            <field name="country_code" invisible="1"/>
+
+                        </group>
+                        <group>
+                            <field name="passport"/>
+                            <field name="passport_exp"/>
+                            <field name="place_of_birth"/>
+                            <field name="place_of_birth_en"/>
+                            <field name="father_nat_id"/>
+                            <field name="pay_reg" invisible="1"/>
                         </group>
                     </group>
                     <notebook colspan="4">
@@ -1185,11 +1335,42 @@
                                                 required="1"
                                             />
                                             <field
+                                                name="mawhiba"
+                                                placeholder="mawhiba"
+                                                string="Mawhiba"
+                                                attrs="{'readonly':[('state','=','alumni')]}"
+                                                
+                                            />
+                                            <!-- <field
                                                 name="date_of_birth"
                                                 placeholder="Birthdate"
                                                 attrs="{'readonly':[('state','=','alumni')]}"
-                                            />
+                                            /> -->
                                             <field name="age" string="Age" />
+                                            <field name="father_country_id" />
+                                            <field name="mother_country_id" />
+                                        </group>
+                                        <group string="Information">
+                                            <field
+                                                name="iban"
+                                                placeholder="IBAN"
+                                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                            />
+                                            <field
+                                                name="transfer_date"
+                                                placeholder="Transfer Date"
+                                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                            />
+                                            <field
+                                                name="date_of_registry"
+                                                placeholder="Date of Registry"
+                                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                            />
+                                            <!-- <field
+                                                name="doctor_phone"
+                                                placeholder="Doctor's Contact No"
+                                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                            /> -->
                                         </group>
                                         <group>
                                             <field
@@ -1233,6 +1414,116 @@
                                     </group>
                                 </sheet>
                             </form>
+                        </page>
+                        <page string="Document">
+                            <field name="certificate_ids" nolabel="1" colspan="4"
+                                attrs="{'readonly':[('state','in',['alumni','terminate'])]}">
+                                <form string="Document">
+                                    <group col="4">
+                                        <field name="doc" placeholder="Description About Certificate" />
+                                        <field name="certi" placeholder="Upload" />
+                                    </group>
+                                </form>
+                                <tree string="Documents" editable="top">
+                                    <field name="doc" required="1" placeholder="list of documents" />
+                                    <field name="certi" required="1" />
+
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Medical">
+                            <group>
+                                <group string="Doctor Information">
+                                    <field
+                                        name="designation"
+                                        placeholder="Doctor Designation"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                    />
+                                    <field
+                                        name="doctor_phone"
+                                        placeholder="Doctor's Contact No"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                    />
+                                </group>
+                                <group string="Physical Information">
+                                    <field
+                                        name="blood_group"
+                                        string="Blood Group"
+                                        placeholder="e.g.B+,Ab+"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                    />
+                                    <field
+                                        name="height"
+                                        string="Height"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                        placeholder="Height"
+                                    />
+                                    <field
+                                        name="weight"
+                                        string="Weight"
+                                        attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                        placeholder="Weight"
+                                    />
+                                </group>
+                            </group>
+                            <separator
+                                string="Does the applicant have any Disabilities?"
+                                colspan="4"
+                            />
+                            <group col="6" colspan="4">
+                                <field
+                                    name="eye"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="ear"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="nose_throat"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="respiratory"
+                                    string="Respiratory"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="cardiovascular"
+                                    string="Cardiovascular"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="neurological"
+                                    string="Neurological"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="muskoskeletal"
+                                    string="Musculoskeletal"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="dermatological"
+                                    string="Dermatological"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                                <field
+                                    name="blood_pressure"
+                                    string="Blood Pressure"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                            </group>
+
+                            <group>
+                                <field
+                                    name="comment"
+                                    placeholder="Notes About Medical.."
+                                    nolabel="0"
+                                    attrs="{'readonly':[('state','in',['alumni','terminate'])]}"
+                                />
+                            </group>
                         </page>
                         <page string="Parents">
                             <field

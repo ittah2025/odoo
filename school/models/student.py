@@ -130,6 +130,8 @@ class StudentStudent(models.Model):
             readonly=True,
             help="Student Name",
     )
+    condition_accept = fields.Boolean('Is_Conditionally Accepted',
+                                 help='check whether student accepted by condition')
     pid = fields.Char(
             string="Student ID",
             required=True,
@@ -179,14 +181,84 @@ class StudentStudent(models.Model):
     #         states={"done": [("readonly", True)]},
     #         help="Enter student last name",
     # )
+
+    home_number = fields.Char(
+            "Home number",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student Home number",
+    )
     name_arabic = fields.Char(
-            "Full Name in Arabic",
+            "Full Name Arabic",
             required=True,
             states={"done": [("readonly", True)]},
             help="Enter student name in Arabic",
     )
+    name_arabic_1 = fields.Char(
+            "First Name in Arabic",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in Arabic",
+    )
+    name_arabic_2 = fields.Char(
+            "Second Name in Arabic",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in Arabic",
+    )
+    name_arabic_3 = fields.Char(
+            "Third Name in Arabic",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in Arabic",
+    )
+    name_arabic_4 = fields.Char(
+            "Family Name in Arabic",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in Arabic",
+    )
+    name_en_1 = fields.Char(
+            "First Name in English",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in English",
+    )
+    name_en_2 = fields.Char(
+            "Second Name in English",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in English",
+    )
+    name_en_3 = fields.Char(
+            "Third Name in English",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in English ",
+    )
+    name_en_4 = fields.Char(
+            "Family Name in English",
+            required=True,
+            states={"done": [("readonly", True)]},
+            help="Enter student name in English ",
+    )
+    SMS_phone = fields.Char(
+            "SMS Phone",
+            help="Enter SMS Phone",
+    )
+    place_of_birth_en = fields.Char(
+            "Place Of Birth English",
+            
+            states={"done": [("readonly", True)]},
+            help="Place of birth English ",
+    )
     gender = fields.Selection(
             [("male", "Male"), ("female", "Female")],
+            states={"done": [("readonly", True)]},
+            help="Select student gender",
+    )
+    mawhiba = fields.Selection(
+            [("yes", "Yes"), ("no", "No")],
             states={"done": [("readonly", True)]},
             help="Select student gender",
     )
@@ -205,7 +277,7 @@ class StudentStudent(models.Model):
             help="Enter student age",
     )
     maritual_status = fields.Selection(
-            [("unmarried", "Unmarried"), ("married", "Married")],
+            [("unmarried", "Unmarried"), ("married", "Married"), ("with", "with his parents")],
             "Marital Status",
             states={"done": [("readonly", True)]},
             help="Select student maritual status",
@@ -266,7 +338,8 @@ class StudentStudent(models.Model):
     state = fields.Selection(
             [
                 ("draft", "Draft"),
-                ("done", "Done"),
+                ("done", "Accept"),
+                ('condition','Conditionally Acceptance'),
                 ("terminate", "Terminate"),
                 ("cancel", "Cancel"),
                 ("alumni", "Alumni"),
@@ -408,6 +481,10 @@ class StudentStudent(models.Model):
     username_password_t = fields.Boolean("Username and Password(teams)")
     username_password_s = fields.Boolean("Username and Password(system)")
     passport = fields.Char('Passport No', groups="hr.group_hr_user", tracking=True)
+    passport_exp = fields.Date("passport Expiry Date",states={"done": [("readonly", True)]},help="Enter student passport Expiry Date",)
+    iban = fields.Char('IBAN No', tracking=True)
+    transfer_date = fields.Date("Transfer date",states={"done": [("readonly", True)]},help="Enter student Transfer Date",)
+    date_of_registry = fields.Date("Date of registry",states={"done": [("readonly", True)]},help="Enter student Date of registry",)
     siblings_ids = fields.One2many("student.siblings", "std_id", 'Siblings')
     elective_subject_ids = fields.Many2many("subject.subject", "student_elective_rel", "student_id", "subject_id",
                                             string="Elective Subject")
@@ -724,17 +801,31 @@ class StudentStudent(models.Model):
         return super(StudentStudent, self).name_search(name, args, operator=operator, limit=limit)
 
     father_nat_id = fields.Char(string="Father National ID")
-
+    # SaudiId = fields.Char(string="Saudi ID")
+    # @api.onchange('father_nat_id')
+    # def _nat_id(self):
+    #     father_nat_ids = self.env['school.parent'].search([('SaudiId', '=', self.father_nat_id)])
+    #     if self.father_nat_id:
+    #         if father_nat_ids:
+    #             for x in father_nat_ids:
+    #                 vals = x.id
+    #                 self.parent_id = [vals]
+    #         else:
+    #             raise ValidationError(_("There are no parent with {} ID\n").format(self.father_nat_id))
+    
     @api.onchange('father_nat_id')
     def _nat_id(self):
-        father_nat_ids = self.env['school.parent'].search([('SaudiId', '=', self.father_nat_id)])
         if self.father_nat_id:
-            if father_nat_ids:
-                for x in father_nat_ids:
-                    vals = x.id
-                    self.parent_id = [vals]
+            father_record = self.env['school.parent'].search([('SaudiId', '=', self.father_nat_id)], limit=1)
+            if father_record:
+                self.parent_id = father_record.id 
             else:
-                raise ValidationError(_("There are no parent with {} ID\n").format(self.father_nat_id))
+                raise ValidationError(_("There is no parent with the ID: {}\n").format(self.father_nat_id))
+        else:
+            self.parent_id = False  
+    
+    
+    
         # self.update({
         #     'parent_id': [(6, False, father_nat_ids.id)]
         # })

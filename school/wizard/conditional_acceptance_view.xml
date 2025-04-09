@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+      
+        <record id="student_acceptance_wizard" model="ir.ui.view">
+            <field name="name">Conditional Acceptance</field>
+            <field name="model">conditional.acceptance</field>
+            <field name="arch" type="xml">
+                <form string="Conditional Acceptance">
+                 
+                         <group>
+                            <field name="reason" required="1"  placeholder="Reason"/>
+                        </group>
+
+                        <footer>
+                         
+                       
+                            <button name="acceptance_state" class="btn btn-warning" string="Accept" type="object"/>
+                            <button special="cancel" string="Cancel"/>
+
+                        </footer>
+                       
+                </form>
+            </field>
+        </record>
+      
+        <record id="action_student_acceptance_wizard" model="ir.actions.act_window">
+            <field name="name">Conditional Acceptance</field>
+            <field name="res_model">conditional.acceptance</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="student_acceptance_wizard"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

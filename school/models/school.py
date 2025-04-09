@@ -10,6 +10,7 @@ from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from odoo.tools.translate import _
+from datetime import datetime, date, timedelta
 
 EM = r"[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
 
@@ -806,8 +807,55 @@ class StudentCertificate(models.Model):
     _description = "Student Certificate"
 
     student_id = fields.Many2one("student.student", "Student", help="Related student")
+    # Added by Ahmed 13-03-2025
+    doc=fields.Char()
+    
+    doc=fields.Selection([
+        ('birth_certi', 'Birth Certificate'),
+        ('passport', 'Passport'),
+        ('vaccination_card','Vaccination Card'),
+        ('parents_company_letter','Parent Company Leter'),
+        ('student_photo','Student Photograph'),
+        ('health_certificate','Health Certificate'),
+        ('transfer_certificate','Transfer Certificate'),('student_east_province','Student East Province  Visa'),('student_out_ksa','KSA Expat'),('conditional_letter','Conditional letter')])
+    
     description = fields.Char(help="Description")
     certi = fields.Binary("Certificate", required=True, help="Student certificate")
+    # Added by Ahmed 13-03-2025
+    expiry_date = fields.Date(string="Expiry Date")
+    
+    
+    # Added by Ahmed 13-03-2025
+    @api.onchange('expiry_date')
+    def check_expr_date(self):
+        for each in self:
+            exp_date = each.expiry_date
+            if exp_date and exp_date < date.today():
+                return {
+                    'warning': {
+                        'title': _('Document Expired.'),
+                        'message': _("Your Document Is Already Expired.")
+                    }
+                }
+                
+    # Added by Ahmed 13-03-2025            
+    def mail_reminder(self):
+        now = datetime.now() + timedelta(days=1)
+        date_now = now.date()
+        match = self.search([])
+        for i in match:
+            if i.expiry_date:
+                exp_date = i.expiry_date - timedelta(days=7)
+                if date_now >= exp_date:
+                    mail_content = "  Hello  " + i.student_id.name + ",<br>Your Document " + i.doc + "is going to expire on " + \
+                                   str(i.expiry_date) + ". Please renew it before expiry date"
+                    main_content = {
+                        'subject': _('Document-%s Expired On %s') % (i.doc, i.expiry_date),
+                        'author_id': self.env.user.partner_id.id,
+                        'body_html': mail_content,
+                        'email_to': i.student_id.parent_id.email,
+                    }
+                    self.env['mail.mail'].create(main_content).send()            
 
 
 class StudentReference(models.Model):
@@ -1206,3 +1254,10 @@ class Report(models.Model):
                 _("You cannot print report forstudent in unconfirm state!")
             )
         return super(Report, self).render_template(template, values)
+    
+class RejectionTypes(models.Model):
+    _name = "rejection.types"
+    _description = "Rejection Types  of admission."
+    
+    name = fields.Char("Name")
+    description = fields.Text("Description")

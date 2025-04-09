@@ -12,7 +12,7 @@ class ParentRelation(models.Model):
     name = fields.Char(
         "Relation name", required=True, help="Parent relation with student"
     )
-
+    
 
 class SchoolParent(models.Model):
     """Defining a Teacher information."""
@@ -27,6 +27,10 @@ class SchoolParent(models.Model):
         delegate=True,
         required=True,
         help="Partner which is user over here",
+    )
+    id_partner_1 = fields.Char(
+            "ID Partner",
+            help="Enter ID Partner",
     )
     relation_id = fields.Many2one(
         "parent.relation",
@@ -64,6 +68,99 @@ class SchoolParent(models.Model):
         related="standard_id.user_id",
         help="Teacher of a student",
     )
+    
+    create_date_id = fields.Date(
+            "Create Date",
+            help="Enter create date",
+    )
+    home_number = fields.Char(
+            "Home number",
+            help="Enter Home number",
+    )
+    
+    SMS_phone = fields.Char(
+            "SMS Phone",
+            help="Enter SMS Phone",
+    )
+    International_phone = fields.Char(
+            "SMS Phone",
+            help="Enter International Phone",
+    )
+    father_nat_id = fields.Char(
+            "Father National ID",
+            help="Enter Father National ID",
+    )
+    job_position = fields.Char(
+            "Job positionr",
+            help="Enter Job position",
+    )
+    specialty = fields.Char(
+            "Specialty",
+            help="Enter Specialty",
+    )
+    Educational_level = fields.Char(
+            "Educational level",
+            help="Enter Educational level",
+    )
+    name_arabic_1 = fields.Char(
+            "First Name in Arabic",
+            required=True,
+            
+            help="Enter student name in Arabic",
+    )
+    name_arabic_2 = fields.Char(
+            "Second Name in Arabic",
+            required=True,
+            help="Enter student name in Arabic",
+    )
+    name_arabic_3 = fields.Char(
+            "Third Name in Arabic",
+            required=True,
+            help="Enter student name in Arabic",
+    )
+    name_arabic_4 = fields.Char(
+            "Family Name in Arabic",
+            required=True,
+            help="Enter student name in Arabic",
+    )
+    name_en_1 = fields.Char(
+            "First Name in English",
+            required=True,
+            help="Enter student name in English",
+    )
+    name_en_2 = fields.Char(
+            "Second Name in English",
+            required=True,
+            help="Enter student name in English",
+    )
+    name_en_3 = fields.Char(
+            "Third Name in English",
+            required=True,
+            help="Enter student name in English ",
+    )
+    name_en_4 = fields.Char(
+            "Family Name in English",
+            required=True,
+            help="Enter student name in English ",
+    )
+    status = fields.Char(
+            "Family Name in English",
+            required=True,
+            help="Enter status ",
+    )
+    nationality = fields.Char(
+            "Family nationality",
+            required=True,
+            help="Enter nationality ",
+    )
+    working_address = fields.Char(
+            "Family Name in English",
+            required=True,
+            help="Enter working address ",
+    )
+
+
+
 
     @api.onchange("student_id")
     def onchange_student_id(self):

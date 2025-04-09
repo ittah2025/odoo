@@ -136,7 +136,7 @@ class StudentStudent(models.Model):
     age = fields.Integer(compute='_compute_student_age', string='Age',
                          readonly=True, help='Enter student age')
     maritual_status = fields.Selection([('unmarried', 'Unmarried'),
-                                        ('married', 'Married')],
+                                        ('married', 'Married'), ("with his parents", "With his parents")],
                                        'Marital Status',
                                        states={'done': [('readonly', True)]},
                                        help='Select student maritual status')

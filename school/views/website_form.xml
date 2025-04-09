@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='utf-8'?>
+  <odoo>
+   <data>
+     <record id="menu_registration" model="website.menu">
+          <field name="name"> Registration Request</field>
+          <field name="url">/registration_request</field>
+          <field name="sequence">45</field>
+     </record>
+
+
+      <template id="school.create_registration_request" name="Registration Request">
+          <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+
+                <form role="form" action="/create/thank_you" method="Post" enctype="multipart/form-data">
+               <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+               <style>
+              input:invalid,
+              select:invalid {
+                border-color: inherit;
+                background-color: inherit;
+              }
+
+              .was-validated input:invalid,
+              .was-validated select:invalid {
+                border-color: red;
+                background-color: #ffe6e6;
+              }
+
+              .formbold-form-label.required::after {
+                content: ' *';
+                color: red;
+              }
+            </style>
+        <section class="s_text_image o_colored_level o_cc o_cc5 bg-800 pt16 pb16" data-snippet="s_image_text" data-name="Image - Text" style="position: relative; background-image: none;">
+        <div class="o_we_shape o_web_editor_Wavy_20 bg-900" style="background-image: url(&quot;/web_editor/shape/web_editor/Wavy/20.svg?c2=%2379A1FA&quot;);"/>
+        <div class="container">
+          <div class="row">
+            <div class="pb16 o_colored_level col-lg-6 pt256">
+              <h1 style="text-align: left;">
+                       Registration Request</h1>
+              <div class="s_hr text-start pt32 pb32" data-snippet="s_hr" data-name="Separator">
+                <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+              </div>
+              <p>
+                <br/>
+              </p>
+            </div>
+            <div class="o_colored_level o_animate o_anim_zoom_out o_animate_both_scroll pb0 pt0 col-lg-5 offset-lg-1 o_visible" style="--wanim-intensity: 22;">
+<!--              <img src="/web/image/643-7ffb1d5a/college%20class-rafiki.png" alt="" class="img img-fluid o_we_custom_image" data-original-id="642" data-original-src="/web/image/642-772e13c1/college%20class-rafiki.png" data-mimetype="image/png" data-resize-width="690" data-bs-original-title="" title="" aria-describedby="tooltip690469" loading="eager"/>-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_title o_colored_level pb0 pt56" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+        <div class="container s_allow_columns">
+          <h4 style="text-align: center;">
+            <span style="font-size: 36px;">
+                      Student&amp;nbsp;Information</span>
+          </h4>
+        </div>
+      </section>
+        <div class="formbold-form-wrapper">
+            <div class="formbold-input-flex">
+              <div>
+                <label for="Firstname" class="formbold-form-label required"> First Name </label>
+                <input type="text" name="Firstname" id="Firstname" placeholder="First Name" class="formbold-form-input" required="required"  />
+              </div>
+                <div>
+                <label for="Fathername" class="formbold-form-label required"> second Name </label>
+                <input type="text" name="Fathername" id="Fathername" placeholder="Father Name" class="formbold-form-input" required="required" />
+                    </div>
+              <div>
+                <label for="Grandfathername" class="formbold-form-label required"> Third Name </label>
+                <input type="text" name="Grandfather" id="Grandfather" placeholder="Grandfather Name" class="formbold-form-input" required="required" />
+              </div>
+               <div>
+                <label for="Familyname" class="formbold-form-label required"> Family Name </label>
+                <input type="text" name="Familyname" id="Familyname" placeholder="Family Name" class="formbold-form-input" required="required" />
+              </div>
+                </div>
+              <div>
+              <div class="formbold-input-flex">
+                  <div>
+                    <label for="name_en_1" class="formbold-form-label required">First Name (English)</label>
+                    <input type="text" name="name_en_1" id="name_en_1" placeholder="First Name (English)" class="formbold-form-input" required="required"/>
+                  </div>
+                  <div>
+                    <label for="name_en_2" class="formbold-form-label required">Second Name (English)</label>
+                    <input type="text" name="name_en_2" id="name_en_2" placeholder="Second Name (English)" class="formbold-form-input" required="required"/>
+                  </div>
+                  <div>
+                    <label for="name_en_3" class="formbold-form-label required">Third Name (English)</label>
+                    <input type="text" name="name_en_3" id="name_en_3" placeholder="Third Name (English)" class="formbold-form-input" required="required"/>
+                  </div>
+                  <div>
+                    <label for="name_en_4" class="formbold-form-label required">Family Name (English)</label>
+                    <input type="text" name="name_en_4" id="name_en_4" placeholder="Family Name (English)" class="formbold-form-input" required="required"/>
+                  </div>
+                </div>
+                </div>
+              <div>
+                <label for="NID" class="formbold-form-label required"> Suadi ID/Iqama </label>
+                <input type="text" name="NID" id="NID" placeholder="Suadi ID/Iqama" class="formbold-form-input" required="required" />
+              </div>
+
+            <div class="formbold-input-flex">
+              <div>
+                <label for="email" class="formbold-form-label required"> Email </label>
+                <input type="email" name="email" id="email" placeholder="example@email.com" class="formbold-form-input" required="required" />
+              </div>
+              <div>
+                <label class="formbold-form-label">Nationality</label>
+                <select class="formbold-form-input" name="Nationality" id="Nationality">
+                  <option value="Saudi">Saudi</option>
+                  <option value="NonSaudi">non-Saudi</option>
+                </select>
+              </div>
+            </div>
+            <div class="formbold-mb-3">
+              <label for="datebirthday" class="formbold-form-label required"> Date of Birth </label>
+              <input type="date" name="datebirthday" id="datebirthday" class="formbold-form-input" required="required" />
+            </div>
+            <div class="formbold-mb-3 formbold-input-wrapp">
+              <label for="phone" class="formbold-form-label required"> Phone </label>
+              <div>
+                <input type="text" name="phone" id="phone" placeholder="Phone number" class="formbold-form-input" required="required" />
+              </div>
+            </div>
+            <div>
+                <label for="country_id" class="formbold-form-label required">Country</label>
+                <select class="formbold-form-input" name="country_id">
+                   <t t-foreach="country_id" t-as="country">
+                       <option t-esc="country.name" t-att-value="country.id" />
+                   </t>
+                </select>
+              </div>
+            <div>
+              <label for="city" class="formbold-form-label required"> City </label>
+              <input type="text" name="city" id="city" placeholder="City" class="formbold-form-input" required="required" />
+            </div>
+                        <div>
+              <label for="street" class="formbold-form-label required"> Street </label>
+              <input type="text" name="street" id="street" placeholder="Street" class="formbold-form-input" required="required" />
+            </div>
+             <div class="formbold-input-flex">
+            <div>
+              <label for="Postal" class="formbold-form-label required"> Postal code </label>
+              <input type="text" name="Postal" id="Postal" placeholder="Postal code" class="formbold-form-input" required="required" />
+            </div>
+  <div>
+              <label for="Additional" class="formbold-form-label required"> Additional code  </label>
+              <input type="text" name="Additional" id="Additional" placeholder="Additional code" class="formbold-form-input" required="required" />
+            </div>
+            </div>
+
+            <div>
+                <label class="formbold-form-label required">Educational system</label>
+                <select class="formbold-form-input" name="Educational_system" id="Educational_system" required="required" >
+                  <option value="Private">Private</option>
+                  <option value="international">International</option>
+                     <option value="bi_directional"> Bi-directional</option>
+
+                </select>
+            </div>
+            <div>
+                <label for="company_id" class="formbold-form-label required">School</label>
+                <select class="formbold-form-input" name="company_id" required="required" >
+                   <t t-foreach="company_id" t-as="company">
+                       <option t-esc="company.name" t-att-value="company.id"/>
+                   </t>
+                </select>
+              </div>
+            <div>
+
+            <div>
+                <label class="formbold-form-label required">Would you like to join school transportation if available?</label>
+                <select class="formbold-form-input" name="school_transportation" id="school_transportation">
+                  <option value="yes_like">Yes</option>
+                  <option value="no_like">No </option>
+                </select>
+            </div>
+<!--                All document need edit-->
+
+            <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+            Previous school (if any)
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+            birth certificate
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+            family Record
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+         Vaccination certificate
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+           Previous grade certificate  (if any)
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+Student photo
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+                 <div class="formbold-mb-3">
+              <label for="Previousschool" class="formbold-form-label required" required="required" >
+            A copy of your ID (if any)
+            </label>
+            </div>
+                <div class="formbold-form-file-flex">
+                  <label for="ufile" class="formbold-form-label required" required="required" >
+              Upload
+            </label>
+                  <input type="file" name="ufile" id="ufile" multiple="multiple" class="formbold-form-file" accept="image/png, .jpg, .jpeg ,application/pdf" required="required" />
+                </div>
+
+
+<!--          </form>-->
+        </div>
+      </div>
+      <section class="s_cover parallax s_parallax_is_fixed bg-black-50 o_colored_level o_full_screen_height pb72 pt88" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;">
+        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_cover_default_image'); background-position: 50% 0;"/>
+        <div class="o_we_bg_filter bg-black-50"/>
+        <div class="container s_allow_columns" style="text-align: center;">
+          <h2>
+            <span style="font-size: 36px;">
+                      Father Information</span>
+          </h2>
+          <p style="text-align: center;">&amp;nbsp;
+            <br/></p>
+          <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+
+
+                <div class="formbold-input-flex">
+              <div>
+                <label for="firstnamefather" class="formbold-form-label required"> Fist Name </label>
+                <input type="text" name="firstnamefather" id="firstnamefather" placeholder="First Name" class="formbold-form-input" required="required" />
+              </div>
+                            <div>
+                <label for="fathernamefather" class="formbold-form-label required"> second Name </label>
+                <input type="text" name="fathernamefather" id="fathernamefather" placeholder="Father Name" class="formbold-form-input" required="required" />
+              </div>
+              <div>
+                <label for="grandfathernamefather" class="formbold-form-label required"> Third Name </label>
+                <input type="text" name="grandfathernamefather" id="grandfathernamefather" placeholder="Grandfather Name" class="formbold-form-input" required="required" />
+              </div>
+     <div>
+                <label for="familynamefather" class="formbold-form-label required"> Family Name </label>
+                <input type="text" name="familynamefather" id="familynamefather" placeholder="Family Name" class="formbold-form-input" required="required" />
+              </div>
+            </div>
+
+
+                  <div style="text-align: left;">
+                    <label for="NIDfather" class="formbold-form-label required"> Suadi ID/Iqama </label>
+                    <input type="text" name="NIDfather" id="NIDfather" placeholder="Suadi ID/Iqama" class="formbold-form-input" required="required" />
+                  </div>
+
+                <div class="formbold-input-flex">
+                  <div style="text-align: left;">
+                    <label for="emailFather" class="formbold-form-label required"> Email </label>
+                    <input type="email" name="emailFather" id="emailFather" placeholder="example@email.com" class="formbold-form-input" required="required" />
+                  </div>
+<!--                  <div style="text-align: left;">-->
+<!--                    <label class="formbold-form-label required">Nationality</label>-->
+<!--                    <select class="formbold-form-input" name="NationalityFather" id="NationalityFather">-->
+<!--                       <option value="Saudi">Saudi</option>-->
+<!--                      <option value="NonSaudi">Non Saudi</option>-->
+<!--                    </select>-->
+<!--                  </div>-->
+                </div>
+                <div class="formbold-mb-3 formbold-input-wrapp" style="text-align: left;">
+                  <label for="phoneFather" class="formbold-form-label required"> Phone </label>
+                  <div>
+                    <input type="text" name="phoneFather" id="phoneFather" placeholder="Phone number" class="formbold-form-input" required="required" />
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   <section class="s_cover parallax s_parallax_is_fixed bg-black-50 o_colored_level o_full_screen_height pb72 pt88" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;">
+        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_cover_default_image'); background-position: 50% 0;"/>
+        <div class="o_we_bg_filter bg-black-50"/>
+        <div class="container s_allow_columns" style="text-align: center;">
+          <h2>
+            <span style="font-size: 36px;">
+                      Mother Information</span>
+          </h2>
+          <p style="text-align: center;">&amp;nbsp;
+            <br/></p>
+          <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+
+
+                <div class="formbold-input-flex">
+              <div>
+                <label for="firstnamemother" class="formbold-form-label required"> Fist Name </label>
+                <input type="text" name="firstnamemother" id="firstnamemother" placeholder="Firstt Name" class="formbold-form-input" required="required" />
+              </div>
+                            <div>
+                <label for="fathernamemother" class="formbold-form-label required"> second Name </label>
+                <input type="text" name="fathernamemother" id="fathernamemother" placeholder="Father Name" class="formbold-form-input" required="required" />
+              </div>
+              <div>
+                <label for="grandfathernamemother" class="formbold-form-label required"> Third Name </label>
+                <input type="text" name="grandfathernamemother" id="grandfathernamemother" placeholder="Grandfather Name" class="formbold-form-input" required="required" />
+              </div>
+     <div>
+                <label for="familynamemother" class="formbold-form-label required"> Family Name </label>
+                <input type="text" name="familynamemother" id="familynamemother" placeholder="Family Name" class="formbold-form-input" required="required" />
+              </div>
+            </div>
+
+
+                  <div style="text-align: left;">
+                    <label for="NIDmother" class="formbold-form-label required"> Suadi ID/Iqama </label>
+                    <input type="text" name="NIDmother" id="NIDmother" placeholder="Suadi ID/Iqama" class="formbold-form-input" required="required" />
+                  </div>
+
+                <div class="formbold-input-flex">
+                  <div style="text-align: left;">
+                    <label for="emailmother" class="formbold-form-label required"> Email </label>
+                    <input type="email" name="emailmother" id="emailmother" placeholder="example@email.com" class="formbold-form-input" required="required" />
+                  </div>
+                  <div style="text-align: left;">
+                    <label class="formbold-form-label">Nationality</label>
+                    <select class="formbold-form-input" name="Nationalitymother" id="Nationalitymother">
+                       <option value="Saudi">Saudi</option>
+                      <option value="NonSaudi">Non Saudi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="formbold-mb-3 formbold-input-wrapp" style="text-align: left;">
+                  <label for="phonemother" class="formbold-form-label required"> Phone </label>
+                  <div>
+                    <input type="text" name="phonemother" id="phonemother" placeholder="Phone number" class="formbold-form-input" required="required" />
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <section class="s_cover o_colored_level o_full_screen_height s_parallax_no_overflow_hidden bg-white pb0 pt0" data-scroll-background-ratio="0" data-snippet="s_cover" data-name="Cover" style="background-image: none;">
+
+
+        <div class="container s_allow_columns" style="text-align: center;">
+          <h2>
+            <span style="font-size: 36px;">
+                      Emergency&amp;nbsp;Information</span>
+          </h2>
+          <p style="text-align: center;">&amp;nbsp;
+            <br/></p>
+          <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+
+
+              <div style="text-align: left;">
+                <label for="namerelative" class="formbold-form-label required"> Full Name </label>
+                <input type="text" name="namerelative" id="namerelative" placeholder="Full Name" class="formbold-form-input" required="required" />
+              </div>
+
+
+                  <div style="text-align: left;">
+                    <label for="relativerelation" class="formbold-form-label required"> Relative Relation</label>
+                    <input type="text" name="relativerelation" id="relativerelation" placeholder="Relative Relation" class="formbold-form-input" required="required" />
+                  </div>
+
+
+                <div class="formbold-mb-3 formbold-input-wrapp" style="text-align: left;">
+                  <label for="Phonerelative" class="formbold-form-label required"> Phone </label>
+                  <div>
+                    <input type="text" name="Phonerelative" id="Phonerelative" placeholder="Phone number" class="formbold-form-input" required="required" />
+                  </div>
+                </div>
+                 <button type="submit" class="formbold-btn">submit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+          <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .formbold-mb-3 {
+        margin-bottom: 15px;
+      }
+
+      .formbold-main-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px;
+      }
+
+      .formbold-form-wrapper {
+        margin: 0 auto;
+        max-width: 570px;
+        width: 100%;
+        background: white;
+        padding: 40px;
+        border-radius: 3.5%;
+      }
+
+      .formbold-img {
+        display: block;
+        margin: 0 auto 45px;
+      }
+
+      .formbold-input-wrapp &gt; div {
+        display: flex;
+        gap: 20px;
+      }
+
+      .formbold-input-flex {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 15px;
+      }
+      .formbold-input-flex &gt; div {
+        width: 50%;
+      }
+      .formbold-form-input {
+        width: 100%;
+        padding: 13px 22px;
+        border-radius: 5px;
+        border: 1px solid #dde3ec;
+        background: #ffffff;
+        font-weight: 500;
+        font-size: 16px;
+        color: #536387;
+        outline: none;
+        resize: none;
+      }
+      .formbold-form-input::placeholder,
+      select.formbold-form-input,
+      .formbold-form-input[type='date']::-webkit-datetime-edit-text,
+      .formbold-form-input[type='date']::-webkit-datetime-edit-month-field,
+      .formbold-form-input[type='date']::-webkit-datetime-edit-day-field,
+      .formbold-form-input[type='date']::-webkit-datetime-edit-year-field {
+        color: rgba(83, 99, 135, 0.5);
+      }
+
+      .formbold-form-input:focus {
+        border-color: #6a64f1;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+      .formbold-form-label {
+        color: #07074D;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .formbold-form-file-flex {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .formbold-form-file-flex .formbold-form-label {
+        margin-bottom: 0;
+      }
+      .formbold-form-file {
+        font-size: 14px;
+        line-height: 24px;
+        color: #536387;
+      }
+      .formbold-form-file::-webkit-file-upload-button {
+        display: none;
+      }
+      .formbold-form-file:before {
+        content: 'Upload file';
+        display: inline-block;
+        background: #EEEEEE;
+        border: 0.5px solid #FBFBFB;
+        box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        padding: 3px 12px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        color: #637381;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        margin-right: 10px;
+      }
+
+      .formbold-btn {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 14px 25px;
+        border: none;
+        font-weight: 500;
+        background-color: #6a64f1;
+        color: white;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+      .formbold-btn:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .formbold-w-45 {
+        width: 45%;
+      }
+    </style>
+                </form>
+
+        </div>
+        </t>
+    </template>
+
+      <record id="school.registration_thanks" model="website.page">
+    <field name="name">Thanks</field>
+    <field name="type">qweb</field>
+    <field name="url">/thank-you</field>
+    <field name="website_published">True</field>
+    <field name="key">school.registration_thanks</field>
+    <field name="arch" type="xml">
+        <t name="Thanks" t-name="school.registration_thanks">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Thanks!</h1>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="alert alert-success" role="status">
+                                    Your message has been sent successfully
+                                </div>
+                                <p>
+                                    We will get back to you shortly
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </field>
+</record>
+
+<!--       <template id="student_exist_request" name="Student already register">-->
+<!--    <t t-call="website.layout">-->
+<!--        <div class="oe_structure">-->
+<!--            <section>-->
+<!--                <div class="container">-->
+<!--                    <h1>Student already register</h1>-->
+<!--                    <button type="button" class="btn btn-primary" id="open_registration_dialog">-->
+<!--                        Open Registration Dialog-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </section>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Pop-up dialog for registration request &ndash;&gt;-->
+<!--        <div id="registration_dialog" class="d-none">-->
+<!--            <form action="/registration-request/create" method="post" class="oe_form">-->
+<!--                &lt;!&ndash; Your registration request form fields here &ndash;&gt;-->
+<!--                <h1>test Ah,ed</h1>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </t>-->
+<!--</template>-->
+
+
+
+
+
+
+
+</data>
+  </odoo>
+
+
